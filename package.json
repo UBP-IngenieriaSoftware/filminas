@@ -1,0 +1,24 @@
+{
+  "name": "filminas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "reveal-md slides --static public",
+    "deploy": "npm run build && gh-pages -d public -b master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:UCC-LabCompu2/filminas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UBP-IngenieriaSoftware/filminas/issues"
+  },
+  "homepage": "https://ucc-labcompu2.github.io/filminas/",
+  "dependencies": {
+    "gh-pages": "^5.0.0",
+    "reveal-md": "^5.4.1"
+  }
+}
