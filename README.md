@@ -1,7 +1,7 @@
 # filminas
 Presentaciones de Ingenieria de Software
 
-Se pueden ver online en ...
+Se pueden ver online en https://ubp-ingenieriasoftware.github.io/filminas/
 
 ## Steps:
 
