@@ -43,5 +43,12 @@ La ingeniería de software aplica teorías, métodos y herramientas para el desa
 * Los errores de software pueden ser muy caros
 
 ---
+## Errores de Software
+* El primer “bug”, una polilla entre los relés del Mark II en 1947.
+* Los errores en el software son un problema común y...en muchos casos, no hay graves consecuencias, 
+se soluciona con una nueva versión corregida
+* EN MUCHOS OTROS CASOS PUEDE HABER CONSECUENCIAS FATALES, GRAVES O MUY CARAS.
+
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
