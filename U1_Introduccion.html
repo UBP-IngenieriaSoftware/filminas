@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Introduccion</title>
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+
+# Ingeniería de Software
+## Introducción
+Created by <i class="fab fa-telegram"></i>
+[edme88]("https://t.me/edme88")
+
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: style="font-size: 0.60em" -->
+<style>
+.grid-item {
+    border: 3px solid rgba(121, 177, 217, 0.8);
+    padding: 20px;
+    text-align: left !important;
+}
+</style>
+## Temario
+<div class="grid-item">
+
+### Ingeniería de Software
+* Definición
+* Tipos de Drivers
+* Desarrolladores de Drivers
+* Actualización
+* Descarga
+* Windows: Administrador de dispositivos
+* Linux: Hardware Map
+</div>
+
+</script></section><section  data-markdown><script type="text/template">
+## Ingenieria de Software
+La ingeniería de software aplica teorías, métodos y herramientas para el desarrollo de software profesional.
+
+</script></section><section  data-markdown><script type="text/template">
+## Ingenria de Software. Por que?
+* La economía de muchos países depende en alguna medida del software.
+* Cada vez mas sistemas son controlados por software.
+* El gasto en software representa una fracción significativa del PBI
+* Los errores de software pueden ser muy caros
+
+</script></section><section  data-markdown><script type="text/template">
+## Errores de Software
+* El primer “bug”, una polilla entre los relés del Mark II en 1947.
+* Los errores en el software son un problema común y...en muchos casos, no hay graves consecuencias, 
+se soluciona con una nueva versión corregida
+* EN MUCHOS OTROS CASOS PUEDE HABER CONSECUENCIAS FATALES, GRAVES O MUY CARAS.
+
+</script></section><section  data-markdown><script type="text/template">
+## ¿Dudas, Preguntas, Comentarios?
+![DUDAS](images/pregunta.gif)
+</script></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
