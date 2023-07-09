@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Ingeniería de Requerimientos</title>
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+
+# Ingeniería de Software
+## Ingeniería de Requerimientos
+Created by <i class="fab fa-telegram"></i>
+[edme88]("https://t.me/edme88")
+
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: style="font-size: 0.60em" -->
+<style>
+.grid-item {
+    border: 3px solid rgba(121, 177, 217, 0.8);
+    padding: 20px;
+    text-align: left !important;
+}
+</style>
+## Temario
+<div class="grid-item">
+
+### Ingeniería de Requerimientos
+* Definición
+* Por que?
+* Errores de Software
+* Costos del software
+* Productos de software
+* Especificaciones del producto
+* Preguntas sobre la ingeniería de Software
+</div>
+
+</script></section><section  data-markdown><script type="text/template">
+### Ingeniería de requerimientos
+* El proceso de establecimiento de los servicios que el cliente necesita de un sistema y las limitaciones con las
+que opera y se desarrolla.
+* Los requisitos, en sí, son las descripciones de los servicios del sistema y las limitaciones que se generan
+durante el proceso de ingeniería de requerimientos.
+
+</script></section><section  data-markdown><script type="text/template">
+### Definicion de Requerimiento (Davis)
+"Si una empresa desea realizar un contrato para un proyecto de desarrollo de software grande, debe definir sus necesidades de una
+manera suficientemente abstracta para que no se malentienda la solución. Los requisitos deben ser escritos de manera que varios
+contratistas puedan hacer una propuesta para el contrato, ofreciendo, tal vez, diferentes formas de satisfacer las necesidades de la
+organización del cliente. Una vez que el contrato ha sido adjudicado, el desarrollador debe escribir una definición del sistema para el cliente
+detalladamente para que el cliente entienda y pueda validar lo que el software hará. Ambos documentos pueden ser llamados el documento
+de requerimientos para el sistema ".
+
+</script></section><section  data-markdown><script type="text/template">
+### Qué es un requerimiento?
+Propiedad o restricción, determinada con precisión, que un producto software debe satisfacer
+
+* Como se expresa un requerimiento?
+La definicion de un requerimiento puede variar de una declaración abstracta de un servicio o de una
+restricción de sistema a una especificación funcional matemática detallada.
+
+Que Problemas hay?
+* Dificultad de comunicación entre el equipo de  desarrollo y el grupo de clientes/usuarios.
+* Cambio de los requerimientos.
+* Imposibilidad de identificar la totalidad de los requerimientos de un producto
+
+</script></section><section  data-markdown><script type="text/template">
+## ¿Dudas, Preguntas, Comentarios?
+![DUDAS](images/pregunta.gif)
+</script></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
