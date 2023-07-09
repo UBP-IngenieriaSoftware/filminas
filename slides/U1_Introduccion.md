@@ -23,12 +23,12 @@ Created by <i class="fab fa-telegram"></i>
 
 ### Ingeniería de Software
 * Definición
-* Tipos de Drivers
-* Desarrolladores de Drivers
-* Actualización
-* Descarga
-* Windows: Administrador de dispositivos
-* Linux: Hardware Map
+* Por que?
+* Errores de Software
+* Costos del software
+* Productos de software
+* Especificaciones del producto
+* Preguntas sobre la ingeniería de Software
 </div>
 
 ---
@@ -49,7 +49,8 @@ La ingeniería de software aplica teorías, métodos y herramientas para el desa
 se soluciona con una nueva versión corregida
 * EN MUCHOS OTROS CASOS PUEDE HABER CONSECUENCIAS FATALES, GRAVES O MUY CARAS.
 
----
+----
+
 ### Algunos "Grandes Errores" de Software...
 #### LA EXPLOSIÓN DEL ARIANE 5
 1000 millones de dólares perdidos
@@ -64,11 +65,13 @@ Lo que no era un problema en el Ariane 4, destruyó el Ariane 5
 
 64 bits: −9.223.372.036.854.775.808 a 9.223.372.036.854.775.807
 
----
+----
+
 #### LA EXPLOSIÓN DEL ARIANE 5
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gp_D8r-2hwk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
----
+----
+
 ### Algunos "Grandes Errores" de Software...
 #### EXCESO DE RADIACIÓN EN EL THERAC-25
 <!-- .slide: style="font-size: 0.80em" -->
@@ -83,11 +86,13 @@ UNA clásica RACE CONDITION
 
 Si bien la interfaz indicaba que todo iba bien, los pacientes estaban recibiendo 125 veces más radiación que lo indicado.
 
----
+----
+
 #### EXCESO DE RADIACIÓN EN EL THERAC-25
 ![Therac-25](images/unidad1/therac-25.jpg)
 
----
+----
+
 ### Algunos "Grandes Errores" de Software...
 #### MARS CLIMATE ORBITER
 <!-- .slide: style="font-size: 0.80em" -->
@@ -101,11 +106,13 @@ La trayectoria de la nave se acerco a Marte y fue desintegrada por la fuerza de 
 
 Se incumplieron  los requisitos del sistema donde se especificaba que todo el software debía usar el sistema métrico decimal
 
----
+----
+
 #### MARS CLIMATE ORBITER
 ![Mars Climate Orbiter](images/unidad1/mars_climate_orbiter.webp)
 
----
+----
+
 ### Algunos "Grandes Errores" de Software...
 #### DESPLIEGUE DE UNA VERSIÓN INCORRECTA
 <!-- .slide: style="font-size: 0.80em" -->
@@ -120,7 +127,8 @@ Hubo 4 millones de operaciones en 45 minutos
 Se ejecuto en modo test, donde, para probar el comportamiento en condiciones extremas, estaban desactivadas las restricciones.
 El sistema comenzó a comprar y vender acciones sin evaluar las consecuencias.
 
----
+----
+
 #### DESPLIEGUE DE UNA VERSIÓN INCORRECTA
 <!-- .slide: style="font-size: 0.80em" -->
 ![Knight Capital](images/unidad1/Knight_Capital.jpg)
@@ -187,7 +195,7 @@ hardware, software e ingeniería de procesos. La ingeniería de software es part
 
 ---
 ### Preguntas sobre la ingeniería de Software
-<!-- .slide: style="font-size: 0.90em" -->
+<!-- .slide: style="font-size: 0.80em" -->
 * ¿Cuáles son los principales retos que enfrenta la ingeniería de software?
 Tiempos de distribución limitados y desarrollo de software confiable.
 
@@ -195,6 +203,9 @@ Tiempos de distribución limitados y desarrollo de software confiable.
 Aproximadamente 60% de los costos del software son de desarrollo, y 40% de prueba. Para el software elaborado específicamente,
 los costos de evolución superan con frecuencua los costos de desarrollo.
 
+---
+### Preguntas sobre la ingeniería de Software
+<!-- .slide: style="font-size: 0.75em" -->
 * ¿Cuáles son los mejores métodos y técnicas de la ingeniería de software?
 Aun cuando todos los proyectos de software deben gestionarse y desarrollarse de manera profesional, existen diferentes 
 técnicas que son adecuadas para distintos tipos de sistema. Por ejemplo, los juegos siempre deben diseñarse usando una 
@@ -208,7 +219,7 @@ lenguajes de programación y reutilización de software.
 
 ---
 ### Atributos esenciales de un buen software
-
+<!-- .slide: style="font-size: 0.80em" -->
 * **Mantenimiento:** El software debe escribirse de tal forma que pueda evolucionar para satisfacer las necesidades 
 cambiantes de los clientes. Éste es un atributo crítico porque el cambio del software es un requerimiento inevitable de 
 un entorno empresarial variable.
@@ -217,6 +228,9 @@ un entorno empresarial variable.
 confiabilidad y seguridad. El software fiable no debe causar daño físico o económico en caso de fallo del sistema. 
 Los usuarios malintencionados no deben poder acceder o dañar el sistema.
 
+---
+### Atributos esenciales de un buen software
+<!-- .slide: style="font-size: 0.80em" -->
 * **Eficiencia:** El software debe optimizar el uso de los recursos del sistema, como la memoria y los ciclos del 
 procesador. Por lo tanto, la eficiencia incluye la capacidad de respuesta, el tiempo de procesamiento, la utilización de 
 la memoria, etc.
@@ -226,6 +240,7 @@ que debe ser comprensible, utilizable y compatible con otros sistemas que utiliz
 
 ---
 ### Ingeniería de software
+<!-- .slide: style="font-size: 0.80em" -->
 * La ingeniería de software es una disciplina de la ingeniería que se ocupa de todos los aspectos de la producción de 
 software desde las etapas iniciales de la especificación del sistema hasta el mantenimiento del sistema después de que 
 haya entrado en uso.
@@ -238,6 +253,7 @@ No sólo el proceso técnico de desarrollo. También la gestión de proyectos y 
 
 ---
 ### Importancia de la ingeniería de software
+<!-- .slide: style="font-size: 0.90em" -->
 * Cada vez más personas y la sociedad en general  dependen de sistemas de software avanzados. Tenemos que ser capaces de 
 producir sistemas fiables de manera económica y rápida.
 
@@ -248,7 +264,7 @@ sistemas de software en lugar de escribir los programas como si fuera un proyect
 
 ---
 ### Actividades del proceso de software
-
+<!-- .slide: style="font-size: 0.90em" -->
 * **Especificación del software**, donde clientes e ingenieros definen el software que se producirá y las restricciones 
 en su operación.
 
@@ -260,7 +276,7 @@ en su operación.
 
 ---
 ### Detalles generales que afectan la mayoría del software
-
+<!-- .slide: style="font-size: 0.80em" -->
 * **Heterogeneidad**
 Cada vez con mayor frecuencia se requieren sistemas que operen como sistemas distribuidos a través de redes que incluyan 
 diferentes tipos de computadoras y dispositivos móviles.
@@ -284,6 +300,7 @@ desarrollando, los requisitos del cliente y los antecedentes del equipo de desar
 
 ---
 ### Tipos de aplicaciones
+<!-- .slide: style="font-size: 0.85em" -->
 * **Aplicaciones autónomas**
 Estos son los sistemas de aplicación que se ejecutan en un equipo local, como un PC. Incluyen toda la funcionalidad 
 necesaria y no es necesario estar conectado a una red.
@@ -298,7 +315,7 @@ otro tipo de sistema.
 
 ---
 ### Tipos de aplicaciones
-
+<!-- .slide: style="font-size: 0.85em" -->
 * **Sistemas de procesamiento por lotes**
 Estos son que están diseñados para procesar los datos en grandes lotes. Procesan un gran número de entradas individuales 
 para crear salidas correspondientes.
@@ -321,17 +338,14 @@ Estos son sistemas que están compuestos de un número de otros sistemas de soft
 
 ---
 ### Fundamentos de la ingeniería de software
+<!-- .slide: style="font-size: 0.80em" -->
 Algunos principios fundamentales se aplican a todos los tipos de sistema de software, con independencia de las técnicas 
 de desarrollo utilizados:
-
-Los sistemas deben ser desarrollados mediante un proceso de desarrollo dirigido y entendido. Diferentes procesos se 
+* Los sistemas deben ser desarrollados mediante un proceso de desarrollo dirigido y entendido. Diferentes procesos se 
 utilizan para diferentes tipos de software.
-
-La fiabilidad y el rendimiento son importantes para todos los tipos de sistema.
-
-La comprensión y la gestión de la especificación de requisitos de software y (lo que el software debe hacer) son fundamentales.
-
-Siempre que sea posible reutilizar el software ya creado en lugar de desarrollar uno nuevo.
+* La fiabilidad y el rendimiento son importantes para todos los tipos de sistema.
+* La comprensión y la gestión de la especificación de requisitos de software y (lo que el software debe hacer) son fundamentales.
+* Siempre que sea posible reutilizar el software ya creado en lugar de desarrollar uno nuevo.
 
 ---
 ### La ingeniería de software y la web
@@ -353,17 +367,15 @@ Las interfaces de usuario dependen de las capacidades de los navegadores web
 
 ---
 ### Puntos clave
-La ingeniería de software es una disciplina de ingeniería que se interesa por todos los aspectos de la producción de software.
-
-Los atributos esenciales de los productos de software son mantenimiento, confiabilidad, seguridad, eficiencia y aceptabilidad.
-
-Las actividades de alto nivel de especificación, desarrollo, validación y evolución son parte de todos los procesos de software.
-
-Las nociones fundamentales de la ingeniería de software son universalmente aplicables a todos los tipos de desarrollo de sistema.
-
+<!-- .slide: style="font-size: 0.90em" -->
+* La ingeniería de software es una disciplina de ingeniería que se interesa por todos los aspectos de la producción de software.
+* Los atributos esenciales de los productos de software son mantenimiento, confiabilidad, seguridad, eficiencia y aceptabilidad.
+* Las actividades de alto nivel de especificación, desarrollo, validación y evolución son parte de todos los procesos de software.
+* Las nociones fundamentales de la ingeniería de software son universalmente aplicables a todos los tipos de desarrollo de sistema.
 
 ---
-### Estudios de caso
+### Casos de Estudio
+<!-- .slide: style="font-size: 0.80em" -->
 * Una bomba de insulina personal
 Un sistema embebido, una bomba de insulina utilizada por pacientes diabéticos para mantener el control de la glucosa en sangre
 
@@ -375,6 +387,7 @@ Un sistema de recolección de datos que recoge información sobre las condicione
 
 ---
 #### Sistema de control para una bomba de insulina
+<!-- .slide: style="font-size: 0.80em" -->
 Sistema embebido que mediante un sensor determina el nivel de glucosa en sangre y calcula la cantidad de insulina que se 
 debe inyectar a la persona.
 
@@ -431,6 +444,7 @@ objetivos locales y de gobierno.
 
 ---
 #### Características clave MHC-PMS
+<!-- .slide: style="font-size: 0.75em" -->
 * **Administración de atención individual**
 Los médicos de atención primaria crean registros para pacientes, editan la información en el sistema, ven el historial 
 del paciente, etc. El sistema soporta resúmenes de datos para que los médicos se enteren rápidamente de los problemas y 
@@ -447,6 +461,7 @@ medicamentos prescritos y sus costos, etcétera.
 
 ---
 #### Cuestiones criticas en MHC-PMS
+<!-- .slide: style="font-size: 0.80em" -->
 * **Privacidad**
 Es esencial que la información de los pacientes sea confidencial y nunca se revele a nadie más, aparte del personal 
 médico autorizado y los mismos pacientes.
@@ -460,6 +475,7 @@ imposible prescribir a los pacientes el medicamento correcto.
 
 ---
 #### Estación meteorológica en zonas deshabitadas
+<!-- .slide: style="font-size: 0.80em" -->
 En un país con grandes áreas deshabitadas se decidió instalar varios cientos de estaciones meteorológicas en dichas áreas.
 
 * Las estaciones meteorológicas recopilan datos de un conjunto de instrumentos que miden temperatura y presión, luz 
@@ -476,6 +492,7 @@ los datos recolectados desde los instrumentos.
 
 ---
 ### Sistema de información meteorológica
+<!-- .slide: style="font-size: 0.85em" -->
 * **El sistema de estación meteorológica**
 Es responsable de recolectar datos meteorológicos, realizar cierto procesamiento de datos inicial y transmitirlo al 
 sistema de gestión de datos.
@@ -489,6 +506,7 @@ sistemas y dar reportes sobre problemas.
 
 ---
 ### Funcionalidad adicional del software
+<!-- .slide: style="font-size: 0.90em" -->
 * Monitorear los instrumentos, la energía y el hardware de comunicación, reportar fallas al sistema de administración.
 * Administrar la energía del sistema, garantizar que las baterías se carguen si las condiciones ambientales lo permiten 
 y desconectar los generadores ante condiciones meteorológicas adversas (viento fuerte).

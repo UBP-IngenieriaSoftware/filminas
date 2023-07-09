@@ -9,3 +9,6 @@ Se pueden ver online en https://ubp-ingenieriasoftware.github.io/filminas/
 2. Install reveal-md (npm install -g reveal-md)
 3. Run reveal-md slides -w to render and watch directory for changes 
 4. Run reveal-md slides/ --static to generate all html files in _stati
+
+Revisar
+https://es.slideshare.net/MatiasGonzaloAcosta/procesos-de-software-unidad-2-software-enginnering-ian-sommerville
