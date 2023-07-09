@@ -186,5 +186,315 @@ La ingeniería de sistemas se interesa por todos los aspectos del desarrollo de 
 hardware, software e ingeniería de procesos. La ingeniería de software es parte de este proceso más general.
 
 ---
+### Preguntas sobre la ingeniería de Software
+<!-- .slide: style="font-size: 0.90em" -->
+* ¿Cuáles son los principales retos que enfrenta la ingeniería de software?
+Tiempos de distribución limitados y desarrollo de software confiable.
+
+* ¿Cuáles son los costos de la ingeniería de software?
+Aproximadamente 60% de los costos del software son de desarrollo, y 40% de prueba. Para el software elaborado específicamente,
+los costos de evolución superan con frecuencua los costos de desarrollo.
+
+* ¿Cuáles son los mejores métodos y técnicas de la ingeniería de software?
+Aun cuando todos los proyectos de software deben gestionarse y desarrollarse de manera profesional, existen diferentes 
+técnicas que son adecuadas para distintos tipos de sistema. Por ejemplo, los juegos siempre deben diseñarse usando una 
+serie de prototipos, mientras que los sistemas críticos de control de seguridad requieren de una especificación completa 
+y analizable para su desarrollo. Por lo tanto, no puede decirse que un método sea mejor que otro.
+
+* ¿Qué diferencias ha marcado la Web a la ingeniería de software?
+La Web ha llevado a la disponibilidad de servicios de software y a la posibilidad de desarrollar sistemas basados en 
+servicios distribuidos ampliamente. El desarrollo de sistemas basados en Web ha conducido a importantes avances en 
+lenguajes de programación y reutilización de software.
+
+---
+### Atributos esenciales de un buen software
+
+* **Mantenimiento:** El software debe escribirse de tal forma que pueda evolucionar para satisfacer las necesidades 
+cambiantes de los clientes. Éste es un atributo crítico porque el cambio del software es un requerimiento inevitable de 
+un entorno empresarial variable.
+
+* **Confiabilidad y seguridad:** La confiabilidad del software incluye una variedad de características incluyendo 
+confiabilidad y seguridad. El software fiable no debe causar daño físico o económico en caso de fallo del sistema. 
+Los usuarios malintencionados no deben poder acceder o dañar el sistema.
+
+* **Eficiencia:** El software debe optimizar el uso de los recursos del sistema, como la memoria y los ciclos del 
+procesador. Por lo tanto, la eficiencia incluye la capacidad de respuesta, el tiempo de procesamiento, la utilización de 
+la memoria, etc.
+
+* **Aceptabilidad:** El software debe ser aceptable para el tipo de usuario para el que está diseñado. Esto significa 
+que debe ser comprensible, utilizable y compatible con otros sistemas que utilizan.
+
+---
+### Ingeniería de software
+* La ingeniería de software es una disciplina de la ingeniería que se ocupa de todos los aspectos de la producción de 
+software desde las etapas iniciales de la especificación del sistema hasta el mantenimiento del sistema después de que 
+haya entrado en uso.
+
+* Disciplina de Ingeniería
+El uso de las teorías y los métodos adecuados para resolver los problemas teniendo en cuenta las limitaciones financieras y de organización.
+
+* Todos los aspectos de la producción de software
+No sólo el proceso técnico de desarrollo. También la gestión de proyectos y el desarrollo de herramientas, métodos, etc. para apoyar la producción de software.
+
+---
+### Importancia de la ingeniería de software
+* Cada vez más personas y la sociedad en general  dependen de sistemas de software avanzados. Tenemos que ser capaces de 
+producir sistemas fiables de manera económica y rápida.
+
+* Por lo general es más barato, en el largo plazo, el uso de métodos de ingeniería de software y técnicas para los 
+sistemas de software en lugar de escribir los programas como si fuera un proyecto de programación personal.
+
+* La mayor parte de los costos corresponde a los costos de corregir el software después de que ha entrado en uso.
+
+---
+### Actividades del proceso de software
+
+* **Especificación del software**, donde clientes e ingenieros definen el software que se producirá y las restricciones 
+en su operación.
+
+* **Desarrollo del software**, donde se diseña y programa el software.
+
+* **Validación del software**, donde se verifica el software para asegurar que sea lo que el cliente requiere.
+
+* **Evolución del software**, donde se modifica el software para reflejar los requerimientos cambiantes del cliente y del mercado.
+
+---
+### Detalles generales que afectan la mayoría del software
+
+* **Heterogeneidad**
+Cada vez con mayor frecuencia se requieren sistemas que operen como sistemas distribuidos a través de redes que incluyan 
+diferentes tipos de computadoras y dispositivos móviles.
+
+* **Cambio empresarial y social**
+Los negocios y la sociedad cambian de manera rápida, conforme se desarrollan las economías emergentes y nuevas 
+tecnologías están a la disposición. Ambos necesitan tener la posibilidad de cambiar su software existente y desarrollar 
+rápidamente uno nuevo.
+
+* **Seguridad y confianza**
+Dado que el software está vinculado con todos los aspectos de la vida, es esencial confiar en dicho software
+
+---
+### Diversidad de ingeniería de software
+
+Hay muchos tipos diferentes de sistemas de software y no existe un conjunto universal de las técnicas de software que 
+es aplicable a todas ellas.
+
+Los métodos de ingeniería de software y las herramientas que se utilizan dependen del tipo de aplicación que se está 
+desarrollando, los requisitos del cliente y los antecedentes del equipo de desarrollo.
+
+---
+### Tipos de aplicaciones
+* **Aplicaciones autónomas**
+Estos son los sistemas de aplicación que se ejecutan en un equipo local, como un PC. Incluyen toda la funcionalidad 
+necesaria y no es necesario estar conectado a una red.
+
+* **Aplicaciones basadas en transacciones interactivas**
+Las aplicaciones que se ejecutan en un equipo remoto y se puede acceder por los usuarios desde sus propios ordenadores 
+o terminales. Esto incluye aplicaciones web.
+
+* **Sistemas embebidos o de control**
+Se trata de sistemas de software que controlan y gestionan dispositivos de hardware. Su numero es superior a cualquier 
+otro tipo de sistema.
+
+---
+### Tipos de aplicaciones
+
+* **Sistemas de procesamiento por lotes**
+Estos son que están diseñados para procesar los datos en grandes lotes. Procesan un gran número de entradas individuales 
+para crear salidas correspondientes.
+
+* **Sistemas de entretenimiento**
+Se trata de sistemas que son principalmente para su uso personal y que están destinados a entretener al usuario.
+
+* **Sistemas para el modelado y simulación**
+Se trata de sistemas cuyo objetivo es modelar procesos físicos donde distintas entidades interactúan entre si.
+
+---
+### Tipos de aplicaciones
+
+* **Sistemas de adquisición de datos** 	
+Se trata de sistemas que recopilan datos de su entorno utilizando un conjunto de sensores y envían estos datos a otros 
+sistemas para el procesamiento.
+
+* **Sistemas de sistemas**
+Estos son sistemas que están compuestos de un número de otros sistemas de software.
+
+---
+### Fundamentos de la ingeniería de software
+Algunos principios fundamentales se aplican a todos los tipos de sistema de software, con independencia de las técnicas 
+de desarrollo utilizados:
+
+Los sistemas deben ser desarrollados mediante un proceso de desarrollo dirigido y entendido. Diferentes procesos se 
+utilizan para diferentes tipos de software.
+
+La fiabilidad y el rendimiento son importantes para todos los tipos de sistema.
+
+La comprensión y la gestión de la especificación de requisitos de software y (lo que el software debe hacer) son fundamentales.
+
+Siempre que sea posible reutilizar el software ya creado en lugar de desarrollar uno nuevo.
+
+---
+### La ingeniería de software y la web
+La Web es hoy una plataforma estándar y las organizaciones están utilizando cada vez más los sistemas basados en la web 
+en lugar de los sistemas locales.
+
+El enfoque SaS (Software as Service) esta cada vez mas difundido. Las aplicaciones se ejecutan de forma remota en la 
+"nube". Los usuarios no compran software pagan en función del uso.
+
+---
+### La ingeniería de software y la web
+Reutilización de software: es dominante para la construcción de sistemas basados en la web. Se diseña a partir de 
+componentes y sistemas de software pre-existentes.
+
+Desarrollo y entrega incremental: en general no es práctico especificar todos los requisitos para este tipo de sistemas 
+con anticipación.
+
+Las interfaces de usuario dependen de las capacidades de los navegadores web
+
+---
+### Puntos clave
+La ingeniería de software es una disciplina de ingeniería que se interesa por todos los aspectos de la producción de software.
+
+Los atributos esenciales de los productos de software son mantenimiento, confiabilidad, seguridad, eficiencia y aceptabilidad.
+
+Las actividades de alto nivel de especificación, desarrollo, validación y evolución son parte de todos los procesos de software.
+
+Las nociones fundamentales de la ingeniería de software son universalmente aplicables a todos los tipos de desarrollo de sistema.
+
+
+---
+### Estudios de caso
+* Una bomba de insulina personal
+Un sistema embebido, una bomba de insulina utilizada por pacientes diabéticos para mantener el control de la glucosa en sangre
+
+* Un sistema de gestión de pacientes en clinicas de salud mental
+Un sistema gestión  para mantener un registro de las personas que reciben la atención en clínicas especializadas en salud mental.
+
+* Una estación meteorológica en zonas deshabitadas
+Un sistema de recolección de datos que recoge información sobre las condiciones climáticas en las zonas remotas.
+
+---
+#### Sistema de control para una bomba de insulina
+Sistema embebido que mediante un sensor determina el nivel de glucosa en sangre y calcula la cantidad de insulina que se 
+debe inyectar a la persona.
+
+* Cálculo basado en la tasa de variación de los niveles de glucosa en la sangre.
+* Envía señales a la micro-bomba para enviar la dosis adecuada de insulina.
+* Sistema de seguridad crítico:
+  * Niveles bajos de azúcar en sangre pueden provocar el mal funcionamiento cerebral, coma y la muerte;
+  * Niveles altos de azúcar en sangre tienen consecuencias a largo plazo, como lesiones oculares y renales.
+
+---
+#### Arquitectura del Hardware de bomba de insulina
+![Arquitetcura de Bomba de Insulina](images/unidad1/InsulinPumpSchematic.jpg)
+
+---
+#### Modelo de actividad de la bomba de insulina
+![Modelo de actividad](images/unidad1/InsulinPumpModelo.jpg)
+
+---
+#### Requerimientos esenciales de alto nivel
+
+* El sistema tiene que estar disponible para entregar insulina cuando se requiera.
+* El sistema requiere funcionar de manera confiable y entregar la cantidad correcta de insulina, para contrarrestar el 
+nivel actual de azúcar en la sangre.
+
+Por consiguiente, el sistema debe diseñarse e implementarse para garantizar que siempre satisfaga dichos requerimientos.
+
+---
+#### Un sistema de gestión de pacientes en clínicas especializadas en salud mental
+
+Un sistema de información médica, que gestiona la información de los pacientes y los tratamientos que reciben.
+
+* La mayoría de los pacientes con problemas de salud mental no requieren internación, pero sí asistir regularmente a 
+clínicas especializadas donde se reúnen con un médico que tiene conocimiento detallado de sus problemas.
+* Estas clínicas funcionan en hospitales, consultorios médicos locales o centros comunitarios.
+
+---
+#### MHC-PMS
+* El MHC-PMS (sistema de administración de pacientes con problemas de salud mental) es un sistema de información 
+destinado para usarse en clínicas.
+* Utiliza una base de datos centralizada con información de los pacientes. Puede operarse también en modo local desde 
+sitios sin conectividad.
+* Cuando se dispone de acceso a red, se accede a la información en la base de datos. De lo contrario se utilizan copias 
+locales de los registros de pacientes.
+
+---
+#### Las metas de MHC-PMS
+* Generar información de gestión que permita a los administradores de servicios de salud valorar el desempeño contra 
+objetivos locales y de gobierno.
+* Proporcionar al personal médico información oportuna para apoyar el tratamiento de los pacientes.
+
+---
+#### La organizacion de MHC-PMS
+![Organización de MHC-PMS](images/unidad1/MHC-PMS.png)
+
+---
+#### Características clave MHC-PMS
+* **Administración de atención individual**
+Los médicos de atención primaria crean registros para pacientes, editan la información en el sistema, ven el historial 
+del paciente, etc. El sistema soporta resúmenes de datos para que los médicos se enteren rápidamente de los problemas y 
+tratamientos clave que se prescribieron.
+
+* **Monitorización del paciente**
+El sistema monitoriza regularmente los registros de los pacientes que están involucrados en tratamiento y emite 
+advertencias cuando se detectan posibles dificultades.
+
+* **Informes administrativos**
+El sistema genera mensualmente informes administrativos que muestran el número de pacientes tratados en cada clínica, 
+la cantidad de pacientes que ingresaron y salieron del sistema de salud, el total de pacientes internados, los 
+medicamentos prescritos y sus costos, etcétera.
+
+---
+#### Cuestiones criticas en MHC-PMS
+* **Privacidad**
+Es esencial que la información de los pacientes sea confidencial y nunca se revele a nadie más, aparte del personal 
+médico autorizado y los mismos pacientes.
+
+* **Seguridad**
+Algunas patologías mentales hacen que los pacientes se vuelvan suicidas o un peligro para otros individuos. Siempre que 
+sea posible, el sistema debe advertir al personal médico acerca de pacientes potencialmente suicidas o peligrosos.
+
+El sistema tiene que estar disponible cuando se necesite, de otro modo la seguridad estaría comprometida y sería 
+imposible prescribir a los pacientes el medicamento correcto.
+
+---
+#### Estación meteorológica en zonas deshabitadas
+En un país con grandes áreas deshabitadas se decidió instalar varios cientos de estaciones meteorológicas en dichas áreas.
+
+* Las estaciones meteorológicas recopilan datos de un conjunto de instrumentos que miden temperatura y presión, luz 
+solar, lluvia, y rapidez y dirección del viento.
+
+* Cada estación meteorológica incluye algunos instrumentos que miden parámetros climatológicos como rapidez y dirección 
+del viento, temperaturas del terreno y aire, presión barométrica y lluvia durante un periodo de 24 horas. Cada uno de 
+dichos instrumentos está controlado por un sistema de software que toma periódicamente lecturas de parámetros y gestiona 
+los datos recolectados desde los instrumentos.
+
+---
+#### El entorno de la estación meteorológica
+![Estación Metereológica](images/unidad1/case_studies.jpg)
+
+---
+### Sistema de información meteorológica
+* **El sistema de estación meteorológica**
+Es responsable de recolectar datos meteorológicos, realizar cierto procesamiento de datos inicial y transmitirlo al 
+sistema de gestión de datos.
+
+* **El sistema de gestión y archivado de datos**
+Recolecta los datos de todas las estaciones meteorológicas a campo abierto, realiza procesamiento y análisis de datos.
+
+* **El sistema de mantenimiento de estación**
+Se comunica por satélite con todas las estaciones meteorológicas a campo abierto, para monitorizar el estado de dichos 
+sistemas y dar reportes sobre problemas.
+
+---
+### Funcionalidad adicional del software
+* Monitorear los instrumentos, la energía y el hardware de comunicación, reportar fallas al sistema de administración.
+* Administrar la energía del sistema, garantizar que las baterías se carguen si las condiciones ambientales lo permiten 
+y desconectar los generadores ante condiciones meteorológicas adversas (viento fuerte).
+* Permitir la reconfiguración dinámica donde partes del software se sustituyan con nuevas versiones, y los instrumentos 
+de respaldo se enciendan en el sistema en caso de falla de éste.
+
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
