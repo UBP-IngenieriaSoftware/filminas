@@ -321,8 +321,448 @@ la consecuencia de un requisito reglamentario.
 **Los requisitos deben ser entendidos por los usuarios y clientes**
 
 ---
+### Guías para la redacción de los requerimientos
 
-32 de 74
+* Generar un formato estándar y utilizarlo para todas las necesidades.
+* Utilizar el lenguaje de manera clara para distinguir entre requerimientos obligatorios y deseables.
+* Usar texto resaltado (negrilla, cursiva o color) para seleccionar  partes clave del requerimiento.
+* Evitar el uso de lenguaje informático.
+* Incluir una explicación (lógica) de por qué un requisito es necesario.
+
+---
+### Requerimientos de ejemplo para el sistema de software de la bomba de insulina
+3.2 El sistema deberá medir el azúcar en la sangre cada 10
+minutos y administrar la insulina si es necesario. Los cambios
+en el azúcar en la sangre son relativamente lentas lo que la
+medición más frecuente podría llevar a valores
+peligrosamente bajos de azúcar; una medición menos
+frecuente podría llevar a niveles peligrosamente altos de azúcar.)
+
+3.6 El sistema deberá ejecutar una rutina de prueba
+automática cada minuto. Una rutina de autocomprobación
+puede descubrir problemas de hardware y/o software y
+alertar al usuario sobre el hecho de la operación anormal
+---
+### Problemas con el lenguaje natural
+* Falta de claridad
+  * La precisión es difícil sin hacer que el documento sea difícil de leer.
+* Confusión de requerimientos
+  * Requisitos funcionales y no funcionales tienden a ser confusos.
+* Fusión de requerimientos
+  * Varios requerimientos diferentes pueden expresarse juntos.
+
+---
+### Especificación estructurada
+* La libertad del escritor de los requerimientos es limitada
+y los requerimientos están escritos de una manera estándar.
+* Esto funciona bien para algunos tipos de requerimientos
+por ejemplo, requerimientos para un sistema de control
+embebido, pero a veces es demasiado rígido para la
+escritura de requerimientos del sistema de negocios.
+
+---
+### Especificación estructurada
+* Definición de la función o entidad.
+* Descripción de las entradas y de dónde vienen.
+* Descripción de las salidas y donde van.
+* Información acerca de la información necesaria para el cálculo y otras entidades usadas.
+* Descripción de la acción a tomar.
+* Pre y post condiciones (si son apropiadas).
+* Los efectos secundarios (si existen) de la función.
+
+---
+### Especificación estructurada de un requisito para una bomba de insulina
+![Bomba Insulina](images/unidad3/bomba_insulina.jpg)
+
+---
+### Especificación tabular
+* Se utiliza para complementar el lenguaje natural.
+* Es particularmente útil cuando se tiene que definir una
+serie de posibles cursos de acción alternativos.
+* Por ejemplo, el sistema la de bomba de insulina basa
+sus cálculos de la tasa de cambio del nivel de azúcar en la
+sangre y la especificación tabular explica cómo realizar el
+calculo para los diferentes escenarios.
+
+---
+### Especificación tabular del cálculo de la dosis de insulina
+| Condición | Acción |
+| Nivel de azúcar cayendo(r2 < r1) | CompDosis = 0 |
+| Nivel de azúcar estable (r2 = r1) | CompDosis = 0 |
+| Nivel de azúcar aumentado y la frecuencia bajando ((r2 – r1) < (r1 – r0)) | CompDosis = 0 |
+| Nivel de azúcar incrementando y la frecuencia aumentando o estable ((r2 – r1) ≥ (r1 – r0)) | CompDosis = cerca ((r2 – r1)/4) If cerca result = 0 then CompDosis = MinimoDosis |
+
+---
+### Procesos de ingeniería de requerimientos
+* Los procesos utilizados para IR varían ampliamente
+dependiendo del dominio de la aplicación, las personas
+involucradas y la organización el desarrollo de los requisitos.
+* Sin embargo, hay una serie de actividades genéricas comunes a todos los procesos
+  * Obtención de requerimientos;
+  * El análisis de requerimientos;
+  * La validación de requerimientos ;
+  * La gestión de requerimientos.
+* En la práctica, IR es una actividad iterativa en el que se intercalan estos procesos.
+
+---
+### Obtención y análisis de requerimientos
+* A veces se denomina obtención de requerimientos o
+descubrimiento de requerimientos.
+* Involucra al personal técnico que trabaja con los
+clientes para averiguar sobre el dominio de aplicación, los
+servicios que el sistema debe proporcionar y limitaciones
+operativas del sistema.
+* Puede involucrar a los usuarios finales, gerentes,
+ingenieros involucrados en el mantenimiento, los
+expertos de dominio, los sindicatos, etc. Estos se llaman
+las partes interesadas.
+
+---
+### Problemas con el análisis de requerimientos
+* Los interesados no saben lo que realmente quieren.
+* Las partes interesadas expresan requisitos en sus propios términos.
+* Las diferentes partes interesadas pueden tener requisitos contradictorios.
+* Factores organizativos y políticos pueden influir en los requisitos del sistema.
+* Los requisitos cambian durante el proceso de análisis.
+Nuevos actores pueden surgir y el entorno empresarial puede cambiar.
+
+---
+### Obtención y análisis de requerimientos
+* Los ingenieros de software trabajan con una variedad de
+actores del sistema para obtener información sobre el
+dominio de aplicación, los servicios que el sistema debe
+proporcionar, el rendimiento del sistema requerido, las
+limitaciones de hardware, otros sistemas, etc.
+* Las etapas incluyen:
+  * Descubrimiento requerimientos
+  * Clasificación y organización de requerimientos
+  * Priorizar y negociar requerimientos
+  * Especificación de requerimientos.
+
+---
+### Proceso de obtención y análisis de requerimientos
+![Analisis Requerimiento Espiral](images/unidad3/analisis-requerimientos-espiral.jpg)
+
+---
+### Actividades del proceso
+* Descubrimiento de requerimientos
+  * La interacción con las partes interesadas para descubrir sus necesidades.
+  * Los requerimientos de dominio también se descubren en esta etapa.
+* Clasificación y organización de requerimientos
+  * Requerimientos relacionados organizados en grupos coherentes.
+* Priorización y negociación
+  * Dar prioridad a los requerimientos y resolver los conflictos.
+* Especificación de requerimientos
+  * Los requerimientos se documentan
+
+---
+### Problemas en la obtención de requerimientos
+* Los interesados no saben expresar lo que realmente quieren.
+* Las partes interesadas expresan los requerimientos en sus propios términos.
+* Las diferentes partes interesadas pueden tener requisitos contradictorios.
+* Factores organizativos y políticos pueden influir en los requerimientos del sistema.
+* Los requerimientos cambian durante el proceso de análisis.
+* Pueden surgir nuevos actores pueden surgir con nuevos requerimientos.
+
+---
+### Descubrimiento de requerimientos
+**El proceso de recopilación de información sobre las
+necesidades del sistema mediante la interaccion con
+los distintos actores.**
+* La interacción es con TODOS los actores del sistema
+(desde administradores hasta reguladores externos).
+* Los sistemas normalmente tienen un rango de grupos de
+interés. (ROLES)
+
+---
+### Partes interesadas en el sistema para MHC-PMS
+* Los pacientes cuya información se registra en el sistema.
+* Los médicos que se encargan de evaluar y tratar a los pacientes.
+* Las enfermeras que coordinan las consultas con los
+médicos y administran algunos tratamientos.
+* Recepcionistas médicos que administran las citas de los
+pacientes.
+* El personal de TI que son responsables de la instalación y mantenimiento del sistema.
+
+---
+### Partes interesadas en el sistema para MHC-PMS
+* Un gerente de la ética médica que debe asegurar que el
+sistema cumple con las normas éticas vigentes para la
+atención al paciente.
+* Los gerentes de salud que obtienen información de
+gestión del sistema.
+* Personal de registros médicos que son responsables de
+asegurar que la información del sistema se pueden
+mantener y preservados, y que los procedimientos de
+mantenimiento de registros han sido ejecutadas
+correctamente.
+
+---
+### Entrevistas
+* Las entrevistas formales o informales con las partes interesadas son
+parte de la mayoría de los procesos de la IR.
+* Tipos de entrevistas
+  * Entrevistas cerradas a base de lista de preguntas predeterminada
+  * Entrevistas abiertas donde varios temas se exploran con las  partes interesadas.
+
+### Entrevistas efectivas
+* Tener la mente abierta, evitar las ideas preconcebidas
+acerca de los requerimientos y estár dispuestos a
+escuchar a las partes interesadas.
+* Preguntar al entrevistado y obtener discusiones usando
+una pregunta clave, una propuesta de requerimientos, o
+si trabajan juntos en un sistema prototipo.
+
+---
+### Entrevistas en la práctica
+* Normalmente, una mezcla de la entrevista cerrada y abierta.
+* Las entrevistas son buenas para conseguir una
+comprensión global de lo que los actores hacen y cómo
+podrían interactuar con el sistema.
+* Las entrevistas no son buenas para la comprensión de los requerimientos de dominio
+  * Los técnicos pueden no entender la terminología de dominio específico;
+  * Algunos dominios del conocimiento pueden ser tan familiares
+que la gente encuentra difícil dar detalles o piensan que no es
+necesario hacerlo.
+
+---
+### Escenarios
+Los escenarios son ejemplos reales de cómo se puede utilizar un sistema.
+* Estos deberían incluir
+  * Una descripción de la situación de partida;
+  * Una descripción del flujo normal de los acontecimientos;
+  * Una descripción de lo que puede salir mal;
+  * Información sobre otras actividades concurrentes;
+  * Una descripción de la situación cuando el escenario termina.
+
+---
+### Escenario para la recolección de información medica del sistema para MHC-PMS
+
+**Suposición inicial:** El paciente fue atendido por una recepcionista
+médica que ha creado un registro en el sistema y se recoge información
+personal del paciente (nombre, dirección, edad, etc.) Una enfermera ha
+iniciado sesión en el sistema y está recopilando antecedentes clínicos.
+
+**Normal:** La enfermera busca al paciente por su apellido Si hay más de un
+paciente con el mismo apellido, el nombre y la fecha de nacimiento se
+utilizaran para identificar al paciente.
+La enfermera ingresa en la opción de menú para añadir antecedentes
+clínicos.
+
+La enfermera sigue una serie de indicaciones del sistema para introducir
+información sobre las consultas en otros centros de salud mental (entrada
+de texto libre), condiciones médicas existentes (enfermera selecciona
+condiciones en el menú), medicamentos que se toman actualmente
+(seleccionado en el menú), alergias (libre texto), y la vida familiar
+(formulario).
+
+---
+### Escenario para la recolección de información medica del sistema para MHC-PMS
+
+**Qué puede salir mal:**
+* **El historial del paciente no existe o no se puede encontrar:** La
+enfermera debe crear un nuevo registro con la información personal.
+* **Las Condiciones del paciente o la medicación no existen entre las
+opciones predefinidas:** La enfermera debe elegir la opción de "otro" y
+escriba el texto libre que describe la condición / medicación.
+Paciente no puede / no quiere proporcionar información sobre su
+historial médico: La enfermera debe introducir texto libre indicando la
+incapacidad / falta de voluntad del paciente para proporcionar
+información. El sistema debe imprimir un formulario indicando que la
+falta de información puede significar que el tratamiento no sea efectivo.
+Esto debe ser firmado y entregado al paciente.
+* **Otras actividades:** Registro podrá ser consultado , pero no editado por
+el resto del personal mientras se introduce información.
+* **El estado del sistema al terminar:** El registro del paciente se agrega
+en la base de datos de historia clínica. Se agrega un registro en el
+registro del sistema que muestra el inicio y fin de la sesión y la
+enfermera involucrada.
+
+---
+### Casos de uso
+* Casos de uso son una técnica basado de escenario en UML que
+permiten identificar a los actores en una interacción y que describen
+la interacción misma.
+* Un conjunto de casos de uso debe describir todas las posibles
+interacciones con el sistema.
+* Modelo gráfico de alto nivel complementado con una descripción
+más detallada de cuadro.
+* Los diagramas de secuencia se pueden utilizar para agregar el
+detalle a los casos de uso, mostrando la secuencia de procesamiento
+de eventos en el sistema.
+
+---
+### Elementos de un diagrama de casos de uso
+![Elementos de un diagrama de casos de uso](images/unidad3/elementos-diagrama-casos-de-uso.jpg)
+
+---
+### Casos de uso para MHC-PMS
+![Diagrama de casos de uso](images/unidad3/diagrama-casos-de-uso.jpg)
+
+---
+### Etnografía
+* La etnografía es una técnica de observación que se usa para
+entender los procesos operacionales y ayudar a derivar
+requerimientos de apoyo para dichos procesos.
+* Es necesario observar y analizar cómo las personas trabajan
+realmente.
+* Pueden ser observados los factores sociales y organizacionales de importancia.
+* Los estudios etnográficos han demostrado que el trabajo suele
+ser más rico y complejo de lo que sugieren los modelos de
+sistemas simples.
+
+---
+### Ámbito de aplicación de la etnografía
+* Los requerimientos que se derivan de la forma en que las
+personas trabajan realmente en vez de la forma en la cual las
+definiciones del proceso indican que debería trabajar.
+* Los requerimientos que se derivan de la cooperación y el
+conocimiento de las actividades de otras personas.
+* Los estudios etnográficos pueden revelar detalles críticos de
+procesos, que con frecuencia se pierden con otras técnicas de
+adquisición de requerimientos.
+
+---
+### Etnografía y prototipos para el análisis de los requerimientos
+![Etnografia](images/unidad3/etnografia.jpg)
+
+---
+### Validación de requerimientos
+Proceso de verificar que los requerimientos
+definan realmente el sistema que quiere el cliente.
+
+Falta de validación de requerimientos implica costos altos.
+La solución de un error de los
+requerimientos después de entrega puede
+llegar a costar hasta 100 veces el costo de
+arreglar un error de ejecución.
+
+---
+### Comprobación de requerimientos
+* **Validez:** ¿El sistema provee las funciones que mejor ayudan a las necesidades del cliente?
+* **Consistencia:** ¿Existen conflictos de los requerimientos?
+* **Integridad:** ¿Están todas las funciones requeridas por el cliente incluidas?
+* **Realismo:** Pueden implementarse los requerimientos dado el presupuesto y la tecnología disponible?
+* **Verificabilidad:** ¿Se pueden comprobar los requisitos?
+
+---
+### Técnicas de validación de requerimientos
+* Criticas de requerimientos
+  * Análisis manual sistemático de los requerimientos.
+* Prototipado
+  * Utilizando un modelo ejecutable del sistema para comprobar requerimientos.
+* Generación de test
+  * El desarrollo de las pruebas de requerimientos para comprobar la capacidad de prueba.
+
+---
+### Criticas de los requerimientos
+* Las revisiones periódicas deben ser sostenidas mientras
+la definición de requerimientos se formula.
+* Tanto el cliente como el personal del proyecto deben
+participar en las revisiones.
+* Las revisiones pueden ser formales (con documentos
+completos) o informales. Buenas comunicaciones entre
+los desarrolladores, clientes y usuarios pueden resolver
+problemas en una etapa temprana.
+
+---
+### REQUERIMIENTOS:
+* La verificabilidad: Los requerimientos son verificables
+* Comprensibilidad: Los requerimientos fueron entendidos correctamente
+* Trazabilidad: El origen de la obligación se declaró con claridad
+* Adaptabilidad: El requerimiento puede cambiar sin un gran impacto en otros requerimientos
+
+---
+### Gestión de requerimientos
+La gestión de requerimientos es el proceso que permite
+realizar el seguimiento de los cambios en los
+requerimientos durante el proceso de ingeniería de
+requerimientos y de desarrollo del sistema.
+* Es necesario hacer un seguimiento de los
+requerimientos individuales y sus vínculos con
+requerimientos dependientes para evaluar el impacto de
+los cambios.
+* Es necesario establecer un proceso formal para las
+propuestas de cambio y su vinculacion con los
+requisitos del sistema.
+
+---
+### Cambio en los requerimientos
+* El entorno empresarial del sistema siempre cambia
+después de la instalación:
+
+Nuevo hardware, interconeccion con otros sistemas, las prioridades de
+negocio pueden cambiar (con los consiguientes cambios en el apoyo al
+sistema es necesario), nueva legislación y los reglamentos etc.
+
+* Las personas que pagan por un sistema y los
+usuarios de dicho sistema rara vez son las mismas
+personas.
+
+Los clientes del sistema imponen requerimientos debido a las
+limitaciones organizativas y presupuestarias. Estos pueden estar en
+conflicto con los requisitos de los usuarios finales y, después de la
+entrega, las nuevas características pueden tener que ser añadidas
+para el soporte al usuario si el sistema quiere cumplir sus objetivos.
+
+---
+### Cambio en los requerimientos
+* Los grandes sistemas suelen tener una diversa
+comunidad de usuario, con muchos usuarios que tienen
+diferentes necesidades y prioridades que pueden ser
+conflictivas o contradictorias.
+  * Los requerimientos finales del sistema son inevitablemente un
+compromiso entre ellos y, con la experiencia, a menudo se
+descubre que el saldo de la ayuda dada a los diferentes usuarios
+tiene que ser cambiado.
+
+---
+### Evolución de los requerimientos
+![Evolución de requerimientos](images/unidad3/evolucion-de-requerimientos.jpg)
+
+---
+### Planificación de la gestión de requerimientos
+* Establece el nivel de detalle de la gestión de requerimientos que se requiere.
+* Decisiones de gestión requerimientos:
+  * **La identificación de requerimientos:** Cada requerimiento debe ser
+identificada de modo que pueda ser una referencia cruzada con otros requerimientos.
+  * **Proceso de gestión de cambios:** Este es el conjunto de actividades
+que evalúan el impacto y el costo de los cambios. Se verá este
+proceso con más detalle en la siguiente sección.
+  * **Políticas de trazabilidad:** Estas políticas definen las relaciones entre
+cada requisito y entre los requerimientos y el diseño del sistema que se
+debe registrar.
+  * **Herramientas de apoyo:** herramientas que se pueden utilizar que van
+desde sistemas de gestión de requerimientos especializados para
+hojas de cálculo y hasta sistemas de bases de datos simples
+
+---
+### Gestión de cambio de los requerimientos
+* Decidir si un cambio de requerimientos debe ser aceptado
+  * **Análisis del problema y especificación del cambio**
+    * Durante esta etapa, el problema o la propuesta de cambio se
+analiza para comprobar que sea válida. Este análisis se
+realimenta al solicitante al que pidió el cambio quién puede
+responder con requerimientos más específicos cambiar la
+propuesta, o si decide retirar la solicitud.
+  * **Análisis del cambio y cálculo de costos**
+    * El efecto del cambio propuesto se evaluó a través de la
+información de trazabilidad y el conocimiento general de los
+requerimientos del sistema. Una vez completado este de
+análisis, se toma la decisión de si se debe o no proceder con el
+cambio de requerimientos.
+  * **Implementación del cambio**
+    * El documento de requerimientos y, en su caso, el diseño e
+implementación del sistema, se modifican. Lo ideal sería que el
+documento debe ser organizado de tal manera que los
+cambios se pueden implementar fácilmente.
+
+---
+### Gestión de cambio de los requerimientos
+
+
+
+64 de 74
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
