@@ -32,6 +32,11 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 
 ---
+## Libros:
+![Book](images/book.png)
+“Ingeniería del Software: Un enfoque práctico 7ma ed.” de Roger Pressman
+
+---
 ## Ingenieria de Software
 La ingeniería de software aplica teorías, métodos y herramientas para el desarrollo de software profesional.
 
