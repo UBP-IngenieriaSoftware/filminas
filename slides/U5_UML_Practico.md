@@ -140,6 +140,7 @@ El sujero o límite se define:
 
 ---
 ### Detalle de CU
+<!-- .slide: style="font-size: 0.70em" -->
 Generalmente el diagrama de casos de uso por si solo no es suficiente, y es necesario detallar cada **caso de uso** con 
 una planilla como la siguiente:
 
