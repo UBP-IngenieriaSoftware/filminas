@@ -12,6 +12,13 @@ Created by <i class="fab fa-telegram"></i>
 ---
 <!-- .slide: style="font-size: 0.60em" -->
 <style>
+.grid-container2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 0.8em;
+    text-align: left !important;
+}
+
 .grid-item {
     border: 3px solid rgba(121, 177, 217, 0.8);
     padding: 20px;
@@ -19,17 +26,29 @@ Created by <i class="fab fa-telegram"></i>
 }
 </style>
 ## Temario
+<div class="grid-container2">
 <div class="grid-item">
 
 ### Ingeniería de Requerimientos
 * Definición
-* Por que?
-* Errores de Software
-* Costos del software
-* Productos de software
-* Especificaciones del producto
-* Preguntas sobre la ingeniería de Software
+* Que es un requerimiento?
+* Tipos de requerimiento
+* Requerimientos del usuario y del sistema
+* Requerimientos funcionales y no funcionales
+* Requerimientos del MHC-PMS
+* Imprecisión de requerimientos
+* integridad y la coherencia
 </div>
+<div class="grid-item">
+
+* Requerimientos no funcionales
+* Clasificación de Req No Func
+* Objetivos y Requerimientos
+* Requerimientos de usabilidad
+* Métricas para Req No Func
+* Requerimientos de Dominio
+</div>
+
 
 ---
 ### Ingeniería de requerimientos
@@ -49,6 +68,7 @@ de requerimientos para el sistema ".
 
 ---
 ### Qué es un requerimiento?
+<!-- .slide: style="font-size: 0.80em" -->
 Propiedad o restricción, determinada con precisión, que un producto software debe satisfacer
 
 * Como se expresa un requerimiento?
@@ -75,19 +95,19 @@ que debe ser implementado así que puede ser parte de un documento entre el clie
 
 ---
 ### Requerimientos de usuario y del sistema
-Requerimiento del usuario:
-1. TEI software debe proveer un medio para representar y acceder a archivos externos creados por otras herramientas.
-
-Especificación de los requerimientos del sistema:
-1.1. Al usuario se le proveerá con los recursos para definir el tipo de archivos externos.
-1.2. Cada tipo de archivo externo tendrá una herramienta asociada que será aplicada al archivo.
-1.3. Cada tipo de archivo externo se representará como un icono específico sobre la pantalla del usuario.
-1.4. Se proveerán recursos para que el usuario defina el icono que representa un tipo de archivo externo.
-1.5. Cuando un usuario selecciona un icono que representa un archivo externo, el efecto de esa selección es aplicar la
-herramienta asociada con este tipo de archivo al archivo representado por el icono seleccionado.
+<!-- .slide: style="font-size: 0.70em" -->
+Requerimiento del usuario & Requerimientos del sistema:
+1. El software debe proveer un medio para representar y acceder a archivos externos creados por otras herramientas. 
+   1. Al usuario se le proveerá con los recursos para definir el tipo de archivos externos. 
+   2. Cada tipo de archivo externo tendrá una herramienta asociada que será aplicada al archivo.
+   3. Cada tipo de archivo externo se representará como un icono específico sobre la pantalla del usuario. 
+   4. Se proveerán recursos para que el usuario defina el icono que representa un tipo de archivo externo. 
+   5. Cuando un usuario selecciona un icono que representa un archivo externo, el efecto de esa selección es aplicar la
+      herramienta asociada con este tipo de archivo al archivo representado por el icono seleccionado.
 
 ---
 ### Requerimientos funcionales y no funcionales
+<!-- .slide: style="font-size: 0.80em" -->
 * Requerimientos funcionales
   * Enunciados acerca de los servicios del sistema que debe proporcionar, como el sistema debe reaccionar a entradas
 generales y cómo el sistema debe comportarse en situaciones
@@ -117,6 +137,7 @@ dígitos.
 
 ---
 ### Imprecisión de requerimientos
+<!-- .slide: style="font-size: 0.90em" -->
 * Los problemas surgen cuando los requerimientos no se expresan con precisión.
 * Requisitos ambiguos pueden ser interpretados de diferentes maneras por los desarrolladores y usuarios.
 * Considere el término ‘buscar' en un requerimiento
@@ -134,6 +155,7 @@ En la práctica, es dificil producir un documento de requisitos completo y consi
 
 ---
 ### Requerimientos no funcionales
+<!-- .slide: style="font-size: 0.80em" -->
 Definen
 * Propiedades transversales a todo el sistema :
   * Los requerimientos de fiabilidad 
@@ -146,8 +168,10 @@ Definen
   
 Requisitos no funcionales pueden ser más críticos que los requerimientos funcionales. Si éstos no se cumplen, el sistema puede ser inútil.
 
----
+----
+
 ### Requerimientos no funcionales
+<!-- .slide: style="font-size: 0.80em" -->
 * Requisitos no funcionales pueden afectar a la arquitectura general de un sistema en lugar de a los componentes individuales.
     * Por ejemplo, para garantizar que se cumplen los requerimientos de rendimiento, puede que tenga que organizar el sistema para
       minimizar las comunicaciones entre componentes.
@@ -157,6 +181,7 @@ Requisitos no funcionales pueden ser más críticos que los requerimientos funci
   
 ---
 ### Clasificación de requerimientos no funcionales
+<!-- .slide: style="font-size: 0.90em" -->
 * **Requerimientos del producto**, que especifican como el producto debe comportarse, por ejemplo velocidad de
 ejecución, fiabilidad, etc.
 * **Requerimientos organizacionales**, que son consecuencia de las políticas y procedimientos de la organización, por 
@@ -170,6 +195,7 @@ ejemplo, requisitos de interoperabilidad, los requisitos legislativos, etc.
 
 ---
 ### Ejemplo de requerimientos no funcionales de MHC-PMS
+<!-- .slide: style="font-size: 0.90em" -->
 * **Requerimientos del producto**
 El MHC-PMS estará a disposición de todas las clínicas durante las horas normales de trabajo (lun-vie, 08:30 a 17:30). 
 El tiempo de inactividad dentro de las horas normales de trabajo no excederá de cinco segundos en cualquiera de un día.
@@ -180,6 +206,7 @@ El sistema deberá aplicar las disposiciones de privacidad del paciente según l
 
 ---
 ### Ejemplo de requerimientos no funcionales sistema de bibliotecas LIBSYS
+<!-- .slide: style="font-size: 0.80em" -->
 * Requerimiento del producto
   * La interfaz del usuario para LIBSYS deberá ser implementada como HTML simple sin marcos o applets.
 * Requerimiento organizativo
@@ -189,6 +216,7 @@ El sistema deberá aplicar las disposiciones de privacidad del paciente según l
 
 ---
 ### Objetivos y requerimientos
+<!-- .slide: style="font-size: 0.80em" -->
 Requerimientos no funcionales pueden ser muy difíciles de explicar y requerimientos imprecisos pueden ser muy difíciles de verificar
 
 * Objetivos 
@@ -274,7 +302,8 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
 | Definición de requerimientos de usuario | Aquí, usted describe los servicios proporcionados por el usuario. Los requisitos del sistema no funcionales también deben ser descritos en esta sección. Esta descripción puede usar el lenguaje natural, diagramas u otras anotaciones que sean comprensibles para los clientes. Las normas de productos y de procesos que deben seguirse deben especificarse. |
 | Arquitectura del sistema | Este capítulo debe presentar una descripción de alto nivel de la arquitectura del sistema previsto, que muestra la distribución de funciones a través de los módulos del sistema. Los componentes arquitectónicos que se reutilizan deben destacarse.                                                                                                           |
 
----
+----
+
 ### La estructura de un documento de requerimientos
 | Capitulo | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                           |
 |----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -286,6 +315,7 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
 
 ---
 ### Especificación de requerimientos
+<!-- .slide: style="font-size: 0.90em" -->
 * El proceso de escribir los requerimientos del sistema del usuario y en un documento de requisitos.
 * Los requerimientos de usuario tienen que ser comprensibles por los usuarios finales y los clientes quienes no tienen una formación técnica.
 * Los requerimientos del sistema son requerimientos más detallados y pueden incluir más información técnica.
@@ -304,6 +334,7 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
 
 ---
 ### Diseño y requerimientos
+<!-- .slide: style="font-size: 0.90em" -->
 En principio, los requerimientos deberán establecer lo que el sistema debe hacer y el
 diseño debe describir cómo se hace esto.
 
@@ -331,6 +362,7 @@ la consecuencia de un requisito reglamentario.
 
 ---
 ### Requerimientos de ejemplo para el sistema de software de la bomba de insulina
+<!-- .slide: style="font-size: 0.80em" -->
 3.2 El sistema deberá medir el azúcar en la sangre cada 10
 minutos y administrar la insulina si es necesario. Los cambios
 en el azúcar en la sangre son relativamente lentas lo que la
@@ -360,7 +392,8 @@ por ejemplo, requerimientos para un sistema de control
 embebido, pero a veces es demasiado rígido para la
 escritura de requerimientos del sistema de negocios.
 
----
+----
+
 ### Especificación estructurada
 * Definición de la función o entidad.
 * Descripción de las entradas y de dónde vienen.
@@ -387,6 +420,7 @@ calculo para los diferentes escenarios.
 ---
 ### Especificación tabular del cálculo de la dosis de insulina
 | Condición | Acción |
+|:----------|:-------|
 | Nivel de azúcar cayendo(r2 < r1) | CompDosis = 0 |
 | Nivel de azúcar estable (r2 = r1) | CompDosis = 0 |
 | Nivel de azúcar aumentado y la frecuencia bajando ((r2 – r1) < (r1 – r0)) | CompDosis = 0 |
@@ -394,6 +428,7 @@ calculo para los diferentes escenarios.
 
 ---
 ### Procesos de ingeniería de requerimientos
+<!-- .slide: style="font-size: 0.80em" -->
 * Los procesos utilizados para IR varían ampliamente
 dependiendo del dominio de la aplicación, las personas
 involucradas y la organización el desarrollo de los requisitos.
@@ -445,6 +480,7 @@ limitaciones de hardware, otros sistemas, etc.
 
 ---
 ### Actividades del proceso
+<!-- .slide: style="font-size: 0.80em" -->
 * Descubrimiento de requerimientos
   * La interacción con las partes interesadas para descubrir sus necesidades.
   * Los requerimientos de dominio también se descubren en esta etapa.
@@ -457,6 +493,7 @@ limitaciones de hardware, otros sistemas, etc.
 
 ---
 ### Problemas en la obtención de requerimientos
+<!-- .slide: style="font-size: 0.90em" -->
 * Los interesados no saben expresar lo que realmente quieren.
 * Las partes interesadas expresan los requerimientos en sus propios términos.
 * Las diferentes partes interesadas pueden tener requisitos contradictorios.
@@ -505,6 +542,7 @@ parte de la mayoría de los procesos de la IR.
   * Entrevistas cerradas a base de lista de preguntas predeterminada
   * Entrevistas abiertas donde varios temas se exploran con las  partes interesadas.
 
+---
 ### Entrevistas efectivas
 * Tener la mente abierta, evitar las ideas preconcebidas
 acerca de los requerimientos y estár dispuestos a
@@ -515,6 +553,7 @@ si trabajan juntos en un sistema prototipo.
 
 ---
 ### Entrevistas en la práctica
+<!-- .slide: style="font-size: 0.90em" -->
 * Normalmente, una mezcla de la entrevista cerrada y abierta.
 * Las entrevistas son buenas para conseguir una
 comprensión global de lo que los actores hacen y cómo
@@ -537,7 +576,7 @@ Los escenarios son ejemplos reales de cómo se puede utilizar un sistema.
 
 ---
 ### Escenario para la recolección de información medica del sistema para MHC-PMS
-
+<!-- .slide: style="font-size: 0.70em" -->
 **Suposición inicial:** El paciente fue atendido por una recepcionista
 médica que ha creado un registro en el sistema y se recoge información
 personal del paciente (nombre, dirección, edad, etc.) Una enfermera ha
@@ -558,6 +597,7 @@ condiciones en el menú), medicamentos que se toman actualmente
 
 ---
 ### Escenario para la recolección de información medica del sistema para MHC-PMS
+<!-- .slide: style="font-size: 0.60em" -->
 
 **Qué puede salir mal:**
 * **El historial del paciente no existe o no se puede encontrar:** La
@@ -688,6 +728,7 @@ requisitos del sistema.
 
 ---
 ### Cambio en los requerimientos
+<!-- .slide: style="font-size: 0.80em" -->
 * El entorno empresarial del sistema siempre cambia
 después de la instalación:
 
@@ -722,6 +763,7 @@ tiene que ser cambiado.
 
 ---
 ### Planificación de la gestión de requerimientos
+<!-- .slide: style="font-size: 0.70em" -->
 * Establece el nivel de detalle de la gestión de requerimientos que se requiere.
 * Decisiones de gestión requerimientos:
   * **La identificación de requerimientos:** Cada requerimiento debe ser
@@ -738,6 +780,7 @@ hojas de cálculo y hasta sistemas de bases de datos simples
 
 ---
 ### Gestión de cambio de los requerimientos
+<!-- .slide: style="font-size: 0.60em" -->
 * Decidir si un cambio de requerimientos debe ser aceptado
   * **Análisis del problema y especificación del cambio**
     * Durante esta etapa, el problema o la propuesta de cambio se

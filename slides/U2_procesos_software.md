@@ -130,7 +130,8 @@ Los gerentes necesitan entregas regulares para medir el progreso. No es rentable
 * Estructura del sistema tiende a degradarse a medida que se añaden nuevos incrementos.
 Se gasta menos tiempo y dinero en la refactorización para mejorar el software, lo que tiende a corromper su estructura. La incorporación de nuevos cambios se vuelve cada vez más difícil y costoso.
 
----
+----
+
 ### Ingeniería de software orientado a Reutilización
 <!-- .slide: style="font-size: 0.90em" -->
 Se basa en la reutilización sistemática de código, los sistemas se integran a partir de componentes o sistemas existentes.
@@ -144,7 +145,8 @@ Etapas del proceso
 
 La reutilización es ahora el enfoque estándar para la construcción de muchos tipos de sistemas.
 
----
+----
+
 ### Ingeniería de software orientado a Reutilización
 ![Software Orientado a Reutilización](images/unidad2/software-reutilizacion.jpg)
 

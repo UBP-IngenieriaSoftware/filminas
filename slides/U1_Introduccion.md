@@ -187,7 +187,8 @@ La ingeneiría de software es una disciplina de la ingeniería que se interesa p
 * ¿Cuáles son las actividades fundamentales de la ingeniería de software?
 Especificación, desarrollo, validación y evolución del software.
 
----
+----
+
 ### Preguntas sobre la ingeniería de Software
 <!-- .slide: style="font-size: 0.90em" -->
 * ¿Cuál es la diferencia entre ingeniería de software y ciencias de la computación?
@@ -198,7 +199,8 @@ sentido práctico del desarrollo y en la distribución de software.
 La ingeniería de sistemas se interesa por todos los aspectos del desarrollo de sistemas basados en computadoras, incluidos
 hardware, software e ingeniería de procesos. La ingeniería de software es parte de este proceso más general.
 
----
+----
+
 ### Preguntas sobre la ingeniería de Software
 <!-- .slide: style="font-size: 0.80em" -->
 * ¿Cuáles son los principales retos que enfrenta la ingeniería de software?
@@ -208,7 +210,8 @@ Tiempos de distribución limitados y desarrollo de software confiable.
 Aproximadamente 60% de los costos del software son de desarrollo, y 40% de prueba. Para el software elaborado específicamente,
 los costos de evolución superan con frecuencua los costos de desarrollo.
 
----
+----
+
 ### Preguntas sobre la ingeniería de Software
 <!-- .slide: style="font-size: 0.75em" -->
 * ¿Cuáles son los mejores métodos y técnicas de la ingeniería de software?
@@ -233,7 +236,8 @@ un entorno empresarial variable.
 confiabilidad y seguridad. El software fiable no debe causar daño físico o económico en caso de fallo del sistema. 
 Los usuarios malintencionados no deben poder acceder o dañar el sistema.
 
----
+----
+
 ### Atributos esenciales de un buen software
 <!-- .slide: style="font-size: 0.80em" -->
 * **Eficiencia:** El software debe optimizar el uso de los recursos del sistema, como la memoria y los ciclos del 
@@ -318,7 +322,8 @@ o terminales. Esto incluye aplicaciones web.
 Se trata de sistemas de software que controlan y gestionan dispositivos de hardware. Su numero es superior a cualquier 
 otro tipo de sistema.
 
----
+----
+
 ### Tipos de aplicaciones
 <!-- .slide: style="font-size: 0.85em" -->
 * **Sistemas de procesamiento por lotes**
@@ -331,7 +336,8 @@ Se trata de sistemas que son principalmente para su uso personal y que están de
 * **Sistemas para el modelado y simulación**
 Se trata de sistemas cuyo objetivo es modelar procesos físicos donde distintas entidades interactúan entre si.
 
----
+----
+
 ### Tipos de aplicaciones
 
 * **Sistemas de adquisición de datos** 	
@@ -360,7 +366,8 @@ en lugar de los sistemas locales.
 El enfoque SaS (Software as Service) esta cada vez mas difundido. Las aplicaciones se ejecutan de forma remota en la 
 "nube". Los usuarios no compran software pagan en función del uso.
 
----
+----
+
 ### La ingeniería de software y la web
 Reutilización de software: es dominante para la construcción de sistemas basados en la web. Se diseña a partir de 
 componentes y sistemas de software pre-existentes.
