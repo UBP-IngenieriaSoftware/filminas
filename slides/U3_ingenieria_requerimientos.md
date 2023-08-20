@@ -783,29 +783,20 @@ hojas de cálculo y hasta sistemas de bases de datos simples
 <!-- .slide: style="font-size: 0.60em" -->
 * Decidir si un cambio de requerimientos debe ser aceptado
   * **Análisis del problema y especificación del cambio**
-    * Durante esta etapa, el problema o la propuesta de cambio se
-analiza para comprobar que sea válida. Este análisis se
-realimenta al solicitante al que pidió el cambio quién puede
-responder con requerimientos más específicos cambiar la
+    * Durante esta etapa, el problema o la propuesta de cambio se analiza para comprobar que sea válida. Este análisis 
+se realimenta al solicitante al que pidió el cambio quién puede responder con requerimientos más específicos cambiar la
 propuesta, o si decide retirar la solicitud.
   * **Análisis del cambio y cálculo de costos**
-    * El efecto del cambio propuesto se evaluó a través de la
-información de trazabilidad y el conocimiento general de los
-requerimientos del sistema. Una vez completado este de
-análisis, se toma la decisión de si se debe o no proceder con el
-cambio de requerimientos.
+    * El efecto del cambio propuesto se evaluó a través de la información de trazabilidad y el conocimiento general de 
+los requerimientos del sistema. Una vez completado este de análisis, se toma la decisión de si se debe o no proceder con 
+el cambio de requerimientos.
   * **Implementación del cambio**
-    * El documento de requerimientos y, en su caso, el diseño e
-implementación del sistema, se modifican. Lo ideal sería que el
-documento debe ser organizado de tal manera que los
-cambios se pueden implementar fácilmente.
+    * El documento de requerimientos y, en su caso, el diseño e implementación del sistema, se modifican. Lo ideal sería 
+que el documento debe ser organizado de tal manera que los cambios se pueden implementar fácilmente.
 
 ---
 ### Gestión de cambio de los requerimientos
-
-
-
-64 de 74
+![Gestión de Cambios](images/unidad3/gestion-de-cambios.jpg)
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?

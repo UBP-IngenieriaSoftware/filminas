@@ -13,4 +13,5 @@ Se pueden ver online en https://ubp-ingenieriasoftware.github.io/filminas/
 Revisar
 https://es.slideshare.net/MatiasGonzaloAcosta/procesos-de-software-unidad-2-software-enginnering-ian-sommerville
 https://slideplayer.es/slide/17988345/
+https://slideplayer.es/slide/18133590/
 
