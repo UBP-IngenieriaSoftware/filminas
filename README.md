@@ -15,3 +15,6 @@ https://es.slideshare.net/MatiasGonzaloAcosta/procesos-de-software-unidad-2-soft
 https://slideplayer.es/slide/17988345/
 https://slideplayer.es/slide/18133590/
 
+Markdown formater: https://codebeautify.org/markdown-formatter
+
+https://diagramasuml.com/diagrama-de-clases/

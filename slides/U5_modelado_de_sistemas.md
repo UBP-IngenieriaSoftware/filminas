@@ -53,7 +53,7 @@ Created by <i class="fab fa-telegram"></i>
 * Modelos de Máquina de Estado
 * Ingeniería Dirigida por Modelos
 </div>
-
+</div>
 
 ---
 ### Modelado de SIstemas

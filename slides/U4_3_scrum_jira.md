@@ -25,6 +25,8 @@ Created by <i class="fab fa-telegram"></i>
 * Scrum: Definición
 * Roles
 
+</div>
+
 ---
 ### Scrum
 Esta metodología se lleva adelante en “Sprints”. Al final de cada sprint, el equipo debe entregar una versión mejorada 

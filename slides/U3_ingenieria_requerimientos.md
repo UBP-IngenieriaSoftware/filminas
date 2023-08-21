@@ -48,7 +48,7 @@ Created by <i class="fab fa-telegram"></i>
 * Métricas para Req No Func
 * Requerimientos de Dominio
 </div>
-
+</div>
 
 ---
 ### Ingeniería de requerimientos
