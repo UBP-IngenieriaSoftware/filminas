@@ -30,11 +30,28 @@ Created by <i class="fab fa-telegram"></i>
 <div class="grid-item">
 
 ### Gestión de Proyectos
+* Proyecto
 * Definición
+* Elementos que incluye
+* Cómo se gestiona
+* Criterios de Éxito
+* Gestión de proyectos de Software
+* Actividades de los administradores
+* Gestión del Riesgo
+* Identificación del Riesgo
 
 </div>
 <div class="grid-item">
 
+* Planeación del Riesgo
+* Monitoreo del Riesgo
+* Indicadores de Riesgo
+* Gestión de Personal
+* Factores
+* Motivación del Personal
+* Jerarquía de Necesidades Humanas
+* Trabajo en Equipo
+* Calendarización de Proyectos
 </div>
 </div>
 

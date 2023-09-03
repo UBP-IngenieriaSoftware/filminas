@@ -31,10 +31,27 @@ Created by <i class="fab fa-telegram"></i>
 
 ### Pruebas de Software
 * Definición
+* Metas
+* Validación
+* Modelo de Entrada-Salida
+* Verificación vs. Validación
+* Inspecciones y Pruebas
+* Ventajas de Inspecciones
+* Etapas de Prueba
 
 </div>
 <div class="grid-item">
 
+* Pruebas de Desarrollo
+* Pruebas Unitarias
+* Pruebas de Clases
+* Pruebas automatizadas
+* Pruebas de Interface
+* Pruebas del Sistema
+* Pruebas de Componentes
+* Pruebas de Casos de Uso
+* Políticas de Pruebas
+* Pruebas de Regresión
 </div>
 </div>
 

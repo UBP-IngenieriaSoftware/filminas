@@ -31,10 +31,21 @@ Created by <i class="fab fa-telegram"></i>
 
 ### Evolución y Mantenimiento de Software
 * Definición
+* Proceso de Evolución
+* Implementación del cambio
+* Leyes de Lehman
+* Mantenimiento del Software
+* Costos de Mantenimiento
+* Predicción del mantenimiento
 
 </div>
 <div class="grid-item">
 
+* Tipos de mantenimiento
+* Mantenimiento preventivo
+* Mantenimiento correctivo
+* Mantenimiento perfectivo
+* Mantenimiento adaptativo
 </div>
 </div>
 
