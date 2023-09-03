@@ -149,7 +149,7 @@ El sujero o límite se define:
 
 ---
 ### Detalle de CU
-<!-- .slide: style="font-size: 0.70em" -->
+<!-- .slide: style="font-size: 0.60em" -->
 
 Generalmente el diagrama de casos de uso por si solo no es suficiente, y es necesario detallar cada **caso de uso** con 
 una planilla como la siguiente:
@@ -169,6 +169,10 @@ una planilla como la siguiente:
 | 6  | Postcondiciones | |
 | 7  | Consideraciones y Observaciones | |
 | 8  | Frecuencia de Uso | |
+
+---
+### Detalle de CU
+![Planilla CU](images/unidad4/planillaCU.jpg)
 
 ---
 ### Modelado avanzado de Caso de uso

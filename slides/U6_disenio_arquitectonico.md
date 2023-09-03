@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Diseño Arquitectónico
-## Diagramas UML
+# Ingeniería de Software
+## Diseño Arquitectónico
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
