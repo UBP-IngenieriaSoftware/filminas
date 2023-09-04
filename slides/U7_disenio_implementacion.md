@@ -128,14 +128,46 @@ mientras es utilizado.
 
 ---
 ### Descripción de caso de uso-Informe meteorológico
+<!--
+| Caso de uso  | Reportar clima                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|:-------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Actores      | Sistema de información meteorológica, Estación meteorológica                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Descripción  | La estación meteorológica envía un resumen de los datos meteorológicos que se ha recogido de los instrumentos en el período de recolección para el sistema de información sobre el clima. Los datos enviados son el máximo, el mínimo, y una temperatura media de tierra y aire; máximo, mínimo y promedio de las presiones de aire; el máximo, el mínimo, y la velocidad media del viento; la precipitación total; y la dirección del viento como un muestreo a intervalos de cinco minutos. |
+| Estimulo     | El sistema de información del clima establece un enlace de comunicación por satélite con la estación meteorológica y solicita la transmisión de datos.                                                                                                                                                                                                                                                                                                                                        |
+| Respuesta    | El resumen de datos se envía al sistema de información sobre el clima.                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Comentarios  | Las estaciones meteorológicas por lo general se les pide reportar una vez por hora, pero esta frecuencia puede variar de una estación a otra y pueden ser modificados en el futuro.                                                                                                                                                                                                                                                                                                           |
+-->
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Caso de uso</th>
+<th style="text-align:left">Reportar clima</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Actores</td>
+<td style="text-align:left">Sistema de información meteorológica, Estación meteorológica</td>
+</tr>
+<tr>
+<td style="text-align:left">Descripción</td>
+<td style="text-align:left">La estación meteorológica envía un resumen de los datos meteorológicos que se ha recogido de los instrumentos en el período de recolección para el sistema de información sobre el clima. Los datos enviados son el máximo, el mínimo, y una temperatura media de tierra y aire; máximo, mínimo y promedio de las presiones de aire; el máximo, el mínimo, y la velocidad media del viento; la precipitación total; y la dirección del viento como un muestreo a intervalos de cinco minutos.</td>
+</tr>
+<tr>
+<td style="text-align:left">Estimulo</td>
+<td style="text-align:left">El sistema de información del clima establece un enlace de comunicación por satélite con la estación meteorológica y solicita la transmisión de datos.</td>
+</tr>
+<tr>
+<td style="text-align:left">Respuesta</td>
+<td style="text-align:left">El resumen de datos se envía al sistema de información sobre el clima.</td>
+</tr>
+<tr>
+<td style="text-align:left">Comentarios</td>
+<td style="text-align:left">Las estaciones meteorológicas por lo general se les pide reportar una vez por hora, pero esta frecuencia puede variar de una estación a otra y pueden ser modificados en el futuro.</td>
+</tr>
+</tbody>
+</table>
 
-| Caso de uso |  Reportar clima |
-|:------------|:----------------|
-| Actores | Sistema de información meteorológica, Estación meteorológica |
-| Descripción | La estación meteorológica envía un resumen de los datos meteorológicos que se ha recogido de los instrumentos en el período de recolección para el sistema de información sobre el clima. Los datos enviados son el máximo, el mínimo, y una temperatura media de tierra y aire; máximo, mínimo y promedio de las presiones de aire; el máximo, el mínimo, y la velocidad media del viento; la precipitación total; y la dirección del viento como un muestreo a intervalos de cinco minutos. |
-| Estimulo |  El sistema de información del clima establece un enlace de comunicación por satélite con la estación meteorológica y solicita la transmisión de datos. |
-| Respuesta | El resumen de datos se envía al sistema de información sobre el clima. |
-| Comentarios |  Las estaciones meteorológicas por lo general se les pide reportar una vez por hora, pero esta frecuencia puede variar de una estación a otra y pueden ser modificados en el futuro. |
 
 ---
 ### Diseño arquitectónico
@@ -228,10 +260,30 @@ diferentes maneras.
 
 ---
 ### El patrón Observador
-| | |
-|:------------|:----------------------------|
-| Descripción | Separa la vista del estado de un objeto del objeto en sí mismo y permite que se proporcionen vistas alternativas. Cuando el estado del objeto cambia, todas las vistas son automáticamente notificadas y actualizadas para reflejar el cambio. |
+<!--
+|                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+|:-------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Descripción              | Separa la vista del estado de un objeto del objeto en sí mismo y permite que se proporcionen vistas alternativas. Cuando el estado del objeto cambia, todas las vistas son automáticamente notificadas y actualizadas para reflejar el cambio.                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | Descripción del problema | En muchas situaciones se debe proporcionar varias vistas de información de estado, como por ejemplo una pantalla gráfica y una pantalla tabular. No todos ellos pueden ser conocidos cuando se especifica la información. Todas las presentaciones alternativas deben apoyar la interacción y, cuando se cambia el estado, todas las pantallas deben ser actualizados. Este patrón se puede utilizar en todas las situaciones en que se requiere más de un formato de visualización de la información de estado y donde no es necesario que el objeto, que mantiene la información de estado, sepa acerca de los formatos de visualización específicos utilizados. |
+-->
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Descripción</td>
+<td style="text-align:left">Separa la vista del estado de un objeto del objeto en sí mismo y permite que se proporcionen vistas alternativas. Cuando el estado del objeto cambia, todas las vistas son automáticamente notificadas y actualizadas para reflejar el cambio.</td>
+</tr>
+<tr>
+<td style="text-align:left">Descripción del problema</td>
+<td style="text-align:left">En muchas situaciones se debe proporcionar varias vistas de información de estado, como por ejemplo una pantalla gráfica y una pantalla tabular. No todos ellos pueden ser conocidos cuando se especifica la información. Todas las presentaciones alternativas deben apoyar la interacción y, cuando se cambia el estado, todas las pantallas deben ser actualizados. Este patrón se puede utilizar en todas las situaciones en que se requiere más de un formato de visualización de la información de estado y donde no es necesario que el objeto, que mantiene la información de estado, sepa acerca de los formatos de visualización específicos utilizados.</td>
+</tr>
+</tbody>
+</table>
 
 ---
 ### Múltiples vistas utilizando el patrón Observador

@@ -18,3 +18,6 @@ https://slideplayer.es/slide/18133590/
 Markdown formater: https://codebeautify.org/markdown-formatter
 
 https://diagramasuml.com/diagrama-de-clases/
+
+Tablas de Markdown a HTML
+https://markdowntohtml.com/

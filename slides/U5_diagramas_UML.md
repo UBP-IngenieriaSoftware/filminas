@@ -123,6 +123,7 @@ Esta descripción sirve de guía para el desarrollo:
 
 ----
 
+<!--
 | RF-01                | Acceso Aplicación                                                                                                              |
 | :------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
 | Versión              | Versión 1.0                                                                                                                    |
@@ -143,6 +144,89 @@ Esta descripción sirve de guía para el desarrollo:
 | Importancia          | Vital                                                                                                                          |
 | Urgencia             | Inmediatamente                                                                                                                 |
 | Comentarios          | Ninguno                                                                                                                        |
+-->
+<table>
+<thead>
+<tr>
+<th style="text-align:left">RF-01</th>
+<th style="text-align:left">Acceso Aplicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Versión</td>
+<td style="text-align:left">Versión 1.0</td>
+</tr>
+<tr>
+<td style="text-align:left">Autores</td>
+<td style="text-align:left">Agustina Aliciardi</td>
+</tr>
+<tr>
+<td style="text-align:left">Objetivos Asociados</td>
+<td style="text-align:left">OBJ-01: Acceso Controlado a la Aplicación Software</td>
+</tr>
+<tr>
+<td style="text-align:left">Requisitos asociados</td>
+<td style="text-align:left">RI-01: Información de los Usuarios.</td>
+</tr>
+<tr>
+<td style="text-align:left">Descripción</td>
+<td style="text-align:left">El sistema deberá comportarse como se describe en el siguiente caso de uso cuando un usuario decida acceder a la aplicación.</td>
+</tr>
+<tr>
+<td style="text-align:left">Precondición</td>
+<td style="text-align:left">El usuario tiene que disponer de un nombre de usuario y una contraseña para poder acceder y deberá tener el acceso habilitado.</td>
+</tr>
+<tr>
+<td style="text-align:left">Secuencia normal</td>
+<td style="text-align:left">1. El usuario solicita al sistema entrar en la aplicación.</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">2. El sistema solicita al usuario que introduzca el nombre de usuario y su contraseña.</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">3. El usuario introduce su nombre y su contraseña.</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">4. El sistema comprueba los datos introducidos.</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">5. Si los datos son correctos el sistema muestra la página de inicio de la aplicación.</td>
+</tr>
+<tr>
+<td style="text-align:left">Excepciones</td>
+<td style="text-align:left">5. Si el nombre de usuario no es correcto, el sistema muestra un mensaje. Ir al paso 2.</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">5. Si la contraseña no es correcta, el sistema muestra un mensaje. Ir al paso 2.</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">5. Si el sistema no tiene el acceso habilitado a la aplicación, se muestra un mensaje. Ir al paso 2.</td>
+</tr>
+<tr>
+<td style="text-align:left">Postcondición</td>
+<td style="text-align:left">Si el nombre de usuario y la contraseña son correctos accede a la pantalla de inicio de la aplicación</td>
+</tr>
+<tr>
+<td style="text-align:left">Importancia</td>
+<td style="text-align:left">Vital</td>
+</tr>
+<tr>
+<td style="text-align:left">Urgencia</td>
+<td style="text-align:left">Inmediatamente</td>
+</tr>
+<tr>
+<td style="text-align:left">Comentarios</td>
+<td style="text-align:left">Ninguno</td>
+</tr>
+</tbody>
+</table>
 
 ---
 ### Diseño de una aplicación que gestione los tramites a realizar en una clínica veterinaria

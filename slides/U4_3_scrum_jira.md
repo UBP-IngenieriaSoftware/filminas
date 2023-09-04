@@ -202,14 +202,58 @@ Además, se emplearán técnicas de estimación.
 
 Si bien la estimación no tiene reglas generales para todos los equipos, habitualmente, los tiempos que se suelen asignar son:
 
-| Puntos | Tiempo Estimado | Notas                             |
-|:-------|:----------------|:----------------------------------|
-| 1 | 2hs o menos | Tamaño de tarea ideal             |
-| 2 | de 2 a 4hs | Tamaño de tarea ideal             |
-| 3 | Hasta 1 día | Tamaño de tarea ideal             |
-| 5| 1,5 a 2 días | Tratar de dividir en 2 tareas     |
-| 8 | 3 a 5 días | Tratar de dividir en 2 ó 3 tareas |
-| 13 | 5 a 8 días | Si o SI debe dividirse en tareas más pequeñas |
+<!--
+| Puntos  | Tiempo Estimado  | Notas                                         |
+|:--------|:-----------------|:----------------------------------------------|
+| 1       | 2hs o menos      | Tamaño de tarea ideal                         |
+| 2       | de 2 a 4hs       | Tamaño de tarea ideal                         |
+| 3       | Hasta 1 día      | Tamaño de tarea ideal                         |
+| 5       | 1,5 a 2 días     | Tratar de dividir en 2 tareas                 |
+| 8       | 3 a 5 días       | Tratar de dividir en 2 ó 3 tareas             |
+| 13      | 5 a 8 días       | Si o SI debe dividirse en tareas más pequeñas |
+-->
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Puntos</th>
+<th style="text-align:left">Tiempo Estimado</th>
+<th style="text-align:left">Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">2hs o menos</td>
+<td style="text-align:left">Tamaño de tarea ideal</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">de 2 a 4hs</td>
+<td style="text-align:left">Tamaño de tarea ideal</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">Hasta 1 día</td>
+<td style="text-align:left">Tamaño de tarea ideal</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">1,5 a 2 días</td>
+<td style="text-align:left">Tratar de dividir en 2 tareas</td>
+</tr>
+<tr>
+<td style="text-align:left">8</td>
+<td style="text-align:left">3 a 5 días</td>
+<td style="text-align:left">Tratar de dividir en 2 ó 3 tareas</td>
+</tr>
+<tr>
+<td style="text-align:left">13</td>
+<td style="text-align:left">5 a 8 días</td>
+<td style="text-align:left">Si o SI debe dividirse en tareas más pequeñas</td>
+</tr>
+</tbody>
+</table>
+
 
 ---
 ### Ejercicio: Ejecutar la tarea

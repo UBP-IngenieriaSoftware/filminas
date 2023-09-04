@@ -237,6 +237,8 @@ experimentados no excederá de dos por cada hora de uso del sistema. (Requerimie
 
 ---
 ### Métricas para la especificación de requisitos no funcionales
+
+<!--
 | Propiedad        | Medida                                                                                                                                        |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | Velocidad        | Transacciones procesadas por segundo <br> Tiempo de respuesta al usuario y a eventos <br> Tiempo de actualización de la pantalla              | 
@@ -245,6 +247,41 @@ experimentados no excederá de dos por cada hora de uso del sistema. (Requerimie
 | Confiabilidad    | Tiempo medio entre fallos <br> Probabilidad de no disponibilidad <br> Tasa de ocurrencia de dallos <br> Disponibilidad                        |
 | Robustez         | Tiempo de reinicio después de fallo <br> Porcentaje de eventos que causan fallos <br> Probabilidad de corrupción de datos después de un fallo |
 | Portabilidad     | Porcentaje de declaraciones dependientes de objetivo                                                                                          |
+-->
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Medida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Velocidad</td>
+<td>Transacciones procesadas por segundo <br> Tiempo de respuesta al usuario y a eventos <br> Tiempo de actualización de la pantalla</td>
+</tr>
+<tr>
+<td>Tamaño</td>
+<td>M Bytes <br> Número de chips de ROM</td>
+</tr>
+<tr>
+<td>Facilidad de uso</td>
+<td>Tiempo de formación <br> Número de marcos de ayuda</td>
+</tr>
+<tr>
+<td>Confiabilidad</td>
+<td>Tiempo medio entre fallos <br> Probabilidad de no disponibilidad <br> Tasa de ocurrencia de dallos <br> Disponibilidad</td>
+</tr>
+<tr>
+<td>Robustez</td>
+<td>Tiempo de reinicio después de fallo <br> Porcentaje de eventos que causan fallos <br> Probabilidad de corrupción de datos después de un fallo</td>
+</tr>
+<tr>
+<td>Portabilidad</td>
+<td>Porcentaje de declaraciones dependientes de objetivo</td>
+</tr>
+</tbody>
+</table>
 
 ---
 ### Requerimientos del dominio
@@ -295,6 +332,7 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
 
 ---
 ### La estructura de un documento de requerimientos
+<!--
 | Capitulo                                | Descripción                                                                                                                                                                                                                                                                                                                                                     |
 |-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Prefacio                                | Esto debe definir el número de lectores se espera del documento y describir su historial de versiones, incluyendo una justificación para la creación de una nueva versión y un resumen de los cambios realizados en cada versión.                                                                                                                               |
@@ -302,10 +340,42 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
 | Glosario                                | Esto debería definir los términos técnicos utilizados en el documento. No debería hacer suposiciones acerca de la experiencia o los conocimientos del lector.                                                                                                                                                                                                   | 
 | Definición de requerimientos de usuario | Aquí, usted describe los servicios proporcionados por el usuario. Los requisitos del sistema no funcionales también deben ser descritos en esta sección. Esta descripción puede usar el lenguaje natural, diagramas u otras anotaciones que sean comprensibles para los clientes. Las normas de productos y de procesos que deben seguirse deben especificarse. |
 | Arquitectura del sistema                | Este capítulo debe presentar una descripción de alto nivel de la arquitectura del sistema previsto, que muestra la distribución de funciones a través de los módulos del sistema. Los componentes arquitectónicos que se reutilizan deben destacarse.                                                                                                           |
+-->
+<table>
+<thead>
+<tr>
+<th>Capitulo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prefacio</td>
+<td>Esto debe definir el número de lectores se espera del documento y describir su historial de versiones, incluyendo una justificación para la creación de una nueva versión y un resumen de los cambios realizados en cada versión.</td>
+</tr>
+<tr>
+<td>Introducción</td>
+<td>Esto debería describir la necesidad de que el sistema. Debe describir brevemente las funciones del sistema y explicar cómo va a funcionar con otros sistemas. También debe describir cómo el sistema se ajusta a los objetivos generales de la empresa o estratégicos de la organización puesta en marcha del software.</td>
+</tr>
+<tr>
+<td>Glosario</td>
+<td>Esto debería definir los términos técnicos utilizados en el documento. No debería hacer suposiciones acerca de la experiencia o los conocimientos del lector.</td>
+</tr>
+<tr>
+<td>Definición de requerimientos de usuario</td>
+<td>Aquí, usted describe los servicios proporcionados por el usuario. Los requisitos del sistema no funcionales también deben ser descritos en esta sección. Esta descripción puede usar el lenguaje natural, diagramas u otras anotaciones que sean comprensibles para los clientes. Las normas de productos y de procesos que deben seguirse deben especificarse.</td>
+</tr>
+<tr>
+<td>Arquitectura del sistema</td>
+<td>Este capítulo debe presentar una descripción de alto nivel de la arquitectura del sistema previsto, que muestra la distribución de funciones a través de los módulos del sistema. Los componentes arquitectónicos que se reutilizan deben destacarse.</td>
+</tr>
+</tbody>
+</table>
 
 ----
 
 ### La estructura de un documento de requerimientos
+<!--
 | Capitulo                                     | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                           |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Especificación de requerimientos del sistema | Esto debería describir los requisitos funcionales y no funcionales en más detalle. Si es necesario, mayor detalle puede añadirse a los requerimientos no funcionales. Interfaces para otros sistemas pueden ser definidos.                                                                                                                                                                                                            |
@@ -313,6 +383,38 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
 | Sistema de evaluación                        | Este debe describir los supuestos fundamentales en que se basa el sistema, y cualquier cambio previsto debido a la evolución del hardware, cambios en las necesidades de los usuarios, y así sucesivamente. Esta sección es útil para los diseñadores de sistemas, ya que puede ayudar a evitar las decisiones de diseño que limitarían los probables cambios futuros en el sistema.                                                  |
 | Apéndices                                    | Estos deben proporcionar información detallada y la información específica que se relaciona con la aplicación en desarrollo; por ejemplo, el hardware y las descripciones de bases de datos. Requerimientos de hardware definen las configuraciones de mínimos y óptimos para el sistema. Los requerimientos de base de datos definen la organización lógica de los datos utilizados por el sistema y las relaciones entre los datos. |
 | Índice                                       | Se pueden incluir varios índice. Así como un índice alfabético normal, puede haber un índice de diagramas, un índice de funciones, y así sucesivamente. |
+-->
+<table>
+<thead>
+<tr>
+<th>Capitulo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Especificación de requerimientos del sistema</td>
+<td>Esto debería describir los requisitos funcionales y no funcionales en más detalle. Si es necesario, mayor detalle puede añadirse a los requerimientos no funcionales. Interfaces para otros sistemas pueden ser definidos.</td>
+</tr>
+<tr>
+<td>Modelos del sistema</td>
+<td>Esto podría incluir modelos gráficos del sistema que muestran las relaciones entre los componentes del sistema y el sistema y su entorno. Ejemplos de posibles modelos son modelos de objetos, modelos de flujo de datos, o los modelos de datos semánticos.</td>
+</tr>
+<tr>
+<td>Sistema de evaluación</td>
+<td>Este debe describir los supuestos fundamentales en que se basa el sistema, y cualquier cambio previsto debido a la evolución del hardware, cambios en las necesidades de los usuarios, y así sucesivamente. Esta sección es útil para los diseñadores de sistemas, ya que puede ayudar a evitar las decisiones de diseño que limitarían los probables cambios futuros en el sistema.</td>
+</tr>
+<tr>
+<td>Apéndices</td>
+<td>Estos deben proporcionar información detallada y la información específica que se relaciona con la aplicación en desarrollo; por ejemplo, el hardware y las descripciones de bases de datos. Requerimientos de hardware definen las configuraciones de mínimos y óptimos para el sistema. Los requerimientos de base de datos definen la organización lógica de los datos utilizados por el sistema y las relaciones entre los datos.</td>
+</tr>
+<tr>
+<td>Índice</td>
+<td>Se pueden incluir varios índice. Así como un índice alfabético normal, puede haber un índice de diagramas, un índice de funciones, y así sucesivamente.</td>
+</tr>
+</tbody>
+</table>
+
 
 ---
 ### Especificación de requerimientos
@@ -325,6 +427,7 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
 
 ---
 ### La estructura de un documento de requerimientos
+<!--
 | Notación                           | Descripción                                                                                                                                                                                                                                                                                                                                                                                       |
 |------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Lenguaje natural                   | Los requerimientos están escritos con oraciones numeradas en lenguaje natural. Cada oración debe expresar un requerimiento.                                                                                                                                                                                                                                                                       |
@@ -332,6 +435,37 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
 | Lenguajes de descripción de Diseño | Este enfoque utiliza un lenguaje como un lenguaje de programación, pero con características más abstractas para especificar los requisitos mediante la definición de un modelo operacional del sistema. Este enfoque se utiliza raramente aunque puede ser útil para las especificaciones de interfaz.                                                                                            |
 | Notaciones graficas                | Modelos gráficos, complementada con anotaciones de texto, se utilizan para definir los requisitos funcionales para el sistema; UML de casos de uso y diagramas de secuencia se utilizan comúnmente.                                                                                                                                                                                               |
 | Especificaciones matemáticas       | Estas anotaciones se basan en conceptos matemáticos, tales como máquinas de estados finitos o conjuntos. Aunque estas especificaciones no ambiguas pueden reducir la ambigüedad en un documento de requisitos, la mayoría de los clientes no entienden una especificación formal. Ellos no pueden controlar que representa lo que quieren y se resisten a aceptarlo como un contrato del sistema. |
+-->
+<table>
+<thead>
+<tr>
+<th>Notación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lenguaje natural</td>
+<td>Los requerimientos están escritos con oraciones numeradas en lenguaje natural. Cada oración debe expresar un requerimiento.</td>
+</tr>
+<tr>
+<td>Lenguaje natural Estructurado</td>
+<td>Los requerimientos están escritos en lenguaje natural en un formulario o plantilla estándar. Cada campo proporciona información acerca de un aspecto del requerimiento.</td>
+</tr>
+<tr>
+<td>Lenguajes de descripción de Diseño</td>
+<td>Este enfoque utiliza un lenguaje como un lenguaje de programación, pero con características más abstractas para especificar los requisitos mediante la definición de un modelo operacional del sistema. Este enfoque se utiliza raramente aunque puede ser útil para las especificaciones de interfaz.</td>
+</tr>
+<tr>
+<td>Notaciones graficas</td>
+<td>Modelos gráficos, complementada con anotaciones de texto, se utilizan para definir los requisitos funcionales para el sistema; UML de casos de uso y diagramas de secuencia se utilizan comúnmente.</td>
+</tr>
+<tr>
+<td>Especificaciones matemáticas</td>
+<td>Estas anotaciones se basan en conceptos matemáticos, tales como máquinas de estados finitos o conjuntos. Aunque estas especificaciones no ambiguas pueden reducir la ambigüedad en un documento de requisitos, la mayoría de los clientes no entienden una especificación formal. Ellos no pueden controlar que representa lo que quieren y se resisten a aceptarlo como un contrato del sistema.</td>
+</tr>
+</tbody>
+</table>
 
 ---
 ### Diseño y requerimientos
@@ -421,12 +555,41 @@ calculo para los diferentes escenarios.
 
 ---
 ### Especificación tabular del cálculo de la dosis de insulina
+<!--
 | Condición | Acción |
 |:----------|:-------|
 | Nivel de azúcar cayendo(r2 < r1) | CompDosis = 0 |
 | Nivel de azúcar estable (r2 = r1) | CompDosis = 0 |
 | Nivel de azúcar aumentado y la frecuencia bajando ((r2 – r1) < (r1 – r0)) | CompDosis = 0 |
 | Nivel de azúcar incrementando y la frecuencia aumentando o estable ((r2 – r1) ≥ (r1 – r0)) | CompDosis = cerca ((r2 – r1)/4) If cerca result = 0 then CompDosis = MinimoDosis |
+-->
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Condición</th>
+<th style="text-align:left">Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Nivel de azúcar cayendo(r2 &lt; r1)</td>
+<td style="text-align:left">CompDosis = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">Nivel de azúcar estable (r2 = r1)</td>
+<td style="text-align:left">CompDosis = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">Nivel de azúcar aumentado y la frecuencia bajando ((r2 – r1) &lt; (r1 – r0))</td>
+<td style="text-align:left">CompDosis = 0</td>
+</tr>
+<tr>
+<td style="text-align:left">Nivel de azúcar incrementando y la frecuencia aumentando o estable ((r2 – r1) ≥ (r1 – r0))</td>
+<td style="text-align:left">CompDosis = cerca ((r2 – r1)/4) If cerca result = 0 then CompDosis = MinimoDosis</td>
+</tr>
+</tbody>
+</table>
+
 
 ---
 ### Procesos de ingeniería de requerimientos
