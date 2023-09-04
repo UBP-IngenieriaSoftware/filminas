@@ -237,7 +237,7 @@ experimentados no excederá de dos por cada hora de uso del sistema. (Requerimie
 
 ---
 ### Métricas para la especificación de requisitos no funcionales
-
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Propiedad        | Medida                                                                                                                                        |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -332,6 +332,7 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
 
 ---
 ### La estructura de un documento de requerimientos
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Capitulo                                | Descripción                                                                                                                                                                                                                                                                                                                                                     |
 |-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -375,6 +376,7 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
 ----
 
 ### La estructura de un documento de requerimientos
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Capitulo                                     | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                           |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -427,6 +429,7 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
 
 ---
 ### La estructura de un documento de requerimientos
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Notación                           | Descripción                                                                                                                                                                                                                                                                                                                                                                                       |
 |------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -555,6 +558,7 @@ calculo para los diferentes escenarios.
 
 ---
 ### Especificación tabular del cálculo de la dosis de insulina
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Condición | Acción |
 |:----------|:-------|
@@ -960,7 +964,9 @@ el cambio de requerimientos.
 que el documento debe ser organizado de tal manera que los cambios se pueden implementar fácilmente.
 
 ---
+
 ### Gestión de cambio de los requerimientos
+
 ![Gestión de Cambios](images/unidad3/gestion-de-cambios.jpg)
 
 ---

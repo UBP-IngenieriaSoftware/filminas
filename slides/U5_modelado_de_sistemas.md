@@ -345,6 +345,7 @@ nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 ----
 
 ### Los Estados y los estímulos para el horno de microondas
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Estado            | Descripción                                                                                                                                                                                                                                                                    |
 |:------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -398,6 +399,7 @@ nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 ----
 
 ### Los Estados y los estímulos para el horno de microondas
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Estimulo | Descripción                                                   |
 |:---------|:--------------------------------------------------------------|

@@ -202,6 +202,7 @@ Además, se emplearán técnicas de estimación.
 
 Si bien la estimación no tiene reglas generales para todos los equipos, habitualmente, los tiempos que se suelen asignar son:
 
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Puntos  | Tiempo Estimado  | Notas                                         |
 |:--------|:-----------------|:----------------------------------------------|

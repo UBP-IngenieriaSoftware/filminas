@@ -160,6 +160,7 @@ minimizar sus efectos sobre el proyecto.
 
 ---
 ### EJEMPLOS
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Riesgo                                    | Repercute en           | Descripción                                                                                       |
 |:------------------------------------------|:-----------------------|:--------------------------------------------------------------------------------------------------|
@@ -248,6 +249,7 @@ que se usa para desarrollar el sistema.
 
 ---
 ### EJEMPLOS
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Tipo de riesgo  | Riesgos posibles                                                                                                                                                                                                                                |
 |:----------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -303,6 +305,7 @@ grandes demoras), tolerables (demoras dentro de la contingencia permitida) o ins
 
 ---
 ### EJEMPLOS
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Riesgo                                                                                                                    | Probabilidad | Efectos        |
 |:--------------------------------------------------------------------------------------------------------------------------|:-------------|:---------------|
@@ -365,6 +368,7 @@ grandes demoras), tolerables (demoras dentro de la contingencia permitida) o ins
 ----
 
 ### EJEMPLOS
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Riesgo                                                                                           | Probabilidad | Efectos        |
 |:-------------------------------------------------------------------------------------------------|:-------------|:---------------|
@@ -433,6 +437,7 @@ Considerar cada riesgo y generar estrategias para gestionarlo.
 
 ---
 ### ESTRATEGIAS PARA GESTION DEL RIESGO
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Riesgo                                   | Estrategia                                                                                                                                                                                                                                                      |
 |:-----------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -496,6 +501,7 @@ decidir si este riesgo se vuelve más o menos probable.
 
 ---
 ### INDICADORES DE RIESGO
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Tipo de riesgo  | Indicadores potenciales                                                                                                                                  |
 |:----------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -632,6 +638,7 @@ Se definen:
 ![Proceso](images/unidad10/proceso.jpg)
 
 ---
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Tarea | Esfuerzo (días-hombre) | Duración (días) | Dependencias  |
 |:------|:-----------------------|:----------------|:--------------|
