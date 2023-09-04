@@ -405,7 +405,7 @@ aprobado el progreso de la siguiente etapa del desarrollo
 
 ---
 ### INSPECCIONES DEL PROGRAMA
-<!-- .slide: style="font-size: 0.60em" -->
+<!-- .slide: style="font-size: 0.50em" -->
 <!--
 | Clase de falla                      | Comprobación de inspección                                                                                      |
 |:------------------------------------|:----------------------------------------------------------------------------------------------------------------|
@@ -635,6 +635,8 @@ M = A − N + 2
 
 ---
 ![Grafos](images/unidad11/grafo.jpg)
+
+---
 
 Grafo numerando nodos y aristas. **M=8-7+2**
 

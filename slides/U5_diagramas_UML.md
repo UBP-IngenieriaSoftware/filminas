@@ -123,7 +123,7 @@ Esta descripción sirve de guía para el desarrollo:
 
 ----
 
-<!-- .slide: style="font-size: 0.60em" -->
+<!-- .slide: style="font-size: 0.40em" -->
 <!--
 | RF-01                | Acceso Aplicación                                                                                                              |
 | :------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
