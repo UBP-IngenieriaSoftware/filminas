@@ -331,6 +331,7 @@ nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 ![Diagrama de estado: Microondas](images/unidad5/diagrama_estado_microondas.jpg)
 </script></section><section data-markdown><script type="text/template">
 ### Los Estados y los estímulos para el horno de microondas
+<!--
 | Estado            | Descripción                                                                                                                                                                                                                                                                    |
 |:------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Esperando         | El horno está a la espera para la entrada. La pantalla muestra la hora actual.                                                                                                                                                                                                 |
@@ -340,9 +341,48 @@ nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 | Deshabilitar      | El funcionamiento del horno está deshabilitado por seguridad. Luz interior del horno está encendido. La pantalla muestra "No está listo'.                                                                                                                                      |              
 | Habilitado        | Se habilita el funcionamiento del horno. Luz interior del horno está apagado. La pantalla muestra "Listo para cocinar'.                                                                                                                                                        |   
 | Operacion         | Horno en funcionamiento. Luz interior del horno está encendido. La pantalla muestra la cuenta atrás del temporizador. Al término de la cocción, el zumbador suena durante cinco segundos. La luz del horno está encendido. La pantalla muestra 'Cocinando completa ", mientras |                                                                                                                                                                                                                                                       
+-->
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Estado</th>
+<th style="text-align:left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Esperando</td>
+<td style="text-align:left">El horno está a la espera para la entrada. La pantalla muestra la hora actual.</td>
+</tr>
+<tr>
+<td style="text-align:left">Potencia Media</td>
+<td style="text-align:left">La potencia del horno es de 300 vatios. La pantalla muestra &#39;Potencia Media&#39;.</td>
+</tr>
+<tr>
+<td style="text-align:left">Potencia Completa</td>
+<td style="text-align:left">La fuente de horno se establece en 600 vatios. La pantalla muestra &#39;Potencia Máxima&#39;.</td>
+</tr>
+<tr>
+<td style="text-align:left">Establecer tiempo</td>
+<td style="text-align:left">El tiempo de cocción se ajusta al valor de entrada del usuario. La pantalla muestra el tiempo de cocción seleccionado y se actualiza a medida que el tiempo se ajusta.</td>
+</tr>
+<tr>
+<td style="text-align:left">Deshabilitar</td>
+<td style="text-align:left">El funcionamiento del horno está deshabilitado por seguridad. Luz interior del horno está encendido. La pantalla muestra &quot;No está listo&#39;.</td>
+</tr>
+<tr>
+<td style="text-align:left">Habilitado</td>
+<td style="text-align:left">Se habilita el funcionamiento del horno. Luz interior del horno está apagado. La pantalla muestra &quot;Listo para cocinar&#39;.</td>
+</tr>
+<tr>
+<td style="text-align:left">Operacion</td>
+<td style="text-align:left">Horno en funcionamiento. Luz interior del horno está encendido. La pantalla muestra la cuenta atrás del temporizador. Al término de la cocción, el zumbador suena durante cinco segundos. La luz del horno está encendido. La pantalla muestra &#39;Cocinando completa &quot;, mientras</td>
+</tr>
+</tbody>
+</table>
 </script></section><section data-markdown><script type="text/template">
 ### Los Estados y los estímulos para el horno de microondas
-
+<!--
 | Estimulo | Descripción                                                   |
 |:---------|:--------------------------------------------------------------|
 | Potencia Media | El usuario ha pulsado el botón de media potencia.       |
@@ -353,6 +393,49 @@ nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 | Puerta Cerrada | El interruptor de la puerta del horno está cerrada.     |
 | Iniciar | El usuario ha pulsado el botón de Inicio.                     |
 | Cancelar | El usuario oprime el botón Cancelar                           |
+-->
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Estimulo</th>
+<th style="text-align:left">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Potencia Media</td>
+<td style="text-align:left">El usuario ha pulsado el botón de media potencia.</td>
+</tr>
+<tr>
+<td style="text-align:left">Potencia Máxima</td>
+<td style="text-align:left">El usuario ha pulsado el botón de alta potencia.</td>
+</tr>
+<tr>
+<td style="text-align:left">Temporizador</td>
+<td style="text-align:left">El usuario ha pulsado el botón del temporizador.</td>
+</tr>
+<tr>
+<td style="text-align:left">Numero</td>
+<td style="text-align:left">El usuario ha pulsado una tecla numérica.</td>
+</tr>
+<tr>
+<td style="text-align:left">Puerta Abierta</td>
+<td style="text-align:left">El interruptor de la puerta del horno no está cerrada.</td>
+</tr>
+<tr>
+<td style="text-align:left">Puerta Cerrada</td>
+<td style="text-align:left">El interruptor de la puerta del horno está cerrada.</td>
+</tr>
+<tr>
+<td style="text-align:left">Iniciar</td>
+<td style="text-align:left">El usuario ha pulsado el botón de Inicio.</td>
+</tr>
+<tr>
+<td style="text-align:left">Cancelar</td>
+<td style="text-align:left">El usuario oprime el botón Cancelar</td>
+</tr>
+</tbody>
+</table>
 </script></section><section data-markdown><script type="text/template">
 ### El funcionamiento del horno de microondas
 ![Funcionamiento Microondas](images/unidad5/funcionamiento_microondas.jpg)
