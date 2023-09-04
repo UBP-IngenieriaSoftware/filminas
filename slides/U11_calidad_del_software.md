@@ -389,6 +389,7 @@ información útil además de la proporcionada por otras métricas.
 
 ---
 ### MÉTRICAS DE CALIDAD EN UN PROGRAMA
+<!-- .slide: style="font-size: 0.85em" -->
 * Las métricas de diseño son también aplicables a programas.
 * Otras métricas incluyen:
   * Longitud. El tamaño del código fuente del programa.

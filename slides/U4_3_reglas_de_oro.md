@@ -24,7 +24,7 @@ Created by <i class="fab fa-telegram"></i>
 
 ### Usabilidad
 * 8 reglas de oro de Schneiderman
-
+* 10 Principios Heurísticos de Nielsen
 </div>
 
 ---

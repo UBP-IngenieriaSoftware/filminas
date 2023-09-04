@@ -130,6 +130,7 @@ particular, con variantes que satisfagan las necesidades del cliente.
 
 ---
 ### MODELOS ARQUITECTÓNICOS
+<!-- .slide: style="font-size: 0.90em" -->
 * Utilizarse para documentar un diseño arquitectónico.
 * Modelo estructural estático, que muestra los principales componentes del sistema.
 * Modelo de proceso dinámico que muestra el modelo de proceso de la estructura del sistema.
@@ -168,6 +169,8 @@ los sub-sistemas;
 copia de seguridad, seguridad, etc
 * Un modelo a compartir se publica como el esquema del repositorio.
 
+---
+### MODELO REPOSITORIO CARACTERÍSTICAS
 **Desventajas**
 * Sub-sistemas deben ponerse de acuerdo sobre un modelo repositorio de datos. Inevitablemente, un compromiso;
 * La evolución de datos es difícil y costosa;
@@ -195,7 +198,9 @@ impresión, gestión de datos, etc
 * Hace un uso eficaz de los sistemas en red. Puede requerir hardware más barato;
 * Fácil añadir nuevos servidores o actualizar los servidores existentes.
 
-*Desventajas**
+---
+### CLIENTE-SERVIDOR CARACTERÍSTICAS
+**Desventajas**
 * No hay un modelo de datos compartidos, así que los sub-sistemas utilizan diferentes datos de la organización.
 Intercambio de datos puede ser ineficaz;
 * Redundantes en la gestión de cada servidor;

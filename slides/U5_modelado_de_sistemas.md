@@ -230,7 +230,7 @@ trazada verticalmente a partir de estos.
 
 ----
 
-### Diagrama de secuencia para la transferencia de datos
+#### Diagrama de secuencia para la transferencia de datos
 ![Diagrama de secuencia: Transferencia de datos](images/unidad5/diagrama_secuencia_transferencia_datos.jpg)
 
 ---
@@ -272,6 +272,7 @@ más generales (animales, coches, casas, etc).
 ----
 
 ### Generalización
+<!-- .slide: style="font-size: 0.90em" -->
 * En los sistemas de modelado, a menudo es útil examinar las clases de un sistema para ver si hay posibilidades de
 generalización.
 * En lenguajes orientados a objetos, la generalización se realiza utilizando los mecanismos de herencia.

@@ -59,6 +59,7 @@ durante el proceso de ingeniería de requerimientos.
 
 ---
 ### Definicion de Requerimiento (Davis)
+<!-- .slide: style="font-size: 0.88em" -->
 "Si una empresa desea realizar un contrato para un proyecto de desarrollo de software grande, debe definir sus necesidades de una
 manera suficientemente abstracta para que no se malentienda la solución. Los requisitos deben ser escritos de manera que varios
 contratistas puedan hacer una propuesta para el contrato, ofreciendo, tal vez, diferentes formas de satisfacer las necesidades de la
@@ -236,14 +237,14 @@ experimentados no excederá de dos por cada hora de uso del sistema. (Requerimie
 
 ---
 ### Métricas para la especificación de requisitos no funcionales
-| Propiedad | Medida                                                                                                                           |
-|-----------|----------------------------------------------------------------------------------------------------------------------------------|
-| Velocidad | Transacciones procesadas por segundo <br> Tiempo de respuesta al usuario y a eventos <br> Tiempo de actualización de la pantalla | 
-| Tamaño | M Bytes <br> Número de chips de ROM |
-| Facilidad de uso | Tiempo de formación <br> Número de marcos de ayuda |
-| Confiabilidad | Tiempo medio entre fallos <br> Probabilidad de no disponibilidad <br> Tasa de ocurrencia de dallos <br> Disponibilidad |
-| Robustez | Tiempo de reinicio después de fallo <br> Porcentaje de eventos que causan fallos <br> Probabilidad de corrupción de datos después de un fallo |
-| Portabilidad | Porcentaje de declaraciones dependientes de objetivo |
+| Propiedad        | Medida                                                                                                                                        |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| Velocidad        | Transacciones procesadas por segundo <br> Tiempo de respuesta al usuario y a eventos <br> Tiempo de actualización de la pantalla              | 
+| Tamaño           | M Bytes <br> Número de chips de ROM                                                                                                           |
+| Facilidad de uso | Tiempo de formación <br> Número de marcos de ayuda                                                                                            |
+| Confiabilidad    | Tiempo medio entre fallos <br> Probabilidad de no disponibilidad <br> Tasa de ocurrencia de dallos <br> Disponibilidad                        |
+| Robustez         | Tiempo de reinicio después de fallo <br> Porcentaje de eventos que causan fallos <br> Probabilidad de corrupción de datos después de un fallo |
+| Portabilidad     | Porcentaje de declaraciones dependientes de objetivo                                                                                          |
 
 ---
 ### Requerimientos del dominio
@@ -294,24 +295,24 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
 
 ---
 ### La estructura de un documento de requerimientos
-| Capitulo | Descripción                                                                                                                                                                                                                                                                                                                                                     |
-|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Prefacio | Esto debe definir el número de lectores se espera del documento y describir su historial de versiones, incluyendo una justificación para la creación de una nueva versión y un resumen de los cambios realizados en cada versión.                                                                                                                               |
-| Introducción | Esto debería describir la necesidad de que el sistema. Debe describir brevemente las funciones del sistema y explicar cómo va a funcionar con otros sistemas. También debe describir cómo el sistema se ajusta a los objetivos generales de la empresa o estratégicos de la organización puesta en marcha del software.                                         |
-| Glosario | Esto debería definir los términos técnicos utilizados en el documento. No debería hacer suposiciones acerca de la experiencia o los conocimientos del lector.                                                                                                                                                                                                   | 
+| Capitulo                                | Descripción                                                                                                                                                                                                                                                                                                                                                     |
+|-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Prefacio                                | Esto debe definir el número de lectores se espera del documento y describir su historial de versiones, incluyendo una justificación para la creación de una nueva versión y un resumen de los cambios realizados en cada versión.                                                                                                                               |
+| Introducción                            | Esto debería describir la necesidad de que el sistema. Debe describir brevemente las funciones del sistema y explicar cómo va a funcionar con otros sistemas. También debe describir cómo el sistema se ajusta a los objetivos generales de la empresa o estratégicos de la organización puesta en marcha del software.                                         |
+| Glosario                                | Esto debería definir los términos técnicos utilizados en el documento. No debería hacer suposiciones acerca de la experiencia o los conocimientos del lector.                                                                                                                                                                                                   | 
 | Definición de requerimientos de usuario | Aquí, usted describe los servicios proporcionados por el usuario. Los requisitos del sistema no funcionales también deben ser descritos en esta sección. Esta descripción puede usar el lenguaje natural, diagramas u otras anotaciones que sean comprensibles para los clientes. Las normas de productos y de procesos que deben seguirse deben especificarse. |
-| Arquitectura del sistema | Este capítulo debe presentar una descripción de alto nivel de la arquitectura del sistema previsto, que muestra la distribución de funciones a través de los módulos del sistema. Los componentes arquitectónicos que se reutilizan deben destacarse.                                                                                                           |
+| Arquitectura del sistema                | Este capítulo debe presentar una descripción de alto nivel de la arquitectura del sistema previsto, que muestra la distribución de funciones a través de los módulos del sistema. Los componentes arquitectónicos que se reutilizan deben destacarse.                                                                                                           |
 
 ----
 
 ### La estructura de un documento de requerimientos
-| Capitulo | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                           |
-|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Capitulo                                     | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Especificación de requerimientos del sistema | Esto debería describir los requisitos funcionales y no funcionales en más detalle. Si es necesario, mayor detalle puede añadirse a los requerimientos no funcionales. Interfaces para otros sistemas pueden ser definidos.                                                                                                                                                                                                            |
-| Modelos del sistema | Esto podría incluir modelos gráficos del sistema que muestran las relaciones entre los componentes del sistema y el sistema y su entorno. Ejemplos de posibles modelos son modelos de objetos, modelos de flujo de datos, o los modelos de datos semánticos.                                                                                                                                                                          |
-| Sistema de evaluación | Este debe describir los supuestos fundamentales en que se basa el sistema, y cualquier cambio previsto debido a la evolución del hardware, cambios en las necesidades de los usuarios, y así sucesivamente. Esta sección es útil para los diseñadores de sistemas, ya que puede ayudar a evitar las decisiones de diseño que limitarían los probables cambios futuros en el sistema.                                                  |
-| Apéndices | Estos deben proporcionar información detallada y la información específica que se relaciona con la aplicación en desarrollo; por ejemplo, el hardware y las descripciones de bases de datos. Requerimientos de hardware definen las configuraciones de mínimos y óptimos para el sistema. Los requerimientos de base de datos definen la organización lógica de los datos utilizados por el sistema y las relaciones entre los datos. |
-| Índice | Se pueden incluir varios índice. Así como un índice alfabético normal, puede haber un índice de diagramas, un índice de funciones, y así sucesivamente. |
+| Modelos del sistema                          | Esto podría incluir modelos gráficos del sistema que muestran las relaciones entre los componentes del sistema y el sistema y su entorno. Ejemplos de posibles modelos son modelos de objetos, modelos de flujo de datos, o los modelos de datos semánticos.                                                                                                                                                                          |
+| Sistema de evaluación                        | Este debe describir los supuestos fundamentales en que se basa el sistema, y cualquier cambio previsto debido a la evolución del hardware, cambios en las necesidades de los usuarios, y así sucesivamente. Esta sección es útil para los diseñadores de sistemas, ya que puede ayudar a evitar las decisiones de diseño que limitarían los probables cambios futuros en el sistema.                                                  |
+| Apéndices                                    | Estos deben proporcionar información detallada y la información específica que se relaciona con la aplicación en desarrollo; por ejemplo, el hardware y las descripciones de bases de datos. Requerimientos de hardware definen las configuraciones de mínimos y óptimos para el sistema. Los requerimientos de base de datos definen la organización lógica de los datos utilizados por el sistema y las relaciones entre los datos. |
+| Índice                                       | Se pueden incluir varios índice. Así como un índice alfabético normal, puede haber un índice de diagramas, un índice de funciones, y así sucesivamente. |
 
 ---
 ### Especificación de requerimientos
@@ -324,13 +325,13 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
 
 ---
 ### La estructura de un documento de requerimientos
-| Notación | Descripción                                                                                                                                                                                                                                                                                                                                                                                       |
-|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Lenguaje natural | Los requerimientos están escritos con oraciones numeradas en lenguaje natural. Cada oración debe expresar un requerimiento.                                                                                                                                                                                                                                                                       |
-| Lenguaje natural Estructurado | Los requerimientos están escritos en lenguaje natural en un formulario o plantilla estándar. Cada campo proporciona información acerca de un aspecto del requerimiento.                                                                                                                                                                                                                           |
+| Notación                           | Descripción                                                                                                                                                                                                                                                                                                                                                                                       |
+|------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Lenguaje natural                   | Los requerimientos están escritos con oraciones numeradas en lenguaje natural. Cada oración debe expresar un requerimiento.                                                                                                                                                                                                                                                                       |
+| Lenguaje natural Estructurado      | Los requerimientos están escritos en lenguaje natural en un formulario o plantilla estándar. Cada campo proporciona información acerca de un aspecto del requerimiento.                                                                                                                                                                                                                           |
 | Lenguajes de descripción de Diseño | Este enfoque utiliza un lenguaje como un lenguaje de programación, pero con características más abstractas para especificar los requisitos mediante la definición de un modelo operacional del sistema. Este enfoque se utiliza raramente aunque puede ser útil para las especificaciones de interfaz.                                                                                            |
-| Notaciones graficas | Modelos gráficos, complementada con anotaciones de texto, se utilizan para definir los requisitos funcionales para el sistema; UML de casos de uso y diagramas de secuencia se utilizan comúnmente.                                                                                                                                                                                               |
-| Especificaciones matemáticas | Estas anotaciones se basan en conceptos matemáticos, tales como máquinas de estados finitos o conjuntos. Aunque estas especificaciones no ambiguas pueden reducir la ambigüedad en un documento de requisitos, la mayoría de los clientes no entienden una especificación formal. Ellos no pueden controlar que representa lo que quieren y se resisten a aceptarlo como un contrato del sistema. |
+| Notaciones graficas                | Modelos gráficos, complementada con anotaciones de texto, se utilizan para definir los requisitos funcionales para el sistema; UML de casos de uso y diagramas de secuencia se utilizan comúnmente.                                                                                                                                                                                               |
+| Especificaciones matemáticas       | Estas anotaciones se basan en conceptos matemáticos, tales como máquinas de estados finitos o conjuntos. Aunque estas especificaciones no ambiguas pueden reducir la ambigüedad en un documento de requisitos, la mayoría de los clientes no entienden una especificación formal. Ellos no pueden controlar que representa lo que quieren y se resisten a aceptarlo como un contrato del sistema. |
 
 ---
 ### Diseño y requerimientos
@@ -361,7 +362,7 @@ la consecuencia de un requisito reglamentario.
 * Incluir una explicación (lógica) de por qué un requisito es necesario.
 
 ---
-### Requerimientos de ejemplo para el sistema de software de la bomba de insulina
+### Requerimientos de bomba de insulina
 <!-- .slide: style="font-size: 0.80em" -->
 3.2 El sistema deberá medir el azúcar en la sangre cada 10
 minutos y administrar la insulina si es necesario. Los cambios
@@ -374,6 +375,7 @@ frecuente podría llevar a niveles peligrosamente altos de azúcar.)
 automática cada minuto. Una rutina de autocomprobación
 puede descubrir problemas de hardware y/o software y
 alertar al usuario sobre el hecho de la operación anormal
+
 ---
 ### Problemas con el lenguaje natural
 * Falta de claridad
@@ -404,7 +406,7 @@ escritura de requerimientos del sistema de negocios.
 * Los efectos secundarios (si existen) de la función.
 
 ---
-### Especificación estructurada de un requisito para una bomba de insulina
+### Requisito para una bomba de insulina
 ![Bomba Insulina](images/unidad3/bomba_insulina.jpg)
 
 ---

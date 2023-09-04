@@ -150,7 +150,7 @@ La ingeniería de software tiene que ver con el desarrollo de software rentable.
 
 ---
 ### Productos de software
-
+<!-- .slide: style="font-size: 0.90em" -->
 * **Productos genéricos**
 Sistemas que se comercializan y venden a cualquier cliente:
 Ejemplos - Software para gráficos, herramientas de gestión de proyectos; Software CAD; software para mercados específicos

@@ -142,6 +142,7 @@ configuración, datos de prueba, etc.)
 
 ---
 ### Ventajas de las inspecciones
+<!-- .slide: style="font-size: 0.90em" -->
 * Durante las pruebas, los errores pueden enmascarar   (ocultar) otros errores. La inspección es un proceso
 estático, no hay interacciones entre los errores.
 * Versiones incompletas de un sistema pueden ser inspeccionadas fácilmente. En las pruebas es
@@ -194,6 +195,7 @@ sistema se pone a prueba en su conjunto. Deben centrarse en las interacciones de
 
 ---
 ### Prueba de la estacion meteorologica
+<!-- .slide: style="font-size: 0.90em" -->
 Necesidad de definir los casos de prueba de todos los métodos.
 
 * Utilizar un diagrama de estados, identificar las transiciones de estado y las secuencias de
@@ -312,6 +314,7 @@ extremos de sus rangos.
 
 ---
 ### Pruebas del sistema
+<!-- .slide: style="font-size: 0.90em" -->
 * Las pruebas del sistema durante el desarrollo consiste en la integración de componentes para
 crear una versión del sistema y las pruebas del sistema integrado.
 * El enfoque en las pruebas del sistema es la prueba de las interacciones entre los componentes.
@@ -321,6 +324,7 @@ transfieren los datos correctos en el momento adecuado a través de sus interfac
 
 ---
 ### Pruebas del sistema y de componentes
+<!-- .slide: style="font-size: 0.90em" -->
 * Durante las pruebas del sistema, se prueba el sistema completo. Incluyendo:
   * Componentes reutilizables que han sido desarrollados por separado e integrados con
   componentes desarrollados recientemente.
@@ -355,6 +359,7 @@ En general se debe probar:
 
 ---
 ### Desarrollo basado en pruebas
+<!-- .slide: style="font-size: 0.90em" -->
 * Desarrollo basado en pruebas (TDD) es un enfoque en que se entrelazan el desarrollo del
 código y el de las pruebas.
 * Las pruebas se escriben antes que el código y el 'passing' de las pruebas es el motor

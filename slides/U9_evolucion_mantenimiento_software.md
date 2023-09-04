@@ -108,17 +108,26 @@ satisfactorios.
 mantenerla o reducirla.
 3. **Evolución prolongada del programa o Autorregulación:** El proceso de evolución de un sistema es autorregulado con 
 una distribución de las medidas del producto y del proceso cercana a la normal.
+
+----
+
+### Leyes de Lehman
 4. **Conservación de la estabilidad organizacional:** La velocidad (y efectividad) de desarrollo de un sistema en 
 evolución permanece invariante durante su ciclo de vida.
-
----
-### Leyes de Lehman
 5. **Conservación de la familiaridad:** Cuando un sistema evoluciona, todos aquellos que están asociados a él deben 
 mantener un conocimiento de su contenido y comportamiento para tratar de conseguir una evolución satisfactoria.
+
+----
+
+### Leyes de Lehman
 6. **Crecimiento continuo:** Las funcionalidades del sistema tienen que crecer constantemente para mantener la 
 satisfacción del usuario a lo largo de su ciclo de vida.
 7. **Reducción de la calidad:** La calidad de los sistemas comienza a disminuir a menos que se mantengan de forma 
 rigurosa y se adapten a los cambios en su entorno de funcionamiento.
+
+----
+
+### Leyes de Lehman
 8. **Realimentación del sistema:** El proceso de evolución del sistema es consecuencia de un proceso de retroalimentación 
 a diferentes niveles.
 
@@ -173,6 +182,7 @@ Estimar los costos del mantenimiento durante cierto lapso de tiempo.
 
 ---
 ### Predicción del Mantenimiento de software
+<!-- .slide: style="font-size: 0.80em" -->
 Se debe valorar:
 * **El número y la complejidad de las interfaces del sistema:** 
 Cuanto más grande es el número de interfaces es más probable que se requieran cambios al agregar nuevos requerimientos.
@@ -204,6 +214,9 @@ Las actividades de mantenimiento se agrupan en tres categorías funcionales:
 * **Comprensión del software y de los cambios a realizar (Comprender):** 
 Es necesario el conocimiento a fondo de la funcionalidad, objetivos, estructura interna y requisitos del software. 
 Alrededor del 50% de tiempo de mantenimiento se dedica a esta actividad.
+
+---
+### Actividades del Mantenimiento de software
 * **Modificación del software (Corregir):** 
 Crear y modificar las estructuras de datos, la lógica de procesos, las interfaces y la documentación. Los
 programadores deben evitar los efectos laterales provocados por sus cambios. Esta actividad representa 1/4 del tiempo 

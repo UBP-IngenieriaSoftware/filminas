@@ -246,6 +246,7 @@ con el fin de llegar a una mayor comprensión de los mismos.
 
 ---
 ### Reglas para el análisis
+<!-- .slide: style="font-size: 0.90em" -->
 * Siempre se habla en términos del negocio.
 * Los modelos deben “contar una historia” (Si el diagrama no aclara comportamiento no sirve)
 * Concentrarse en la idea general (No en detalles de implementación)
@@ -455,7 +456,8 @@ Tipos:
 ### De abstracción
 Modelan dependencias entre elementos con diferentes niveles de abstracción:
 
-Tipos
+---
+### De abstracción: Tipos
 * `<<trace>>`: Sirven para indicar que el proveedor y el cliente son conceptualmente lo mismo, pero están en diferentes modelos.
 * `<<substitute>>`: El cliente se puede sustituir por el proveedor en tiempo de ejecución. Se deben ajustar contratos e interfaces.
 * `<<refine>>`: Permite especificar dependencias dentro del mismo modelo.

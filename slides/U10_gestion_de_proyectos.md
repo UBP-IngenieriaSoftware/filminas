@@ -61,6 +61,7 @@ Un proyecto es un esfuerzo temporal que se lleva a cabo para crear un producto, 
 
 ---
 ### PROYECTO
+<!-- .slide: style="font-size: 0.90em" -->
 * La naturaleza temporal de los proyectos implica que un proyecto tiene un principio y un final definidos.
 * El final se alcanza cuando se logran los objetivos del proyecto, cuando se termina el proyecto porque sus objetivos 
 no se cumplirán o no pueden ser cumplidos, o cuando ya no existe la necesidad que dio origen al proyecto.
@@ -125,6 +126,7 @@ observar el artefacto que se construye.
 
 ---
 ### ACTIVIDADES DE LOS ADMINISTRADORES
+<!-- .slide: style="font-size: 0.90em" -->
 * **Planeación del proyecto:** Son responsables de la planeación, estimación y
 calendarización del desarrollo del proyecto, así como de la asignación de tareas a las personas
 * **Informes:** Son responsables de informar del avance de un proyecto a los clientes y administradores de la

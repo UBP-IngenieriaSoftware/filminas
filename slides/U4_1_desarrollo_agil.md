@@ -12,6 +12,13 @@ Created by <i class="fab fa-telegram"></i>
 ---
 <!-- .slide: style="font-size: 0.60em" -->
 <style>
+.grid-container2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 0.8em;
+    text-align: left !important;
+}
+
 .grid-item {
     border: 3px solid rgba(121, 177, 217, 0.8);
     padding: 20px;
@@ -19,10 +26,34 @@ Created by <i class="fab fa-telegram"></i>
 }
 </style>
 ## Temario
+<div class="grid-container2">
 <div class="grid-item">
 
 ### Desarrollo Ágil de Software
-* Actualizar
+* Definición
+* Manifiesto Ágil
+* Aplicabilidad
+* Problemas
+* Mantenimiento
+* Desarrollo Guiado por Plan
+* Cuestiones técnicas, humanas y organizacionales
+* Programación Extrema
+* Escenarios de Requerimientos
+* Refactorización
+* Pruebas
+
+</div>
+<div class="grid-item">
+
+* Automatización de Pruebas
+* Programación en pares
+* Gestión Ágil
+* Scrum
+* Ciclo Sprint
+* Beneficios de Scrum
+* Desarrollo de Sistemas Grandes
+</div>
+</div>
 
 ---
 ### Desarrollo rápido de software
@@ -127,7 +158,8 @@ no hay muchas reglas y regulaciones externas que afectarán el software.
 desarrollar con un equipo pequeño que pueda comunicarse de manera informal. Esto puede no ser posible para los grandes
 sistemas que requieren equipos de desarrollo grandes y distribuidos.
 
----
+----
+
 ### Cuestiones técnicas, humanas y organizacionales
 <!-- .slide: style="font-size: 0.70em" -->
 * ¿Qué tipo de sistema se está desarrollando?
@@ -390,7 +422,8 @@ sistema y manuales de usuario y evalúa las lecciones aprendidas del proyecto.
 * La fase de selección involucra a todo el equipo del proyecto, que trabajan con el cliente para seleccionar las
 funcionalidades que se desarrollará durante el sprint.
 
----
+----
+
 ### El Ciclo de Sprint
 * Una vez que éstos están de acuerdo, el equipo se organizan para desarrollar el software. Durante esta etapa,
 el equipo está aislado del cliente y la organización, con toda comunicaciones canalizadas a través del denominado
@@ -431,7 +464,7 @@ es posible cuando todos trabajan juntos.
 largos, en los que hay varios equipos de desarrollo, tal vez trabajando en diferentes lugares.
 
 ---
-### Desarrollo de sistemas de grandes
+### Desarrollo de sistemas grandes
 <!-- .slide: style="font-size: 0.80em" -->
 * Los grandes sistemas suelen ser colecciones de sistemas de independientes en los que equipos separados desarrollan cada
 sistema. Con frecuencia, estos equipos están trabajando en diferentes lugares, a veces en diferentes zonas horarias.
@@ -440,7 +473,8 @@ sistema tienen que ver con esta interacción por lo que no se prestan realmente 
 * Si varios sistemas se integran para crear un sistema, una parte importante del desarrollo tiene que ver con la configuración del sistema
 en lugar de desarrollo de código inicial.
 
----
+----
+
 ### El desarrollo del sistemas grandes
 <!-- .slide: style="font-size: 0.90em" -->
 * Grandes sistemas y sus procesos de desarrollo estan a menudo limitados por las reglas y regulaciones externas
