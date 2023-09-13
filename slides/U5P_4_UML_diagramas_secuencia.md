@@ -60,6 +60,7 @@ control y límite de los diagramas de robustez también pueden contener líneas 
 
 ---
 ### Mensaje
+<!-- .slide: style="font-size: 0.80em" -->
 * Un **mensaje síncrono** es denotado por una punta de flecha oscura. Si se envía este mensaje es porque se necesita una 
 respuesta antes de continuar. Los mensajes sincrónicos se utilizan para representar llamadas de función ordinarias 
 dentro de un programa, así como otros tipos de mensaje que se comportan de la misma manera.
@@ -68,6 +69,8 @@ dentro de un programa, así como otros tipos de mensaje que se comportan de la m
   creación de un nuevo subproceso.
 * Un **mensaje de retorno** asíncrono es denotado por una línea punteada. 
 
+---
+![Diagrama de Secuencia](images/unidad5/secuencia_ejemplo.png)
 
 ---
 ### Mensaje Self
@@ -76,9 +79,6 @@ perteneciente al mismo objeto. Este se muestra como cuando crea un foco de contr
 ejecución de la línea de vida.
 
 ![Mensaje Self](images/unidad5/mensaje_self.GIF)
-
----
-![Diagrama de Secuencia](images/unidad5/secuencia_ejemplo.png)
 
 ---
 ### Mensajes perdidos y encontrados
