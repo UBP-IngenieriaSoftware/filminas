@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Presentación de la materia</title>
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+
+# Ingeniería de Software
+## Presentación de la Materia
+Created by <i class="fab fa-telegram"></i>
+[edme88]("https://t.me/edme88")
+
+</script></section><section  data-markdown><script type="text/template">
+## Profesores
+### Ing. Alejandra Bosio
+malejandra.bosio@gmail.com
+
+### Ing. Agustina Edmé Aliciardi
+edmealiciardi@gmail.com
+
+</script></section><section  data-markdown><script type="text/template">
+## UNIDADES
+
+**Unidad 1:** Procesos de Software
+
+**Unidad 2:** Ingeniería de Requerimientos
+
+**Unidad 3:** Desarrollo ágil de software
+
+**Unidad 4:** Usabilidad
+
+**Unidad 5:** Modelado de sistemas
+
+**Unidad 6:** Diseño arquitectónico
+
+</script></section><section  data-markdown><script type="text/template">
+## UNIDADES
+
+**Unidad 7:** Diseño e implementación
+
+**Unidad 8:** Pruebas de software
+
+**Unidad 9:** Mantenimiento y evolución
+
+**Unidad 10:** Gestión de proyectos
+
+**Unidad 11:** Calidad del software
+
+</script></section><section  data-markdown><script type="text/template">
+## Libro:
+![Book](images/book.png)
+“Ingeniería del Software: Un enfoque práctico 7ma ed.” de Roger Pressman
+
+</script></section><section  data-markdown><script type="text/template">
+## Calendario
+| Semana | Unidad | Tema                                |
+|--------|--------|-------------------------------------|
+| 1      | 1      | Presentación - Procesos de Software |
+| 2      | 2      | Ingeniería de Requerimientos        |
+| 3      | 3      | Desarrollo Ágil de Software         |
+| 4      | 4      | Usabilidad                          |
+| 5      | 5      | Modelado de Sistemas                |
+| 6      | 6      | Diseño Arquitectónico               |
+| 7      |        | Dudas - Preguntas - Parcial         |
+
+</script></section><section  data-markdown><script type="text/template">
+## Calendario
+| Semana | Unidad | Tema                                   |
+|--------|--------|----------------------------------------|
+| 8      | 7      | Diseño e Implementación                |
+| 9      | 8      | Pruebas de Software                    |
+| 10     | 9      | Evolución y Mantenimiento del Software |
+| 11     | 10     | Gestión de Proyectos                   |
+| 12     | 11     | Calidad del Software                   |
+| 13     |        | Dudas - Preguntas - Parcial            |
+| 14     |        | Recuperatorio - Cierre de la materia   |
+
+</script></section><section  data-markdown><script type="text/template">
+## Forma de Evaluación: Cursado
+* 1er parcial teórico
+* 2do parcial teórico
+* Entrega de trabajo grupal
+
+</script></section><section  data-markdown><script type="text/template">
+## Forma de Evaluación: FINAL
+FINAL:
+* Preguntas sobre el trabajo grupal
+* Preguntas similares de la guía de trabajos prácticos
+
+</script></section><section  data-markdown><script type="text/template">
+## Regularidad
+* Asistencia del 70% en Clases Teórico-Prácticas
+* Parciales y trabajo grupal aprobados (>=4)
+
+</script></section><section  data-markdown><script type="text/template">
+## ¿Dudas, Preguntas, Comentarios?
+![DUDAS](images/pregunta.gif)
+</script></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
