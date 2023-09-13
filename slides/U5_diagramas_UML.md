@@ -279,14 +279,15 @@ Es un diagrama puramente orientado al modelo de programación orientado a objeto
 
 ---
 ### Elementos
-<!-- .slide: style="font-size: 0.90em" -->
+<!-- .slide: style="font-size: 0.80em" -->
 * **Clases:** elemento principal del diagrama y representa una clase dentro del paradigma de la orientación a
 objetos. Define un grupo de objetos que comparten características, condiciones y significado.
 
 Una clase está compuesta por tres elementos: nombre de la clase, atributos, funciones.
 * (+) Pública. Representa que se puede acceder al atributo o función desde cualquier lugar de la aplicación.
 * (-) Privada. Representa que se puede acceder al atributo o función únicamente desde la misma clase.
-* (#) Protegida. Representa que el atributo o función puede ser accedida
+* (#) Protegida. Representa que el atributo o función puede ser accedida únicamente desde la misma clase o desde las 
+clases que heredan de ella (clases derivadas)
 
 ----
 
