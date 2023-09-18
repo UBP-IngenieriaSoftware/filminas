@@ -135,8 +135,9 @@ Created by <i class="fab fa-telegram"></i>
         Sistema de Seguridad
         <p>
             <a href="#/33"><img src="images/ejercicios/problema.png"></a>
-            <a href="#/35"><img src="images/ejercicios/plantilla.png"></a>
+            <a href="#/34"><img src="images/ejercicios/uso.png"></a>
             <a href="#/36"><img src="images/ejercicios/clase.png"></a>
+            <a href="starUML/7-SistemaDeSeguridad.mdj" download="7-SistemaDeSeguridad.mdj"><img src="images/ejercicios/star.png"></a>
         </p>
     </div>
     <div>
@@ -144,8 +145,9 @@ Created by <i class="fab fa-telegram"></i>
         Club Deportivo
         <p>
             <a href="#/38"><img src="images/ejercicios/problema.png"></a>
-            <a href="#/40"><img src="images/ejercicios/plantilla.png"></a>
+            <a href="#/39"><img src="images/ejercicios/uso.png"></a>
             <a href="#/41"><img src="images/ejercicios/clase.png"></a>
+            <a href="starUML/8-ClubDeportivo.mdj" download="8-ClubDeportivo.mdj"><img src="images/ejercicios/star.png"></a>
         </p>
     </div>
     <div>
@@ -153,8 +155,9 @@ Created by <i class="fab fa-telegram"></i>
         Clínica
         <p>
             <a href="#/43"><img src="images/ejercicios/problema.png"></a>
-            <a href="#/45"><img src="images/ejercicios/plantilla.png"></a>
+            <a href="#/44"><img src="images/ejercicios/uso.png"></a>
             <a href="#/46"><img src="images/ejercicios/clase.png"></a>
+            <a href="starUML/9-Clinica.mdj" download="9-Clinica.mdj"><img src="images/ejercicios/star.png"></a>
         </p>
     </div>
     <div>
@@ -162,8 +165,9 @@ Created by <i class="fab fa-telegram"></i>
         Sistema para fábrica
         <p>
             <a href="#/48"><img src="images/ejercicios/problema.png"></a>
-            <a href="#/50"><img src="images/ejercicios/plantilla.png"></a>
+            <a href="#/49"><img src="images/ejercicios/uso.png"></a>
             <a href="#/51"><img src="images/ejercicios/clase.png"></a>
+            <a href="starUML/10-Fabrica.mdj" download="10-Fabrica.mdj"><img src="images/ejercicios/star.png"></a>
         </p>
     </div>
     <div>
@@ -171,8 +175,9 @@ Created by <i class="fab fa-telegram"></i>
         Plataforma Educativa
         <p>
             <a href="#/53"><img src="images/ejercicios/problema.png"></a>
-            <a href="#/55"><img src="images/ejercicios/plantilla.png"></a>
+            <a href="#/54"><img src="images/ejercicios/uso.png"></a>
             <a href="#/56"><img src="images/ejercicios/clase.png"></a>
+            <a href="starUML/11-PlataformaEducativa.mdj" download="11-PlataformaEducativa.mdj"><img src="images/ejercicios/star.png"></a>
         </p>
     </div>
     <div>
@@ -180,8 +185,9 @@ Created by <i class="fab fa-telegram"></i>
         Home Banking
         <p>
             <a href="#/58"><img src="images/ejercicios/problema.png"></a>
-            <a href="#/60"><img src="images/ejercicios/plantilla.png"></a>
+            <a href="#/59"><img src="images/ejercicios/uso.png"></a>
             <a href="#/61"><img src="images/ejercicios/clase.png"></a>
+            <a href="starUML/12-HomeBanking.mdj" download="12-HomeBanking.mdj"><img src="images/ejercicios/star.png"></a>
         </p>
     </div>
 </div>
@@ -195,8 +201,9 @@ Created by <i class="fab fa-telegram"></i>
         Imprenta
         <p>
             <a href="#/63"><img src="images/ejercicios/problema.png"></a>
-            <a href="#/65"><img src="images/ejercicios/plantilla.png"></a>
+            <a href="#/64"><img src="images/ejercicios/uso.png"></a>
             <a href="#/66"><img src="images/ejercicios/clase.png"></a>
+            <a href="starUML/13-Imprenta.mdj" download="13-Imprenta.mdj"><img src="images/ejercicios/star.png"></a>
         </p>
     </div>
     <div>
@@ -401,7 +408,7 @@ debe permitirse la entrada a nuevos vehículos.
 
 ---
 ### EJ6: Estacionamiento
-![Diagrama de Clase](images/ejercicios/5-CU.jpg)
+![Diagrama de Clase](images/ejercicios/6-CU.jpg)
 
 <a href="#/1">![back](images/ejercicios/back_indice.png)</a>
 
@@ -430,12 +437,18 @@ policía, mientras que si se activa un sensor de robo se avisa únicamente a la 
 
 ---
 ### EJ7: Sistema de Seguridad
+![Diagrama de Caso de Uso](images/ejercicios/7-CU.jpg)
+
+<a href="#/1">![back](images/ejercicios/back_indice.png)</a>
 
 ---
 ### EJ7: Sistema de Seguridad
 
 ---
 ### EJ7: Sistema de Seguridad
+![Diagrama de Clase](images/ejercicios/7-clase.jpg)
+
+<a href="#/1">![back](images/ejercicios/back_indice.png)</a>
 
 ---
 ### EJ7: Sistema de Seguridad
@@ -455,12 +468,18 @@ polideportiva y si lo necesito, las raquetas.
 
 ---
 ### EJ8: Club Deportivo
+![Diagrama de Caso de Uso](images/ejercicios/8-CU.jpg)
+
+<a href="#/1">![back](images/ejercicios/back_indice.png)</a>
 
 ---
 ### EJ8: Club Deportivo
 
 ---
 ### EJ8: Club Deportivo
+![Diagrama de Clase](images/ejercicios/8-clase.jpg)
+
+<a href="#/1">![back](images/ejercicios/back_indice.png)</a>
 
 ---
 ### EJ8: Club Deportivo
@@ -482,12 +501,18 @@ contratiempos administrativos.
 
 ---
 ### EJ9: Clínica
+![Diagrama de Caso de Uso](images/ejercicios/9-CU.jpg)
+
+<a href="#/1">![back](images/ejercicios/back_indice.png)</a>
 
 ---
 ### EJ9: Clínica
 
 ---
 ### EJ9: Clínica
+![Diagrama de Clase](images/ejercicios/9-clase.jpg)
+
+<a href="#/1">![back](images/ejercicios/back_indice.png)</a>
 
 ---
 ### EJ9: Clínica
@@ -508,12 +533,18 @@ además de poder consultar acerca del estado de los pedidos.
 
 ---
 ### EJ10: Fábrica
+![Diagrama de Caso de Uso](images/ejercicios/10-CU.jpg)
+
+<a href="#/1">![back](images/ejercicios/back_indice.png)</a>
 
 ---
 ### EJ10: Fábrica
 
 ---
 ### EJ10: Fábrica
+![Diagrama de Clase](images/ejercicios/10-clase.jpg)
+
+<a href="#/1">![back](images/ejercicios/back_indice.png)</a>
 
 ---
 ### EJ10: Fábrica
@@ -532,12 +563,18 @@ los profesores.
 
 ---
 ### EJ11: Plataforma Educativa
+![Diagrama de Caso de Uso](images/ejercicios/11-CU.jpg)
+
+<a href="#/1">![back](images/ejercicios/back_indice.png)</a>
 
 ---
 ### EJ11: Plataforma Educativa
 
 ---
 ### EJ11: Plataforma Educativa
+![Diagrama de Clase](images/ejercicios/11-clase.jpg)
+
+<a href="#/1">![back](images/ejercicios/back_indice.png)</a>
 
 ---
 ### EJ11: Plataforma Educativa
@@ -557,12 +594,18 @@ gerente podrá consultar acerca del historial del cliente tanto en esta entidad 
 
 ---
 ### EJ12: Home Banking
+![Diagrama de Caso de Uso](images/ejercicios/12-CU.jpg)
+
+<a href="#/1">![back](images/ejercicios/back_indice.png)</a>
 
 ---
 ### EJ12: Home Banking
 
 ---
 ### EJ12: Home Banking
+![Diagrama de Clase](images/ejercicios/12-clase.jpg)
+
+<a href="#/1">![back](images/ejercicios/back_indice.png)</a>
 
 ---
 ### EJ12: Home Banking
@@ -579,12 +622,18 @@ debe ser capaz de revisar los “trabajos en cola” y cambiar su estado a “en
 
 ---
 ### EJ13: Imprenta
+![Diagrama de Caso de Uso](images/ejercicios/13-CU.jpg)
+
+<a href="#/1">![back](images/ejercicios/back_indice.png)</a>
 
 ---
 ### EJ13: Imprenta
 
 ---
 ### EJ13: Imprenta
+![Diagrama de Clase](images/ejercicios/13-clase.jpg)
+
+<a href="#/1">![back](images/ejercicios/back_indice.png)</a>
 
 ---
 ### EJ13: Imprenta
