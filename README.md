@@ -16,6 +16,7 @@ https://slideplayer.es/slide/17988345/
 https://slideplayer.es/slide/18133590/
 
 Markdown formater: https://codebeautify.org/markdown-formatter
+Diaframa de secuencia Diaframa de secuencia https://es.slideshare.net/rene5254/diagramas-de-secuencia-251060499
 
 https://diagramasuml.com/diagrama-de-clases/
 

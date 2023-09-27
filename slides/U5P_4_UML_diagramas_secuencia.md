@@ -143,10 +143,23 @@ El siguiente diagrama muestra un fragmento loop:
 
 ---
 ### Puerta
-Una puerta es un punto de conexión para conectar un mensaje dentro de un fragmento con un mensaje fuera del fragmento. 
-EA muestra una puerta como un cuadro pequeño en un marco del fragmento.
+Una "puerta" se refiere a un elemento que se utiliza para mostrar bifurcaciones o puntos de decisión en la secuencia de 
+interacciones entre objetos. Estas puertas se utilizan para representar condiciones lógicas o ramificaciones en el 
+flujo de ejecución de un sistema o función.
 
 ![Puerta](images/unidad5/puerta.GIF)
+
+----
+
+<!-- .slide: style="font-size: 0.80em" -->
+### Puerta
+Hay dos tipos principales de puertas en un diagrama de secuencia:
+* **Puerta de bifurcación (fork):** Se utiliza para dividir una secuencia de mensajes en múltiples caminos paralelos. 
+Representa una situación en la que un objeto envía mensajes a varios objetos simultáneamente. Cada línea que sale de la 
+puerta de bifurcación representa un flujo de ejecución independiente que se ejecuta en paralelo con otros.
+* **Puerta de unión (join):** Se utiliza para unir múltiples caminos paralelos en uno solo. Representa el punto en el 
+que los flujos de ejecución paralelos se vuelven a unir después de haberse bifurcado previamente. Esto suele ocurrir 
+después de que se haya completado una serie de actividades en paralelo, y los flujos deben converger nuevamente.
 
 ---
 ### Descomposición en parte
@@ -168,6 +181,11 @@ extenderse a través de más de una línea de vida.
 ---
 
 ![Diagrama de Secuencia](images/unidad5/ejemploSecuencia.png)
+
+---
+
+Puedes leer más info en:
+https://es.slideshare.net/rene5254/diagramas-de-secuencia-251060499
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
