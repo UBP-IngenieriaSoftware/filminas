@@ -31,7 +31,7 @@ Created by <i class="fab fa-telegram"></i>
 
 ### Requerimientos de Software
 * Historial de Cambios
-* Introducción
+* **Introducción**
 * Propósito
 * Alcance
 * Personal Involucrado
@@ -41,13 +41,13 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 <div class="grid-item">
 
-* Descripción General
+* **Descripción General**
 * Perspectiva del Producto
 * Funciones del Producto
 * Características de los Usuarios
 * Restricciones
 * Supuestos y Dependencias
-* Requerimientos Específicos
+* **Requerimientos Específicos**
 * Interfaces Externas
 * Requerimientos Funcionales
 * Requerimientos No Funcionales
@@ -164,7 +164,7 @@ comprensión común y acordada del alcance del proyecto.
 
 ----
 
-En resumen, definir el alcance de un proyecto de desarrollo de software es un paso crucial en su planificación y 
+Definir el alcance de un proyecto de desarrollo de software es un paso crucial en su planificación y 
 ejecución. Un alcance bien definido proporciona una base sólida para la gestión eficaz del proyecto, ayuda a evitar 
 problemas de alcance y garantiza que todas las partes interesadas estén alineadas en cuanto a lo que se espera del 
 proyecto y lo que no se espera.
@@ -195,7 +195,7 @@ Otra información útil...
 puede ayudar a la asignación de tareas y a garantizar que se aproveche al máximo el conjunto de habilidades del equipo.
 * **Horarios y disponibilidad:** Suele ser importante en proyectos que involucran equipos distribuidos o colaboradores 
 con diferentes husos horarios.
-* **Expectativas de comunicación:** Suelen listarse lsd reuniones regulares, herramientas de colaboración, informes de 
+* **Expectativas de comunicación:** Suelen listarse las reuniones regulares, herramientas de colaboración, informes de 
 estado, etc.
 * **Formación y desarrollo:** Si se requieren habilidades específicas para el proyecto, es importante documentar 
 cualquier formación o desarrollo adicional que se deba proporcionar a los miembros del equipo para cumplir con sus 
@@ -213,12 +213,20 @@ objetivos establecidos.
 ### Definiciones, Acrónimos y Abreviaturas
 Esta sección es fundamental para garantizar la comprensión precisa del contenido del documento.
 
+* **Definición:** Es una explicación precisa y clara de lo que significa una palabra, término o concepto. Ayuda a 
+comprender el significado de la palabra en cuestión.
+* **Acrónimo:** Es una palabra formada tomando las letras iniciales de una serie de palabras y usándolas juntas como una 
+nueva palabra.
+* **Abreviatura:** Es una forma corta de una palabra o frase que se crea mediante la omisión de una o más letras o sílabas.
+
+----
+
 La importancia de esta sección radica en:
 * **Claridad y Comprensión:** Garantizar que los lectores del documento comprendan completamente los términos, acrónimos 
 y abreviaturas utilizados a lo largo del texto. Al proporcionar definiciones claras y explicaciones para estas palabras 
 y siglas, se reduce la posibilidad de malentendidos y confusiones.
-* **Reducción de Ambigüedades:** Al definir con precisión los términos y las abreviaturas, se elimina la ambigüedad y se
-* segura que todos los lectores tengan la misma interpretación de los conceptos clave.
+* **Reducción de Ambigüedades:** Al definir con precisión los términos y las abreviaturas, se elimina la ambigüedad y se 
+asegura que todos los lectores tengan la misma interpretación de los conceptos clave.
 
 ----
 
@@ -246,7 +254,7 @@ manera efectiva y evita malentendidos.
 Este apartado lista las referencias a todos los documentos complementarios que se mencionan en el cuerpo del documento.
 
 ---
-### Rsumen
+### Resumen
 Es una descripción breve de la información expuesta y de cómo esta se organiza en el documento.
 Suele listar las secciones.
 
@@ -288,18 +296,12 @@ gubernamentales, limitaciones de hardware, protocolos de comunicación, consider
 etc.
 
 ---
-## Sección 3: Requerimientos Específicos
-* Interfaces Externas
-* Requerimientos Funcionales
-* Requerimientos No Funcionales
-
----
 ### Supuestos y Dependencias
-Las dependencias de terceros en puntos determinados del proceso de desarrollo o la asunción de que una funcionalidad 
+Las dependencias de terceros en puntos determinados del proceso de desarrollo o la asunción de que una funcionalidad
 determinada será provista por la base de datos y no por el producto de software.
 
 ---
-## Requerimientos Específicos
+## Sección 3: Requerimientos Específicos
 * Interfaces Externas
 * Requerimientos Funcionales
 * Requerimientos No Funcionales
@@ -350,10 +352,12 @@ Los Requerimientos No Funcionales, también conocidos como **atributos de calida
 aspectos fundamentales que definen cómo debe comportarse un sistema de software en lugar de qué debe hacer. 
 
 Estos elementos son esenciales para garantizar que el producto final cumpla con las expectativas de los usuarios y las 
-necesidades del negocio. Algunos de los Requerimientos No Funcionales comunes:
+necesidades del negocio. 
 
 ----
 
+<!-- .slide: style="font-size: 0.80em" -->
+Algunos de los Requerimientos No Funcionales comunes:
 * **Performance:** Se refiere a la capacidad del software para realizar sus funciones de manera eficiente, en términos 
 de velocidad y capacidad de respuesta. Los aspectos de rendimiento incluyen el tiempo de carga de la aplicación, la 
 velocidad de procesamiento de datos y la gestión eficiente de recursos como la memoria y la CPU.
@@ -363,6 +367,7 @@ la encriptación de datos y la prevención de ataques cibernéticos.
 
 ----
 
+<!-- .slide: style="font-size: 0.80em" -->
 * **Disponibilidad:** Se refiere a la capacidad del software para estar disponible y en funcionamiento cuando los 
 usuarios lo necesitan. La alta disponibilidad implica minimizar el tiempo de inactividad no planificado y garantizar 
 que el sistema sea resistente a fallos.
@@ -374,11 +379,16 @@ necesidad de modificaciones significativas. Esto puede incluir sistemas operativ
 
 ----
 
+<!-- .slide: style="font-size: 0.80em" -->
 * **Escalabilidad:** Se refiere a la capacidad del software para adaptarse a un aumento en la carga de trabajo sin una 
 degradación significativa del rendimiento. Esto es esencial para garantizar que el sistema pueda crecer con la demanda 
 sin necesidad de una reescritura importante.
 * **Usabilidad:** Es un aspecto importante de la experiencia del usuario. Implica la facilidad de uso, la navegación 
 intuitiva y la capacidad de los usuarios para completar sus tareas de manera eficiente.
+
+----
+
+<!-- .slide: style="font-size: 0.80em" -->
 * **Cumplimiento normativo:** Algunas aplicaciones deben cumplir con regulaciones y estándares específicos, como GDPR 
 para la privacidad de datos o HIPAA para la salud. Los requerimientos de cumplimiento normativo aseguran que el software 
 cumpla con estas regulaciones.
