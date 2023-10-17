@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Automatización de Casos de Pruebas</title>
+    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+
+# Ingeniería de Software
+## Automatización de Casos de Pruebas 2
+Created by <i class="fab fa-telegram"></i>
+[edme88]("https://t.me/edme88")
+
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: style="font-size: 0.60em" -->
+<style>
+.grid-container2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 0.8em;
+    text-align: left !important;
+}
+
+.grid-item {
+    border: 3px solid rgba(121, 177, 217, 0.8);
+    padding: 20px;
+    text-align: left !important;
+}
+</style>
+## Temario
+<div class="grid-container2">
+<div class="grid-item">
+
+### Automatización de Casos de Pruebas
+* BDD
+* Gherkin
+
+</div>
+<div class="grid-item">
+
+*
+
+</div>
+</div>
+
+</script></section><section ><section data-markdown><script type="text/template">
+
+### BDD
+Significa **Desarrollo Dirigido por Comportamiento**, y es una evolución del TDD (Desarrollo Dirigido por Pruebas).
+
+Consiste en describir el comportamiento antes de escribir el código fuente.
+
+Las pruebas verifican que el comportamiento del código es correcto desde el punto de vista del negocio.
+</script></section><section data-markdown><script type="text/template">
+![BDD](images/unidad8_automatizacion/bdd.jpg)
+</script></section><section data-markdown><script type="text/template">
+![BDD](images/unidad8_automatizacion/bdd2.jpg)
+</script></section><section data-markdown><script type="text/template">
+### BDD: Ventajas
+Emplea lenguaje ubicuo, **Gherkin**, lenguaje semiformal entendido por desarrolladores y personal NO técnico.
+
+Combina aspectos técnicos y de negocio: los requisitos de negocio forman parte del proceso de desarrollo.
+
+</script></section></section><section ><section data-markdown><script type="text/template">
+### Gherkin
+Es un lenguaje fácil de leer, entender y escribir; con él vamos a describir las funcionalidades definiendo el 
+comportamiento del softwatr, sin entrar en su implementación.
+
+La **documentación** forma parte de los tests.
+</script></section><section data-markdown><script type="text/template">
+### Gherkin
+<!-- .slide: style="font-size: 0.80em" -->
+Necesitamos conocer **5** palabras:
+* **Feature** Indica el nombre de la funcionalidad que vamos a probar. Debe ser un título claro y explícito.
+* **Scenario** Describe cada escenario que vamos a probar.
+* **Given** Provee contecto para el escenario en que se va a ejecutar el test, prerequisitos. Incluye los pasos necesarios
+para poner al sistema en el estado que se desea probar.
+* **When** La interacción del suuario que acciona la funcionalidad que deseamos testear.
+* **Then** Especifica el resultado esperado en el test. Observamos los cambios en el ssitema y vemos su son los deseados.
+</script></section><section data-markdown><script type="text/template">
+### Gherkin
+
+![Gherkin](images/unidad8_automatizacion/gherkin.jpg)
+
+</script></section></section><section ><section data-markdown><script type="text/template">
+### Cucumber
+Es una herramienta para implementar metodologías como el Behaviour Driven Development BDD, que permite ejecutar 
+descripciones funcionales en texto plano.
+
+Las descipciones funcionales se escriben en Gherkin.
+</script></section><section data-markdown><script type="text/template">
+### Cucumber
+Es una gran herramienta para mantener en un solo lugar:
+* **Living Documentation:** Es una forma de definir las características de forma tal que puedan ser entendidas por los 
+equipos comerciales y técnicos.
+* Los **tests automatizados**
+* **Especificaciones Ejecutables:** Porque cada paso en el escenario está vinculado a un fragmento de código que realiza
+esa acción.
+</script></section><section data-markdown><script type="text/template">
+### Cucumber
+Los **objetivos** principales que se deben seguir:
+* Los escenarios deben ser pensados como documentación.
+* Los escenarios deben permitir la colaboración con gente de negocio (PO, BA)
+* Los escenarios deben permitir la evolución del producto.
+
+</script></section></section><section ><section data-markdown><script type="text/template">
+
+### Ejercicio: Cypress+Cucumber
+1. Ingresa a git https://github.com/edme88/cypressCucumberPIL/tree/main
+2. Clona el repositorio
+3. Ejecutar el comando **npx cypress open**
+4. Ejecuta algún test
+</script></section><section data-markdown><script type="text/template">
+### Cucumber
+Los proyectos con cucumber tienen principalmente 3 archivos:
+* **nombreTests.feature**: Describen en Gherkin el comportamiento, empleando las palabras Givem, When, Then, etc.
+* **nombreStep.js** Emplando Js se programa que acciones de código se deben realizar en cada paso.
+* **nombrePage.js** Se colocan los locadores dentro de métodos que permitan obtenerlos y manipularlos con mayor facilidad.
+
+</script></section></section><section ><section data-markdown><script type="text/template">
+
+### Gherkin - BRIEF
+Los siguientes principios permiten alcanzar estas metas:
+* Lenguaje Comercial (Business language)
+* Datos reales (Real data)
+* Revelación de intención (Intention revealing)
+* Esencial
+* Enfocado (Focused)
+* Breve (brief)
+</script></section><section data-markdown><script type="text/template">
+#### BRIEF: Lenguaje Comercial
+* Las palabras usadas deben venir del dominio comercial. No debe haber ambiguedades.
+* Un error común es emplear palabras que tienen diferente significado en diferentes contextos.
+</script></section><section data-markdown><script type="text/template">
+#### BRIEF: Datos Reales
+* Los ejemplos deben usar datos reales y contretos, para ayudar a entender el contexto.
+</script></section><section data-markdown><script type="text/template">
+#### BRIEF: Revelación de intención
+* En el escenario debe quedar claro cuál es la intención, que se está tratando de lograr.
+</script></section><section data-markdown><script type="text/template">
+#### BRIEF: Esencial
+* Cualquier paso que no contribuya a alcanzar el propósito principal debe elimianrse. Si son importantes, deben cubrirse 
+por otros esenarios que ilustren otras reglas.
+* Un erro común es incluir demasiados detalles.
+</script></section><section data-markdown><script type="text/template">
+#### BRIEF: Enfocado
+* Un escenario debería centrarse en una sola regla.
+</script></section><section data-markdown><script type="text/template">
+#### BRIEF: Breve
+* Los escenarios no dberían tener más de 5 líneas, haciendo que sen fáciles de leer y entender.
+
+</script></section></section><section  data-markdown><script type="text/template">
+## ¿Dudas, Preguntas, Comentarios?
+![DUDAS](images/pregunta.gif)
+</script></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
