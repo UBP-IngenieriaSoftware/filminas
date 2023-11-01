@@ -204,6 +204,12 @@ Distinguir entre diferentes tipos de tareas permitir una gestión más efectiva 
 
 ---
 
+### TEST CASE
+
+![Test Case](images/resumen/test_case.png)
+
+---
+
 ## ¿Dudas, Preguntas, Comentarios?
 
 ![DUDAS](images/pregunta.gif)
