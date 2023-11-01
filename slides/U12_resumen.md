@@ -56,6 +56,12 @@ Created by <i class="fab fa-telegram"></i>
 
 ---
 
+### JIRA
+
+![Tickets](images/resumen/tickets.png)
+
+---
+
 ### ÉPICAS
 
 La épica sirve para describir y agrupar un grupo de tickets relacionados. Las épicas pueden ser
@@ -207,6 +213,31 @@ Distinguir entre diferentes tipos de tareas permitir una gestión más efectiva 
 ### TEST CASE
 
 ![Test Case](images/resumen/test_case.png)
+
+---
+
+### Defecto
+
+Es un tipo de incidencia que se utiliza para hacer un seguimiento de problemas o errores en un proyecto.
+Los defectos representan problemas que deben corregirse en el software debido a comportamientos inesperados o incorrectos que afectan su funcionamiento normal.
+
+---
+
+### Defecto
+
+Cuando se identifica un defecto en un software, se crea un ticket de defecto en Jira para documentar el problema. Este ticket suele incluir información detallada sobre el defecto, como una descripción del problema, pasos para reproducirlo, el entorno en el que se produce, su gravedad, la prioridad de corrección y otros detalles relevantes. Además, el ticket de defecto puede asignarse a un miembro del equipo de desarrollo responsable de solucionar el problema.
+
+---
+
+### Defecto
+
+La gestión de defectos en Jira es fundamental para mantener la calidad del software y garantizar que los problemas se identifiquen, registren y corrijan de manera efectiva. Los equipos de desarrollo utilizan Jira para realizar un seguimiento de los defectos a lo largo del ciclo de vida del proyecto, desde su detección hasta su corrección y posterior verificación.
+
+---
+
+### Defecto
+
+![Defecto](images/resumen/defecto.png)
 
 ---
 
