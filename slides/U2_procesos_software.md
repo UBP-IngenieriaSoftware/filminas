@@ -68,14 +68,14 @@ mide en contra de este plan.
 
 ---
 ### Modelos de procesos de software
-<!-- .slide: style="font-size: 0.90em" -->
-* **El modelo de cascada**
+<!-- .slide: style="font-size: 0.80em" -->
+* **El modelo de cascada** <br>
 Modelo dirigido por  Plan. Fases separadas y distintas de especificación y desarrollo.
 
-* **El desarrollo incremental**
+* **El desarrollo incremental** <br>
 Especificación, desarrollo y validación se intercalan. Puede ser el dirigido por plan o ágil.
 
-* **Ingeniería de software orientado a reutilización**
+* **Ingeniería de software orientado a reutilización** <br>
 El sistema se ensambla a partir de componentes existentes Puede ser el dirigido por plan o ágil.
 
 **En la práctica, la mayoría de los grandes sistemas se desarrollan mediante un proceso que incorpora elementos de todos estos modelos.**
@@ -107,6 +107,14 @@ bastante limitados durante el proceso de diseño.
 * El modelo de cascada se utiliza sobre todo para los grandes proyectos de ingeniería de sistemas especialmente si un 
 sistema se desarrolla en varios lugares. En estas circunstancias el modelo de cascada ayuda a coordinar el trabajo.
 
+----
+
+### Ejercicio
+
+<img src="images/question.png" style="float: right">
+
+Piense que proyectos de software podrían desarrollarse empleando el **modelo de cascada**.
+
 ---
 ### El desarrollo incremental
 ![Desarrollo Incremental](images/unidad2/desarrollo-incremental.jpg)
@@ -130,7 +138,7 @@ Los gerentes necesitan entregas regulares para medir el progreso. No es rentable
 * Estructura del sistema tiende a degradarse a medida que se añaden nuevos incrementos.
 Se gasta menos tiempo y dinero en la refactorización para mejorar el software, lo que tiende a corromper su estructura. La incorporación de nuevos cambios se vuelve cada vez más difícil y costoso.
 
-----
+---
 
 ### Ingeniería de software orientado a Reutilización
 <!-- .slide: style="font-size: 0.90em" -->
@@ -166,17 +174,17 @@ el desarrollo incremental son intercalados.
 
 ---
 ### Especificaciones de Software
-<!-- .slide: style="font-size: 0.90em" -->
+<!-- .slide: style="font-size: 0.80em" -->
 El proceso de establecer qué servicios son necesarios y las limitaciones de funcionamiento y desarrollo del sistema.
 
 Ingeniería de Requisitos o Requerimientos:
-* Estudio de factibilidad
-Es técnicamente y financieramente factible para construir el sistema?
-* Requerimientos, obtención y análisis
-Que requieren los diferentes actores del sistema o esperan del sistema ?
-* Especificación de Requerimientos
+* Estudio de factibilidad <br>
+¿Es técnicamente y financieramente factible para construir el sistema?
+* Requerimientos, obtención y análisis <br>
+¿Qué requieren los diferentes actores del sistema o esperan del sistema ?
+* Especificación de Requerimientos <br>
 Definición de los requisitos en detalle
-* Validación de Requerimientos
+* Validación de Requerimientos <br>
 Comprobación de la validez de los requisitos
 
 ---
@@ -187,10 +195,10 @@ Comprobación de la validez de los requisitos
 ### Diseño de software y la implementación
 * Proceso de conversión entre la especificación del sistema en un sistema ejecutable.
 
-* El diseño de software 
+* El diseño de software  <br>
 Diseñar una estructura de software que da cuenta de la especificación;
 
-* Implementación
+* Implementación <br>
 Traducir esta estructura en un programa ejecutable;
 
 * Las actividades de diseño e implementación están estrechamente relacionados y pueden ser intercaladas.
@@ -224,14 +232,14 @@ La prueba es la actividad de V & V más utilizada.
 ---
 ### Etapas de prueba
 <!-- .slide: style="font-size: 0.90em" -->
-* **Pruebas de Desarrollo o componente**
+* **Pruebas de Desarrollo o componente** <br>
 Los componentes individuales se prueban de forma independiente;
 Los componentes pueden ser funciones, objetos o agrupaciones coherentes de estas entidades.
 
-* **Las pruebas del sistema**
+* **Las pruebas del sistema** <br>
 Pruebas del sistema como un todo. El ensayo de las propiedades emergentes es particularmente importante.
 
-* **Las pruebas de aceptación**
+* **Las pruebas de aceptación** <br>
 Las pruebas realizadas por el cliente para verificar que el sistema cumple con sus necesidades.
 
 ---
@@ -349,7 +357,7 @@ completa del sistema es parte del contrato de desarrollo del sistema.
 
 ---
 ### Actividades a realizar en grupo
-En grupos de máximo 3 personas deberán investigar las siguientes metodologías, generar un informe/ppt y presentar la investigación al curso (fecha 25/08)
+En grupos de máximo 3 personas deberán investigar las siguientes metodologías, generar un informe/ppt y presentar la investigación al curso (fecha 28/08)
 
 1. CLEANROOM SOFTWARE ENGINEERING
 2. KANBAN
