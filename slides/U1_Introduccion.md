@@ -23,7 +23,7 @@ Created by <i class="fab fa-telegram"></i>
 
 ### Ingeniería de Software
 * Definición
-* Por que?
+* ¿Por qué es importante?
 * Errores de Software
 * Costos del software
 * Productos de software
@@ -41,15 +41,19 @@ Created by <i class="fab fa-telegram"></i>
 La ingeniería de software aplica teorías, métodos y herramientas para el desarrollo de software profesional.
 
 ---
-## Ingenieria de Software. Por que?
+## Ingenieria de Software. ¿Por qué es importante?
 * La economía de muchos países depende en alguna medida del software.
-* Cada vez mas sistemas son controlados por software.
+* Cada vez más sistemas son controlados por software.
 * El gasto en software representa una fracción significativa del PBI
 * Los errores de software pueden ser muy caros
 
 ---
 ## Errores de Software
 * El primer “bug”, una polilla entre los relés del Mark II en 1947.
+![First bug](images/unidad1/first_bug.png)
+
+----
+## Errores de Software
 * Los errores en el software son un problema común y...en muchos casos, no hay graves consecuencias, 
 se soluciona con una nueva versión corregida
 * EN MUCHOS OTROS CASOS PUEDE HABER CONSECUENCIAS FATALES, GRAVES O MUY CARAS.
