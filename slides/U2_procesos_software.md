@@ -39,10 +39,10 @@ Created by <i class="fab fa-telegram"></i>
 <!-- .slide: style="font-size: 0.80em" -->
 * Un conjunto estructurado de actividades necesarias para desarrollar un sistema de software
 * Muchos de los procesos de software son diferentes, pero todos implican:
-  * Especificación - la definición de lo que el sistema debe hacer;
-  * Diseño e implementación - la definición de la organización del sistema y la implementación del sistema;
-  * Validación - la comprobación de que hace lo que quiere el cliente;
-  * Evolución - el cambio del sistema en respuesta a las necesidades cambiantes de los clientes.
+  * **Especificación** - la definición de lo que el sistema debe hacer;
+  * **Diseño e implementación** - la definición de la organización del sistema y la implementación del sistema;
+  * **Validación** - la comprobación de que hace lo que quiere el cliente;
+  * **Evolución** - el cambio del sistema en respuesta a las necesidades cambiantes de los clientes.
 * Un modelo de proceso de software es una representación abstracta de un proceso. Se presenta una descripción de un 
 proceso a partir de una perspectiva particular.
 
@@ -60,9 +60,9 @@ promulgado o elaborado un producto.
 ---
 ### Proceso dirigido por Plan y procesos ágiles
 <!-- .slide: style="font-size: 0.90em" -->
-* En un desarrollo dirigido por plan todas las actividades del proceso se planifican con antelación y el progreso se 
+* En un desarrollo **dirigido por plan** todas las actividades del proceso se planifican con antelación y el progreso se 
 mide en contra de este plan.
-* En los procesos ágiles, la planificación es gradual y es más fácil para cambiar el proceso para reflejar los requisitos cambiantes de los clientes.
+* En los procesos **ágiles**, la planificación es gradual y es más fácil para cambiar el proceso para reflejar los requisitos cambiantes de los clientes.
 * En la práctica, la mayoría de los procesos prácticos incluyen elementos de ambos enfoques el dirigido por plan y el ágil.
 * No hay procesos de software correctos o incorrectos.
 
@@ -76,7 +76,7 @@ Modelo dirigido por  Plan. Fases separadas y distintas de especificación y desa
 Especificación, desarrollo y validación se intercalan. Puede ser el dirigido por plan o ágil.
 
 * **Ingeniería de software orientado a reutilización** <br>
-El sistema se ensambla a partir de componentes existentes Puede ser el dirigido por plan o ágil.
+El sistema se ensambla a partir de componentes existentes. Puede ser el dirigido por plan o ágil.
 
 **En la práctica, la mayoría de los grandes sistemas se desarrollan mediante un proceso que incorpora elementos de todos estos modelos.**
 
@@ -84,7 +84,8 @@ El sistema se ensambla a partir de componentes existentes Puede ser el dirigido 
 ### Modelo de Cascada
 ![Modelo Cascada](images/unidad2/modelo-cascada.jpg)
 
----
+----
+
 ### Fases del Modelo de Cascada
 <!-- .slide: style="font-size: 0.90em" -->
 Hay fases identificadas por separado en el modelo de cascada:
@@ -95,13 +96,14 @@ Hay fases identificadas por separado en el modelo de cascada:
 * Operación y mantenimiento
 
 El principal inconveniente del modelo de la cascada es la dificultad de acomodar el cambio después de que está en marcha 
-el proceso. En principio, una fase tiene que ser completa antes de pasar a la siguiente fase.
+el proceso. En principio, **una fase tiene que ser completa antes de pasar a la siguiente fase**.
 
----
+----
+
 ### Problemas del Modelo de Cascada
 <!-- .slide: style="font-size: 0.90em" -->
-* Inflexible, la división del proyecto en fases estructuradas hace difícil responder a las necesidades cambiantes de 
-los clientes. Por lo tanto, este modelo sólo es apropiado cuando los requisitos son bien entendidos y los cambios serán 
+* **Inflexible**, la división del proyecto en fases estructuradas hace difícil responder a las necesidades cambiantes de 
+los clientes. Por lo tanto, este modelo sólo es apropiado cuando los *requisitos son bien entendidos* y los cambios serán 
 bastante limitados durante el proceso de diseño.
 * POCOS SISTEMAS tienen requisitos estables.
 * El modelo de cascada se utiliza sobre todo para los grandes proyectos de ingeniería de sistemas especialmente si un 
@@ -113,13 +115,19 @@ sistema se desarrolla en varios lugares. En estas circunstancias el modelo de ca
 
 <img src="images/question.png" style="float: right">
 
-Piense que proyectos de software podrían desarrollarse empleando el **modelo de cascada**.
+Piense que proyectos podrían desarrollarse empleando el **modelo de cascada**.
 
 ---
+### Desarrollo incremental
+Especificación, desarrollo y validación se intercalan.
+
+----
+
 ### El desarrollo incremental
 ![Desarrollo Incremental](images/unidad2/desarrollo-incremental.jpg)
 
----
+----
+
 ### Beneficios de desarrollo incremental
 <!-- .slide: style="font-size: 0.80em" -->
 * El costo de atender las necesidades cambiantes de los clientes se reduce.
@@ -129,7 +137,8 @@ Piense que proyectos de software podrían desarrollarse empleando el **modelo de
 * Más rápida entrega y despliegue de software de utilidad para el cliente.
 * Los clientes pueden usar y obtener valor a partir del software más rápidamente  de lo que es posible con un proceso de cascada.
 
----
+----
+
 ### Problemas de desarrollo incremental
 <!-- .slide: style="font-size: 0.90em" -->
 * El proceso no es visible.
@@ -145,11 +154,11 @@ Se gasta menos tiempo y dinero en la refactorización para mejorar el software, 
 Se basa en la reutilización sistemática de código, los sistemas se integran a partir de componentes o sistemas existentes.
 
 Etapas del proceso
-1. Análisis de requerimiento;
-2. Análisis de los componentes;
-3. Modificación de requerimientos;
-4. Configuración del sistema con la reutilización;
-5. Desarrollo e integración.
+1. Análisis de requerimientos
+2. Análisis de los componentes
+3. Modificación de requerimientos
+4. Configuración del sistema con la reutilización
+5. Desarrollo e integración
 
 La reutilización es ahora el enfoque estándar para la construcción de muchos tipos de sistemas.
 
@@ -158,15 +167,17 @@ La reutilización es ahora el enfoque estándar para la construcción de muchos 
 ### Ingeniería de software orientado a Reutilización
 ![Software Orientado a Reutilización](images/unidad2/software-reutilizacion.jpg)
 
----
+----
+
 ### Tipos de componentes de software
+
 * Los servicios Web que se desarrollan de acuerdo a los estándares de servicio y que están disponibles para la invocación remota.
 * Colecciones de objetos que se desarrollan como un paquete para ser integrado con un marco de componentes tales como .NET o J2EE.
 * Sistemas autónomos de software (COTS) que están configurados para su uso en un entorno particular.
 
 ---
 ### Actividades de proceso
-* Procesos de software reales son secuencias intercalados de actividades técnicas, de colaboración y de gestión con el 
+* Procesos de software reales son *secuencias* intercalados de actividades técnicas, de colaboración y de gestión con el 
 objetivo general de la especificación, diseño, implementación y prueba de un sistema de software.
 * Las cuatro actividades básicas del proceso son: especificación, desarrollo, validación y evolución y están organizados 
 de manera diferente según el proceso de desarrollo. En el modelo de cascada, se organizan en secuencia, mientras que en 
@@ -229,7 +240,8 @@ La prueba es la actividad de V & V más utilizada.
 ### Etapas de la prueba
 ![Etapas de la prueba](images/unidad2/etapas-de-pruebas.jpg)
 
----
+----
+
 ### Etapas de prueba
 <!-- .slide: style="font-size: 0.90em" -->
 * **Pruebas de Desarrollo o componente** <br>
@@ -314,6 +326,15 @@ Los prototipos deben desecharse ya que no son una buena base para un sistema de 
 * El prototipo probablemente no va a cumplir con los estándares de calidad normal de la organización.
 
 ---
+### Ejemplos de Prototipos
+
+[Figma - Web](https://www.figma.com/proto/8qUZMI4k0iAAX33xV3vvnZ/Carrito-M%C3%BAltiple?node-id=1655-15444&scaling=scale-down&page-id=1119%3A10172&starting-point-node-id=1655%3A15343)
+
+[Adobe XD](https://xd.adobe.com/view/79dd4690-1c36-4223-9d53-c4d50d2463c9-2c8e/)
+
+[Nivel de Detalle](https://www.figma.com/proto/h5wKQ7FzejsrPIlw9MTKEx/Tienda-Claro---Desktop-%2B-Mobile?node-id=2265-1936&scaling=contain&page-id=0%3A1&starting-point-node-id=2265%3A1936)
+
+---
 ### Entrega incremental
 * En lugar de entregar el sistema en una sola vez, el desarrollo y la entrega se desglosan en incrementos, con cada 
 incremento se entrega de parte de la funcionalidad requerida.
@@ -357,7 +378,7 @@ completa del sistema es parte del contrato de desarrollo del sistema.
 
 ---
 ### Actividades a realizar en grupo
-En grupos de máximo 3 personas deberán investigar las siguientes metodologías, generar un informe/ppt y presentar la investigación al curso (fecha 28/08)
+En grupos de máximo 3 personas deberán investigar las siguientes metodologías, generar un informe/ppt y presentar la investigación al curso (fecha 30/08)
 
 1. CLEANROOM SOFTWARE ENGINEERING
 2. KANBAN

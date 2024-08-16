@@ -596,6 +596,14 @@ Por consiguiente, el sistema debe diseñarse e implementarse para garantizar que
 
 ---
 
+### Ejercicio
+
+<img src="images/question.png" style="float: left">
+
+¿Qué otras preguntas le realizarian al cliente que solicitó el software para refinar estos requerimientos?
+
+---
+
 #### Un sistema de gestión de pacientes en clínicas especializadas en salud mental
 
 Un sistema de información médica, que gestiona la información de los pacientes y los tratamientos que reciben.
@@ -668,6 +676,14 @@ imposible prescribir a los pacientes el medicamento correcto.
 
 ---
 
+### Ejercicio
+
+<img src="images/question.png" style="float: left">
+
+¿Qué otras preguntas le realizarian al cliente que solicitó el software para refinar estos requerimientos?
+
+---
+
 #### Estación meteorológica en zonas deshabitadas
 
 <!-- .slide: style="font-size: 0.80em" -->
@@ -716,6 +732,14 @@ En un país con grandes áreas deshabitadas se decidió instalar varios cientos 
   y desconectar los generadores ante condiciones meteorológicas adversas (viento fuerte).
 - Permitir la reconfiguración dinámica donde partes del software se sustituyan con nuevas versiones, y los instrumentos
   de respaldo se enciendan en el sistema en caso de falla de éste.
+
+---
+
+### Ejercicio
+
+<img src="images/question.png" style="float: left">
+
+¿Qué otras preguntas le realizarian al cliente que solicitó el software para refinar estos requerimientos?
 
 ---
 

@@ -10,9 +10,7 @@ Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
 ---
-## Profesores
-### Ing. Alejandra Bosio
-malejandra.bosio@gmail.com
+## Profesor
 
 ### Ing. Agustina Edmé Aliciardi
 edmealiciardi@gmail.com
@@ -51,7 +49,9 @@ edmealiciardi@gmail.com
 “Ingeniería del Software: Un enfoque práctico 7ma ed.” de Roger Pressman
 
 ---
+
 ## Calendario
+
 | Semana | Unidad | Tema                                |
 |--------|--------|-------------------------------------|
 | 1      | 1      | Presentación - Procesos de Software |
@@ -63,7 +63,9 @@ edmealiciardi@gmail.com
 | 7      |        | Dudas - Preguntas - Parcial         |
 
 ---
+
 ## Calendario
+
 | Semana | Unidad | Tema                                   |
 |--------|--------|----------------------------------------|
 | 8      | 7      | Diseño e Implementación                |
