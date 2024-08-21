@@ -47,6 +47,7 @@ edmealiciardi@gmail.com
 ## Libro:
 ![Book](images/book.png)
 “Ingeniería del Software: Un enfoque práctico 7ma ed.” de Roger Pressman
+& “Ingeniería del Software” de Ian Sommerville
 
 ---
 

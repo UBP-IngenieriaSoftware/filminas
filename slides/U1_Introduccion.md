@@ -572,19 +572,19 @@ debe inyectar a la persona.
   - Niveles bajos de azúcar en sangre pueden provocar el mal funcionamiento cerebral, coma y la muerte;
   - Niveles altos de azúcar en sangre tienen consecuencias a largo plazo, como lesiones oculares y renales.
 
----
+----
 
 #### Arquitectura del Hardware de bomba de insulina
 
 ![Arquitetcura de Bomba de Insulina](images/unidad1/InsulinPumpSchematic.jpg)
 
----
+----
 
 #### Modelo de actividad de la bomba de insulina
 
 ![Modelo de actividad](images/unidad1/InsulinPumpModelo.jpg)
 
----
+----
 
 #### Requerimientos esenciales de alto nivel
 
@@ -594,7 +594,7 @@ debe inyectar a la persona.
 
 Por consiguiente, el sistema debe diseñarse e implementarse para garantizar que siempre satisfaga dichos requerimientos.
 
----
+----
 
 ### Ejercicio
 
@@ -612,7 +612,7 @@ Un sistema de información médica, que gestiona la información de los paciente
   clínicas especializadas donde se reúnen con un médico que tiene conocimiento detallado de sus problemas.
 - Estas clínicas funcionan en hospitales, consultorios médicos locales o centros comunitarios.
 
----
+----
 
 #### MHC-PMS
 
@@ -623,7 +623,7 @@ Un sistema de información médica, que gestiona la información de los paciente
 - Cuando se dispone de acceso a red, se accede a la información en la base de datos. De lo contrario se utilizan copias
   locales de los registros de pacientes.
 
----
+----
 
 #### Las metas de MHC-PMS
 
@@ -631,13 +631,13 @@ Un sistema de información médica, que gestiona la información de los paciente
   objetivos locales y de gobierno.
 - Proporcionar al personal médico información oportuna para apoyar el tratamiento de los pacientes.
 
----
+----
 
 #### La organizacion de MHC-PMS
 
 ![Organización de MHC-PMS](images/unidad1/MHC-PMS.png)
 
----
+----
 
 #### Características clave MHC-PMS
 
@@ -657,9 +657,9 @@ Un sistema de información médica, que gestiona la información de los paciente
   la cantidad de pacientes que ingresaron y salieron del sistema de salud, el total de pacientes internados, los
   medicamentos prescritos y sus costos, etc.
 
----
+----
 
-#### Cuestiones criticas en MHC-PMS
+#### Cuestiones críticas en MHC-PMS
 
 <!-- .slide: style="font-size: 0.80em" -->
 
@@ -674,7 +674,7 @@ Un sistema de información médica, que gestiona la información de los paciente
 El sistema tiene que estar disponible cuando se necesite, de otro modo la seguridad estaría comprometida y sería
 imposible prescribir a los pacientes el medicamento correcto.
 
----
+----
 
 ### Ejercicio
 
@@ -698,13 +698,13 @@ En un país con grandes áreas deshabitadas se decidió instalar varios cientos 
   dichos instrumentos está controlado por un sistema de software que toma periódicamente lecturas de parámetros y gestiona
   los datos recolectados desde los instrumentos.
 
----
+----
 
 #### El entorno de la estación meteorológica
 
 ![Estación Metereológica](images/unidad1/case_studies.jpg)
 
----
+----
 
 ### Sistema de información meteorológica
 
@@ -721,7 +721,7 @@ En un país con grandes áreas deshabitadas se decidió instalar varios cientos 
   Se comunica por satélite con todas las estaciones meteorológicas a campo abierto, para monitorizar el estado de dichos
   sistemas y dar reportes sobre problemas.
 
----
+----
 
 ### Funcionalidad adicional del software
 
@@ -733,7 +733,7 @@ En un país con grandes áreas deshabitadas se decidió instalar varios cientos 
 - Permitir la reconfiguración dinámica donde partes del software se sustituyan con nuevas versiones, y los instrumentos
   de respaldo se enciendan en el sistema en caso de falla de éste.
 
----
+----
 
 ### Ejercicio
 

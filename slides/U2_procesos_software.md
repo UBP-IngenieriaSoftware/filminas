@@ -378,7 +378,7 @@ completa del sistema es parte del contrato de desarrollo del sistema.
 
 ---
 ### Actividades a realizar en grupo
-En grupos de máximo 3 personas deberán investigar las siguientes metodologías, generar un informe/ppt y presentar la investigación al curso (fecha 30/08)
+En grupos de máximo 3 personas deberán investigar las siguientes metodologías, generar un informe/ppt y presentar la investigación al curso (fecha 23/08)
 
 1. CLEANROOM SOFTWARE ENGINEERING
 2. KANBAN

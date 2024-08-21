@@ -52,89 +52,85 @@ Created by <i class="fab fa-telegram"></i>
 
 ---
 ### Ingeniería de requerimientos
-* El proceso de establecimiento de los servicios que el cliente necesita de un sistema y las limitaciones con las
-que opera y se desarrolla.
-* Los requisitos, en sí, son las descripciones de los servicios del sistema y las limitaciones que se generan
-durante el proceso de ingeniería de requerimientos.
+* Proceso de descubrir, analizar, documentar y verificar los servicios que el sistema debe ofrecer y las restricciones en su operación.
 
 ---
 ### Definicion de Requerimiento (Davis)
 <!-- .slide: style="font-size: 0.88em" -->
-"Si una empresa desea realizar un contrato para un proyecto de desarrollo de software grande, debe definir sus necesidades de una
-manera suficientemente abstracta para que no se malentienda la solución. Los requisitos deben ser escritos de manera que varios
-contratistas puedan hacer una propuesta para el contrato, ofreciendo, tal vez, diferentes formas de satisfacer las necesidades de la
-organización del cliente. Una vez que el contrato ha sido adjudicado, el desarrollador debe escribir una definición del sistema para el cliente
-detalladamente para que el cliente entienda y pueda validar lo que el software hará. Ambos documentos pueden ser llamados el documento
-de requerimientos para el sistema ".
+"Si una compañía desea otorgar un contrato para un gran proyecto de desarrollo
+de software, tiene que definir sus necesidades de una forma suficientemente
+abstracta para que una solución no esté predefinida. Los requerimientos deben
+redactarse de tal forma que muchos proveedores liciten en pos del contrato, ofreciendo,
+tal vez, diferentes maneras de cubrir las necesidades de organización del
+cliente. Una vez otorgado el contrato, el proveedor tiene que escribir con más
+detalle una definición del sistema para el cliente, de modo que éste comprenda y
+valide lo que hará el software. Estos documentos suelen nombrarse documentos
+de requerimientos para el sistema."
 
 ---
 ### Qué es un requerimiento?
 <!-- .slide: style="font-size: 0.80em" -->
 Propiedad o restricción, determinada con precisión, que un producto software debe satisfacer
 
-* Como se expresa un requerimiento?
-La definicion de un requerimiento puede variar de una declaración abstracta de un servicio o de una
-restricción de sistema a una especificación funcional matemática detallada.
+¿Cómo se expresa un requerimiento?
+* La definicion de un requerimiento puede variar de una declaración abstracta de un servicio o de una restricción de sistema a una especificación funcional matemática detallada.
 
-Que Problemas hay?
+¿Qué Problemas hay?
 * Dificultad de comunicación entre el equipo de  desarrollo y el grupo de clientes/usuarios.
 * Cambio de los requerimientos.
-* Imposibilidad de identificar la totalidad de los requerimientos de un producto
+* Imposibilidad de identificar la totalidad de los requerimientos de un producto.
 
 ---
 ### La comunicación...
 ![La comunicación](images/unidad3/analisis-columpio-en-el-arbol.jpg)
 
 ---
-### Tipos de requerimientos
-* Requerimientos del usuario (Alto nivel)
-  * Declaraciones en lenguaje natural que define los servicios que  debe proporcionar el sistema y sus limitaciones. 
-Escrito para que los clientes entiendan.
-* Requerimientos del sistema (Detallado)
-  * Descripciones detalladas de las funciones del sistema, los servicios y las limitaciones operativas. Define todo lo 
-que debe ser implementado así que puede ser parte de un documento entre el cliente y el desarrollador.
+### Tipos de requerimientos (cómo formularlos)
+* Requerimientos del **USUARIO** (Alto nivel)
+  * Enunciados en lenguaje natural acerca de qué servicios esperan los usuarios del sistema, y de las restricciones con las cuales éste debe operar. 
+* Requerimientos del **SISTEMA** (Detallado)
+  * Descripciones detalladas de las funciones del sistema, los servicios y las limitaciones operativas.
 
 ---
-### Requerimientos de usuario y del sistema
+### Ejemplo de Requerimientos
 <!-- .slide: style="font-size: 0.70em" -->
-Requerimiento del usuario & Requerimientos del sistema:
-1. El software debe proveer un medio para representar y acceder a archivos externos creados por otras herramientas. 
-   1. Al usuario se le proveerá con los recursos para definir el tipo de archivos externos. 
-   2. Cada tipo de archivo externo tendrá una herramienta asociada que será aplicada al archivo.
-   3. Cada tipo de archivo externo se representará como un icono específico sobre la pantalla del usuario. 
-   4. Se proveerán recursos para que el usuario defina el icono que representa un tipo de archivo externo. 
-   5. Cuando un usuario selecciona un icono que representa un archivo externo, el efecto de esa selección es aplicar la
-      herramienta asociada con este tipo de archivo al archivo representado por el icono seleccionado.
+Requerimiento **del usuario**:
+1. El MHC-PMS elaborará mensualmente informes administrativos que revelen
+el costo de los medicamentos prescritos por cada clínica durante ese mes.
+
+Requerimientos **del sistema**:
+1. En el último día laboral de cada mes se redactará un resumen de los
+medicamentos prescritos, su costo y las clínicas que los prescriben.
+2. El sistema elaborará automáticamente el informe que se imprimirá
+después de las 17:30 del último día laboral del mes.
+3. Se realizará un reporte para cada clínica junto con los nombres
+de cada medicamento, el número de prescripciones, las dosis prescritas
+y el costo total de los medicamentos prescritos.
+4. El acceso a los informes de costos se restringirá a usuarios autorizados
+en la lista de control de acceso administrativo.
 
 ---
 ### Requerimientos funcionales y no funcionales
 <!-- .slide: style="font-size: 0.80em" -->
-* Requerimientos funcionales
-  * Enunciados acerca de los servicios del sistema que debe proporcionar, como el sistema debe reaccionar a entradas
-generales y cómo el sistema debe comportarse en situaciones
-particulares.
-  * Pueden explicar lo que el sistema no debe hacer.
-* Requerimientos no funcionales
-  * Limitaciones en los servicios o funciones que ofrece el sistema, como restricciones de tiempo, restricciones del proceso de
-desarrollo, normas, etc.
+* Requerimientos **FUNCIONALES**
+  * Son enunciados acerca de servicios que el sistema debe proveer, de cómo debería reaccionar a diferentes entradas y de cómo debería comportarse en situaciones específicas.
+  * Pueden explicar lo que el sistema NO debe hacer.
+* Requerimientos **NO FUNCIONALES**
+  * Limitaciones sobre los servicios o funciones que ofrece el sistema, como restricciones de tiempo, del proceso de desarrollo, normas, etc.
   * A menudo se aplica al sistema en su conjunto, en lugar de a las funciones o servicios individuales.
-* Requerimientos de dominio 
-  * Las restricciones en el sistema segun el dominio de operación
 
 ---
 ### Requerimientos funcionales
 * Describe los servicios de funcionalidad o servicios del  sistema.
 * Dependerá del tipo de software, los usuarios esperados y el tipo de entorno en el que se utiliza el software.
-* Requerimientos funcionales de los usuarios son  declaraciones de alto nivel de lo que el sistema debe hacer
-* Requerimientos funcionales de sistema deben describir los servicios del sistema en detalle.
+* Requerimientos funcionales **de los usuarios** son declaraciones de alto nivel de lo que el sistema debe hacer
+* Requerimientos funcionales **de sistema** deben describir los servicios del sistema en detalle.
 
 ---
 ### Requerimientos funcionales para el MHC-PMS
 * Un usuario debe ser capaz de buscar las listas de citas de todas las clínicas.
-* El sistema deberá generar cada día, por cada clínica, una lista de pacientes que se espera que asistan a las
-citas de ese día.
-* Cada miembro del personal que utiliza el sistema deberá ser identificado únicamente por su número de empleado 8
-dígitos.
+* El sistema deberá generar cada día, por cada clínica, una lista de pacientes que se espera que asistan a las citas de ese día.
+* Cada miembro del personal que utiliza el sistema deberá ser identificado únicamente por su número de empleado 8 dígitos.
 
 ---
 ### Imprecisión de requerimientos
@@ -143,22 +139,21 @@ dígitos.
 * Requisitos ambiguos pueden ser interpretados de diferentes maneras por los desarrolladores y usuarios.
 * Considere el término ‘buscar' en un requerimiento
   * Intención del usuario - búsqueda de un nombre de paciente a través de todas las citas en todas las clínicas
-  * Interpretación Desarrollador - buscar un nombre de paciente en una clínica individual. El usuario elige la clínica 
-luego se realiza la búsqueda.
+  * Interpretación Desarrollador - buscar un nombre de paciente en una clínica individual. El usuario elige la clínica luego se realiza la búsqueda.
 
 ---
-### La integridad y la coherencia de Requerimientos
-En principio, los requerimientos deben ser a la vez completos y coherentes.
+### integridad y la coherencia de Requerimientos
+Los requerimientos deben ser a la vez completos y coherentes.
 * **Completo:** Deben incluir una descripción de todos los servicios requeridos.
 * **Coherente:** No debe haber conflictos o contradicciones en las descripciones de los servicios del sistema.
 
-En la práctica, es dificil producir un documento de requisitos completo y consistente.
+En la práctica, es difícil producir un documento de requisitos completo y consistente.
 
 ---
 ### Requerimientos no funcionales
 <!-- .slide: style="font-size: 0.80em" -->
 Definen
-* Propiedades transversales a todo el sistema :
+* Propiedades transversales a todo el sistema:
   * Los requerimientos de fiabilidad 
   * Tiempo de respuesta. 
   * Necesidad almacenamiento.
@@ -176,30 +171,26 @@ Requisitos no funcionales pueden ser más críticos que los requerimientos funci
 * Requisitos no funcionales pueden afectar a la arquitectura general de un sistema en lugar de a los componentes individuales.
     * Por ejemplo, para garantizar que se cumplen los requerimientos de rendimiento, puede que tenga que organizar el sistema para
       minimizar las comunicaciones entre componentes.
-* Un requisito no funcional , como un requisito de seguridad, puede generar una serie de requerimientos
-  funcionales relacionados que definen los servicios del sistema que se requieren.
+* Un requisito no funcional, como un requisito de seguridad, puede generar una serie de requerimientos funcionales relacionados que definen los servicios del sistema que se requieren.
     * También puede generar requerimientos que restringen los requerimientos existentes.
   
 ---
 ### Clasificación de requerimientos no funcionales
 <!-- .slide: style="font-size: 0.90em" -->
-* **Requerimientos del producto**, que especifican como el producto debe comportarse, por ejemplo velocidad de
-ejecución, fiabilidad, etc.
-* **Requerimientos organizacionales**, que son consecuencia de las políticas y procedimientos de la organización, por 
-ejemplo, estándares de procesos utilizados, los requisitos de implementación, etc.
-* **Requerimientos externos**, que surgen de factores que son externos al sistema y su proceso de desarrollo, por 
-ejemplo, requisitos de interoperabilidad, los requisitos legislativos, etc.
+* **Requerimientos del producto**, especifican como el producto debe comportarse, por ejemplo velocidad de ejecución, fiabilidad, etc.
+* **Requerimientos organizacionales**, son consecuencia de las políticas y procedimientos de la organización, por ejemplo, estándares de procesos utilizados, los requisitos de implementación, etc.
+* **Requerimientos externos**, surgen de factores que son externos al sistema y su proceso de desarrollo, por ejemplo, requisitos de interoperabilidad, requisitos legislativos, etc.
 
 ---
 ### Tipos de requerimientos no funcionales
-![Requerimientos no funcionales](images/unidad3/requerimientos-no-funcionales.png)
+![Requerimientos no funcionales](images/unidad3/no_funcionales.png)
 
 ---
 ### Ejemplo de requerimientos no funcionales de MHC-PMS
 <!-- .slide: style="font-size: 0.90em" -->
 * **Requerimientos del producto**
 El MHC-PMS estará a disposición de todas las clínicas durante las horas normales de trabajo (lun-vie, 08:30 a 17:30). 
-El tiempo de inactividad dentro de las horas normales de trabajo no excederá de cinco segundos en cualquiera de un día.
+El tiempo de inactividad dentro de las horas normales de trabajo no excederá de cinco segundos.
 * **Requerimiento organizacional**
 Los usuarios del sistema MHC-PMS deberán autenticarse usando su tarjeta de identidad autoridad sanitaria.
 * **Requisito externo**
@@ -229,25 +220,12 @@ Los objetivos son útiles para los desarrolladores, ya que transmiten las intenc
 
 ---
 ### Requerimientos de usabilidad
-* El sistema debe ser fácil de usar por el personal médico y debe ser organizado de tal manera que los
-errores de los usuarios se reducen al mínimo. (Objetivo)
-* El personal médico debe ser capaz de utilizar todas las funciones del sistema después de cuatro horas de
-entrenamiento. Después de este entrenamiento, el número medio de errores cometidos por los usuarios
-experimentados no excederá de dos por cada hora de uso del sistema. (Requerimiento no funcional verificable)
+* El sistema debe ser fácil de usar por el personal médico y debe ser organizado de tal manera que los errores de los usuarios se reducen al mínimo. (Objetivo)
+* El personal médico debe ser capaz de utilizar todas las funciones del sistema después de cuatro horas de entrenamiento. Después de este entrenamiento, el número medio de errores cometidos por los usuarios experimentados no excederá de dos por cada hora de uso del sistema. (Requerimiento no funcional verificable)
 
 ---
 ### Métricas para la especificación de requisitos no funcionales
-<!-- .slide: style="font-size: 0.60em" -->
-<!--
-| Propiedad        | Medida                                                                                                                                        |
-|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Velocidad        | Transacciones procesadas por segundo <br> Tiempo de respuesta al usuario y a eventos <br> Tiempo de actualización de la pantalla              | 
-| Tamaño           | M Bytes <br> Número de chips de ROM                                                                                                           |
-| Facilidad de uso | Tiempo de formación <br> Número de marcos de ayuda                                                                                            |
-| Confiabilidad    | Tiempo medio entre fallos <br> Probabilidad de no disponibilidad <br> Tasa de ocurrencia de dallos <br> Disponibilidad                        |
-| Robustez         | Tiempo de reinicio después de fallo <br> Porcentaje de eventos que causan fallos <br> Probabilidad de corrupción de datos después de un fallo |
-| Portabilidad     | Porcentaje de declaraciones dependientes de objetivo                                                                                          |
--->
+
 <table>
 <thead>
 <tr>
@@ -270,7 +248,7 @@ experimentados no excederá de dos por cada hora de uso del sistema. (Requerimie
 </tr>
 <tr>
 <td>Confiabilidad</td>
-<td>Tiempo medio entre fallos <br> Probabilidad de no disponibilidad <br> Tasa de ocurrencia de dallos <br> Disponibilidad</td>
+<td>Tiempo medio entre fallos <br> Probabilidad de no disponibilidad <br> Tasa de ocurrencia de fallos <br> Disponibilidad</td>
 </tr>
 <tr>
 <td>Robustez</td>
@@ -284,30 +262,109 @@ experimentados no excederá de dos por cada hora de uso del sistema. (Requerimie
 </table>
 
 ---
+### Requerimientos no funcionales
+Siempre que sea posible, los requerimientos No Funcionales se deberán escribir de manera cuantitativa empleando métricas.
+Para algunas metas, como la mantenibilidad, no hay métricas para usarse.
+
+---
+### Requerimientos de dominio 
+* Restricciones en el sistema según el dominio de operación.
+* Se relacionan con el contexto específico en el que se utilizará el software. Pueden incluir leyes, reglamentos o estándares de la industria que la aplicación debe seguir.
+Ej. El software de contabilidad debe cumplir con las normas fiscales y financieras aplicables.
+
+---
 ### Requerimientos del dominio
 * Dominio operacional del sistema impone requerimientos.
-  * Por ejemplo, un sistema de control de trenes tiene que tener en cuenta las características de frenado en diferentes
-condiciones climáticas.
-* Requerimientos de dominio generan nuevos requisitos funcionales, limitaciones sobre los requisitos existentes o definir
-cálculos específicos.
+  * Por ejemplo, un sistema de control de trenes tiene que tener en cuenta las características de frenado en diferentes condiciones climáticas.
+* Requerimientos de dominio generan nuevos requisitos funcionales, limitaciones sobre los requisitos existentes o definir cálculos específicos.
 * Si los requerimientos de dominio no están satisfechos, el sistema puede ser inutilizable.
 
 ---
 ### Problemas de los requerimientos de dominio
 * Comprensibilidad
   * Los requerimientos se expresan en el lenguaje del dominio de aplicación
-  * A menudo, esto no es entendido por los ingenieros de software de desarrollo del sistema.
+  * A menudo, esto no es entendido por los programadores que desarrollan el sistema.
 * Implícito 
-  * Especialistas del dominio entienden la zona tan bien, que no piensan en hacer de las exigencias de dominio explícito.
+  * Especialistas del dominio entienden del problema tan bien, que no piensan que sea necesario expresar el requerimiento de manera explícita.
+
+---
+
+### Ejercicio
+
+Clasificar los siguientes requerimientos en Funcionales y No Funcionales, con sus correspondientes Sub-Clasificaciones.
+Justificar las decisiones tomadas.
+
+1. El sistema debe ser capaz de procesar N transacciones por segundo.
+2. El sistema enviará un correo electrónico cuando se registre alguna de las siguientes transacciones: pedido de venta de cliente, despacho de mercancía al cliente, emisión de factura a cliente y registro de pago de cliente.
+
+----
+
+### Ejercicio
+
+3. Toda funcionalidad debe responder al usuario en menos de 3 segundos.
+4. El sistema permitirá aprobar, cambiar o actualizar planes y cronogramas de proyecto.
+5. El sistema permitirá el envío automatizado de cartas de entrega de órdenes directamente al almacén.
+6. A cada orden se le debe asignar un identificador único, que será utilizado para identificarla en todos los procesos subsecuentes que se realicen sobre esta.
+
+----
+
+### Ejercicio
+7. El sistema de Historia Clínica Electrónica debe cumplir con la legislación vigente relativa a la protección de datos médicos.
+8. El sistema debe cumplir con la accesibilidad para personas con discapacidad.
+9. Todas las comunicaciones entre servidores, aplicaciones y clientes del sistema deben ser encriptadas utilizando el algoritmo RSA.
+10. La tasa de errores cometidos por el usuario deberá ser menor al 5% de las transacciones totales ejecutadas por el sistema.
+
+----
+
+### Ejercicio
+11. El software debe poder emitir los siguientes estados financieros: Balance general, Estado de ganancias y pérdidas, Estado de flujos de efectivo. Además, debe poder emitir un listado de mayor general y mayor analítico.
+12. El sistema debe poder operar de forma adecuada con 10.000 usuarios en sesiones concurrentes.
+13. Se debe permitir el registro de pedidos de compra con datos obligatorios incompletos, los cuales podrán completarse posteriormente modificando el pedido. Antes de poder aprobarse los datos del pedido deben estar completos.
+
+----
+
+### Ejercicio
+14. La aplicación web debe poseer un diseño “Responsive” para garantizar la adecuada visualización en todos los dispositivos (PC, Tablet, Smartphone).
+15. El sistema debe tener una disponibilidad del 99,99% de las veces en que un usuario intente acceder.
+16. El Motor de Base de Datos será Oracle 11g.
+17. Es necesario contar con una replicación constante de los datos en un servidor distinto al que usa (idealmente en un edificio distinto).
+
+----
+
+### Ejercicio
+18. El uso del sistema debe ser intuitivo. El tiempo de aprendizaje para el uso del sistema de un usuario promedio debe ser menor a 30 minutos.
+19. El sistema debe proporcionar mensajes por cada transacción realizada (error, éxito, descargando…). Los mensajes deben ser informativos y orientados al usuario final.
+20. El sistema debe contar con manuales de usuario estructurados adecuadamente.
+21. El sistema debe registrar la información de los usuarios y los créditos que poseen.
+
+----
+
+### Ejercicio
+22. El sistema debe contar con un sistema de soporte en línea.
+23. El sistema debe cumplir las disposiciones de la Ley Orgánica de Datos Personales.
+24. El tiempo para iniciar o reiniciar el sistema no podrá ser mayor a 2 horas, avisando previamente de esta maniobra.
+25. El promedio de duración de fallas no podrá ser mayor a 15 minutos.
+26. La probabilidad de falla no podrá ser mayor a 0,05.
+
+----
+
+### Ejercicio
+27. El sistema debe permitir que los usuarios registrados compren créditos y proporcionar las herramientas para que los mismos paguen.
+28. La interfaz debe estar optimizada para el funcionamiento en Chrome, Safari y Firefox.
+29. Los pedidos de compra que excedan los montos establecidos en el flujo de liberaciones de pedidos configurados, deberán pasar por las aprobaciones establecidas en dicho flujo de aprobación.
+30. El Backend debe ser desarrollado en Java.
 
 ---
 ### Documento de requerimientos de software
-* El documento de requisitos de software es la declaración oficial de lo que se requiere de los
-desarrolladores del sistema.
+* También llamado **SRS** o "Software Requirements Specification".
+* Debe establecer lo QUE el sistema DEBE hacer y NO COMO es que debe hacerlo.
+
+---
+### Documento de requerimientos de software
+* Define todo lo que debe ser implementado. Por ello suele formar parte del contrato entre el cliente y el desarrollador.
+* El documento de requisitos de software es la declaración oficial de lo que se requiere de los desarrolladores del sistema.
 * Debe incluir tanto una definición de los requisitos del usuario y una especificación de los requisitos del sistema.
 * NO es un documento de diseño.
-
-Debe establecer de lo QUE el sistema DEBE hacer y NO COMO es que debe hacerlo.
 
 ---
 ### Métodos agiles y requerimientos
@@ -319,29 +376,21 @@ los requisitos cambian tan rápidamente.
 análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desarrollados por varios equipos.
 
 ---
+### Historia de Usuario
+![Historia de Usuario](images/unidad3/historia.png)
+
+---
 ### Los usuarios de un documento de requerimientos
 ![Documento de requerimientos](images/unidad3/roles.jpg)
 
 ---
-### Documento de Requerimientos
-* La información contenida en el documento de requerimientos depende del tipo de sistema y el enfoque
-de desarrollo utilizado.
+### [Documento de Requerimientos](https://dspmuranchi.ac.in/pdf/Blog/srs_template-ieee.pdf)
+* La información contenida en el documento de requerimientos depende del tipo de sistema y el enfoque de desarrollo utilizado.
 * Los sistemas desarrollados por incrementos, por lo general, tienen menos detalle en el documento de requerimientos.
-* Las Normas para documentos de requerimientos estan especificadas por el estándar IEEE. En su mayoría son
-aplicables a los requisitos para los grandes proyectos de ingeniería de sistemas.
+* Las Normas para documentos de requerimientos estan especificadas por el estándar IEEE. En su mayoría son aplicables a los requisitos para los grandes proyectos de ingeniería de sistemas.
 
 ---
 ### La estructura de un documento de requerimientos
-<!-- .slide: style="font-size: 0.50em" -->
-<!--
-| Capitulo                                | Descripción                                                                                                                                                                                                                                                                                                                                                     |
-|-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Prefacio                                | Esto debe definir el número de lectores se espera del documento y describir su historial de versiones, incluyendo una justificación para la creación de una nueva versión y un resumen de los cambios realizados en cada versión.                                                                                                                               |
-| Introducción                            | Esto debería describir la necesidad de que el sistema. Debe describir brevemente las funciones del sistema y explicar cómo va a funcionar con otros sistemas. También debe describir cómo el sistema se ajusta a los objetivos generales de la empresa o estratégicos de la organización puesta en marcha del software.                                         |
-| Glosario                                | Esto debería definir los términos técnicos utilizados en el documento. No debería hacer suposiciones acerca de la experiencia o los conocimientos del lector.                                                                                                                                                                                                   | 
-| Definición de requerimientos de usuario | Aquí, usted describe los servicios proporcionados por el usuario. Los requisitos del sistema no funcionales también deben ser descritos en esta sección. Esta descripción puede usar el lenguaje natural, diagramas u otras anotaciones que sean comprensibles para los clientes. Las normas de productos y de procesos que deben seguirse deben especificarse. |
-| Arquitectura del sistema                | Este capítulo debe presentar una descripción de alto nivel de la arquitectura del sistema previsto, que muestra la distribución de funciones a través de los módulos del sistema. Los componentes arquitectónicos que se reutilizan deben destacarse.                                                                                                           |
--->
 <table>
 <thead>
 <tr>
@@ -364,7 +413,7 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
 </tr>
 <tr>
 <td>Definición de requerimientos de usuario</td>
-<td>Aquí, usted describe los servicios proporcionados por el usuario. Los requisitos del sistema no funcionales también deben ser descritos en esta sección. Esta descripción puede usar el lenguaje natural, diagramas u otras anotaciones que sean comprensibles para los clientes. Las normas de productos y de procesos que deben seguirse deben especificarse.</td>
+<td>Se describe los servicios proporcionados por el usuario. Los requisitos del sistema no funcionales también deben ser descritos en esta sección. Esta descripción puede usar el lenguaje natural, diagramas u otras anotaciones que sean comprensibles para los clientes. Las normas de productos y de procesos que deben seguirse deben especificarse.</td>
 </tr>
 <tr>
 <td>Arquitectura del sistema</td>
@@ -376,16 +425,6 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
 ----
 
 ### La estructura de un documento de requerimientos
-<!-- .slide: style="font-size: 0.50em" -->
-<!--
-| Capitulo                                     | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                           |
-|----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Especificación de requerimientos del sistema | Esto debería describir los requisitos funcionales y no funcionales en más detalle. Si es necesario, mayor detalle puede añadirse a los requerimientos no funcionales. Interfaces para otros sistemas pueden ser definidos.                                                                                                                                                                                                            |
-| Modelos del sistema                          | Esto podría incluir modelos gráficos del sistema que muestran las relaciones entre los componentes del sistema y el sistema y su entorno. Ejemplos de posibles modelos son modelos de objetos, modelos de flujo de datos, o los modelos de datos semánticos.                                                                                                                                                                          |
-| Sistema de evaluación                        | Este debe describir los supuestos fundamentales en que se basa el sistema, y cualquier cambio previsto debido a la evolución del hardware, cambios en las necesidades de los usuarios, y así sucesivamente. Esta sección es útil para los diseñadores de sistemas, ya que puede ayudar a evitar las decisiones de diseño que limitarían los probables cambios futuros en el sistema.                                                  |
-| Apéndices                                    | Estos deben proporcionar información detallada y la información específica que se relaciona con la aplicación en desarrollo; por ejemplo, el hardware y las descripciones de bases de datos. Requerimientos de hardware definen las configuraciones de mínimos y óptimos para el sistema. Los requerimientos de base de datos definen la organización lógica de los datos utilizados por el sistema y las relaciones entre los datos. |
-| Índice                                       | Se pueden incluir varios índice. Así como un índice alfabético normal, puede haber un índice de diagramas, un índice de funciones, y así sucesivamente. |
--->
 <table>
 <thead>
 <tr>
@@ -428,17 +467,7 @@ aplicables a los requisitos para los grandes proyectos de ingeniería de sistema
   * Por lo tanto, es importante que estos sean tan completos como sea posible.
 
 ---
-### La estructura de un documento de requerimientos
-<!-- .slide: style="font-size: 0.50em" -->
-<!--
-| Notación                           | Descripción                                                                                                                                                                                                                                                                                                                                                                                       |
-|------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Lenguaje natural                   | Los requerimientos están escritos con oraciones numeradas en lenguaje natural. Cada oración debe expresar un requerimiento.                                                                                                                                                                                                                                                                       |
-| Lenguaje natural Estructurado      | Los requerimientos están escritos en lenguaje natural en un formulario o plantilla estándar. Cada campo proporciona información acerca de un aspecto del requerimiento.                                                                                                                                                                                                                           |
-| Lenguajes de descripción de Diseño | Este enfoque utiliza un lenguaje como un lenguaje de programación, pero con características más abstractas para especificar los requisitos mediante la definición de un modelo operacional del sistema. Este enfoque se utiliza raramente aunque puede ser útil para las especificaciones de interfaz.                                                                                            |
-| Notaciones graficas                | Modelos gráficos, complementada con anotaciones de texto, se utilizan para definir los requisitos funcionales para el sistema; UML de casos de uso y diagramas de secuencia se utilizan comúnmente.                                                                                                                                                                                               |
-| Especificaciones matemáticas       | Estas anotaciones se basan en conceptos matemáticos, tales como máquinas de estados finitos o conjuntos. Aunque estas especificaciones no ambiguas pueden reducir la ambigüedad en un documento de requisitos, la mayoría de los clientes no entienden una especificación formal. Ellos no pueden controlar que representa lo que quieren y se resisten a aceptarlo como un contrato del sistema. |
--->
+### Especificación de requerimientos
 <table>
 <thead>
 <tr>
@@ -477,7 +506,7 @@ En principio, los requerimientos deberán establecer lo que el sistema debe hace
 diseño debe describir cómo se hace esto.
 
 * En práctica, los requerimientos y el diseño están unidos 
-* Una arquitectura de sistema puede ser diseñada para respetarlos requisitos
+* Una arquitectura de sistema puede ser diseñada para respetar los requisitos
 * El sistema puede interoperar con otros sistemas que generan requisitos de diseño
 * Puede ser necesario el uso de una arquitectura específica para satisfacer los requisitos no funcionales o esta puede ser
 la consecuencia de un requisito reglamentario.
@@ -589,7 +618,7 @@ calculo para los diferentes escenarios.
 </tr>
 <tr>
 <td style="text-align:left">Nivel de azúcar incrementando y la frecuencia aumentando o estable ((r2 – r1) ≥ (r1 – r0))</td>
-<td style="text-align:left">CompDosis = cerca ((r2 – r1)/4) If cerca result = 0 then CompDosis = MinimoDosis</td>
+<td style="text-align:left">CompDosis = round((r2 – r1)/4) Si resultado redondeado = 0 Entonces CompDosis = MinimoDosis</td>
 </tr>
 </tbody>
 </table>
@@ -620,6 +649,12 @@ operativas del sistema.
 ingenieros involucrados en el mantenimiento, los
 expertos de dominio, los sindicatos, etc. Estos se llaman
 las partes interesadas.
+
+----
+
+### Obtención y análisis de requerimientos
+
+![Obtención y análisis de requerimientos](images/unidad3/adquisicion-analsis-requerimientos.png)
 
 ---
 ### Problemas con el análisis de requerimientos
@@ -806,7 +841,7 @@ de eventos en el sistema.
 
 ---
 ### Casos de uso para MHC-PMS
-![Diagrama de casos de uso](images/unidad3/diagrama-casos-de-uso.jpg)
+![Diagrama de casos de uso](images/unidad3/diagrama-casos-de-uso.png)
 
 ---
 ### Etnografía
@@ -833,7 +868,7 @@ adquisición de requerimientos.
 
 ---
 ### Etnografía y prototipos para el análisis de los requerimientos
-![Etnografia](images/unidad3/etnografia.jpg)
+![Etnografia](images/unidad3/etnografia.png)
 
 ---
 ### Validación de requerimientos
@@ -928,7 +963,7 @@ tiene que ser cambiado.
 
 ---
 ### Evolución de los requerimientos
-![Evolución de requerimientos](images/unidad3/evolucion-de-requerimientos.jpg)
+![Evolución de requerimientos](images/unidad3/evolucion-de-requerimientos.png)
 
 ---
 ### Planificación de la gestión de requerimientos
@@ -967,7 +1002,7 @@ que el documento debe ser organizado de tal manera que los cambios se pueden imp
 
 ### Gestión de cambio de los requerimientos
 
-![Gestión de Cambios](images/unidad3/gestion-de-cambios.jpg)
+![Gestión de Cambios](images/unidad3/gestion-de-cambios.png)
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
