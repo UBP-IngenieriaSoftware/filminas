@@ -587,15 +587,7 @@ calculo para los diferentes escenarios.
 
 ---
 ### Especificación tabular del cálculo de la dosis de insulina
-<!-- .slide: style="font-size: 0.60em" -->
-<!--
-| Condición | Acción |
-|:----------|:-------|
-| Nivel de azúcar cayendo(r2 < r1) | CompDosis = 0 |
-| Nivel de azúcar estable (r2 = r1) | CompDosis = 0 |
-| Nivel de azúcar aumentado y la frecuencia bajando ((r2 – r1) < (r1 – r0)) | CompDosis = 0 |
-| Nivel de azúcar incrementando y la frecuencia aumentando o estable ((r2 – r1) ≥ (r1 – r0)) | CompDosis = cerca ((r2 – r1)/4) If cerca result = 0 then CompDosis = MinimoDosis |
--->
+
 <table>
 <thead>
 <tr>
@@ -605,7 +597,7 @@ calculo para los diferentes escenarios.
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">Nivel de azúcar cayendo(r2 &lt; r1)</td>
+<td style="text-align:left">Nivel de azúcar en descenso(r2 &lt; r1)</td>
 <td style="text-align:left">CompDosis = 0</td>
 </tr>
 <tr>
@@ -613,11 +605,11 @@ calculo para los diferentes escenarios.
 <td style="text-align:left">CompDosis = 0</td>
 </tr>
 <tr>
-<td style="text-align:left">Nivel de azúcar aumentado y la frecuencia bajando ((r2 – r1) &lt; (r1 – r0))</td>
+<td style="text-align:left">Nivel de azúcar creciente y tasa de incremento decreciente ((r2 – r1) &lt; (r1 – r0))</td>
 <td style="text-align:left">CompDosis = 0</td>
 </tr>
 <tr>
-<td style="text-align:left">Nivel de azúcar incrementando y la frecuencia aumentando o estable ((r2 – r1) ≥ (r1 – r0))</td>
+<td style="text-align:left">Nivel de azúcar creciente y tasa de incremento estable o creciente ((r2 – r1) ≥ (r1 – r0))</td>
 <td style="text-align:left">CompDosis = round((r2 – r1)/4) Si resultado redondeado = 0 Entonces CompDosis = MinimoDosis</td>
 </tr>
 </tbody>
@@ -679,8 +671,8 @@ limitaciones de hardware, otros sistemas, etc.
   * Especificación de requerimientos.
 
 ---
-### Proceso de obtención y análisis de requerimientos
-![Analisis Requerimiento Espiral](images/unidad3/analisis-requerimientos-espiral.jpg)
+
+![Analisis Requerimiento Espiral](images/unidad3/analisis-requerimientos-espiral.png)
 
 ---
 ### Actividades del proceso
@@ -725,7 +717,8 @@ médicos y administran algunos tratamientos.
 pacientes.
 * El personal de TI que son responsables de la instalación y mantenimiento del sistema.
 
----
+----
+
 ### Partes interesadas en el sistema para MHC-PMS
 * Un gerente de la ética médica que debe asegurar que el
 sistema cumple con las normas éticas vigentes para la
@@ -749,7 +742,7 @@ parte de la mayoría de los procesos de la IR.
 ---
 ### Entrevistas efectivas
 * Tener la mente abierta, evitar las ideas preconcebidas
-acerca de los requerimientos y estár dispuestos a
+acerca de los requerimientos y estar dispuestos a
 escuchar a las partes interesadas.
 * Preguntar al entrevistado y obtener discusiones usando
 una pregunta clave, una propuesta de requerimientos, o
@@ -781,12 +774,12 @@ Los escenarios son ejemplos reales de cómo se puede utilizar un sistema.
 ---
 ### Escenario para la recolección de información medica del sistema para MHC-PMS
 <!-- .slide: style="font-size: 0.70em" -->
-**Suposición inicial:** El paciente fue atendido por una recepcionista
+**SUPOSICIÓN INICIAL:** El paciente fue atendido por una recepcionista
 médica que ha creado un registro en el sistema y se recoge información
 personal del paciente (nombre, dirección, edad, etc.) Una enfermera ha
 iniciado sesión en el sistema y está recopilando antecedentes clínicos.
 
-**Normal:** La enfermera busca al paciente por su apellido Si hay más de un
+**NORMAL:** La enfermera busca al paciente por su apellido Si hay más de un
 paciente con el mismo apellido, el nombre y la fecha de nacimiento se
 utilizaran para identificar al paciente.
 La enfermera ingresa en la opción de menú para añadir antecedentes
@@ -799,15 +792,16 @@ condiciones en el menú), medicamentos que se toman actualmente
 (seleccionado en el menú), alergias (libre texto), y la vida familiar
 (formulario).
 
----
+----
+
 ### Escenario para la recolección de información medica del sistema para MHC-PMS
 <!-- .slide: style="font-size: 0.60em" -->
 
-**Qué puede salir mal:**
-* **El historial del paciente no existe o no se puede encontrar:** La
+**QUÉ PUEDE SALIR MAL:**
+* El historial del paciente no existe o no se puede encontrar: La
 enfermera debe crear un nuevo registro con la información personal.
-* **Las Condiciones del paciente o la medicación no existen entre las
-opciones predefinidas:** La enfermera debe elegir la opción de "otro" y
+* Las Condiciones del paciente o la medicación no existen entre las
+opciones predefinidas: La enfermera debe elegir la opción de "otro" y
 escriba el texto libre que describe la condición / medicación.
 Paciente no puede / no quiere proporcionar información sobre su
 historial médico: La enfermera debe introducir texto libre indicando la
@@ -815,9 +809,13 @@ incapacidad / falta de voluntad del paciente para proporcionar
 información. El sistema debe imprimir un formulario indicando que la
 falta de información puede significar que el tratamiento no sea efectivo.
 Esto debe ser firmado y entregado al paciente.
-* **Otras actividades:** Registro podrá ser consultado , pero no editado por
+
+**OTRAS ACTIVIDADES:**
+* Registro podrá ser consultado , pero no editado por
 el resto del personal mientras se introduce información.
-* **El estado del sistema al terminar:** El registro del paciente se agrega
+
+**ESTADO DEL SISTEMA A COMPLETAR:**
+* El registro del paciente se agrega
 en la base de datos de historia clínica. Se agrega un registro en el
 registro del sistema que muestra el inicio y fin de la sesión y la
 enfermera involucrada.
@@ -886,7 +884,7 @@ arreglar un error de ejecución.
 * **Validez:** ¿El sistema provee las funciones que mejor ayudan a las necesidades del cliente?
 * **Consistencia:** ¿Existen conflictos de los requerimientos?
 * **Integridad:** ¿Están todas las funciones requeridas por el cliente incluidas?
-* **Realismo:** Pueden implementarse los requerimientos dado el presupuesto y la tecnología disponible?
+* **Realismo:** ¿Pueden implementarse los requerimientos dado el presupuesto y la tecnología disponible?
 * **Verificabilidad:** ¿Se pueden comprobar los requisitos?
 
 ---
@@ -973,8 +971,7 @@ tiene que ser cambiado.
   * **La identificación de requerimientos:** Cada requerimiento debe ser
 identificada de modo que pueda ser una referencia cruzada con otros requerimientos.
   * **Proceso de gestión de cambios:** Este es el conjunto de actividades
-que evalúan el impacto y el costo de los cambios. Se verá este
-proceso con más detalle en la siguiente sección.
+que evalúan el impacto y el costo de los cambios.
   * **Políticas de trazabilidad:** Estas políticas definen las relaciones entre
 cada requisito y entre los requerimientos y el diseño del sistema que se
 debe registrar.
