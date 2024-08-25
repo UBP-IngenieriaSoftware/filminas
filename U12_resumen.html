@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
     <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
-
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="^---" data-separator-vertical="^\r?\n----\r?\n$">
+          <textarea data-template>
+            
 
 # Ingeniería de Software
 
@@ -25,7 +27,7 @@
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 <!-- .slide: style="font-size: 0.60em" -->
 <style>
@@ -62,19 +64,19 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 </div>
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### Proceso de Desarrollo
 
 ![Proceso Ágil](images/resumen/proceso.webp)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### JIRA
 
 ![Tickets](images/resumen/tickets.png)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### ÉPICAS
 
@@ -83,7 +85,7 @@ una extensa historia de usuario, que necesuta ser dividida en tareas más peque�
 cuales pueden ser entregadas en distintas iteraciones.
 Habitualmente agrupa diversas historias de usuario.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### ÉPICAS
 
@@ -91,11 +93,11 @@ Para algunos autores...Una épica nace de una necesidad de usuario muy grande, y
 abstracta al principio. Las historias de usuario «nacerán» de esta épica. No es que las historias
 se agrupen y se «asocien» en una épica. Es la épica la que genera historias.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ![Épica](images/resumen/epica.png)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### Diseño
 
@@ -104,14 +106,14 @@ desarrolladores, el área QA y todos los interesados logren comprender la funcio
 
 Link a prototipo: [Figma: Claro Tienda](https://www.figma.com/proto/h5wKQ7FzejsrPIlw9MTKEx/Tienda-Claro---Desktop-%2B-Mobile?page-id=57%3A2&node-id=195-4644)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### HISTORIA
 
 Son breves requisitos o solicitudes escritas desde el punto de vista del usuario final.
 Su propósito es articular cómo proporcionará una función de software valor al cliente.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### HISTORIA
 
@@ -120,7 +122,7 @@ Ponen a los usuarios finales reales en el centro de la 'conversación', lo que i
 y la creatividad y mejora el producto en general.
 Las historias utilizan un lenguaje no técnico para ofrecer contexto al equipo de desarrollo.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### HISTORIA
 
@@ -129,25 +131,25 @@ En el scrum, las historias de los usuarios se añaden a los sprints y se van rea
 Las historias de usuario ayudan a los equipos de scrum a mejorar en la estimación y planificación de sprints,
 lo que conduce a un pronóstico más preciso y a una mayor agilidad.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### HISTORIA
 
 ![Historia](images/resumen/historia.png)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### HISTORIA 1
 
 ![Historia](images/resumen/figma_design_1.JPG)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### HISTORIA 1
 
 ![Historia](images/resumen/figma_design_2.JPG)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### HISTORIA
 
@@ -160,7 +162,7 @@ Al escribir la historia de usuario se debe tener en cuenta:
 - Escucha el feedback
 - Tiempo
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### HISTORIA
 
@@ -169,7 +171,7 @@ Al escribir la historia de usuario se debe tener en cuenta:
 - **Describe tareas o subtareas:** decide qué pasos específicos deben completarse y quién es responsable de cada uno de ellos.
 - **Perfiles de usuario:** ¿para quién? Si hay varios usuarios finales, considera crear varias historias.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### HISTORIA
 
@@ -177,7 +179,7 @@ Al escribir la historia de usuario se debe tener en cuenta:
 - **Escucha el feedback:** habla con los usuarios/clientes y capta sus problemas o necesidades en lo que dicen.
 - **Tiempo:** Dado que las historias deberían completarse en un sprint, aquellas que puedan necesitar semanas o meses deberían dividirse en historias más pequeñas o considerarse un epica independiente.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### HISTORIA
 
@@ -185,83 +187,88 @@ Las historias de usuario suelen expresarse con una frase simple con la siguiente
 
 “Como [perfil], [quiero] [para].”
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### MEJORA
 
 Es un tipo de incidencia/ticket que sirve para registrar nuevas características que se desean implementar en el proyecto.
 Suelen estar relacionadas con la adición de nuevas funcionalidades, la optimización de características existentes o la resolución de problemas que no son críticos pero que mejorarían la calidad o la experiencia del producto.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### MEJORA
 
 Estos tickets se utilizan para documentar solicitudes de cambios que no son correcciones de errores críticos, sino que representan mejoras planificadas o cambios que se desean realizar en el software. Pueden incluir detalles sobre los objetivos de la mejora, los requisitos específicos, la prioridad, la asignación a un miembro del equipo y otros metadatos relevantes.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### MEJORA
 
 Distinguir entre diferentes tipos de tareas permitir una gestión más efectiva de los proyectos, ya que permite priorizar y llevar un registro de las mejoras propuestas en el software, lo que facilita la planificación y la toma de decisiones en el desarrollo del proyecto.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### MEJORA
 
 ![Mejora](images/resumen/mejora.png)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### MEJORA
 
 ![Mejora](images/resumen/figma_design_3.png)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### MEJORA
 
 ![Mejora](images/resumen/figma_design_4.png)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### TEST CASE
 
 ![Test Case](images/resumen/test_case.png)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### Defecto
 
 Es un tipo de incidencia que se utiliza para hacer un seguimiento de problemas o errores en un proyecto.
 Los defectos representan problemas que deben corregirse en el software debido a comportamientos inesperados o incorrectos que afectan su funcionamiento normal.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### Defecto
 
 Cuando se identifica un defecto en un software, se crea un ticket de defecto en Jira para documentar el problema. Este ticket suele incluir información detallada sobre el defecto, como una descripción del problema, pasos para reproducirlo, el entorno en el que se produce, su gravedad, la prioridad de corrección y otros detalles relevantes. Además, el ticket de defecto puede asignarse a un miembro del equipo de desarrollo responsable de solucionar el problema.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### Defecto
 
 La gestión de defectos en Jira es fundamental para mantener la calidad del software y garantizar que los problemas se identifiquen, registren y corrijan de manera efectiva. Los equipos de desarrollo utilizan Jira para realizar un seguimiento de los defectos a lo largo del ciclo de vida del proyecto, desde su detección hasta su corrección y posterior verificación.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### Defecto
 
 ![Defecto](images/resumen/defecto.png)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ## ¿Dudas, Preguntas, Comentarios?
 
 ![DUDAS](images/pregunta.gif)
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -290,6 +297,9 @@ La gestión de defectos en Jira es fundamental para mantener la calidad del soft
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
         slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -302,12 +312,26 @@ La gestión de defectos en Jira es fundamental para mantener la calidad del soft
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true,"_":["slides"],"static":"public"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

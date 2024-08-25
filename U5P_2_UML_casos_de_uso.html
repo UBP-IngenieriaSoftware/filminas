@@ -1,37 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Casos de Uso</title>
-    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="^---" data-separator-vertical="^\r?\n----\r?\n$">
+          <textarea data-template>
+            
 
 # Ingeniería de Software
 ## UML: Casos de Uso
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Diagramas de Caso de Uso
 Ayudan a determinar la funcionalidad y características del software desde la perspectiva del usuario.
 
 Un caso de uso describe la manera en la que un usuario interactúa con el sistema, definiendo
 los pasos requeridos para lograr una meta específica.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ![Diagrama de Caso de Uso](images/unidad4/casoUsoMusica.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Diagramas de Caso de Uso
 El diagrama se compone:
 * **Actores**: Persona que interactúa con el sistema (puede tener diversos roles).
@@ -39,27 +43,27 @@ El diagrama se compone:
 * **Limites**: Rectángulo que engloba a los casos de uso.
 * Relaciones entre casos de uso
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### CU: Límites
 Límites del sistema a construir.
 El sujero o límite se define:
 * Quién o qué utilizará el sistema
 * Que beneficios ofrece el sistema
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### CU: Actores
 * Rol que cierta entidad externa adopta para interactuar con el sistema.
 * Puede ser: Rol de usuario, otro sistema, un hardware e incluso el tiempo.
 * El actor es siempre EXTERNO al sistema.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### CU: Caso de Uso
 * Interacción entre el Sistema (o subsistema) y un actor externo
 * Una especificación de secuencias de acciones
 * Incluye variantes y secuencias de error
 * Son iniciados siempre por un actor
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Modelado avanzado de Caso de uso
 Tiene en cuenta:
 * Generalización del actor
@@ -67,13 +71,13 @@ Tiene en cuenta:
 * Relación _include_
 * Relación _extend_
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### CU Avanzado: Generalización del actor
 Se empleacuando existen muchas similitudes entre actores.
 
 ![Generalizacion](images/unidad4/generalizacionActor.png)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### CU Avanzado: Generalización del CU
 * Se emplea cuando uno o mas casos de uso son realmente especificaciones o un caso de uso mas general.
 * Hijos son más específicos que el padre
@@ -82,32 +86,32 @@ Se empleacuando existen muchas similitudes entre actores.
   * Anulan y/o cambian características
 * Se deben emplear etiquetas (libre)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### CU Avanzado: Include
 * Evita repetir especificaciones innecesariamente
 * Incluye el comportamiento de un caso de uso en el flujo de otro caso de uso.
 
 ![Include](images/unidad4/CUinclusion.png)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### CU Avanzado: Extend
 * Inserta un nuevo comportamiento en un caso de uso existente
 * El punto de extensión no forma parte del flujo principal
 
 ![Include](images/unidad4/extension.png)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Consejos
 * No abusar de las características avanzadas
 * Mantener los casos de uso breves y sencillos (1 hoja)
 * Centrarse en el qué y no en el cómo
 * Evitar la descomposición funcional (descomponer como si fueran casos de uso de alto nivel y primitivos)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Ejercicios:
 Diseña los diagramas de **Casos de Uso** de los ejercicios de la guía de trabajos prácticos.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Detalle de CU
 <!-- .slide: style="font-size: 0.60em" -->
 
@@ -201,22 +205,27 @@ una planilla como la siguiente:
 </tbody>
 </table>
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Detalle de CU
 ![Planilla CU](images/unidad4/planillaCU.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Ejercicios:
 Empleando la tabla de la diapositiva anterior como template, refina los **Casos de Uso** de los ejercicios de la guía de 
 trabajos prácticos previamente diseñados.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -244,6 +253,10 @@ trabajos prácticos previamente diseñados.
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -256,12 +269,26 @@ trabajos prácticos previamente diseñados.
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true,"_":["slides"],"static":"public"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

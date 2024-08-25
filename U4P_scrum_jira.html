@@ -1,27 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Desarrollo Ágil de Software</title>
-    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="^---" data-separator-vertical="^\r?\n----\r?\n$">
+          <textarea data-template>
+            
 
 # Ingeniería de Software
 ## Scrum
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
-</script></section><section  data-markdown><script type="text/template">
+---
 <!-- .slide: style="font-size: 0.60em" -->
 <style>
 .grid-item {
@@ -39,17 +43,17 @@ Created by <i class="fab fa-telegram"></i>
 
 </div>
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Scrum
 Esta metodología se lleva adelante en “Sprints”. Al final de cada sprint, el equipo debe entregar una versión mejorada 
 del proyecto para que sea analizada por todos los interesados; luego de eso, los evaluadores dan una devolución, lo 
 que da inicio al proceso de mejora.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Scrum
 ![Scrum](images/unidad4/scrum.webp)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Scrum: Roles
 
 <!-- .slide: style="font-size: 0.90em" -->
@@ -63,14 +67,14 @@ Al ser equipos multifuncionales, requiere de múltiples roles:
 * Product Owner
 * Equipo de Desarrollo (Dev. Front, Dev. Backend, QA)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Rol: Product Owner
 Es el responsable de maximizar el valor del trabajo, que viene de la mano de una buena gestión del Product Backlog.
 
 El Product Owner es el único perfil que habla constantemente con el cliente, lo que le obliga a tener muchos 
 conocimientos sobre el negocio.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Rol: Scrum Master
 Es el responsable de que las técnicas Scrum sean comprendidas y aplicadas en la organización. Es el manager de Scrum, 
 un líder que se encarga de eliminar impedimentos o inconvenientes que tenga el equipo dentro de un sprint, aplicando 
@@ -78,7 +82,7 @@ las mejores técnicas para fortalecer el equipo.
 
 Dentro de la organización, el Scrum Master tiene la labor de ayudar en la adopción del framework en todos los equipos.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Rol: Equipo de desarrollo
 Son los encargados de realizar las tareas priorizadas por el Product Owner. Es un equipo multifuncional y 
 auto-organizado. Son los únicos que estiman las tareas del product backlog, sin dejarse influenciar por nadie.
@@ -86,7 +90,7 @@ auto-organizado. Son los únicos que estiman las tareas del product backlog, sin
 Los equipos de desarrollo no tienen sub-equipos o especialistas. La finalidad de esto es transmitir la 
 responsabilidad compartida si no se llegan a realizar todas las tareas de un sprint.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Rol: UX
 Son los encargados de realizar el diseño de la aplicación. Suelen conocer en profundidad el negocio, para poder realizar el diseño acorde a las necesidades del cliente.
 
@@ -94,13 +98,13 @@ Emplean herramientas como:
 * Figma
 * Adoba XD
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Scrum: Artefactos
 * Product Backlog
 * Sprint Backlog
 * Incremento
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Product Backlog
 
 <!-- .slide: style="font-size: 0.90em" -->
@@ -114,26 +118,26 @@ cliente para asegurarse de que las prioridades están bien establecidas.
 Las tareas que están más arriba deben de ser las de mayor prioridad. El equipo de desarrollo elige tareas del 
 Product Backlog en el Sprint Planning para generar tanto el Sprint Backlog como el Sprint Goal.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Sprint Backlog
 Es el grupo de tareas del Product Backlog que el equipo de desarrollo elige en el Sprint Planning junto con el plan 
 para poder desarrollarlas. Debe ser conocido por todo el equipo, para asegurarse de que el foco debe estar en este grupo de tareas.
 
 El Sprint Planning no cambia durante el sprint, solo se permite cambiar el plan para poder desarrollarlas.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Incremento
 El Product Increment es el resultado de sumar todos los elementos del Product Backlog completados durante el sprint 
 actual, añadiendo también el valor de todos los sprints anteriores.
 
 La suma de los incrementos se presenta en cada Sprint Review, y se pueden crear varios incrementos de Scrum dentro de un mismo sprint.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Ejercicio Product Backlog
 1. Ingresa a Jira: [https://ubp2.atlassian.net](https://ubp2.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog)
 2. Crea tickets/tareas con los ejercicios a realizar. Puedes ordenarlos por orden de prioridad.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Scrum: Ceremonias
 
 <!-- .slide: style="font-size: 0.90em" -->
@@ -149,7 +153,7 @@ Las ceremonias más habituales son:
 * Retrospectiva
 * Refinamiento
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Ceremonias: Sprint Planning
 En esta reunión todo el equipo Scrum define qué tareas se van a abordar y cuál será el objetivo del sprint.
 
@@ -159,7 +163,7 @@ El equipo se hace las siguientes preguntas:
 La definición de qué se va a hacer implica que el equipo tenga un objetivo y se encuentre comprometido con la entrega de 
 valor que se hará al cliente al final del sprint. A esto se le llama Sprint Goal.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Ceremonias: Daily Meeting
 
 <!-- .slide: style="font-size: 0.90em" -->
@@ -175,7 +179,7 @@ En esta reunión diaria el equipo de desarrollo hace las siguientes 3 preguntas:
 Una Daily Scrum es el lugar más oportuno para poder inspeccionar el trabajo y poder adaptarse en caso de que haya cambio 
 de tareas dentro de un sprint.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Ceremonias: Sprint Review o Demo
 La review del valor que vamos a entregar al cliente se hace en esta reunión, al final de cada sprint. Suele asistir el 
 cliente para ver los avances del proyecto.
@@ -184,7 +188,7 @@ En esta reunión el Product Owner presenta lo desarrollado al cliente y el equip
 El cliente valida los cambios realizados y además brinda feedback sobre nuevas tareas que el Product Owner tendrá que 
 agregar al Product Backlog.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Ceremonias: Sprint Retrospective
 Es la reunión del equipo en la que se hace una evaluación de cómo se ha implementado el último sprint.
 
@@ -192,14 +196,14 @@ Es una gran oportunidad para el equipo Scrum de inspeccionarse a sí mismo, prop
 El resultado es una lista de mejoras que debe aplicar el siguiente día, ya que al finalizar la retrospectiva, 
 inmediatamente comienza un nuevo sprint, que incluye los mismos eventos mencionados anteriormente.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Ceremonias: Refinamiento o Grooming
 Es el tiempo de revisión que se dedica dentro de los equipos durante los sprints para refinar los requerimientos.
 
 Las tareas de usuario se revisan con un par de sprints de ventaja para que cuando llegue el equipo ya esté todo listo 
 para el desarrollo de la tarea.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Ejercicio Planning
 La idea es hacer una “simulación” de una planning.
 
@@ -207,7 +211,7 @@ La profe tomará el rol de “Scrum Master”, y se procederá a asignar las tar
 
 Además, se emplearán técnicas de estimación.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Estimación
 
 <!-- .slide: style="font-size: 0.90em" -->
@@ -268,13 +272,13 @@ Si bien la estimación no tiene reglas generales para todos los equipos, habitua
 </table>
 
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Ejercicio: Ejecutar la tarea
 Cada persona debe realizar la tarea que se le asignó (10min de tiempo se dejará para hacerlo).
 
 Cuando empiezas a realizar tu tarea, debes moverla de columna en Jira…Y pasarla a en progreso.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Ejercicio: Ceremonia Daily
 Hagamos de cuenta que pasó un día, y debemos notificar en una “Daily” lo que pasó el día anterior:
 
@@ -283,14 +287,14 @@ Alguien tomará el papel de “Scrum Master”, y cada persona del equipo debe i
 * ¿En qué trabajaras hoy?
 * ¿Tienes algún problema con tu tarea?
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Ejercicio: Ceremonia Demo
 Hagamos de cuenta que pasaron las 2 semanas (el sprint), y se debe mostrar de forma rápida un resumen de en que se trabajó:
 
 Alguien tomará el papel de “Scrum Master”, y cada persona del equipo debe mostrar brevemente su pantalla, e indicar en 
 qué pruebas realizó, que funcionalidad o componente probó.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Ejercicio: Ceremonia Retro
 Hagamos de cuenta que pasaron las 2 semanas (el sprint), y se debe evaluar el resultado del sprint:
 
@@ -298,13 +302,18 @@ Alguien tomará el papel de “Scrum Master”, y cada persona del equipo debe p
 
 [Tablero de Retro](https://easyretro.io/publicboard/DjiIuVtUvCTMCCU8Tas0zQW4e5r1/37f26b42-0af9-4985-9e14-aa130b5f21b1)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -332,6 +341,10 @@ Alguien tomará el papel de “Scrum Master”, y cada persona del equipo debe p
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -344,12 +357,26 @@ Alguien tomará el papel de “Scrum Master”, y cada persona del equipo debe p
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true,"_":["slides"],"static":"public"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

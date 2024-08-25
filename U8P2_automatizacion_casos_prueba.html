@@ -1,27 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Automatización de Casos de Pruebas</title>
-    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="^---" data-separator-vertical="^\r?\n----\r?\n$">
+          <textarea data-template>
+            
 
 # Ingeniería de Software
 ## Automatización de Casos de Pruebas
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
-</script></section><section  data-markdown><script type="text/template">
+---
 <!-- .slide: style="font-size: 0.60em" -->
 <style>
 .grid-container2 {
@@ -60,7 +64,7 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 </div>
 
-</script></section><section ><section data-markdown><script type="text/template">
+---
 
 ### Tecnologías de Automatización
 Existe una gran variedad de tecnologías que permiten el desarrollo de pruebas automatizadas.
@@ -70,10 +74,12 @@ Entre las más usadas en el mercado encontramos:
 * Cypress
 
 ![Tecnologias de Automatizacion](images/unidad8_automatizacion/selenium_cypress.png)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ![Downloads](images/unidad8_automatizacion/downloads.jpg)
 
-</script></section></section><section ><section data-markdown><script type="text/template">
+---
 #### [Cypress](https://docs.cypress.io/)
 Es un framework de testing moderno, fácil de aprender y de usar y que permite ejecutar pruebas sobre aplicaciones web.
 Se emplea JavaScript.
@@ -82,11 +88,15 @@ Si bien lleve menos tiempo en el mercado que Selenium, ya cuenta con una gran co
 y completa.
 
 Además, tiene actualizaciones frecuentes, que agregan funcionalidades.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 #### Cypress: Ventajas
 
 ![Cypress: ventajas](images/unidad8_automatizacion/ventajas-cypress.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 #### Cypress: Características
 <!-- .slide: style="font-size: 0.90em" -->
 * Se toman **capturas de pantalla** o **videos** de forma muy sencilla mientras se ejecutan los tests, sin uso de otras 
@@ -96,12 +106,14 @@ dependencias.
 * Las pruebas se ejecutan de manera **rápida** y sencilla.
 * **Depuración** con herramientas como Chrome DevTools.
 * Se realizarn **esperas automáticas**, sin necesidad de waits o sleeps.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 #### Cypress: Cross-Browser
 
 ![Cypress: Cross Browser](images/unidad8_automatizacion/cross-browser.jpg)
 
-</script></section></section><section  data-markdown><script type="text/template">
+---
 ### Otras Herramientas
 En el proceso de automatización es fundamentar contar con las siguientes herramientas:
 * **IDE**: Entorno de Desarrollo Integrado
@@ -110,31 +122,41 @@ En el proceso de automatización es fundamentar contar con las siguientes herram
 
 ![Otras herramientas](images/unidad8_automatizacion/otras-herramientas.png)
 
-</script></section><section ><section data-markdown><script type="text/template">
+---
 ### Herramientas para Cypress
 * [Nodejs](https://nodejs.org/es)
 * [Git](https://git-scm.com/)
 * [VSC](https://code.visualstudio.com/)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 #### Ejercicio 1: Instalar NodeJs
 1. Ingresar a https://nodejs.org/es
 2. Descargar la versión recomendada
 3. Realizar la instalación
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 #### Ejercicio 2: Instalar Git
 1. Ingresar a https://git-scm.com/
 2. Descargar git para el SO correspondiente
 3. Realizar la instalación
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 #### Ejercicio 3: Instalar VSC
 1. Ingresar a https://code.visualstudio.com/
 2. Descargar VSC
 3. Realizar la instalación
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Plugin o Extensiones
 Son componentes adicionales que se pueden instalar en el editor de código para agregar nuevas características,
 funcionalidades y mejoras.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Plugin o Extensiones
 <!-- .slide: style="font-size: 0.90em" -->
 Algunos plugin de utilidad son:
@@ -143,18 +165,24 @@ del código para encontrar: errores de sintaxis, código poco intuitivo o difíc
 uso de estilos inconsistentes, entre otros.
 * **Path Intellisense**: Realiza el autocompletado de rutas de archivos en el código. Reduce el riesgo de errores tipográficos.
 * **Prettier**: Permite formatear automáticamente el código. Mejora la legibilidad del código.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Plugin o Extensiones
 * **Cypress Snippets**: Permite seleccionar tests rápidamente como .only para ejecutar solo uno. También agiliza escribir funciones.
 * **Cypress Helper**: Agiliza procesos de autocompletado, go to definition, entre otros.
 * **Better Comments**: Coloriza los comentarios para facilitar su lectura.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Plugin o Extensiones
 * **Bracket Pair Colorization Toggler**: Permite asignar colores diferentes a las llaves y paréntesis para facilitar la
 lectura del código.
 * **GitLens**: Permite ver con facilidad quien modificó las líneas de código y cuando (especialmente útil cuando se
 trabaja en equipo).
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 #### Ejercicio 4: Instalar plugins en VSC
 Instalar todos los plugins necesarios en el VSC:
 * ESLint
@@ -166,14 +194,16 @@ Instalar todos los plugins necesarios en el VSC:
 * Bracket Pair Colorization Toggler
 * GitLens
 
-</script></section></section><section ><section data-markdown><script type="text/template">
+---
 
 ### Node Package Manager
 **npm** es el manejador de paquetes de node, que permite descargar e instalar paquetes de JavaScript para usar en 
 nuestro proyecto.
 
 Todo proyecto **node** contiene un **package.json** donde se listan todas las librerías necesarias para el proyecto.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### npm init
 Para crear el **package.json** por primera vez, se debe ejecutar el comando **npm init**.
 Al ejecutar el comando, se permite ingresar:
@@ -185,16 +215,22 @@ Al ejecutar el comando, se permite ingresar:
 * repositorio de git
 * autor
 * licencia
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 #### Ejercicio 5: Instalar npm
 1. Abrir el VSC
 2. Ejecutar el comando **npm init** en la terminal
 3. Verificar que el **package.json** se generó
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 #### Ejercicio 6: Instalar Cypress
 1. Ejecutar el comando **npm install cypress** en la terminal
 2. Verificar que el **package.json** se agregó cypress con la versión
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 #### Ejercicio 7: Inicializar Cypress
 <!-- .slide: style="font-size: 0.90em" -->
 1. Ejecutar el comando **npx cypress open** en la terminal
@@ -206,44 +242,58 @@ Al ejecutar el comando, se permite ingresar:
 7. verificar que en el VSC se genero una carpeta llamada **Cypress** con 2 subcarperas> 1-getting-started y 2-advanced-examples
 8. Seleccionar alguno de los tests-autogenerados de ejemplo para ejecutarlos.
 
-</script></section></section><section ><section data-markdown><script type="text/template">
+---
 ### Page Object
 Es un **patrón de diseño** que permite modelar el código y hacerlo más mantenible y utilizable (generalmente cuando hay cambios en la UI, suelen
 ser de selectores, no tanto de funcionalidad, por lo que solo hay que actualizar el pageObject y no el test).
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Page Object
 
 Consiste en crear un objeto por cada conjunto de elementos significativos de la interfaz con la que interactuamos.
 
 ![Page Object Model](images/unidad8_automatizacion/POM.png)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Page Object
 * Representa componentes web
 * Evita duplicación de código
 * Automatizaciones mantenibles y fáciles de entender
 
 ![Page Object Model](images/unidad8_automatizacion/POM2.png)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Page Object
 Aunque el nombre sugiere representar una página de nuestra aplicación, si dentro de la página existen componentes, se
 puede construir un page object de ese elemento para reutilizarlo.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Page Object
 Ejemplo: El header se repite a través de todas las páginas de esta web, entonces, en lugar de integrar los elementos
 en el PageObject de la Home, es conveniente crear un PageObject a parte.
 ![Componentes](images/unidad8_automatizacion/componentes.png)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Page Object: Modelo 1
 
 En la parte superior se definen los locadores de los elementos, 
 en la parte inferior las funciones que devuelven esos objetos.
 ![POM](images/unidad8_automatizacion/pom_modelo1.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Page Object: Modelo 1
 
 Para emplearlo en los tests, primero se importa, y luego se instancia el pageObject.
 ![POM](images/unidad8_automatizacion/pom_modelo1_uso.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Page Object: Modelo 1
 **Ventajas:**
 Separación de la lógica del localizador (selector) y los métodos de interacción. Esto puede hacer que el código sea más
@@ -251,19 +301,25 @@ organizado y más fácil de mantener, especialmente si la página posee muchos e
 
 **Desventajas**
 Requiere crear una instancia del pageObject antes de utilizar los métodos. 
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Page Object: Modelo 2
 
 Los locadores van dentro de los métodos.
 
 ![POM](images/unidad8_automatizacion/pom_modelo2.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Page Object: Modelo 2
 
 Para emplearlo en los tests, solo se debe importar.
 
 ![POM](images/unidad8_automatizacion/pom_modelo2_uso.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Page Object: Modelo 1
 **Ventajas:**
 Se pueden emplear los métodos directamente sin necesidad de crear una instancia de la clase. Los métodos están 
@@ -273,7 +329,7 @@ disponibles globalmente para su uso directo, lo que puede resultar en un código
 Se puede volver más complicado si hay muchos elementos o acciones repetitivas en la página. Se podría terminar repitiendo
 el mismo selector en múltiples métodos.
 
-</script></section></section><section ><section data-markdown><script type="text/template">
+---
 ### Locadores
 
 Un localizador es una query que busca y devuelve elementos específiicos del DOM (Document Object Model).
@@ -284,27 +340,39 @@ Orden de preferencia:
 * Input Name
 * Class Name
 * Xpath
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Locadores: Data-test
 
 ![Locadores: Data-test](images/unidad8_automatizacion/locator-datatest.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Locadores: ID
 
 ![Locadores: ID](images/unidad8_automatizacion/locator-id.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Locadores: Name
 
 ![Locadores: Name](images/unidad8_automatizacion/locator-name.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Locadores: Class
 
 ![Locadores: Class](images/unidad8_automatizacion/locator-class.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Locadores: Xpath
 
 ![Locadores: xpath](images/unidad8_automatizacion/locator-xpath.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Locadores: Modificadores
 <!-- .slide: style="font-size: 0.80em" -->
 * ```^```: Permite encontrar los elementos que en el nombre de la clase, id o atributo **empieza** con un determinado
@@ -318,13 +386,18 @@ Ej: ```th:nth-child(2)```
 * ```nth-of-type(X)```: Permite encontrar elementos de un **tipo dado** en función de su posición entre un **grupo de hermanos**
   Ej: ```div:nth-of-type(1)```
 
-</script></section></section><section  data-markdown><script type="text/template">
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -352,6 +425,10 @@ Ej: ```th:nth-child(2)```
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -364,12 +441,26 @@ Ej: ```th:nth-child(2)```
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true,"_":["slides"],"static":"public"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

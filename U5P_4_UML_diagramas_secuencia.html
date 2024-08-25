@@ -1,27 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Diagrama de Secuencia</title>
-    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="^---" data-separator-vertical="^\r?\n----\r?\n$">
+          <textarea data-template>
+            
 
 # Ingeniería de Software
 ## UML: Diagrama de Secuencia
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### DIAGRAMA DE SECUENCIA
 Es un diagrama de interacción.
 Permite:
@@ -32,19 +36,19 @@ Permite:
 
 Muestra como las instancias de clases interactúan mediante el.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## Ventajas
 Puede verse con facilidad cómo se distribuyen las tareas entre los componentes. Pueden identificarse los modelos de 
 interacción que dificultan la actualización de software.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 Está construido a partir de dos dimensiones:
 * Horizontal: Representa los objetos que participan en la secuencia.
 * Vertical: Representa la línea de tiempo sobre la que los elementos actúan. Va de arriba hacia abajo.
 
 ![Diagrama de Secuencia: Dimensiones](images/unidad5/secuencia_dimensiones.png)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Objeto:
 * Representa a un participante en la interacción.
 * Puede ser instancia de una clase, un módulo, un grupo de clases, es decir un componente software que tiene una 
@@ -53,24 +57,24 @@ funcionalidad específica
 * Se representa mediante un rectángulo que incluye un identificador en su interior
 * De cada uno sale una línea vertical hacia abajo que representa el tiempo en el que está presente.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ![Diagrama de Secuencia: Objetos](images/unidad5/secuencia_objetos.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 Algunas veces un diagrama de secuencia tendrá una línea de vida con un símbolo del elemento actor en la parte superior.
 Este usualmente sería el caso si un diagrama de secuencia es contenido por un caso de uso. Los elementos entidad,
 control y límite de los diagramas de robustez también pueden contener líneas de vida.
 
 ![Elementos Secuencia](images/unidad5/elementos_secuencia.GIF)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## Mensaje:
 * Representa el paso de un mensaje entre dos objetos o entre un objeto y sí mismo.
 * Flecha con el nombre del mensaje y los argumentos y que va desde el objeto que envía hacia el objeto que recibe.
 
 ![Diagramas de Secuencia: Mensajes](images/unidad5/secuencia_mensajes.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Mensaje
 <!-- .slide: style="font-size: 0.80em" -->
 * Un **mensaje síncrono** es denotado por una punta de flecha oscura. Si se envía este mensaje es porque se necesita una 
@@ -81,10 +85,10 @@ dentro de un programa, así como otros tipos de mensaje que se comportan de la m
   creación de un nuevo subproceso.
 * Un **mensaje de retorno** asíncrono es denotado por una línea punteada. 
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ![Diagrama de Secuencia](images/unidad5/secuencia_ejemplo.png)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Mensaje Self
 Un mensaje self puede representar una llamada recursiva de una operación, o un método llamando a otro método 
 perteneciente al mismo objeto. Este se muestra como cuando crea un foco de control anidado en la ocurrencia de 
@@ -92,7 +96,7 @@ ejecución de la línea de vida.
 
 ![Mensaje Self](images/unidad5/mensaje_self.GIF)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Mensajes perdidos y encontrados
 <!-- .slide: style="font-size: 0.80em" -->
 Los mensajes perdidos son aquellos que han sido enviados pero que no han llegado al destino esperado, o que han llegado 
@@ -102,7 +106,7 @@ de punto final.
 
 ![Mensaje lost](images/unidad5/menje_lost.GIF)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Inicio y final de línea de vida
 <!-- .slide: style="font-size: 0.80em" -->
 Una línea de vida se puede crear o destruir durante la escala de tiempo representada por un diagrama de secuencia. 
@@ -112,7 +116,7 @@ que causó la creación. El siguiente diagrama muestra un objeto que fue creado 
 
 ![Delete Element](images/unidad5/delete_element.GIF)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Restricciones de tiempo y duración
 <!-- .slide: style="font-size: 0.70em" -->
 En forma predeterminada, un mensaje se muestra como una línea horizontal. Ya que la línea de vida representa el pasaje 
@@ -122,7 +126,7 @@ un mensaje, el mensaje se mostrará como una línea inclinada.
 
 ![Rectriccion de tiempo](images/unidad5/restriccion_tiempo.GIF)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Fragmentos combinados
 No se espera que los diagramas de secuencia muestren lógicas de procedimientos complejos.
 Hay un número de mecanismos que permiten agregar un grado de lógicas de procedimientos a los diagramas y que a la vez 
@@ -131,7 +135,7 @@ vienen bajo el encabezado de fragmentos combinados.
 Un fragmento combinado es una o más secuencias de procesos incluidas en un marco y ejecutadas bajo circunstancias 
 específicas. 
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Fragmentos combinados
 <!-- .slide: style="font-size: 0.55em" -->
 Los fragmentos disponibles son:
@@ -148,19 +152,21 @@ Los fragmentos disponibles son:
 * **Assertion**, _assert_ designa que cualquier secuencia que no se muestra como un operando de la aserción es inválida.
 * **Loop** incluye una serie de mensajes que están repetidos.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 El siguiente diagrama muestra un fragmento loop:
 
 ![Loop](images/unidad5/loop.GIF)
 
-</script></section><section ><section data-markdown><script type="text/template">
+---
 ### Puerta
 Una "puerta" se refiere a un elemento que se utiliza para mostrar bifurcaciones o puntos de decisión en la secuencia de 
 interacciones entre objetos. Estas puertas se utilizan para representar condiciones lógicas o ramificaciones en el 
 flujo de ejecución de un sistema o función.
 
 ![Puerta](images/unidad5/puerta.GIF)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 <!-- .slide: style="font-size: 0.80em" -->
 ### Puerta
 Hay dos tipos principales de puertas en un diagrama de secuencia:
@@ -171,13 +177,13 @@ puerta de bifurcación representa un flujo de ejecución independiente que se ej
 que los flujos de ejecución paralelos se vuelven a unir después de haberse bifurcado previamente. Esto suele ocurrir 
 después de que se haya completado una serie de actividades en paralelo, y los flujos deben converger nuevamente.
 
-</script></section></section><section  data-markdown><script type="text/template">
+---
 ### Descomposición en parte
 Un objeto puede tener más de una línea de vida que viene de ésta. Esto permite mensajes de entre e intra objetos para que se muestren en el mismo diagrama.
 
 ![Descomposicion en Partes](images/unidad5/descomposicion_en_partes.GIF)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Continuaciones / Invariantes de Estado
 <!-- .slide: style="font-size: 0.70em" -->
 Una invariante de estado es una restricción ubicada en una línea de vida que debe ser verdadera en el tiempo de 
@@ -188,16 +194,16 @@ ejecución. Esta se muestra como un rectángulo con los extremos en semi-circulo
 Una continuación tiene la misma notación que una invariante de estado pero se usa en fragmentos combinados y puede 
 extenderse a través de más de una línea de vida.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ![Diagrama de Secuencia](images/unidad5/ejemploSecuencia.png)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 Puedes leer más info en:
 https://es.slideshare.net/rene5254/diagramas-de-secuencia-251060499
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
 
@@ -206,10 +212,15 @@ https://es.slideshare.net/rene5254/diagramas-de-secuencia-251060499
 <!--https://diagramasuml.com/secuencia/-->
 <!--https://wiki.ead.pucv.cl/Diagrama_de_Secuencia-->
 <!--https://es.slideshare.net/rafadalberto/diagrama-de-secuencia?related=1-->
-<!--https://learn.microsoft.com/es-mx/previous-versions/visualstudio/visual-studio-2015/modeling/uml-sequence-diagrams-guidelines?view=vs-2015&redirectedfrom=MSDN#Using--></script></section></div>
+<!--https://learn.microsoft.com/es-mx/previous-versions/visualstudio/visual-studio-2015/modeling/uml-sequence-diagrams-guidelines?view=vs-2015&redirectedfrom=MSDN#Using-->
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -237,6 +248,10 @@ https://es.slideshare.net/rene5254/diagramas-de-secuencia-251060499
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -249,12 +264,26 @@ https://es.slideshare.net/rene5254/diagramas-de-secuencia-251060499
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true,"_":["slides"],"static":"public"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

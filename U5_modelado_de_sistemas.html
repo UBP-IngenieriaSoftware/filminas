@@ -1,27 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Modelado de Sistemas</title>
-    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="^---" data-separator-vertical="^\r?\n----\r?\n$">
+          <textarea data-template>
+            
 
 # Ingeniería de Software
 ## Modelado de Sistemas
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
-</script></section><section  data-markdown><script type="text/template">
+---
 <!-- .slide: style="font-size: 0.60em" -->
 <style>
 .grid-container2 {
@@ -67,7 +71,7 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 </div>
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Modelado de SIstemas
 Un **modelo es una abstracción** de un sistema o entidad del mundo real. 
 
@@ -75,7 +79,7 @@ Una **abstracción es una simplificación**, que incluye sólo aquellos detalles
 
 El modelado permite abordar la complejidad de los sistemas.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### El modelado de sistemas
 * El modelado de sistemas es el proceso de elaboración de modelos abstractos de un sistema, con cada modelo que presenta 
 una vista o perspectiva diferente de ese sistema.
@@ -84,7 +88,7 @@ el Lenguaje Unificado de Modelado (UML).
 * El modelado de sistemas ayuda al analista a entender la funcionalidad del sistema y se pueden utilizar modelos para 
 comunicarse con los clientes.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Modelos de sistemas
 * Los modelos del sistema se utilizan durante la ingeniería de requisitos para ayudar a explicar los requisitos 
 propuestos a otros actores del sistema. Los ingenieros utilizan estos modelos para discutir las propuestas de diseño y 
@@ -92,7 +96,7 @@ documentar el sistema de aplicación.
 * En un proceso de ingeniería basado en modelos, es posible generar una implementación completa o parcial del sistema 
 desde el modelo del sistema.
 
-</script></section><section ><section data-markdown><script type="text/template">
+---
 ### Perspectivas del sistema
 * Una **perspectiva externa**, donde se modela el contexto o el entorno del sistema.
 * Una **perspectiva de interacción**, donde se modelan las interacciones entre un sistema y su entorno, o entre los 
@@ -101,7 +105,9 @@ componentes de un sistema.
 procesados por el sistema.
 * Una **perspectiva conductual**, en la que se modela el comportamiento dinámico del sistema y la forma en que responde 
 a los eventos.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Ejemplo:
 ````java
 package codemodel;
@@ -123,7 +129,7 @@ public class Guitarist extends Person implements MusicPlayer {
 * El ser humano lo interpreta muy lentamente
 * No facilita la reutilización ni la comunicación
 
-</script></section></section><section  data-markdown><script type="text/template">
+---
 ````cookie
 Guitarist is a class that contains six members: one static and five non-static. Guitarist uses, and so needs an instance 
 of, Guitar; however, since this might be shared with other classes in its package, the Guitar instance variable, called 
@@ -139,7 +145,7 @@ interface that the Guitarist class implements. The play method takes no paramete
 * Es lenta de interpretar
 * Difícil de procesar
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ![UML: Guitarrista](images/unidad5/ejemplo_guitarrista.jpg)
 
 <!-- .slide: style="font-size: 0.60em" -->
@@ -147,7 +153,7 @@ interface that the Guitarist class implements. The play method takes no paramete
 * Es fácil y rápida de interpretar
 * Es fácil de procesar por herramientas
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Tipos de diagramas UML
 
 <!-- .slide: style="font-size: 0.90em" -->
@@ -157,43 +163,45 @@ interface that the Guitarist class implements. The play method takes no paramete
 * **Diagramas de clases:** Muestran las clases de objetos en el sistema y las asociaciones entre estas clases.
 * **Diagramas de estado:** Muestran cómo el sistema reacciona a los acontecimientos internos y externos.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### El uso de modelos gráficos
 * Como una forma de facilitar el debate sobre un sistema
 * Como una manera de documentar un modelo de sistema debe ser una representación exacta del sistema, pero no
 tiene que ser completa.
 * Como una descripción detallada del sistema en ese caso debe ser correcta y completa.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Los modelos de contexto
 * Se utilizan modelos de contexto para ilustrar el contexto operativo de un sistema, muestran lo que se
 encuentra fuera de los límites del sistema.
 * Las cuestiones organizacionales pueden influir en la decisión sobre dónde situar los límites del sistema.
 * Los modelos de contexto muestran el sistema y su relación con otros sistemas.
 
-</script></section><section ><section data-markdown><script type="text/template">
+---
 ### Límites del sistema
 * Los límites del sistema se establecen para definir lo que está dentro y lo que está fuera del sistema, muestran otros
 sistemas que se utilizan o dependen del sistema que está siendo desarrollado.
 * La posición de los límites del sistema tiene un efecto profundo en los requisitos del sistema.
 * La definición del límite del sistema es fundamental Si los límites del sistema aumentan y/o disminuyen cambia la
 carga de trabajo de las diferentes partes de una organización.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 #### El contexto del MHC-PMS
 ![Ejemplo de Diagrama de Contexto](images/unidad5/diagrama_contexto_mhc-pms.jpg)
 
-</script></section></section><section  data-markdown><script type="text/template">
+---
 ### Perspectiva del proceso
 * Los modelos de contexto, simplemente muestran los otros sistemas en ambiente, no cómo se utiliza el sistema
 que está siendo desarrollado en ese entorno.
 * Los modelos de proceso revelan cómo se utiliza el sistema en desarrollo en los procesos de negocio
 * Diagramas de actividades de UML se pueden utilizar para definir los modelos de procesos de negocio.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Modelo de proceso de la detención involuntaria
 ![Modelo de proceso de la detención involuntaria](images/unidad5/modelo_proceso_detencion.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Modelos de interacción
 <!-- .slide: style="font-size: 0.90em" -->
 * El modelado de la interacción de usuario es importante ya que ayuda a identificar las necesidades de los usuarios.
@@ -202,22 +210,26 @@ que está siendo desarrollado en ese entorno.
 adecuada para ofrecer el rendimiento y la fiabilidad del sistema necesario.
 * Los diagramas de casos y diagramas de secuencia se pueden utilizar para el modelado de la interacción.
 
-</script></section><section ><section data-markdown><script type="text/template">
+---
 ### Modelado de casos de uso
 * Los casos de uso se desarrollaron originalmente para apoyar la obtención de requisitos y están incorporadas en el UML.
 * Cada caso de uso representa una tarea discreta que implica la interacción externa con un sistema.
 * Los actores de un caso de uso pueden ser personas u otros sistemas.
 * Representacion esquemática para proporcionar una visión general de los casos de uso.
 * Representacion textual para proporcionar una visión detallada.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Uso de datos de transferencia de caso
 Un caso de uso en el MHC-PMS:
 ![Un caso de uso en el MHC-PMS](images/unidad5/ejemplo_1_caso_de_uso.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Los casos de uso en el MHC-PMS que implica el papel 'Médico Recepcionista'
 ![Casos de uso Médico Recepcionista](images/unidad5/ejemplo_caso_de_uso.jpg)
 
-</script></section></section><section ><section data-markdown><script type="text/template">
+---
 ### Los diagramas de secuencia
 <!-- .slide: style="font-size: 0.90em" -->
 * Los diagramas de secuencia son parte de UML y se utilizan para modelar las interacciones entre los actores y
@@ -226,43 +238,55 @@ los objetos dentro de un sistema.
 * Los objetos y los actores involucrados están listados en la parte superior del diagrama, con una línea de puntos
 trazada verticalmente a partir de estos.
 * Las interacciones entre los objetos se indican mediante flechas anotadas.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Diagrama de secuencia para Ver la información del paciente
 ![Diagrama de secuencia: Ver información del paciente](images/unidad5/diagrama_secuencia.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 #### Diagrama de secuencia para la transferencia de datos
 ![Diagrama de secuencia: Transferencia de datos](images/unidad5/diagrama_secuencia_transferencia_datos.jpg)
 
-</script></section></section><section  data-markdown><script type="text/template">
+---
 ### Los modelos estructurales
 * Los modelos estructurales muestran la organización de un sistema en función de los componentes que conforman
 este sistema y sus relaciones.
 * Los modelos estructurales son modelos estáticos, que muestran la estructura del sistema.
 
-</script></section><section ><section data-markdown><script type="text/template">
+---
 ### Los diagramas de clases
 * Los diagramas de clases se utilizan en el desarrollo de un modelo de sistema orientado a objetos para mostrar las
 clases de un sistema y las asociaciones entre estas clases.
 * Una clase de objeto es una definición general de un tipo de objeto del sistema.
 * Una asociación es una relación entre clases.
 * Los objetos representan algo en el mundo real, tal como un paciente, una prescripción, médico, etc.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Clases UML y asociación
 ![Clases UML y asociación](images/unidad5/UML_y_asociacion.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Las clases y asociaciones en el MHC-PMS
 ![Clases y asociaciones en el MHC-PMS](images/unidad5/clases_asociaciones_MHC-PMS.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### La clase de consulta
 ![La clase de consulta](images/unidad5/clase_de_consulta.jpg)
 
-</script></section></section><section ><section data-markdown><script type="text/template">
+---
 ### Generalización
 * La generalización es una técnica que utilizamos para gestionar la complejidad.
 * En lugar de defifnier las características detalladas de cada entidad, ponemos estas características en las clases
 más generales (animales, coches, casas, etc).
 * Esto nos permite inferir que los diferentes miembros de estas clases tienen algunas características comunes. 
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Generalización
 <!-- .slide: style="font-size: 0.90em" -->
 * En los sistemas de modelado, a menudo es útil examinar las clases de un sistema para ver si hay posibilidades de
@@ -272,30 +296,34 @@ generalización.
 asociadas a las clases de menor nivel.
 * Las clases de nivel inferior son subclases que heredan los atributos y operaciones de sus superclases. Estas
 clases de nivel inferior son mas especificas y pueden añadir atributos y operaciones.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Una jerarquía de generalización
 ![Una jerarquía de generalización](images/unidad5/jerarquia_de_generalizacion.jpg)
 
-</script></section></section><section  data-markdown><script type="text/template">
+---
 
 ### Una jerarquía de generalización con caracteristicas agregadas
 ![Generalización con caracteristicas agregadas](images/unidad5/jeneralizacion_caracteristicas_agregadas.jpg)
 
-</script></section><section ><section data-markdown><script type="text/template">
+---
 ### Agregación
 * Un modelo de agregación muestra cómo las clases se componen de otras clases.
 * Los modelos de agregación son similares a la parte de la relación en los modelos de datos semánticos.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Agregación
 ![Agregacion](images/unidad5/agregacion.jpg)
 
-</script></section></section><section  data-markdown><script type="text/template">
+---
 ### Modelos de comportamiento
 * Modelos de comportamiento son los modelos del comportamiento dinámico de un sistema, cuando se está ejecutando.
 * Muestran lo que ocurre cuando un sistema responde a un estímulo de su entorno.
 * Los estímulos pueden ser de dos tipos: **Datos** o **Eventos**
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### El modelado impulsado por datos
 * Muchos sistemas empresariales son sistemas de procesamiento de datos. Son controlados por la entrada de
 datos al sistema, con relativamente poco procesamiento de eventos externos.
@@ -304,32 +332,34 @@ salida asociada.
 * Son particularmente útiles durante el análisis de los requisitos, ya que pueden ser utilizados para mostrar el
 procesamiento de extremo a extremo en un sistema.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Un modelo de actividad de la operación de la bomba de insulina
 ![Modelo de actividad de Bomba de insulina](images/unidad5/modelo_actividad_bomba_insulina.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### El procesamiento de pedidos
 ![Procesamiento de pedidos](images/unidad5/procesamiento_de_pedidos.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Modelado impulsado por eventos
 * Sistemas de tiempo real son a menudo gestionados por eventos, con un procesamiento de datos mínimo.
 * Modelado por eventos muestra cómo un sistema responde a acontecimientos externos e internos.
 * Se basa en la suposición de que un sistema tiene un número finito de estados y que los acontecimientos
 (estímulos) puede causar una transición de un estado a otro.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Modelos de máquina de Estado
 * Estos modelan el comportamiento del sistema en respuesta a eventos externos e internos.
 * Muestran las respuestas del sistema a los estímulos tan a menudo se utilizan para el modelado de sistemas de tiempo real.
 * Modelos de máquinas de estado muestran los estados del sistema como nodos y eventos como arcos entre estos
 nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 
-</script></section><section ><section data-markdown><script type="text/template">
+---
 ### Diagrama de estado de un horno de microondas
 ![Diagrama de estado: Microondas](images/unidad5/diagrama_estado_microondas.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Los Estados y los estímulos para el horno de microondas
 <!-- .slide: style="font-size: 0.50em" -->
 <!--
@@ -381,7 +411,9 @@ nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 </tr>
 </tbody>
 </table>
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Los Estados y los estímulos para el horno de microondas
 <!-- .slide: style="font-size: 0.60em" -->
 <!--
@@ -438,11 +470,13 @@ nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 </tr>
 </tbody>
 </table>
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### El funcionamiento del horno de microondas
 ![Funcionamiento Microondas](images/unidad5/funcionamiento_microondas.jpg)
 
-</script></section></section><section  data-markdown><script type="text/template">
+---
 ### Ingeniería dirigida por modelos
 <!-- .slide: style="font-size: 0.90em" -->
 * Ingeniería dirigida por modelos (MDE) es un enfoque para el desarrollo de software donde los modelos en lugar
@@ -453,13 +487,18 @@ de los modelos.
 los ingenieros ya no tienen que preocuparse por los detalles del lenguaje de programación o las características
 específicas de plataformas de ejecución.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -487,6 +526,10 @@ específicas de plataformas de ejecución.
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -499,12 +542,26 @@ específicas de plataformas de ejecución.
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true,"_":["slides"],"static":"public"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

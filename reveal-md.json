@@ -1,5 +1,0 @@
-{
-    "separator": "^---",
-    "verticalSeparator": "^\\r?\\n----\\r?\\n$",
-    "css":"slides/css/filminas.css"
-}

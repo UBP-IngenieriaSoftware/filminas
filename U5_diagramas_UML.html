@@ -1,27 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Diagramas UML</title>
-    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="^---" data-separator-vertical="^\r?\n----\r?\n$">
+          <textarea data-template>
+            
 
 # Ingeniería de Software
 ## Diagramas UML
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
-</script></section><section  data-markdown><script type="text/template">
+---
 <!-- .slide: style="font-size: 0.60em" -->
 <style>
 .grid-container2 {
@@ -60,7 +64,7 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 </div>
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### DIAGRAMA DE CASOS DE USO
 * Especifica un comportamiento deseado del sistema.
 * Representa los requisitos funcionales del sistema.
@@ -69,13 +73,13 @@ Created by <i class="fab fa-telegram"></i>
 Un caso de uso especifica un conjunto de secuencias de acciones, incluyendo variantes, que el sistema puede ejecutar y
 que produce un resultado observable de valor para un particular actor.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Es un diagrama de comportamiento
 * Se utiliza para representar los actores externos que interactúan con el sistema de información.
 * Muestra de manera visual las distintas funciones que puede realizar un usuario (más bien un tipo de usuario) de un
 Sistema de Información.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Finalidad
 * Representar los requisitos funcionales.
 * Representar los actores que se comunican con el sistema.
@@ -83,16 +87,20 @@ Sistema de Información.
 * Guiar el desarrollo del sistema.
 * Comunicarse de forma precisa entre cliente y desarrollador.
 
-</script></section><section ><section data-markdown><script type="text/template">
+---
 ### Elementos
 * **Actores:** un actor es algo o alguien externo al sistema que interactúa de forma directa con el sistema.
 * **Casos de uso:*** Es una secuencia de acciones que hace el sistema y que producen un resultado que puede percibir
 un usuario.
 * **Relaciones:** Conectan los casos de uso con los actores o los casos de uso entre sí.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Elementos
 ![Elementos de Casos de Uso](images/unidad5/elementos_casos_de_uso.png)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Relaciones
 Cuando conectan un actor con un caso de uso representa que ese actor interactúa de alguna manera con ese caso de uso y 
 se representa con una línea continua Cuando conectan casos de uso entre sí se pueden diferenciar dos tipos de 
@@ -101,12 +109,16 @@ relaciones: `<<include>>` o `<<extend>>`.
 * `<<include>>:` Se utiliza para representar que un caso de uso utiliza siempre a otro caso de uso.
 * `<<extend>>:` Este tipo de relaciones se utilizan cuando un caso de uso tiene un comportamiento opcional, reflejado 
 en otro caso de uso
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Relaciones
 ![Includes](images/unidad5/ejemplo_de_include.gif)
 
 ![Extend](images/unidad5/relacion_entre_casos_de_uso.webp)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Descripción de requisitos
 <!-- .slide: style="font-size: 0.70em" -->
 Se describe cada caso de uso junto con la secuencia de pasos necesaria para completarlo y las posibles excepciones.
@@ -124,7 +136,9 @@ Esta descripción sirve de guía para el desarrollo:
 * Importancia
 * Urgencia
 * Comentarios
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 <!-- .slide: style="font-size: 0.40em" -->
 <!--
 | RF-01                | Acceso Aplicación                                                                                                              |
@@ -231,7 +245,7 @@ Esta descripción sirve de guía para el desarrollo:
 </tbody>
 </table>
 
-</script></section></section><section ><section data-markdown><script type="text/template">
+---
 ### Diseño de una aplicación que gestione los tramites a realizar en una clínica veterinaria
 <!-- .slide: style="font-size: 0.55em" -->
 * Se deben almacenar los datos de contacto de los clientes: Nombre, Apellidos, DNI, Fecha de nacimiento, Teléfono o Email.
@@ -249,41 +263,54 @@ funcionamiento en la clínica veterinaria.
 * El cliente podrá realizar el pago mediante la aplicación. Si el pago tarda mas de una semana se efectuará un recargo 
 sobre el precio inicial.
 * El cliente podrá obtener un histórico de todas las consultas que se han realizado para sus mascotas.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Diagrama de casos de uso del actor Auxiliar
 ![Diagrama de casos de uso del actor Auxiliar](images/unidad5/DCU_auxiliar.gif)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Diagrama de casos de uso del actor Cliente
 ![Diagrama de casos de uso del actor Cliente](images/unidad5/DCU_cliente.gif)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Diagrama de casos de uso del actor Veterinario
 ![Diagrama de casos de uso del actor Veterinario](images/unidad5/DCU_Veterinario.gif)
 
-</script></section></section><section ><section data-markdown><script type="text/template">
+---
 ### DIAGRAMA DE CLASES
 Es un diagrama de estructura
 * Se utiliza para representar los elementos que componen un sistema de información desde un punto de vista estático.
 * No incluye la forma en la que se comportan los distintos elementos a lo largo de la ejecución
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 Es un diagrama puramente orientado al modelo de programación orientado a objetos
 * Define las clases que se utilizarán en la fase de construcción y la manera en que se relacionan las mismas.
  Muestra:
 * La representación de datos y su interacción.
 * El modelo lógico de los datos de un sistema.
 
-</script></section></section><section ><section data-markdown><script type="text/template">
+---
 ### Elementos
-<!-- .slide: style="font-size: 0.90em" -->
+<!-- .slide: style="font-size: 0.80em" -->
 * **Clases:** elemento principal del diagrama y representa una clase dentro del paradigma de la orientación a
 objetos. Define un grupo de objetos que comparten características, condiciones y significado.
 
 Una clase está compuesta por tres elementos: nombre de la clase, atributos, funciones.
 * (+) Pública. Representa que se puede acceder al atributo o función desde cualquier lugar de la aplicación.
 * (-) Privada. Representa que se puede acceder al atributo o función únicamente desde la misma clase.
-* (#) Protegida. Representa que el atributo o función puede ser accedida
-</script></section><section data-markdown><script type="text/template">
+* (#) Protegida. Representa que el atributo o función puede ser accedida únicamente desde la misma clase o desde las 
+clases que heredan de ella (clases derivadas)
+
+----
+
 ![Clase](images/unidad5/clase_ej.jpg) ![Clase Ejemplo](images/unidad5/clase_ejemplo.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Relaciones
 <!-- .slide: style="font-size: 0.90em" -->
 * Una relación identifica una dependencia.
@@ -293,17 +320,21 @@ Una clase está compuesta por tres elementos: nombre de la clase, atributos, fun
 indicar un número, un rango y se utiliza n o * para identificar un número cualquiera.
   * Nombre de la asociación. En ocasiones se escribe una indicación de la asociación que ayuda a
 entender la relación que tienen dos clases. Suelen utilizarse verbos.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Relaciones
 ![Relaciones](images/unidad5/clases_relaciones.jpg)
 
-</script></section></section><section ><section data-markdown><script type="text/template">
+---
 ### Tipos de relaciones
 * Asociación.
 * Agregación.
 * Composición.
 * Herencia.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Asociación
 Este tipo de relación es el más común y se utiliza para representar dependencia semántica.
 Se representa con una simple línea continua que une las clases que están incluidas en la asociación.
@@ -313,7 +344,7 @@ Una mascota pertenece a una persona
 
 ![Persona-Mascota](images/unidad5/persona_mascota.jpg)
 
-</script></section></section><section  data-markdown><script type="text/template">
+---
 ### Agregación
 <!-- .slide: style="font-size: 0.90em" -->
 Es una representación jerárquica que indica a un objeto y las partes que componen ese objeto.
@@ -323,7 +354,7 @@ contiene las otras).
 
 ![Agregación](images/unidad5/mesas_tablas.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Composición
 <!-- .slide: style="font-size: 0.80em" -->
 Representa una relación jerárquica entre un objeto y las partes que lo componen de una forma más fuerte que en la
@@ -334,7 +365,7 @@ Se representa con una línea continua con un rombo relleno en la clase que es co
 
 ![Composicion](images/unidad5/composicion.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Herencia
 <!-- .slide: style="font-size: 0.90em" -->
 Este tipo de relaciones permiten que una clase (clase hija o subclase) reciba los atributos y métodos de
@@ -344,12 +375,12 @@ Se utiliza en relaciones “es un”.
 
 ![Herencia](images/unidad5/herencia.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Diagrama de clases para la clínica veterinaria
 
 ![Diagrama de Clases Veterinaria](images/unidad5/diagrama_clases_veterinaria.png)
 
-</script></section><section ><section data-markdown><script type="text/template">
+---
 ### DIAGRAMA DE SECUENCIA
 Es un diagrama de interacción.
 Permite:
@@ -359,37 +390,52 @@ Permite:
 * Comprender el diagrama de clases.
 
 Muestra como las instancias de clases interactúan mediante el.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 Está construido a partir de dos dimensiones:
 * Horizontal: Representa los objetos que participan en la secuencia.
 * Vertical: Representa la línea de tiempo sobre la que los elementos actúan.
 
 ![Diagrama de Secuencia: Dimensiones](images/unidad5/secuencia_dimensiones.png)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Objeto:
 * Representa a un participante en la interacción.
 * Puede ser instancia de una clase, un módulo, un grupo de clases, es decir un componente software que tiene una funcionalidad específica
 * Cada objeto representa solamente una instancia.
 * Se representa mediante un rectángulo que incluye un identificador en su interior
 * De cada uno sale una línea vertical hacia abajo que representa el tiempo en el que está presente.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ![Diagrama de Secuencia: Objetos](images/unidad5/secuencia_objetos.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Mensaje:
 * Representa el paso de un mensaje entre dos objetos o entre un objeto y sí mismo.
 * Flecha con el nombre del mensaje y los argumentos y que va desde el objeto que envía hacia el objeto que recibe.
 
 ![Diagramas de Secuencia: Mensajes](images/unidad5/secuencia_mensajes.jpg)
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ![Diagrama de Secuencia](images/unidad5/secuencia_ejemplo.png)
 
-</script></section></section><section  data-markdown><script type="text/template">
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -417,6 +463,10 @@ Está construido a partir de dos dimensiones:
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -429,12 +479,26 @@ Está construido a partir de dos dimensiones:
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true,"_":["slides"],"static":"public"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

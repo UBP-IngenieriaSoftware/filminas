@@ -1,27 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Casos de Pruebas</title>
-    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="^---" data-separator-vertical="^\r?\n----\r?\n$">
+          <textarea data-template>
+            
 
 # Ingeniería de Software
 ## Casos de Pruebas
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
-</script></section><section  data-markdown><script type="text/template">
+---
 <!-- .slide: style="font-size: 0.60em" -->
 <style>
 .grid-container2 {
@@ -70,7 +74,7 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 </div>
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 #### Casos de Prueba
 En la norma ISO 29119 (Estándar Internacional para pruebas de Software) se define caso de prueba como:
@@ -80,7 +84,7 @@ de prueba para cumplir con los objetivos de la prueba, incluyendo la implementac
 errores, el chequeo de la calidad y otras informaciones valiosas.
 
 
-</script></section><section ><section data-markdown><script type="text/template">
+---
 
 ## Plantilla de Casos de Pruebas
 <!-- .slide: style="font-size: 0.90em" -->
@@ -91,7 +95,9 @@ Los casos de prueba son parte fundamental de las pruebas de software y tienen va
 1. **Verificación de la calidad:** Los CP ayudan a garantizar que una aplicación o sistema funcione correctamente y 
 cumpla con los requisitos establecidos. Al ejecutar pruebas exhaustivas, se pueden detectar y corregir errores y 
 problemas antes de que lleguen a los usuarios finales.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Plantilla de Casos de Pruebas
 <!-- .slide: style="font-size: 0.80em" -->
 2. **Documentación:** Los CP actúan como documentación detallada de cómo se debe probar una funcionalidad. Esto es útil 
@@ -102,7 +108,9 @@ recursos a largo plazo.
 4. **Validación de cambios:** Cuando se realizan cambios en una aplicación o sistema, los CP existentes pueden utilizarse 
 para verificar que las modificaciones no hayan introducido nuevos errores y que las funcionalidades existentes sigan 
 funcionando como se espera.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ## Plantilla de Casos de Pruebas
 <!-- .slide: style="font-size: 0.80em" -->
 5. **Reproducción de errores:** Los CP permiten a los equipos de desarrollo y pruebas reproducir errores informados por 
@@ -112,16 +120,16 @@ Ayudan a mantener la coherencia en las pruebas y a garantizar que todas las func
 7. **Mejora de la confiabilidad:** Al realizar pruebas sistemáticas y controladas, se mejora la confiabilidad y 
 estabilidad del software, lo que reduce la probabilidad de fallos inesperados y garantiza una mejor experiencia para los usuarios.
 
-</script></section></section><section  data-markdown><script type="text/template">
+---
 
 ![Plantilla de Caso de Prueba](images/unidad8/plantilla_caso_de_prueba.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### A tener en cuenta...
 
 Los **casos de uso** y los **casos de prueba** NO son lo mismo.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### Caso de Uso
 <!-- .slide: style="font-size: 0.80em" -->
@@ -133,7 +141,7 @@ Describen las acciones que los usuarios pueden realizar en el sistema y cómo el
 * **Objetivos:** Los casos de uso ayudan a comprender los requisitos del sistema, la lógica del flujo de trabajo y la 
 interacción del usuario. También son útiles para la comunicación entre los miembros del equipo y los stakeholders del proyecto.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Caso de Prueba (Test Case)
 <!-- .slide: style="font-size: 0.80em" -->
 * **Definición:** Un caso de prueba es una descripción detallada de una condición o escenario específico que debe 
@@ -144,7 +152,7 @@ produce los resultados correctos bajo ciertas condiciones.
 * **Objetivos:** Los casos de prueba son una parte fundamental del proceso de pruebas de software. Ayudan a identificar 
 errores y problemas en el software y a garantizar que cumpla con los requisitos y las especificaciones.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Plantilla de casos de Prueba
 <!-- .slide: style="font-size: 0.70em" -->
 Idealmente debe contener los siguientes campos:
@@ -164,7 +172,7 @@ Idealmente debe contener los siguientes campos:
 * Comentarios
 * Resultado: ACEPTADO / NO ACEPTADO
 
-</script></section><section ><section data-markdown><script type="text/template">
+---
 ### Identificador de caso de uso e Identificador de la prueba
 <!-- .slide: style="font-size: 0.60em" -->
 El **ID** es una etiqueta o número único que se asigna a un CU ó Test en la documentación de un sistema de software. 
@@ -180,7 +188,9 @@ otros miembros del equipo o en el código fuente.
 permiten realizar un seguimiento más eficaz de los casos de uso o tests afectados por esos cambios.
 * **Facilitar la comunicación:** Los identificadores proporcionan un lenguaje común y estandarizado que facilita la 
 comunicación entre los miembros del equipo de desarrollo, los diseñadores, los probadores y otros interesados en el proyecto.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Identificador de caso de uso e Identificador de la prueba
 <!-- .slide: style="font-size: 0.90em" -->
 Un identificador de caso de uso puede ser una etiqueta alfanumérica única o un número, y a menudo se organiza de manera 
@@ -191,7 +201,7 @@ para los tests "TST-001", "TST-002".
 La elección del formato y la convención de nomenclatura dependen de las prácticas específicas de documentación adoptadas 
 por el equipo de desarrollo.
 
-</script></section></section><section ><section data-markdown><script type="text/template">
+---
 
 ### Nombre del Caso de Uso
 Sirve para identificar y describir brevemente el propósito o la funcionalidad que se está modelando en ese caso de uso 
@@ -199,7 +209,9 @@ específico.
 
 Se suele utilizar una etiqueta o título corto que ayuda a los miembros del equipo de desarrollo, probadores y otros 
 stakeholders del proyecto a comprender rápidamente de qué se trata el caso de uso. 
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Nombre del Caso de Uso
 <!-- .slide: style="font-size: 0.80em" -->
 Los principales propósitos del nombre son:
@@ -209,7 +221,9 @@ los miembros del equipo.
 * **Clarificación del Propósito:** El nombre del CU proporciona una descripción concisa del propósito o la funcionalidad 
 que el caso de uso representa. Esto ayuda a responder la pregunta "¿Qué hace este caso de uso?" sin necesidad de una 
 descripción detallada.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Nombre del Caso de Uso
 <!-- .slide: style="font-size: 0.80em" -->
 * **Comunicación Efectiva:** El nombre del CU actúa como un medio de comunicación eficiente al proporcionar un resumen 
@@ -220,7 +234,7 @@ cuando sea necesario.
 El nombre debe ser lo suficientemente descriptivo para que otros puedan entender su función sin tener que leer toda la 
 documentación detallada.
 
-</script></section></section><section  data-markdown><script type="text/template">
+---
 
 ### Descripción de la Prueba
 <!-- .slide: style="font-size: 0.70em" -->
@@ -235,102 +249,107 @@ software. Esto es útil para garantizar que todos los aspectos requeridos del so
 * **Organización:** Ayuda a mantener una estructura coherente y organizada en la documentación de los casos de prueba, 
 lo que facilita la gestión y la revisión de los mismos.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ### Informador
 Se especifica quién es la persona o el equipo que documentó la prueba a realizar. 
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Responsable
 Se especifica quién es la persona o el equipo encargado de ejecutar la prueba. Es importante para asignar la 
 responsabilidad de ejecutar y documentar la prueba.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Fecha de la Prueba
 Se registra cuándo se realizó la prueba. Esto es crucial para llevar un registro de cuándo se ejecutó el caso de prueba 
 y para rastrear el progreso del proceso de pruebas.
 En algunos sistemas habitual tener múltiples campos tipo fecha: Fecha de Creación, Fecha de Última Modificación, FechaS
 de ejecuciones, etc.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Prerrequisitos
 Los prerrequisitos enumeran las condiciones o configuraciones necesarias que deben estar en su lugar antes de ejecutar 
 el caso de prueba. Ayudan a garantizar que el entorno de prueba sea adecuado y que no falte ningún elemento necesario.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Entrada/s
 Este campo describe los datos de entrada que se utilizarán para ejecutar la prueba. Es importante especificar los 
 valores, archivos o información requerida para llevar a cabo la prueba.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Detalle de la Prueba
 El detalle de la prueba proporciona una descripción general de lo que se va a probar y los objetivos de la prueba. 
 Ofrece un contexto más amplio para comprender la prueba en su conjunto.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Detalle de lo que se Prueba
 Este campo se enfoca en los aspectos específicos o las características que se están probando en este caso de prueba en 
 particular. Ayuda a definir claramente el alcance de la prueba.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Resultado esperado
 Aquí se especifican los resultados que se anticipan cuando la prueba se ejecuta correctamente. Estos resultados deben 
 ser medibles y verificables.
 Suele adjuntarse capturas del diseño de pantalla para clarificar como debe visualizarse (UI), o esquemas de la respuesta
 del servicio.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Resultado obtenido
 Después de ejecutar la prueba, este campo se utiliza para registrar los resultados reales observados. Comparar el 
 resultado obtenido con el resultado esperado permite determinar si la prueba fue exitosa o no.
 Suele adjuntarse capturas de pantalla de cómo se visualiza la UI cuando se ejecuta la prueba.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Funciona / No Funciona / Requiere mantenimiento perfectivo
 Este campo indica si el caso de prueba funciona según lo esperado, no funciona (en caso de fallo) o si se requiere 
 realizar ajustes o mejoras en el software (mantenimiento perfectivo).
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Comentarios
 Los comentarios permiten agregar información adicional, aclaraciones o detalles relevantes relacionados con la ejecución 
 de la prueba. Pueden ser útiles para proporcionar contexto adicional o explicar situaciones específicas.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Resultado: ACEPTADO / NO ACEPTADO
 Al finalizar la ejecución de la prueba, este campo indica si el caso de prueba se considera aceptado (cumple con los 
 criterios de aceptación) o no aceptado (falló en algún aspecto).
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Cómo se suele realizar en la práctica?
 Se suele emplear **Jira**, **Azure** o cualquier herramienta de tickets, que permita crear incidencias de tipo **test**.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ![Jira 1](images/unidad8/jira1.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ![Jira 2](images/unidad8/jira2.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ![Jira Ejemplo 1](images/unidad8/jira-ejemplo1.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ![Jira Ejemplo 2](images/unidad8/jira-ejemplo2.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 
 ![Jira Ejemplo 3](images/unidad8/jira-ejemplo3.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -358,6 +377,10 @@ Se suele emplear **Jira**, **Azure** o cualquier herramienta de tickets, que per
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -370,12 +393,26 @@ Se suele emplear **Jira**, **Azure** o cualquier herramienta de tickets, que per
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true,"_":["slides"],"static":"public"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

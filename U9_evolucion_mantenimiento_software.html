@@ -1,27 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Evolución y Mantenimiento de Software</title>
-    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="^---" data-separator-vertical="^\r?\n----\r?\n$">
+          <textarea data-template>
+            
 
 # Ingeniería de Software
 ## Evolución y Mantenimiento de Software
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
-</script></section><section  data-markdown><script type="text/template">
+---
 <!-- .slide: style="font-size: 0.60em" -->
 <style>
 .grid-container2 {
@@ -61,7 +65,7 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 </div>
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Evolución y/o Mantenimiento
 * El desarrollo del software no se detiene cuando un sistema se entrega, continúa a lo largo de toda su vida. 
 * Después de distribuir un sistema, inevitablemente debe modificarse con la finalidad de mantenerlo útil.
@@ -71,20 +75,20 @@ Created by <i class="fab fa-telegram"></i>
   * Adaptarlo a cambios de software o hardware 
   * Mejora de rendimiento
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Evolución o Mantenimiento
 * **Evolución del software:** una sola organización es responsable tanto del desarrollo inicial del software
 como de su evolución posterior.
 * **Mantenimiento del software:** el desarrollo inicial del software y su evolución posterior es realizado por
 organizaciones diferentes.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 **El proceso de desarrollo de software se debe considerar
 como un proceso en espiral a lo largo de la vida del sistema.**
 
 ![Proceso de Desarrollo de Software](images/unidad9/proceso-desarrollo.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Proceso de evolución del software
 Las propuestas de cambio son el motor para la evolución de un sistema.
 
@@ -94,25 +98,25 @@ Provienen de:
 * Reportes de errores
 * Ideas para la mejora del software
 
-</script></section><section  data-markdown><script type="text/template">
+---
 **Los procesos de identificación de cambios y evolución del sistema son cíclicos y
 continúan a lo largo de la vida de un sistema.**
 
 ![Proceso de Desarrollo](images/unidad9/proceso-desarrollo2.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Proceso de evolución del software
 ![Proceso de evolución del software](images/unidad9/evolucion-de-software.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Implementación del cambio (ideal)
 ![Implementación del cambio](images/unidad9/implentar-cambio-ideal.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Implementación del cambio (reparación de emergencial)
 ![Implementación del cambio (reparación de emergencial)](images/unidad9/implementar-cambio-emergencia.jpg)
 
-</script></section><section ><section data-markdown><script type="text/template">
+---
 ### Leyes de Lehman
 1. **Cambio Continuo:** Los sistemas deben ser continuamente adaptados o se convierten progresivamente en menos 
 satisfactorios.
@@ -120,55 +124,61 @@ satisfactorios.
 mantenerla o reducirla.
 3. **Evolución prolongada del programa o Autorregulación:** El proceso de evolución de un sistema es autorregulado con 
 una distribución de las medidas del producto y del proceso cercana a la normal.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Leyes de Lehman
 4. **Conservación de la estabilidad organizacional:** La velocidad (y efectividad) de desarrollo de un sistema en 
 evolución permanece invariante durante su ciclo de vida.
 5. **Conservación de la familiaridad:** Cuando un sistema evoluciona, todos aquellos que están asociados a él deben 
 mantener un conocimiento de su contenido y comportamiento para tratar de conseguir una evolución satisfactoria.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Leyes de Lehman
 6. **Crecimiento continuo:** Las funcionalidades del sistema tienen que crecer constantemente para mantener la 
 satisfacción del usuario a lo largo de su ciclo de vida.
 7. **Reducción de la calidad:** La calidad de los sistemas comienza a disminuir a menos que se mantengan de forma 
 rigurosa y se adapten a los cambios en su entorno de funcionamiento.
-</script></section><section data-markdown><script type="text/template">
+
+----
+
 ### Leyes de Lehman
 8. **Realimentación del sistema:** El proceso de evolución del sistema es consecuencia de un proceso de retroalimentación 
 a diferentes niveles.
 
-</script></section></section><section  data-markdown><script type="text/template">
+---
 ### Leyes de Lehman
 ![Leyes de Lehman](images/unidad9/leyes-lehman.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Mantenimiento del software
 Es el proceso general de cambiar un sistema después de que éste se entregó.
 
 El término usualmente se aplica a software personalizado, en el que grupos de desarrollo
 separados intervienen antes y después de la entrega.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ![Mantenimiento del Software](images/unidad9/mantenimiento-del-software.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Los costos del Mantenimiento de software
 El mantenimiento del software toma una proporción más alta del presupuesto de TI que el nuevo desarrollo
 Dos tercios del presupuesto corresponden a mantenimiento y un tercio a desarrollo
 
-</script></section><section  data-markdown><script type="text/template">
+---
 La mayor parte del presupuesto de mantenimiento se destina a la
 implementación de nuevos requerimientos
 
 ![Grafico Circular](images/unidad9/grafico-circular.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Los costos del Mantenimiento de software
 Resulta más costoso agregar funcionalidad después de que un sistema
 está en operación, que implementar la misma funcionalidad durante el
 desarrollo.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Los costos del Mantenimiento de software
 * **Estabilidad del equipo:** Después la entrega, en general el equipo de desarrollo se separa.
 * **Calidad de desarrollo deficiente:** se ahorra esfuerzo durante el desarrollo aunque el software sea más difícil de 
@@ -176,17 +186,17 @@ cambiar en el futuro.
 * **Habilidades del personal:** El personal de mantenimiento con frecuencia es relativamente inexperto.
 * **Antigüedad y estructura del programa:** Conforme se realizan cambios al programa, su estructura tiende a degradarse.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Predicción del Mantenimiento de software
 Predecir qué cambios pueden proponerse al sistema y qué partes serán las más difíciles de mantener.
 
 Estimar los costos del mantenimiento durante cierto lapso de tiempo.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Predicción del Mantenimiento de software
 ![Estimar costos de mantenimiento](images/unidad9/estimar-costos-de-mantenimiento.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Predicción del Mantenimiento de software
 <!-- .slide: style="font-size: 0.80em" -->
 Se debe valorar:
@@ -199,29 +209,29 @@ se basan en características de un dominio estable.
 A medida que evolucionan los procesos empresariales se generan necesidades de cambio. Cuantos más procesos use un 
 sistema, habrá más demandas de cambio.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ![Tipos de mantenimiento](images/unidad9/tipos-de-mantenimiento.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ![Mantenimiento Preventivo](images/unidad9/matenimiento-preventivo.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ![Mantenimiento Correctivo](images/unidad9/mantenimiento-correctivo.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ![Mantenimiento Perfectivo](images/unidad9/mantenimiento-perfectivo.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ![Mantenimiento Adaptativo](images/unidad9/mantenimiento-adaptativo.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Actividades del Mantenimiento de software
 Las actividades de mantenimiento se agrupan en tres categorías funcionales:
 * **Comprensión del software y de los cambios a realizar (Comprender):** 
 Es necesario el conocimiento a fondo de la funcionalidad, objetivos, estructura interna y requisitos del software. 
 Alrededor del 50% de tiempo de mantenimiento se dedica a esta actividad.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Actividades del Mantenimiento de software
 * **Modificación del software (Corregir):** 
 Crear y modificar las estructuras de datos, la lógica de procesos, las interfaces y la documentación. Los
@@ -230,15 +240,20 @@ total de mantenimiento.
 * **Realización de pruebas (Comprobar):** 
 Realizar pruebas selectivas que nos aseguren la corección del software.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ![Tabla](images/unidad9/tabla.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## ¿Dudas, Preguntas, Comentarios?
-![DUDAS](images/pregunta.gif)</script></section></div>
+![DUDAS](images/pregunta.gif)
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -266,6 +281,10 @@ Realizar pruebas selectivas que nos aseguren la corección del software.
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -278,12 +297,26 @@ Realizar pruebas selectivas que nos aseguren la corección del software.
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true,"_":["slides"],"static":"public"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

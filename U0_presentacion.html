@@ -1,35 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Presentación de la materia</title>
-    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="^---" data-separator-vertical="^\r?\n----\r?\n$">
+          <textarea data-template>
+            
 
 # Ingeniería de Software
 ## Presentación de la Materia
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
-</script></section><section  data-markdown><script type="text/template">
-## Profesores
-### Ing. Alejandra Bosio
-malejandra.bosio@gmail.com
+---
+## Profesor
 
 ### Ing. Agustina Edmé Aliciardi
 edmealiciardi@gmail.com
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## UNIDADES
 
 **Unidad 1:** Procesos de Software
@@ -44,7 +46,7 @@ edmealiciardi@gmail.com
 
 **Unidad 6:** Diseño arquitectónico
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## UNIDADES
 
 **Unidad 7:** Diseño e implementación
@@ -57,13 +59,16 @@ edmealiciardi@gmail.com
 
 **Unidad 11:** Calidad del software
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## Libro:
 ![Book](images/book.png)
 “Ingeniería del Software: Un enfoque práctico 7ma ed.” de Roger Pressman
+& “Ingeniería del Software” de Ian Sommerville
 
-</script></section><section  data-markdown><script type="text/template">
+---
+
 ## Calendario
+
 | Semana | Unidad | Tema                                |
 |--------|--------|-------------------------------------|
 | 1      | 1      | Presentación - Procesos de Software |
@@ -74,8 +79,10 @@ edmealiciardi@gmail.com
 | 6      | 6      | Diseño Arquitectónico               |
 | 7      |        | Dudas - Preguntas - Parcial         |
 
-</script></section><section  data-markdown><script type="text/template">
+---
+
 ## Calendario
+
 | Semana | Unidad | Tema                                   |
 |--------|--------|----------------------------------------|
 | 8      | 7      | Diseño e Implementación                |
@@ -86,30 +93,35 @@ edmealiciardi@gmail.com
 | 13     |        | Dudas - Preguntas - Parcial            |
 | 14     |        | Recuperatorio - Cierre de la materia   |
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## Forma de Evaluación: Cursado
 * 1er parcial teórico
 * 2do parcial teórico
 * Entrega de trabajo grupal
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## Forma de Evaluación: FINAL
 FINAL:
 * Preguntas sobre el trabajo grupal
 * Preguntas similares de la guía de trabajos prácticos
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## Regularidad
 * Asistencia del 70% en Clases Teórico-Prácticas
 * Parciales y trabajo grupal aprobados (>=4)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -137,6 +149,10 @@ FINAL:
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -149,12 +165,26 @@ FINAL:
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true,"_":["slides"],"static":"public"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

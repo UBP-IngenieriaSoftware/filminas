@@ -1,49 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Diagrama de Clases</title>
-    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="^---" data-separator-vertical="^\r?\n----\r?\n$">
+          <textarea data-template>
+            
 
 # Ingeniería de Software
 ## UML: Diagrama de Clases
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Workflow de Análisis
 Ayuda a definir y especificar el sistema a ser construido. En esta fase se analizan, refinan y estructuran los requisitos 
 con el fin de llegar a una mayor comprensión de los mismos.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Workflow de Análisis
 * Crean modelos que capturan el comportamiento deseado del sistema (Se solapa con los requerimientos)
 * Van de la mano con los requerimientos, los clarifica y los completa.
 * Se dejan los detalles para el diseño.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Worflow de Análisis: Características
 * El limite entre el análisis y diseño es difuso
 * Generan dos artefactos claves:
   * Clases de análisis: Modelan conceptos claves del dominio
   * Realizaciones de casos de Uso: Muestran cómo las instancias de análisis pueden interactuar para realizar el comportamiento del sistema.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 * Solo deben crearse clases relacionadas al dominio y no al diseño de la solución (ejemplo: “Clase de Comunicaciones”)
 * Decisiones de implementación es parte del “Diseño e Implementación”.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Reglas para el análisis
 <!-- .slide: style="font-size: 0.90em" -->
 * Siempre se habla en términos del negocio.
@@ -54,21 +58,21 @@ con el fin de llegar a una mayor comprensión de los mismos.
 * Explorar la herencias si parece haber una jerarquía natural de abstracciones
 * Siempre pregúntense si el modelo es de utilidad para otros (Costo vs. Beneficio)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## CLASES DE ANÁLISIS
 * Representan una abstracción en el dominio del problema
 * Deberían mapearse con conceptos de negocio del mundo real (Cliente, producto, cuenta).
 * Se intentan clarificar los conceptos, se aclara el dominio
 * Las clases de análisis pueden resultar en 1 o más clases de diseño
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Anatomía de una Clase de Análisis
 * Presentan atributos de muy “alto nivel”
 * Las operaciones de la clase de análisis especifican en, en “alto nivel”, los servicios claves que debe ofrecer.
 * Se evitan detalles de implementación
 * Se capturan ideas principales, de “alto nivel”.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Datos mínimos de una clase de análisis
 * Nombre
 * Atributos
@@ -77,7 +81,7 @@ con el fin de llegar a una mayor comprensión de los mismos.
 * Estereotipos (Ayudan a complementar el lenguaje)
 * Valores etiquetados
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### ¿Qué hace una buena clase de Análisis?
 * Su nombre refleja su intención
 * Modela un elemento específico del dominio del problema
@@ -86,7 +90,7 @@ con el fin de llegar a una mayor comprensión de los mismos.
 * Alta cohesión
 * Bajo acoplamiento
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Reglas generales
 * De 3 a 5 responsabilidades por clase
 * Ninguna clase permanece sola (deben trabajar en conjunto con otras).
@@ -94,7 +98,7 @@ con el fin de llegar a una mayor comprensión de los mismos.
 * Cuidado con clases omnipotentes
 * Evite arboles de herencia muy profundos.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Encontrar Clases
 * No existe un algoritmo sencillo para encontrar clases de análisis correctas.
 * Existen técnicas probadas y testeadas que llevan hacia “una buena respuesta”.
@@ -102,7 +106,7 @@ con el fin de llegar a una mayor comprensión de los mismos.
   * Encontrar clases al utilizar análisis CRC
   * Encontrar clases al utilizar los estereotipos RUP
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Nombre/Verbo
 * Técnica que permite inferir clases de análisis
 * Se basa en el análisis de textos
@@ -112,7 +116,7 @@ con el fin de llegar a una mayor comprensión de los mismos.
   * Nombres y frases nominales -> Clases y Atributos
   * Verbos o frases verbales -> Responsabilidades
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Análisis CRC
 * CRC= Clase, Responsabilidad, Colaboradores
 * Emplea el como herramienta los “post-it”
@@ -122,7 +126,7 @@ con el fin de llegar a una mayor comprensión de los mismos.
   * Fase 1: Tormenta de ideas: Recopilar información
   * Fase 2: Analizar información
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Estereotipos RUP
 * Se consideran tres tipos de clases
 * Es empleada como complemento de las otras
@@ -131,7 +135,7 @@ con el fin de llegar a una mayor comprensión de los mismos.
   * **control**: Una clase que encapsula comportamiento especifico de caso de uso
   * **entity**: Una clase que se utiliza para modelar información persistente sobre algo
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Clases Boundary
 * Estas clases existen en el límite del sistema
 * Se comunican con los actores externos
@@ -140,13 +144,13 @@ con el fin de llegar a una mayor comprensión de los mismos.
   * Clases de interfaz de sistema (Actor sistema)
   * Clases de interfaz de dispositivo (Actor dispositivo)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Clases Control
 * Son clases controladoras
 * Se encargan de la coordinación del comportamiento del sistema
 * Útil cuando el comportamiento no se puede repartir simplemente entre los otros estereotipos.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Clases entidad
 * Modelan información sobre algo
 * Tienen comportamiento sencillo y acotado
@@ -155,7 +159,7 @@ con el fin de llegar a una mayor comprensión de los mismos.
 * Proporcionan y aceptan información de clases límite.
 * A menudo son persistentes, íntimamente relacionadas con el modelo de datos.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Otras técnicas
 Fuentes potenciales de clases de análisis:
 * Objetos físicos ejemplo: Avión, gente, y hoteles, etc
@@ -164,7 +168,7 @@ Fuentes potenciales de clases de análisis:
 * Entidades conceptuales que justifiquen a nivel de
 abstracción cohesiva su creación “CuentaBancaria”, “ProgramaFidelidad”
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Relaciones
 * Conexiones significativas entre elementos de modelado
 * Es la forma en que UML conecta elementos
@@ -172,21 +176,21 @@ abstracción cohesiva su creación “CuentaBancaria”, “ProgramaFidelidad”
   * Entre Casos de Uso
   * Entre Actores
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Vínculos
 * En un programa OO, tenemos Objetos que colaboran para dar una cierta funcionalidad.
 * Las relaciones entre objetos se conocen como “vínculos”, estos son dinámicos.
 * Es posible verlos en los “Diagramas de Objetos”
 * Muestra objetos y sus relaciones (vínculos) en un punto en el tiempo.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Asociaciones
 * Son relaciones entre clases
 * Análogo a los vínculos (conectan clases)
 * A nivel de análisis, las asociaciones son “básicas”.
 * Las asociaciones “avanzadas” se ven en durante el diseño.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Atributos de las relaciones
 * Las relaciones pueden tener asociadas:
   * Nombre
@@ -196,27 +200,27 @@ abstracción cohesiva su creación “CuentaBancaria”, “ProgramaFidelidad”
 * Sirven como complementos, y deben aclarar el diagrama.
 * Si no suma al entendimiento, no se debería agregar.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Nombres
 * Frases verbales, indican acción del objeto fuente sobre el objeto destino.
 * Ejemplo: Empresa ”emplea” Persona
 * Roles que los objetos instancias desempeñan cuando los objetos se vinculan.
 * Ejemplo: “empleador”- “empleado”
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Multiplicidad
 * Restricción que sirve para especificar cuantos objetos pueden participar en una relación determinada.
 * Se especifica cómo una lista de intervalos por coma:
   * mínimo… máximo - Deben ser enteros, o expresiones equivalentes
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Navegabilidad
 * Nos muestra que es posible pasar desde un objeto de la clase fuente a uno o más objetos de la clase destino.
 * Permite minimizar el acoplamiento entre clases
 * Se indica con la punta de flecha en la asociación
 * A nivel de lenguaje, el objeto fuente, tiene una “referencia” al objeto destino. Comúnmente se traducen a atributos
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Casos especiales
 Clases de asociación:
 * Sirven para acomodar atributos de las relaciones  entre relaciones “muchos a muchos”.
@@ -227,21 +231,21 @@ Asociaciones cualificadas:
 * Ilustra como navegar hasta objetos específicos
 * Se agrega un “calificador”
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Dependencias
 * Indica una relación entre dos o más elementos
 * Un cambio en un elemento (proveedor) puede afectar a otro elemento (cliente)
 * “El cliente depende del proveedor”
 * Ejemplo: Puede pasar un objeto de una clase como un parámetro a una operación de otra clase.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Tipos de dependencias
 Existen tres tipos básicos de dependencias:
 * Uso
 * Abstracción
 * Permiso
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### De Uso
 El cliente utiliza alguno de los servicios del proveedor para implementar su propio comportamiento.
 
@@ -251,18 +255,18 @@ Tipos:
 * **parameter**: El proveedor es un paraemtro de la operación cliente
 * **send**: El cliente es una operación que envía el proveedor
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### De abstracción
 Modelan dependencias entre elementos con diferentes niveles de abstracción:
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### De abstracción: Tipos
 * **trace**: Sirven para indicar que el proveedor y el cliente son conceptualmente lo mismo, pero están en diferentes modelos.
 * **substitute**: El cliente se puede sustituir por el proveedor en tiempo de ejecución. Se deben ajustar contratos e interfaces.
 * **refine**: Permite especificar dependencias dentro del mismo modelo.
 * **derive**: Permite mostrar que un elemento se puede derivar de otro.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### De permiso
 Dan la posibilidad que un elemento acceda a otro.
 
@@ -271,39 +275,39 @@ Tipos:
 * **import**: Fusiona el espacio de nombres del proveedor, con el del cliente
 * **permit**: “Violación de la encapsulación en forma controlada”. Se acceden a todo el elemento proveedor sin tener en cuenta la visibilidad.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 # Herencia y Polimorfismo
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Generalización
 * Es la relación entre un elemento mas general y uno más específico
 * Obedecen el principio de sustitución
   * “Se puede emplear el elemento más específico en cualquier lugar que se espere el elemento más general sin romper el sistema”
 * Debemos tener en cuenta los “niveles de abstracción” (Jaguar-Camión)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Herencia
 * En una jerarquía de generalización, implícitamente se indica que las subclases “heredan” todas las características de sus
 súper clases.
 * Estas también pueden añadir nuevas características y anular operaciones
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Operaciones y clases abstractas
 * Son clases que no podemos “instanciar”
 * Operaciones que no podemos “invocar”
 * Existen cuando preferiríamos diferir la implementación de una operacion a una subclase
   * Ejemplo: Operación dibujarFigura() de la clase “Figura”
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Polimorfismo
 * Polimorfismo significa “muchas formas”
 * Son operaciones que tienen varias implementaciones posibles
 * Una operación puede tener “muchas formas”, por lo que se considera una operación polimórfica
 
-</script></section><section  data-markdown><script type="text/template">
+---
 # PAQUETES DE ANALISIS
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### ¿Qué es un paquete?
 * Un paquete es un elemento de agrupación de UML
 * Es un contenedor para elementos de modelo
@@ -311,7 +315,7 @@ súper clases.
 * Permite organizar elementos de modelo y diagramas en grupos.
 * Mecanismo lógico de agrupación
 
-</script></section><section  data-markdown><script type="text/template">
+---
 * Sintaxis sencilla
 * Los paquetes de análisis deben contener:
   * UC
@@ -321,20 +325,25 @@ súper clases.
   * (+): Pública
   * (-): Privada
 
-</script></section><section  data-markdown><script type="text/template">
+---
 * Definen un espacio de nombres
 * Es posible anidar paquetes (se puede dibujar de dos maneras)
 * Se pueden definir dependencias entre paquetes (similar a las dependencias entre clases)
 * Se pueden generalizar
 * Se deben evitar dependencias cíclicas (dos alternativas, fusionar o dividir)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -362,6 +371,10 @@ súper clases.
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -374,12 +387,26 @@ súper clases.
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true,"_":["slides"],"static":"public"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

@@ -1,27 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>UML Practico</title>
-    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="^---" data-separator-vertical="^\r?\n----\r?\n$">
+          <textarea data-template>
+            
 
 # Ingeniería de Software
 ## UML: Practico
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
-</script></section><section  data-markdown><script type="text/template">
+---
 <!-- .slide: style="font-size: 0.60em" -->
 <style>
 .grid-container2 {
@@ -53,25 +57,25 @@ Created by <i class="fab fa-telegram"></i>
 
 </div>
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## Libro:
 ![Book](images/book.png)
 “Ingeniería del Software: Un enfoque práctico 7ma ed.” de Roger Pressman
 Apéndice 1: Introducción a UML
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### UML
 Significa **Lenguaje de Modelado Unificado**, y es un lenguaje estándar para escribir diseños de software.
 
 El UML puede usarse para visualizar, especificar, construir y documentar los artefactos de un sistema de software.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### UML: Caracteristicas
 * Lenguaje Unificado de Modelado
 * Modelo Visual para sistemas
 * No tiene relacionado ninguna metodología
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Diagramas UML
 <!--http://www.softwero.com/2017/08/los-13-diagramas-uml-y-sus-componentes-1.html-->
 
@@ -103,13 +107,13 @@ El UML puede usarse para visualizar, especificar, construir y documentar los art
 13.Diagrama de Descripción de Interacción
 </div></div>
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Diagramas UML
 Suelen clasificarse en:
 * Diagramas de Estructura
 * Diagramas de Comportamiento
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### Diagramas de Estructura
 * Diagrama de clases
 * Diagrama de Objetos
@@ -120,13 +124,18 @@ Suelen clasificarse en:
 * Diagrama de Casos de Uso
 * Diagrama de Máquinas de Estado
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -154,6 +163,10 @@ Suelen clasificarse en:
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -166,12 +179,26 @@ Suelen clasificarse en:
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true,"_":["slides"],"static":"public"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>

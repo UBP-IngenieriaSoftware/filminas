@@ -1,27 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <title>Diseño Arquitectónico</title>
-    <link rel="shortcut icon" href="./favicon.ico"/>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
     <link rel="stylesheet" href="./dist/reveal.css" />
     <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
 
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
   </head>
   <body>
     <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+      <div class="slides">
+        <section data-markdown data-separator="^---" data-separator-vertical="^\r?\n----\r?\n$">
+          <textarea data-template>
+            
 
 # Ingeniería de Software
 ## Diseño Arquitectónico
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
-</script></section><section  data-markdown><script type="text/template">
+---
 <!-- .slide: style="font-size: 0.60em" -->
 <style>
 .grid-container2 {
@@ -62,20 +66,20 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 </div>
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### ARQUITECTURA DE SOFTWARE
 * El diseño arquitectónico es un proceso de diseño que permite la identificación de los
 sub-sistemas que componen un sistema y su comunicación
 * El resultado de este proceso de diseño es una descripción de la arquitectura de software.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### DISEÑO ARQUITECTÓNICO
 * Una fase temprana del proceso de diseño del sistema.
 * Representa el vínculo entre los procesos de especificación y diseño.
 * Suelen llevarse a cabo en paralelo con las actividades de algunas especificaciones.
 * Se trata de identificar los principales componentes del sistema y sus comunicaciones.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### VENTAJAS DE LA ARQUITECTURA EXPLÍCITA
 * **Comunicación entre los stakeholders**: La arquitectura puede ser utilizada como un foco de discusión del sistema 
 por los stakeholders.
@@ -84,7 +88,7 @@ hacer frente a sus requerimientos no funcionales es posible.
 * **Reutilización a gran escala**: La arquitectura puede ser reutilizable a través
 de una variedad de sistemas.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### LA ARQUITECTURA Y CARACTERÍSTICAS DEL SISTEMA
 * **Rendimiento:** Reducir al mínimo las operaciones de comunicaciones. Uso de grano grueso en lugar de
 componentes de grano fino.
@@ -92,7 +96,7 @@ componentes de grano fino.
 * **Disponibilidad:** Incluir componentes redundantes y los mecanismos de tolerancia a fallos.
 * **Mantenibilidad:** Uso de grano fino, los componentes reemplazables.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### ESTRUCTURA DEL SISTEMA
 * Concerniente a la descomposición del sistema en sub-sistemas.
 * El diseño arquitectónico se expresa normalmente como un diagrama de bloques que presentan un
@@ -100,24 +104,24 @@ panorama general de la estructura del sistema.
 * Modelos más específicos muestran cómo los sub-sistemas comparten los datos, se distribuyen y la
 interfaz con los demás también pueden ser desarrollados.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### SISTEMA DE CONTROL DE ROBOT DE EMBALAJE
 
 ![Robot de Embalaje](images/unidad6/robot-de-embalaje.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### BOX Y DIAGRAMAS
 * Muy abstracto - que no muestran la naturaleza de los componentes ni las relaciones de las
 propiedades visibles externamente de los sub-sistemas.
 * Sin embargo, útil para la comunicación con las partes interesadas y para la planificación de proyectos.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### DECISIONES DE DISEÑO ARQUITECTÓNICO
 * Diseño arquitectónico es un proceso creativo, por lo que el proceso es diferente dependiendo del
 tipo de sistema que se está desarrollado.
 * Sin embargo, es común una serie de decisiones, en todos los procesos de diseño.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### DECISIONES DE DISEÑO ARQUITECTÓNICO
 * Existe una arquitectura de aplicaciones genéricas que se pueden utilizar?
 * Cómo se distribuirá el sistema?
@@ -128,19 +132,19 @@ tipo de sistema que se está desarrollado.
 * Cómo el diseño arquitectónico se evaluará?
 * Cómo debe ser documentada la arquitectura?
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### REUTILIZACIÓN DE LA ARQUITECTURA
 * Sistemas en el mismo dominio a menudo tienen arquitecturas similares que reflejan conceptos del dominio.
 * La aplicación de líneas de producción se construye en torno a un núcleo con arquitectura
 particular, con variantes que satisfagan las necesidades del cliente.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### ESTILOS ARQUITECTÓNICOS
 * El modelo arquitectónico de un sistema puede ajustarse a un modelo genérico o estilo arquitectónico.
 * La conciencia de estos estilos puede simplificar el problema de la definición de arquitecturas de sistemas.
 * Sin embargo, la mayoría de los grandes sistemas son heterogéneos y no siguen un mismo estilo arquitectónico.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### MODELOS ARQUITECTÓNICOS
 <!-- .slide: style="font-size: 0.90em" -->
 * Utilizarse para documentar un diseño arquitectónico.
@@ -150,17 +154,17 @@ particular, con variantes que satisfagan las necesidades del cliente.
 * Modelo de relaciones, como un modelo de flujo de datos que muestra las relaciones de sub-sistemas.
 * Modelo de distribución que muestra cómo los sub-sistemas se distribuyen a través de computadoras.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### MODELO VISTA-CONTROLADOR
 
 ![Modelo Vista-Controlador](images/unidad6/modelo-vista-controlador.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### APLICACION WEB CON ARQUITECTURA MVC
 
 ![Arquitetcura MVC](images/unidad6/arquitetura-mvc.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### EL MODELO REPOSITORIO
 * Sub-sistemas de intercambio de datos. Esto puede hacerse de dos maneras:
   * Datos compartidos se lleva a cabo en un repositorio o base de datos central y puede ser visitada por todos
@@ -168,12 +172,12 @@ los sub-sistemas;
   * Cada sub-sistema mantiene su propia base de datos y pasa datos explícitamente a otros subsistemas.
 * Cuando grandes cantidades de datos sean compartidos, el modelo de repositorio compartido es más comúnmente utilizado.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### ARQUITECTURA DE REPOSITORIO IDE
 
 ![Repositorio IDE](images/unidad6/repositorio-IDE.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### MODELO REPOSITORIO CARACTERÍSTICAS
 **Ventajas**
 * Manera eficaz de compartir grandes cantidades de datos;
@@ -181,7 +185,7 @@ los sub-sistemas;
 copia de seguridad, seguridad, etc
 * Un modelo a compartir se publica como el esquema del repositorio.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### MODELO REPOSITORIO CARACTERÍSTICAS
 **Desventajas**
 * Sub-sistemas deben ponerse de acuerdo sobre un modelo repositorio de datos. Inevitablemente, un compromiso;
@@ -189,7 +193,7 @@ copia de seguridad, seguridad, etc
 * No hay lugar para las políticas de gestión específicas;
 * Difícil de distribuir de manera eficiente.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### MODELO CLIENTE-SERVIDOR
 * Sistema distribuido que muestra cómo el modelo de datos y procesamiento se distribuye a través
 de una gama de componentes.
@@ -198,19 +202,19 @@ impresión, gestión de datos, etc
 * Conjunto de clientes que piden a éstos los servicios.
 * Red que permite a los clientes acceder a los servidores.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### BIBLIOTECA DE IMÁGENES Y PELÍCULAS
 
 ![Biblioteca de Imgágenes y películas](images/unidad6/imagenes-peliculas.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### CLIENTE-SERVIDOR CARACTERÍSTICAS
 **Ventajas**
 * Distribución de datos es sencilla;
 * Hace un uso eficaz de los sistemas en red. Puede requerir hardware más barato;
 * Fácil añadir nuevos servidores o actualizar los servidores existentes.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### CLIENTE-SERVIDOR CARACTERÍSTICAS
 **Desventajas**
 * No hay un modelo de datos compartidos, así que los sub-sistemas utilizan diferentes datos de la organización.
@@ -219,7 +223,7 @@ Intercambio de datos puede ser ineficaz;
 * No hay registro central de nombres y servicios - que puede ser difícil de averiguar qué servidores y servicios están
 disponibles.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### MODELO DE CAPAS
 * Se utiliza para modelar la interacción de sub-sistemas.
 * Organiza el sistema en un conjunto de capas (o máquinas abstractas) cada uno de los cuales
@@ -227,69 +231,74 @@ provee un conjunto de servicios.
 * Apoya el desarrollo gradual de sub-sistemas en diferentes capas. Cuando una capa cambia, sólo
 la capa adyacente se ve afectada.
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### SISTEMA DE GESTIÓN
 
 ![Sistema de Gestión](images/unidad6/sistema-gestion.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### SISTEMA DE BIBLIOTECA
 
 ![Sistema de Biblioteca](images/unidad6/sistema-biblioteca.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### MODELO DE TUBERIA Y FILTRO
 * Cada componente de procesamiento (filtro) es discreto y realiza un tipo de transformación de datos.
 * Los datos fluyen (como en una tubería) de un componente a otro para su procesamiento.
 * Se utiliza en aplicaciones de procesamiento de datos (tanto basadas en lotes como en transacciones),
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### MODELO DE TUBERIA Y FILTRO
 
 ![Modelo de Tubería y Filtro](images/unidad6/modelo_tuberia-filtro.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### THE STRUCTURE OF TRANSACTION PROCESSING APPLICATIONS
 
 ![Estructura de Transacciones de Procesamiento de Aplicaciones](images/unidad6/arquitetcura-procesamiento.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### THE SOFTWARE ARCHITECTURE OF AN ATM SYSTEM
 
 ![ATM](images/unidad6/ATM.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### LAYERED INFORMATION SYSTEM ARCHITECTURE
 
 ![Arquitectura de Capas](images/unidad6/capas.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### THE ARCHITECTURE OF THE MHC-PMS
 
 ![MHC-PMS](images/unidad6/MHC-PMS.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### THE ARCHITECTURE OF A LANGUAGE PROCESSING SYSTEM
 
 ![Lenguaje de Procesamiento del Sistema](images/unidad6/arquitetcura-procesamiento.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### A PIPE AND FILTER COMPILER ARCHITECTURE
 
 ![Arquitetcura de Tubería y Filtro](images/unidad6/arquitetcura-tuberia-filtro.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ### REPOSITORY ARCHITECTURE FOR A LANGUAGE PROCESSING SYSTEM
 
 ![Arquitetcura de Repositorio para un sistema de Procesamiento de Lenguaje](images/unidad6/procesamiento-de-aplicaciones.jpg)
 
-</script></section><section  data-markdown><script type="text/template">
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
-</script></section></div>
+
+          </textarea>
+        </section>
+      </div>
     </div>
 
     <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
 
     <script src="./plugin/markdown/markdown.js"></script>
     <script src="./plugin/highlight/highlight.js"></script>
@@ -317,6 +326,10 @@ la capa adyacente se ve afectada.
         history: true,
         center: true,
         transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
         plugins: [
           RevealMarkdown,
           RevealHighlight,
@@ -329,12 +342,26 @@ la capa adyacente se ve afectada.
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true,"_":["slides"],"static":"public"}, queryOptions);
     </script>
 
 
     <script>
       Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
     </script>
   </body>
 </html>
