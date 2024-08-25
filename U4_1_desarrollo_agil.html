@@ -21,7 +21,7 @@
             
 
 # Ingeniería de Software
-## Desarrollo Agil de Software
+## Desarrollo Ágil de Software
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -72,19 +72,24 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 
 ---
-### Desarrollo rápido de software
+### Desarrollo ágil de software
 <!-- .slide: style="font-size: 0.80em" -->
 * El rápido desarrollo y la entrega son ahora los
-requisitos mas importantes para los sistemas de software
-  * Los requisitos de las empresas cambian rapidamente y es
+requisitos más importantes para los sistemas de software
+  * Los requisitos de las empresas cambian rápidamente y es
 prácticamente imposible producir un conjunto de requerimientos de software estable.
   * El Software tiene que evolucionar rápido para reflejar los cambios en las necesidades del negocio.
-* Desarrollo rápido de software
-  * Especificación, diseño e implementación estan intercalados
-  * El sistema está desarrollado como una serie de versiones con las
-partes interesadas involucradas en la evaluación de versiones
-  * Las interfaces del usuario se desarrollan a menudo utilizando un
-IDE y herramientas gráficas
+
+---
+### Desarrollo ágil de software
+<!-- .slide: style="font-size: 0.90em" -->
+Aunque existen muchos enfoques para el desarrollo ágil, todos comparten ciertas características:
+1. Especificación, diseño e implementación estan entrelazados
+2. El sistema se desarrolla en diferentes versiones. Se pueden proponer cambios y nuevos requerimientos en versiones posteriores.
+3. Las interfaces del usuario se desarrollan a menudo utilizando un IDE y herramientas gráficas
+4. Se emplea desarrollo incremental
+5. Se involucra al cliente en el desarrollo
+6. Poca documentación
 
 ---
 ### Métodos Ágiles
@@ -96,28 +101,29 @@ creación de métodos ágiles. Estos métodos:
   * Se basan en un enfoque iterativo para el desarrollo de software
   * Tienen la intencion de ofrecer software de trabajo de forma rápida y
 evolucionar rápidamente para satisfacer las cambiantes necesidades.
-* El objetivo de los métodos agiles es reducir los gastos
+* El objetivo de los métodos ágiles es reducir los gastos
 generales del proceso de software (por ejemplo, limitando la
 documentación) y ser capaces de responder rápidamente a las
 necesidades cambiantes sin rehacer trabajo de manera
 excesiva
 
 ---
-### Manifiesto Ágil
-Estamos descubriendo mejores formas para desarrollar software, al hacerlo y al ayudar a
-otros a hacerlo. Gracias a este trabajo llegamos a valorar:
+#### Manifiesto Ágil: Valores
 
-**Individuos e interacciones** sobre procesos y herramientas
-**Software funcionando** sobre documentación extensiva
-**Colaboración con el cliente** sobre negociación contractual
-**Respuesta ante el cambio** sobre seguir un plan
-
-**Esto es, aunque valoramos los elementos de la
-derecha, valoramos más los de la izquierda.**
+![Valores Agile](images/unidad4/valores-agile.png)
 
 ---
+### Métodos Ágiles: Ejemplos
+* Programación Extrema (Beck)
+* Scrum (Cohn, Schwaber, Beedle)
+* Crystal (Cockburn)
+* ASD - Desarrollo de Software Adaptativo (Highsmith)
+* DSDM - Desarrollo de SIstemas Dinámicos (Stapleton)
+* FDD - Desarrollo dirigido por características (Palmer y Felsing)
 
-<!-- .slide: style="font-size: 0.60em" -->
+
+---
+### Principios de los métodos ágiles
 
 <!--
 | Principio | Descripción                                                                                                                                                                                     |
@@ -186,6 +192,22 @@ no hay muchas reglas y regulaciones externas que afectarán el software.
 **Pueden surgir problemas si el equipo de desarrollo original no puede mantenerse.**
 
 ---
+
+### Ejercicio
+<!-- .slide: style="font-size: 0.90em" -->
+De los siguientes sistema, piense que metodología se adapta mejor a su desarrollo, ágil o dirigida por plan:
+1. Sistema de Control de Tráfico Aéreo <!--cascada-->
+2. Aplicación Móvil de Redes Sociales <!--ágil-->
+3. Sistema de Gestión de Historias Clínicas Electrónicas (HCE) <!--cascada-->
+4. Sitio Web de Comercio Electrónico para una Startup <!--ágil-->
+5. Software de Navegación para Coches Autónomos <!--cascada-->
+6. Aplicación para la Gestión de Proyectos en una Empresa <!--ágil-->
+7. Sistema de Control de Calidad en una Planta de Manufactura <!--cascada-->
+8. Plataforma de Educación en Línea <!--ágil-->
+
+<img src="images/question.png" style="float: right; position: absolute">
+
+---
 ### Desarrollo guiado por plan y el desarrollo ágil
 <!-- .slide: style="font-size: 0.80em" -->
 #### Desarrollo guiado por plan:
@@ -225,7 +247,8 @@ sistema al equipo de soporte.
   * Si el equipo de desarrollo se distribuye o si parte del desarrollo se subcontrata, entonces son necesarios los 
 documentos de diseño para comunicar a los equipos de desarrollo.
 
----
+----
+
 ### Cuestiones técnicas, humanas y organizacionales
 <!-- .slide: style="font-size: 0.80em" -->
 * ¿Hay cuestiones culturales o de organización que puedan afectar al desarrollo del sistema?
@@ -302,14 +325,15 @@ Extreme Programming (XP) :
 </tbody>
 </table>
 
----
+----
+
 ### Prácticas de Extreme programming
 <!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Principio o práctica           | Descripción                                                                                                                                                                                                                                                                                               |
 |--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Programación en pares          | Los desarrolladores trabajan en parejas , revisando el trabajo mutuamente y dandose apoyo para hacer siempre un buen trabajo.                                                                                                                                                                             |
-| Propiedad colectiva del codigo | La pareja de desarrolladores trabaja en todas las áreas del sistema, para que no queden islas de conocimiento desarrolladas y todos los desarrolladores asumen responsabilidad por todo el código. Nadie puede cambiar nada.                                                                              |
+| Propiedad colectiva del código | La pareja de desarrolladores trabaja en todas las áreas del sistema, para que no queden islas de conocimiento desarrolladas y todos los desarrolladores asumen responsabilidad por todo el código. Nadie puede cambiar nada.                                                                              |
 | Integración continua           | Tan pronto como el trabajo en una tarea esta completo, es integrado en el sistema. Luego de cada integración, se corren todas las pruebas unitarias.                                                                                                                                                      |
 | Ritmo sostenible               | Grandes cantidades de horas extras no se consideran aceptables como el efecto neto es a menudo para reducir la calidad del código y mediana productividad                                                                                                                                                 |
 | Cliente en el sitio            | Un representante de los usuarios finales del sistema (el cliente) debe estar disponible a tiempo completo para el equipo de XP. En un proceso de programación extrema, el cliente es miembro del equipo de desarrollo y es responsable de llevar requisitos del sistema para el equipo de implementación. |
@@ -327,7 +351,7 @@ Extreme Programming (XP) :
 <td>Los desarrolladores trabajan en parejas , revisando el trabajo mutuamente y dandose apoyo para hacer siempre un buen trabajo.</td>
 </tr>
 <tr>
-<td>Propiedad colectiva del codigo</td>
+<td>Propiedad colectiva del código</td>
 <td>La pareja de desarrolladores trabaja en todas las áreas del sistema, para que no queden islas de conocimiento desarrolladas y todos los desarrolladores asumen responsabilidad por todo el código. Nadie puede cambiar nada.</td>
 </tr>
 <tr>
@@ -350,26 +374,29 @@ Extreme Programming (XP) :
 ### Escenarios de los requerimientos
 * En XP, el cliente o usuario es parte del equipo y es responsable de tomar decisiones sobre los requisitos
 * Solicitudes de los usuarios se expresan como escenarios o historias del usuario.
-* Las historias de Usuario se dividen y plasman en tareas. Estas tareas son la base del calendario y de la estimacion de los costos.
+* Las historias de Usuario se dividen y plasman en tareas. Estas tareas son la base del calendario y de la estimación de los costos.
 * El cliente elige las historias para su inclusión en el próximo incremento en base a sus prioridades y calendario.
 
 ---
 
-<!-- .slide: style="font-size: 0.60em" -->
+<!-- .slide: style="font-size: 0.57em" -->
 
 ### Una historia para “Prescripción de medicamentos”
-kate es una médica que quiere prescribir fármacos a un paciente que se atiende en una clínica. El archivo del paciente
+Kate es una médica que quiere prescribir fármacos a un paciente que se atiende en una clínica. El archivo del paciente
 ya se desplegó en su computadora, de manera que da click en el campo del medicamente y luego puede seleccionar 
 "medicamento actual", "medicamento nuevo" o "formulario".
+
 Si selecciona "medicamento actual", el sistema le pude comprobar la dosis. Si quiere cambiar la dosis, ingresa la dosis
 y luego confirma la prescripción.
-Si elige "medicamento nuevo", el sistema supone que Kate sabe cuál medicamento prescribir. ELla teclea las primera
-letras del nombre del medicamnete. El sistema muestra una lista de medicamentos posibles cuyo nombre inicia con esas
+
+Si elige "medicamento nuevo", el sistema supone que Kate sabe cuál medicamento prescribir. Ella teclea las primera
+letras del nombre del medicamento. El sistema muestra una lista de medicamentos posibles cuyo nombre inicia con esas
 letras. Posteriormente elige el fármaco requerido y el sistema responde solicitándole que verifique que el medicamento
 seleciconado sea el correcto. Ella ingresa la dosis y luego confirma la prescripción.
 Si Kate elige "formulario", el sistema muestra un recuadro de búsqeuda para el formulario aprobado. Entonces busca el
-medicamento requerido. Ella selecicona un medicamento y el sistema le pide comprobar que éste sea el correcto. Luego
-ingresa la dosis y confirma la presecipción.
+medicamento requerido. Ella selecciona un medicamento y el sistema le pide comprobar que éste sea el correcto. Luego
+ingresa la dosis y confirma la prescripción.
+
 El sistema siempre verifica que la dosis esté dentro del rango aprobado. Si no es así, le pide a Kate que la modifique.
 Después de que ella confirma la prescripción, se desplegará para su verificación. Kate hace click o en "OK" o en "Cambiar".
 Si hace click en "OK", la prescripción se registra en la base de datos de auditoría. Si hace lcick en "Cambiar", 
@@ -381,26 +408,27 @@ reingresa al proceso de "prescripción de medicamento".
 1. Cambiar dosis del medicamento prescripto
 2. Selección de formulario
 3. Validación de dosis
-La verificación de dosis es una prevención de seguridad para comprobar que el médico no prescrine una dosis
+
+La verificación de dosis es una prevención de seguridad para comprobar que el médico no prescribe una dosis
 riesgosamente pequeña o grande.
-Al usar el ID del formulario para el nombre generico del medicamento, busca el formulario y recupera las dosis, máxima
+Al usar el ID del formulario para el nombre genérico del medicamento, busca el formulario y recupera las dosis, máxima
 y mínima, recomendadas.
 Verifica la dosis prescrita contra el mínimo y el máximo. Si está fuera de rango, emite un mensaje de error señalando
 que la dosis es muy alta o muy baja.
-Si está dentro del rango, habulita el botón "Confirmar".
+Si está dentro del rango, habilita el botón "Confirmar".
 
 ---
 ### XP y el cambio
 * La sabiduría convencional en la ingeniería de software es  diseñar para el cambio. Sostiene que vale la pena el gasto de
 tiempo y esfuerzo anticipando los cambios ya que esto reduce costos más tarde.
 * XP sostiene que no vale la pena anticipar los cambios ya que cambios no se pueden prever de forma fiable
-* Propone la mejora constante de código (refactorizacion) para poder realizar cambios más fácilmente.
+* Propone la mejora constante de código (refactorización) para poder realizar cambios más fácilmente.
 
 ---
 ### Refactorizacion
-* El equipo de programación busca posibles mejoras de codigo y realiza las mejoras aunque no sean de inmmediata necesidad.
+* El equipo de programación busca posibles mejoras de código y realiza las mejoras aunque no sean de inmmediata necesidad.
 * Esto mejora la comprensibilidad del software y reduce la necesidad de documentación.
-* Los cambios son más fáciles de hacer ya que el código es bien estructurado y claro.
+* Los cambios son más fáciles de hacer ya que el código está bien estructurado y claro.
 * Sin embargo, algunos cambios requieren reconstrucción de la arquitectura y esto es mucho más caro
 
 ---
@@ -464,7 +492,7 @@ simular la presentación de la entrada para ser probado y debe comprobar que el 
 Un marco de prueba automatizada (por ejemplo Junit) es un sistema que hace que sea fácil escribir y ejecutar pruebas
 * Cuando se automatizan las pruebas, siempre hay un conjunto de pruebas que puede ser rápida y fácilmente ejecutado
   * Siempre que se agrega alguna funcionalidad al sistema, las pruebas de
-regrecion se deben corren y si el nuevo código introdujo problemas se identifican inmediatamente
+regresión se deben corren y si el nuevo código introdujo problemas se identifican inmediatamente
 
 ---
 ### Dificultades en pruebas XP
@@ -482,7 +510,7 @@ puede no proporcionar una cobertura completa.
 * En XP, los programadores trabajan en parejas, sentados juntos a desarrollar código.
 * Esto ayuda a desarrollar la propiedad común de código y difunde el conocimiento a través del equipo.
 * Sirve como un proceso de revisión informal, ya que cada línea de código es visto por más de 1 persona.
-* Alienta a la refactorizacion.
+* Alienta a la refactorización.
 * Las meidiciones muestran que la productividad de desarrollo con la programación par es similar a la de dos
 personas trabajando en paralelo
 
@@ -494,7 +522,7 @@ software.
 * Las parejas se crean dinámicamente para que todos los miembros del equipo trabajen unos con otros durante el proceso
 de desarrollo.
 * El intercambio de conocimientos que sucede entre la pareja durante la programación es muy importante, ya que reduce
-riesgos para el Proyecto proyecto cuando algun miembro del equipo se va.
+riesgos para el proyecto cuando algún miembro del equipo se va.
 * La programación en parejas no es necesariamente ineficiente y no hay evidencia que trabajar juntos es más eficiente que 2
 programadores por separado
 
