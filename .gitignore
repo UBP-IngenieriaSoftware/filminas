@@ -3,3 +3,6 @@ node_modules
 
 # Optional REPL history
 .idea
+.vsc
+
+_static
