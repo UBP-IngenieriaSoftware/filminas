@@ -102,19 +102,20 @@ excesiva
 * Scrum (Cohn, Schwaber, Beedle)
 * Crystal (Cockburn)
 * ASD - Desarrollo de Software Adaptativo (Highsmith)
-* DSDM - Desarrollo de SIstemas Dinámicos (Stapleton)
+* DSDM - Desarrollo de Sistemas Dinámicos (Stapleton)
 * FDD - Desarrollo dirigido por características (Palmer y Felsing)
 
 
 ---
-### Principios de los métodos ágiles
 
+### Principios de los métodos ágiles
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Principio | Descripción                                                                                                                                                                                     |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Participación del Cliente | Los clientes deben intervenir estrechamente durante el proceso de desarrollo. Su función consiste en ofrecer y priorizar nuevos requerimientos del sistema y evaluar las iteraciones del mismo. |
 | Entrega Incremental | El software se desarrolla en incrementos y el cliente especifica los requerimientos que se van a incluir en cada incremento.                                                                    |
-| Personas, no procesos | Tienen que reconocerse y aprovecharse las habilidades del equipo de desarrollo. Debe permitirse a los miemrbos del equipo desarrollar sus propias formas de trabajar sin procesos establecidos. |
+| Personas, no procesos | Tienen que reconocerse y aprovecharse las habilidades del equipo de desarrollo. Debe permitirse a los miembros del equipo desarrollar sus propias formas de trabajar sin procesos establecidos. |
 | Adoptar el cambio | Esperar a que cambien los requerimientos del sistema y, de este modo, diseñar el sistema para adaptar dichos cambios |
 | Mantener simplicidad | Enfocarse en la simpliciddad tanto en el software a desarrollar como en el proceso de desarrollo. Siempre que sea posible, trabajar de manera activa para eliminar la complejidad del sistema |
 -->
@@ -136,7 +137,7 @@ excesiva
 </tr>
 <tr>
 <td>Personas, no procesos</td>
-<td>Tienen que reconocerse y aprovecharse las habilidades del equipo de desarrollo. Debe permitirse a los miemrbos del equipo desarrollar sus propias formas de trabajar sin procesos establecidos.</td>
+<td>Tienen que reconocerse y aprovecharse las habilidades del equipo de desarrollo. Debe permitirse a los miembros del equipo desarrollar sus propias formas de trabajar sin procesos establecidos.</td>
 </tr>
 <tr>
 <td>Adoptar el cambio</td>
@@ -184,7 +185,7 @@ De los siguientes sistema, piense que metodología se adapta mejor a su desarrol
 2. Aplicación Móvil de Redes Sociales <!--ágil-->
 3. Sistema de Gestión de Historias Clínicas Electrónicas (HCE) <!--cascada-->
 4. Sitio Web de Comercio Electrónico para una Startup <!--ágil-->
-5. Software de Navegación para Coches Autónomos <!--cascada-->
+5. Software de Navegación para Vehículos Autónomos <!--cascada-->
 6. Aplicación para la Gestión de Proyectos en una Empresa <!--ágil-->
 7. Sistema de Control de Calidad en una Planta de Manufactura <!--cascada-->
 8. Plataforma de Educación en Línea <!--ágil-->
@@ -495,7 +496,7 @@ puede no proporcionar una cobertura completa.
 * Esto ayuda a desarrollar la propiedad común de código y difunde el conocimiento a través del equipo.
 * Sirve como un proceso de revisión informal, ya que cada línea de código es visto por más de 1 persona.
 * Alienta a la refactorización.
-* Las meidiciones muestran que la productividad de desarrollo con la programación par es similar a la de dos
+* Las mediciones muestran que la productividad de desarrollo con la programación par es similar a la de dos
 personas trabajando en paralelo
 
 ---
