@@ -29,6 +29,13 @@ Created by <i class="fab fa-telegram"></i>
 ---
 <!-- .slide: style="font-size: 0.60em" -->
 <style>
+.grid-container2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 0.8em;
+    text-align: left !important;
+}
+
 .grid-item {
     border: 3px solid rgba(121, 177, 217, 0.8);
     padding: 20px;
@@ -36,11 +43,35 @@ Created by <i class="fab fa-telegram"></i>
 }
 </style>
 ## Temario
+<div class="grid-container2">
 <div class="grid-item">
 
 ### Usabilidad
-* 8 reglas de oro de Schneiderman
-* 10 Principios Heurísticos de Nielsen
+* **8 reglas de oro de Schneiderman**
+  1. Consistencia
+  2. Permitir que lo usuarios frecuentes usen atajos
+  3. Retroalimentación informativa
+  4. Diseñar textos de diálogo para cerrar procesos
+  5. Manejo de errores
+  6. Permitir deshacer operaciones
+  7. Fomentar la sensación de control
+  8. Reducir la carga de memoria a corto plazo
+
+</div>
+<div class="grid-item">
+
+* **10 Principios Heurísticos de Nielsen**
+  1. Visibilidad del estado del sistema
+  2. Consistencia entre el sistema y el mundo real
+  3. Control y libertad del usuario
+  4. Consistencia y estándares
+  5. Prevención de errores
+  6. Reconocer es mejor que recordar
+  7. Flexibilidad y eficiencia de uso
+  8. Diseño estético y minimalista
+  9. Ayudar a reconocer, diagnosticar y recuperarse de errores
+  10. Ayuda y documentación
+
 </div>
 
 ---
@@ -113,6 +144,12 @@ ayudan a recordar objetos almacenados en la memoria.
 9. Ayudar a reconocer, diagnosticar y recuperarse de errores
 10. Ayuda y documentación
 
+----
+
+**Principios heurísticos:** constituyen sugerencias para encontrar la idea de solución.
+
+Se conoce como **heurística** al conjunto de técnicas o métodos para resolver un problema.
+
 ---
 ### 1. Visibilidad del estado del sistema
 El sistema siempre debe mantener a los usuarios informados sobre lo que ocurre, a través de una retroalimentación 
@@ -122,10 +159,11 @@ apropiada en un tiempo razonable.
 
 #### Ejemplo:
 * Los usuarios deben estar permanentemente informados sobre que está pasando cuando interactúa en un sitio web.
-* Proporcionar al usuario un feedback constante>
+* Proporcionar al usuario un feedback constante:
   1. **Barras de proceso:** Indican cómo avanza la subida de un archivo.
-  2. **Mensajes:** Confirman que "el formmulario se ha enviado correctamente".
+  2. **Mensajes:** Confirman que "el formulario se ha enviado correctamente".
   3. **Animaciones:** Indican que algo está siendo procesado sin incidencias.
+  4. **Breadcrums:** Muestran dónde nos encontramos dentro de la web.
 
 ----
 
@@ -154,10 +192,10 @@ importante ofrecer soporte para deshacer y rehacer acciones.
 ----
 
 ### Ejemplo:
-Control y libertad del susuario:
-* Los usuario elegirán las funciones del sistema por error y necesitarán una "salida de emergencia o rutas alternativas"
+Control y libertad del usuario:
+* Los usuarios elegirán las funciones del sistema por error y necesitarán una "salida de emergencia o rutas alternativas"
 claramente marcada para dejar el estado no deseado al que accedieron, sin tener que pasar por una serie de pasos.
-* Aproyar las funciones de deshacer y rehacer.
+* Apoyar las funciones de deshacer y rehacer.
 * Evitar "callejones sin salida".
 
 ---
@@ -215,21 +253,52 @@ Los aceleradores, no vistos por el usuario principiante, mejoran la interacción
 que el sistema puede servir para usuarios inexpertos y experimentados. Es importante que el sistema permita personalizar 
 acciones frecuentes.
 
+----
+
+### Ejemplo: Buscador de Google
+* *Usuario poco experimentado:* Escribe lo que quieres buscar y listo.
+* *Usuario experimentado:* Puede usar operadores dentro del buscador.
+No es necesario conocer los operadores de Google para poder cumplir el objetivo de buscar.
+Pero si se emplean las búsquedas son más eficientes y el tiempo de encontrar información útil es menor.
+
 ---
 ### 8. Diseño estético y minimalista
 Los diálogos no deberían contener información irrelevante. Cada unidad extra de información en un diálogo compite con la 
 información importante, disminuyendo su visibilidad relativa.
+
+----
+
+### A tener en cuenta:
+* Si un contenido no es necesario no debería colocarse en la página.
+* El diseño del sistema no debe "recargarse".
+* El usuario busca sites limpios y que carguen rápido.
+* Se deben eliminar todo lo que se considere innecesario y que no aporta valor a lo que se quiere decir.
+* La mejor forma de recordar este principio de usabilidad es con el acrónimo *KISS, Keep It Simple Stupid.*
 
 ---
 ### 9. Ayudar a reconocer, diagnosticar y recuperarse de errores
 Los mensajes de error deben estar expresados en lenguaje simple (sin códigos), indicando con precisión el problema y
 sugiriendo una solución.
 
+----
+
+### Ejemplo:
+El error 404 quizás no sea entendido por todos los usuarios. Es amigable emplar un mensaje como: Lo siento, página no 
+encontrada y darle al usuario una posible salida añadiendo páginas relacionadas o un buscador interno para que pueda 
+buscar y no se vaya de la web.
+
 ---
 ### 10. Ayuda y documentación
 Aunque es mejor que se pueda usar el sistema sin documentación, es necesario proveer al usuario de ayuda y documentación. 
 Esta tiene que ser fácil de buscar y entender, centrada en la tareas del usuario, con información de las etapas a 
 realizar y no muy extensa.
+
+----
+
+### Ejemplos:
+Algunas páginas incluyen:
+* FAQs, Frequently Asked Questions, preguntas frecuentes
+* El icono de la interrogación cerca de algunas opciones
 
 ---
 ### Agregados por PIEROTTI
