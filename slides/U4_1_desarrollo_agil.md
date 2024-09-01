@@ -204,14 +204,19 @@ De los siguientes sistema, piense que metodología se adapta mejor a su desarrol
 
 **La mayoría de los proyectos de software incluyen prácticas de los enfoques ágil y basado en plan**
 
+----
+
+### Desarrollo guiado por plan y el desarrollo ágil
+![Plan vs Agil](images/unidad4/plan-vs-agil.png)
+
 ---
 ### Cuestiones técnicas, humanas y organizacionales
 <!-- .slide: style="font-size: 0.80em" -->
 * La mayoría de los proyectos incluyen elementos del guiado por plan y procesos ágil.
 * La decisión depende de:
-  * ¿Es importante contar con una especificación y diseño muy detallado antes de pasar a la implementación? Si es así, utilizar un enfoque guiado por plan.
-  * ¿Puede realizarse una estrategia de entrega incremental? Si es así, considere el uso de los métodos ágiles.
-  * ¿Qué tan grande es el sistema que se está desarrollando? Los métodos ágiles son más eficaces cuando el sistema se puede
+  1. ¿Es importante contar con una especificación y diseño muy detallado antes de pasar a la implementación? Si es así, utilizar un enfoque guiado por plan.
+  2. ¿Puede realizarse una estrategia de entrega incremental? Si es así, considere el uso de los métodos ágiles.
+  3. ¿Qué tan grande es el sistema que se está desarrollando? Los métodos ágiles son más eficaces cuando el sistema se puede
 desarrollar con un equipo pequeño que pueda comunicarse de manera informal. Esto puede no ser posible para los grandes
 sistemas que requieren equipos de desarrollo grandes y distribuidos.
 
@@ -219,15 +224,15 @@ sistemas que requieren equipos de desarrollo grandes y distribuidos.
 
 ### Cuestiones técnicas, humanas y organizacionales
 <!-- .slide: style="font-size: 0.70em" -->
-* ¿Qué tipo de sistema se está desarrollando?
+4. ¿Qué tipo de sistema se está desarrollando?
   * Los enfoques guiado por plan pueden ser necesarios para los sistemas que requieren una gran cantidad de análisis antes 
 de la aplicación (por ejemplo, sistema en tiempo real con complejos Requisitos de temporización).
-* ¿Cuál es la expectativa de vida del sistema?
+5. ¿Cuál es la expectativa de vida del sistema?
   * Los sistemas de larga vida requieran mas documentación de diseño para comunicar las intenciones originales de los desarrolladores del
 sistema al equipo de soporte.
-* ¿Qué tecnologías están disponibles para apoyar el desarrollo del sistema?
+6. ¿Qué tecnologías están disponibles para apoyar el desarrollo del sistema?
   * Los métodos ágiles se basan en buenas herramientas para realizar un seguimiento de la evolución de un diseño
-* ¿Cómo se organiza el equipo de desarrollo?
+7. ¿Cómo se organiza el equipo de desarrollo?
   * Si el equipo de desarrollo se distribuye o si parte del desarrollo se subcontrata, entonces son necesarios los 
 documentos de diseño para comunicar a los equipos de desarrollo.
 
@@ -235,12 +240,12 @@ documentos de diseño para comunicar a los equipos de desarrollo.
 
 ### Cuestiones técnicas, humanas y organizacionales
 <!-- .slide: style="font-size: 0.80em" -->
-* ¿Hay cuestiones culturales o de organización que puedan afectar al desarrollo del sistema?
+8. ¿Hay cuestiones culturales o de organización que puedan afectar al desarrollo del sistema?
   * Las organizaciones tradicionales tienen una cultura basada en el planes.
-* ¿Qué tan buenos son los diseñadores y programadores del equipo de desarrollo?
+9. ¿Qué tan buenos son los diseñadores y programadores del equipo de desarrollo?
   * A veces se argumenta que los métodos ágiles requieren niveles más altos de capacitación que los enfoques basados en 
 planes, en el que los programadores simplemente traducen un diseño detallado en código.
-* ¿El sistema está sujeto a regulación externa?
+10. ¿El sistema está sujeto a regulación externa?
   * Si un sistema tiene que ser aprobado por un regulador externo (por ejemplo, que el FAA aprueba el software crítico 
 para el funcionamiento de una aeronave) entonces se debe producir documentación detallada .
 
@@ -253,17 +258,18 @@ Extreme Programming (XP) :
 * Los incrementos se entregan a los clientes cada 2 semanas;
 * Todas las pruebas se deben ejecutar para cada iteracion y la integracion sólo se acepta si las pruebas resultan satisfactorias.
 
----
-### XP y principios ágiles
-* **Participación del cliente:** un compromiso a tiempo completo del cliente con el equipo
-* **Entrega incremental:** el desarrollo incremental es apoyado a través pequeños sistemas de comunicación frecuentes.
-* **Personas no procesos:** a través de la programación en pares y propiedad colectiva del codigo.
-* **Adoptar el cambio:** Cambios soportados a través sistemas regulares de comunicación.
-* **Mantener la simplicidad:** refactorizacion constante de código.
+----
+
+#### Ciclo de liberación de Programación extrema
+![Ciclo XP](images/unidad4/ciclo-xp.png)
 
 ---
-### El ciclo de liberación de la programación extrema
-![Ciclo de liberación de la programación extrema](images/unidad4/liberacion_XP.jpg)
+### XP y principios ágiles
+1. **Participación del cliente:** un compromiso a tiempo completo del cliente con el equipo
+2. **Entrega incremental:** el desarrollo incremental es apoyado a través pequeños sistemas de comunicación frecuentes.
+3. **Personas no procesos:** a través de la programación en pares y propiedad colectiva del codigo.
+4. **Adoptar el cambio:** Cambios soportados a través sistemas regulares de comunicación.
+5. **Mantener la simplicidad:** refactorizacion constante de código.
 
 ---
 ### Prácticas de Extreme programming
@@ -403,7 +409,7 @@ Si está dentro del rango, habilita el botón "Confirmar".
 
 ---
 ### XP y el cambio
-* La sabiduría convencional en la ingeniería de software es  diseñar para el cambio. Sostiene que vale la pena el gasto de
+* La sabiduría convencional en la ingeniería de software es diseñar para el cambio. Sostiene que vale la pena el gasto de
 tiempo y esfuerzo anticipando los cambios ya que esto reduce costos más tarde.
 * XP sostiene que no vale la pena anticipar los cambios ya que cambios no se pueden prever de forma fiable
 * Propone la mejora constante de código (refactorización) para poder realizar cambios más fácilmente.
