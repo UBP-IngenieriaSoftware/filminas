@@ -50,6 +50,8 @@ Created by <i class="fab fa-telegram"></i>
 
 ---
 ### DIAGRAMA DE CASOS DE USO
+
+<!--https://diagramasuml.com/casos-de-uso/-->
 * Especifica un comportamiento deseado del sistema.
 * Representa los requisitos funcionales del sistema.
 * Describe qué hace el sistema, no cómo lo hace.
@@ -74,7 +76,7 @@ Sistema de Información.
 ---
 ### Elementos
 * **Actores:** un actor es algo o alguien externo al sistema que interactúa de forma directa con el sistema.
-* **Casos de uso:*** Es una secuencia de acciones que hace el sistema y que producen un resultado que puede percibir
+* **Casos de uso:** Es una secuencia de acciones que hace el sistema y que producen un resultado que puede percibir
 un usuario.
 * **Relaciones:** Conectan los casos de uso con los actores o los casos de uso entre sí.
 
@@ -228,6 +230,21 @@ Esta descripción sirve de guía para el desarrollo:
 </tr>
 </tbody>
 </table>
+
+----
+
+| RNF-01 | Entorno de Explotación                                                                                                                        |
+|--------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| Versión | Versión 1.0                                                                                                                                   |
+|Autores| Juan Perez                                                                                                                                    |
+|Objetivos asociados | OBJ-05: Funcionamiento óptimo por usuario estándar                                                                                            |
+| Requisitos asociados|                                                                                                                                               |
+|Descripción| El sistema deberá funcionar sin ningún tipo de limitación en equipos con: Pention IV a 2,4 GHz, con 1GB de RAm y al menos 6 GB de disco duro. |
+|Importancia| Vital                                                                                                                                         |
+|Urgencia| Inmediata                                                                                                                                     |
+|Estabilidad| Alta                                                                                                                                          |
+|Comentario| Ninguno                                                                                                                                       |
+
 
 ---
 ### Diseño de una aplicación que gestione los tramites a realizar en una clínica veterinaria

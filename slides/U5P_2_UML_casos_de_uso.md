@@ -30,7 +30,7 @@ El diagrama se compone:
 ---
 ### CU: Límites
 Límites del sistema a construir.
-El sujero o límite se define:
+El sujeto o límite se define:
 * Quién o qué utilizará el sistema
 * Que beneficios ofrece el sistema
 
