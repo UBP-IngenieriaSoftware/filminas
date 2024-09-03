@@ -72,7 +72,10 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 
 ---
-### Modelado de SIstemas
+### Modelado de Sistemas
+
+<!--https://diagramasuml.com/-->
+
 Un **modelo es una abstracción** de un sistema o entidad del mundo real. 
 
 Una **abstracción es una simplificación**, que incluye sólo aquellos detalles relevantes para algún determinado propósito.
@@ -88,7 +91,8 @@ el Lenguaje Unificado de Modelado (UML).
 * El modelado de sistemas ayuda al analista a entender la funcionalidad del sistema y se pueden utilizar modelos para 
 comunicarse con los clientes.
 
----
+----
+
 ### Modelos de sistemas
 * Los modelos del sistema se utilizan durante la ingeniería de requisitos para ayudar a explicar los requisitos 
 propuestos a otros actores del sistema. Los ingenieros utilizan estos modelos para discutir las propuestas de diseño y 
@@ -97,6 +101,7 @@ documentar el sistema de aplicación.
 desde el modelo del sistema.
 
 ---
+
 ### Perspectivas del sistema
 * Una **perspectiva externa**, donde se modela el contexto o el entorno del sistema.
 * Una **perspectiva de interacción**, donde se modelan las interacciones entre un sistema y su entorno, o entre los 
@@ -131,15 +136,22 @@ public class Guitarist extends Person implements MusicPlayer {
 
 ---
 ````cookie
-Guitarist is a class that contains six members: one static and five non-static. Guitarist uses, and so needs an instance 
-of, Guitar; however, since this might be shared with other classes in its package, the Guitar instance variable, called 
-favoriteGuitar, is declared as default.
-Five of the members within Guitarist are methods. Four are not static. One of these methods is a constructor that takes 
-one argument, and instances of String are called name, which removes the default constructor.
-Three regular methods are then provided. The first is called setInstrument, and it takes one parameter, an instance of 
-Instrument called instrument, and has no return type. The second is called getInstrument and it has no parameters, but 
-its return type is Instrument. The final method is called play. The play method is actually enforced by the MusicPlayer 
-interface that the Guitarist class implements. The play method takes no parameters, and its return type is void.
+Guitarist es una clase que contiene seis miembros: 1 estático y 5
+no estáticos. Guitarist usa, y por lo tanto necesita, una instancia 
+de Guitar; Sin embargo, dado que esto podría compartirse con otras 
+clases en su paquete, la variable de instancia Guitar, llamada 
+favoritoGuitar, se declara como predeterminada.
+Cinco de los miembros dentro de Guitarist son métodos. Cuatro no son 
+estáticos. Uno de estos métodos es un constructor que toma un argumento, 
+y las instancias de String se llaman nombre, lo que elimina el constructor 
+predeterminado.
+Luego se proporcionan tres métodos regulares. El primero se llama setInstrument, 
+y toma un parámetro, una instancia de Instrument llamada instrument, y 
+no tiene tipo de retorno. El segundo se llama getInstrument y no tiene 
+parámetros, pero su tipo de retorno es Instrument. El método final se 
+llama play. El método de reproducción en realidad lo aplica la interfaz 
+MusicPlayer que implementa la clase Guitarrista. El método play no toma 
+parámetros y su tipo de retorno es nulo.
 ````
 * Es ambigua y confusa
 * Es lenta de interpretar
@@ -154,6 +166,38 @@ interface that the Guitarist class implements. The play method takes no paramete
 * Es fácil de procesar por herramientas
 
 ---
+### UML
+* Siglas de "Unified Modeling Language".
+* Lenguaje de modelado estándar para modelado orientado a objetos.
+* Tiene numerosos tipos de diagramas, pero en la gran mayoría de sistemas se usan solo 5.
+
+![Logo UML](images/unidad5/logo-UML.png)
+
+----
+
+### ¿Por qué UML?
+* Es **sencillo**
+* Es capaz de modelar todo tipo de sistemas.
+* Es un lenguaje universal
+* Es fácilmente extensible.
+* Es visual y, por lo tanto, intuitivo.
+* Es independiente del desarrollo, del lenguaje y de la plataforma.
+* Bien ejecutado aporta un conjunto considerable de buenas prácticas.
+
+----
+
+### Consideraciones sobre UML
+Los diagramas UML NO son completos. Utilizando los distintos diagramas no podemos estar seguros de comprender con 
+totalidad el sistema que va a desarrollarse. Los diagramas, para facilitar la comprensión pueden (y suelen) omitir 
+información, pueden tener partes que se entienden de distintas maneras o, incluso, pueden tener conceptos que no 
+pueden ser representados por ningún diagrama.
+
+---
+
+![Clasificación de los diagramas UML](images/unidad5/clasificacion-diagramas.png)
+
+----
+
 ### Tipos de diagramas UML
 
 <!-- .slide: style="font-size: 0.90em" -->
@@ -177,7 +221,8 @@ encuentra fuera de los límites del sistema.
 * Las cuestiones organizacionales pueden influir en la decisión sobre dónde situar los límites del sistema.
 * Los modelos de contexto muestran el sistema y su relación con otros sistemas.
 
----
+----
+
 ### Límites del sistema
 * Los límites del sistema se establecen para definir lo que está dentro y lo que está fuera del sistema, muestran otros
 sistemas que se utilizan o dependen del sistema que está siendo desarrollado.
@@ -191,14 +236,16 @@ carga de trabajo de las diferentes partes de una organización.
 ![Ejemplo de Diagrama de Contexto](images/unidad5/diagrama_contexto_mhc-pms.jpg)
 
 ---
+
 ### Perspectiva del proceso
 * Los modelos de contexto, simplemente muestran los otros sistemas en ambiente, no cómo se utiliza el sistema
 que está siendo desarrollado en ese entorno.
 * Los modelos de proceso revelan cómo se utiliza el sistema en desarrollo en los procesos de negocio
 * Diagramas de actividades de UML se pueden utilizar para definir los modelos de procesos de negocio.
 
----
-### Modelo de proceso de la detención involuntaria
+----
+
+### Diagrama de Actividad
 ![Modelo de proceso de la detención involuntaria](images/unidad5/modelo_proceso_detencion.jpg)
 
 ---
@@ -208,15 +255,15 @@ que está siendo desarrollado en ese entorno.
 * El modelado de interaccion de sistema a sistema resalta los problemas de comunicación que puedan surgir.
 * El modelo de interacción de componentes ayuda a comprender si la estructura del sistema propuesto es
 adecuada para ofrecer el rendimiento y la fiabilidad del sistema necesario.
-* Los diagramas de casos y diagramas de secuencia se pueden utilizar para el modelado de la interacción.
+* Los **diagramas de casos** y **diagramas de secuencia** se pueden utilizar para el modelado de la interacción.
 
 ---
 ### Modelado de casos de uso
-* Los casos de uso se desarrollaron originalmente para apoyar la obtención de requisitos y están incorporadas en el UML.
+* Los casos de uso se desarrollaron originalmente para apoyar la obtención de requisitos y están incorporados en el UML.
 * Cada caso de uso representa una tarea discreta que implica la interacción externa con un sistema.
 * Los actores de un caso de uso pueden ser personas u otros sistemas.
-* Representacion esquemática para proporcionar una visión general de los casos de uso.
-* Representacion textual para proporcionar una visión detallada.
+* Representación esquemática para proporcionar una visión general de los casos de uso.
+* Representación textual para proporcionar una visión detallada.
 
 ----
 
@@ -281,7 +328,7 @@ clases de un sistema y las asociaciones entre estas clases.
 ---
 ### Generalización
 * La generalización es una técnica que utilizamos para gestionar la complejidad.
-* En lugar de defifnier las características detalladas de cada entidad, ponemos estas características en las clases
+* En lugar de definir las características detalladas de cada entidad, ponemos estas características en las clases
 más generales (animales, coches, casas, etc).
 * Esto nos permite inferir que los diferentes miembros de estas clases tienen algunas características comunes. 
 
@@ -295,14 +342,14 @@ generalización.
 * En una generalización, los atributos y las operaciones asociadas a las clases de nivel superior también están
 asociadas a las clases de menor nivel.
 * Las clases de nivel inferior son subclases que heredan los atributos y operaciones de sus superclases. Estas
-clases de nivel inferior son mas especificas y pueden añadir atributos y operaciones.
+clases de nivel inferior son más especificas y pueden añadir atributos y operaciones.
 
 ----
 
 ### Una jerarquía de generalización
 ![Una jerarquía de generalización](images/unidad5/jerarquia_de_generalizacion.jpg)
 
----
+----
 
 ### Una jerarquía de generalización con caracteristicas agregadas
 ![Generalización con caracteristicas agregadas](images/unidad5/jeneralizacion_caracteristicas_agregadas.jpg)
@@ -318,12 +365,14 @@ clases de nivel inferior son mas especificas y pueden añadir atributos y operac
 ![Agregacion](images/unidad5/agregacion.jpg)
 
 ---
+
 ### Modelos de comportamiento
 * Modelos de comportamiento son los modelos del comportamiento dinámico de un sistema, cuando se está ejecutando.
 * Muestran lo que ocurre cuando un sistema responde a un estímulo de su entorno.
 * Los estímulos pueden ser de dos tipos: **Datos** o **Eventos**
 
----
+----
+
 ### El modelado impulsado por datos
 * Muchos sistemas empresariales son sistemas de procesamiento de datos. Son controlados por la entrada de
 datos al sistema, con relativamente poco procesamiento de eventos externos.
@@ -332,16 +381,22 @@ salida asociada.
 * Son particularmente útiles durante el análisis de los requisitos, ya que pueden ser utilizados para mostrar el
 procesamiento de extremo a extremo en un sistema.
 
----
+----
+
 ### Un modelo de actividad de la operación de la bomba de insulina
+
 ![Modelo de actividad de Bomba de insulina](images/unidad5/modelo_actividad_bomba_insulina.jpg)
 
----
+---- 
+
 ### El procesamiento de pedidos
+
 ![Procesamiento de pedidos](images/unidad5/procesamiento_de_pedidos.jpg)
 
----
+---- 
+
 ### Modelado impulsado por eventos
+
 * Sistemas de tiempo real son a menudo gestionados por eventos, con un procesamiento de datos mínimo.
 * Modelado por eventos muestra cómo un sistema responde a acontecimientos externos e internos.
 * Se basa en la suposición de que un sistema tiene un número finito de estados y que los acontecimientos
@@ -354,7 +409,8 @@ procesamiento de extremo a extremo en un sistema.
 * Modelos de máquinas de estado muestran los estados del sistema como nodos y eventos como arcos entre estos
 nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 
----
+----
+
 ### Diagrama de estado de un horno de microondas
 ![Diagrama de estado: Microondas](images/unidad5/diagrama_estado_microondas.jpg)
 
@@ -422,7 +478,7 @@ nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 | Potencia Media | El usuario ha pulsado el botón de media potencia.       |
 | Potencia Máxima | El usuario ha pulsado el botón de alta potencia.       |
 | Temporizador | El usuario ha pulsado el botón del temporizador.          |
-| Numero | El usuario ha pulsado una tecla numérica.                     |
+| Nú mero | El usuario ha pulsado una tecla numérica.                     |
 | Puerta Abierta | El interruptor de la puerta del horno no está cerrada.  |
 | Puerta Cerrada | El interruptor de la puerta del horno está cerrada.     |
 | Iniciar | El usuario ha pulsado el botón de Inicio.                     |
@@ -449,7 +505,7 @@ nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 <td style="text-align:left">El usuario ha pulsado el botón del temporizador.</td>
 </tr>
 <tr>
-<td style="text-align:left">Numero</td>
+<td style="text-align:left">Número</td>
 <td style="text-align:left">El usuario ha pulsado una tecla numérica.</td>
 </tr>
 <tr>
@@ -486,6 +542,13 @@ de los modelos.
 * Los defensores de la MDE sostienen que esto eleva el nivel de abstracción en la ingeniería de software para que
 los ingenieros ya no tienen que preocuparse por los detalles del lenguaje de programación o las características
 específicas de plataformas de ejecución.
+
+----
+
+### Ingeniería dirigida por modelos
+- **Modelo Independiente de Computación (CIM):** Modela las importantes abstracciones de dominio usadas en el sistema.
+- **Modelo Independiente de Plataforma (PIM):** Modela la operación del sistema sin referencia a su implementación.
+- **Modelos específicos de plataforma (PSM)**
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
