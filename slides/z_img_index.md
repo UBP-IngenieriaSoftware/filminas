@@ -27,3 +27,10 @@ Created by <i class="fab fa-telegram"></i>
 ![Icono](images/indice/u11_icono.png)
 ![Icono](images/indice/ejercicios.png)
 ![Icono](images/ingenieria-soft.png)
+
+![Icono](images/ejercicios/problema.png)
+![Icono](images/ejercicios/plantilla.png)
+![Icono](images/ejercicios/uso.png)
+![Icono](images/ejercicios/clase.png)
+![Icono](images/ejercicios/star.png)
+
