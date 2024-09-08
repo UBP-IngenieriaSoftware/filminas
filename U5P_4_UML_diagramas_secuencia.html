@@ -20,8 +20,8 @@
           <textarea data-template>
             
 
-# Ingeniería de Software
-## UML: Diagrama de Secuencia
+#### Ingeniería de Software
+# UML: Diagrama de Secuencia
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -49,6 +49,13 @@ Está construido a partir de dos dimensiones:
 ![Diagrama de Secuencia: Dimensiones](images/unidad5/secuencia_dimensiones.png)
 
 ---
+### Elementos
+
+* **Objetos**
+* **Mensajes**, que permiten la interacción entre los elementos.
+* **Línea de Vida**
+
+---
 ### Objeto:
 * Representa a un participante en la interacción.
 * Puede ser instancia de una clase, un módulo, un grupo de clases, es decir un componente software que tiene una 
@@ -57,7 +64,8 @@ funcionalidad específica
 * Se representa mediante un rectángulo que incluye un identificador en su interior
 * De cada uno sale una línea vertical hacia abajo que representa el tiempo en el que está presente.
 
----
+----
+
 ![Diagrama de Secuencia: Objetos](images/unidad5/secuencia_objetos.jpg)
 
 ---
@@ -69,12 +77,14 @@ control y límite de los diagramas de robustez también pueden contener líneas 
 
 ---
 ## Mensaje:
+* Se representa con una flecha del remitente al receptor
 * Representa el paso de un mensaje entre dos objetos o entre un objeto y sí mismo.
 * Flecha con el nombre del mensaje y los argumentos y que va desde el objeto que envía hacia el objeto que recibe.
 
 ![Diagramas de Secuencia: Mensajes](images/unidad5/secuencia_mensajes.jpg)
 
----
+----
+
 ### Mensaje
 <!-- .slide: style="font-size: 0.80em" -->
 * Un **mensaje síncrono** es denotado por una punta de flecha oscura. Si se envía este mensaje es porque se necesita una 
@@ -128,34 +138,97 @@ un mensaje, el mensaje se mostrará como una línea inclinada.
 
 ---
 ### Fragmentos combinados
-No se espera que los diagramas de secuencia muestren lógicas de procedimientos complejos.
-Hay un número de mecanismos que permiten agregar un grado de lógicas de procedimientos a los diagramas y que a la vez 
-vienen bajo el encabezado de fragmentos combinados. 
+* Permiten modelar varias estructuras de control de manera explícita.
+* Permiten describir una seri de ritas de ejecución posibles de forma compacta y precisa.
+* Se representa mediante un rectángulo, con el tipo de operador específico por la palabra clave respectiva.
 
-Un fragmento combinado es una o más secuencias de procesos incluidas en un marco y ejecutadas bajo circunstancias 
-específicas. 
+![Operador y operandos](images/unidad5/operador-operandos.png)
 
 ---
 ### Fragmentos combinados
-<!-- .slide: style="font-size: 0.55em" -->
-Los fragmentos disponibles son:
-* **Alternative**, _alt_ modela estructuras _if…then…else_.
-* **Option**, _opt_ modela estructuras switch.
-* **Break** modela una secuencia alternativa de eventos que se procesa en lugar de todo del resto del diagrama.
-* **Parallel**, _par_ modela procesos concurrentes.
-* **Weak**, _seq_ incluye un número de secuencias para las cuales todos los mensajes se deben procesar en un segmento anterior, antes de que el siguiente segmento pueda comenzar, pero que no impone ningún secuenciado en los mensajes que no comparten una línea de vida.
-* **Strict**, _strict_ incluye una serie de mensajes que se deben procesar en el orden proporcionado.
-* **Negative**, _neg_ incluye una serie de mensajes inválidos.
-* **Critical** incluye una sección crítica.
-* **Ignore** declara un mensaje o mensajes que no son de ningún interés si este aparece en el contexto actual.
-* **Consider** es el opuesto del fragmento Ignore: cualquier mensaje que no se incluya en el fragmento Consider se debería ignorar.
-* **Assertion**, _assert_ designa que cualquier secuencia que no se muestra como un operando de la aserción es inválida.
-* **Loop** incluye una serie de mensajes que están repetidos.
+Hay 12 tipos de operadores. Los mismos se clasifican en:
+* Bifurcaciones y bucles
+* Concurrencia y orden
+* Filtros y afirmaciones
 
----
+----
+
+<!-- .slide: style="font-size: 0.55em" -->
+Bifurcaciones y bucles:
+1. **Alternative**, _alt_ modela estructuras _if…then…else_.
+2. **Option**, _opt_ modela estructuras switch.
+3. **Loop** incluye una serie de mensajes que están repetidos.
+4. **Break** modela una secuencia alternativa de eventos que se procesa en lugar de todo del resto del diagrama.
+
+Concurrencia y orden:
+
+5. **Parallel**, _par_ modela procesos concurrentes.
+6. **Weak**, _seq_ incluye un número de secuencias para las cuales todos los mensajes se deben procesar en un segmento anterior, antes de que el siguiente segmento pueda comenzar, pero que no impone ningún secuenciado en los mensajes que no comparten una línea de vida.
+7. **Strict**, _strict_ incluye una serie de mensajes que se deben procesar en el orden proporcionado.
+8. **Critical** incluye una sección crítica.
+
+Filtros y afirmaciones:
+
+9. **Negative**, _neg_ incluye una serie de mensajes inválidos.
+10. **Ignore** declara un mensaje o mensajes que no son de ningún interés si este aparece en el contexto actual.
+11. **Consider** es el opuesto del fragmento Ignore: cualquier mensaje que no se incluya en el fragmento Consider se debería ignorar.
+12. **Assertion**, _assert_ designa que cualquier secuencia que no se muestra como un operando de la aserción es inválida.
+
+
+----
+
 El siguiente diagrama muestra un fragmento loop:
 
 ![Loop](images/unidad5/loop.GIF)
+
+----
+
+#### Ejemplo: Alt & Opt
+
+Cuando un alumno quiere matricularse pueden darse estos casos:
+1. Hay plazas disponibles en el exámen
+2. Hay plaza disponible en lista de espera
+3. Mensaje de error
+
+----
+
+![Alt & Opt](images/unidad5/alt-opt.png)
+
+----
+
+![Loop & Break](images/unidad5/loop-break.png)
+
+----
+
+![sec](images/unidad5/sec.png)
+
+----
+
+![strict](images/unidad5/strict.png)
+
+----
+
+![par](images/unidad5/par.png)
+
+----
+
+![critical](images/unidad5/critical.png)
+
+----
+
+![ignore](images/unidad5/ignore.png)
+
+----
+
+![consider](images/unidad5/consider.png)
+
+----
+
+![assert](images/unidad5/assert.png)
+
+----
+
+![neg](images/unidad5/neg.png)
 
 ---
 ### Puerta
