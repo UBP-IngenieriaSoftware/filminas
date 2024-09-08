@@ -33,4 +33,6 @@ Created by <i class="fab fa-telegram"></i>
 ![Icono](images/ejercicios/uso.png)
 ![Icono](images/ejercicios/clase.png)
 ![Icono](images/ejercicios/star.png)
+![Icono](images/ejercicios/secuencia.png)
+
 
