@@ -111,21 +111,81 @@ sub-sistemas que componen un sistema y su comunicación
 * Se trata de identificar los principales componentes del sistema y sus comunicaciones.
 
 ---
+
+##### Modelo Abstracto de arquitectura de un SISTEMA DE CONTROL DE ROBOT DE EMBALAJE
+
+![Robot de Embalaje](images/unidad6/robot-de-embalaje.png)
+
+----
+
+Las arquitetcuras de sistemas se moden con frecuenca usando diagramas de bloques simples:
+- **Recuadros:** Componentes o sub-componentes
+- **Flechas:** Datos o sañales de control.
+
+----
+
+### BOX Y DIAGRAMAS
+* Muy abstracto - que no muestran la naturaleza de los componentes ni las relaciones de las
+  propiedades visibles externamente de los sub-sistemas.
+* Sin embargo, útil para la comunicación con las partes interesadas y para la planificación de proyectos.
+
+---
 ### VENTAJAS DE LA ARQUITECTURA EXPLÍCITA
 * **Comunicación entre los stakeholders**: La arquitectura puede ser utilizada como un foco de discusión del sistema 
 por los stakeholders.
-* **Análisis del sistema**: Significa que el análisis de si el sistema puede
-hacer frente a sus requerimientos no funcionales es posible.
+* **Análisis del sistema**: Analizar si el sistema puede
+hacer frente a sus requerimientos no funcionales, como rendimiento, fiabilidad y mantenibilidad.
 * **Reutilización a gran escala**: La arquitectura puede ser reutilizable a través
-de una variedad de sistemas.
+  de una variedad de sistemas que poseen requerimientos similares.
+* **Forma de documentación**: Se pueden visualizar componentes, interfaces y conexiones.
 
 ---
-### LA ARQUITECTURA Y CARACTERÍSTICAS DEL SISTEMA
-* **Rendimiento:** Reducir al mínimo las operaciones de comunicaciones. Uso de grano grueso en lugar de
+### DECISIONES DE DISEÑO ARQUITECTÓNICO
+* Diseño arquitectónico es un proceso creativo, por lo que el proceso es diferente dependiendo del
+  tipo de sistema que se está desarrollado, antecedentes y experiencia del arquitetco.
+* Es común una serie de decisiones, en todos los procesos de diseño.
+
+----
+
+### DECISIONES DE DISEÑO ARQUITECTÓNICO
+1. ¿Existe una arquitectura de aplicaciones genéricas que se pueden utilizar?
+2. ¿Cómo se distribuirá el sistema a través de núcleos y procesadores?
+3. ¿Qué estilos arquitectónicos son apropiados?
+4. ¿Qué enfoque se utilizará para la estructura del sistema?
+5. ¿Cómo el sistema se descompone en módulos?
+6. ¿Qué estrategia de control se debe utilizar para los componentes?
+7. ¿Cuál arquitetcura es mejor en base a los requerimientos no funcionales?
+8. ¿Cómo el diseño arquitectónico se evaluará?
+9. ¿Cómo debe ser documentada la arquitectura?
+
+
+---
+
+### ARQUITECTURA y requerimientos NO funcionales
+1. **Rendimiento:** Reducir al mínimo las operaciones de comunicaciones. Uso de grano grueso en lugar de
 componentes de grano fino.
-* **Seguridad:** Una arquitectura con los procesos críticos en las capas interiores.
-* **Disponibilidad:** Incluir componentes redundantes y los mecanismos de tolerancia a fallos.
-* **Mantenibilidad:** Uso de grano fino, los componentes reemplazables.
+2. **Seguridad:** Una arquitectura con los procesos críticos en las **capas** interiores.
+3. **Protección:** La protección se debe ubicar en pocos componentes individuales, para reducir validaciones.
+4. **Disponibilidad:** Incluir componentes redundantes y los mecanismos de tolerancia a fallos.
+5. **Mantenibilidad:** Uso de grano fino, los componentes reemplazables.
+
+----
+
+Algunos requerimientos se "contradicen" entre si, como el **rendimiento** que requiere componentes de grano grueso y
+la **mantenibilidad** que requiere componentes de grano fino. Por eso debe encontrarse una **solución de compromiso**.
+
+----
+
+Es imposible representar toda la información relevante sobre la arquitectura de un sistema en un solo modelo arquitectónico,
+ya que cada uno presenta una perspectiva del sistema.
+
+---
+### Vistas Arquitectónicas
+1. **Vista Lógica:** Abstracciones como objectos o clases de objectos.
+2. **Vista de Proceso:** Muestra como en tiempo de operación los componentes interactuan. (rendimiento y disponibilidad)
+3. **Vista de Desarrollo:** Muestra como el software está descompuesto
+4. **Vista Física:** Expone el hardware del sistema y como los componentes de software se distribuyen en los procesadores.
+5. **Vista Abstracta:** Descomponer los requerimientos de alto nivel en especificaciones detalladas.
 
 ---
 ### ESTRUCTURA DEL SISTEMA
@@ -134,34 +194,6 @@ componentes de grano fino.
 panorama general de la estructura del sistema.
 * Modelos más específicos muestran cómo los sub-sistemas comparten los datos, se distribuyen y la
 interfaz con los demás también pueden ser desarrollados.
-
----
-##### SISTEMA DE CONTROL DE ROBOT DE EMBALAJE
-
-![Robot de Embalaje](images/unidad6/robot-de-embalaje.png)
-
----
-### BOX Y DIAGRAMAS
-* Muy abstracto - que no muestran la naturaleza de los componentes ni las relaciones de las
-propiedades visibles externamente de los sub-sistemas.
-* Sin embargo, útil para la comunicación con las partes interesadas y para la planificación de proyectos.
-
----
-### DECISIONES DE DISEÑO ARQUITECTÓNICO
-* Diseño arquitectónico es un proceso creativo, por lo que el proceso es diferente dependiendo del
-tipo de sistema que se está desarrollado.
-* Sin embargo, es común una serie de decisiones, en todos los procesos de diseño.
-
----
-### DECISIONES DE DISEÑO ARQUITECTÓNICO
-* ¿Existe una arquitectura de aplicaciones genéricas que se pueden utilizar?
-* ¿Cómo se distribuirá el sistema?
-* ¿Qué estilos arquitectónicos son apropiados?
-* ¿Qué enfoque se utilizará para la estructura del sistema?
-* ¿Cómo el sistema se descompone en módulos?
-* ¿Qué estrategia de control se debe utilizar?
-* ¿Cómo el diseño arquitectónico se evaluará?
-* ¿Cómo debe ser documentada la arquitectura?
 
 ---
 ### REUTILIZACIÓN DE LA ARQUITECTURA
@@ -196,6 +228,15 @@ particular, con variantes que satisfagan las necesidades del cliente.
 
 ---
 ### MODELO VISTA-CONTROLADOR
+- Separa **presentación** e **interacción** de los **datos** del sistema. 
+- El sistema se estructura en **3** componentes lógicos. 
+- El componente **Modelo** maneja los _datos_ del sistema y las operaciones asociadas a esos datos. 
+- El componente **Vista** define y gestiona cómo se _presentan_ los datos al usuario. 
+- El componente **Controlador** dirige la _interacción_ del usuario y pasa estas interacciones a Vista y Modelo.
+
+----
+
+### MODELO VISTA-CONTROLADOR
 
 ![Modelo Vista-Controlador](images/unidad6/modelo-vista-controlador.jpg)
 
@@ -204,6 +245,24 @@ particular, con variantes que satisfagan las necesidades del cliente.
 ### APLICACION WEB CON ARQUITECTURA MVC
 
 ![Arquitetcura MVC](images/unidad6/arquitetura-mvc.jpg)
+
+----
+
+### MODELO VISTA-CONTROLADOR: USO
+- Cuando existen múltiples formas de ver e interactuar con los datos
+- Al desconocerse los requerimientos futuros para la interacción y presentación.
+
+----
+
+### MODELO VISTA-CONTROLADOR: Ventajas & Desventajas
+Ventajas:
+- Permite que los datos cambien de manera independiente de su representación y viceversa. 
+- Soporta en diferentes formas la presentación de los mismos datos.
+
+Desventaja:
+- Puede implicar código adicional y complejidad de código cuando el modelo de datos y las
+  interacciones son simples.
+
 
 ---
 ### EL MODELO REPOSITORIO
