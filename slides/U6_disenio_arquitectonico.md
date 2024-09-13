@@ -4,8 +4,9 @@ theme: solarized
 slideNumber: true
 ---
 
-# Diseño Arquitectónico
 #### Ingeniería de Software
+# Diseño Arquitectónico
+
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -51,6 +52,36 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 
 ---
+
+### Diseño Arquitectónico
+Se refiere a la estructura y organización a gran escala de un sistema de software. Es la planificación de los componentes principales de un sistema y la forma en que interactúan entre ellos. El diseño arquitectónico se enfoca en la visión global del sistema, definiendo módulos, componentes, subsistemas, bases de datos, servidores y cómo todo se conecta y comunica.
+
+----
+
+### Diseño Arquitectónico: Ejemplo
+- **Ejemplo:** Decidir si usar una arquitectura monolítica o una basada en microservicios.
+- **Objetivo:** Crear una estructura robusta, escalable y eficiente que sirva de base para todo el sistema.
+
+----
+
+**Diseño Arquitectónico** y **Patrones de Diseño** NO son lo mismo.
+
+----
+
+### Patrones de Diseño
+Son soluciones probadas y reutilizables para problemas comunes en el desarrollo de software a un nivel más detallado. Estos patrones se aplican a problemas específicos dentro del código o en la interacción de ciertos componentes, y son como "buenas prácticas" que se pueden seguir.
+
+- **Ejemplo:** Patrones como Singleton, Factory, o Observer.
+- **Objetivo:** Resolver problemas frecuentes de diseño en el nivel del código y mejorar la mantenibilidad y flexibilidad del software.
+
+
+----
+
+#### Diseño Arquitectónico vs. Patrones de Diseño
+- **Escala:** El diseño arquitectónico trabaja a una escala más alta y global (visión del sistema completo), mientras que los patrones de diseño se centran en problemas más específicos y detallados dentro del código.
+- **Finalidad:** El diseño arquitectónico es más estratégico y se refiere a la estructura general del sistema, mientras que los patrones de diseño son tácticos y se aplican a situaciones puntuales para mejorar la calidad del código.
+
+---
 ### ARQUITECTURA DE SOFTWARE
 * El diseño arquitectónico es un proceso de diseño que permite la identificación de los
 sub-sistemas que componen un sistema y su comunicación
@@ -89,9 +120,9 @@ panorama general de la estructura del sistema.
 interfaz con los demás también pueden ser desarrollados.
 
 ---
-### SISTEMA DE CONTROL DE ROBOT DE EMBALAJE
+##### SISTEMA DE CONTROL DE ROBOT DE EMBALAJE
 
-![Robot de Embalaje](images/unidad6/robot-de-embalaje.jpg)
+![Robot de Embalaje](images/unidad6/robot-de-embalaje.png)
 
 ---
 ### BOX Y DIAGRAMAS
@@ -139,11 +170,21 @@ particular, con variantes que satisfagan las necesidades del cliente.
 * Modelo de distribución que muestra cómo los sub-sistemas se distribuyen a través de computadoras.
 
 ---
+
+### MODELOS
+- Modelo Vista-Controlador
+- Modelo Repositorio
+- Modelo Cliente-Servidor
+- Modelo de Capas
+- Modelo de Tubería y Filtro
+
+---
 ### MODELO VISTA-CONTROLADOR
 
 ![Modelo Vista-Controlador](images/unidad6/modelo-vista-controlador.jpg)
 
----
+----
+
 ### APLICACION WEB CON ARQUITECTURA MVC
 
 ![Arquitetcura MVC](images/unidad6/arquitetura-mvc.jpg)
@@ -156,12 +197,14 @@ los sub-sistemas;
   * Cada sub-sistema mantiene su propia base de datos y pasa datos explícitamente a otros subsistemas.
 * Cuando grandes cantidades de datos sean compartidos, el modelo de repositorio compartido es más comúnmente utilizado.
 
----
+----
+
 ### ARQUITECTURA DE REPOSITORIO IDE
 
 ![Repositorio IDE](images/unidad6/repositorio-IDE.jpg)
 
----
+----
+
 ### MODELO REPOSITORIO CARACTERÍSTICAS
 **Ventajas**
 * Manera eficaz de compartir grandes cantidades de datos;
@@ -187,12 +230,14 @@ impresión, gestión de datos, etc
 * Conjunto de clientes que piden a éstos los servicios.
 * Red que permite a los clientes acceder a los servidores.
 
----
+----
+
 ### BIBLIOTECA DE IMÁGENES Y PELÍCULAS
 
 ![Biblioteca de Imgágenes y películas](images/unidad6/imagenes-peliculas.jpg)
 
----
+----
+
 ### CLIENTE-SERVIDOR CARACTERÍSTICAS
 **Ventajas**
 * Distribución de datos es sencilla;
@@ -217,12 +262,14 @@ provee un conjunto de servicios.
 * Apoya el desarrollo gradual de sub-sistemas en diferentes capas. Cuando una capa cambia, sólo
 la capa adyacente se ve afectada.
 
----
+----
+
 ### SISTEMA DE GESTIÓN
 
 ![Sistema de Gestión](images/unidad6/sistema-gestion.jpg)
 
----
+----
+
 ### SISTEMA DE BIBLIOTECA
 
 ![Sistema de Biblioteca](images/unidad6/sistema-biblioteca.jpg)
@@ -233,45 +280,46 @@ la capa adyacente se ve afectada.
 * Los datos fluyen (como en una tubería) de un componente a otro para su procesamiento.
 * Se utiliza en aplicaciones de procesamiento de datos (tanto basadas en lotes como en transacciones),
 
----
+----
+
 ### MODELO DE TUBERIA Y FILTRO
 
 ![Modelo de Tubería y Filtro](images/unidad6/modelo_tuberia-filtro.jpg)
 
 ---
-### THE STRUCTURE OF TRANSACTION PROCESSING APPLICATIONS
+### Estructura de las aplicaciones de procesamiento de transacción
 
-![Estructura de Transacciones de Procesamiento de Aplicaciones](images/unidad6/arquitetcura-procesamiento.jpg)
-
----
-### THE SOFTWARE ARCHITECTURE OF AN ATM SYSTEM
-
-![ATM](images/unidad6/ATM.jpg)
+![Estructura de las aplicaciones de procesamiento de transacción](images/unidad6/procesamiento-transaccion.png)
 
 ---
-### LAYERED INFORMATION SYSTEM ARCHITECTURE
+### Arquitectura de software de un sistema ATM
 
-![Arquitectura de Capas](images/unidad6/capas.jpg)
-
----
-### THE ARCHITECTURE OF THE MHC-PMS
-
-![MHC-PMS](images/unidad6/MHC-PMS.jpg)
+![ATM](images/unidad6/ATM.png)
 
 ---
-### THE ARCHITECTURE OF A LANGUAGE PROCESSING SYSTEM
+### Arquitectura de sistema de información en capas
 
-![Lenguaje de Procesamiento del Sistema](images/unidad6/arquitetcura-procesamiento.jpg)
-
----
-### A PIPE AND FILTER COMPILER ARCHITECTURE
-
-![Arquitetcura de Tubería y Filtro](images/unidad6/arquitetcura-tuberia-filtro.jpg)
+![Arquitectura de Capas](images/unidad6/capas.png)
 
 ---
-### REPOSITORY ARCHITECTURE FOR A LANGUAGE PROCESSING SYSTEM
+### Arquitectura del MHC-PMS
 
-![Arquitetcura de Repositorio para un sistema de Procesamiento de Lenguaje](images/unidad6/procesamiento-de-aplicaciones.jpg)
+![MHC-PMS](images/unidad6/MHC-PMS.png)
+
+---
+#### Arquitectura de un sistema de procesamiento de lenguaje
+
+![Lenguaje de Procesamiento del Sistema](images/unidad6/arquitetcura-procesamiento.png)
+
+---
+### Arquitectura de compilador de tubería y filtro
+
+![Arquitetcura de Tubería y Filtro](images/unidad6/arquitetcura-tuberia-filtro.png)
+
+---
+#### Arquitectura de repositorio para un sistema de procesamiento de lenguaje
+
+![Arquitetcura de Repositorio para un sistema de Procesamiento de Lenguaje](images/unidad6/Arquitetcura-de-repositorio.png)
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
