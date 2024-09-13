@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## Diseño Arquitectónico
+#### Ingeniería de Software
+# Diseño Arquitectónico
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -49,6 +49,36 @@ Created by <i class="fab fa-telegram"></i>
 * Modelo de Tubería y Filtro
 </div>
 </div>
+
+---
+
+### Diseño Arquitectónico
+Se refiere a la estructura y organización a gran escala de un sistema de software. Es la planificación de los componentes principales de un sistema y la forma en que interactúan entre ellos. El diseño arquitectónico se enfoca en la visión global del sistema, definiendo módulos, componentes, subsistemas, bases de datos, servidores y cómo todo se conecta y comunica.
+
+----
+
+### Diseño Arquitectónico: Ejemplo
+- **Ejemplo:** Decidir si usar una arquitectura monolítica o una basada en microservicios.
+- **Objetivo:** Crear una estructura robusta, escalable y eficiente que sirva de base para todo el sistema.
+
+----
+
+**Diseño Arquitectónico** y **Patrones de Diseño** NO son lo mismo.
+
+----
+
+### Patrones de Diseño
+Son soluciones probadas y reutilizables para problemas comunes en el desarrollo de software a un nivel más detallado. Estos patrones se aplican a problemas específicos dentro del código o en la interacción de ciertos componentes, y son como "buenas prácticas" que se pueden seguir.
+
+- **Ejemplo:** Patrones como Singleton, Factory, o Observer.
+- **Objetivo:** Resolver problemas frecuentes de diseño en el nivel del código y mejorar la mantenibilidad y flexibilidad del software.
+
+
+----
+
+#### Diseño Arquitectónico vs. Patrones de Diseño
+- **Escala:** El diseño arquitectónico trabaja a una escala más alta y global (visión del sistema completo), mientras que los patrones de diseño se centran en problemas más específicos y detallados dentro del código.
+- **Finalidad:** El diseño arquitectónico es más estratégico y se refiere a la estructura general del sistema, mientras que los patrones de diseño son tácticos y se aplican a situaciones puntuales para mejorar la calidad del código.
 
 ---
 ### ARQUITECTURA DE SOFTWARE
