@@ -37,7 +37,6 @@ Está construido a partir de dos dimensiones:
 
 * **Objetos**
 * **Mensajes**, que permiten la interacción entre los elementos.
-* **Línea de Vida**
 
 ---
 ### Objeto:

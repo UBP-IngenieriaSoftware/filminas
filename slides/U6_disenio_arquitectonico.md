@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## Diseño Arquitectónico
+# Diseño Arquitectónico
+#### Ingeniería de Software
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -31,7 +31,7 @@ Created by <i class="fab fa-telegram"></i>
 
 ### Diseño Arquitectónico
 * Arquitectura de Software
-* Ventajas de la Arq. Explicita
+* Ventajas de la Arq. Explícita
 * La Arq. y características del sistema
 * Estructura del sistema
 * Box y diagramas
@@ -107,14 +107,14 @@ tipo de sistema que se está desarrollado.
 
 ---
 ### DECISIONES DE DISEÑO ARQUITECTÓNICO
-* Existe una arquitectura de aplicaciones genéricas que se pueden utilizar?
-* Cómo se distribuirá el sistema?
-* Qué estilos arquitectónicos son apropiados?
-* Qué enfoque se utilizará para la estructura del sistema?
-* Cómo el sistema se descompone en módulos?
-* Qué estrategia de control se debe utilizar?
-* Cómo el diseño arquitectónico se evaluará?
-* Cómo debe ser documentada la arquitectura?
+* ¿Existe una arquitectura de aplicaciones genéricas que se pueden utilizar?
+* ¿Cómo se distribuirá el sistema?
+* ¿Qué estilos arquitectónicos son apropiados?
+* ¿Qué enfoque se utilizará para la estructura del sistema?
+* ¿Cómo el sistema se descompone en módulos?
+* ¿Qué estrategia de control se debe utilizar?
+* ¿Cómo el diseño arquitectónico se evaluará?
+* ¿Cómo debe ser documentada la arquitectura?
 
 ---
 ### REUTILIZACIÓN DE LA ARQUITECTURA
@@ -169,7 +169,8 @@ los sub-sistemas;
 copia de seguridad, seguridad, etc
 * Un modelo a compartir se publica como el esquema del repositorio.
 
----
+----
+
 ### MODELO REPOSITORIO CARACTERÍSTICAS
 **Desventajas**
 * Sub-sistemas deben ponerse de acuerdo sobre un modelo repositorio de datos. Inevitablemente, un compromiso;
@@ -198,10 +199,11 @@ impresión, gestión de datos, etc
 * Hace un uso eficaz de los sistemas en red. Puede requerir hardware más barato;
 * Fácil añadir nuevos servidores o actualizar los servidores existentes.
 
----
+----
+
 ### CLIENTE-SERVIDOR CARACTERÍSTICAS
 **Desventajas**
-* No hay un modelo de datos compartidos, así que los sub-sistemas utilizan diferentes datos de la organización.
+* No hay un modelo de datos compartidos, así que los sub-sistemas utilizan diferentes datos de la organización. 
 Intercambio de datos puede ser ineficaz;
 * Redundantes en la gestión de cada servidor;
 * No hay registro central de nombres y servicios - que puede ser difícil de averiguar qué servidores y servicios están
@@ -274,3 +276,5 @@ la capa adyacente se ve afectada.
 ---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
+
+<!--https://refactoring.guru/design-patterns/what-is-pattern-->
