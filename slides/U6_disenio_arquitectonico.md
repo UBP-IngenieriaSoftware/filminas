@@ -203,162 +203,605 @@ particular, con variantes que satisfagan las necesidades del cliente.
 
 ---
 
-### MODELOS
-- Modelo Vista-Controlador
-- Modelo de Capas
-- Modelo Repositorio
-- Modelo Cliente-Servidor
-- Modelo de Tubería y Filtro
+### MODELOS Arquitectónicos
+1. Arquitectura en Capas
+2. Arquitectura Cliente-Servidor
+3. Arquitectura de Microservicios
+4. Arquitectura de Capas N
+5. Arquitectura Orientada a Servicios
+6. Arquitectura Basada en Eventos
+7. Arquitectura de Tubería y Filtro
+8. Arquitectura de Espacio de Nombres
+9. Arquitectura de Sistema Distribuido
+
+----
+
+### MODELOS Arquitectónicos
+10. Arquitectura Monolítica
+11. Arquitectura de Microkernel
+12. Arquitectura Hexagonal
+13. Arquitectura basada en Componentes
+14. Arquitectura de Peer-to-Peer
+15. Arquitectura CQRS (Command Query Responsibility Segregation)
+16. Arquitectura Basada en Nubes
+17. Arquitectura de Repositorio
+18. Modelo-Vista-Controlador
+
+----
+
+Estos modelos proporcionan distintas formas de organizar y estructurar un sistema de software según los requisitos del 
+proyecto. La elección del modelo depende de factores como la escalabilidad, mantenimiento, distribución, complejidad y 
+el tipo de problema que se está resolviendo.
 
 ---
-### MODELO VISTA-CONTROLADOR
-- Separa **presentación** e **interacción** de los **datos** del sistema. 
-- El sistema se estructura en **3** componentes lógicos. 
-- El componente **Modelo** maneja los _datos_ del sistema y las operaciones asociadas a esos datos. 
-- El componente **Vista** define y gestiona cómo se _presentan_ los datos al usuario. 
-- El componente **Controlador** dirige la _interacción_ del usuario y pasa estas interacciones a Vista y Modelo.
+### 1. Arquitectura en Capas
+* Divide el sistema en capas o niveles donde cada capa tiene una responsabilidad específica. 
+* La comunicación entre capas se da de manera jerárquica: una capa superior utiliza los servicios de una capa inferior.
+* Las capas de nivel inferior representan servicios núcleo que es probable se utilicen a lo largo de todo el sistema.
 
 ----
 
-### MODELO VISTA-CONTROLADOR
-
-![Modelo Vista-Controlador](images/unidad6/modelo-vista-controlador.jpg)
-
-----
-
-### APLICACION WEB CON ARQUITECTURA MVC
-
-![Arquitetcura MVC](images/unidad6/arquitetura-mvc.jpg)
-
-----
-
-### MODELO VISTA-CONTROLADOR: USO
-- Cuando existen múltiples formas de ver e interactuar con los datos
-- Al desconocerse los requerimientos futuros para la interacción y presentación.
-
-----
-
-### MODELO VISTA-CONTROLADOR: Ventajas & Desventajas
-Ventajas:
-- Permite que los datos cambien de manera independiente de su representación y viceversa. 
-- Soporta en diferentes formas la presentación de los mismos datos.
-
-Desventaja:
-- Puede implicar código adicional y complejidad de código cuando el modelo de datos y las
-  interacciones son simples.
-
----
-### MODELO DE CAPAS
-* Organiza el sistema en capas con funcionalidad relacionada con cada capa. 
-* Una capa da servicios a la capa superior, de modo que las capas de nivel inferior representan
-  servicios núcleo que es probable se utilicen a lo largo de todo el sistema.
-
-----
-
-### MODELO DE CAPAS: USO
+### 1. Arquitectura en Capas: USO
 * Al construirse nuevas facilidades encima de los sistemas existentes.
-* Cuando el desarrollo se dispersa a través de varios equipos de trabajo, y cada uno es responsable  de una capa de funcionalidad. 
+* Cuando el desarrollo se dispersa a través de varios equipos de trabajo, y cada uno es responsable  de una capa de funcionalidad.
 * Cuando exista un requerimiento para seguridad multinivel.
 
 ----
 
-### MODELO DE CAPAS: Ventajas
-* Permite la sustitución de capas completas en tanto se conserve la interfaz. 
-* Aumenta la confiabilidad del sistema, en cada capa pueden incluirse facilidades redundantes
-* 
-----
-
-### MODELO DE CAPAS: Desventajas
-* Suele ser difícil ofrecer una separación limpia entre capas, lo que afecta el rendimiento.
+### 1. Arquitectura en Capas: Ventajas
+- Separación de preocupaciones: Cada capa tiene una responsabilidad bien definida. 
+- Mantenibilidad: Los cambios en una capa no afectan directamente a otras capas. 
+- Reusabilidad: Las capas pueden ser reutilizadas en diferentes sistemas.
 
 ----
 
-### SISTEMA DE GESTIÓN
+### 1. Arquitectura en Capas: Desventajas
+- Rendimiento: Puede haber overhead (sobrecarga) al pasar los datos a través de múltiples capas. 
+- Rigidez: Puede ser difícil cambiar una capa sin afectar a las demás.
+
+----
+
+### 1. Arquitectura en Capas: Ejemplo
+Aplicaciones web que tienen capas de presentación, lógica de negocio y acceso a datos.
+
+----
+
+### 1. SISTEMA DE GESTIÓN
 
 ![Sistema de Gestión](images/unidad6/sistema-gestion.jpg)
 
 ----
 
-### SISTEMA DE BIBLIOTECA
+### 1. SISTEMA DE BIBLIOTECA
 
 ![Sistema de Biblioteca](images/unidad6/sistema-biblioteca.jpg)
 
----
-### EL MODELO REPOSITORIO
-* Sub-sistemas de intercambio de datos. Esto puede hacerse de dos maneras:
-  * Datos compartidos se lleva a cabo en un repositorio o base de datos central y puede ser visitada por todos
-los sub-sistemas;
-  * Cada sub-sistema mantiene su propia base de datos y pasa datos explícitamente a otros subsistemas.
-* Cuando grandes cantidades de datos sean compartidos, el modelo de repositorio compartido es más comúnmente utilizado.
+----
+
+### Arquitectura de sistema de información en capas
+
+![Arquitectura de Capas](images/unidad6/capas.png)
 
 ----
 
-### ARQUITECTURA DE REPOSITORIO IDE
+### Arquitectura del MHC-PMS
 
-![Repositorio IDE](images/unidad6/repositorio-IDE.jpg)
+![MHC-PMS](images/unidad6/MHC-PMS.png)
 
-----
-
-### MODELO REPOSITORIO CARACTERÍSTICAS
-**Ventajas**
-* Manera eficaz de compartir grandes cantidades de datos;
-* Sub-sistemas no tienen por qué preocuparse de cómo los datos se producen, por ejemplo, la gestión centralizada
-copia de seguridad, seguridad, etc
-* Un modelo a compartir se publica como el esquema del repositorio.
-
-----
-
-### MODELO REPOSITORIO CARACTERÍSTICAS
-**Desventajas**
-* Sub-sistemas deben ponerse de acuerdo sobre un modelo repositorio de datos. Inevitablemente, un compromiso;
-* La evolución de datos es difícil y costosa;
-* No hay lugar para las políticas de gestión específicas;
-* Difícil de distribuir de manera eficiente.
 
 ---
-### MODELO CLIENTE-SERVIDOR
+### 2. Arquitectura Cliente-Servidor
 * Sistema distribuido que muestra cómo el modelo de datos y procesamiento se distribuye a través
-de una gama de componentes.
+  de una gama de componentes.
 * Conjunto de servidores independientes que ofrecen servicios específicos, tales como la
-impresión, gestión de datos, etc
-* Conjunto de clientes que piden a éstos los servicios.
+  impresión, gestión de datos, etc
+* Conjunto de clientes que envian solicitudes a éstos servidores, que los procesan y responden con los resultados.
 * Red que permite a los clientes acceder a los servidores.
 
 ----
 
-### BIBLIOTECA DE IMÁGENES Y PELÍCULAS
+### 2. BIBLIOTECA DE IMÁGENES Y PELÍCULAS
 
 ![Biblioteca de Imgágenes y películas](images/unidad6/imagenes-peliculas.jpg)
 
 ----
 
-### CLIENTE-SERVIDOR CARACTERÍSTICAS
-**Ventajas**
-* Distribución de datos es sencilla;
-* Hace un uso eficaz de los sistemas en red. Puede requerir hardware más barato;
-* Fácil añadir nuevos servidores o actualizar los servidores existentes.
+### 2. Arquitectura Cliente-Servidor: Ventajas
+- Centralización: El servidor central puede controlar y gestionar los datos y el acceso.
+- Escalabilidad: Es más fácil escalar el servidor que administrar múltiples clientes.
 
 ----
 
-### CLIENTE-SERVIDOR CARACTERÍSTICAS
-**Desventajas**
-* No hay un modelo de datos compartidos, así que los sub-sistemas utilizan diferentes datos de la organización. 
-Intercambio de datos puede ser ineficaz;
-* Redundantes en la gestión de cada servidor;
-* No hay registro central de nombres y servicios - que puede ser difícil de averiguar qué servidores y servicios están
-disponibles.
+### 2. Arquitectura Cliente-Servidor: Desventajas
+- No hay un modelo de datos compartidos, así que los sub-sistemas utilizan diferentes datos de la organización.
+  Intercambio de datos puede ser ineficaz;
+- No hay registro central de nombres y servicios - que puede ser difícil de averiguar qué servidores y servicios están
+  disponibles.
+- Punto único de fallo: Si el servidor falla, todos los clientes se ven afectados.
+- Sobrecarga del servidor: El servidor puede saturarse si recibe demasiadas solicitudes.
+
+----
+
+### 2. Arquitectura Cliente-Servidor: Ejemplo
+Aplicaciones web y aplicaciones de bases de datos donde el cliente interactúa con un servidor.
 
 ---
-### MODELO DE TUBERIA Y FILTRO
-* Cada componente de procesamiento (filtro) es discreto y realiza un tipo de transformación de datos.
-* Los datos fluyen (como en una tubería) de un componente a otro para su procesamiento.
-* Se utiliza en aplicaciones de procesamiento de datos (tanto basadas en lotes como en transacciones),
+### 3. Arquitectura de Microservicios
+Divide el sistema en servicios pequeños, independientes y desplegables de manera individual.
+Cada microservicio se encarga de una funcionalidad específica y se comunica con otros servicios a través de protocolos 
+de red ligeros (ej., HTTP, REST, gRPC).
 
 ----
 
-### MODELO DE TUBERIA Y FILTRO
+### 3. Arquitectura de Microservicios: Ventajas
+- Escalabilidad independiente: Los microservicios pueden escalarse de manera individual. 
+- Flexibilidad tecnológica: Cada microservicio puede usar tecnologías diferentes. 
+- Despliegue ágil: Los microservicios se pueden desarrollar y desplegar de forma independiente.
+
+----
+
+### 3. Arquitectura de Microservicios: Desventajas
+- Complejidad: Gestionar múltiples microservicios puede ser complicado. 
+- Sobrecarga de red: La comunicación entre microservicios puede introducir latencia. 
+- Dificultad en la depuración: El diagnóstico de errores es más difícil debido a la distribución.
+
+----
+
+### 3. Arquitectura de Microservicios
+![Arquitetcura de Microservicios](images/unidad6/microservicios.png)
+
+----
+
+### 3. Arquitectura de Microservicios: Ejemplo
+Plataformas como Netflix o Amazon utilizan microservicios para manejar diferentes módulos como facturación, inventario, etc.
+
+---
+### 4. Arquitectura de Capas N
+Similar a la arquitectura en capas, pero con la distinción de que las capas se pueden distribuir físicamente en 
+diferentes servidores o ubicaciones.
+Típicamente tiene capas como la capa de presentación, capa de aplicación (lógica de negocio) y capa de datos.
+
+----
+
+### 4. Arquitectura de Capas N: Ventajas
+- Distribución física: Las capas pueden ejecutarse en diferentes servidores. 
+- Seguridad: Es más fácil controlar el acceso a los datos distribuyendo los niveles.
+
+----
+
+### 4. Arquitectura de Capas N: Desventajas
+- Complejidad: Añadir más capas introduce complejidad en el desarrollo y mantenimiento. 
+- Rendimiento: La interacción entre las capas distribuidas puede generar latencia.
+
+----
+
+### 4. Arquitectura de Capas N: Ejemplo
+Aplicaciones empresariales distribuidas que manejan un alto volumen de datos y procesamiento.
+
+----
+
+### 4. Arquitectura de Capas N: Ejemplo
+![Arquitectura en Capas NodeJS](images/unidad6/capasN-nodeJS.png)
+
+---
+### 5. Arquitectura Orientada a Servicios
+Se basa en la creación de servicios reutilizables que ofrecen funcionalidad a través de interfaces bien definidas.
+Los servicios se comunican entre sí a través de un bus de servicio o directamente usando protocolos estándar como SOAP o REST.
+
+----
+
+### 5. Arquitectura Orientada a Servicios: Ventajas
+- Interoperabilidad: Los servicios pueden comunicarse usando protocolos estándar, independientemente de la tecnología. 
+- Reusabilidad: Los servicios pueden ser reutilizados en múltiples aplicaciones.
+
+----
+
+### 5. Arquitectura Orientada a Servicios: Desventajas
+- Sobrecarga de comunicación: Los servicios se comunican a través de la red, lo que puede introducir latencia. 
+- Complejidad de administración: Gestionar y coordinar muchos servicios puede ser complejo.
+
+----
+
+### 5. Arquitectura Orientada a Servicios: Ejemplo
+Sistemas grandes como los de banca o telecomunicaciones que necesitan interoperabilidad entre diferentes servicios.
+
+----
+
+### 5. Arquitectura Orientada a Servicios: Esquema
+![Arquitectura Orientada a Servicios](images/unidad6/Arquitectura-Orientada-a-Servicios-SOA.png)
+
+---
+### 6. Arquitectura Basada en Eventos
+El sistema reacciona a eventos generados por diferentes componentes. Cada evento desencadena una o más acciones en otros 
+componentes.
+Se utiliza para sistemas distribuidos, asíncronos y que deben responder rápidamente a los cambios.
+
+----
+
+### 6. Arquitectura Basada en Eventos: Ventajas
+- Desacoplamiento: Los componentes no dependen directamente entre sí, solo reaccionan a eventos. 
+- Escalabilidad: Permite gestionar eventos de manera eficiente y escalar según la demanda.
+
+----
+
+### 6. Arquitectura Basada en Eventos: Desventajas
+- Depuración difícil: Es más difícil rastrear el flujo de eventos en sistemas complejos. 
+- Inconsistencia eventual: Dependiendo del diseño, puede haber retrasos en la propagación de eventos.
+
+----
+
+### 6. Arquitectura Basada en Eventos: Ejemplo
+Sistemas de mensajería, notificaciones en tiempo real o sistemas de monitoreo.
+
+----
+
+### 6. Arquitectura Basada en Eventos: Esquema
+![Orientación a Eventos](images/unidad6/orientacion-a-eventos.webp)
+
+----
+
+### 6. Arquitectura Basada en Eventos: Componentes
+- **Productor de eventos:** Un productor de eventos es un componente o entidad dentro de un sistema que genera y emite eventos.
+- **Consumidor de eventos:** Un consumidor de eventos es un componente o entidad dentro de un sistema que está interesado 
+en recibir y procesar eventos generados por los productores de eventos. Su función principal es suscribirse a tipos 
+específicos de eventos y tomar acciones en respuesta a esos eventos.
+
+<!--Material MUY bueno https://medium.com/@diego.coder/introducci%C3%B3n-a-la-arquitectura-orientada-a-eventos-a532c71c9945 -->
+
+---
+
+### 7. Arquitectura de Tubería y Filtro
+Organiza el procesamiento en una serie de pasos donde cada paso es un "filtro" que procesa datos y pasa el resultado al 
+siguiente filtro a través de "tuberías". 
+Se utiliza en aplicaciones de procesamiento de datos (tanto basadas en lotes como en transacciones),
+
+----
+
+### 7. Arquitectura de Tubería y Filtro
 
 ![Modelo de Tubería y Filtro](images/unidad6/modelo_tuberia-filtro.jpg)
+
+----
+
+### 7. Arquitectura de Tubería y Filtro: Ventajas
+- Modularidad: Los filtros son independientes, lo que facilita agregar o quitar filtros. 
+- Reusabilidad: Cada filtro puede reutilizarse en otros flujos de procesamiento.
+
+----
+
+### 7. Arquitectura de Tubería y Filtro: Desventajas
+- Overhead: La transferencia de datos entre los filtros puede ser costosa. 
+- Dependencia de la secuencia: El orden de los filtros puede volverse rígido y difícil de cambiar.
+
+----
+
+### Arquitectura de compilador de tubería y filtro
+
+![Arquitetcura de Tubería y Filtro](images/unidad6/arquitetcura-tuberia-filtro.png)
+
+----
+
+### 7. Arquitectura de Tubería y Filtro: Ejemplo
+Compiladores o sistemas de procesamiento de datos donde los datos pasan por varias etapas de transformación.
+
+---
+### 8. Arquitectura de Espacio de Nombres
+Diseñada para sistemas altamente escalables y distribuidos, elimina la necesidad de una base de datos central y se basa 
+en "espacios" de datos que son replicados o fragmentados.
+
+----
+
+### 8. Arquitectura de Espacio de Nombres: Ventajas
+- Alta escalabilidad: Ideal para sistemas que requieren distribuir datos y procesamiento. 
+- Tolerancia a fallos: Evita puntos únicos de fallo y permite replicación y partición de datos.
+
+----
+
+### 8. Arquitectura de Espacio de Nombres: Desventajas
+- Complejidad: Requiere administración avanzada de los espacios de datos distribuidos. 
+- Consistencia eventual: Puede haber tiempos en los que los datos no estén sincronizados.
+
+----
+
+### 8. Arquitectura de Espacio de Nombres: Ejemplo
+Aplicaciones que requieren alta disponibilidad, baja latencia y gran escalabilidad horizontal, como sistemas 
+financieros o redes sociales.
+
+---
+### 9. Arquitectura de Sistema Distribuido
+En esta arquitectura, los componentes del sistema se ejecutan en múltiples máquinas distribuidas y se comunican entre sí 
+a través de una red.
+
+----
+
+### 9. Arquitectura de Sistema Distribuido: Ventajas
+- Escalabilidad horizontal: Puedes añadir más nodos al sistema para escalar. 
+- Disponibilidad: Los nodos distribuidos pueden mantener el sistema operativo, incluso si algunos fallan.
+
+----
+
+### 9. Arquitectura de Sistema Distribuido: Desventajas
+- Consistencia: Mantener los datos consistentes en diferentes nodos puede ser complicado. 
+- Latencia de red: La comunicación entre nodos distribuidos puede generar demoras.
+
+----
+
+### 9. Arquitectura de Sistema Distribuido: Ejemplo
+Sistemas de computación en la nube o aplicaciones que utilizan redes P2P (peer-to-peer).
+
+---
+### 10. Arquitectura Monolítica
+El sistema se construye como una única aplicación, donde todos los componentes están interconectados y ejecutados juntos.
+
+----
+
+### 10. Arquitectura Monolítica: Esquema
+![Arquitetcura Monolítica](images/unidad6/monolitica.png)
+
+----
+
+### 10. Arquitectura Monolítica: Ventajas
+- Simplicidad: Más fácil de desarrollar y desplegar en las primeras etapas. 
+- Eficiencia: Todo el código corre en un solo proceso, reduciendo la latencia de comunicación.
+
+----
+
+### 10. Arquitectura Monolítica: Desventajas
+- Difícil de escalar: A medida que crece el sistema, es difícil escalar partes específicas. 
+- Mantenibilidad: Los cambios en una parte pueden afectar otras partes del sistema.
+
+----
+
+### 10. Arquitectura Monolítica: Ejemplo
+Aplicaciones tradicionales o más simples, como pequeñas aplicaciones empresariales.
+
+---
+### 11. Arquitectura de Microkernel o Plug-in
+Separa el núcleo de la aplicación (core system) de la funcionalidad extensible, permitiendo que se agreguen plugins o 
+módulos que amplíen las funcionalidades.
+
+----
+
+### 11. Arquitectura de Microkernel: Esquema
+![Arquitetcura de Microkernel](images/unidad6/microkernel.webp)
+
+----
+
+### 11. Arquitectura de Microkernel: Ventajas
+- Extensibilidad: Nuevos módulos pueden añadirse sin afectar el núcleo del sistema. 
+- Mantenibilidad: El núcleo es pequeño y fácil de mantener.
+
+----
+
+### 11. Arquitectura de Microkernel: Desventajas
+- Rendimiento: La comunicación entre el núcleo y los módulos puede ser ineficiente. 
+- Complejidad en la gestión de plugins: Puede ser complicado gestionar las interacciones entre módulos.
+
+----
+
+### 11. Arquitectura de Microkernel: Ejemplo
+Sistemas operativos o aplicaciones que necesitan una base estable pero pueden ampliarse mediante módulos.
+
+---
+### 12. Arquitectura Hexagonal
+También conocida como Arquitectura de Puertos y Adaptadores, separa la lógica de negocio del sistema de las interfaces 
+externas mediante "puertos" (interfaces) y "adaptadores" (que conectan la lógica con esas interfaces).
+
+----
+
+### 12. Arquitectura Hexagonal: Esquema
+![Esquema Hexagonal](images/unidad6/hexagonal.png)
+
+----
+
+### 12. Arquitectura Hexagonal: Ventajas
+- Desacoplamiento: Permite cambiar las interfaces externas sin modificar la lógica central. 
+- Testabilidad: Facilita la creación de pruebas unitarias, dado el aislamiento de los puertos.
+
+----
+
+### 12. Arquitectura Hexagonal: Desventajas
+- Complejidad: Puede ser más difícil de entender y configurar para pequeños proyectos. 
+- Curva de aprendizaje: Requiere más tiempo para que los desarrolladores comprendan completamente su estructura.
+
+----
+
+### 12. Arquitectura Hexagonal: Ejemplo
+Aplicaciones que necesitan ser adaptables y mantenibles con diferentes interfaces (por ejemplo, interfaz web, API REST).
+
+---
+### 13. Arquitectura basada en Componentes
+El sistema se construye ensamblando componentes modulares que interactúan entre sí. Cada componente es independiente y 
+puede ser reemplazado o reutilizado.
+
+----
+
+### 13. Arquitectura basada en Componentes: Ventajas
+- Modularidad: Facilita la actualización o reemplazo de componentes sin afectar el resto del sistema. 
+- Reusabilidad: Los componentes pueden ser reutilizados en diferentes aplicaciones.
+
+----
+
+### 13. Arquitectura basada en Componentes: Desventajas
+- Interdependencias: Asegurar que los componentes encajen bien entre sí puede ser complicado. 
+- Overhead de comunicación: La comunicación entre componentes introduce una sobrecarga.
+
+----
+
+### 13. Arquitectura basada en Componentes: Ejemplo
+Aplicaciones empresariales donde diferentes módulos pueden ser desarrollados y mantenidos por equipos distintos.
+
+---
+### 14. Arquitectura de Peer-to-Peer
+En lugar de un servidor central, cada nodo en la red actúa tanto como cliente y como servidor, compartiendo y recibiendo 
+datos directamente con otros nodos.
+
+----
+
+### 14. Arquitectura de Peer-to-Peer: Esquema
+![Arquitetcura de Peer-to-Peer](images/unidad6/p2p.jpg)
+
+----
+
+### 14. Arquitectura de Peer-to-Peer: Ventajas
+- Escalabilidad: No hay un punto central de control, lo que permite agregar más nodos fácilmente. 
+- Tolerancia a fallos: Si un nodo falla, otros pueden asumir sus responsabilidades.
+
+----
+
+### 14. Arquitectura de Peer-to-Peer: Desventajas
+- Seguridad: La naturaleza distribuida puede hacer que sea más difícil asegurar. 
+- Coordinación: Es complicado mantener una coordinación eficiente entre los nodos.
+
+----
+
+### 14. Arquitectura de Peer-to-Peer: Ejemplo
+Aplicaciones como BitTorrent, Skype, o sistemas blockchain.
+
+---
+### 15. Arquitectura CQRS
+Divide el manejo de los comandos (escribir o modificar datos) y las consultas (leer datos) en dos modelos separados, 
+permitiendo una optimización independiente.
+
+----
+
+### 15. Arquitectura CQRS: Esquema
+![Esquema CQRS](images/unidad6/CQRS.png)
+
+----
+
+### 15. Arquitectura CQRS: Ventajas
+- Optimización independiente: Lecturas y escrituras pueden ser optimizadas por separado. 
+- Escalabilidad: Es más fácil escalar la parte de lectura o de escritura según sea necesario.
+
+----
+
+### 15. Arquitectura CQRS: Desventajas
+- Complejidad: Introduce más complejidad al tener dos modelos de datos separados. 
+- Consistencia eventual: La sincronización entre los dos modelos puede no ser instantánea.
+
+---
+
+### 15. Arquitectura CQRS: Ejemplo
+Aplicaciones que tienen requerimientos muy distintos para lectura y escritura de datos, como sistemas bancarios.
+
+---
+### 16. Arquitectura Basada en Nubes
+Aprovecha los servicios y capacidades de la computación en la nube, distribuyendo la carga de trabajo y el almacenamiento 
+en servidores remotos.
+
+----
+
+### 16. Arquitectura Basada en Nubes: Ventajas
+- Elasticidad: Fácil de escalar dinámicamente según las necesidades de la aplicación. 
+- Costo eficiente: Solo pagas por los recursos que usas.
+
+----
+
+### 16. Arquitectura Basada en Nubes: Desventajas
+- Dependencia de terceros: Dependes de proveedores externos para la infraestructura. 
+- Latencia: Los recursos en la nube pueden tener mayor latencia que los locales.
+
+----
+
+### 16. Arquitectura Basada en Nubes: Ejemplo
+Aplicaciones SaaS (Software as a Service) como Google Drive, Dropbox o aplicaciones que usan Amazon Web Services (AWS) o 
+Microsoft Azure.
+
+---
+### 17. Arquitectura de Repositorio
+Todos los componentes del sistema se comunican y comparten datos a través de un repositorio común centralizado.
+
+El Sub-sistemas de intercambio de datos puede hacerse de dos maneras:
+* Datos compartidos se lleva a cabo en un repositorio o base de datos central y puede ser visitada por todos
+    los sub-sistemas;
+* Cada sub-sistema mantiene su propia base de datos y pasa datos explícitamente a otros subsistemas. 
+
+Cuando grandes cantidades de datos sean compartidos, el modelo de repositorio compartido es más comúnmente utilizado.
+
+----
+
+### 17. Arquitectura de Repositorio: Ventajas
+- Centralización: Todos los módulos acceden a un repositorio común. 
+- Facilita la integración: Los datos centralizados permiten una integración sencilla entre componentes.
+- Manera eficaz de compartir grandes cantidades de datos
+- Sub-sistemas no tienen por qué preocuparse de cómo los datos se producen, por ejemplo, la gestión centralizada
+  copia de seguridad, seguridad, etc
+- Un modelo a compartir se publica como el esquema del repositorio.
+
+----
+
+### 17. Arquitectura de Repositorio: Desventajas
+- Punto único de fallo: Si el repositorio falla, todo el sistema se ve afectado. 
+- Cuello de botella: El acceso concurrente al repositorio puede ser un cuello de botella en el rendimiento.
+- Sub-sistemas deben ponerse de acuerdo sobre un modelo repositorio de datos. Inevitablemente, un compromiso
+- La evolución de datos es difícil y costosa
+- No hay lugar para las políticas de gestión específica
+- Difícil de distribuir de manera eficiente
+
+
+----
+
+### 17. Arquitectura de Repositorio: Ejemplo
+Sistemas de bases de datos o sistemas de información compartida donde múltiples módulos acceden a un almacenamiento común.
+
+----
+
+### 17. ARQUITECTURA DE REPOSITORIO IDE
+
+![Repositorio IDE](images/unidad6/repositorio-IDE.jpg)
+
+---
+
+#### 17. Arquitectura de repositorio para un sistema de procesamiento de lenguaje
+
+![Arquitetcura de Repositorio para un sistema de Procesamiento de Lenguaje](images/unidad6/Arquitetcura-de-repositorio.png)
+
+---
+### 18. Arquitectura Modelo-Vista-Controlador
+- Separa **presentación** e **interacción** de los **datos** del sistema.
+- El sistema se estructura en **3** componentes lógicos.
+- El componente **Modelo** maneja los _datos_ del sistema y las operaciones asociadas a esos datos.
+- El componente **Vista** define y gestiona cómo se _presentan_ los datos al usuario.
+- El componente **Controlador** dirige la _interacción_ del usuario y pasa estas interacciones a Vista y Modelo.
+
+----
+
+### 18. Arquitectura Modelo-Vista-Controlador
+
+![Modelo Vista-Controlador](images/unidad6/modelo-vista-controlador.jpg)
+
+----
+
+### 18. APLICACION WEB CON ARQUITECTURA MVC
+
+![Arquitetcura MVC](images/unidad6/arquitetura-mvc.jpg)
+
+----
+
+### 18. Arquitectura Modelo-Vista-Controlador: USO
+- Cuando existen múltiples formas de ver e interactuar con los datos
+- Al desconocerse los requerimientos futuros para la interacción y presentación.
+- Aplicaciones web y frameworks como Django (Python), Ruby on Rails, ASP.NET, y Spring (Java). En el contexto de 
+aplicaciones de una sola página (SPA), frameworks como Angular, React y Vue.js utilizan variantes de MVC o patrones similares como MVVM (Model-View-ViewModel).
+
+----
+
+### 18. Arquitectura Modelo-Vista-Controlador: Ventajas
+- Separación de responsabilidades: Divide la aplicación en tres componentes independientes (modelo, vista y controlador), 
+lo que facilita el mantenimiento y la evolución del código.
+- Reusabilidad de la vista: Las vistas pueden cambiarse o reutilizarse sin afectar la lógica de negocio ni el controlador.
+- Facilita el desarrollo en equipo: Los desarrolladores pueden trabajar en la lógica de negocio (modelo), en la interfaz (vista) y en la interacción (controlador) de forma paralela. 
+- Mejor organización del código: Promueve una estructura modular y limpia, haciendo más fácil agregar nuevas funcionalidades. 
+- Escalabilidad: La separación de componentes permite escalar cada parte del sistema de manera más controlada.
+
+----
+
+### 18. Arquitectura Modelo-Vista-Controlador: Desventajas
+- Complejidad inicial: Para proyectos pequeños o simples, MVC puede ser demasiado complejo y crear overhead innecesario. 
+- Dependencias entre componentes: Aunque los componentes están separados, suelen existir fuertes dependencias entre el controlador y la vista, lo que puede dificultar el desacoplamiento completo. 
+- Curva de aprendizaje: Entender y dominar bien el patrón MVC puede ser desafiante, especialmente para nuevos desarrolladores. 
+- Sobrecarga en pequeñas aplicaciones: Puede añadir complejidad innecesaria cuando se aplica en sistemas pequeños que no requieren tal nivel de separación.
 
 ---
 ### Estructura de las aplicaciones de procesamiento de transacción
@@ -371,29 +814,9 @@ disponibles.
 ![ATM](images/unidad6/ATM.png)
 
 ---
-### Arquitectura de sistema de información en capas
-
-![Arquitectura de Capas](images/unidad6/capas.png)
-
----
-### Arquitectura del MHC-PMS
-
-![MHC-PMS](images/unidad6/MHC-PMS.png)
-
----
 #### Arquitectura de un sistema de procesamiento de lenguaje
 
 ![Lenguaje de Procesamiento del Sistema](images/unidad6/arquitetcura-procesamiento.png)
-
----
-### Arquitectura de compilador de tubería y filtro
-
-![Arquitetcura de Tubería y Filtro](images/unidad6/arquitetcura-tuberia-filtro.png)
-
----
-#### Arquitectura de repositorio para un sistema de procesamiento de lenguaje
-
-![Arquitetcura de Repositorio para un sistema de Procesamiento de Lenguaje](images/unidad6/Arquitetcura-de-repositorio.png)
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
