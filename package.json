@@ -19,6 +19,6 @@
   "homepage": "https://ucc-labcompu2.github.io/filminas/",
   "dependencies": {
     "gh-pages": "^6.1.1",
-    "reveal-md": "^6.1.2"
+    "reveal-md": "^6.1.3"
   }
 }
