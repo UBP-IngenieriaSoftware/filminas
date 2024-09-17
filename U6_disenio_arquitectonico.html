@@ -70,7 +70,9 @@ Created by <i class="fab fa-telegram"></i>
 ---
 
 ### Diseño Arquitectónico
-Se refiere a la estructura y organización a gran escala de un sistema de software. Es la planificación de los componentes principales de un sistema y la forma en que interactúan entre ellos. El diseño arquitectónico se enfoca en la visión global del sistema, definiendo módulos, componentes, subsistemas, bases de datos, servidores y cómo todo se conecta y comunica.
+Se refiere a la estructura y organización a gran escala de un sistema de software. Es la planificación de los componentes 
+principales de un sistema y la forma en que interactúan entre ellos. El diseño arquitectónico se enfoca en la visión 
+global del sistema, definiendo módulos, componentes, subsistemas, bases de datos, servidores y cómo todo se conecta y comunica.
 
 ----
 
@@ -85,11 +87,12 @@ Se refiere a la estructura y organización a gran escala de un sistema de softwa
 ----
 
 ### Patrones de Diseño
-Son soluciones probadas y reutilizables para problemas comunes en el desarrollo de software a un nivel más detallado. Estos patrones se aplican a problemas específicos dentro del código o en la interacción de ciertos componentes, y son como "buenas prácticas" que se pueden seguir.
+Son soluciones probadas y reutilizables para problemas comunes en el desarrollo de software a un nivel más detallado. 
+Estos patrones se aplican a problemas específicos dentro del código o en la interacción de ciertos componentes, y son 
+como "buenas prácticas" que se pueden seguir.
 
 - **Ejemplo:** Patrones como Singleton, Factory, o Observer.
 - **Objetivo:** Resolver problemas frecuentes de diseño en el nivel del código y mejorar la mantenibilidad y flexibilidad del software.
-
 
 ----
 
@@ -207,6 +210,21 @@ particular, con variantes que satisfagan las necesidades del cliente.
 * La conciencia de estos estilos puede simplificar el problema de la definición de arquitecturas de sistemas.
 * Sin embargo, la mayoría de los grandes sistemas son heterogéneos y no siguen un mismo estilo arquitectónico.
 
+----
+
+### ESTILOS ARQUITECTÓNICOS
+- Un conjunto de componentes. 
+- Un conjunto de conectores entre componentes (comunicación, coordinación, cooperación, etc.). 
+- Restricciones que definen cómo se integran los componentes para formar el sistema. 
+- Modelos que permiten comprender las propiedades de un sistema general.
+
+----
+
+### ¿Cómo elegir un estilo de arquitectura?
+* Ventajas
+* Desventajas
+* Contexto
+
 ---
 ### MODELOS ARQUITECTÓNICOS
 <!-- .slide: style="font-size: 0.90em" -->
@@ -229,11 +247,11 @@ particular, con variantes que satisfagan las necesidades del cliente.
 7. Arquitectura de Tubería y Filtro
 8. Arquitectura de Espacio de Nombres
 9. Arquitectura de Sistema Distribuido
+10. Arquitectura Monolítica
 
 ----
 
 ### MODELOS Arquitectónicos
-10. Arquitectura Monolítica
 11. Arquitectura de Microkernel
 12. Arquitectura Hexagonal
 13. Arquitectura basada en Componentes
@@ -242,6 +260,8 @@ particular, con variantes que satisfagan las necesidades del cliente.
 16. Arquitectura Basada en Nubes
 17. Arquitectura de Repositorio
 18. Modelo-Vista-Controlador
+19. Arquitectura de Máquina de Estados
+20. Arquitectura Orientada a Objetos
 
 ----
 
@@ -325,6 +345,7 @@ Aplicaciones web que tienen capas de presentación, lógica de negocio y acceso 
 ### 2. Arquitectura Cliente-Servidor: Ventajas
 - Centralización: El servidor central puede controlar y gestionar los datos y el acceso.
 - Escalabilidad: Es más fácil escalar el servidor que administrar múltiples clientes.
+- Mantenimiento: Es más sencillo de mantener o de transladar con sencillez el servidor a nuevo hardware/software
 
 ----
 
@@ -748,6 +769,7 @@ Cuando grandes cantidades de datos sean compartidos, el modelo de repositorio co
 ----
 
 ### 17. Arquitectura de Repositorio: Desventajas
+<!-- .slide: style="font-size: 0.90em" -->
 - Punto único de fallo: Si el repositorio falla, todo el sistema se ve afectado. 
 - Cuello de botella: El acceso concurrente al repositorio puede ser un cuello de botella en el rendimiento.
 - Sub-sistemas deben ponerse de acuerdo sobre un modelo repositorio de datos. Inevitablemente, un compromiso
@@ -775,6 +797,7 @@ Sistemas de bases de datos o sistemas de información compartida donde múltiple
 
 ---
 ### 18. Arquitectura Modelo-Vista-Controlador
+<!-- .slide: style="font-size: 0.80em" -->
 - Separa **presentación** e **interacción** de los **datos** del sistema.
 - El sistema se estructura en **3** componentes lógicos.
 - El componente **Modelo** maneja los _datos_ del sistema y las operaciones asociadas a esos datos.
@@ -804,6 +827,7 @@ aplicaciones de una sola página (SPA), frameworks como Angular, React y Vue.js 
 ----
 
 ### 18. Arquitectura Modelo-Vista-Controlador: Ventajas
+<!-- .slide: style="font-size: 0.80em" -->
 - Separación de responsabilidades: Divide la aplicación en tres componentes independientes (modelo, vista y controlador), 
 lo que facilita el mantenimiento y la evolución del código.
 - Reusabilidad de la vista: Las vistas pueden cambiarse o reutilizarse sin afectar la lógica de negocio ni el controlador.
@@ -814,10 +838,106 @@ lo que facilita el mantenimiento y la evolución del código.
 ----
 
 ### 18. Arquitectura Modelo-Vista-Controlador: Desventajas
+<!-- .slide: style="font-size: 0.80em" -->
 - Complejidad inicial: Para proyectos pequeños o simples, MVC puede ser demasiado complejo y crear overhead innecesario. 
 - Dependencias entre componentes: Aunque los componentes están separados, suelen existir fuertes dependencias entre el controlador y la vista, lo que puede dificultar el desacoplamiento completo. 
 - Curva de aprendizaje: Entender y dominar bien el patrón MVC puede ser desafiante, especialmente para nuevos desarrolladores. 
 - Sobrecarga en pequeñas aplicaciones: Puede añadir complejidad innecesaria cuando se aplica en sistemas pequeños que no requieren tal nivel de separación.
+
+---
+### 19. Arquitectura de Máquina de Estados
+Organiza el sistema en una serie de estados predefinidos que reaccionan a eventos. Cada transición entre estados se 
+desencadena por un evento específico, y la máquina de estados pasa de un estado a otro en función de la entrada recibida. 
+Es especialmente útil para sistemas donde el comportamiento varía según el estado actual del sistema.
+
+----
+
+### 19. Arquitectura de Máquina de Estados: Ventajas
+- **Claridad y Simplicidad:** Facilita la representación clara del comportamiento del sistema en función de estados y transiciones. 
+- **Predecible y fácil de depurar:** Cada estado tiene un comportamiento bien definido, lo que hace que sea más fácil depurar el sistema. 
+- **Manejo sencillo de eventos:** Ideal para aplicaciones que dependen de eventos, como sistemas de control o automatización. 
+- **Modularidad:** Los estados pueden diseñarse como módulos independientes, lo que facilita el mantenimiento y la evolución del sistema.
+
+----
+
+### 19. Arquitectura de Máquina de Estados: Desventajas
+- **Complejidad:** Si hay demasiados estados o transiciones, el sistema puede volverse difícil de gestionar y escalar.
+- **Dificultad en cambios dinámicos:** Cambiar o agregar nuevos estados y transiciones puede ser complicado sin romper la lógica existente.
+- **Rígido:** No es ideal para sistemas donde el comportamiento no se puede describir fácilmente en términos de estados discretos.
+- **Sobrecarga en diseño:** Para sistemas simples, el diseño de una máquina de estados puede ser innecesariamente complejo.
+
+----
+
+### 19. Arquitectura de Máquina de Estados: Uso
+- Sistemas de control en tiempo real: Como controladores de tráfico, robots, ascensores. 
+- Videojuegos: Para gestionar estados de personajes, niveles y eventos de juego. 
+- Protocolos de comunicación: Donde las conexiones pasan por diferentes estados como conectando, conectado, desconectado. 
+- Interfaces de usuario: Donde las interacciones del usuario y las interfaces gráficas se pueden representar mediante estados.
+
+---
+
+### 20. Arquitectura Orientada a Objetos
+Organiza el sistema en objetos, que encapsulan tanto datos (atributos) como comportamientos (métodos). Estos objetos 
+interactúan entre sí enviando mensajes o invocando métodos, y cada uno representa una entidad o concepto del mundo real.
+
+----
+
+### 20. Arquitectura Orientada a Objetos: Ventajas
+- **Reusabilidad:** Los objetos y clases pueden reutilizarse en otros proyectos o partes del sistema mediante herencia y polimorfismo.
+- **Modularidad:** El sistema se organiza en objetos que pueden desarrollarse y mantenerse de forma independiente.
+- **Escalabilidad:** Facilita la creación de sistemas complejos mediante la creación de relaciones entre objetos (composición, herencia).
+- **Mantenibilidad:** Facilita el mantenimiento y la evolución del sistema, ya que los cambios en un objeto no necesariamente afectan a otros.
+- **Correspondencia con el mundo real:** Representar entidades del mundo real como objetos hace que el diseño sea más intuitivo y natural.
+
+----
+
+### 20. Arquitectura Orientada a Objetos: Desventajas
+- **Sobrecarga de rendimiento:** Las llamadas a métodos y la interacción entre objetos pueden generar una pequeña sobrecarga en el rendimiento.
+- **Complejidad inicial:** Puede ser más complicado de entender para desarrolladores sin experiencia en programación orientada a objetos.
+- **Riesgo de sobre-ingeniería:** A veces los desarrolladores tienden a crear clases y objetos innecesarios, complicando el sistema.
+- **Herencia compleja:** El mal uso de la herencia puede llevar a un diseño rígido y difícil de cambiar.
+
+---
+
+### Ejercicio
+¿Qué estilo o estilos arquitectónicos resultan aplicables?
+1. La aplicación necesita procesar la entrada en forma de flujo continuo (stream) y producir
+una salida también en forma de flujo continuo.
+2. Hay una gran cantidad de usuarios que se conectarán al sistema a través de una red.
+3. La aplicación necesita ser ejecutada en diferentes plataformas.
+4. El sistema debe tener una alta performance tanto en tiempo como en espacio (memoria).
+5. El sistema debe ser capaz de ser ajustado para alcanzar el mejor uso de los recursos de
+software y hardware, los cuales pueden ser cambiados en el futuro.
+6. Una componente clave del sistema es la solución de un problema recurrente en el
+dominio de aplicación. Se desea reusar lo componentes en sistemas similares.
+
+---
+### Jerarquía
+Los estilos arquitectónicos pueden clasificarse en jerárquicos y no jerárquicos, según la forma en que organizan y 
+estructuran los componentes dentro del sistema.
+
+----
+
+#### Estilos Arquitectónicos Jerárquicos
+Estos estilos organizan el sistema de forma estructurada, donde las capas o componentes tienen una jerarquía y se 
+comunican de manera controlada o secuencial.
+1. Arquitectura en Capas
+2. Arquitectura Cliente-Servidor
+3. Arquitectura de Microkernel
+4. Arquitectura Hexagonal 
+5. Arquitectura de Microservicios
+
+----
+
+#### Estilos Arquitectónicos No Jerárquicos
+Estos estilos permiten una estructura más flexible, donde los componentes se comunican directamente entre sí sin una 
+dependencia estricta de capas o jerarquías predefinidas.
+1. Arquitectura Basada en Eventos
+2. Arquitectura de Tubería y Filtro
+3. Arquitectura Basada en Espacio de Nombres
+4. Arquitectura Peer-to-Peer (P2P)
+5. Arquitectura CQRS
+6. Arquitectura de Repositorio
 
 ---
 ### Estructura de las aplicaciones de procesamiento de transacción
@@ -907,7 +1027,10 @@ lo que facilita el mantenimiento y la evolución del código.
       const mermaidOptions = extend({ startOnLoad: false }, {});
       mermaid.startOnLoad = false;
       mermaid.initialize(mermaidOptions);
-      const cb = function (event) { mermaid.init(mermaidOptions, '.stack.present>.present pre code.mermaid'); };
+      const cb = function (event) {
+        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
+        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
+      }
       Reveal.addEventListener('ready', cb);
       Reveal.addEventListener('slidetransitionend', cb);
     </script>
