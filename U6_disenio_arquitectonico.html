@@ -248,12 +248,13 @@ particular, con variantes que satisfagan las necesidades del cliente.
 8. Arquitectura de Espacio de Nombres
 9. Arquitectura de Sistema Distribuido
 10. Arquitectura Monolítica
+11. Arquitectura de Microkernel
+12. Arquitectura Hexagonal
 
 ----
 
 ### MODELOS Arquitectónicos
-11. Arquitectura de Microkernel
-12. Arquitectura Hexagonal
+
 13. Arquitectura basada en Componentes
 14. Arquitectura de Peer-to-Peer
 15. Arquitectura CQRS (Command Query Responsibility Segregation)
@@ -262,6 +263,13 @@ particular, con variantes que satisfagan las necesidades del cliente.
 18. Modelo-Vista-Controlador
 19. Arquitectura de Máquina de Estados
 20. Arquitectura Orientada a Objetos
+21. Arquitetcura Broker (intermediario)
+22. Arquitectura Master-Slave
+23. Arquitectura Serverless
+
+----
+
+Al leer sobre cada Arquitetcura plantea si es Jerarquico o No Jerarquico
 
 ----
 
@@ -333,6 +341,17 @@ Aplicaciones web que tienen capas de presentación, lógica de negocio y acceso 
   impresión, gestión de datos, etc
 * Conjunto de clientes que envian solicitudes a éstos servidores, que los procesan y responden con los resultados.
 * Red que permite a los clientes acceder a los servidores.
+
+----
+
+### 2. Arquitectura Cliente-Servidor: Evolución
+
+| Generación       | Características                               |
+|------------------|-----------------------------------------------|
+| 1ª Generación    | 	Servidores físicos dedicados, cliente pesado |
+| 2ª Generación    | 	Virtualización, cliente ligero               |
+| 3ª‌ Generación   | Computación‌ en la ⁢nube, SaaS                |
+| 4ª⁤ Generación   | 	Microservicios, ⁣contenedores, orquestación  |
 
 ----
 
@@ -729,6 +748,13 @@ en servidores remotos.
 
 ----
 
+### 16. Arquitectura Basada en Nubes: Consta de...
+- Una capa de **hardware**, que incluye servidores bare metal, equipamiento de red y dispositivos de almacenamiento
+- Una capa de **virtualización**, que incluye hipervisores y componentes de redes definidos por software (SDN) para virtualizar los recursos físicos 
+- Una capa de **servicios**, que incluye los recursos de nube que el proveedor entrega a los usuarios 
+
+----
+
 ### 16. Arquitectura Basada en Nubes: Ventajas
 - Elasticidad: Fácil de escalar dinámicamente según las necesidades de la aplicación. 
 - Costo eficiente: Solo pagas por los recursos que usas.
@@ -744,6 +770,13 @@ en servidores remotos.
 ### 16. Arquitectura Basada en Nubes: Ejemplo
 Aplicaciones SaaS (Software as a Service) como Google Drive, Dropbox o aplicaciones que usan Amazon Web Services (AWS) o 
 Microsoft Azure.
+
+----
+
+### 16. Ejemplo de arquitectura en la nube de un sistema de gestión de documentos
+<!-- .slide: style="font-size: 0.60em" -->
+![Cloud Architecture](images/unidad6/cloud-architecture.png)
+<!--https://www.akamai.com/es/blog/cloud/what-is-cloud-architecture-->
 
 ---
 ### 17. Arquitectura de Repositorio
@@ -899,6 +932,109 @@ interactúan entre sí enviando mensajes o invocando métodos, y cada uno repres
 
 ---
 
+### 21. Arquitectura Broker (Intermediario)
+Los componentes de software (clientes y servidores) no interactúan directamente entre sí, sino que lo hacen a través de 
+un broker o intermediario que gestiona las comunicaciones. 
+
+El broker recibe solicitudes de los clientes y las envía al servidor adecuado para su procesamiento.
+
+----
+
+### 21. Arquitectura Broker: Ventajas
+- **Escalabilidad:** Al ser todas las tareas ejecutadas independientes las unas de las otras es posible escalar 
+facilmente el sistema y sólo es necesario disponer de nuevos servidores que puedan procesar las peticiones del broker.
+- **Rendimiento:** Al ser un gran número de nodos conectados a lo que simplemente actúa como un puente con el cliente 
+el rendimiento puede mantenerse siempre en altas escalas ya que es posible redistribuir si es necesario y procesar 
+grandes cargas de peticiones en momentos de saturación
+
+----
+
+### 21. Arquitectura Broker: Desventajas
+- **Costo:** Es necesario tener un gran número de servidores, que deben de ser mantenidos independientemente, con 
+diferentes piezas de software distribuidas entre ellos.
+- **Mantenimiento:** Este sistema distribuido implica que cualquier falla debe de poder deberse a cualquier pieza, 
+igualmente realizar tareas de mantenimiento en la máquina broker puede implicar tiempos sin disponibilidad de servicio.
+
+----
+
+### 21. Arquitectura Broker: Ejemplos
+Arquitecturas de mensajería o middleware, como sistemas de colas de mensajes (MQ).
+RabbitMQ, Apache Kafka o sistemas de intermediación de datos en servicios distribuidos.
+
+----
+
+### 21. Arquitectura Broker: Esquema
+
+![Broker](images/unidad6/broker.png)
+
+---
+
+### 22. Arquitectura Master-Slave
+Un nodo principal (master) controla uno o más nodos secundarios (slaves). El master delega tareas a los slaves, 
+coordina su trabajo y recopila resultados. 
+
+Esta arquitectura es común cuando se necesita distribuir tareas y luego consolidar los resultados.
+
+----
+
+### 22. Arquitectura Master-Slave: Ventajas
+- **Gestión centralizada:** Destaca para el diseño de tareas multi-tarea ya que permite dividir las tareas en diferentes 
+módulos que pueden ser ejecutados de forma independiente.
+- **Control:** Al partir todas las tareas de un único nodo orquestador, se mantiene mayor control ya que las tareas se 
+ejecutan de manera independiente y reciben el contexto y su procesamiento final de un único punto de la ejecución.
+- **Escalabilidad:** Al ser todas las tareas ejecutadas independientes las unas de las otras es posible escalar 
+fácilmente el sistema de forma que añadir nuevos nodos esclavos se termine traduciendo en un más que posible aumento del rendimiento.
+
+----
+
+### 22. Arquitectura Master-Slave: Desventajas
+- **Implementación:** NDebe de existir la posibilidad de dividir el proyecto en módulos que puedan actuar aislados de 
+la ejecución principal del programa.
+- **Dependencia:** Fuerte dependencia con el sistema en el que se haya implementado que en muchas ocasiones hace difícil 
+portarlo a otras máquinas distintas.
+
+----
+
+### 22. Arquitectura Master-Slave: Ejemplos
+En sistemas de bases de datos distribuidas, los masters controlan las réplicas de slaves; en el caso de sistemas de alta 
+disponibilidad, el master toma decisiones, y los slaves actúan como copias de respaldo o ejecución en paralelo.
+
+----
+
+### 22. Arquitectura Master-Slave: Esquema
+
+![Master-Slave](images/unidad6/master.png)
+
+---
+### 23. Arquitectura Serverless
+No significa que no haya servidores, sino que la administración de servidores está completamente abstraída del 
+desarrollador. Los desarrolladores solo se ocupan del código y la lógica de negocio, mientras que el proveedor de la 
+nube maneja la infraestructura, escalabilidad y disponibilidad automáticamente.
+
+----
+
+### 23. Arquitectura Serverless: Ejemplos
+Servicios como AWS Lambda, Azure Functions o Google Cloud Functions permiten ejecutar código en respuesta a eventos 
+sin preocuparse por la infraestructura subyacente.
+
+----
+
+### 23. Arquitectura Serverless: Uso
+Se utiliza principalmente en arquitecturas basadas en eventos, para implementar microservicios, y en casos donde la 
+elasticidad es crucial, ya que se escala automáticamente según la demanda.
+
+---
+Hay muchas más arquitetcuras... 
+- Arquitectura de Cola de Mensajes
+- Arquitectura de Barrera (Barrier)
+- Arquitectura de Mensajería Asíncrona
+- Arquitectura Lambda
+- Arquitectura de Controlador de Interrupciones
+- Arquitectura de Seguridad Zero-Trust
+- Arquitectura de Capas Limpias o Clean Architecture
+
+---
+
 ### Ejercicio
 ¿Qué estilo o estilos arquitectónicos resultan aplicables?
 1. La aplicación necesita procesar la entrada en forma de flujo continuo (stream) y producir
@@ -922,22 +1058,46 @@ estructuran los componentes dentro del sistema.
 Estos estilos organizan el sistema de forma estructurada, donde las capas o componentes tienen una jerarquía y se 
 comunican de manera controlada o secuencial.
 1. Arquitectura en Capas
-2. Arquitectura Cliente-Servidor
-3. Arquitectura de Microkernel
-4. Arquitectura Hexagonal 
-5. Arquitectura de Microservicios
+2. Arquitectura de Capas N
+3. Arquitectura Cliente-Servidor
+4. Arquitectura Monolítica
+5. Arquitectura de Microkernel
+6. Arquitectura de Sistema Distribuido (si incluye jerarquía de nodos)
+7. Modelo-Vista-Controlador (MVC)
+8. Arquitectura Master-Slave
+9. Arquitectura CQRS
+10. Arquitectura Broker
 
 ----
 
 #### Estilos Arquitectónicos No Jerárquicos
 Estos estilos permiten una estructura más flexible, donde los componentes se comunican directamente entre sí sin una 
 dependencia estricta de capas o jerarquías predefinidas.
-1. Arquitectura Basada en Eventos
-2. Arquitectura de Tubería y Filtro
-3. Arquitectura Basada en Espacio de Nombres
-4. Arquitectura Peer-to-Peer (P2P)
-5. Arquitectura CQRS
-6. Arquitectura de Repositorio
+1. Arquitectura de Microservicios
+2. Arquitectura Orientada a Servicios (SOA)
+3. Arquitectura Basada en Eventos
+4. Arquitectura de Tubería y Filtro
+5. Arquitectura de Espacio de Nombres
+6. Arquitectura Hexagonal
+7. Arquitectura basada en Componentes
+8. Arquitectura Peer-to-Peer
+9. Arquitectura Basada en Nubes
+10. Arquitectura de Repositorio
+11. Arquitectura de Máquina de Estados
+12. Arquitectura Orientada a Objetos
+13. Arquitectura Serverless
+
+---
+### Ejercicio
+Elabora una tabla comparativa de los diseños arquitectónicos comparando:
+- Rendimiento
+- Escalabilidad
+- Complejidad de Desarrollo
+- Mantenibilidad
+- Reusabilidad
+- Modularidad
+- Tolerancia a Fallos
+- Eficiencia
 
 ---
 ### Estructura de las aplicaciones de procesamiento de transacción
@@ -959,6 +1119,7 @@ dependencia estricta de capas o jerarquías predefinidas.
 ![DUDAS](images/pregunta.gif)
 
 <!--https://refactoring.guru/design-patterns/what-is-pattern-->
+<!--https://blog.spanish-smartbrain.com/software-architecture-patterns-types.html-->
           </textarea>
         </section>
       </div>
