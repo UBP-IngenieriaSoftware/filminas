@@ -330,12 +330,32 @@ Aplicaciones web que tienen capas de presentación, lógica de negocio y acceso 
 
 ### 2. Arquitectura Cliente-Servidor: Evolución
 
-| Generación       | Características                               |
-|------------------|-----------------------------------------------|
-| 1ª Generación    | 	Servidores físicos dedicados, cliente pesado |
-| 2ª Generación    | 	Virtualización, cliente ligero               |
-| 3ª‌ Generación   | Computación‌ en la ⁢nube, SaaS                |
-| 4ª⁤ Generación   | 	Microservicios, ⁣contenedores, orquestación  |
+<table>
+<thead>
+<tr>
+<th>Generación</th>
+<th>Características</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1ª Generación</td>
+<td>Servidores físicos dedicados, cliente pesado</td>
+</tr>
+<tr>
+<td>2ª Generación</td>
+<td>Virtualización, cliente ligero</td>
+</tr>
+<tr>
+<td>3ª Generación</td>
+<td>Computación en la nube, SaaS</td>
+</tr>
+<tr>
+<td>4ª Generación</td>
+<td>Microservicios, contenedores, orquestación</td>
+</tr>
+</tbody>
+</table>
 
 ----
 
