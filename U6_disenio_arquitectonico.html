@@ -263,7 +263,7 @@ particular, con variantes que satisfagan las necesidades del cliente.
 18. Modelo-Vista-Controlador
 19. Arquitectura de Máquina de Estados
 20. Arquitectura Orientada a Objetos
-21. Arquitetcura Broker (intermediario)
+21. Arquitectura Broker (intermediario)
 22. Arquitectura Master-Slave
 23. Arquitectura Serverless
 
@@ -431,6 +431,33 @@ de red ligeros (ej., HTTP, REST, gRPC).
 ### 3. Arquitectura de Microservicios: Ejemplo
 Plataformas como Netflix o Amazon utilizan microservicios para manejar diferentes módulos como facturación, inventario, etc.
 
+----
+
+### 3. Netflix emplea arquitetcura de Microservicios
+
+- [Cómo funciona Netflix - el complejo proceso en términos sencillos](https://sysarmy.com/blog/posts/como-funciona-netflix/)
+- [Cómo funciona Netflix cuando le das al play](https://luiscualquiera.medium.com/c%C3%B3mo-funciona-netflix-cuando-le-das-al-play-7b1249bf53c2)
+- [Diferencias entre una arquitectura monolítica y de microservicios](https://calimaco.com/2024/03/05/arquitectura-microservicios-vs-monolitica/)
+
+----
+
+### 3. Amazon emplea Microservicios
+<!-- .slide: style="font-size: 0.70em" -->
+- De qué partían: En sus inicios, Amazon tenía una arquitectura monolítica, pero a medida que la compañía crecía, la \
+complejidad y el tamaño del código aumentaron exponencialmente. Esto hacía difícil mantener y escalar la plataforma.
+- Cambio: Amazon migró su arquitectura a microservicios. Cada equipo era responsable de un "servicio" independiente y 
+utilizaba APIs para la comunicación entre los servicios. Esto permitió un desarrollo más rápido y la habilidad de 
+- escalar partes específicas de la plataforma de manera independiente.
+- Impacto: La migración a microservicios facilitó la creación de Amazon Web Services (AWS), que es uno de los servicios 
+de infraestructura en la nube más grandes del mundo. AWS proporciona a otros desarrolladores la capacidad de utilizar 
+microservicios y escalabilidad de la misma manera que Amazon lo hacía internamente.
+
+----
+
+### 3. Amazon emplea Microservicios
+Otras empresas como **Uber** y **Spotify** también migraron de una estructura inicial monolítica a microservicios
+cuando tuvieron la necesidad de crecimiento.
+
 ---
 ### 4. Arquitectura de Capas N
 Similar a la arquitectura en capas, pero con la distinción de que las capas se pueden distribuir físicamente en 
@@ -486,6 +513,30 @@ Sistemas grandes como los de banca o telecomunicaciones que necesitan interopera
 ### 5. Arquitectura Orientada a Servicios: Esquema
 ![Arquitectura Orientada a Servicios](images/unidad6/Arquitectura-Orientada-a-Servicios-SOA.png)
 
+----
+
+### 5. Arquitectura Orientada a Servicios: Airbnb
+<!-- .slide: style="font-size: 0.70em" -->
+- De qué partían: Airbnb utilizaba una arquitectura monolítica basada en Rails, lo que le sirvió en las primeras etapas 
+de crecimiento. Sin embargo, a medida que la empresa escaló globalmente, el código monolítico se volvió más difícil de gestionar.
+- Cambio: Airbnb migró a microservicios y, en algunos casos, también utilizó un enfoque "SOA" (Arquitectura Orientada 
+a Servicios), lo que les permitió descomponer funcionalidades específicas, como la gestión de reservas, mensajes y 
+pagos en servicios separados.
+- Impacto: La migración a microservicios permitió a Airbnb mejorar la velocidad de desarrollo, escalar más eficientemente 
+y manejar con mayor estabilidad la alta demanda en sus servicios.
+
+----
+
+### 5. Arquitectura Orientada a Servicios: eBay
+<!-- .slide: style="font-size: 0.70em" -->
+- De qué partían: eBay comenzó como un sitio monolítico, y con el crecimiento del comercio electrónico, la plataforma 
+se volvió cada vez más difícil de mantener. Las actualizaciones y cambios impactaban todo el sistema, y el tiempo de 
+inactividad era frecuente durante los despliegues.
+- Cambio: En los años 2000, eBay migró a una arquitectura orientada a servicios (SOA), descomponiendo el monolito en 
+servicios más pequeños y luego avanzando hacia microservicios.
+- Impacto: El cambio permitió a eBay escalar globalmente, mejorar la disponibilidad de su plataforma y reducir los 
+tiempos de inactividad durante los despliegues.
+
 ---
 ### 6. Arquitectura Basada en Eventos
 El sistema reacciona a eventos generados por diferentes componentes. Cada evento desencadena una o más acciones en otros 
@@ -523,6 +574,7 @@ en recibir y procesar eventos generados por los productores de eventos. Su funci
 específicos de eventos y tomar acciones en respuesta a esos eventos.
 
 <!--Material MUY bueno https://medium.com/@diego.coder/introducci%C3%B3n-a-la-arquitectura-orientada-a-eventos-a532c71c9945 -->
+<!--https://medium.com/@ktufernando/la-gu%C3%ADa-definitiva-de-la-arquitectura-del-software-f419db9c6bf7-->
 
 ---
 
@@ -658,6 +710,17 @@ módulos que amplíen las funcionalidades.
 ### 11. Arquitectura de Microkernel: Ejemplo
 Sistemas operativos o aplicaciones que necesitan una base estable pero pueden ampliarse mediante módulos.
 
+----
+
+### 11. Arquitectura de Microkernel: Visual Studio Code
+<!-- .slide: style="font-size: 0.70em" -->
+- Núcleo (Core): VS Code tiene un núcleo central relativamente pequeño que proporciona las funcionalidades esenciales, 
+como la interfaz de usuario básica, el sistema de archivos, y la gestión de ventanas y editores de texto.
+- Extensibilidad: La mayor parte de las funcionalidades avanzadas, como soporte para lenguajes de programación, 
+depuración, integración con sistemas de control de versiones (Git) y otras herramientas de desarrollo, se implementan 
+como extensiones. Estas extensiones se "montan" sobre el núcleo para añadir características adicionales sin modificar 
+el core de la aplicación.
+
 ---
 ### 12. Arquitectura Hexagonal
 También conocida como Arquitectura de Puertos y Adaptadores, separa la lógica de negocio del sistema de las interfaces 
@@ -756,7 +819,7 @@ permitiendo una optimización independiente.
 - Complejidad: Introduce más complejidad al tener dos modelos de datos separados. 
 - Consistencia eventual: La sincronización entre los dos modelos puede no ser instantánea.
 
----
+----
 
 ### 15. Arquitectura CQRS: Ejemplo
 Aplicaciones que tienen requerimientos muy distintos para lectura y escritura de datos, como sistemas bancarios.
@@ -807,15 +870,18 @@ El Sub-sistemas de intercambio de datos puede hacerse de dos maneras:
     los sub-sistemas;
 * Cada sub-sistema mantiene su propia base de datos y pasa datos explícitamente a otros subsistemas. 
 
+----
+
+### 17. Arquitectura de Repositorio
 Cuando grandes cantidades de datos sean compartidos, el modelo de repositorio compartido es más comúnmente utilizado.
 
 ----
 
 ### 17. Arquitectura de Repositorio: Ventajas
 - Centralización: Todos los módulos acceden a un repositorio común. 
-- Facilita la integración: Los datos centralizados permiten una integración sencilla entre componentes.
+- Los datos centralizados permiten una integración sencilla entre componentes.
 - Manera eficaz de compartir grandes cantidades de datos
-- Sub-sistemas no tienen por qué preocuparse de cómo los datos se producen, por ejemplo, la gestión centralizada
+- Sub-sistemas no tienen por qué preocuparse de cómo los datos se producen, ejemplo, la gestión centralizada,  
   copia de seguridad, seguridad, etc
 - Un modelo a compartir se publica como el esquema del repositorio.
 
@@ -927,6 +993,11 @@ Es especialmente útil para sistemas donde el comportamiento varía según el es
 - Protocolos de comunicación: Donde las conexiones pasan por diferentes estados como conectando, conectado, desconectado. 
 - Interfaces de usuario: Donde las interacciones del usuario y las interfaces gráficas se pueden representar mediante estados.
 
+----
+
+### 19. Arquitectura de Máquina de Estados
+![Maquina de Estados](images/unidad6/maquina-estados.png)
+
 ---
 
 ### 20. Arquitectura Orientada a Objetos
@@ -936,6 +1007,7 @@ interactúan entre sí enviando mensajes o invocando métodos, y cada uno repres
 ----
 
 ### 20. Arquitectura Orientada a Objetos: Ventajas
+<!-- .slide: style="font-size: 0.80em" --> 
 - **Reusabilidad:** Los objetos y clases pueden reutilizarse en otros proyectos o partes del sistema mediante herencia y polimorfismo.
 - **Modularidad:** El sistema se organiza en objetos que pueden desarrollarse y mantenerse de forma independiente.
 - **Escalabilidad:** Facilita la creación de sistemas complejos mediante la creación de relaciones entre objetos (composición, herencia).
@@ -945,6 +1017,7 @@ interactúan entre sí enviando mensajes o invocando métodos, y cada uno repres
 ----
 
 ### 20. Arquitectura Orientada a Objetos: Desventajas
+<!-- .slide: style="font-size: 0.95em" -->
 - **Sobrecarga de rendimiento:** Las llamadas a métodos y la interacción entre objetos pueden generar una pequeña sobrecarga en el rendimiento.
 - **Complejidad inicial:** Puede ser más complicado de entender para desarrolladores sin experiencia en programación orientada a objetos.
 - **Riesgo de sobre-ingeniería:** A veces los desarrolladores tienden a crear clases y objetos innecesarios, complicando el sistema.
@@ -965,7 +1038,7 @@ El broker recibe solicitudes de los clientes y las envía al servidor adecuado p
 facilmente el sistema y sólo es necesario disponer de nuevos servidores que puedan procesar las peticiones del broker.
 - **Rendimiento:** Al ser un gran número de nodos conectados a lo que simplemente actúa como un puente con el cliente 
 el rendimiento puede mantenerse siempre en altas escalas ya que es posible redistribuir si es necesario y procesar 
-grandes cargas de peticiones en momentos de saturación
+grandes cargas de peticiones en momentos de saturación.
 
 ----
 
@@ -998,6 +1071,7 @@ Esta arquitectura es común cuando se necesita distribuir tareas y luego consoli
 ----
 
 ### 22. Arquitectura Master-Slave: Ventajas
+<!-- .slide: style="font-size: 0.85em" -->
 - **Gestión centralizada:** Destaca para el diseño de tareas multi-tarea ya que permite dividir las tareas en diferentes 
 módulos que pueden ser ejecutados de forma independiente.
 - **Control:** Al partir todas las tareas de un único nodo orquestador, se mantiene mayor control ya que las tareas se 
@@ -1033,6 +1107,43 @@ nube maneja la infraestructura, escalabilidad y disponibilidad automáticamente.
 
 ----
 
+### 23. Arquitectura Serverless: Ventajas
+- **Escalabilidad Automática**  en función de la demanda
+- **Reducción de Costos:**  Pagas solo por el tiempo de ejecución y los recursos que realmente usas (por solicitud, por 
+milisegundos de ejecución). No tienes que pagar por servidores inactivos o capacidad no utilizada.
+- **Menor Complejidad de Gestión de Infraestructura:** El proveedor de la nube gestiona la infraestructura subyacente.
+
+----
+
+### 23. Arquitectura Serverless: Ventajas
+- **Tiempo de Desarrollo Rápido:** Permite a los desarrolladores centrarse en escribir código para la lógica de negocio, 
+en lugar de gestionar la infraestructura. Esto acelera el ciclo de desarrollo.
+- **Alta Disponibilidad y Tolerancia a Fallos:** Repartiendo la carga entre múltiples regiones y zonas de disponibilidad.
+- **Eficiencia Energética:** Los recursos solo se consumen cuando hay solicitudes activas, lo que puede ser más eficiente 
+en términos de energía.
+
+----
+
+### 23. Arquitectura Serverless: Desventajas
+- **Latencia de Arranque en Frío:** cuando no han sido invocadas recientemente hay na latencia inicial, ya que el entorno 
+de ejecución debe iniciarse desde cero.
+- **Dependencia del Proveedor:** Como AWS, Azure o Google Cloud, dificultando la migración a otro proveedor en el futuro 
+debido a las características específicas y servicios propios de cada plataforma.
+- **Limitaciones en Tiempo de Ejecución:** Son adecuadas para tareas que requieren ejecución continua o de larga duración.
+
+----
+
+### 23. Arquitectura Serverless: Desventajas
+<!-- .slide: style="font-size: 0.90em" -->
+- **Menor Control sobre la Infraestructura:** Se pierde control sobre configuraciones personalizadas, optimizaciones 
+específicas del servidor o la ubicación geográfica precisa de los datos.
+- **Costos Inesperados con Alta Demanda:** Si el uso crece inesperada mente, los costos pueden escalar rápidamente, ya 
+que el modelo serverless cobra por cada invocación o uso de recursos.
+- **Complejidad en la Depuración y Monitoreo:** Puede dificultar el monitoreo y la depuración de problemas, 
+especialmente en sistemas complejos que dependen de múltiples funciones y servicios.
+
+----
+
 ### 23. Arquitectura Serverless: Ejemplos
 Servicios como AWS Lambda, Azure Functions o Google Cloud Functions permiten ejecutar código en respuesta a eventos 
 sin preocuparse por la infraestructura subyacente.
@@ -1062,6 +1173,12 @@ una salida también en forma de flujo continuo.
 2. Hay una gran cantidad de usuarios que se conectarán al sistema a través de una red.
 3. La aplicación necesita ser ejecutada en diferentes plataformas.
 4. El sistema debe tener una alta performance tanto en tiempo como en espacio (memoria).
+
+----
+
+### Ejercicio
+¿Qué estilo o estilos arquitectónicos resultan aplicables?
+
 5. El sistema debe ser capaz de ser ajustado para alcanzar el mejor uso de los recursos de
 software y hardware, los cuales pueden ser cambiados en el futuro.
 6. Una componente clave del sistema es la solución de un problema recurrente en el
@@ -1074,38 +1191,52 @@ estructuran los componentes dentro del sistema.
 
 ----
 
+### Ejercicio
+Clasifica todos los diseños arquitectónicos vistos en clase en Jerarquicos o No Jerarquicos según corresponda.
+
+----
+
 #### Estilos Arquitectónicos Jerárquicos
+<!-- .slide: style="font-size: 0.80em" -->
 Estos estilos organizan el sistema de forma estructurada, donde las capas o componentes tienen una jerarquía y se 
 comunican de manera controlada o secuencial.
-1. Arquitectura en Capas
-2. Arquitectura de Capas N
-3. Arquitectura Cliente-Servidor
-4. Arquitectura Monolítica
-5. Arquitectura de Microkernel
-6. Arquitectura de Sistema Distribuido (si incluye jerarquía de nodos)
-7. Modelo-Vista-Controlador (MVC)
-8. Arquitectura Master-Slave
-9. Arquitectura CQRS
-10. Arquitectura Broker
+
+<ol>
+<li class="fragment">Arquitectura en Capas</li>
+<li class="fragment">Arquitectura de Capas N</li>
+<li class="fragment">Arquitectura Cliente-Servidor</li>
+<li class="fragment">Arquitectura Cliente-Servidor</li>
+<li class="fragment">Arquitectura Monolítica</li>
+<li class="fragment">Arquitectura de Microkernel</li>
+<li class="fragment">Arquitectura de Sistema Distribuido (si incluye jerarquía de nodos)</li>
+<li class="fragment">Modelo-Vista-Controlador (MVC)</li>
+<li class="fragment">Arquitectura Master-Slave</li>
+<li class="fragment">Arquitectura CQRS</li>
+<li class="fragment">Arquitectura Broker</li>
+</ol>
 
 ----
 
 #### Estilos Arquitectónicos No Jerárquicos
+<!-- .slide: style="font-size: 0.70em" -->
 Estos estilos permiten una estructura más flexible, donde los componentes se comunican directamente entre sí sin una 
 dependencia estricta de capas o jerarquías predefinidas.
-1. Arquitectura de Microservicios
-2. Arquitectura Orientada a Servicios (SOA)
-3. Arquitectura Basada en Eventos
-4. Arquitectura de Tubería y Filtro
-5. Arquitectura de Espacio de Nombres
-6. Arquitectura Hexagonal
-7. Arquitectura basada en Componentes
-8. Arquitectura Peer-to-Peer
-9. Arquitectura Basada en Nubes
-10. Arquitectura de Repositorio
-11. Arquitectura de Máquina de Estados
-12. Arquitectura Orientada a Objetos
-13. Arquitectura Serverless
+
+<ol>
+<li class="fragment">Arquitectura de Microservicios</li>
+<li class="fragment">Arquitectura Orientada a Servicios (SOA)</li>
+<li class="fragment">Arquitectura Basada en Eventos</li>
+<li class="fragment">Arquitectura de Tubería y Filtro</li>
+<li class="fragment">Arquitectura de Espacio de Nombres</li>
+<li class="fragment">Arquitectura Hexagonal</li>
+<li class="fragment">Arquitectura basada en Componentes</li>
+<li class="fragment">Arquitectura Peer-to-Peer</li>
+<li class="fragment">Arquitectura Basada en Nubes</li>
+<li class="fragment">Arquitectura de Repositorio</li>
+<li class="fragment">Arquitectura de Máquina de Estados</li>
+<li class="fragment">Arquitectura Orientada a Objetos</li>
+<li class="fragment">Arquitectura Serverless</li>
+</ol>
 
 ---
 ### Ejercicio
