@@ -1056,6 +1056,12 @@ dominio de aplicación. Se desea reusar lo componentes en sistemas similares.
 Los estilos arquitectónicos pueden clasificarse en jerárquicos y no jerárquicos, según la forma en que organizan y 
 estructuran los componentes dentro del sistema.
 
+---
+
+### Ejercicio
+Clasifique todos los estilos arquitectónicos vistos en clase entre Jerárquicos o
+No Jerarquicos.
+
 ----
 
 #### Estilos Arquitectónicos Jerárquicos
