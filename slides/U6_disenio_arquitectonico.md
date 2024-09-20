@@ -487,6 +487,7 @@ en recibir y procesar eventos generados por los productores de eventos. Su funci
 específicos de eventos y tomar acciones en respuesta a esos eventos.
 
 <!--Material MUY bueno https://medium.com/@diego.coder/introducci%C3%B3n-a-la-arquitectura-orientada-a-eventos-a532c71c9945 -->
+<!--https://medium.com/@ktufernando/la-gu%C3%ADa-definitiva-de-la-arquitectura-del-software-f419db9c6bf7-->
 
 ---
 
