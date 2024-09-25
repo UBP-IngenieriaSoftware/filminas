@@ -4,9 +4,9 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
+#### Ingeniería de Software
 
-## Introducción
+# Introducción
 
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
@@ -180,7 +180,7 @@ El sistema comenzó a comprar y vender acciones sin evaluar las consecuencias.
 
 <img src="images/question.png" style="float: left">
 
-¿Qué otros escenarios catróficos pero realistas se les ocurren que hagan que el fallo en un programa pudiera ocasionar un gran daño económico o humano?
+¿Qué otros escenarios catastróficos pero realistas se les ocurren que hagan que el fallo en un programa pudiera ocasionar un gran daño económico o humano?
 
 ---
 
