@@ -111,9 +111,9 @@ encuentran en otros sistemas asociados.
 
 ---
 ### Los modelos de contexto e interacción
-* Un modelo de contexto del sistema es un modelo estructural que demuestra los otros sistemas en el entorno
+* Un **modelo de contexto** del sistema es un modelo estructural que demuestra los otros sistemas en el entorno
 del sistema en desarrollo.
-* Un modelo de interacción es un modelo dinámico que muestra cómo el sistema interactúa con su entorno
+* Un **modelo de interacción** es un modelo dinámico que muestra cómo el sistema interactúa con su entorno
 mientras es utilizado.
 
 ---
@@ -230,7 +230,13 @@ identificadas en el modelo de casos de uso.
 ---
 ### Clases de objeto de la Estación meteorológica
 
-![Clase Objeto](images/unidad7/clases-objeto.jpg)
+![Clase Objeto](images/unidad7/clases-objeto.png)
+
+---
+### Patrones de diseño
+* Son soluciones habituales a problemas comunes en el diseño de software. 
+* Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.
+* Los patrones de diseño varían en su complejidad, nivel de detalle y escala de aplicabilidad.
 
 ---
 ### Patrones de diseño
@@ -239,6 +245,58 @@ identificadas en el modelo de casos de uso.
 * Debe ser lo suficientemente abstracto para ser reutilizados en diferentes entornos.
 * Descripciones de patrón suelen hacer uso de las características orientadas a objetos como la herencia y el
 polimorfismo.
+
+---
+### Patrones de diseño: Desventaja
+
+![Desventaja](images/unidad7/design-patterns-everywhere.jpg)
+
+---
+### Patrones de diseño: Clasificación
+* **Patrones creacionales:** Proporcionan mecanismos de creación de objetos que incrementan la flexibilidad y la 
+reutilización de código existente.
+* **Patrones estructurales:** Explican cómo ensamblar objetos y clases en estructuras más grandes a la vez que se 
+mantiene la flexibilidad y eficiencia de la estructura.
+* **Patrones de comportamiento:** Se encargan de una comunicación efectiva y la asignación de responsabilidades entre objetos.
+
+----
+
+### Patrones Creacionales
+* Factory Method
+* Abstract Factory
+* Builder
+* Prototype
+* Singleton
+
+----
+
+### Patrones Estructurales
+* Adapter
+* Bridge
+* Composite
+* Decorator
+* Facade
+* Flyweight
+* Proxy
+* Page Object
+
+----
+
+## Patrones de Comportamiento
+* Chain of Responsibility
+* Command 
+* Iterator 
+* Mediator 
+* Memento 
+* Observer 
+* State
+* Strategy 
+* Template Method
+* Visitor 
+
+----
+
+![Clasificación](images/unidad7/patrones-clasificacion.png)
 
 ---
 ### Elementos del patrón
