@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## Ingeniería de Requerimientos
+#### Ingeniería de Software
+# Ingeniería de Requerimientos
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -68,7 +68,7 @@ valide lo que hará el software. Estos documentos suelen nombrarse documentos
 de requerimientos para el sistema."
 
 ---
-### Qué es un requerimiento?
+### ¿Qué es un requerimiento?
 <!-- .slide: style="font-size: 0.80em" -->
 Propiedad o restricción, determinada con precisión, que un producto software debe satisfacer
 
@@ -224,8 +224,10 @@ Los objetivos son útiles para los desarrolladores, ya que transmiten las intenc
 * El personal médico debe ser capaz de utilizar todas las funciones del sistema después de cuatro horas de entrenamiento. Después de este entrenamiento, el número medio de errores cometidos por los usuarios experimentados no excederá de dos por cada hora de uso del sistema. (Requerimiento no funcional verificable)
 
 ---
+
 ### Métricas para la especificación de requisitos no funcionales
 
+ 
 <table>
 <thead>
 <tr>
@@ -390,7 +392,10 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 * Las Normas para documentos de requerimientos estan especificadas por el estándar IEEE. En su mayoría son aplicables a los requisitos para los grandes proyectos de ingeniería de sistemas.
 
 ---
+
 ### La estructura de un documento de requerimientos
+
+
 <table>
 <thead>
 <tr>
@@ -425,6 +430,8 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 ----
 
 ### La estructura de un documento de requerimientos
+
+
 <table>
 <thead>
 <tr>
@@ -467,7 +474,9 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
   * Por lo tanto, es importante que estos sean tan completos como sea posible.
 
 ---
+
 ### Especificación de requerimientos
+
 <table>
 <thead>
 <tr>
@@ -586,6 +595,7 @@ sangre y la especificación tabular explica cómo realizar el
 calculo para los diferentes escenarios.
 
 ---
+
 ### Especificación tabular del cálculo de la dosis de insulina
 
 <table>
