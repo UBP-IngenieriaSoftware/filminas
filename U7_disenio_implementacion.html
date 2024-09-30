@@ -20,8 +20,8 @@
           <textarea data-template>
             
 
-# Ingeniería de Software
-## Diseño e Implementación
+#### Ingeniería de Software
+# Diseño e Implementación
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -127,9 +127,9 @@ encuentran en otros sistemas asociados.
 
 ---
 ### Los modelos de contexto e interacción
-* Un modelo de contexto del sistema es un modelo estructural que demuestra los otros sistemas en el entorno
+* Un **modelo de contexto** del sistema es un modelo estructural que demuestra los otros sistemas en el entorno
 del sistema en desarrollo.
-* Un modelo de interacción es un modelo dinámico que muestra cómo el sistema interactúa con su entorno
+* Un **modelo de interacción** es un modelo dinámico que muestra cómo el sistema interactúa con su entorno
 mientras es utilizado.
 
 ---
@@ -246,7 +246,13 @@ identificadas en el modelo de casos de uso.
 ---
 ### Clases de objeto de la Estación meteorológica
 
-![Clase Objeto](images/unidad7/clases-objeto.jpg)
+![Clase Objeto](images/unidad7/clases-objeto.png)
+
+---
+### Patrones de diseño
+* Son soluciones habituales a problemas comunes en el diseño de software. 
+* Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.
+* Los patrones de diseño varían en su complejidad, nivel de detalle y escala de aplicabilidad.
 
 ---
 ### Patrones de diseño
@@ -255,6 +261,58 @@ identificadas en el modelo de casos de uso.
 * Debe ser lo suficientemente abstracto para ser reutilizados en diferentes entornos.
 * Descripciones de patrón suelen hacer uso de las características orientadas a objetos como la herencia y el
 polimorfismo.
+
+---
+### Patrones de diseño: Desventaja
+
+![Desventaja](images/unidad7/design-patterns-everywhere.jpg)
+
+---
+### Patrones de diseño: Clasificación
+* **Patrones creacionales:** Proporcionan mecanismos de creación de objetos que incrementan la flexibilidad y la 
+reutilización de código existente.
+* **Patrones estructurales:** Explican cómo ensamblar objetos y clases en estructuras más grandes a la vez que se 
+mantiene la flexibilidad y eficiencia de la estructura.
+* **Patrones de comportamiento:** Se encargan de una comunicación efectiva y la asignación de responsabilidades entre objetos.
+
+----
+
+### Patrones Creacionales
+* Factory Method
+* Abstract Factory
+* Builder
+* Prototype
+* Singleton
+
+----
+
+### Patrones Estructurales
+* Adapter
+* Bridge
+* Composite
+* Decorator
+* Facade
+* Flyweight
+* Proxy
+* Page Object
+
+----
+
+## Patrones de Comportamiento
+* Chain of Responsibility
+* Command 
+* Iterator 
+* Mediator 
+* Memento 
+* Observer 
+* State
+* Strategy 
+* Template Method
+* Visitor 
+
+----
+
+![Clasificación](images/unidad7/patrones-clasificacion.png)
 
 ---
 ### Elementos del patrón
@@ -269,14 +327,16 @@ diferentes maneras.
 
 ---
 ### El patrón observador
-* Nombre: Observador.
-* Descripción: Separa la vista del estado del objeto, del objeto en sí.
-* Descripción del problema: Se utiliza cuando se necesitan varias vistas de estado.
-* Descripción de la solución: Genera distintas vistas
-* Consecuencias: Las optimizaciones para mejorar el rendimiento de la vistas no son prácticos.
+* **Nombre:** Observador.
+* **Descripción:** Separa la vista del estado del objeto, del objeto en sí.
+* **Descripción del problema:** Se utiliza cuando se necesitan varias vistas de estado.
+* **Descripción de la solución:** Genera distintas vistas
+* **Consecuencias:** Las optimizaciones para mejorar el rendimiento de la vistas no son prácticos.
 
----
+----
+
 ### El patrón Observador
+
 <!-- .slide: style="font-size: 0.60em" -->
 <!--
 |                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -284,6 +344,7 @@ diferentes maneras.
 | Descripción              | Separa la vista del estado de un objeto del objeto en sí mismo y permite que se proporcionen vistas alternativas. Cuando el estado del objeto cambia, todas las vistas son automáticamente notificadas y actualizadas para reflejar el cambio.                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | Descripción del problema | En muchas situaciones se debe proporcionar varias vistas de información de estado, como por ejemplo una pantalla gráfica y una pantalla tabular. No todos ellos pueden ser conocidos cuando se especifica la información. Todas las presentaciones alternativas deben apoyar la interacción y, cuando se cambia el estado, todas las pantallas deben ser actualizados. Este patrón se puede utilizar en todas las situaciones en que se requiere más de un formato de visualización de la información de estado y donde no es necesario que el objeto, que mantiene la información de estado, sepa acerca de los formatos de visualización específicos utilizados. |
 -->
+
 <table>
 <thead>
 <tr>
@@ -303,13 +364,14 @@ diferentes maneras.
 </tbody>
 </table>
 
----
+----
+
 ### Múltiples vistas utilizando el patrón Observador
 
 ![Patron Observador](images/unidad7/patron-observador.jpg)
 
 ---
-### IMPLEMENTACION DEL SOFTWARE
+### IMPLEMENTACIÓN DEL SOFTWARE
 Etapa de la Ingeniería de software en la que se crea la versión ejecutable.
 
 Aspectos importantes en la implementación:
@@ -439,6 +501,8 @@ sistemas de código cerrado.
 ---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
+
+<!--https://refactoring.guru/es/design-patterns-->
           </textarea>
         </section>
       </div>
