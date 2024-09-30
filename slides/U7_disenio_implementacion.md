@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## Diseño e Implementación
+#### Ingeniería de Software
+# Diseño e Implementación
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -253,14 +253,16 @@ diferentes maneras.
 
 ---
 ### El patrón observador
-* Nombre: Observador.
-* Descripción: Separa la vista del estado del objeto, del objeto en sí.
-* Descripción del problema: Se utiliza cuando se necesitan varias vistas de estado.
-* Descripción de la solución: Genera distintas vistas
-* Consecuencias: Las optimizaciones para mejorar el rendimiento de la vistas no son prácticos.
+* **Nombre:** Observador.
+* **Descripción:** Separa la vista del estado del objeto, del objeto en sí.
+* **Descripción del problema:** Se utiliza cuando se necesitan varias vistas de estado.
+* **Descripción de la solución:** Genera distintas vistas
+* **Consecuencias:** Las optimizaciones para mejorar el rendimiento de la vistas no son prácticos.
 
----
+----
+
 ### El patrón Observador
+
 <!-- .slide: style="font-size: 0.60em" -->
 <!--
 |                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -268,6 +270,7 @@ diferentes maneras.
 | Descripción              | Separa la vista del estado de un objeto del objeto en sí mismo y permite que se proporcionen vistas alternativas. Cuando el estado del objeto cambia, todas las vistas son automáticamente notificadas y actualizadas para reflejar el cambio.                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | Descripción del problema | En muchas situaciones se debe proporcionar varias vistas de información de estado, como por ejemplo una pantalla gráfica y una pantalla tabular. No todos ellos pueden ser conocidos cuando se especifica la información. Todas las presentaciones alternativas deben apoyar la interacción y, cuando se cambia el estado, todas las pantallas deben ser actualizados. Este patrón se puede utilizar en todas las situaciones en que se requiere más de un formato de visualización de la información de estado y donde no es necesario que el objeto, que mantiene la información de estado, sepa acerca de los formatos de visualización específicos utilizados. |
 -->
+
 <table>
 <thead>
 <tr>
@@ -287,13 +290,14 @@ diferentes maneras.
 </tbody>
 </table>
 
----
+----
+
 ### Múltiples vistas utilizando el patrón Observador
 
 ![Patron Observador](images/unidad7/patron-observador.jpg)
 
 ---
-### IMPLEMENTACION DEL SOFTWARE
+### IMPLEMENTACIÓN DEL SOFTWARE
 Etapa de la Ingeniería de software en la que se crea la versión ejecutable.
 
 Aspectos importantes en la implementación:
@@ -423,3 +427,5 @@ sistemas de código cerrado.
 ---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
+
+<!--https://refactoring.guru/es/design-patterns-->
