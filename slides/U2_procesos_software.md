@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## Procesos de Software
+#### Ingeniería de Software
+# Procesos de Software
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -49,12 +49,12 @@ proceso a partir de una perspectiva particular.
 ---
 ### Descripciones de procesos de software
 <!-- .slide: style="font-size: 0.80em" -->
-* Cuando describimos y discutimos los procesos, por lo general hablamos de las actividades en estos procesos, como la 
+* Cuando describimos y discutimos los procesos, por lo general hablamos de las **actividades** en estos procesos, como la 
 especificación de un modelo de datos, el diseño de una interfaz de usuario, etc, y el ordenamiento de estas actividades.
 * Descripciones de proceso también pueden incluir:
-  * Productos, que son los resultados de una actividad del proceso;
-  * Roles, que reflejan las responsabilidades de las personas involucradas en el proceso;
-  * Pre-y post-condiciones, que son declaraciones que son verdaderas antes y después de una actividad de proceso se ha 
+  * **Productos**, que son los resultados de una actividad del proceso;
+  * **Roles**, que reflejan las responsabilidades de las personas involucradas en el proceso;
+  * **Pre-y post-condiciones**, que son declaraciones que son verdaderas antes y después de una actividad de proceso se ha 
 promulgado o elaborado un producto.
 
 ---
@@ -89,11 +89,11 @@ El sistema se ensambla a partir de componentes existentes. Puede ser el dirigido
 ### Fases del Modelo de Cascada
 <!-- .slide: style="font-size: 0.90em" -->
 Hay fases identificadas por separado en el modelo de cascada:
-* El análisis de requerimientos y su definición
-* El diseño del sistema y del software
-* Implementación y prueba  de unidades
-* Integración y pruebas del sistema
-* Operación y mantenimiento
+1. El análisis de requerimientos y su definición
+2. El diseño del sistema y del software
+3. Implementación y prueba  de unidades
+4. Integración y pruebas del sistema
+5. Operación y mantenimiento
 
 El principal inconveniente del modelo de la cascada es la dificultad de acomodar el cambio después de que está en marcha 
 el proceso. En principio, **una fase tiene que ser completa antes de pasar a la siguiente fase**.
@@ -178,7 +178,7 @@ La reutilización es ahora el enfoque estándar para la construcción de muchos 
 ---
 ### Actividades de proceso
 * Procesos de software reales son *secuencias* intercalados de actividades técnicas, de colaboración y de gestión con el 
-objetivo general de la especificación, diseño, implementación y prueba de un sistema de software.
+objetivo general de la **especificación, diseño, implementación y prueba** de un sistema de software.
 * Las cuatro actividades básicas del proceso son: especificación, desarrollo, validación y evolución y están organizados 
 de manera diferente según el proceso de desarrollo. En el modelo de cascada, se organizan en secuencia, mientras que en 
 el desarrollo incremental son intercalados.

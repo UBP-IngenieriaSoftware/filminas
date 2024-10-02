@@ -4,9 +4,9 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
+#### Ingeniería de Software
 
-## Introducción
+# Introducción
 
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
@@ -180,7 +180,7 @@ El sistema comenzó a comprar y vender acciones sin evaluar las consecuencias.
 
 <img src="images/question.png" style="float: left">
 
-¿Qué otros escenarios catróficos pero realistas se les ocurren que hagan que el fallo en un programa pudiera ocasionar un gran daño económico o humano?
+¿Qué otros escenarios catastróficos pero realistas se les ocurren que hagan que el fallo en un programa pudiera ocasionar un gran daño económico o humano?
 
 ---
 
@@ -242,21 +242,21 @@ Nombre ejemplos de software que sean **productos genéricos** y software que sea
 
 <!-- .slide: style="font-size: 0.80em" -->
 
-- ¿Qué es software? <br>
+- **¿Qué es software?** <br>
   Programas de cómputo y documentación asociada.
   Los productos de software se desarrollan para un cliente en particular o para un mercado general.
 
-- ¿Cuáles son los atributos del buen software? <br>
+- **¿Cuáles son los atributos del buen software?** <br>
   El buen software debe entregar al usuario la funcionalidad y el desempeño requeridos, y debe ser sustentable, confiable y utilizable.
 
 ----
 
 ### Preguntas sobre la ingeniería de Software
 
-- ¿Qué es ingeniería de Software? <br>
+- **¿Qué es ingeniería de Software?** <br>
   La ingeneiría de software es una disciplina de la ingeniería que se interesa por todos los aspectos de la producción de software.
 
-- ¿Cuáles son las actividades fundamentales de la ingeniería de software? <br>
+- **¿Cuáles son las actividades fundamentales de la ingeniería de software?** <br>
   Especificación, desarrollo, validación y evolución del software.
 
 ----
@@ -265,11 +265,11 @@ Nombre ejemplos de software que sean **productos genéricos** y software que sea
 
 <!-- .slide: style="font-size: 0.80em" -->
 
-- ¿Cuál es la diferencia entre ingeniería de software y ciencias de la computación? <br>
+- **¿Cuál es la diferencia entre ingeniería de software y ciencias de la computación?** <br>
   Las ciencias de la computación se enfocan en teoría y fundamentos; mientras la ingeniería de software se enfoca en el
   sentido práctico del desarrollo y en la distribución de software.
 
-- ¿Cuál es la diferencia entre ingeniería de software e ingeniería de Sistemas? <br>
+- **¿Cuál es la diferencia entre ingeniería de software e ingeniería de Sistemas?** <br>
   La ingeniería de sistemas se interesa por todos los aspectos del desarrollo de sistemas basados en computadoras, incluidos
   hardware, software e ingeniería de procesos. La ingeniería de software es parte de este proceso más general.
 
@@ -279,26 +279,26 @@ Nombre ejemplos de software que sean **productos genéricos** y software que sea
 
 <!-- .slide: style="font-size: 0.80em" -->
 
-- ¿Cuáles son los principales retos que enfrenta la ingeniería de software? <br>
+- **¿Cuáles son los principales retos que enfrenta la ingeniería de software?** <br>
   Tiempos de distribución limitados y desarrollo de software confiable.
 
-- ¿Cuáles son los costos de la ingeniería de software?
+- **¿Cuáles son los costos de la ingeniería de software?**
   Aproximadamente 60% de los costos del software son de desarrollo, y 40% de prueba. Para el software elaborado específicamente,
   los costos de evolución superan con frecuencua los costos de desarrollo.
 
----
+----
 
 ### Preguntas sobre la ingeniería de Software
 
 <!-- .slide: style="font-size: 0.70em" -->
 
-- ¿Cuáles son los mejores métodos y técnicas de la ingeniería de software? <br>
+- **¿Cuáles son los mejores métodos y técnicas de la ingeniería de software?** <br>
   Aún cuando todos los proyectos de software deben gestionarse y desarrollarse de manera profesional, existen diferentes
   técnicas que son adecuadas para distintos tipos de sistema. Por ejemplo, los juegos siempre deben diseñarse usando una
   serie de prototipos, mientras que los sistemas críticos de control de seguridad requieren de una especificación completa
   y analizable para su desarrollo. Por lo tanto, no puede decirse que un método sea mejor que otro.
 
-- ¿Qué diferencias ha marcado la Web a la ingeniería de software? <br>
+- **¿Qué diferencias ha marcado la Web a la ingeniería de software?** <br>
   La Web ha llevado a la disponibilidad de servicios de software y a la posibilidad de desarrollar sistemas basados en
   servicios distribuidos ampliamente. El desarrollo de sistemas basados en Web ha conducido a importantes avances en
   lenguajes de programación y reutilización de software.

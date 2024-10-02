@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## Diseño e Implementación
+#### Ingeniería de Software
+# Diseño e Implementación
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -111,9 +111,9 @@ encuentran en otros sistemas asociados.
 
 ---
 ### Los modelos de contexto e interacción
-* Un modelo de contexto del sistema es un modelo estructural que demuestra los otros sistemas en el entorno
+* Un **modelo de contexto** del sistema es un modelo estructural que demuestra los otros sistemas en el entorno
 del sistema en desarrollo.
-* Un modelo de interacción es un modelo dinámico que muestra cómo el sistema interactúa con su entorno
+* Un **modelo de interacción** es un modelo dinámico que muestra cómo el sistema interactúa con su entorno
 mientras es utilizado.
 
 ---
@@ -230,7 +230,13 @@ identificadas en el modelo de casos de uso.
 ---
 ### Clases de objeto de la Estación meteorológica
 
-![Clase Objeto](images/unidad7/clases-objeto.jpg)
+![Clase Objeto](images/unidad7/clases-objeto.png)
+
+---
+### Patrones de diseño
+* Son soluciones habituales a problemas comunes en el diseño de software. 
+* Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.
+* Los patrones de diseño varían en su complejidad, nivel de detalle y escala de aplicabilidad.
 
 ---
 ### Patrones de diseño
@@ -239,6 +245,58 @@ identificadas en el modelo de casos de uso.
 * Debe ser lo suficientemente abstracto para ser reutilizados en diferentes entornos.
 * Descripciones de patrón suelen hacer uso de las características orientadas a objetos como la herencia y el
 polimorfismo.
+
+---
+### Patrones de diseño: Desventaja
+
+![Desventaja](images/unidad7/design-patterns-everywhere.jpg)
+
+---
+### Patrones de diseño: Clasificación
+* **Patrones creacionales:** Proporcionan mecanismos de creación de objetos que incrementan la flexibilidad y la 
+reutilización de código existente.
+* **Patrones estructurales:** Explican cómo ensamblar objetos y clases en estructuras más grandes a la vez que se 
+mantiene la flexibilidad y eficiencia de la estructura.
+* **Patrones de comportamiento:** Se encargan de una comunicación efectiva y la asignación de responsabilidades entre objetos.
+
+----
+
+### Patrones Creacionales
+* Factory Method
+* Abstract Factory
+* Builder
+* Prototype
+* Singleton
+
+----
+
+### Patrones Estructurales
+* Adapter
+* Bridge
+* Composite
+* Decorator
+* Facade
+* Flyweight
+* Proxy
+* Page Object
+
+----
+
+## Patrones de Comportamiento
+* Chain of Responsibility
+* Command 
+* Iterator 
+* Mediator 
+* Memento 
+* Observer 
+* State
+* Strategy 
+* Template Method
+* Visitor 
+
+----
+
+![Clasificación](images/unidad7/patrones-clasificacion.png)
 
 ---
 ### Elementos del patrón
@@ -252,15 +310,158 @@ diferentes maneras.
 * Los resultados y las ventajas y desventajas de aplicar el patrón.
 
 ---
-### El patrón observador
-* Nombre: Observador.
-* Descripción: Separa la vista del estado del objeto, del objeto en sí.
-* Descripción del problema: Se utiliza cuando se necesitan varias vistas de estado.
-* Descripción de la solución: Genera distintas vistas
-* Consecuencias: Las optimizaciones para mejorar el rendimiento de la vistas no son prácticos.
+
+### Creacional: 1. Abstract Factory
+Permite producir familias de objetos relacionados sin especificar sus clases concretas.
+
+![Abstract Factory](images/unidad7/1-abstract-factory-mini.png)
+
+----
+
+### Creacional: 2. Builder
+Permite construir objetos complejos paso a paso. Permite producir distintos tipos y representaciones de un objeto
+empleando el mismo código de construcción.
+
+![Builder](images/unidad7/2-builder-mini.png)
+
+----
+
+### Creacional: 3. Factory Method
+Proporciona una interfaz para crear objetos en una superclase, mientras permite a las subclases alterar el tipo de 
+objetos que se crearán.
+
+![Factory Method](images/unidad7/3-factory-method-mini.png)
+
+----
+
+### Creacional: 4. Prototype
+Permite copiar objetos existentes sin que el códugo dependa de sus clases.
+
+![Prototype](images/unidad7/4-prototype-mini.png)
+
+----
+
+### Creacional: 5. Singleton
+Permite asegurarnos de que una clase tenga una única instancia, a la vez que proporciona un punto de acceso global a
+dicha instancia.
+
+![Singleton](images/unidad7/5-singleton-mini.png )
 
 ---
+### Estructural: 6. Bridge
+Permite dividir una clase grande o un grupo de clases estrechamente relacionadas, en dos jerarquías separadas (abstracción
+e implementación) que pueden desarrollarse independientemente la una de la otra.
+
+----
+
+### Estructural: 7. Composite
+Permite componer objetos en estructuras de árbol y trabajar con esas estructuras como si fueran objetos individuales.
+
+----
+
+### Estructural: 8. Decorator
+Permite añadir fucnionalidades a objetos colocando estos objetos dentro de objetos encapsuladores especiales que contienen
+estas funcionalidades.
+
+----
+
+### Estructural: 9. Facade
+Proporciona una interfaz simplificada a una biblioteca, un framework o cualquier otro grupo complejo de clases.
+
+----
+
+### Estructural: 10. Flyweight
+Permite mantener más objetos dentro de la cantidad disponible de memoria RAM compartiendo las partes comunes del estado
+entre varios objetos en lugar de mantener toda la información en cada objeto.
+
+----
+
+### Estructural: 11. Proxy
+Permite proporcionar un sustituto o marcador de posición para otro objeto. Un proxy controla el acceso al objeto original,
+permitiéndte hacer algo antes o después de que la solicitud llegue al objeto original.
+
+----
+
+### Estructural: 12. Adapter
+Permite la colaboración entre objetos con interfaces incompatibles.
+
+----
+
+### Estructural: 24. PageObject
+
+
+---
+### Comportamiento: 13. Chain of Responsability
+Permite pasar solicitudes a lo largo de una cadena de manejadores. Al recibir una solicitud, cada manejador decide si
+la procesa o su la pasa al siguiente manejador de la cadena.
+
+----
+
+### Comportamiento: 14. Command
+Convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud. Esta 
+transformación permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una
+solicitud y soportar operaciones que no se pueden realizar.
+
+----
+
+### Comportamiento: 15. Interpreter
+
+----
+
+### Comportamiento: 16. Iterator
+Permite recorrer elementos de una colección sin exponer su representaciín subyacente (lista, pila, árbol, etc).
+
+----
+
+### Comportamiento: 17. Mediator
+Permite reducir las dependencias caóticas entre objetos. El patrón restringe las comunicaciones directas entre los
+objetos, forzándolos a colaborar únicamente a través de un objeto mediador.
+
+----
+
+### Comportamiento: 18. Memento
+Permite guardar y restaurar el estado previo de un objeto sin revelar los detalles de su implementación.
+
+----
+
+### Comportamiento: 19. Observer
+Permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al
+objeto que están observando.
+
+----
+
+### Comportamiento: 20. State
+Permite a un objeto alterar su comportamiento cuando su estado interno cambia. Parece como su el objeto cambiara su clase.
+
+----
+
+### Comportamiento: 21. Strategy
+Permite definir una familia de algoritmos, colocara cada uno de ellos en una clase separada y hacer sus objetos
+intercambiables.
+
+----
+
+### Comportamiento: 22. Template method
+Define el esqueleto de un algoritmo en la superclase pero permite que las subclases sobre-escriban pasos del algoritmo
+sin cambiar su estructura.
+
+----
+
+### Comportamiento: 23. Visitor
+Permite separar los algoritmos de los objetos sobre los que operan.
+
+---
+### El patrón observador
+* **Nombre:** Observador.
+* **Descripción:** Separa la vista del estado del objeto, del objeto en sí.
+* **Descripción del problema:** Se utiliza cuando se necesitan varias vistas de estado.
+* **Descripción de la solución:** Genera distintas vistas
+* **Consecuencias:** Las optimizaciones para mejorar el rendimiento de la vistas no son prácticos.
+
+----
+
 ### El patrón Observador
+
 <!-- .slide: style="font-size: 0.60em" -->
 <!--
 |                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -268,6 +469,7 @@ diferentes maneras.
 | Descripción              | Separa la vista del estado de un objeto del objeto en sí mismo y permite que se proporcionen vistas alternativas. Cuando el estado del objeto cambia, todas las vistas son automáticamente notificadas y actualizadas para reflejar el cambio.                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | Descripción del problema | En muchas situaciones se debe proporcionar varias vistas de información de estado, como por ejemplo una pantalla gráfica y una pantalla tabular. No todos ellos pueden ser conocidos cuando se especifica la información. Todas las presentaciones alternativas deben apoyar la interacción y, cuando se cambia el estado, todas las pantallas deben ser actualizados. Este patrón se puede utilizar en todas las situaciones en que se requiere más de un formato de visualización de la información de estado y donde no es necesario que el objeto, que mantiene la información de estado, sepa acerca de los formatos de visualización específicos utilizados. |
 -->
+
 <table>
 <thead>
 <tr>
@@ -287,13 +489,14 @@ diferentes maneras.
 </tbody>
 </table>
 
----
+----
+
 ### Múltiples vistas utilizando el patrón Observador
 
 ![Patron Observador](images/unidad7/patron-observador.jpg)
 
 ---
-### IMPLEMENTACION DEL SOFTWARE
+### IMPLEMENTACIÓN DEL SOFTWARE
 Etapa de la Ingeniería de software en la que se crea la versión ejecutable.
 
 Aspectos importantes en la implementación:
@@ -423,3 +626,5 @@ sistemas de código cerrado.
 ---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
+
+<!--https://refactoring.guru/es/design-patterns-->
