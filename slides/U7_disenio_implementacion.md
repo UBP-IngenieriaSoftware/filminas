@@ -251,6 +251,13 @@ polimorfismo.
 
 ![Desventaja](images/unidad7/design-patterns-everywhere.jpg)
 
+----
+
+### Patrones de diseño: Desventaja
+- Si se emplea un lenguaje "incorrecto", aplicar el patron de diseño puede ser complicado
+- A veces se toma al patrón como "dogma" sin adaptarlo correctamente al proyecto.
+- Uso injustificado
+
 ---
 ### Patrones de diseño: Clasificación
 * **Patrones creacionales:** Proporcionan mecanismos de creación de objetos que incrementan la flexibilidad y la 
@@ -352,10 +359,14 @@ dicha instancia.
 Permite dividir una clase grande o un grupo de clases estrechamente relacionadas, en dos jerarquías separadas (abstracción
 e implementación) que pueden desarrollarse independientemente la una de la otra.
 
+![Bridge](images/unidad7/6-bridge-mini.png)
+
 ----
 
 ### Estructural: 7. Composite
 Permite componer objetos en estructuras de árbol y trabajar con esas estructuras como si fueran objetos individuales.
+
+![Composite](images/unidad7/7-composite-mini.png)
 
 ----
 
@@ -363,10 +374,14 @@ Permite componer objetos en estructuras de árbol y trabajar con esas estructura
 Permite añadir fucnionalidades a objetos colocando estos objetos dentro de objetos encapsuladores especiales que contienen
 estas funcionalidades.
 
+![Decorator](images/unidad7/8-decorator-mini.png)
+
 ----
 
 ### Estructural: 9. Facade
 Proporciona una interfaz simplificada a una biblioteca, un framework o cualquier otro grupo complejo de clases.
+
+![Facade](images/unidad7/9-facade-mini.png)
 
 ----
 
@@ -374,26 +389,37 @@ Proporciona una interfaz simplificada a una biblioteca, un framework o cualquier
 Permite mantener más objetos dentro de la cantidad disponible de memoria RAM compartiendo las partes comunes del estado
 entre varios objetos en lugar de mantener toda la información en cada objeto.
 
+![Flyweight](images/unidad7/10-flyweight-mini.png)
+
 ----
 
 ### Estructural: 11. Proxy
 Permite proporcionar un sustituto o marcador de posición para otro objeto. Un proxy controla el acceso al objeto original,
 permitiéndte hacer algo antes o después de que la solicitud llegue al objeto original.
 
+![Proxy](images/unidad7/11-proxy-mini.png)
+
 ----
 
 ### Estructural: 12. Adapter
 Permite la colaboración entre objetos con interfaces incompatibles.
 
+![Adapter](images/unidad7/12-adapter-mini.png)
+
 ----
 
 ### Estructural: 24. PageObject
+Se emplea para pruebas automatizadas, facilitando el mantenimiento y reduciendo la duplicación de código.
+Cada elemento de la página (botón, texto, campo de formulario) se coloca en una "página" que permite su re-utilización.
 
 
----
+----
+
 ### Comportamiento: 13. Chain of Responsability
 Permite pasar solicitudes a lo largo de una cadena de manejadores. Al recibir una solicitud, cada manejador decide si
 la procesa o su la pasa al siguiente manejador de la cadena.
+
+![Chain of Responsability](images/unidad7/13chain-of-responsibility-mini.png)
 
 ----
 
@@ -402,14 +428,22 @@ Convierte una solicitud en un objeto independiente que contiene toda la informac
 transformación permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una
 solicitud y soportar operaciones que no se pueden realizar.
 
+![Command](images/unidad7/14-command-mini.png)
+
 ----
 
 ### Comportamiento: 15. Interpreter
+Define una forma de evaluar o interpretar sentencias en un lenguaje específico. Se utiliza cuando se tiene una gramática 
+simple y se quiere representar cada regla como una clase. 
+Cada expresión de la gramática es interpretada recursivamente mediante objetos, permitiendo que el sistema analice y 
+ejecute el lenguaje en cuestión. Es común en motores de reglas, lenguajes de programación o expresiones matemáticas.
 
 ----
 
 ### Comportamiento: 16. Iterator
 Permite recorrer elementos de una colección sin exponer su representaciín subyacente (lista, pila, árbol, etc).
+
+![Iterator](images/unidad7/16-iterator-mini.png)
 
 ----
 
@@ -417,10 +451,14 @@ Permite recorrer elementos de una colección sin exponer su representaciín suby
 Permite reducir las dependencias caóticas entre objetos. El patrón restringe las comunicaciones directas entre los
 objetos, forzándolos a colaborar únicamente a través de un objeto mediador.
 
+![Mediator](images/unidad7/17-mediator-mini.png)
+
 ----
 
 ### Comportamiento: 18. Memento
 Permite guardar y restaurar el estado previo de un objeto sin revelar los detalles de su implementación.
+
+![Memento](images/unidad7/18-memento-mini.png)
 
 ----
 
@@ -428,10 +466,14 @@ Permite guardar y restaurar el estado previo de un objeto sin revelar los detall
 Permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al
 objeto que están observando.
 
+![Observer](images/unidad7/19-observer-mini.png)
+
 ----
 
 ### Comportamiento: 20. State
 Permite a un objeto alterar su comportamiento cuando su estado interno cambia. Parece como su el objeto cambiara su clase.
+
+![State](images/unidad7/20-state-mini.png)
 
 ----
 
@@ -439,16 +481,22 @@ Permite a un objeto alterar su comportamiento cuando su estado interno cambia. P
 Permite definir una familia de algoritmos, colocara cada uno de ellos en una clase separada y hacer sus objetos
 intercambiables.
 
+![Strategy](images/unidad7/21-strategy-mini.png)
+
 ----
 
 ### Comportamiento: 22. Template method
 Define el esqueleto de un algoritmo en la superclase pero permite que las subclases sobre-escriban pasos del algoritmo
 sin cambiar su estructura.
 
+![Template method](images/unidad7/23-template-method-mini.png)
+
 ----
 
 ### Comportamiento: 23. Visitor
 Permite separar los algoritmos de los objetos sobre los que operan.
+
+![Visitor](images/unidad7/23-visitor-mini.png)
 
 ---
 ### El patrón observador
