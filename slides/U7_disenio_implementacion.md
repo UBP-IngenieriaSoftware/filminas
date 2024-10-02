@@ -70,14 +70,35 @@ sobre la base de los requisitos del cliente.
 
 ---
 ### Construir o comprar
-<!-- .slide: style="font-size: 0.90em" -->
-* En una amplia gama de dominios, ahora es posible comprar sistemas off-the-shelf (COTS) que pueden ser
+<!-- .slide: style="font-size: 0.80em" -->
+* En una amplia gama de dominios, ahora es posible comprar sistemas **Comerciales off-the-shelf** (COTS) que pueden ser
 adaptados y orientados a los deseos de los usuarios.
 * Por ejemplo, si desea implementar un sistema de registros médicos, es posible comprar un paquete que ya se utiliza
 en los hospitales. Puede ser más barato y más rápido para utilizar este enfoque en lugar de desarrollar un sistema en
 un lenguaje de programación convencional.
 * Cuando se desarrolla una aplicación de esta forma, el proceso de diseño se preocupa con el uso de las funciones
 de configuración de ese sistema para entregar los requisitos del sistema.
+
+----
+
+### COTS: Ventajas
+* Gran comunidad de soporte técnico proporciona ayuda y resuelve dudas.
+* Fácil de obtener
+* Tiene un costo único
+* El sistema es flexible y puede ser reemplazado si falla.
+* Fácil de implementar.
+* Tiene actualizaciones regulares.
+* Es confiable
+* Suele tener pruebas gratuitas
+<!--https://dazzet.co/que-es/commercial-off-the-shelf-software/-->
+
+----
+
+### COTS: Desventajas
+- El vendedor puede dejar de brindar soporte
+- El software no es tan personalizable.
+- Alto costo a largo plazo si requiere de licencia periódica.
+- Hay mayor riesgo de seguridad.
 
 ---
 ### Un proceso de diseño orientado a objetos
@@ -256,7 +277,7 @@ polimorfismo.
 ### Patrones de diseño: Desventaja
 - Si se emplea un lenguaje "incorrecto", aplicar el patron de diseño puede ser complicado
 - A veces se toma al patrón como "dogma" sin adaptarlo correctamente al proyecto.
-- Uso injustificado
+- Uso injustificado. Quizás no era necesario emplearlo, y la solución podía ser menos compleja.  
 
 ---
 ### Patrones de diseño: Clasificación
@@ -412,8 +433,7 @@ Permite la colaboración entre objetos con interfaces incompatibles.
 Se emplea para pruebas automatizadas, facilitando el mantenimiento y reduciendo la duplicación de código.
 Cada elemento de la página (botón, texto, campo de formulario) se coloca en una "página" que permite su re-utilización.
 
-
-----
+---
 
 ### Comportamiento: 13. Chain of Responsability
 Permite pasar solicitudes a lo largo de una cadena de manejadores. Al recibir una solicitud, cada manejador decide si
