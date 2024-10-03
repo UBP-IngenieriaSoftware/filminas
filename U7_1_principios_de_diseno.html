@@ -45,7 +45,7 @@ Created by <i class="fab fa-telegram"></i>
 <div class="grid-container2">
 <div class="grid-item">
 
-### Diseño e implementación
+### Principios de Desarrollo
 * DRY
 * KISS
 * SOLID
@@ -56,18 +56,108 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 
 ---
-### DRY
+### Principios de Desarrollo
+Son una serie de reglas y recomendaciones que se deben seguir durante el desarrollo de software para lograr escribir un 
+código limpio, comprensible y fácil de mantener.
 
+----
+
+Utilizar estos principios de forma descuidada puede hacer más mal que bien. El costo de aplicar estos principios en la 
+arquitectura de un programa es que puede hacerlo más complicado de lo que debería.
+
+---
+### DRY
+Es el acrónimo de “Don’t repeat yourself”. Implica que el código no debe contener líneas redundantes o duplicadas de lógica.
+Cada pieza de funcionalidad debe tener una identidad única, no ambigua.
+
+----
+
+### DRY: Ventajas
+- **Mantenibilidad:** Si alguna vez cambia la funcionalidad, no se debe re-implementar en todas partes.
+- **Reduce el tamaño del código:** Esto lo hace más legible y entendible.
+- **Ahorra tiempo:**  Tener fragmentos de lógica disponibles para reutilizase permite implemtnarlos rápidamente.
 
 ---
 ### KISS
+Es un acrónimo de “keep it simple, stupid”, es decir, “mantenlo simple, estúpido”.
+Minimizar los errores tratando de realizar las tareas de forma efectiva y eficiente complicandose lo mínimo posible.
 
+La simplicidad debe ser un objetivo clave en el diseño, el desarrollo de la solución. Se debe evitar la complejidad innecesaria.
 
 ---
 ### SOLID
+Es una regla mnemotécnica para cinco principios de diseño ideados para hacer que los diseños de software sean más
+comprensibles, flexibles y fáciles de mantener.
+- **S**ingle Responsibility
+- **O**pen/Closed
+- **L**iskov Substitution
+- **I**nterface Segregation
+- **D**ependency Inversion
+
+----
+
+### Single Responsibility
+El principio de responsabilidad única establece que un módulo de software debe tener una y solo una razón para cambiar. Esta
+razón para cambiar es lo que se entiende por responsabilidad.
+
+![Single Responsability](images/unidad7/single-responsability.png)
+
+----
+
+Se debe limitar el impacto de un cambio, y eso se logra reduciendo el alcance de las funciones y clases.
+Tener más de una responsabilidad también hace que el código sea difícil de leer, testear y mantener.
+
+----
+
+### Open/closed
+Los módulos de software deben ser abiertos para su extensión pero cerrados para su modificación.
+**Abierto para la extensión:** A medida que cambian los requisitos de la aplicación, podemos ampliar el módulo con nuevos 
+comportamientos que satisfagan esos cambios.
+**Cerrado por modificación:** Un módulo estará cerrado si dispone de una descripción (interface) estable y bien definida.
+
+Cuando el comportamiento cambie de la manera esperada, no debamos hacer cambios radicales en todos los módulos del sistema.
+
+----
+
+### Liskov Substitution
+Los objetos de un programa deberían ser reemplazables por instancias de sus subtipos sin alterar el correcto
+funcionamiento del programa.
+
+Si en alguna parte de nuestro código estamos usando una clase, y esta clase es extendida, tenemos que
+poder utilizar cualquiera de las clases hijas y que el programa siga siendo válido. 
+
+Esto nos obliga a asegurarnos de que cuando extendemos una clase no estamos alterando el comportamiento de la clase padre.
+
+----
+
+### Interface Segregation
+El principio de segregación de interfaces establece que muchas interfaces cliente específicas son mejores que una 
+interfaz de propósito general. Esto ayuda a reducir el acoplamiento innecesario.
+
+----
+
+### Dependency Inversion
+Las entidades de software deben depender de abstracciones, no de implementaciones. 
+Los módulos de alto nivel no deberían depender de los de bajo nivel.
+Ocultamos los detalles de implementación, ganando flexibilidad.
+
+----
+
+### Dependency Inversion
+
+![Dependency Inversion](images/unidad7/dependency-inversion.png)
 
 ---
 ### YAGNI
+Es el acrónimo de "You Aren't Gonna Need It", o "No vas  anecesitar eso".
+No se deben agregar funcionalidades extras hasta que no sea necesario. 
+
+----
+
+### YAGNI
+Escribir código innecesario ahora que puede ser útil a futuro, tiene varias desventajas:
+- desperdicio tiempo que se puede destinar a la funcionalidad básica
+- cuando se requiera la nueva funcionalidad, quizás la misma no está correctamnete implementada.
 
 ---
 ### Ley de Curly
@@ -79,6 +169,25 @@ Created by <i class="fab fa-telegram"></i>
 ### Clean Code
 
 ---
+
+### Inversion of Control
+### Don’t call us, we’ll call you 
+### Hollywood Principle
+Delegar en un tercero flujos de control permite reducir el acoplamiento.
+Permite aumentar la modularidad del programa, haciéndolo más testeable, mantenible y extensible.
+
+----
+
+### Inversion of Control
+Algunos patrones de diseño son implementaciones de este principio:
+- Service locator
+- Dependency injection
+- Template method
+- Strategy
+- Abstract Factory
+- Observer
+
+---
 ### Separation of Concerns
 
 ---
@@ -86,12 +195,47 @@ Created by <i class="fab fa-telegram"></i>
 
 ---
 ### Regla del Boy Scout
+Si vemos alguna parte del código que se pueda mejorar, independientemente de quién lo haya hecho, debemos
+mejorarlo.
+
+El objetivo es mejorar la calidad del código y evitar su deterioro con el fin de ayudar al siguiente desarrollador a 
+cambiar o desarrollar una nueva funcionalidad de una forma más sencilla.
+
+----
+
+### Regla del Boy Scout
+Se promueve el trabajo en equipo por encima de la individualidad, ya que no solo es importante la tarea que esa persona 
+ha realizado, sino el proyecto en general y si se ve que algo se puede mejorar, se hace.
+
+----
+
+### Regla del Boy Scout
+La idea es mejorar pequeñas partes de código de manera acotada y segura, ya que tampoco es cuestión de cambiar un módulo 
+entero, sino poco a poco, ir mejorando su calidad.
 
 ---
 ### Least Astonishment
 
 ---
 ### RubberDuckin
+
+
+---
+
+### Law of Demeter (LoD)
+### Principle of least knowledge
+### Don’t talk to strangers
+un método de un objeto sólo debería interactuar con:
+1. Métodos del propio objeto.
+2. Los argumentos que recibe.
+3. Cualquier objeto creado dentro del método.
+4. Cualquier propiedad / campo directo dentro del propio objeto
+
+----
+
+### Law of Demeter (LoD)
+un objeto no tiene porqué conocer la estructura
+interna de los objetos con los que colabora.
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
