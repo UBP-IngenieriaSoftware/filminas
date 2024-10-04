@@ -46,12 +46,19 @@ Created by <i class="fab fa-telegram"></i>
 <div class="grid-item">
 
 ### Principios de Desarrollo
+* Introducción
 * DRY
 * KISS
 * SOLID
+* YAGNI
+* Ley de Curly
+* Optimización Prematura
 </div>
 <div class="grid-item">
 
+* Inversion of Control
+* Ley de Demeter
+* Clean Code
 </div>
 </div>
 
@@ -161,12 +168,24 @@ Escribir código innecesario ahora que puede ser útil a futuro, tiene varias de
 
 ---
 ### Ley de Curly
+Cada función debe hacer una sola cosa y hacerla bien.
+Una variable debe significar una sola cosa.
+Se relaciona con el principio de responsabilidad única.
 
 ---
 ### Optimización Prematura
+Optimizar el código o el rendimiento del sistema prematuramente, antes de que sea necesario o justificado puede conducir 
+a ineficiencias, mayor complejidad y esfuerzo injustificado. 
 
----
-### Clean Code
+Se anima a los desarrolladores a centrarse en la funcionalidad, la legibilidad y la mantenibilidad durante las etapas 
+iniciales de desarrollo. 
+
+----
+
+### Optimización Prematura
+
+Los esfuerzos de optimización deben reservarse para situaciones en las que se identifican y validan problemas de 
+rendimiento reales.
 
 ---
 
@@ -188,44 +207,31 @@ Algunos patrones de diseño son implementaciones de este principio:
 - Observer
 
 ---
-### Separation of Concerns
-
----
-### Readability, Testeability
-
----
 ### Regla del Boy Scout
 Si vemos alguna parte del código que se pueda mejorar, independientemente de quién lo haya hecho, debemos
 mejorarlo.
 
-El objetivo es mejorar la calidad del código y evitar su deterioro con el fin de ayudar al siguiente desarrollador a 
+El objetivo es mejorar la calidad del código y evitar su deterioro con el fin de ayudar al siguiente desarrollador a
 cambiar o desarrollar una nueva funcionalidad de una forma más sencilla.
 
 ----
 
 ### Regla del Boy Scout
-Se promueve el trabajo en equipo por encima de la individualidad, ya que no solo es importante la tarea que esa persona 
+Se promueve el trabajo en equipo por encima de la individualidad, ya que no solo es importante la tarea que esa persona
 ha realizado, sino el proyecto en general y si se ve que algo se puede mejorar, se hace.
 
 ----
 
 ### Regla del Boy Scout
-La idea es mejorar pequeñas partes de código de manera acotada y segura, ya que tampoco es cuestión de cambiar un módulo 
+La idea es mejorar pequeñas partes de código de manera acotada y segura, ya que tampoco es cuestión de cambiar un módulo
 entero, sino poco a poco, ir mejorando su calidad.
-
----
-### Least Astonishment
-
----
-### RubberDuckin
-
 
 ---
 
 ### Law of Demeter (LoD)
 ### Principle of least knowledge
 ### Don’t talk to strangers
-un método de un objeto sólo debería interactuar con:
+Un método de un objeto sólo debería interactuar con:
 1. Métodos del propio objeto.
 2. Los argumentos que recibe.
 3. Cualquier objeto creado dentro del método.
@@ -234,8 +240,107 @@ un método de un objeto sólo debería interactuar con:
 ----
 
 ### Law of Demeter (LoD)
-un objeto no tiene porqué conocer la estructura
-interna de los objetos con los que colabora.
+Un objeto no tiene porqué conocer la estructura interna de los objetos con los que colabora.
+Evitar (que posee acoplamiento):
+
+`object.getX().getY().getZ().doSomething()`
+
+----
+
+### Law of Demeter (LoD)
+
+![Acoplamiento](images/unidad7/acoplamiento.png)
+
+----
+
+### Law of Demeter (LoD)
+La arquitectura con bajo acoplamiento
+- Reduce el riesgo de que un cambio en un elemento pueda provocar cambios en otros elementos.
+- Simplifica las pruebas, el mantenimiento y la resolución de problemas.
+- Los componentes pueden reemplazarse más sencillamente.
+
+---
+### Separation of Concerns
+Un sistema debe estar organizado de tal manera que cada parte del sistema (módulo, componente, clase, etc.) se encargue 
+de una única preocupación o responsabilidad específica. Esto se hace para mejorar la mantenibilidad, modularidad, 
+legibilidad, y facilidad de prueba del código. Cada parte del sistema se enfoca en una tarea específica y no se mezcla con otras responsabilidades.
+
+----
+
+### Separation of Concerns
+
+Ejemplo: En una aplicación web, puedes separar el manejo de la lógica de negocio, la presentación (interfaz de usuario), 
+y el acceso a datos en componentes distintos. De esta forma, cada componente se encarga de su propia responsabilidad.
+
+---
+### Readability
+La legibilidad del código hace referencia a lo fácil que es leer, entender y seguir el código escrito por alguien. 
+El código legible es aquel que puede ser comprendido no solo por la persona que lo escribió, sino también por otros 
+programadores, incluso después de un tiempo. 
+
+----
+
+### Readability
+Un código con alta legibilidad tiene las siguientes características:
+- **Claridad en la estructura:** El código está organizado de manera que su estructura es fácil de seguir. 
+Está dividido en módulos o funciones con responsabilidades claras.
+- **Nombres descriptivos:** Variables, funciones y clases tienen nombres que describen claramente su propósito.
+- **Simplicidad:** Las funciones y métodos hacen una sola cosa, evitando la complejidad innecesaria.
+- **Comentarios adecuados:** Se usan comentarios cuando es necesario, pero el código en sí es tan claro que no depende 
+- de ellos para entenderse.
+
+----
+
+### Readability
+- La legibilidad es crucial porque un código más fácil de leer es también más fácil de mantener y modificar. 
+- Facilita la colaboración entre desarrolladores, 
+- Reduce la posibilidad de errores, 
+- Hace que el código sea más intuitivo de actualizar cuando sea necesario.
+
+---
+### Testeability
+La testeabilidad se refiere a lo fácil que es probar el código para asegurar que funciona correctamente. 
+Un código altamente testeable es aquel que puede ser cubierto de manera eficiente por pruebas automatizadas o manuales, 
+permitiendo verificar su correcto funcionamiento y encontrar errores rápidamente.
+
+----
+
+### Testeability: Características
+- **Modularidad:** El código está organizado en pequeñas unidades (como funciones o clases) que se pueden probar de 
+manera independiente.
+- **Desacoplamiento:** Las dependencias entre módulos están claramente definidas, lo que permite probar cada componente 
+sin necesidad de involucrar a todo el sistema.
+- **Inyección de dependencias:** En lugar de que las dependencias (como bases de datos o APIs externas) estén "fijas" 
+dentro del código, se pueden pasar desde fuera, lo que facilita la creación de pruebas unitarias sin depender de esos recursos externos.
+- **Predicibilidad:** Las funciones son puras, \producen la misma salida para los mismos valores de entrada sin efectos 
+secundarios, lo que facilita su prueba.
+
+----
+
+### Testeability
+Un código testeable permite que se escriban pruebas unitarias, de integración o funcionales de manera sencilla y eficiente, 
+reduciendo la posibilidad de errores y facilitando el mantenimiento a largo plazo.
+
+---
+### Least Astonishment
+### Menor Sorpresa
+Cuando un programador, usuario o desarrollador utiliza un sistema, su comportamiento debe ser predecible y coherente 
+con lo que ellos esperan. Es decir, el software debe comportarse de manera que cause la menor cantidad de sorpresas o confusión posible.
+
+----
+
+### Menor Sorpresa: Beneficios
+- **Mejor experiencia de usuario:** Los usuarios no necesitan aprender nuevos comportamientos o leer la documentación 
+con frecuencia, ya que el sistema se comporta de manera predecible.
+- **Mejor mantenibilidad:** Otros desarrolladores que trabajen en el código podrán entenderlo fácilmente, ya que sigue 
+convenciones comunes y consistentes.
+- **Menos errores:** Cuando los usuarios o desarrolladores entienden claramente cómo deben funcionar las cosas, es menos probable que cometan errores.
+
+---
+### RubberDuckin
+
+---
+### Clean Code
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
