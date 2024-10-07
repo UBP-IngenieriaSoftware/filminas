@@ -322,9 +322,15 @@ convenciones comunes y consistentes.
 
 ---
 ### RubberDuckin
+Método de revisión de código wb donde un programador toma un patito de goma y revisa su código forzándose a sí mismo a 
+explicarlo, línea por línea, al pato.
 
----
-### Clean Code
+----
+
+### RubberDuckin
+Muchos programadores han tenido la experiencia de explicar un problema de programación a alguien más, posiblemente a 
+alguien que no sabe nada sobre programación, y encontrar la solución en el proceso de explicar el problema. 
+Al comparar lo que supuestamente hace el código con lo que hace en realidad, cualquier incongruencia resulta evidente.
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
