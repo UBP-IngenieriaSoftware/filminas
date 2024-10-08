@@ -249,7 +249,36 @@ que debe ser refactorizada
 
 ---
 ### 6. Objetos y Estructuras de Datos
+- Los objetos muestran comportamiento y ocultan datos.
+- Las estructuras de datos muestran datos y carecen de comportamiento significativo.
+- Lo que es difícil par ala programación orientada a objetos es fácil para los procedimientos y viceversa.
 
+----
+
+### 6. Objetos y Estructuras de Datos
+La **Ley de Demeter** afirma que un módulo no debe conocer los entresijos de los objetos que manipula.
+Un objeto no debe mostrar su estructura interna a través de métodos de acceso.
+
+---
+### 7. Procesar Errores
+- El control de errores es importante, pero si oscurece la lógica es incorrecto.
+- Usar excepciones en lugar de códigos devueltos.
+- Emplear Try-Catch-Finally
+- Ofrecer contexto junto a las excepciones, para determinar origen y ubicación del error.
+- Los mensajes de error deben ser informativos: operación fallida y tipo de fallo.
+
+----
+
+### 7. Procesar Errores
+- No devolver null
+- El código limpio es legible pero también debe ser robusto.
+
+---
+### 8. Límites
+- No hay control sobre paquetes de tercetos, programas de código abierto ó códiga de nuestra propia empresa, de otra 
+área o equpo.
+- El código de tercetos permite obtener mayor funcionalidad en menos tiempo (se deben crear pruebas del código empleado)
+- Crear "pruebas de aprendizaje" para entender el funcionamiento de software de 3ros (y verificar si falla).
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
