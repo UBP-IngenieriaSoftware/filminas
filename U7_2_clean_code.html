@@ -87,7 +87,7 @@ La calidad es el resultado de un millón de acciones cuidadosas, no de un métod
 ---
 
 La maestría se consigue de dos formas: 
-- conocimientos 
+- conocimiento
 - trabajo
  
 Debe adquirir el conocimiento de los principios, patrones, prácticas y heurística propios de un maestro, y dominar 
@@ -97,7 +97,7 @@ dichos conocimientos a través de la práctica.
 
 Aprender a crear código limpio es complicado. 
 Requiere algo más que conocer principios y patrones.
-Debe practicarlo y fallar.
+#### Debe practicarlo y fallar.
 
 ---
 
@@ -210,7 +210,7 @@ Definir con el equipo que tipo de notación emplear y en que circunstancias.
 - Deben tener un tamaño reducido (se recomienda 20 líneas)
 - Espaciado (identación, lintting) adecuados
 - Cada función debe hacer una cosa, hacerlo bien... Y debe ser lo único que hagan
-- Usar nombres descriptivo
+- Usar nombres descriptivos
 - Deben recibir pocos argumentos (0,1,2...nunca +3)
 - Evitar la duplicación de código empleando funciones adecuadamente
 
@@ -228,8 +228,20 @@ eliminar duplicados.
 - Nunca comentar líneas de código. Eliminarlas. Si son necesarias a futuro, el sistema de control de versiones las
 mantiene guardadas.
 - No agregar comentarios innecesarios (los programadores nunca los mantienen)
-- El código debe ser lo suficientemente auto-descriptivo.
 - Los comentarios no compensan el código incorrecto.
+
+----
+
+### 4. Comentarios
+- El código debe ser lo suficientemente auto-descriptivo.
+````javascript
+// Comprobar si el empleado tiene derecho a todos los beneficios
+if ((employee.flags & HOURLY_FLAG) && (employee.age > 65))
+````
+Puede mejorarse como:
+````javascript
+if (employee.isEligibleForFullBenefits())
+````
 
 ----
 
@@ -243,15 +255,27 @@ que debe ser refactorizada
 ### 5. Formato
 - Es importante porque ayuda  a la claridad y legibilidad del código
 - Todo el equipo debe ponerse de acuerdo en las normas de formateo y lintting que emplearán
-- Se recomienda archivos de menos de 500 líneas
 - Las funciones relacionadas entre si deben mantenerse juntas (poco distanciadas)
 - La declaración de variables debe realizarse cercana a su uso
+
+----
+
+#### 5. Formato
+
+![Lineas](images/unidad7/lineasxArchivos.png)
+
+----
+
+#### 5. Formato
+- Las líneas no deben ser demasiado extensas (de 20 a 60 caracteres)
+
+- ![Caracteres por Líneas](images/unidad7/caracteresxLineas.png)
 
 ---
 ### 6. Objetos y Estructuras de Datos
 - Los objetos muestran comportamiento y ocultan datos.
 - Las estructuras de datos muestran datos y carecen de comportamiento significativo.
-- Lo que es difícil par ala programación orientada a objetos es fácil para los procedimientos y viceversa.
+- Lo que es difícil para la programación orientada a objetos es fácil para los procedimientos y viceversa.
 
 ----
 
@@ -279,6 +303,30 @@ Un objeto no debe mostrar su estructura interna a través de métodos de acceso.
 área o equpo.
 - El código de tercetos permite obtener mayor funcionalidad en menos tiempo (se deben crear pruebas del código empleado)
 - Crear "pruebas de aprendizaje" para entender el funcionamiento de software de 3ros (y verificar si falla).
+
+---
+### 9. Pruebas de Unidad
+El DGP o Desarrollo Guiado por Pruebas tiene 3 leyes:
+- **1 Ley:** No debe crear código de producción hasta que haya creado una prueba de unidad que falle.
+- **2 Ley:** No debe crear más de una prueba de unidad que baste como fallida, y no compilar se considera un fallo.
+- **3 Ley:** No debe crear más código de producción que el necesario para superar la prueba de fallo actual
+
+----
+
+### 9. Pruebas de Unidad
+- Tener pruebas incorrectas es lo mismo que no tener ninguna prueba.
+- Las pruebas hacen que el código sea flexible, que se pueda mantener y reutilizar
+- Las pruebas también deben ser limpias (tener legibilidad)
+- Una afirmación por prueba (1 assert)
+
+----
+
+### 9. Pruebas de Unidad: FIRST
+- **Rapidez (Fast):** Los tests deben ejecutarse de forma rápida. Si lo hacen lentamente, no se ejecutarán con frecuencia.
+- **Independencia:** Las pruebas no deben depender unas de otras. Cada prueba se debe poder ejecutar de forma independiente.
+- **Repetición:** Las pruebas deben poder repetirse en cualquier entorno. 
+- **Validación automática:** Las pruebas deben tener un resultado booleano: o aciertan o fallan. 
+- **Puntualidad:** Las pruebas deben crearse antes que el código del programa.
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
