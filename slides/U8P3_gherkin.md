@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## Automatización de Casos de Pruebas 2
+#### Ingeniería de Software
+# Automatización de Casos de Pruebas 2
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -68,7 +68,7 @@ Combina aspectos técnicos y de negocio: los requisitos de negocio forman parte 
 ---
 ### Gherkin
 Es un lenguaje fácil de leer, entender y escribir; con él vamos a describir las funcionalidades definiendo el 
-comportamiento del softwatr, sin entrar en su implementación.
+comportamiento del software, sin entrar en su implementación.
 
 La **documentación** forma parte de los tests.
 
@@ -81,8 +81,8 @@ Necesitamos conocer **5** palabras:
 * **Scenario** Describe cada escenario que vamos a probar.
 * **Given** Provee contecto para el escenario en que se va a ejecutar el test, prerequisitos. Incluye los pasos necesarios
 para poner al sistema en el estado que se desea probar.
-* **When** La interacción del suuario que acciona la funcionalidad que deseamos testear.
-* **Then** Especifica el resultado esperado en el test. Observamos los cambios en el ssitema y vemos su son los deseados.
+* **When** La interacción del usuario que acciona la funcionalidad que deseamos testear.
+* **Then** Especifica el resultado esperado en el test. Observamos los cambios en el sistema y vemos si son los deseados.
 
 ----
 
@@ -163,7 +163,7 @@ Los siguientes principios permiten alcanzar estas metas:
 #### BRIEF: Esencial
 * Cualquier paso que no contribuya a alcanzar el propósito principal debe elimianrse. Si son importantes, deben cubrirse 
 por otros esenarios que ilustren otras reglas.
-* Un erro común es incluir demasiados detalles.
+* Un error común es incluir demasiados detalles.
 
 ----
 
@@ -173,7 +173,7 @@ por otros esenarios que ilustren otras reglas.
 ----
 
 #### BRIEF: Breve
-* Los escenarios no dberían tener más de 5 líneas, haciendo que sen fáciles de leer y entender.
+* Los escenarios no deberían tener más de 5 líneas, haciendo que sen fáciles de leer y entender.
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?

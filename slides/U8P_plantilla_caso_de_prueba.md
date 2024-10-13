@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## Casos de Pruebas
+#### Ingeniería de Software
+# Casos de Pruebas
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -60,7 +60,7 @@ Created by <i class="fab fa-telegram"></i>
 
 ---
 
-#### Casos de Prueba
+### Casos de Prueba
 En la norma ISO 29119 (Estándar Internacional para pruebas de Software) se define caso de prueba como:
 
 Un conjunto de precondiciones, entradas y resultados esperados, desarrollados para impulsar la ejecución de un elemento 
