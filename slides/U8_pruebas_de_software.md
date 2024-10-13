@@ -76,7 +76,7 @@ técnicas de validación estáticas.
   documento de requisitos.
   * Para los productos de software genérico, significa que debe haber pruebas para todas las funciones del sistema, 
   además de combinaciones de estas características, que se incorporarán en la versión del producto.
-  * Descubrir las situaciones en las que el comportamiento del software es incorrecta,
+* Descubrir las situaciones en las que el comportamiento del software es incorrecta,
   indeseable o no se ajusta a su especificación.
   * Pruebas de defectos se ocupa de erradicar el comportamiento del sistema no deseado, tales como fallos
   del sistema, las interacciones no deseadas con otros sistemas, cálculos incorrectos y corrupción de datos.
@@ -84,12 +84,12 @@ técnicas de validación estáticas.
 ---
 ### Validación y pruebas de defectos
 <!-- .slide: style="font-size: 0.90em" -->
-* El primer objetivo conduce a las pruebas de validación
-  * Se espera que el sistema realice correctamente el uso de un determinado conjunto de casos de prueba que reflejen el uso
-  esperado del sistema.
-* El segundo objetivo conduce a pruebas de defectos.
+* El primer objetivo conduce a las **pruebas de validación**
+  * Se espera que el sistema realice correctamente el uso de un determinado conjunto de casos de prueba que reflejen el 
+  uso esperado del sistema.
+* El segundo objetivo conduce a **pruebas de defectos**.
   * Los casos de prueba están diseñados para exponer los defectos.
-  * Los casos de prueba en pruebas de defectos pueden ser deliberadamente oscuros y no tienen por qué reflejar cómo se
+  * Los casos de prueba en pruebas de defectos pueden ser deliberadamente confusos y no tienen por qué reflejar cómo se
 utiliza normalmente el sistema.
 
 ---
@@ -98,41 +98,53 @@ utiliza normalmente el sistema.
 
 ---
 ### Verificacion vs validacion
-* Verificación: ¿construimos bien el producto?
+Las **pruebas** se consideran parte de un proceso más amplio de verificación y validación.
+* **Verificación:** ¿construimos bien el producto?
   * El software cumple con los requerimientos funcionales y no funcionales establecidos
-* Validación: ¿construimos el producto correcto?
+* **Validación:** ¿construimos el producto correcto?
   * El software debe hacer lo que el usuario realmente necesita.
 
 ---
 ### V & V
-Objetivo final : establecer confianza de que el sistema de software es “adecuado”.
+Objetivo final: establecer confianza de que el sistema de software es “adecuado”.
 
 Depende de:
-* Propósito del software
-* Expectativas del usuario
-* Entorno de mercado
+- **Propósito del software:** Cuanto más crítico sea el software más importante debe ser su confiabilidad.
+- **Expectativas del usuario:** Conformo el software se completa, se espera sea más confiable.
+- **Entorno de mercado:** Considerar los productos competitivos, el precio, la calidad, etc.
 
 ---
 ### Inspecciones y pruebas
 * Inspecciones de software:
-  * Verificación estática
+  * Verificación **estática**
 * Pruebas de software
-  * Verificación dinámica.
+  * Verificación **dinámica**
 
 ---
+### Verificacion & validacion estática
+Implica inspecciones y revisiones (realizadas SIN ejecución), análisis y comprobación de: 
+- Requerimientos del sistema
+- Modelos de diseño
+- Código fuente del programa
+- Pruebas propuestas
+
+----
+
 ### Inspecciones y Pruebas
 ![Inspecciones y Pruebas](images/unidad8/inspecciones-y-pruebas.jpg)
 
----
+----
+
 ### Inspecciones y pruebas
-* Las inspecciones y las pruebas son   complementarias.
+* Las inspecciones y las pruebas son complementarias.
 * Ambas deben ser utilizadas durante el proceso de V & V.
 * Las inspecciones pueden comprobar la conformidad con una especificación pero no la
 conformidad con los requisitos reales del cliente.
 * Las inspecciones no pueden comprobar las características no funcionales tales como
 rendimiento, usabilidad, etc.
 
---- 
+----
+
 ### Inspecciones de software
 * Se enfocan en el código fuente de un sistema con el objetivo de descubrir anomalías y defectos.
 * No requieren la ejecución de un sistema así que puede ser utilizado antes de la implementación.
@@ -143,39 +155,61 @@ configuración, datos de prueba, etc.)
 ---
 ### Ventajas de las inspecciones
 <!-- .slide: style="font-size: 0.90em" -->
-* Durante las pruebas, los errores pueden enmascarar   (ocultar) otros errores. La inspección es un proceso
+* Durante las pruebas, los errores pueden enmascarar (ocultar) otros errores. La inspección es un proceso
 estático, no hay interacciones entre los errores.
 * Versiones incompletas de un sistema pueden ser inspeccionadas fácilmente. En las pruebas es
 necesario desarrollar casos de prueba especificos para las partes desarrolladas.
 * La inspección permite refactorizar mejorando la calidad del programa (mejora el cumplimiento de las
 normas, la portabilidad y facilidad de mantenimiento).
 
+----
+
+#### VSC: Plugins
+- **ESlint:** Es una herramienta de análisis estático de código enfocada en encontrar y corregir problemas en el código 
+JavaScript y en otros lenguajes basados en este, como TypeScript. Se utiliza para mantener un código más limpio, 
+consistente y libre de errores.
+- **SonarLint:** Ayuda a los desarrolladores a encontrar y solucionar errores en tiempo real mientras escriben código.
+
+----
+
+### Las inpescciones NO sustituyen las pruebas de software. Son diferentes los errores a nivel dinámico que estático.
+
+---
+### Casos de Pruebas
+Son especificaciones de las entradas a las pruebas y la salida esperada del sistema (los resultado de la prueba), 
+además de información sobre lo que se pone a prueba.
+
 ---
 ### Etapas de prueba
-* **Pruebas de desarrollo**, donde el sistema se prueba durante el desarrollo para descubrir los errores y defectos.
-* **Pruebas de Versión**, donde un equipo de pruebas separado, testea una versión completa del sistema antes de que sea 
+- **Pruebas de desarrollo**, donde el sistema se prueba durante el desarrollo para descubrir los errores y defectos.
+- **Pruebas de Versión**, donde un equipo de pruebas separado, testea una versión completa del sistema antes de que sea 
 puesto en operación.
-* **Pruebas de usuario**, donde los usuarios potenciales de un sistema, prueban el sistema en su propio entorno.
+- **Pruebas de usuario**, donde los usuarios potenciales de un sistema, prueban el sistema en su propio entorno.
 
 ---
 ### Modelo del proceso de prueba de software
 ![Modelo de Proceso de Prueba](images/unidad8/modelo-proceso-de-prueba.jpg)
 
+----
+
+El proceso de prueba requiere una combinación de pruebas manuales y autoamtizadas.
+
 ---
 ### Pruebas de desarrollo
 <!-- .slide: style="font-size: 0.80em" -->
-* **Pruebas de desarrollo:** actividades de pruebas del equipo de desarrollo.
-  * **Prueba de la unidad**, donde se ponen a prueba las funciones o clases de objetos. Debe centrarse en
+Actividades de pruebas del equipo de desarrollo. Niveles de granulación:
+1. **Prueba de la unidad**, donde se ponen a prueba las funciones o clases de objetos. Debe centrarse en
 probar la funcionalidad de los objetos o métodos.
-  * **Pruebas de componentes**, donde se integran varias unidades individuales para crear
+2. **Pruebas de componentes**, donde se integran varias unidades individuales para crear
 componentes compuestos. Deben centrarse en las interfaces de componentes de prueba.
-  * **Pruebas del sistema**, donde algunos o todos los componentes de un sistema están integrados y el
+3. **Pruebas del sistema**, donde algunos o todos los componentes de un sistema están integrados y el
 sistema se pone a prueba en su conjunto. Deben centrarse en las interacciones de los componentes
 
+Todas son **pruebas de defecto**, cuya meta es descubrir bugs en el software.
+
 ---
-### Prueba de unidad
-* Prueba de la unidad es el proceso de probar los componentes individuales de forma aislada.
-* Se trata de un proceso de pruebas de defectos.
+### 1. Pruebas de unidad
+* Proceso de probar métodos o clases de objetos individualmente de forma aislada.
 * Las unidades pueden ser:
   * Las funciones individuales o métodos dentro de un objeto
   * Las clases de objetos con varios atributos y métodos
@@ -183,11 +217,11 @@ sistema se pone a prueba en su conjunto. Deben centrarse en las interacciones de
 
 ---
 ### Pruebas clases
-* Cobertura de la prueba completa de una clase implica:
-  * Probar todas las operaciones asociadas con un objeto.
-  * La modificación/utilización de todos los atributos de los objetos.
-  * Poner el objeto en todos los estados posibles.
-  * La herencia hace más difícil la prueba.
+Cobertura de la prueba completa de una clase implica:
+* Probar todas las operaciones asociadas con un objeto.
+* La modificación/utilización de todos los atributos de los objetos.
+* Poner el objeto en todos los estados posibles.
+* La herencia hace más difícil la prueba.
 
 ---
 ### Estación meteorológica
@@ -210,15 +244,14 @@ eventos para causar las diferentes transiciones:
 * Siempre que sea posible, las pruebas de unidad debe ser automatizadas de forma que se ejecuten y
 comprueben las pruebas sin necesidad de intervención manual.
 * En la unidad de pruebas automatizadas, se hace uso de un marco de automatización de pruebas (tales
-como JUnit o Jest) para escribir y ejecutar las pruebas del programa.
+como JUnit, Jest o React Testing Library) para escribir y ejecutar las pruebas del programa.
 * Marcos de pruebas unitarias permiten clases de prueba genéricos que se extienden a crear casos de prueba específicos.
 
 ---
-### Componentes de las pruebas automatizadas
-* **Configuración**, donde se inicializa el sistema con el caso de prueba, es decir, los insumos y los resultados
-  esperados.
-* Llamada, cuando se llama al objeto o método para ensayar.
-* Declaración, donde se compara el resultado de la llamada con el resultado esperado. Si es verdadera, la
+### Partes del conunto automatizado de pruebas
+1. **Configuración**, donde se inicializa el sistema con el caso de prueba, es decir, entradas y salidas esperadas.
+2. **Llamada**, cuando se llama al objeto o método para probar.
+3. **Declaración**, donde se compara el resultado de la llamada con el resultado esperado. Si es verdadera, la
   prueba ha tenido éxito, si es falso ha fracasado.
 
 ---
@@ -234,9 +267,9 @@ como JUnit o Jest) para escribir y ejecutar las pruebas del programa.
 
 ---
 ### Estrategias de prueba
-* Prueba de partición, donde se identifica grupos de entradas que tienen características comunes
+* **Prueba de partición**, donde se identifica grupos de entradas que tienen características comunes
   y deben ser procesadas de la misma manera.
-* Pruebas basadas en lineamientos, en el que se utiliza la experiencia previa de los tipos de
+* **Pruebas basadas en lineamientos**, en el que se utiliza la experiencia previa de los tipos de
   errores que los programadores suelen hacer cuando se desarrolla los componentes.
 
 ---
@@ -271,8 +304,8 @@ como JUnit o Jest) para escribir y ejecutar las pruebas del programa.
 * Forzar que los resultados de los cálculos sean demasiado grandes o demasiado pequeños.
 
 ---
-### Prueba de componentes
-Los componentes de software son a menudo componentes compuestos formados por varios objetos que interactúan.
+### 2. Prueba de componentes
+Los componentes están constituídos por varios objetos que interactúan.
 * El acceso a la funcionalidad de estos objetos es a través de la interfaz de componente definido.
 * La prueba de componentes compuestos debe centrarse en la interfaz del componente.
 
@@ -285,12 +318,12 @@ Asumiendo que las pruebas unitarias en los objetos individuales dentro del compo
 ---
 ### Prueba de interface: Tipos de interface
 <!-- .slide: style="font-size: 0.90em" -->
-* **Interfaces de parámetro:** los datos, o referencias de función, pasan de un componente a otro (métodos en un objeto).
-* **Interfaces de memoria compartida:** un bloque de memoria se comparte entre componentes. (sistemas embebidos, sensores
+1. **Interfaces de parámetro:** los datos, o referencias de función, pasan de un componente a otro (métodos en un objeto).
+2. **Interfaces de memoria compartida:** un bloque de memoria se comparte entre componentes. (sistemas embebidos, sensores
 crean datos que se recuperan y son procesados por otros componentes).
-* **Interfaces de procedimiento:** un componente encapsula un conjunto de procedimientos que pueden ser llamados por otros
+3. **Interfaces de procedimiento:** un componente encapsula un conjunto de procedimientos que pueden ser llamados por otros
 componentes (componentes reutilizables)
-* **Interfaces que pasan mensajes:** al enviar un mensaje, un componente solicita un servicio de otro componente (sistemas
+4. **Interfaces que pasan mensajes:** al enviar un mensaje, un componente solicita un servicio de otro componente (sistemas
 cliente-servidor)
 
 ---
@@ -304,7 +337,7 @@ componente Ej: método de búsqueda binaria enviando como parámetro un arreglo 
 consumidor de datos operan a diferentes niveles de rapidez.
 
 ---
-### Directrices para la prueba de interface
+### Lineamientos para pruebas de interfaz
 * Diseñar pruebas para que los parámetros de un procedimiento llamado se encuentren en los
 extremos de sus rangos.
 * Probar los parámetros de tipo puntero con punteros nulos.
@@ -313,7 +346,7 @@ extremos de sus rangos.
 * En los sistemas de memoria compartida, variar el orden en que se activan los componentes.
 
 ---
-### Pruebas del sistema
+### 3. Pruebas del sistema
 <!-- .slide: style="font-size: 0.90em" -->
 * Las pruebas del sistema durante el desarrollo consiste en la integración de componentes para
 crear una versión del sistema y las pruebas del sistema integrado.
@@ -329,7 +362,7 @@ transfieren los datos correctos en el momento adecuado a través de sus interfac
   * Componentes reutilizables que han sido desarrollados por separado e integrados con
   componentes desarrollados recientemente.
   * Componentes desarrollados por diferentes miembros del equipo o sub-equipos
-* Las pruebas del sistema son un colectivo más que un proceso individual.
+* Las pruebas del sistema son colectivas más que un proceso individual.
 * En general las realiza un equipo de pruebas independiente sin participación de diseñadores y programadores.
 
 ---
@@ -358,10 +391,10 @@ En general se debe probar:
 * Todas las funciones para las cuales haya entrada del usuario.
 
 ---
-### Desarrollo basado en pruebas
+### TDD: Desarrollo Dirigido por pruebas
 <!-- .slide: style="font-size: 0.90em" -->
-* Desarrollo basado en pruebas (TDD) es un enfoque en que se entrelazan el desarrollo del
-código y el de las pruebas.
+* Son las siglas de Test Driven Development
+* Es un enfoque en que se entrelazan el desarrollo del código y el de las pruebas.
 * Las pruebas se escriben antes que el código y el 'passing' de las pruebas es el motor
 fundamental del desarrollo.
 * Se desarrolla código junto con una prueba para ese incremento. No se pasa al siguiente
@@ -374,17 +407,17 @@ dirigido por plan
 ![Desarrollo basado en pruebas](images/unidad8/desarrollo-basado-en-pruebas.jpg)
 
 ---
-### Actividades del proceso de TDD
+### Pasos en el proceso de TDD
 <!-- .slide: style="font-size: 0.90em" -->
-* Identificar el incremento de la funcionalidad que se requiere. (pequeño y aplicable en unas pocas líneas de código.)
-* Escribir la prueba para esta funcionalidad (prueba automatizada).
-* Ejecutar la prueba, junto con todas las demás pruebas que se han implementado. No se ha
+1. Identificar el incremento de la funcionalidad que se requiere. (pequeño y aplicable en unas pocas líneas de código.)
+2. Escribir la prueba para esta funcionalidad (prueba automatizada).
+3. Ejecutar la prueba, junto con todas las demás pruebas que se han implementado. No se ha
 implementado la funcionalidad de modo que la nueva prueba fallará.
-* Implementar la funcionalidad y vuelver a ejecutar la prueba.
-* Una vez que todas las pruebas se ejecutan correctamente, se pasa a la aplicación de la siguiente funcionalidad.
+4. Implementar la funcionalidad y vuelver a ejecutar la prueba.
+5. Una vez que todas las pruebas se ejecutan correctamente, se pasa a la aplicación de la siguiente funcionalidad.
 
 ---
-### Beneficios del desarrollo basado en pruebas
+### Beneficios de TDD
 <!-- .slide: style="font-size: 0.90em" -->
 * **Cobertura de código:** Cada segmento de código que se escribe tiene por
 lo menos una prueba asociada por lo que todo el código escrito tiene por lo menos una prueba.
@@ -406,10 +439,8 @@ simple y directa. Todas las pruebas se vuelven a ejecutar cada vez que se realic
 ---
 ### Pruebas de versión
 <!-- .slide: style="font-size: 0.90em" -->
-* Las pruebas de versión son el proceso de probar una versión particular de un sistema que está diseñado
-para su uso fuera del equipo de desarrollo.
-* El objetivo principal del proceso de pruebas de versión es convencer al usuario que el sistema es lo
-suficientemente bueno para su uso.
+Proceso de probar una versión particular de un sistema que está diseñado para su uso fuera del equipo de desarrollo.
+* El objetivo es convencer al usuario que el sistema es lo suficientemente bueno para su uso.
 * Tienen que demostrar que el sistema ofrece la funcionalidad especificada, el rendimiento y la
 fiabilidad, y que no falla durante su uso normal.
 * Son por lo general un proceso de prueba de caja negra donde las pruebas sólo se derivan de la
@@ -420,23 +451,27 @@ especificación del sistema.
 Diferencias importantes:
 * Un equipo separado que no haya estado involucrado en el desarrollo del sistema, debe ser
 responsable de las pruebas de versión.
-* Las pruebas del sistema por el equipo de desarrollo debe centrarse en el descubrimiento de
+* Las **pruebas del sistema** por el equipo de desarrollo debe centrarse en el descubrimiento de
 errores en el sistema (pruebas de defectos).
-* El objetivo de las pruebas de versión es para comprobar que el sistema cumpla con sus
+* El objetivo de las **pruebas de versión** es para comprobar que el sistema cumpla con sus
 requisitos y es lo suficientemente bueno para el uso externo (pruebas de validación).
 
 ---
 ### Pruebas basadas en requerimientos
-Pruebas basadas en requerimientos implican el examen de cada requerimiento y el desarrollo
-de una prueba o pruebas para ello.
+Implican el examen de cada requerimiento y el desarrollo de una prueba o pruebas para ello.
+
+Los requerimientos deben escribirse de forma que pueda diseñarse una prueba para dicho requerimiento.
+
+Son pruebas de validación.
 
 ---
 ### Requisitos MHC-PMS:
-  * Si un paciente se sabe que es alérgico a algún medicamento en particular, entonces la
+* Si un paciente se sabe que es alérgico a algún medicamento en particular, entonces la
 prescripción de medicamentos que dará lugar a un mensaje de aviso que se entregará al usuario del sistema.
-  * Si un prescriptor elige ignorar una advertencia de alergia, deberán proveer una razón por la que esto ha sido ignorado.
+* Si un prescriptor elige ignorar una advertencia de alergia, deberán proveer una razón por la que esto ha sido ignorado.
 
----
+----
+
 ### Pruebas de requerimientos MHC-PMS
 <!-- .slide: style="font-size: 0.80em" -->
 * Elegir uno o más paciente/s con alergia a un fármaco: 
@@ -449,6 +484,14 @@ prescripción de medicamentos que dará lugar a un mensaje de aviso que se entre
 usuario proporcione una explicación de por qué rechazada la advertencia.
 
 ---
+### Pruebas de escenario
+* Son un enfoque a las pruebas de versión donde se crean escenarios típicos de uso y se les utiliza en el desarrollo de 
+casos de prueba para el sistema.
+* Un escenario es una historia que describe una forma en que puede usarse el sistema.
+* Los escenarios deben ser realistas, y lo usuarios reales del sistema tienen que relacionarse con ellos.
+
+----
+
 ### Prueba de escenario MHC-PMS
 <!-- .slide: style="font-size: 0.80em" -->
 Kate es enfermera con especialidad en atención a la salud mental. Una de sus
@@ -491,11 +534,12 @@ obtener información de seguimiento y concertar citas en la clínica.
 ---
 ### Pruebas de rendimiento
 <!-- .slide: style="font-size: 0.90em" -->
-* Prueba de las propiedades emergentes de un sistema, como el rendimiento y la fiabilidad.
+* Prueba las propiedades emergentes de un sistema, como el rendimiento y la fiabilidad.
+* Las pruebas deben diseñarse para procesar una carga pretendida.
 * Las pruebas deben reflejar el perfil de uso del sistema.
 * Las pruebas de rendimiento por lo general implican la planificación de una serie de
 pruebas en las que la carga se incrementa de forma constante hasta que el rendimiento del sistema se vuelve inaceptable.
-* Las pruebas de estrés son una forma de pruebas de rendimiento en el que el sistema
+* Las **pruebas de estrés** son una forma de pruebas de rendimiento en el que el sistema
 está sobrecargado deliberadamente para probar su comportamiento.
 
 ---
@@ -513,21 +557,21 @@ No puede ser replicado en un entorno de prueba.
 
 ---
 ### Tipos de prueba de usuario
-* **Pruebas Alfa:** Los usuarios del software trabajan con el equipo de desarrollo para poner a prueba el
+1. **Pruebas Alfa:** Los usuarios del software trabajan con el equipo de desarrollo para poner a prueba el
 software en el sitio del desarrollador.
-* **Pruebas Beta:** Una versión del software está disponible para los usuarios que les permite experimentar y
+2. **Pruebas Beta:** Una versión del software está disponible para los usuarios que les permite experimentar y
 plantear a los desarrolladores los problemas que descubren.
-* **Pruebas de Aceptación:** Los clientes prueban un sistema para decidir si está listo para ser aceptado y utilizado 
+3. **Pruebas de Aceptación:** Los clientes prueban un sistema para decidir si está listo para ser aceptado y utilizado 
 en el entorno del cliente.
 
 ---
 ### Etapas en el proceso de las pruebas de aceptación
-* Definir los criterios de aceptación
-* Planificar las pruebas de aceptación
-* Derivar las pruebas de aceptación
-* Ejecutar las pruebas de aceptación
-* Negociar resultados de las pruebas
-* Rechazar/aceptar el sistema
+1. **Definir los criterios de aceptación:** Definirse entre el cliente y el desarrollador
+2. **Planificar las pruebas de aceptación:** Se define cobertura requerida, calendario de pruebas, riesgos, recursos, tiempo, presupuesto.
+3. **Derivar las pruebas de aceptación:** Se diseñan las pruebas funcionales como no funcionales.
+4. **Ejecutar las pruebas de aceptación**
+5. **Negociar resultados de las pruebas:** Es poco probable que pasen todas las pruebas.
+6. **Rechazar/aceptar el sistema**
 
 ---
 ### Etapas en el proceso de las pruebas de aceptación

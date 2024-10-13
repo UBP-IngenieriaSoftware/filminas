@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## Automatización de Casos de Pruebas
+#### Ingeniería de Software
+# Automatización de Casos de Pruebas
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
