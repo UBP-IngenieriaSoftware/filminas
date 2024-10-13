@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## Pruebas de Software
+#### Ingeniería de Software
+# Pruebas de Software
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -153,7 +153,7 @@ normas, la portabilidad y facilidad de mantenimiento).
 ---
 ### Etapas de prueba
 * **Pruebas de desarrollo**, donde el sistema se prueba durante el desarrollo para descubrir los errores y defectos.
-* **Pruebas de Version**, donde un equipo de pruebas separado, testea una versión completa del sistema antes de que sea 
+* **Pruebas de Versión**, donde un equipo de pruebas separado, testea una versión completa del sistema antes de que sea 
 puesto en operación.
 * **Pruebas de usuario**, donde los usuarios potenciales de un sistema, prueban el sistema en su propio entorno.
 
@@ -185,7 +185,7 @@ sistema se pone a prueba en su conjunto. Deben centrarse en las interacciones de
 ### Pruebas clases
 * Cobertura de la prueba completa de una clase implica:
   * Probar todas las operaciones asociadas con un objeto.
-  * La modificacion/utilizacion de todos los atributos de los objetos.
+  * La modificación/utilización de todos los atributos de los objetos.
   * Poner el objeto en todos los estados posibles.
   * La herencia hace más difícil la prueba.
 
@@ -401,7 +401,7 @@ que describe lo que el código debería estar haciendo.
 de trabajo con anterioridad.
 * En un proceso de prueba manual, las pruebas de regresión son caras, pero, la prueba automatizada, es
 simple y directa. Todas las pruebas se vuelven a ejecutar cada vez que se realice un cambio en el programa.
-* Las pruebas deben ejecutarse con 'éxito' antes y despues del cambio que se ha comprometido.
+* Las pruebas deben ejecutarse con 'éxito' antes y después del cambio que se ha comprometido.
 
 ---
 ### Pruebas de versión
@@ -439,10 +439,10 @@ prescripción de medicamentos que dará lugar a un mensaje de aviso que se entre
 ---
 ### Pruebas de requerimientos MHC-PMS
 <!-- .slide: style="font-size: 0.80em" -->
-* Elegir uno o mas paciente/s con alergia a un fármaco: 
+* Elegir uno o más paciente/s con alergia a un fármaco: 
   * Prescribir medicamentos para los cuales no es alérgico, comprobar que el mensaje de advertencia no se emite. 
   * Prescribir el medicamento para el cual es alérgico, comprobar que la advertencia se emite.
-* Elegir uno o mas paciente/s con alergias a dos o más drogas:
+* Elegir uno o más paciente/s con alergias a dos o más drogas:
   * Prescribir ambos fármacos por separado, comprobar que se emitió la advertencia para cada uno. 
   * Prescribir ambos fármacos al mismo tiempo comprobar que las dos advertencias se emiten correctamente. 
 * Prescribir un medicamento que emite una advertencia e ignorarla. Comprobar que el sistema requiere que el
