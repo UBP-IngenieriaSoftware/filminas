@@ -473,6 +473,20 @@ limpio de como lo encontramos.
 ---
 ### 17. Síntomas y Heurística
 - En el libro Refactoring, Martin Fowler identifica diversos síntomas de código (Smells).
+- Los code smells son señales de que el código tiene problemas de diseño o estructurales que podrían llevar a problemas 
+de mantenimiento y comprensibilidad en el futuro. 
+- Aunque estos "olores" no son necesariamente errores, indican áreas que probablemente necesiten mejoras.
+
+----
+
+### 17. Síntomas y Heurística
+- **C** - Comentarios
+- **E** - Entorno
+- **F** - Funciones
+- **G** - Generales
+- **J** - Java
+- **N** - Nombres
+- **T** - Tests
 
 ----
 
@@ -507,7 +521,7 @@ divague. No afirme lo evidente. Sea breve.
 El código comentado es una aberración.
 Cuando vea código comentado, elimínelo.
 
-----
+---
 
 ### 17. Smells: Entorno:
 - **E1: La generación requiere más de un paso**
@@ -518,7 +532,7 @@ Debería poder ejecutar todas las pruebas de unidad con un solo comando.
 La capacidad de ejecutar todas las pruebas es tan importante que
 debe ser algo rápido, sencillo y obvio.
 
-----
+---
 
 ### 17. Smells: Funciones:
 - **F1: Demasiados argumentos**
@@ -584,8 +598,7 @@ Los conceptos de nivel superior de la clase base sean independientes
 de los de nivel inferior de las derivadas.
 
 - **G8: Exceso de información**
-Los módulos bien definidos tienen interfaces reducidas que nos permiten
-hacer mucho con poco. 
+Los módulos bien definidos tienen interfaces reducidas que nos permiten hacer mucho con poco. 
 Una interfaz bien definida no ofrece demasiadas funciones y las conexiones son reducidas.
 Cuantas menos variables de instancia tenga una clase, mejor.
 
@@ -610,6 +623,115 @@ Si hace algo de una forma concreta, aplique la misma técnica a operaciones simi
 - **G12: Desorden**
 Variables sin usar, funciones que nunca se invocan, comentarios que no
 añaden información, etc. Todos estos elementos sobran y deben eliminarse.
+
+----
+
+### 17. Smells: General:
+- **G13: Conexiones artificiales**
+Los elementos que no dependen unos de otros no deben conectarse de forma artificial. 
+Una conexión artificial es la que se establece entre dos módulos sin un propósito directo. 
+
+- **G14: Envidia de las características**
+Los métodos de una clase deben interesarse por las variables y funciones de la clase a la que pertenecen, no
+por las variables y funciones de otras clases. 
+
+----
+
+### 17. Smells: General:
+- **G15: Argumentos de selector**
+Los argumentos de selector (true, false) son una forma de evitar dividir una función de gran tamaño en otras menores.
+
+- **G16: Intención desconocida**
+Queremos que el código sea lo más expresivo posible. Expresiones extensas, notación poco clara distorsiona 
+la intención del autor.
+
+----
+
+### 17. Smells: General:
+- **G17: Responsabilidad desubicada**
+Principio de mínima sorpresa: El código debe ubicarse donde el lector espera encontrarlo.
+
+- **G18: Elementos estáticos incorrectos**
+Si realmente quiere que una función sea estática, asegúrese de que nunca querrá que sea polimórfica.
+
+----
+
+### 17. Smells: General:
+- **G19: Usar variables explicativas**
+Un módulo opaco se vuelva más transparente con tan sólo dividir los cálculos en valores intermedios con los nombres adecuados.
+```
+Matcher match = headerPattern.matcher(line);
+if(match.find()){
+    String key = match.group(1);
+    String value = match.group(2);
+    headers.put(key.toLowercase(), value);
+}
+```
+
+----
+
+### 17. Smells: General:
+- **G20: Los nombres de función deben indicar lo que hacen**
+- **G21: Comprender el algoritmo**
+Se crea gran cantidad de código extraño porque los autores no se esfuerzan en comprender el algoritmo.
+Refactorizar la función en algo tan limpio y expresivo que su funcionamiento sea evidente.
+
+----
+
+### 17. Smells: General:
+- **G22: Convertir dependencias lógicas en físicas**
+Si un módulo depende de otro, dicha dependencia debe ser física, no sólo lógica. El módulo dependiente no debe asumir 
+aspectos (es decir, dependencias lógicas) sobre el módulo del que depende. Debe solicitar de forma explícita al módulo 
+toda la información de la que depende.
+
+----
+
+### 17. Smells: General:
+- **G23: Polimorfismo antes que If/Else o Switch/Case**
+- **G24: Seguir las convenciones estándar**
+- **G25: Sustituir números mágicos por constantes con nombre**
+- **G26: Precisión**
+- **G27: Estructura sobre convención**
+- **G28: Encapsular condicionales**
+- **G29: Evitar condicionales negativas**
+- **G30: Las funciones sólo deben hacer una cosa**
+- **G31: Conexiones temporales ocultas**
+- **G32: Evitar la arbitrariedad**
+- **G33: Encapsular condiciones de límite**
+- **G34: Las funciones sólo deben descender un nivel de abstracción**
+- **G35: Mantener los datos configurables en los niveles superiores**
+- **G36: Evitar desplazamientos transitivos**
+
+----
+
+### 17. Smells: Java:
+- **J1: Evitar extensas listas de importación mediante el uso de comodines**
+- **J2: No heredar constantes**
+- **J3: Constantes frente a enumeraciones**
+
+----
+
+### 17. Smells: Nombres:
+- **N1: Elegir nombres descriptivos**
+- **N2: Elegir nombres en el nivel correcto de abstracción**
+- **N3: Usar nomenclatura estándar siempre que sea posible**
+- **N4: Nombres inequívocos**
+- **N5: Usar nombres extensos para ámbitos extensos**
+- **N6: Evitar codificaciones**
+- **N7: Los nombres deben describir efectos secundarios**
+
+----
+
+### 17. Smells: Tests:
+- **T1: Pruebas insuficientes**
+- **T2: Usar una herramienta de cobertura**
+- **T3: No ignorar pruebas triviales**
+- **T4: Una prueba ignorada es una pregunta sobre una ambigüedad**
+- **T5: Probar condiciones de límite**
+- **T6: Probar de forma exhaustiva junto a los errores**
+- **T7: Los patrones de fallo son reveladores**
+- **T8: Los patrones de cobertura de pruebas pueden ser reveladores**
+- **T9: Las pruebas deben ser rápidas**
 
 ---
 
