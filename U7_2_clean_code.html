@@ -704,16 +704,68 @@ toda la información de la que depende.
 
 ### 17. Smells: General:
 - **G23: Polimorfismo antes que If/Else o Switch/Case**
+
 - **G24: Seguir las convenciones estándar**
+Este estándar debe especificar aspectos como dónde declarar variables de instancia, cómo asignar nombres a clases,
+métodos y variables, dónde añadir llaves, etc.
+
 - **G25: Sustituir números mágicos por constantes con nombre**
+Ej. el número 86 400 debe ocultarse tras la constante secondsPerDay.
+
+----
+
+### 17. Smells: General:
 - **G26: Precisión**
+En el código, la ambigüedad y las imprecisiones son el resultado de desacuerdos o de indolencia.
+
 - **G27: Estructura sobre convención**
+Aplique las decisiones de diseño con estructura y no convenciones.
+
 - **G28: Encapsular condicionales**
+La lógica booleana es difícil de entender. Extraiga funciones que expliquen el cometido de la condicional.
+Ej. ```if (shouldBeDeleted(timer))```
+es preferible a
+```if (timer.hasExpired() && !timer.isRecurrent())```
+
+----
+
+### 17. Smells: General:
 - **G29: Evitar condicionales negativas**
+Las condicionales negativas son más difíciles de entender que las positivas.
+Ej. Usar ```if (buffer.shouldCompact())```
+en lugar de ```if (!buffer.shouldNotCompact())```
+
 - **G30: Las funciones sólo deben hacer una cosa**
+Las funciones con varias secciones se deben descomponer en funciones de menor tamaño, cada una para una cosa.
+
 - **G31: Conexiones temporales ocultas**
+Las conexiones temporales suelen ser necesarias pero no debe ocultar la conexión.
+
+----
+
+### 17. Smells: General:
 - **G32: Evitar la arbitrariedad**
+Si la estructura parece arbitraria, otros se verán con derecho a modificarla.
+Si la estructura parece coherente en la totalidad del sistema, otros la usarán y conservarán la convención.
+
 - **G33: Encapsular condiciones de límite**
+En lugar de
+```
+if (level + 1 < tags.length){
+    parts = new Parse(body, tags, level + 1, offset + endTag);
+    body = null;}
+```
+se puede emplear
+```
+int nextLevel = level + 1;
+if(nextLevel < tags.length) {
+    parts = new Parse(body, tags, nextLevel, offset + endTag);
+    body = null;}
+```
+
+----
+
+### 17. Smells: General:
 - **G34: Las funciones sólo deben descender un nivel de abstracción**
 - **G35: Mantener los datos configurables en los niveles superiores**
 - **G36: Evitar desplazamientos transitivos**
