@@ -460,11 +460,10 @@ incorrecto.
 error en un módulo, es más fácil limpiarlo directamente.
 
 ---
-### 15. Pruebas Unitarias
-- Larefactorización es un proceso iterativo de ensayo y error, e inevitablemente
+### 15. JUnit
+- La refactorización es un proceso iterativo de ensayo y error, e inevitablemente
 converge en algo que consideramos digno de un profesional.
-- Siempre cumpla la Regla del Boy Scout. Hemos dejado este módulo más
-limpio de como lo encontramos.
+- Siempre cumpla la Regla del Boy Scout. Hemos dejado este módulo más limpio de como lo encontramos.
 
 ---
 ### 16. Refactorización
@@ -699,6 +698,7 @@ Ej. el número 86 400 debe ocultarse tras la constante secondsPerDay.
 ----
 
 ### 17. Smells: General:
+<!-- .slide: style="font-size: 0.90em" -->
 - **G26: Precisión**
 En el código, la ambigüedad y las imprecisiones son el resultado de desacuerdos o de indolencia.
 
@@ -714,6 +714,7 @@ es preferible a
 ----
 
 ### 17. Smells: General:
+<!-- .slide: style="font-size: 0.90em" -->
 - **G29: Evitar condicionales negativas**
 Las condicionales negativas son más difíciles de entender que las positivas.
 Ej. Usar ```if (buffer.shouldCompact())```
@@ -728,6 +729,7 @@ Las conexiones temporales suelen ser necesarias pero no debe ocultar la conexió
 ----
 
 ### 17. Smells: General:
+<!-- .slide: style="font-size: 0.90em" -->
 - **G32: Evitar la arbitrariedad**
 Si la estructura parece arbitraria, otros se verán con derecho a modificarla.
 Si la estructura parece coherente en la totalidad del sistema, otros la usarán y conservarán la convención.
@@ -751,13 +753,22 @@ if(nextLevel < tags.length) {
 
 ### 17. Smells: General:
 - **G34: Las funciones sólo deben descender un nivel de abstracción**
+
 - **G35: Mantener los datos configurables en los niveles superiores**
+
 - **G36: Evitar desplazamientos transitivos**
+Si A colabora con B y B con C, no queremos que los módulos que usan A sepan nada sobre C.
+Los módulos sólo deberían tener conocimiento de sus colaboradores inmediatos.
 
 ----
 
 ### 17. Smells: Java:
 - **J1: Evitar extensas listas de importación mediante el uso de comodines**
+```Java
+import package.*; 
+```
+Reducen conflictos de nombres y ambigüedades.
+
 - **J2: No heredar constantes**
 - **J3: Constantes frente a enumeraciones**
 
@@ -767,23 +778,52 @@ if(nextLevel < tags.length) {
 - **N1: Elegir nombres descriptivos**
 - **N2: Elegir nombres en el nivel correcto de abstracción**
 - **N3: Usar nomenclatura estándar siempre que sea posible**
+Los nombres son más fáciles de entender si se basan en una convención o un uso existente.
+
+----
+
+### 17. Smells: Nombres:
 - **N4: Nombres inequívocos**
+Seleccione nombres que ilustren de forma inequívoca el funcionamiento de funciones y variables.
+
 - **N5: Usar nombres extensos para ámbitos extensos**
+
+----
+
+### 17. Smells: Nombres:
 - **N6: Evitar codificaciones**
+Los nombres no deben codificarse con información de tipos o ámbitos.
+
 - **N7: Los nombres deben describir efectos secundarios**
 
 ----
 
 ### 17. Smells: Tests:
 - **T1: Pruebas insuficientes**
+Una suite de pruebas debe probar todo lo que pueda fallar. Las pruebas son insuficientes mientras haya condiciones que 
+no se hayan examinado o cálculos que no se hayan validado.
+
 - **T2: Usar una herramienta de cobertura**
 - **T3: No ignorar pruebas triviales**
+Son fáciles de redactar y su valor documental es mayor que el coste de crearlas.
+
+----
+
+### 17. Smells: Tests:
 - **T4: Una prueba ignorada es una pregunta sobre una ambigüedad**
 - **T5: Probar condiciones de límite**
 - **T6: Probar de forma exhaustiva junto a los errores**
+Los errores suelen congregarse. Si detecta un error en una función, es recomendable probarla de forma exhaustiva.
+
+----
+
+### 17. Smells: Tests:
 - **T7: Los patrones de fallo son reveladores**
+Los casos de prueba completos, si se ordenan de forma razonable, revelan patrones.
+
 - **T8: Los patrones de cobertura de pruebas pueden ser reveladores**
 - **T9: Las pruebas deben ser rápidas**
+Una prueba lenta no se ejecuta.
 
 ---
 
