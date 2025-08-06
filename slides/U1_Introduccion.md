@@ -556,6 +556,38 @@ Tareas que se deben llevar a cabo en el proceso de desarrollo:
 - Eficiencia
 - Aceptabilidad
 
+----
+
+### Ejercicios
+
+A continuación, se presentan distintas situaciones relacionadas con programas o sistemas de uso común.
+Identificar qué atributo esencial del software está en juego en cada caso.
+
+----
+
+🔍 Situaciones:
+<!-- .slide: style="font-size: 0.70em" -->
+1. Un software de facturación permite incorporar fácilmente nuevas reglas impositivas cada vez que cambia la ley.
+2. Una app de transferencias bancarias muestra errores inesperados al confirmar montos y algunas veces duplica pagos.
+3. Una página web de inscripción a becas funciona rápido y consume pocos recursos del navegador.
+4. Un sistema educativo online no se adapta bien a dispositivos móviles y muchos usuarios lo consideran difícil de usar.
+5. Un programa que gestiona turnos médicos incluye copias de seguridad automáticas y encriptación de los datos.
+6. Una empresa cambia su sistema contable y el nuevo software se adapta fácilmente a sus procesos sin necesidad de rehacer todo.
+7. Un videojuego popular recibe constantes actualizaciones para corregir errores y agregar contenido.
+8. Una app de mensajería encripta los mensajes y solo permite el acceso con doble autenticación.
+
+<!--
+N°	Atributo
+1	Mantenimiento
+2	Confiabilidad
+3	Eficiencia
+4	Aceptabilidad
+5	Seguridad
+6	Mantenimiento
+7	Mantenimiento
+8	Seguridad
+-->
+
 ---
 
 ### Detalles que afectan el desarrollo del software
