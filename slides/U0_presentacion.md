@@ -15,67 +15,180 @@ Created by <i class="fab fa-telegram"></i>
 ### Ing. Agustina Edmé Aliciardi
 edmealiciardi@gmail.com
 
----
-## UNIDADES
-
-**Unidad 1:** Procesos de Software
-
-**Unidad 2:** Ingeniería de Requerimientos
-
-**Unidad 3:** Desarrollo ágil de software
-
-**Unidad 4:** Usabilidad
-
-**Unidad 5:** Modelado de sistemas
-
-**Unidad 6:** Diseño arquitectónico
+### Ing. Franciso Ameri López Lozano
+Franameri2016@gmail.com
 
 ---
 ## UNIDADES
 
-**Unidad 7:** Diseño e implementación
+**Módulo 1:** Introducción a la Ingeniería de Software
 
-**Unidad 8:** Pruebas de software
+**Módulo 2:** Requisitos de Software
 
-**Unidad 9:** Mantenimiento y evolución
+**Módulo 3:** Análisis y Diseño de Software
 
-**Unidad 10:** Gestión de proyectos
+**Módulo 4:** Gestión de Proyectos de Software
 
-**Unidad 11:** Calidad del software
+**Módulo 5:** Aseguramiento de Calidad y Gestión de Configuración
+
+----
+
+### Resumen de Contenidos
+
+**Módulo 1: Introducción a la Ingeniería de Software**
+- Conceptos fundamentales de la ingeniería de software. 
+- Modelos de Ciclo de Vida del Software: Enfoques tradicionales y ágiles.
+
+----
+
+### Resumen de Contenidos
+
+**Módulo 2: Requisitos de Software**
+- Tipos de requisitos. 
+- Técnicas de elicitación y documentación. 
+- Introducción al análisis de necesidades del cliente.
+
+----
+
+### Resumen de Contenidos
+
+**Módulo 3: Análisis y Diseño de Software**
+- Modelado con UML: Diagramas de clases, secuencia y actividades. 
+- Herramientas y técnicas para estructurar y organizar soluciones de software.
+
+----
+
+### Resumen de Contenidos
+
+**Módulo 4: Gestión de Proyectos de Software**
+- Planificación, estimación y control de proyectos. 
+- Introducción al aseguramiento de calidad del software.
+
+----
+
+### Resumen de Contenidos
+
+**Módulo 5: Aseguramiento de Calidad y Gestión de Configuración**
+- Pruebas y validación del software. 
+- Gestión de la configuración y control de versiones.
 
 ---
-## Libro:
-![Book](images/book.png)
-“Ingeniería del Software: Un enfoque práctico 7ma ed.” de Roger Pressman
-& “Ingeniería del Software” de Ian Sommerville
+## Libros:
+![Book](images/libros/ian-sommerville.jpg)
+
+“Ingeniería del Software” de Ian Sommerville
 
 ---
+## Libros:
+![Book](images/libros/pressman-maxim.webp)
+
+“Ingeniería del Software: Un enfoque práctico” de Roger Pressman & Bruce Maxim
+
+---
+## Calendario
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Semana</th>
+      <th>Módulo</th>
+      <th>Tema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 y 2</td>
+      <td>1</td>
+      <td>Introducción a los modelos de ciclo de vida del software</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1</td>
+      <td>Análisis de enfoques tradicionales y ágiles</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>2</td>
+      <td>Identificación de tipos de requisitos</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>2</td>
+      <td>Documentación de requisitos mediante técnicas de elicitación</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>1 y 2</td>
+      <td>Primer Parcial: Modelos de ciclo de vida y requisitos</td>
+    </tr>
+  </tbody>
+</table>
+
+----
 
 ## Calendario
 
-| Semana | Unidad | Tema                                |
-|--------|--------|-------------------------------------|
-| 1      | 1      | Presentación - Procesos de Software |
-| 2      | 2      | Ingeniería de Requerimientos        |
-| 3      | 3      | Desarrollo Ágil de Software         |
-| 4      | 4      | Usabilidad                          |
-| 5      | 5      | Modelado de Sistemas                |
-| 6      | 6      | Diseño Arquitectónico               |
-| 7      |        | Dudas - Preguntas - Parcial         |
+<table border="1">
+  <thead>
+    <tr>
+      <th>Semana</th>
+      <th>Módulo</th>
+      <th>Tema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>7 y 8</td>
+      <td>3</td>
+      <td>Modelado UML: Diagramas de clases</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>3</td>
+      <td>Modelado UML: Diagramas de secuencia y actividades</td>
+    </tr>
+    <tr>
+      <td>10 y 11</td>
+      <td>4</td>
+      <td>Planificación y estimación de proyectos</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>3 y 4</td>
+      <td>Segundo Parcial: Diseño UML y planificación de proyectos</td>
+    </tr>
+  </tbody>
+</table>
 
----
+----
 
 ## Calendario
-
-| Semana | Unidad | Tema                                   |
-|--------|--------|----------------------------------------|
-| 8      | 7      | Diseño e Implementación                |
-| 9      | 8      | Pruebas de Software                    |
-| 10     | 9      | Evolución y Mantenimiento del Software |
-| 11     | 10     | Gestión de Proyectos                   |
-| 12     | 11     | Calidad del Software                   |
-| 13     |        | Dudas - Preguntas - Parcial            |
-| 14     |        | Recuperatorio - Cierre de la materia   |
+<table border="1">
+  <thead>
+    <tr>
+      <th>Semana</th>
+      <th>Módulo</th>
+      <th>Tema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>13</td>
+      <td>5</td>
+      <td>Pruebas y validación del software</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>5</td>
+      <td>Gestión de configuración y control de versiones</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>1-5</td>
+      <td>Integración de conocimientos en un proyecto final</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 ## Forma de Evaluación: Cursado
@@ -91,8 +204,8 @@ FINAL:
 
 ---
 ## Regularidad
-* Asistencia del 70% en Clases Teórico-Prácticas
-* Parciales y trabajo grupal aprobados (>=4)
+* Asistencia del 75% en Clases Teórico-Prácticas
+* Parciales y trabajo grupal aprobados (>=4) con promedio de calificación no inferior a 6.
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?

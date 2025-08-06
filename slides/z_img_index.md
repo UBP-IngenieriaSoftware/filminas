@@ -19,12 +19,6 @@ Created by <i class="fab fa-telegram"></i>
 ![Icono](images/indice/u3_icono.png)
 ![Icono](images/indice/u4_icono.png)
 ![Icono](images/indice/u5_icono.png)
-![Icono](images/indice/u6_icono.png)
-![Icono](images/indice/u7_icono.png)
-![Icono](images/indice/u8_icono.png)
-![Icono](images/indice/u9_icono.png)
-![Icono](images/indice/u10_icono.png)
-![Icono](images/indice/u11_icono.png)
 ![Icono](images/indice/ejercicios.png)
 ![Icono](images/ingenieria-soft.png)
 
