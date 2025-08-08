@@ -81,6 +81,12 @@ El sistema se ensambla a partir de componentes existentes. Puede ser el dirigido
 **En la práctica, la mayoría de los grandes sistemas se desarrollan mediante un proceso que incorpora elementos de todos estos modelos.**
 
 ---
+
+### Metodologías de Desarrollo de Software
+
+![Metodologías de Desarrollo de Software](images/unidad2/metodologias.png)
+
+---
 ### Modelo de Cascada
 ![Modelo Cascada](images/unidad2/modelo-cascada.jpg)
 
@@ -117,14 +123,39 @@ sistema se desarrolla en varios lugares. En estas circunstancias el modelo de ca
 
 Piense que proyectos podrían desarrollarse empleando el **modelo de cascada**.
 
+----
+
+### Ejercicio
+
+<!-- .slide: style="font-size: 0.80em" -->
+Diseñar una aplicación simple (ej: una calculadora, gestor de tareas o agenda de contactos) siguiendo todas las fases del modelo Waterfall.
+
+Fases:
+1. **Requerimientos:** Levantar requisitos funcionales y no funcionales.
+2. **Diseño:** Hacer diagramas de arquitectura, clases o flujo.
+3. **Implementación:** Programar el sistema según el diseño.
+4. **Pruebas:** Crear y ejecutar pruebas unitarias y de integración.
+5. **Despliegue simulado:** Documentar cómo se haría el despliegue.
+6. **Mantenimiento (opcional):** Proponer cómo se manejarían cambios.
+
+🔁 Reflexión final: Analizar qué pasó si un error apareció en implementación, ¿a qué fase hubiera sido necesario volver?
+
 ---
 ### Desarrollo incremental
 Especificación, desarrollo y validación se intercalan.
+
+Se aplica este tipo de modelo cuando los requerimientos están razonablemente claros desde el principio.
 
 ----
 
 ### El desarrollo incremental
 ![Desarrollo Incremental](images/unidad2/desarrollo-incremental.jpg)
+
+----
+
+### El desarrollo incremental
+
+![Desarrollo Incremental](images/unidad2/desarrollo-incremental2.png)
 
 ----
 
@@ -149,6 +180,87 @@ Se gasta menos tiempo y dinero en la refactorización para mejorar el software, 
 
 ---
 
+### Ejercicio: ¿Ágil o por plan?
+
+Evalua los siguientes escenarios y evalúa si conviene emplear un modelo: ágil, por plan, o híbrido?
+(Justifica con 2 o + razones).
+
+
+**Escenario 1: Software médico**
+Una empresa desarrolla un sistema que controla la dosis de insulina de una bomba automática. Debe pasar auditorías de calidad, cumplir normativas sanitarias y garantizar cero errores.
+
+----
+
+**Escenario 2: App para una startup**
+Un equipo de 4 personas lanza una nueva app para compartir recetas en comunidad. Quieren salir al mercado rápidamente y validar con usuarios reales antes de invertir más.
+
+**Escenario 3: Sistema bancario de backend**
+Se va a reemplazar el sistema de liquidación de sueldos y cuentas corrientes de un banco nacional. El nuevo sistema debe integrarse con los existentes y cumplir requisitos legales estrictos.
+
+----
+
+**Escenario 4: Plataforma educativa online**
+Una universidad quiere desarrollar su propia plataforma de clases virtuales. Saben lo básico que quieren, pero esperan hacer muchos ajustes según la experiencia del alumnado y el equipo docente.
+
+**Escenario 5: Aplicación para automatizar invernaderos**
+Una empresa agroindustrial quiere monitorear temperatura y riego con sensores en tiempo real. No hay una solución previa, pero quieren ver resultados rápidos en campo.
+
+<!--
+| Escenario                             | Enfoque Recomendado | Justificación Principal                                     |
+|---------------------------------------|----------------------|--------------------------------------------------------------|
+| **1. Software médico**                | Por plan             | Riesgo alto, normativa estricta, necesidad de trazabilidad. |
+| **2. App de recetas para startup**    | Ágil                 | Cambios frecuentes, MVP, feedback de usuarios constante.     |
+| **3. Backend bancario**               | Por plan o híbrido   | Integración crítica, cumplimiento legal, alto riesgo.        |
+| **4. Plataforma educativa**           | Ágil o híbrido       | Requisitos adaptables, experiencia del usuario evolutiva.    |
+| **5. Automatización de invernaderos** | Ágil                 | Pruebas en campo, prototipado, necesidad de ajustes rápidos. |
+-->
+
+----
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th>Criterio</th>
+      <th>Ágil</th>
+      <th>Por Plan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nivel de incertidumbre</td>
+      <td>Alto</td>
+      <td>Bajo</td>
+    </tr>
+    <tr>
+      <td>Cambios frecuentes esperados</td>
+      <td>Sí</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Necesidad de cumplir normativas</td>
+      <td>No obligatorio</td>
+      <td>Crítica</td>
+    </tr>
+    <tr>
+      <td>Tamaño y distribución del equipo</td>
+      <td>Pequeño, flexible</td>
+      <td>Grande, estructurado</td>
+    </tr>
+    <tr>
+      <td>Presupuesto fijo</td>
+      <td>No necesariamente</td>
+      <td>Sí</td>
+    </tr>
+    <tr>
+      <td>Riesgo del error</td>
+      <td>Bajo o moderado</td>
+      <td>Alto</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
 ### Ingeniería de software orientado a Reutilización
 <!-- .slide: style="font-size: 0.90em" -->
 Se basa en la reutilización sistemática de código, los sistemas se integran a partir de componentes o sistemas existentes.
@@ -165,15 +277,126 @@ La reutilización es ahora el enfoque estándar para la construcción de muchos 
 ----
 
 ### Ingeniería de software orientado a Reutilización
-![Software Orientado a Reutilización](images/unidad2/software-reutilizacion.jpg)
+
+El modelo se basa en la reutilización sistemática de código, en integrar componentes o sistemas pre-existentes.
+
+En este modelo se distinguen las siguientes etapas:
+1. Análisis de requerimientos
+2. Análisi de los componentes
+3. Modificación de requerimientos
+4. Configuración del sistema con la reutilización
+5. Desarrollo e integración
 
 ----
 
-### Tipos de componentes de software
+### Ingeniería de software orientado a Reutilización
+![Software Orientado a Reutilización](images/unidad2/software-reutilizacion.jpg)
 
-* Los servicios Web que se desarrollan de acuerdo a los estándares de servicio y que están disponibles para la invocación remota.
-* Colecciones de objetos que se desarrollan como un paquete para ser integrado con un marco de componentes tales como .NET o J2EE.
-* Sistemas autónomos de software (COTS) que están configurados para su uso en un entorno particular.
+---
+
+### Modelo Evolutivo
+<!-- .slide: style="font-size: 0.90em" -->
+El modelo se construye mediante una serie de **prototipos**, que se van refinando y evolucionando con el tiempo.
+Permite al cliente explorar requisitos poco claros o cambiantes. Se parte con una versión básica y se mejora a partir del feedback del usuario.
+
+En este modelo se distinguen las siguientes fases:
+1. Desarrollo de un prototipo inicial
+2. Retroalimentación del usuario
+3. Refinamiento del prototipo
+4. Se repite el ciclo hasta llegar al producto final.
+
+Generalmente se aplica este tipo de modelo cuando los requerimientos no están bien definidos desde el principio.
+
+---
+
+### Iteración de los procesos
+
+Enfoque donde cada etapa o ciclo se repite para refinar y mejorar un producto o proyecto.
+
+- **Entrega incremental:** se divide el proyecto en etapas que se van entregando gradualmente.
+- **Desarrollo en espiral:** se utilizan ciclos de planificación, diseño desarrollo, prueba y evaluación para gestionar los riesgos y las complejidades del proyecto.
+
+----
+
+#### Desarrollo incremental
+
+- Se divide el proyecto en partes más pequeñas y manejables, llamadas incrementos.
+- Cada incremento se entrega a los usuarios para su evaluación y retroalimentación.
+- Se utiliza la retroalimentación para mejorar el producto en cada iteración, añadiendo funcionalidades o corrigiendo errores.
+- Permite adaptarse a los cambios en los requisitos o las necesidades del cliente.
+
+---
+### Entrega incremental
+* En lugar de entregar el sistema en una sola vez, el desarrollo y la entrega se desglosan en incrementos, con cada incremento se entrega de parte de la funcionalidad requerida.
+* Requisitos de usuario se priorizan y se incluyen los requisitos de más alta prioridad en incrementos tempranos.
+* Una vez que se inicia el desarrollo de un incremento, los requisitos están congelados, aunque los requisitos para incrementos posteriores pueden seguir evolucionando.
+
+---
+
+### El desarrollo incremental y la entrega
+<!-- .slide: style="font-size: 0.72em" -->
+* El desarrollo incremental
+  * Desarrollar el sistema en incrementos y evaluar cada incremento antes de continuar con el desarrollo del siguiente incremento;
+  * Aproximación normal utilizado en los métodos ágiles;
+  * La evaluación puede ser hecha por el usuario / cliente.
+
+* Entrega incremental
+  * Implementar un incremento para su uso por los usuarios finales;
+  * Una evaluación más realista sobre el uso práctico del software;
+  * Difícil de implementar para el caso de sustitución de sistemas existentes, los incrementos tienen menos funcionalidad que el sistema está reemplazando.
+
+----
+
+### Entrega Incremental
+![Entrega Incremental](images/unidad2/entrega-incremental.jpg)
+
+----
+
+### Ventajas entrega incremental
+* El sistema está disponible antes, con cada entrega se agrega funcionalidad al sistema.
+* Las primeras entregas actúan como un prototipo, esto es útil para el esclarecimiento de requisitos para incrementos posteriores.
+* Menor riesgo de fracaso del proyecto en general.
+* Los servicios de mayor prioridad se entregan antes y tienden a recibir la mayor cantidad de pruebas.
+
+----
+
+### Problemas de entrega incremental
+<!-- .slide: style="font-size: 0.90em" -->
+La mayoría de los sistemas requieren un conjunto de servicios básicos que se utilizan por diferentes partes del sistema.
+Dado que los requisitos no están definidos en detalle hasta que se llegue al  incremento de su ejecución, puede ser difícil identificar las funcionalidades comunes que son necesarias para todos los incrementos.
+
+La esencia de los procesos iterativos es que la especificación se desarrolla en conjunto con el software.
+Sin embargo, esto entra en conflicto con el modelo de adquisición de muchas organizaciones, donde la especificación 
+completa del sistema es parte del contrato de desarrollo del sistema.
+
+---
+
+### Desarrollo en Espiral
+
+Cada ciclo en espiral se divide en 4 sectores:
+1. Establecimiento de objetivos
+2. Valoración y reducción del riesgo
+3. Desarrollo y validación
+4. Planeación
+
+----
+
+### Desarrollo en Espiral
+<!-- .slide: style="font-size: 0.90em" -->
+El proceso de desarrollo se organiza en ciclos o bucles que repiten las fases de planificación, diseño, desarrollo, prueba y evaluación.
+
+Se enfoca en la identificación y gestión de riesgos en cada ciclo, permitiendo tomar decisiones informadas y mitigar los riesgos potenciales.
+
+Permite adaptarse a cambios y modificaciones durante el desarrollo del proyecto.
+
+Facilita la incorporación de nuevas funcionalidades o mejoras en cada iteración, basándose en la experiencia y la retroalimentación de los usuarios.
+
+
+----
+
+### Desarrollo en Espiral
+
+![Modelo Espiral de Boehm](images/unidad2/modelo-espiral-boehm.png)
 
 ---
 ### Actividades de proceso
@@ -333,48 +556,6 @@ Los prototipos deben desecharse ya que no son una buena base para un sistema de 
 [Adobe XD](https://xd.adobe.com/view/79dd4690-1c36-4223-9d53-c4d50d2463c9-2c8e/)
 
 [Nivel de Detalle](https://www.figma.com/proto/h5wKQ7FzejsrPIlw9MTKEx/Tienda-Claro---Desktop-%2B-Mobile?node-id=2265-1936&scaling=contain&page-id=0%3A1&starting-point-node-id=2265%3A1936)
-
----
-### Entrega incremental
-* En lugar de entregar el sistema en una sola vez, el desarrollo y la entrega se desglosan en incrementos, con cada 
-incremento se entrega de parte de la funcionalidad requerida.
-* Requisitos de usuario se priorizan y se incluyen los requisitos de más alta prioridad en incrementos tempranos.
-* Una vez que se inicia el desarrollo de un incremento, los requisitos están congelados, aunque los requisitos para 
-incrementos posteriores pueden seguir evolucionando.
-
----
-### El desarrollo incremental y la entrega
-<!-- .slide: style="font-size: 0.72em" -->
-* El desarrollo incremental
-  * Desarrollar el sistema en incrementos y evaluar cada incremento antes de continuar con el desarrollo del siguiente incremento;
-  * Aproximación normal utilizado en los métodos ágiles;
-  * La evaluación puede ser hecha por el usuario / cliente.
-
-* Entrega incremental
-  * Implementar un incremento para su uso por los usuarios finales;
-  * Una evaluación más realista sobre el uso práctico del software;
-  * Difícil de implementar para el caso de sustitución de sistemas existentes, los incrementos tienen menos funcionalidad que el sistema está reemplazando.
-
----
-### Entrega Incremental
-![Entrega Incremental](images/unidad2/entrega-incremental.jpg)
-
----
-### Ventajas entrega incremental
-* El sistema está disponible antes, con cada entrega se agrega funcionalidad al sistema.
-* Las primeras entregas actúan como un prototipo, esto es útil para el esclarecimiento de requisitos para incrementos posteriores.
-* Menor riesgo de fracaso del proyecto en general.
-* Los servicios de mayor prioridad se entregan antes y tienden a recibir la mayor cantidad de pruebas.
-
----
-### Problemas de entrega incremental
-<!-- .slide: style="font-size: 0.90em" -->
-La mayoría de los sistemas requieren un conjunto de servicios básicos que se utilizan por diferentes partes del sistema.
-Dado que los requisitos no están definidos en detalle hasta que se llegue al  incremento de su ejecución, puede ser difícil identificar las funcionalidades comunes que son necesarias para todos los incrementos.
-
-La esencia de los procesos iterativos es que la especificación se desarrolla en conjunto con el software.
-Sin embargo, esto entra en conflicto con el modelo de adquisición de muchas organizaciones, donde la especificación 
-completa del sistema es parte del contrato de desarrollo del sistema.
 
 ---
 ### Actividades a realizar en grupo
