@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="359.09375"
+   height="193.9375"
+   id="svg6230"
+   sodipodi:version="0.32"
+   inkscape:version="0.45"
+   sodipodi:docbase="/home/asereje/wikipedia/graficos/Blenhiem"
+   sodipodi:docname="ModeloEspiral.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   sodipodi:modified="true"
+   version="1.0">
+  <defs
+     id="defs6232" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.6936441"
+     inkscape:cx="208.57143"
+     inkscape:cy="31.428571"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1278"
+     inkscape:window-height="767"
+     inkscape:window-x="0"
+     inkscape:window-y="0" />
+  <metadata
+     id="metadata6235">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-140.40625,-452.34375)">
+    <path
+       style="opacity:1;fill:#b96aa0;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 313.15625,550.8125 L 140.90625,550.8125 L 140.90625,645.78125 L 313.15625,645.78125 L 313.15625,550.8125 z "
+       id="path6465" />
+    <path
+       style="opacity:1;fill:#b9ae6a;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 313.15625,550.8125 L 313.15625,645.78125 L 499,645.78125 L 499,550.8125 L 313.15625,550.8125 z "
+       id="path6457" />
+    <path
+       style="opacity:1;fill:#6a6ab9;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 313.15625,452.84375 L 140.90625,452.84375 L 140.90625,550.8125 L 313.15625,550.8125 L 313.15625,452.84375 z "
+       id="path6462" />
+    <path
+       style="opacity:1;fill:#6ab96b;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 313.15625,452.84375 L 313.15625,550.8125 L 499,550.8125 L 499,452.84375 L 313.15625,452.84375 z "
+       id="rect6454" />
+    <path
+       sodipodi:type="spiral"
+       style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path6432"
+       sodipodi:cx="311.63205"
+       sodipodi:cy="549.81128"
+       sodipodi:expansion="1"
+       sodipodi:revolution="4.2031398"
+       sodipodi:radius="92.729889"
+       sodipodi:argument="-17.00046"
+       sodipodi:t0="0"
+       d="M 311.63205,549.81128 C 310.7204,553.00207 306.88115,550.15661 306.32875,548.29605 C 304.83178,543.25405 310.17995,539.33861 314.66251,539.20468 C 322.68075,538.96512 328.05711,546.92371 327.54194,554.35697 C 326.78591,565.26558 315.91824,572.27704 305.57113,571.02447 C 291.78006,569.35499 283.09056,555.48506 285.11556,542.23513 C 287.66382,525.56145 304.57544,515.17647 320.72343,517.99149 C 340.2808,521.40086 352.37027,541.37443 348.75513,560.41788 C 344.49482,582.85994 321.44755,596.65923 299.51021,592.23766 C 274.18269,587.13278 258.67015,561.00437 263.90237,536.17422 C 269.84755,507.96062 299.06213,490.73248 326.78434,496.7783 C 357.88448,503.5608 376.82989,535.86507 369.96832,566.4788 C 362.35068,600.46584 326.95412,621.12978 293.4493,613.45085 C 256.57507,604.99968 234.19165,566.50889 242.68918,530.1133 C 251.97262,490.35165 293.55916,466.24801 332.84526,475.56511 C 375.49452,485.67983 401.31897,530.36332 391.18151,572.53972 C 380.23629,618.07674 332.45491,645.62248 287.38838,634.66404 C 248.97651,625.32375 221.03704,590.59547 218.91423,551.30709" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="374.89612"
+       y="481.12091"
+       id="text6438"><tspan
+         sodipodi:role="line"
+         id="tspan6440"
+         x="374.89612"
+         y="481.12091">Análisis del riesgo</tspan></text>
+    <text
+       id="text6442"
+       y="630.82269"
+       x="368.1637"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="630.82269"
+         x="368.1637"
+         id="tspan6444"
+         sodipodi:role="line">Desarrollar y probar</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="142.43152"
+       y="481.12091"
+       id="text6446"><tspan
+         sodipodi:role="line"
+         id="tspan6448"
+         x="142.43152"
+         y="481.12091">Determinar objetivos</tspan></text>
+    <text
+       id="text6450"
+       y="633.14886"
+       x="168.31531"
+       style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="633.14886"
+         x="168.31531"
+         id="tspan6452"
+         sodipodi:role="line">Planificación</tspan></text>
+  </g>
+</svg>
