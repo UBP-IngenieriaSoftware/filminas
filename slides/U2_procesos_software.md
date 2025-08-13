@@ -730,8 +730,8 @@ Los prototipos deben desecharse ya que no son una buena base para un sistema de 
 
 ---
 ### Actividades a realizar en grupo
-En grupos de máximo 3 personas deberán investigar las siguientes metodologías, generar un informe/ppt y presentar la investigación al curso (fecha 22/08)
-
+En grupos de máximo 3 personas deberán investigar UNA de las siguientes metodologías, generar una presentación BREVE y mostrarla al curso (fecha 22/08)
+<!-- .slide: style="font-size: 0.75em" -->
 1. CLEANROOM SOFTWARE ENGINEERING
 2. KANBAN
 3. ADAPTIVE SOFTWARE DEVELOPMENT
@@ -739,6 +739,31 @@ En grupos de máximo 3 personas deberán investigar las siguientes metodologías
 5. LEAN SOFTWARE DEVELOPMENT (LSD)
 6. FEATURE DRIVEN DEVELOPMENT
 7. DEVOPS
+8. Disciplined Agile Delivery (DAD)
+9. Scrumban
+
+----
+
+### Actividades a realizar en grupo
+10. Dynamic Systems Development Method (DSDM)
+11. Agile Unified Process (AUP)
+12. SAFe (Scaled Agile Framework)
+13. Large-Scale Scrum (LeSS)
+14. Nexus
+15. Agile Modeling (AM)
+16. OpenUP (Open Unified Process)
+17. Dual-Track Agile
+18. Rapid Application Development (RAD)
+
+----
+
+### Actividades a realizar en grupo
+La presentación debe incluir:
+* En que consiste o hace foco
+* Quién lo desarrolló y porqué
+* Ventajas y Desventajas de Aplicarlo
+* Ejemplo de aplicación real o caso hipotético breve.
+* Máximo 10min por grupo!!!
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
