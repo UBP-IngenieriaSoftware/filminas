@@ -33,6 +33,12 @@ Created by <i class="fab fa-telegram"></i>
     padding: 20px;
     text-align: left !important;
 }
+
+.exercise-slide {
+  border: 2px dashed #b58900;
+  border-radius: 12px;
+  padding: 20px;
+}
 </style>
 ## Temario
 <div class="grid-item">
@@ -356,6 +362,12 @@ Generalmente se aplica este tipo de modelo cuando los requerimientos no están b
 
 ----
 
+### Modelo Evolutivo: Prototipado
+
+![Paradigma de Prototipos(Pressman)](images/unidad2/prototipado.png)
+
+----
+
 ### Ejercicio: Modelo Evolutivo
 
 Supongamos que se desea desarrollar un software para la **gestión de tareas**.
@@ -373,37 +385,84 @@ Enfoque donde cada etapa o ciclo se repite para refinar y mejorar un producto o 
 
 ----
 
-#### Desarrollo incremental
+## Desarrollo Incremental y Entrega incremental NO son lo mismo
 
-- Se divide el proyecto en partes más pequeñas y manejables, llamadas incrementos.
-- Cada incremento se entrega a los usuarios para su evaluación y retroalimentación.
-- Se utiliza la retroalimentación para mejorar el producto en cada iteración, añadiendo funcionalidades o corrigiendo errores.
-- Permite adaptarse a los cambios en los requisitos o las necesidades del cliente.
+----
 
----
 ### Entrega incremental
-* En lugar de entregar el sistema en una sola vez, el desarrollo y la entrega se desglosan en incrementos, con cada incremento se entrega de parte de la funcionalidad requerida.
-* Requisitos de usuario se priorizan y se incluyen los requisitos de más alta prioridad en incrementos tempranos.
-* Una vez que se inicia el desarrollo de un incremento, los requisitos están congelados, aunque los requisitos para incrementos posteriores pueden seguir evolucionando.
+<!-- .slide: style="font-size: 0.80em" -->
+Enfoque en cómo se **libera el producto al usuario**
 
----
+*Qué significa:* El producto se entrega por partes (incrementos) que ya funcionan por sí solas y aportan valor al usuario.
 
-### El desarrollo incremental y la entrega
-<!-- .slide: style="font-size: 0.72em" -->
-* El desarrollo incremental
-  * Desarrollar el sistema en incrementos y evaluar cada incremento antes de continuar con el desarrollo del siguiente incremento;
-  * Aproximación normal utilizado en los métodos ágiles;
-  * La evaluación puede ser hecha por el usuario / cliente.
+*Cuándo ocurre:* Después de que un incremento está desarrollado, probado y listo, se libera para su uso.
 
-* Entrega incremental
-  * Implementar un incremento para su uso por los usuarios finales;
-  * Una evaluación más realista sobre el uso práctico del software;
-  * Difícil de implementar para el caso de sustitución de sistemas existentes, los incrementos tienen menos funcionalidad que el sistema está reemplazando.
+*Objetivo:* Entregar valor lo antes posible y permitir retroalimentación temprana.
+
+Ejemplo:
+- Sprint 1: se libera el módulo de registro de usuarios.
+- Sprint 2: se libera la gestión de perfiles.
+- Sprint 3: se libera el sistema de pagos.
+
+Cada entrega es usable por el usuario final.
 
 ----
 
 ### Entrega Incremental
 ![Entrega Incremental](images/unidad2/entrega-incremental.jpg)
+
+----
+
+### Desarrollo incremental
+<!-- .slide: style="font-size: 0.70em" -->
+Enfoque en cómo se **construye el producto** internamente
+
+*Qué significa:* El producto se desarrolla en pequeños incrementos funcionales, pero no necesariamente se entregan al usuario inmediatamente.
+
+*Cuándo ocurre:* Durante el proceso de construcción, cada incremento es una mejora sobre el anterior, aunque pueda ser interno o no visible para el cliente.
+
+*Objetivo:* Dividir el trabajo en piezas manejables y reducir riesgos técnicos.
+
+Ejemplo:
+- Iteración 1: crear la base de datos y API para registrar usuarios (sin interfaz).
+- Iteración 2: añadir la interfaz gráfica del registro.
+- Iteración 3: integrar validaciones y pruebas.
+
+Aquí quizás recién se entrega al usuario al final, cuando todo está integrado.
+
+----
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Aspecto</th>
+      <th>Entrega incremental</th>
+      <th>Desarrollo incremental</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Foco</td>
+      <td>Poner funcionalidad en manos del usuario cuanto antes</td>
+      <td>Construir el producto en partes pequeñas y manejables</td>
+    </tr>
+    <tr>
+      <td>Visibilidad para el cliente</td>
+      <td>Alta: cada incremento es útil y visible</td>
+      <td>Variable: puede ser interno y no visible</td>
+    </tr>
+    <tr>
+      <td>Momento de uso</td>
+      <td>Inmediato tras la entrega</td>
+      <td>Puede ser después de varias iteraciones</td>
+    </tr>
+    <tr>
+      <td>Beneficio principal</td>
+      <td>Retroalimentación temprana y valor rápido</td>
+      <td>Control técnico y reducción de riesgos</td>
+    </tr>
+  </tbody>
+</table>
 
 ----
 
@@ -427,6 +486,7 @@ completa del sistema es parte del contrato de desarrollo del sistema.
 ---
 
 ### Desarrollo en Espiral
+<!-- .slide: data-background="images/unidad2/ModeloEspiral.svg" style="color: white;font-weight: bold;" -->
 
 Cada ciclo en espiral se divide en 4 sectores:
 1. Establecimiento de objetivos
@@ -454,15 +514,60 @@ Facilita la incorporación de nuevas funcionalidades o mejoras en cada iteració
 ![Modelo Espiral de Boehm](images/unidad2/modelo-espiral-boehm.png)
 
 ---
-### Actividades de proceso
-* Procesos de software reales son *secuencias* intercalados de actividades técnicas, de colaboración y de gestión con el 
-objetivo general de la **especificación, diseño, implementación y prueba** de un sistema de software.
-* Las cuatro actividades básicas del proceso son: especificación, desarrollo, validación y evolución y están organizados 
-de manera diferente según el proceso de desarrollo. En el modelo de cascada, se organizan en secuencia, mientras que en 
-el desarrollo incremental son intercalados.
+
+### 💡 Ejercicio: Entrega Incremental
+<!-- .slide: class="exercise-slide" -->
+Supongamos que se desea desarrollar una **aplicación de lista de compras** empleando el enfoque de
+**Entrega incremental**. ¿Qué funcionalidades incluirías en cada incremento?
+
+* Incremento 1: 
+* Incremento 2:
+* Incremento 3:
+
+<!--Ejemplo:
+Incremento 1: Crear listas y agregar ítems.
+Incremento 2: Marcar ítems como comprados.
+Incremento 3: Compartir la lista con otros usuarios.
+-->
+
+Recuerda que en cada entrega, la funcionalidad debe ser usable y visible para el usuario final.
 
 ---
-### Especificaciones de Software
+
+### 💡 Ejercicio: Desarrollo en Espiral
+<!-- .slide: class="exercise-slide" -->
+Supongamos que se desea desarrollar una **aplicación de lista de compras** empleando el enfoque de
+**Desarrollo en Espiral**.
+
+Para cada iteración del espiral (ciclo), definir:
+1. Objetivos (qué se quiere lograr en esa iteración).
+2. Análisis de riesgos (qué podría salir mal).
+3. Desarrollo (qué se construirá).
+4. Evaluación (cómo se probará y evaluará).
+
+<!--Ejemplo:
+Iteración 1: Prototipo básico solo con creación de listas → Riesgo: interfaz poco intuitiva → Solución: prueba rápida con usuarios.
+Iteración 2: Agregar función de marcar ítems → Riesgo: pérdida de datos → Solución: implementar guardado automático.
+-->
+
+---
+### Actividades de proceso
+
+Procesos de software reales son *secuencias* intercalados de actividades técnicas, de colaboración y de gestión con el objetivo general de la **especificación, diseño, implementación y prueba** de un sistema de software.
+
+---
+### Actividades de proceso
+Las cuatro actividades básicas del proceso son: 
+1. Especificación de requerimientos
+2. Diseño e implementación
+3. Validación
+4. Evolución
+
+Estas activudades están organizadas de manera diferente según el proceso de desarrollo. 
+En el modelo de **cascada**, se organizan en **secuencia**, mientras que en el **desarrollo incremental** son **intercalados**.
+
+---
+#### Actividad 1: Especificaciones de Requerimientos
 <!-- .slide: style="font-size: 0.80em" -->
 El proceso de establecer qué servicios son necesarios y las limitaciones de funcionamiento y desarrollo del sistema.
 
@@ -476,12 +581,13 @@ Definición de los requisitos en detalle
 * Validación de Requerimientos <br>
 Comprobación de la validez de los requisitos
 
----
+----
+
 ### El proceso de ingeniería de requerimientos
 ![Ingenieria de Requerimientos](images/unidad2/ingenieria-requerimientos.jpg)
 
 ---
-### Diseño de software y la implementación
+#### Actividad 2: Diseño e implementación
 * Proceso de conversión entre la especificación del sistema en un sistema ejecutable.
 
 * El diseño de software  <br>
@@ -492,11 +598,13 @@ Traducir esta estructura en un programa ejecutable;
 
 * Las actividades de diseño e implementación están estrechamente relacionados y pueden ser intercaladas.
 
----
-### Un modelo general del proceso de diseño
+----
+
+### Modelo general del proceso de diseño
 ![Diseño de Software](images/unidad2/disenio-software.jpg)
 
----
+----
+
 ### Actividades de Diseño
 <!-- .slide: style="font-size: 0.90em" -->
 * **Diseño arquitectónico**, donde se identifica la estructura general del sistema, los componentes principales (a veces llamados subsistemas o módulos), sus relaciones y la forma en que se distribuyen.
@@ -505,8 +613,8 @@ Traducir esta estructura en un programa ejecutable;
 * **Diseño de base de datos**, donde se diseña la estructura de datos del sistema y de cómo éstos han de estar representados en una base de datos.
 
 ---
-### Validación del Software
-* **Verificación y validación** (V & V) está destinado a demostrar que un sistema cumple con su especificación y cumple con los requisitos del cliente.
+### Actividad 3: Validación del Software
+**Verificación y validación** (V & V) está destinado a demostrar que un sistema cumple con su especificación y cumple con los requisitos del cliente.
 
 Involucra procesos de control, revisión y prueba del sistema.
 
@@ -514,7 +622,8 @@ Las pruebas del sistema implica ejecutar el sistema con casos de prueba que se d
 
 La prueba es la actividad de V & V más utilizada.
 
----
+----
+
 ### Etapas de la prueba
 ![Etapas de la prueba](images/unidad2/etapas-de-pruebas.jpg)
 
@@ -532,20 +641,40 @@ Pruebas del sistema como un todo. El ensayo de las propiedades emergentes es par
 * **Las pruebas de aceptación** <br>
 Las pruebas realizadas por el cliente para verificar que el sistema cumple con sus necesidades.
 
----
+----
+
 ### Fases de prueba en un proceso de software
 ![Fases de pruebas](images/unidad2/validacion-de-software.jpg)
 
 ---
-### La evolución del software
+#### Actividad 4: Evolución
 * El software es inherentemente flexible y puede cambiar.
 * Las circunstancias cambiantes de negocios hacen que el software que soporta la empresa también deba evolucionar y cambiar.
 * Si bien se habla de desarrollo y evolución (mantenimiento) como etapas diferentes, la diferencia es cada vez más 
 irrelevante, cada vez son menos los sistemas completamente nuevos.
 
----
+----
+
 ### Evolución del Sistema
 ![Evolución del Sistema](images/unidad2/evolucion-de-software.jpg)
+
+---
+
+### 💡 Ejercicio: Actividades del Proceso
+<!-- .slide: class="exercise-slide" -->
+<!-- .slide: style="font-size: 0.90em" -->
+
+- Hablar con el cliente para entender sus necesidades	<!--Especificación de requerimientos-->
+- Definir la arquitectura del sistema	<!--Diseño e implementación-->
+- Corregir un bug reportado por un usuario después del lanzamiento	<!--Evolución-->
+- Ejecutar pruebas unitarias	<!--Validación-->
+- Escribir casos de prueba para un módulo	<!--Validación-->
+- Integrar los distintos módulos del sistema	<!--Diseño e implementación-->
+- Hacer un prototipo para validar una idea con el cliente	<!--Especificación de requerimientos-->
+- Desarrollar la base de datos	<!--Diseño e implementación-->
+- Añadir una nueva funcionalidad solicitada por el usuario	<!--Evolución-->
+- Revisar el documento de requisitos con el cliente	<!--Especificación de requerimientos-->
+- Modificar el flujo de registro <!--Evolución si es post-lanzamiento o Diseño e implementación si es previo-->
 
 ---
 ### El problema del cambio
@@ -577,7 +706,8 @@ Un prototipo se puede utilizar en:
 * En los procesos de diseño para explorar opciones y desarrollar un diseño de interfaz de usuario;
 * En el proceso de pruebas.
 
----
+----
+
 ### Beneficios del prototipado
 * Mejora de la usabilidad del sistema.
 * Una aproximación más exacta a las necesidades reales de los usuarios.
@@ -585,17 +715,20 @@ Un prototipo se puede utilizar en:
 * Mejora de la capacidad de mantenimiento.
 * Reduce del esfuerzo de desarrollo.
 
----
+----
+
 ### El proceso de desarrollo de prototipos
 ![Proceso de prototipado](images/unidad2/desarrollo-de-prototipos.jpg)
 
----
+----
+
 ### Desarrollo de prototipos
 * Prototipo debe centrarse en las áreas del producto que no se conocen bien
 * La comprobación de errores y recuperación pueden no estar incluidos en el prototipo
 * Centrarse en los requisitos funcionales y no en los  no funcionales tales como la fiabilidad y la seguridad
 
----
+----
+
 ### Prototipos desechables
 Los prototipos deben desecharse ya que no son una buena base para un sistema de producción:
 * Puede ser imposible para ajustar el sistema para cumplir con los requisitos no funcionales;
@@ -603,10 +736,9 @@ Los prototipos deben desecharse ya que no son una buena base para un sistema de 
 * La estructura del prototipo se suele degradarse a través de un cambio rápido;
 * El prototipo probablemente no va a cumplir con los estándares de calidad normal de la organización.
 
----
-### Ejemplos de Prototipos
+----
 
-[Figma - Web](https://www.figma.com/proto/8qUZMI4k0iAAX33xV3vvnZ/Carrito-M%C3%BAltiple?node-id=1655-15444&scaling=scale-down&page-id=1119%3A10172&starting-point-node-id=1655%3A15343)
+### Ejemplos de Prototipos
 
 [Adobe XD](https://xd.adobe.com/view/79dd4690-1c36-4223-9d53-c4d50d2463c9-2c8e/)
 
