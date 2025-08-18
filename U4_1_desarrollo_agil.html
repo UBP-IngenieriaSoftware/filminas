@@ -144,24 +144,24 @@ excesiva
 </thead>
 <tbody>
 <tr>
-<td>Participación del Cliente</td>
-<td>Los clientes deben intervenir estrechamente durante el proceso de desarrollo. Su función consiste en ofrecer y priorizar nuevos requerimientos del sistema y evaluar las iteraciones del mismo.</td>
+<td><strong>Participación del Cliente</strong></td>
+<td>Los clientes deben intervenir estrechamente durante el proceso de desarrollo. Su función consiste en ofrecer y <strong>priorizar</strong> nuevos requerimientos del sistema y <strong>evaluar</strong> las iteraciones del mismo.</td>
 </tr>
 <tr>
-<td>Entrega Incremental</td>
-<td>El software se desarrolla en incrementos y el cliente especifica los requerimientos que se van a incluir en cada incremento.</td>
+<td><strong>Entrega Incremental</strong></td>
+<td>El software se desarrolla en incrementos y el cliente especifica los <strong>requerimientos</strong> que se van a incluir en cada incremento.</td>
 </tr>
 <tr>
-<td>Personas, no procesos</td>
-<td>Tienen que reconocerse y aprovecharse las habilidades del equipo de desarrollo. Debe permitirse a los miembros del equipo desarrollar sus propias formas de trabajar sin procesos establecidos.</td>
+<td><strong>Personas, no procesos</strong></td>
+<td>Tienen que reconocerse y aprovecharse las habilidades del equipo de desarrollo. Debe permitirse a los miembros del equipo desarrollar sus propias <strong>formas de trabajar</strong> sin procesos establecidos.</td>
 </tr>
 <tr>
-<td>Adoptar el cambio</td>
-<td>Esperar a que cambien los requerimientos del sistema y, de este modo, diseñar el sistema para adaptar dichos cambios</td>
+<td><strong>Adoptar el cambio</strong></td>
+<td><strong>Esperar</strong> a que cambien los requerimientos del sistema y, de este modo, diseñar el sistema para adaptar dichos cambios</td>
 </tr>
 <tr>
-<td>Mantener simplicidad</td>
-<td>Enfocarse en la simpliciddad tanto en el software a desarrollar como en el proceso de desarrollo. Siempre que sea posible, trabajar de manera activa para eliminar la complejidad del sistema</td>
+<td><strong>Mantener simplicidad</strong></td>
+<td>Enfocarse en la simpliciddad tanto en el <strong>software</strong> a desarrollar como en el <strong>proceso</strong> de desarrollo. Siempre que sea posible, trabajar de manera activa para eliminar la complejidad del sistema</td>
 </tr>
 </tbody>
 </table>
@@ -228,45 +228,43 @@ De los siguientes sistema, piense que metodología se adapta mejor a su desarrol
 
 ---
 ### Cuestiones técnicas, humanas y organizacionales
-<!-- .slide: style="font-size: 0.80em" -->
+<!-- .slide: style="font-size: 0.75em" -->
 * La mayoría de los proyectos incluyen elementos del guiado por plan y procesos ágil.
 * La decisión depende de:
-  1. ¿Es importante contar con una especificación y diseño muy detallado antes de pasar a la implementación? Si es así, utilizar un enfoque guiado por plan.
-  2. ¿Puede realizarse una estrategia de entrega incremental? Si es así, considere el uso de los métodos ágiles.
-  3. ¿Qué tan grande es el sistema que se está desarrollando? Los métodos ágiles son más eficaces cuando el sistema se puede
-desarrollar con un equipo pequeño que pueda comunicarse de manera informal. Esto puede no ser posible para los grandes
-sistemas que requieren equipos de desarrollo grandes y distribuidos.
+  1. ¿Es importante contar con una **especificación y diseño muy detallado** antes de pasar a la implementación? 
+  <p class="fragment"> Si es así, utilizar un enfoque guiado por plan. </p>
+  2. ¿Puede realizarse una estrategia de **entrega incremental**? 
+  <p class="fragment"> Si es así, considere el uso de los métodos ágiles. </p>
+  3. ¿Qué tan **grande es el sistema** que se está desarrollando? 
+  <p class="fragment"> Los métodos ágiles son más eficaces cuando el sistema se puede
+desarrollar con un equipo pequeño que pueda comunicarse de manera informal. Esto puede no ser posible para los grandes sistemas que requieren equipos de desarrollo grandes y distribuidos. </p>
+
+----
+
+### Cuestiones técnicas, humanas y organizacionales
+<!-- .slide: style="font-size: 0.65em" -->
+4. ¿Qué **tipo de sistema** se está desarrollando?
+<p class="fragment"> Los enfoques guiado por plan pueden ser necesarios para los sistemas que requieren una gran cantidad de análisis antes de la aplicación (por ejemplo, sistema en tiempo real con complejos Requisitos de temporización). </p>
+5. ¿Cuál es la **expectativa de vida** del sistema?
+<p class="fragment"> Los sistemas de larga vida requieran mas documentación de diseño para comunicar las intenciones originales de los desarrolladores del sistema al equipo de soporte. </p>
+6. ¿Qué **tecnologías** están disponibles para apoyar el desarrollo del sistema?
+<p class="fragment"> Los métodos ágiles se basan en buenas herramientas para realizar un seguimiento de la evolución de un diseño </p>
+7. ¿Cómo se **organiza** el equipo de desarrollo?
+<p class="fragment"> Si el equipo de desarrollo se distribuye o si parte del desarrollo se subcontrata, entonces son necesarios los documentos de diseño para comunicar a los equipos de desarrollo. </p>
 
 ----
 
 ### Cuestiones técnicas, humanas y organizacionales
 <!-- .slide: style="font-size: 0.70em" -->
-4. ¿Qué tipo de sistema se está desarrollando?
-  * Los enfoques guiado por plan pueden ser necesarios para los sistemas que requieren una gran cantidad de análisis antes 
-de la aplicación (por ejemplo, sistema en tiempo real con complejos Requisitos de temporización).
-5. ¿Cuál es la expectativa de vida del sistema?
-  * Los sistemas de larga vida requieran mas documentación de diseño para comunicar las intenciones originales de los desarrolladores del
-sistema al equipo de soporte.
-6. ¿Qué tecnologías están disponibles para apoyar el desarrollo del sistema?
-  * Los métodos ágiles se basan en buenas herramientas para realizar un seguimiento de la evolución de un diseño
-7. ¿Cómo se organiza el equipo de desarrollo?
-  * Si el equipo de desarrollo se distribuye o si parte del desarrollo se subcontrata, entonces son necesarios los 
-documentos de diseño para comunicar a los equipos de desarrollo.
-
-----
-
-### Cuestiones técnicas, humanas y organizacionales
-<!-- .slide: style="font-size: 0.80em" -->
-8. ¿Hay cuestiones culturales o de organización que puedan afectar al desarrollo del sistema?
-  * Las organizaciones tradicionales tienen una cultura basada en el planes.
-9. ¿Qué tan buenos son los diseñadores y programadores del equipo de desarrollo?
-  * A veces se argumenta que los métodos ágiles requieren niveles más altos de capacitación que los enfoques basados en 
-planes, en el que los programadores simplemente traducen un diseño detallado en código.
-10. ¿El sistema está sujeto a regulación externa?
-  * Si un sistema tiene que ser aprobado por un regulador externo (por ejemplo, que el FAA aprueba el software crítico 
-para el funcionamiento de una aeronave) entonces se debe producir documentación detallada .
+8. ¿Hay cuestiones **culturales o de organización** que puedan afectar al desarrollo del sistema?
+<p class="fragment"> Las organizaciones tradicionales tienen una cultura basada en el planes.</p>
+9. ¿Qué tan **buenos** son los diseñadores y **programadores** del equipo de desarrollo?
+<p class="fragment"> A veces se argumenta que los métodos ágiles requieren niveles más altos de capacitación que los enfoques basados en planes, en el que los programadores simplemente traducen un diseño detallado en código. </p>
+10. ¿El sistema está sujeto a **regulación externa**?
+<p class="fragment"> Si un sistema tiene que ser aprobado por un regulador externo (por ejemplo, que el FAA aprueba el software crítico para el funcionamiento de una aeronave) entonces se debe producir documentación detallada. </p>
 
 ---
+
 ### Programación extrema
 Tal vez el más conocido y más utilizado método ágil.
 
@@ -274,6 +272,10 @@ Extreme Programming (XP) :
 * Las nuevas versiones se pueden construir varias veces al día;
 * Los incrementos se entregan a los clientes cada 2 semanas;
 * Todas las pruebas se deben ejecutar para cada iteracion y la integracion sólo se acepta si las pruebas resultan satisfactorias.
+
+---
+
+![Programacion Extrema](images/unidad4/programacion-extrema.png)
 
 ----
 
@@ -310,23 +312,23 @@ Extreme Programming (XP) :
 </thead>
 <tbody>
 <tr>
-<td>Planificación Incremental</td>
+<td><strong>Planificación Incremental</strong></td>
 <td>Los requisitos se graban en historiales y las historias son incluidas en una publicación determinada por el tiempo disponible y su prioridad relativa. Los desarrolladores rompen esta historias en el desarrollo de tareas.</td>
 </tr>
 <tr>
-<td>Incrementos pequeños</td>
+<td><strong>Incrementos pequeños</strong></td>
 <td>El mínimo conjunto útil de funcionalidad que ofrece valor al negocio es desarrollado primero. Se añaden funcionalidades frecuentes e incrementales en cada versión del sistema desde la primera vez.</td>
 </tr>
 <tr>
-<td>Diseño Simple</td>
+<td><strong>Diseño Simple</strong></td>
 <td>El diseño suficiente se lleva a cabo para satisfacer las necesidades actuales y no más.</td>
 </tr>
 <tr>
-<td>Desarrollo de las pruebas primero</td>
+<td><strong>Desarrollo de las pruebas primero</strong></td>
 <td>Un marco de pruebas unitarias automatizadas es usado para escribir pruebas para una nueva función antes de que la funcion  sea implementada.</td>
 </tr>
 <tr>
-<td>Refactorizacion</td>
+<td><strong>Refactorizacion</strong></td>
 <td>Se espera de todos los desarrolladores de reconstruir el código continuamente ni bien las mejoras se hallan. Esto mantiene el código simple y mantenible.</td>
 </tr>
 </tbody>
@@ -354,23 +356,23 @@ Extreme Programming (XP) :
 </thead>
 <tbody>
 <tr>
-<td>Programación en pares</td>
+<td><strong>Programación en pares</strong></td>
 <td>Los desarrolladores trabajan en parejas , revisando el trabajo mutuamente y dandose apoyo para hacer siempre un buen trabajo.</td>
 </tr>
 <tr>
-<td>Propiedad colectiva del código</td>
+<td><strong>Propiedad colectiva del código</strong></td>
 <td>La pareja de desarrolladores trabaja en todas las áreas del sistema, para que no queden islas de conocimiento desarrolladas y todos los desarrolladores asumen responsabilidad por todo el código. Nadie puede cambiar nada.</td>
 </tr>
 <tr>
-<td>Integración continua</td>
+<td><strong>Integración continua</strong></td>
 <td>Tan pronto como el trabajo en una tarea esta completo, es integrado en el sistema. Luego de cada integración, se corren todas las pruebas unitarias.</td>
 </tr>
 <tr>
-<td>Ritmo sostenible</td>
+<td><strong>Ritmo sostenible</strong></td>
 <td>Grandes cantidades de horas extras no se consideran aceptables como el efecto neto es a menudo para reducir la calidad del código y mediana productividad</td>
 </tr>
 <tr>
-<td>Cliente en el sitio</td>
+<td><strong>Cliente en el sitio</strong></td>
 <td>Un representante de los usuarios finales del sistema (el cliente) debe estar disponible a tiempo completo para el equipo de XP. En un proceso de programación extrema, el cliente es miembro del equipo de desarrollo y es responsable de llevar requisitos del sistema para el equipo de implementación.</td>
 </tr>
 </tbody>
@@ -459,7 +461,7 @@ tiempo y esfuerzo anticipando los cambios ya que esto reduce costos más tarde.
 <!-- .slide: style="font-size: 0.90em" -->
 * Escribir pruebas antes del código aclara los requisitos para ser implementados.
 * Las pruebas se escriben como programas en lugar de datos de manera que se pueden ejecutar de forma automática. La prueba incluye una comprobación de que se ha ejecutado correctamente.
-  * Por lo general, se basa en un marco de pruebas tales como Junit.
+  * Por lo general, se basa en un marco de pruebas tales como Junit o Jest.
 * Todas las pruebas anteriores y las nuevas se ejecutan automáticamente cuando se añade una nueva funcionalidad, comprobando así que la nueva funcionalidad no ha introducido errores.
 
 ---
@@ -543,6 +545,17 @@ colectiva para resolver estos problemas
 * Ayuda apoyando a la refactorizacion, que es un proceso de mejora de software.
   * Cuando se utiliza la programación en pares y la propiedad
 colectiva, otros se benefician inmediatamente de la refactorización de modo que es probable que apoyen el proceso.
+
+---
+
+### Ejercicio: Historias de Usuario y Estimación
+
+1. Emplear Jira para redactar historias de usuario para la app de **gestión de tareas** siguiendo el formato “Como [rol], quiero [funcionalidad] para [beneficio]”.
+Ejemplos:
+- Como usuario, quiero crear una nueva tarea, para recordar lo que tengo que hacer.
+- Como usuario, quiero marcar una tarea como completada, para llevar un control de lo que ya hice.
+
+2. Realizar una estimación empleando [poker planning](https://planningpokeronline.com/8eCdPtjVtv9hVj75aXsc/)
 
 ---
 ### Gestión de proyectos ágil
