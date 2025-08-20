@@ -766,5 +766,173 @@ La presentación debe incluir:
 * Máximo 10min por grupo!!!
 
 ---
+
+### Herramientas Case
+CASE son las siglas de "Computer-Aided Software Engineering". Las herramientas CASE son aplicaciones que ayudan a desarrollar software, automatizando tareas y mejorando la eficiencia del proceso. Facilitan tareas como el análisis, diseño, generación de código, pruebas y mantenimiento del software.
+
+---
+
+### Beneficios de las herramientas CASE
+<!-- .slide: style="font-size: 0.90em" -->
+- **Mayor eficiencia:** Al automatizar tareas repetitivas, reducen el tiempo y el esfuerzo en el desarrollo de software.
+- **Mejor calidad del software:** Permiten identificar errores y problemas de diseño de manera más temprana en el proceso de desarrollo.
+- **Mayor productividad:** Ayudan a los desarrolladores a ser más productivos, liberándose de tareas manuales, permitiéndoles concentrarse en las tareas más estratégicas. 
+- **Reducción de costos:** Al agilizar el proceso de desarrollo y mejorar la calidad del software, se reducen los costos de desarrollo y mantenimiento.
+
+---
+
+### Herramientas Case: Clasificación
+Existen muchas formas de clasificarlas teniendo en cuenta los siguientes parámetros:
+- Las plataformas que soportan.
+- Las fases del ciclo de vida del desarrollo de sistemas que cubren.
+- La arquitectura de las aplicaciones que producen.
+- Su funcionalidad.
+
+---
+
+### Clasificación por Ciclo de Vida
+- **Herramientas Upper CASE:** Se enfocan en las etapas iniciales del ciclo de vida, como el análisis y diseño. 
+- **Herramientas Lower CASE:** Se utilizan en las etapas de implementación y pruebas. 
+- **Herramientas Integrated CASE:** Abarcan todo el ciclo de vida y ofrecen funcionalidades integradas. 
+- **Herramientas I-CASE:** Son herramientas integradas que abarcan tanto las etapas frontales como las dorsales del desarrollo. 
+
+----
+
+![Herramientas Case](images/unidad2/herramientas-case.png)
+
+---
+
+### Clasificación Funcional
+<!-- .slide: style="font-size: 0.90em" -->
+Según su función se pueden clasificar en:
+- H de planificación de sistemas de gestión
+- H de análisis y diseño
+- H de programación
+- H de integración y prueba
+- H de gestión de prototipos
+- H de mantenimiento
+- H de gestión de proyectos
+- H de soporte
+
+----
+
+#### Clasificación Funcional: Herramientas de planificación de sistemas de gestión
+Sirven para modelizar los requisitos de información estratégica de una organización. Proporcionan un "metamodelo" del cual se pueden obtener sistemas de información específicos. Su objetivo principal es ayudar a comprender mejor cómo se mueve la información entre las distintas unidades organizativas. 
+
+Estas herramientas proporcionan una ayuda importante cuando se diseñan nuevas estrategias para los sistemas de información y cuando los métodos y sistemas actuales no satisfacen las necesidades de la organización.
+
+----
+
+#### Clasificación Funcional: Herramientas de análisis y diseño
+Permiten al desarrollador crear un modelo del sistema que se va a construir y también la evaluación de la validez y consistencia de este modelo. Proporcionan un grado de confianza en la representación del análisis y ayudan a eliminar errores con anticipación. Se tienen:
+- Herramientas de análisis y diseño (Modelamiento).
+- Herramientas de creación de prototipos y de simulación.
+- Herramientas para el diseño y desarrollo de interfaces. Máquinas de análisis y diseño. (Modelamiento).
+
+----
+
+#### Clasificación Funcional: Herramientas de programación
+Se engloban aquí los compiladores, los editores y los depuradores de los lenguajes de programación convencionales. Ejemplos de estas herramientas son:
+- Herramientas de codificación convencionales.
+- Herramientas de codificación de cuarta generación.
+- Herramientas de programación orientadas a los objetos.
+
+----
+
+#### Clasificación Funcional: Herramientas de integración y prueba
+Sirven de ayuda a la adquisición, medición, simulación y prueba de los equipos lógicos desarrollados. Entre las más utilizadas están:
+- Herramientas de análisis estático.
+- Herramientas de codificación de cuarta generación.
+- Herramientas de programación orientadas a los objetos.
+
+----
+
+#### Clasificación Funcional: Herramientas de gestión de prototipos
+Los prototipos son utilizados ampliamente en el desarrollo de aplicaciones, para la evaluación de especificaciones de un sistema de información, o para un mejor entendimiento de cómo los requisitos de un sistema de información se ajustan a los objetivos perseguidos.
+
+----
+
+#### Clasificación Funcional: Herramientas de mantenimiento
+La categoría de herramientas de mantenimiento se puede subdividir en:
+- Herramientas de ingeniería inversa.
+- Herramientas de reestructuración y análisis de código.
+- Herramientas de reingeniería.
+
+----
+
+#### Clasificación Funcional: Herramientas de gestión de proyectos
+Se centran en un elemento específico de la gestión del proyecto, en lugar de proporcionar un soporte global para la actividad de gestión. Utilizando un conjunto seleccionado de las mismas se puede: realizar estimaciones de esfuerzo, coste y duración, hacer un seguimiento continuo del proyecto, estimar la productividad y la calidad, etc. 
+
+----
+
+#### Clasificación Funcional: Herramientas de gestión de proyectos
+Existen herramientas que permiten al comprador del desarrollo de un sistema, hacer un seguimiento que va desde los requisitos del pliego de prescripciones técnicas inicial, hasta el trabajo de desarrollo que convierte estos requisitos en un producto final. Se incluyen dentro de las herramientas de control de proyectos las siguientes:
+- Herramientas de planificación de proyectos.
+- Herramientas de seguimiento de requisitos.
+- Herramientas de gestión y medida.
+
+----
+
+#### Clasificación Funcional: Herramientas de soporte
+Se engloban en esta categoría las herramientas que recogen las actividades aplicables en todo el proceso de desarrollo, como las que se relacionan a continuación:
+- Herramientas de documentación.
+- Herramientas para software de sistemas.
+- Herramientas de control de calidad.
+- Herramientas de bases de datos.
+
+---
+
+### Clasificación de 5 grupos
+1. Repositorio
+2. Reingeniería
+3. Soporte del ciclo de vida
+4. Soporte de proyecto
+5. Mejora continua de Calidad
+
+----
+
+#### 1. Repositorio
+Funcionan en torno a un repositorio central, siendo éste el núcleo fundamental que contiene todas las definiciones de objeto y sus relaciones. Los objetos pueden ser especificaciones del sistema en forma de diagramas de flujo de datos, diagramas entidad-relación, esquemas de bases de datos, diseños de pantallas, etc. 
+
+Soporta a los demás grupos de funciones. Cualquier sistema Case poseerá un repositorio propio o trabajará sobre un repositorio suministrado por otro fabricante o vendedor.
+
+----
+
+#### 2. Reingeniería
+Los sistemas Case permiten establecer una relación estrecha y fuertemente formalizable entre los productos generados a lo largo de distintas fases del ciclo de vida, permitiendo actuar en el sentido especificaciones-código (ingeniería "directa") y también en el contrario (ingeniería "inversa"). Ello facilita la realización de modificaciones en la fase más adecuada en cada caso y su traslado a las demás. Al conjunto de facilidades proporcionadas por la ingeniería «directa» e "inversa" se le denomina "re-ingeniería".
+
+----
+
+#### 3. Soporte del ciclo de vida
+El ciclo de vida de una aplicación o de un sistema de información se compone de varias etapas, que van desde la planificación de su desarrollo hasta su implantación, mantenimiento y actualización. Aunque el número de fases puede ser variable en función del nivel de detalle que se adopte, pueden de modo simplificado, identificarse las siguientes:
+- Planeamiento.
+- Análisis y Diseño.
+- Implantación (programación y pruebas).
+- Mantenimiento y actualización.
+
+----
+
+#### 3. Soporte del ciclo de vida
+Los sistemas Case pueden cubrir la totalidad de estas fases o bien especializarse en alguna(s) de ellas. En este último caso se pueden distinguir sistemas de "alto nivel" ("Upper Case"), orientados a la autonomía y soporte de las actividades correspondientes a las dos primeras fases y, sistemas de "bajo nivel" ("Lower Case"), dirigidos hacia las dos últimas. Los sistemas de "alto nivel" pueden soportar un número más o menos amplio de metodologías de desarrollo.
+
+----
+
+#### 4. Soporte de proyecto
+Este tipo de funciones hace referencia al soporte de actividades que se producen durante el desarrollo, derivadas fundamentalmente del trabajo en grupos, tales como facilidades de comunicación, soporte a la creación, modificación e intercambio de documentación, herramientas personales, controles de seguridad, etc. Los sistemas Case pueden conceder a estas cuestiones una importancia variable por lo cual el soporte de proyecto constituye un factor de diferenciación.
+
+----
+
+#### 5. Mejora continua de calidad
+Aunque frecuentemente se asocia a los sistemas Case con la mejora de la productividad en el desarrollo de aplicaciones, debe tenerse en cuenta que una de las principales ventajas estriba también, en la mejora de la calidad de los desarrollos realizados. Determinados sistemas Case enfatizan más sobre este punto que sobre el anterior, introduciendo herramientas que permiten ejercer un control intenso de garantía de calidad del software desarrollado desde las primeras fases de su ciclo de vida.
+
+---
+
+### Ejemplos de herramientas CASE:
+- **ERwin:** Herramienta para modelado de datos y diseño de bases de datos. 
+- **PowerDesigner:** Herramienta para modelado de datos, diseño de aplicaciones y gestión de metadatos. 
+- **Rational Rose:** Herramienta para modelado UML y diseño de sistemas. 
+- **Enterprise Architect:** Herramienta de modelado UML, gestión de proyectos y generación de código. 
+
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
