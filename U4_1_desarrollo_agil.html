@@ -108,6 +108,12 @@ necesidades cambiantes sin rehacer trabajo de manera
 excesiva
 
 ---
+
+#### Cambio de los costos como función del tiempo transcurrido en el desarrollo
+
+![Costo del Cambio](images/unidad4/costo-del-cambio.png)
+
+---
 #### Manifiesto Ágil: Valores
 
 ![Valores Agile](images/unidad4/valores-agile.png)
@@ -255,7 +261,9 @@ desarrollar con un equipo pequeño que pueda comunicarse de manera informal. Est
 ----
 
 ### Cuestiones técnicas, humanas y organizacionales
+
 <!-- .slide: style="font-size: 0.70em" -->
+
 8. ¿Hay cuestiones **culturales o de organización** que puedan afectar al desarrollo del sistema?
 <p class="fragment"> Las organizaciones tradicionales tienen una cultura basada en el planes.</p>
 9. ¿Qué tan **buenos** son los diseñadores y **programadores** del equipo de desarrollo?
@@ -275,12 +283,41 @@ Extreme Programming (XP) :
 
 ---
 
+### Valores en XP
+
+![Valores en XP](images/unidad4/valores-extreme-programming-1.webp)
+
+----
+
+### Valores en XP
+<!-- .slide: style="font-size: 0.75em" -->
+- **Comunicación:** Debe ser eficaz para lograr una colaboración estrecha pero informal (verbal) entre los clientes y los desarrolladores.
+Se establecen **metáforas** para comunicar conceptos. Ejemplo de un *sistema de mensajería*: “El sistema funciona como un servicio postal: 
+cada usuario tiene un buzón, los mensajes son cartas, y el servidor de correo es la oficina de correos que se encarga de distribuirlas.”
+
+- **Simplicidad:** Se diseña sólo la necesidad inmediata.
+
+- **Retroalimentación:** Se obtiene de **3** fuentes:
+  1. software implementado (pruebas unitarias)
+  2. el cliente
+  3. otros miembros del equipo 
+
+Las historias del usuario o casos de uso son la base para las pruebas de aceptación. 
+
+----
+
+### Valores en XP
+- **Valentía o disciplina:** Diseñar para hoy. Reconocer que los requerimientos futuros tal vez cambien mucho.
+- **Respeto:** Entre los miembros del equipo, con el software y con el proceso XP.
+
+---
+
 ![Programacion Extrema](images/unidad4/programacion-extrema.png)
 
 ----
 
-#### Ciclo de liberación de Programación extrema
-![Ciclo XP](images/unidad4/ciclo-xp.png)
+#### Proceso de la programación extrema
+![Procesp XP](images/unidad4/proceso-xp.png)
 
 ---
 ### XP y principios ágiles
@@ -292,17 +329,8 @@ Extreme Programming (XP) :
 
 ---
 ### Prácticas de Extreme programming
-<!-- .slide: style="font-size: 0.60em" -->
+<!-- .slide: style="font-size: 0.80em" -->
 
-<!--
-| Principio o práctica              | Descripción                                                                                                                                                                                                                  |
-|-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Planificación Incremental         | Los requisitos se graban en historiales y las historias son incluidas en una publicación determinada por el tiempo disponible y su prioridad relativa. Los desarrolladores rompen esta historias en el desarrollo de tareas. |
-| Incrementos pequeños              | El mínimo conjunto útil de funcionalidad que ofrece valor al negocio es desarrollado primero. Se añaden funcionalidades frecuentes e incrementales en cada versión del sistema desde la primera vez.                         |
-| Diseño Simple                     | El diseño suficiente se lleva a cabo para satisfacer las necesidades actuales y no más.                                                                                                                                      |
-| Desarrollo de las pruebas primero | Un marco de pruebas unitarias automatizadas es usado para escribir pruebas para una nueva función antes de que la funcion  sea implementada.                                                                                 |
-| Refactorizacion                   | Se espera de todos los desarrolladores de reconstruir el código continuamente ni bien las mejoras se hallan. Esto mantiene el código simple y mantenible.                                                                    |
--->
 <table>
 <thead>
 <tr>
@@ -313,23 +341,23 @@ Extreme Programming (XP) :
 <tbody>
 <tr>
 <td><strong>Planificación Incremental</strong></td>
-<td>Los requisitos se graban en historiales y las historias son incluidas en una publicación determinada por el tiempo disponible y su prioridad relativa. Los desarrolladores rompen esta historias en el desarrollo de tareas.</td>
+<td>Los requisitos se escriben como <strong>historias de usuario</strong> y las historias son incluidas en una publicación determinada por el tiempo disponible y su prioridad. Se subdivide en <strong>tareas</strong>.</td>
 </tr>
 <tr>
 <td><strong>Incrementos pequeños</strong></td>
-<td>El mínimo conjunto útil de funcionalidad que ofrece valor al negocio es desarrollado primero. Se añaden funcionalidades frecuentes e incrementales en cada versión del sistema desde la primera vez.</td>
+<td>Primero se desarrolla el <strong>MVP</strong> (Producto Mínimo Viable). Posteriormente se añaden funcionalidades o mejoras en cada versión.</td>
 </tr>
 <tr>
 <td><strong>Diseño Simple</strong></td>
-<td>El diseño suficiente se lleva a cabo para satisfacer las necesidades actuales y no más.</td>
+<td>El diseño solo satisface las necesidades actuales y no más.</td>
 </tr>
 <tr>
 <td><strong>Desarrollo de las pruebas primero</strong></td>
-<td>Un marco de pruebas unitarias automatizadas es usado para escribir pruebas para una nueva función antes de que la funcion  sea implementada.</td>
+<td>Se desarrollan las <strong>pruebas unitarias</strong> automatizadas antes de implementar la funcionalidad.</td>
 </tr>
 <tr>
 <td><strong>Refactorizacion</strong></td>
-<td>Se espera de todos los desarrolladores de reconstruir el código continuamente ni bien las mejoras se hallan. Esto mantiene el código simple y mantenible.</td>
+<td>Se implementan mejoras contantes en el código para que sea simple y mantenible.</td>
 </tr>
 </tbody>
 </table>
@@ -337,16 +365,8 @@ Extreme Programming (XP) :
 ----
 
 ### Prácticas de Extreme programming
-<!-- .slide: style="font-size: 0.60em" -->
-<!--
-| Principio o práctica           | Descripción                                                                                                                                                                                                                                                                                               |
-|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Programación en pares          | Los desarrolladores trabajan en parejas , revisando el trabajo mutuamente y dandose apoyo para hacer siempre un buen trabajo.                                                                                                                                                                             |
-| Propiedad colectiva del código | La pareja de desarrolladores trabaja en todas las áreas del sistema, para que no queden islas de conocimiento desarrolladas y todos los desarrolladores asumen responsabilidad por todo el código. Nadie puede cambiar nada.                                                                              |
-| Integración continua           | Tan pronto como el trabajo en una tarea esta completo, es integrado en el sistema. Luego de cada integración, se corren todas las pruebas unitarias.                                                                                                                                                      |
-| Ritmo sostenible               | Grandes cantidades de horas extras no se consideran aceptables como el efecto neto es a menudo para reducir la calidad del código y mediana productividad                                                                                                                                                 |
-| Cliente en el sitio            | Un representante de los usuarios finales del sistema (el cliente) debe estar disponible a tiempo completo para el equipo de XP. En un proceso de programación extrema, el cliente es miembro del equipo de desarrollo y es responsable de llevar requisitos del sistema para el equipo de implementación. |
--->
+<!-- .slide: style="font-size: 0.70em" -->
+
 <table>
 <thead>
 <tr>
@@ -357,23 +377,23 @@ Extreme Programming (XP) :
 <tbody>
 <tr>
 <td><strong>Programación en pares</strong></td>
-<td>Los desarrolladores trabajan en parejas , revisando el trabajo mutuamente y dandose apoyo para hacer siempre un buen trabajo.</td>
+<td>Los desarrolladores trabajan en parejas, revisando el trabajo mutuamente y dandose apoyo para hacer un buen trabajo.</td>
 </tr>
 <tr>
 <td><strong>Propiedad colectiva del código</strong></td>
-<td>La pareja de desarrolladores trabaja en todas las áreas del sistema, para que no queden islas de conocimiento desarrolladas y todos los desarrolladores asumen responsabilidad por todo el código. Nadie puede cambiar nada.</td>
+<td>La pareja de desarrolladores trabaja en todas las áreas del sistema, para que no queden islas de conocimiento desarrolladas y todos los desarrolladores asumen responsabilidad por todo el código.</td>
 </tr>
 <tr>
 <td><strong>Integración continua</strong></td>
-<td>Tan pronto como el trabajo en una tarea esta completo, es integrado en el sistema. Luego de cada integración, se corren todas las pruebas unitarias.</td>
+<td>Tan pronto como el trabajo en una tarea esta completo, es integrado en el sistema y se ejecutan todas las pruebas unitarias.</td>
 </tr>
 <tr>
 <td><strong>Ritmo sostenible</strong></td>
-<td>Grandes cantidades de horas extras no se consideran aceptables como el efecto neto es a menudo para reducir la calidad del código y mediana productividad</td>
+<td>No se trabajan horas extras. El cansancio reduce la calidad del código y la productividad</td>
 </tr>
 <tr>
 <td><strong>Cliente en el sitio</strong></td>
-<td>Un representante de los usuarios finales del sistema (el cliente) debe estar disponible a tiempo completo para el equipo de XP. En un proceso de programación extrema, el cliente es miembro del equipo de desarrollo y es responsable de llevar requisitos del sistema para el equipo de implementación.</td>
+<td>El cliente debe estar disponible a tiempo completo para el equipo XP. Es responsable de llevar requisitos del sistema para el equipo de implementación.</td>
 </tr>
 </tbody>
 </table>
@@ -461,7 +481,7 @@ tiempo y esfuerzo anticipando los cambios ya que esto reduce costos más tarde.
 <!-- .slide: style="font-size: 0.90em" -->
 * Escribir pruebas antes del código aclara los requisitos para ser implementados.
 * Las pruebas se escriben como programas en lugar de datos de manera que se pueden ejecutar de forma automática. La prueba incluye una comprobación de que se ha ejecutado correctamente.
-  * Por lo general, se basa en un marco de pruebas tales como Junit o Jest.
+  * Por lo general, se usan frameworks de pruebas como Junit o Jest.
 * Todas las pruebas anteriores y las nuevas se ejecutan automáticamente cuando se añade una nueva funcionalidad, comprobando así que la nueva funcionalidad no ha introducido errores.
 
 ---
@@ -498,7 +518,6 @@ OK o mensaje de error que indique que la dosis está fuera del rango de segurida
 * La automatización de pruebas significa que las pruebas se escriben como componentes ejecutables antes de que la tarea se implemente
   * Estos componentes de prueba deben ser independientes, deberían
 simular la presentación de la entrada para ser probado y debe comprobar que el resultado cumple con las especificaciones de salida.
-Un marco de prueba automatizada (por ejemplo Junit) es un sistema que hace que sea fácil escribir y ejecutar pruebas
 * Cuando se automatizan las pruebas, siempre hay un conjunto de pruebas que puede ser rápida y fácilmente ejecutado
   * Siempre que se agrega alguna funcionalidad al sistema, las pruebas de
 regresión se deben corren y si el nuevo código introdujo problemas se identifican inmediatamente
@@ -509,8 +528,8 @@ regresión se deben corren y si el nuevo código introdujo problemas se identifi
 * Los programadores prefieren la programación a las pruebas y a veces se toman atajos al escribir pruebas. Por
 ejemplo, pueden escribir pruebas incompletas que no comprueban todas las posibles excepciones que puedan ocurrir.
 * Algunas pruebas pueden ser muy difíciles de escribir de forma incremental. Por ejemplo, en una interfaz de usuario
-compleja, es a menudo difícil de escribir pruebas unitarias para el código que implementa la 'lógica de visualización 
-"y flujo de trabajo entre las pantallas
+compleja, es a menudo difícil de escribir pruebas unitarias para el código que implementa la 'lógica de visualización' 
+y flujo de trabajo entre las pantallas
 * Es difícil juzgar la integridad de un conjunto de pruebas. Aunque se tengan muchas pruebas, la prueba de conjunto
 puede no proporcionar una cobertura completa.
 
@@ -552,8 +571,8 @@ colectiva, otros se benefician inmediatamente de la refactorización de modo que
 
 1. Emplear Jira para redactar historias de usuario para la app de **gestión de tareas** siguiendo el formato “Como [rol], quiero [funcionalidad] para [beneficio]”.
 Ejemplos:
-- Como usuario, quiero crear una nueva tarea, para recordar lo que tengo que hacer.
-- Como usuario, quiero marcar una tarea como completada, para llevar un control de lo que ya hice.
+<p class="fragment"> Como usuario, quiero crear una nueva tarea, para recordar lo que tengo que hacer. </p>
+<p class="fragment"> Como usuario, quiero marcar una tarea como completada, para llevar un control de lo que ya hice. </p>
 
 2. Realizar una estimación empleando [poker planning](https://planningpokeronline.com/8eCdPtjVtv9hVj75aXsc/)
 
@@ -609,6 +628,10 @@ previsto para el día siguiente.
 **Esto significa que todos en el equipo saben lo que está pasando y, si surgen problemas, puede volver a planear el
 trabajo a corto plazo para hacer frente a ellos.**
 
+----
+
+![Reuniones cortas](images/unidad4/reuniones-cortas.png)
+
 ---
 ### Beneficios de Scrum
 * El producto se divide en un conjunto de fragmentos manejables y comprensibles.
@@ -617,6 +640,16 @@ trabajo a corto plazo para hacer frente a ellos.**
 * Los clientes ven la entrega a tiempo y se obtiene retroalimentación sobre cómo funciona el producto.
 * Se genera confianza entre los clientes y los desarrolladores . Se crea una cultura positiva en la que
 todos esperan que el proyecto tenga éxito.
+
+---
+### El Proceso Scrum
+![Scrum](images/unidad4/03-scrum.png)
+
+----
+
+### Flujo Scrum
+
+![Scrum](images/unidad4/proceso-scrum.png)
 
 ---
 ### Escala métodos ágiles
@@ -683,10 +716,6 @@ habilidad. Sin embargo, dentro de las grandes organizaciones, lo mas probable es
 una amplia gama de habilidades y capacidades.
 * Existe resistencia cultural a los métodos ágiles, especialmente en aquellas organizaciones que tienen una larga 
 historia de uso de los procesos de ingeniería de sistemas convencionales.
-
----
-### El Proceso Scrum
-![Scrum](images/unidad4/03-scrum.png)
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
