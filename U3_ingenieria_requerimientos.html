@@ -71,6 +71,28 @@ Created by <i class="fab fa-telegram"></i>
 Proceso de descubrir, analizar, documentar y verificar los servicios que el sistema debe ofrecer y las restricciones en su operación.
 
 ---
+
+### ¿Qué es un requerimiento?
+
+"Propiedad o restricción, determinada con precisión, que un producto software debe satisfacer"
+
+"Una capacidad necesitada por un usuario para resolver un problema o llevar a cabo un objetivo."
+
+----
+
+### ¿Cómo se expresa un requerimiento?
+
+La definicion de un requerimiento puede variar de una **declaración abstracta** de un servicio o de una **restricción** de sistema a una **especificación funcional** matemática detallada.
+
+----
+
+#### ¿Qué Problemas hay?
+
+* Dificultad de comunicación entre el equipo de  desarrollo y el grupo de clientes/usuarios.
+* Cambio de los requerimientos.
+* Imposibilidad de identificar la totalidad de los requerimientos de un producto.
+
+---
 ### Definicion de Requerimiento (Davis)
 <!-- .slide: style="font-size: 0.88em" -->
 "Si una compañía desea otorgar un contrato para un gran proyecto de desarrollo
@@ -84,23 +106,80 @@ valide lo que hará el software. Estos documentos suelen nombrarse documentos
 de requerimientos para el sistema."
 
 ---
-### ¿Qué es un requerimiento?
+
+### Características de los Requerimientos
+
+![Característcas de los Requerimientos](images/unidad3/caracteristicas-requerimientos.png)
+
+<!--https://www.northware.mx/wp-content/uploads/2021/04/tecnicas-efectivas-para-la-toma-de-requerimientos.pdf-->
+
+----
+
+### Características de los Requerimientos
+
+<!-- .slide: style="font-size: 0.90em" -->
+
+1. **Necesario:** Si se tiene alguna duda acerca de la necesidad del requerimiento, se pueden preguntar “¿Qué sería lo peor
+de no incluirlo?” Si no hay consecuencias es probable no sea necesario.
+2. **Completo:** Se consiera completo si no necesita ampliar detalles en su redacción, es decir, si se
+proporciona la información suficiente para su comprensión.
+3. **Consistente:** No es contradictorio con otro requerimiento.
+4. **Correcto:** Acuerdo entre dos partes. Contiene una sola idea.
+
+----
+
+### Características de los Requerimientos
+
 <!-- .slide: style="font-size: 0.80em" -->
-Propiedad o restricción, determinada con precisión, que un producto software debe satisfacer
 
-¿Cómo se expresa un requerimiento?
+5. **Factible:** Si es realizable dentro de presupuesto, del calendario y no hay otras restricciones. Si se tienen dudas, 
+hay que investigar, generar pruebas de concepto para comprender su complejidad. Si no es factible hay que revisar la visión del sistema y
+replantear el requerimiento
+6. **Modificable**
+7. **Priorizado:** Categorizar nos ayuda a saber el grado de necesidad del mismo: Esencial/Critico, Deseado, Opcional.
+8. **Verificable:** Debe ser comprobable. Si no lo es, ¿Cómo se sabe si se cumplió con él o no? Debe ser posible
+verificarlo ya sea por inspección, análisis de prueba o demostración. Cuando se escriba un requerimiento, se deberá de determinar
+los criterios de aceptación.
 
-<p class="fragment">
-La definicion de un requerimiento puede variar de una declaración abstracta de un servicio o de una restricción de sistema a una especificación funcional matemática detallada.
-</p>
+----
 
-¿Qué Problemas hay?
+### Características de los Requerimientos
 
-<p class="fragment">
-* Dificultad de comunicación entre el equipo de  desarrollo y el grupo de clientes/usuarios.
-* Cambio de los requerimientos.
-* Imposibilidad de identificar la totalidad de los requerimientos de un producto.
-</p>
+9. **Rastreable:** La especificación se debe organizar para que cada función del sistema se pueda rastrear hasta su conjunto
+de requerimientos correspondiente. Facilita las pruebas y la validación del diseño.
+10. **Claro:** Fácil de leer y entender. Su redacción debe ser simple y clara.
+
+---
+
+### Pirámide de Requerimientos
+
+![Pirámide de Requerimientos](images/unidad3/piramide-de-requerimientos.png)
+
+----
+
+### Pirámide: Necesidades
+
+Necesidades de los Stakeholders. Están orientadas a oportunidades (problemas) de Negocio las cuales deben de ser cubiertas de forma satisfactoria. 
+Algunas de estas oportunidades general requerimientos del sistema.
+
+----
+
+### Pirámide: Características
+
+Características o Cualidades que los Stakeholders esperan como parte del comportamiento del sistema de Software.
+
+Están relacionados con la **calidad** del sistema: Fácilmente Modificable, Seguridad, Portabilidad, Confiabilidad, Fácil de probar, Usabilidad
+(Tiempo de Capacitación, Número de Slecciones, Número de Clics), Desempeño, Eficiencia (Tiempo Transacciones por segundo, Tiempo de Respuesta,
+Tiempo de Operaciones Completas), Espacio (Memoria Principal, Memoria Auxiliar, Caché), Escalabilidad.
+
+----
+
+### Pirámide: Requerimientos de Software
+
+Necesidades de los Stakeholders que requiere que el Sistema cumpla de manera Satisfactoria. 
+
+Definen las funciones que el sistema será capaz de realizar. Describen las transformaciones que el sistema realiza sobre las entradas para producir salidas.
+Describe el ¿Qué? y no el ¿Cómo? se deben hacer esas transformaciones. 
 
 ---
 ### La comunicación...
@@ -249,7 +328,7 @@ Los objetivos son útiles para los desarrolladores, ya que transmiten las intenc
 
 ### Métricas para la especificación de requisitos no funcionales
 
-<!-- .slide: style="font-size: 0.60em" -->
+<!-- .slide: style="font-size: 0.65em" -->
  
 <table>
 <thead>
@@ -432,7 +511,7 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 
 ### La estructura de un documento de requerimientos
 
-<!-- .slide: style="font-size: 0.70em" -->
+<!-- .slide: style="font-size: 0.60em" -->
 
 <table>
 <thead>
@@ -469,7 +548,7 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 
 ### La estructura de un documento de requerimientos
 
-<!-- .slide: style="font-size: 0.60em" -->
+<!-- .slide: style="font-size: 0.50em" -->
 
 <table>
 <thead>
@@ -671,94 +750,246 @@ calculo para los diferentes escenarios.
 
 ---
 ### Procesos de ingeniería de requerimientos
-<!-- .slide: style="font-size: 0.80em" -->
-* Los procesos utilizados para IR varían ampliamente
+Los procesos utilizados para IR varían ampliamente
 dependiendo del dominio de la aplicación, las personas
-involucradas y la organización el desarrollo de los requisitos.
-* Sin embargo, hay una serie de actividades genéricas comunes a todos los procesos
-  1. Obtención de requerimientos;
-  2. El análisis de requerimientos;
-  3. La validación de requerimientos ;
-  4. La gestión de requerimientos.
-* En la práctica, IR es una actividad iterativa en el que se intercalan estos procesos.
+involucradas, la organización y el desarrollo de los requisitos.
+
+Este proceso comprende 5 actividades:
+
+![Proceso de Requerimientos](images/unidad3/proceso-ing-req.png)
 
 ---
-### 1 y 2. Obtención de requerimientos
-* A veces se denomina obtención de requerimientos o
-descubrimiento de requerimientos.
-* Involucra al personal técnico que trabaja con los
-clientes para averiguar sobre el dominio de aplicación, los
-servicios que el sistema debe proporcionar y limitaciones
-operativas del sistema.
-* Puede involucrar a los usuarios finales, gerentes,
-ingenieros involucrados en el mantenimiento, los
-expertos de dominio, los sindicatos, etc. Estos se llaman
-las partes interesadas.
+
+### 1. Obtención de Requerimientos
+
+Los analistas de requerimientos deberán trabajar junto al cliente
+para descubrir el problema que el sistema debe resolver. 
+
+Previo a esto se debe definir quienes serán los involucrados en la definición de los requerimientos y 
+quien autorizará y revisará los documentos que se obtengan.
 
 ----
 
-### Obtención y análisis de requerimientos
+### 1. Obtención de Requerimientos
+<!-- .slide: style="font-size: 0.90em" -->
+En la **kick off** o reunión de arranque se debe especificar:
+1. Objetivo del sistema, y fechas tentativas del inicio y fin del proyecto
+2. Presentación del Equipo de Trabajo
+3. Presentación o definición de stakeholders (involucrados en la definición de los requerimientos y líder funcional, que es quien hace
+la autorización de los documentos en nombre de todo el equipo del cliente)
+4. Fechas tentativas de reuniones con el cliente (esto se usa cuando
+es una consultoría la que presta el servicio al cliente)
 
-![Obtención y análisis de requerimientos](images/unidad3/adquisicion-analsis-requerimientos.png)
+----
+
+### 1. Obtención de Requerimientos
+Posteriormente se preparan las entrevistas. Para las mismas se recomenda:
+1. Obtener información sobre el dominio del problema y el sistema actual.
+2. Preparar y realizar las sesiones de elicitación/negociación
+3. Identificar/revisar los requisitos funcionales
+4. Identificar/revisar los requisitos no funcionales
+5. Clasificar requerimientos
+
+----
+
+### 1.1. Obtener información del dominio del problema y el sistema actual
+<!-- .slide: style="font-size: 0.75em" -->
+Se debe conocer el contexto organizacional y operacional, la situación actual. 
+
+Si ya se conoce el dominio del problema este paso no es tan necesario.
+
+Si NO se conoce el dominio de problema, puedes leer su página de internet, documentos internos, folletos, sistemas previos, etc. 
+Enfrentarse a un desarrollo sin conocer las características principales ni el vocabulario propio del cliente suele provocar falta de
+entendimiento de sus necesidades y que la confianza inicial se vea afectada.
+
+El modelo de CMMI (Capability Maturity Model Integration) recomienda tener un repositorio de información donde se coloque toda la documentación
+que se vaya obteniendo del proyecto y que se emplee una nomenclatura que te permita revisar las versiones de los documentos
+a simple vista.
+
+----
+
+#### 1.2. Preparar y realizar las sesiones de elicitación/negociación
+
+<!-- .slide: style="font-size: 0.75em" -->
+
+- Confirmación de los usuarios participantes
+- Definir fechas tentativas para las reuniones de definición de requerimientos. 
+- Llevar los materiales necesarios: hojas para dibujar, marcadores, pizarra, presentaciones
+con información útil, cuestionarios, etc.
+- Preguntar al cliente si se puede grabar la sesión. 
+- Definir el objetivo de la entrevista, que información deseas obtener, personas involucradas.
+- Escuchar con atención al cliente sin interrumpir. 
+- Parafrasear o utilizar metáforas.
+- Tomar nota
+- Tratar de dar sugerencias de valor a los requerimientos del cliente. 
+- Trata de identificar los riesgos, puntos de negociación, posibles conflictos que vayan a derivar en ambigüedades en los
+requerimientos y tomar nota de todos aquellos requisitos No funcionales que te defina el cliente con sus comentarios.
+
+----
+
+#### 1.2. Preparar y realizar las sesiones de elicitación/negociación
+- Al final de la sesión realiza un resumen de los puntos vistos. 
+- Transcribe cada requerimiento, acuerdo o pendiente en la minuta mencionada. Cada pendiente debe tener un
+responsable y una fecha de entrega/solución.
+- Envía la minuta al cliente
+- Realiza seguimiento de los pendientes hasta que sean cerrados.
+
+----
+
+#### 1.3. Identificar/revisar los requisitos funcionales
+Identificar los actores que interactuarán con el sistema, es decir, aquellas personas u otros sistemas que serán los
+orígenes o destinos de la información que consumirá o producirá el sistema a desarrollar y que forman su entorno.
+
+Identificar los casos de uso (requerimiento funcional) asociados a los actores para obtener un listado de requerimientos 
+que se va a desarrollar.
+
+Re-analizar los requerimientos ambiguos para hablarlos con el cliente y lleguar a una definición clara de los mismos.
+
+----
+
+#### 1.4. Identificar/revisar los requisitos no funcionales
+Revisar lo que definimos como un requisito no funcional y la toma de nota de lo que
+comentó el cliente referente a como quiere que funcione el sistema.
+
+Que tipo de comunicación tiene, si quiere que el sistema se desarrolle en alguna plataforma especifica, alguna restricción de
+sistema operativo, de ambiente, rapidez, seguridad, usabilidad, modificaciones sencillas, reutilización de código, etc.
+
+----
+
+#### 1.5. Clasificar requerimientos
+Una vez que los requerimientos son consistentes, se da un orden de **prioridades**, para que las necesidades de alta
+prioridad pueden ser encaradas primero, lo que permite definirlas y reexaminarlas para analizar posibles cambios de requerimientos.
+
+Esto permite una disminución de los costos y ahorro de tiempo en procesamiento.
+
+Las prioridades se basan en las necesidades del cliente, en el objetivo principal del sistema. Se debe tener en cuenta el costo y la
+dependencia entre requerimientos.
 
 ---
-### 2. Problemas con el análisis de requerimientos
+
+### 2. Análisis de Requerimientos
+Implica refinar, analizar, y examinar los requerimientos obtenidos para asegurar que todos los clientes involucrados entienden lo
+que pidieron, y para encontrar errores, omisiones y otras deficiencias.
+
+En esta etapa se leen los requerimientos, se conceptúan, se investigan, se intercambian ideas con el resto del equipo, se resaltan los problemas,
+se buscan alternativas y soluciones, y luego se van fijando reuniones con el cliente para discutir los requerimientos.
+
+----
+
+### 2. Análisis de Requerimientos
+
+![Análisis de Requerimientos](images/unidad3/analisis-requerimientos.png)
+
+---
+
+### 3. Especificación de Requerimientos
+<!-- .slide: style="font-size: 0.90em" -->
+En esta fase se documentan los requerimientos acordados con el cliente, en un nivel apropiado de detalle. 
+
+Se incluye: 
+- Descripción completa de las necesidades y funcionalidades del sistema que será desarrollado
+- El alcance del sistema y la forma como hará sus funciones
+- Requerimientos funcionales y no funcionales.
+
+Es un "pasar en limpio" el análisis realizado previamente aplicando técnicas y/o estándares de documentación.
+
+----
+
+### 3. Especificación de Requerimientos
+
+![Especificación de requerimientos](images/unidad3/especificacion-de-requerimientos.png)
+
+---
+
+### 4. Verificación de Requerimientos
+La validación es la etapa final de la IR. Su objetivo es que los analistas
+se aseguren que los requerimientos especificados son los que realmente quiere el cliente, que estén **completos** y sean **consistentes**.
+
+Además de cumplir con todas las características quee distinguen un buen requerimiento, la revisión ayuda a asegurarse que no se haya
+omitido ningún requerimiento.
+
+----
+
+### 4. Verificación de Requerimientos
+Se recomienda seleccionar varios revisores de diferentes disciplinas puede ser un analista, arquitecto, o
+incluso un ingeniero de SW que tenga conocimiento de los estándares de documentación de la organización. 
+
+Se puede preparar un checklist para la revisión de los requerimientos.
+
+Lo que se debe hacer es realizar revisiones al documento, aplicarles pruebas de escritorio, etc. 
+
+----
+
+### 4. Verificación de Requerimientos
+<!-- .slide: style="font-size: 0.70em" -->
+Ejemplo de puntos a revisar en los documentos obtenidos:
+- ¿Están incluidas todas las funcionalidades requeridas por el cliente? (completa).
+- ¿Existen conflictos en los requerimientos? (consistencia)
+- ¿Tiene alguno de los requerimientos más de una interpretación? (no ambigua)
+- ¿Esta cada requerimiento claramente representado? (entendible)
+- ¿Puede ser los requerimientos implementados con la tecnología y presupuesto disponible? (factible)
+- ¿Está la especificación escrita en un lenguaje apropiado? (clara)
+- ¿Existe facilidad para hacer cambios en los requerimientos? (modificable)
+- ¿Está claramente definido el origen de cada requerimiento? (rastreable)
+- ¿Pueden ser los Requerimientos ser sometidos a pruebas cuantitativas? (verificable) 
+
+----
+
+### 4.1. Técnicas de validación de requerimientos
+* Criticas de requerimientos
+  * Análisis manual sistemático de los requerimientos.
+* Prototipado
+  * Utilizando un modelo ejecutable del sistema para comprobar requerimientos.
+* Generación de test
+  * El desarrollo de las pruebas de requerimientos para comprobar la capacidad de prueba.
+
+---
+
+### 4.1.1 Criticas de los requerimientos
+* Las revisiones periódicas deben ser sostenidas mientras
+la definición de requerimientos se formula.
+* Tanto el cliente como el personal del proyecto deben
+participar en las revisiones.
+* Las revisiones pueden ser formales (con documentos
+completos) o informales. Buenas comunicaciones entre
+los desarrolladores, clientes y usuarios pueden resolver
+problemas en una etapa temprana.
+
+---
+
+### 5. Aceptación de Requerimientos
+<!-- .slide: style="font-size: 0.85em" -->
+Este es un proceso los analistas involucrados se reúnen con el cliente y comienzan a dar una revisión formal al documento. 
+Comienzan a leer y explicar cada requerimiento, incluso se pueden
+apoyar en prototipos en papel para que quede más claro el funcionamiento.
+
+El objetivo es que todos estén en el mismo entendido de lo que se realizará para cada requerimiento. 
+Si todos están de acuerdo se hace la aceptación/aprobación de la especificación de requerimientos, se realiza un compromiso formal de
+que lo contenga la Especificación será lo que se construya y se pide al cliente una aprobación formal vía correo electrónico o una firma sobre el
+documento físico.
+
+---
+
+### Administración de requerimientos 
+Se realiza durante todo el proyecto. Esto implica llevar un buen control de los cambios, asegurarte de hacerle
+ver al cliente el impacto en costo y/o el tiempo de entrega del proyecto, y gestionar como estos cambios afectan los entregables
+desarrollados.
+
+Es importante asegurarse que esto no genere retrasos en la entrega. Y llevar una clara versión en los documentos y en el código
+ 
+---
+
+### Problemas con el análisis de requerimientos
 * Los interesados no saben lo que realmente quieren.
 * Las partes interesadas expresan requisitos en sus propios términos.
 * Las diferentes partes interesadas pueden tener requisitos contradictorios.
 * Factores organizativos y políticos pueden influir en los requisitos del sistema.
 * Los requisitos cambian durante el proceso de análisis.
-Nuevos actores pueden surgir y el entorno empresarial puede cambiar.
-
----
-### Obtención y análisis de requerimientos
-* Los ingenieros de software trabajan con una variedad de
-actores del sistema para obtener información sobre el
-dominio de aplicación, los servicios que el sistema debe
-proporcionar, el rendimiento del sistema requerido, las
-limitaciones de hardware, otros sistemas, etc.
-* Las etapas incluyen:
-  * Descubrimiento requerimientos
-  * Clasificación y organización de requerimientos
-  * Priorizar y negociar requerimientos
-  * Especificación de requerimientos.
+* Nuevos actores pueden surgir y el entorno empresarial puede cambiar.
 
 ---
 
 ![Analisis Requerimiento Espiral](images/unidad3/analisis-requerimientos-espiral.png)
-
----
-### Actividades del proceso
-<!-- .slide: style="font-size: 0.80em" -->
-* Descubrimiento de requerimientos
-  * La interacción con las partes interesadas para descubrir sus necesidades.
-  * Los requerimientos de dominio también se descubren en esta etapa.
-* Clasificación y organización de requerimientos
-  * Requerimientos relacionados organizados en grupos coherentes.
-* Priorización y negociación
-  * Dar prioridad a los requerimientos y resolver los conflictos.
-* Especificación de requerimientos
-  * Los requerimientos se documentan
-
----
-### Problemas en la obtención de requerimientos
-<!-- .slide: style="font-size: 0.90em" -->
-* Los interesados no saben expresar lo que realmente quieren.
-* Las partes interesadas expresan los requerimientos en sus propios términos.
-* Las diferentes partes interesadas pueden tener requisitos contradictorios.
-* Factores organizativos y políticos pueden influir en los requerimientos del sistema.
-* Los requerimientos cambian durante el proceso de análisis.
-* Pueden surgir nuevos actores pueden surgir con nuevos requerimientos.
-
----
-### Descubrimiento de requerimientos
-**El proceso de recopilación de información sobre las
-necesidades del sistema mediante la interaccion con
-los distintos actores.**
-* La interacción es con TODOS los actores del sistema
-(desde administradores hasta reguladores externos).
-* Los sistemas normalmente tienen un rango de grupos de
-interés. (ROLES)
 
 ---
 ### Partes interesadas en el sistema para MHC-PMS
@@ -785,6 +1016,14 @@ mantenimiento de registros han sido ejecutadas
 correctamente.
 
 ---
+
+### Técnicas para recabar requerimientos
+- Entrevistas
+- Escenarios
+- Casos de Uso
+- Estudios Etnográficos
+
+---
 ### Entrevistas
 * Las entrevistas formales o informales con las partes interesadas son
 parte de la mayoría de los procesos de la IR.
@@ -792,7 +1031,8 @@ parte de la mayoría de los procesos de la IR.
   * Entrevistas cerradas a base de lista de preguntas predeterminada
   * Entrevistas abiertas donde varios temas se exploran con las  partes interesadas.
 
----
+----
+
 ### Entrevistas efectivas
 * Tener la mente abierta, evitar las ideas preconcebidas
 acerca de los requerimientos y estar dispuestos a
@@ -801,7 +1041,8 @@ escuchar a las partes interesadas.
 una pregunta clave, una propuesta de requerimientos, o
 si trabajan juntos en un sistema prototipo.
 
----
+----
+
 ### Entrevistas en la práctica
 <!-- .slide: style="font-size: 0.90em" -->
 * Normalmente, una mezcla de la entrevista cerrada y abierta.
@@ -824,7 +1065,8 @@ Los escenarios son ejemplos reales de cómo se puede utilizar un sistema.
   * Información sobre otras actividades concurrentes;
   * Una descripción de la situación cuando el escenario termina.
 
----
+----
+
 ### Escenario para la recolección de información medica del sistema para MHC-PMS
 <!-- .slide: style="font-size: 0.70em" -->
 **SUPOSICIÓN INICIAL:** El paciente fue atendido por una recepcionista
@@ -886,11 +1128,13 @@ más detallada de cuadro.
 detalle a los casos de uso, mostrando la secuencia de procesamiento
 de eventos en el sistema.
 
----
+----
+
 ### Elementos de un diagrama de casos de uso
 ![Elementos de un diagrama de casos de uso](images/unidad3/elementos-diagrama-casos-de-uso.jpg)
 
----
+----
+
 ### Casos de uso para MHC-PMS
 ![Diagrama de casos de uso](images/unidad3/diagrama-casos-de-uso.png)
 
@@ -906,7 +1150,8 @@ realmente.
 ser más rico y complejo de lo que sugieren los modelos de
 sistemas simples.
 
----
+----
+
 ### Ámbito de aplicación de la etnografía
 * Los requerimientos que se derivan de la forma en que las
 personas trabajan realmente en vez de la forma en la cual las
@@ -917,61 +1162,16 @@ conocimiento de las actividades de otras personas.
 procesos, que con frecuencia se pierden con otras técnicas de
 adquisición de requerimientos.
 
----
+----
+
 ### Etnografía y prototipos para el análisis de los requerimientos
 ![Etnografia](images/unidad3/etnografia.png)
 
-----
+---
 
 #### Puntos de vista para describir el modelo de requerimientos
 
 ![Modelo de Requerimientos](images/unidad3/describir-requerimientos.png)
-
----
-### Validación de requerimientos
-Proceso de verificar que los requerimientos
-definan realmente el sistema que quiere el cliente.
-
-Falta de validación de requerimientos implica costos altos.
-La solución de un error de los
-requerimientos después de entrega puede
-llegar a costar hasta 100 veces el costo de
-arreglar un error de ejecución.
-
----
-### Comprobación de requerimientos
-* **Validez:** ¿El sistema provee las funciones que mejor ayudan a las necesidades del cliente?
-* **Consistencia:** ¿Existen conflictos de los requerimientos?
-* **Integridad:** ¿Están todas las funciones requeridas por el cliente incluidas?
-* **Realismo:** ¿Pueden implementarse los requerimientos dado el presupuesto y la tecnología disponible?
-* **Verificabilidad:** ¿Se pueden comprobar los requisitos?
-
----
-### Técnicas de validación de requerimientos
-* Criticas de requerimientos
-  * Análisis manual sistemático de los requerimientos.
-* Prototipado
-  * Utilizando un modelo ejecutable del sistema para comprobar requerimientos.
-* Generación de test
-  * El desarrollo de las pruebas de requerimientos para comprobar la capacidad de prueba.
-
----
-### Criticas de los requerimientos
-* Las revisiones periódicas deben ser sostenidas mientras
-la definición de requerimientos se formula.
-* Tanto el cliente como el personal del proyecto deben
-participar en las revisiones.
-* Las revisiones pueden ser formales (con documentos
-completos) o informales. Buenas comunicaciones entre
-los desarrolladores, clientes y usuarios pueden resolver
-problemas en una etapa temprana.
-
----
-### REQUERIMIENTOS:
-* **Verificabilidad:** Los requerimientos son verificables
-* **Comprensibilidad:** Los requerimientos fueron entendidos correctamente
-* **Trazabilidad:** El origen de la obligación se declaró con claridad
-* **Adaptabilidad:** El requerimiento puede cambiar sin un gran impacto en otros requerimientos
 
 ---
 ### Gestión de requerimientos
