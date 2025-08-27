@@ -58,8 +58,7 @@ Algunas actividades que se suelen automatizar son:
 - Generación de código a partir de dichos modelos de sistemas gráficos.
 - Producción de interfaces de usuario a partir de una descripción de interfaz gráfica, creada por el usuario de manera interactiva. 
 - Depuración del programa mediante el suministro de información sobre un programa que se ejecuta.
-- Traducción automatizada de programas escritos, usando una versión anterior de un lenguaje de 
-programación para tener una versión más reciente.
+- Traducción automatizada de programas escritos, usando una versión anterior de un lenguaje de programación para tener una versión más reciente.
 
 ---
 
@@ -67,12 +66,93 @@ Muchas de estas herramientas pueden combinarse en un marco llamado ambiente de d
 
 ---
 
-### Beneficios de las herramientas CASE
+### Herramientas CASE: OBJETIVOS
 <!-- .slide: style="font-size: 0.90em" -->
-- **Mayor eficiencia:** Al automatizar tareas repetitivas, reducen el tiempo y el esfuerzo en el desarrollo de software.
-- **Mejor calidad del software:** Permiten identificar errores y problemas de diseño de manera más temprana en el proceso de desarrollo.
-- **Mayor productividad:** Ayudan a los desarrolladores a ser más productivos, liberándose de tareas manuales, permitiéndoles concentrarse en las tareas más estratégicas. 
-- **Reducción de costos:** Al agilizar el proceso de desarrollo y mejorar la calidad del software, se reducen los costos de desarrollo y mantenimiento.
+1. Mejorar la productividad del software
+2. Aumentar la calidad del software.
+3. Reducir el tiempo y costo de desarrollo y mantenimiento de los sistemas informáticos.
+4. Mejorar la planificación de un proyecto.
+5. Aumentar la biblioteca de conocimiento informático de una empresa ayudando a la búsqueda de soluciones para los requisitos.
+6. Automatizar el desarrollo del software, la documentación, la generación de código, las pruebas de errores y la gestión del proyecto.
+7. Aumentar la productividad de las áreas de desarrollo y mantenimiento de los sistemas informáticos.
+8. Ayuda a la re-utilización del software, portabilidad y estandarización de la documentación.
+9. Gestión global en todas las fases de desarrollo de software con una misma herramienta.
+10. Facilitar el uso de las distintas metodologías propias de la ingeniería del software.
+
+---
+
+#### Ayuda a Automatizar:
+- El desarrollo del software.
+- La documentación.
+- La generación del código.
+- El chequeo de errores.
+- La gestión del proyecto.
+
+---
+
+### Permite:
+- La reutilización (reusabilidad) del software.
+- La portabilidad del software.
+- La estandarización de la documentación.
+- Integrar las Mejorar el archivo de datos (enciclopedia) de conocimientos.
+- Facilitar la utilización de las distintas metodologías que desarrollan la propia Ingeniería del software.
+
+---
+
+### Características que debe Soportar
+- Soporte gráfico para varias técnicas (DFD, E/R, STD, modelos OO, etc.)
+- Control de errores “Consistencia”: Unicidad identificadores, reglas metodología, etc.
+- Validación entre diferentes modelos:
+  - En una fase (Por ejemplo: entre DFD y E/R)
+  - En varias fases (DFD análisis y diseño; DFD diseño y Diagrama de estructuras).
+
+---
+
+### Características Deseables
+- Soporte multiusuario.
+- Personalización.
+- Control de documentos y versiones.
+- Gestión de proyectos.
+- Estadísticas de productividad y métricas del software.
+- Pruebas.
+- Simulación y Prototipado.
+- Demostración correcciones especificaciones y/o software.
+- Generación de código.
+
+---
+
+### VENTAJAS
+
+Estas herramientas pueden proveer muchos beneficios en todas las etapas del proceso de desarrollo de software, algunas de ellas son:
+Mejora en la productividad
+- Mejora en la eficacia
+- Mejora en la calidad del sistema de información
+- Disminución de tiempo
+- Automatización de tareas tediosas
+- Garantizar la consistencia de los procedimientos
+- Verificar el uso de todos los elementos en el sistema diseñado.
+- Automatizar el dibujo de diagramas.
+- Ayudar en la documentación del sistema.
+- Ayudar en la creación de relaciones en la Base de Datos.
+- Generar estructuras de código.
+
+---
+
+### DESVENTAJAS
+- Confiabilidad en los métodos estructurados.
+- Falta de niveles estándar para el soporte de la metodología.
+- Conflictos en el uso de los diagramas.
+- Diagramas no utilizados.
+- Función limitada.
+- Costo de adquisición.
+
+---
+
+### PRINCIPALES USUARIOS
+- Organizaciones / Empresas
+- Analistas.
+- Desarrolladores.
+- Ingenieros de Software.
 
 ---
 
@@ -223,6 +303,13 @@ Aunque frecuentemente se asocia a los sistemas Case con la mejora de la producti
 
 ---
 
+### Clasificación Según su Integración:
+- **Toolkits** (Juego de herramientas). Conjunto de herramientas software que automatizan alguna fase del ciclo de vida (análisis, diseño, gestión, ...). Comparten la BD de soporte y la interfaz de usuario. Integración baja.
+- **Workbenchs** (Banco de trabajo). Conjunto de herramientas software que automatizan el ciclo de  vida en más de una fase, típicamente en  análisis + diseño + implementación (incluyendo documentación asociada). Asisten en todo el proceso y proporcionan un producto documentado y operativo. Además de compartir la BD de soporte y la interfaz de usuario, están basadas en una misma metodología. Integración media.
+- **IPSE** (Integrated Project Support Environment). Integración alta. Cubren todo el ciclo de vida, la gestión de proyectos y de la configuración.
+
+---
+
 ### Ejemplos de herramientas CASE:
 - **ERwin:** Herramienta para modelado de datos y diseño de bases de datos. 
 - **PowerDesigner:** Herramienta para modelado de datos, diseño de aplicaciones y gestión de metadatos. 
@@ -231,6 +318,8 @@ Aunque frecuentemente se asocia a los sistemas Case con la mejora de la producti
 
 <!--https://quinterod.wordpress.com/wp-content/uploads/2015/09/herramientas-case.pdf-->
 <!--https://repositorio.utn.edu.ec/bitstream/123456789/1087/2/04%20ISC%20001-TESIS.pdf-->
+<!--https://marcochicaiza72.blogspot.com/p/herramientas-case.html-->
+
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?

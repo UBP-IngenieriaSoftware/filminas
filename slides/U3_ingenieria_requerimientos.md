@@ -227,6 +227,7 @@ Los objetivos son útiles para los desarrolladores, ya que transmiten las intenc
 
 ### Métricas para la especificación de requisitos no funcionales
 
+<!-- .slide: style="font-size: 0.70em" -->
  
 <table>
 <thead>
@@ -274,6 +275,10 @@ Para algunas metas, como la mantenibilidad, no hay métricas para usarse.
 * Se relacionan con el contexto específico en el que se utilizará el software. Pueden incluir leyes, reglamentos o estándares de la industria que la aplicación debe seguir.
 Ej. El software de contabilidad debe cumplir con las normas fiscales y financieras aplicables.
 
+----
+
+![Requerimientos dominio](images/unidad3/requerimientos-dominio.jpg)
+
 ---
 ### Requerimientos del dominio
 * Dominio operacional del sistema impone requerimientos.
@@ -283,11 +288,15 @@ Ej. El software de contabilidad debe cumplir con las normas fiscales y financier
 
 ---
 ### Problemas de los requerimientos de dominio
-* Comprensibilidad
+* **Comprensibilidad**
   * Los requerimientos se expresan en el lenguaje del dominio de aplicación
   * A menudo, esto no es entendido por los programadores que desarrollan el sistema.
-* Implícito 
+* **Implícito** 
   * Especialistas del dominio entienden del problema tan bien, que no piensan que sea necesario expresar el requerimiento de manera explícita.
+
+----
+
+![Requerimientos Usuario](images/unidad3/requerimientos-usuario.jpg)
 
 ---
 
@@ -370,8 +379,7 @@ Justificar las decisiones tomadas.
 
 ---
 ### Métodos agiles y requerimientos
-* Muchos métodos ágiles argumentan que la producción de un documento de requisitos es una pérdida de tiempo que
-los requisitos cambian tan rápidamente.
+* Muchos métodos ágiles argumentan que la producción de un documento de requisitos es una pérdida de tiempo porque los requisitos cambian rápidamente.
 * El documento es, por tanto, siempre actualizado.
 * Métodos como XP utilizan requisitos expresados como "historias de usuario”
 * Esto es práctico para ciertos sistemas, pero problemático para los sistemas que requieren una gran cantidad de
@@ -395,6 +403,7 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 
 ### La estructura de un documento de requerimientos
 
+<!-- .slide: style="font-size: 0.70em" -->
 
 <table>
 <thead>
@@ -476,6 +485,8 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 ---
 
 ### Especificación de requerimientos
+
+<!-- .slide: style="font-size: 0.70em" -->
 
 <table>
 <thead>
