@@ -68,7 +68,7 @@ Created by <i class="fab fa-telegram"></i>
 
 ---
 ### Ingeniería de requerimientos
-* Proceso de descubrir, analizar, documentar y verificar los servicios que el sistema debe ofrecer y las restricciones en su operación.
+Proceso de descubrir, analizar, documentar y verificar los servicios que el sistema debe ofrecer y las restricciones en su operación.
 
 ---
 ### Definicion de Requerimiento (Davis)
@@ -89,12 +89,18 @@ de requerimientos para el sistema."
 Propiedad o restricción, determinada con precisión, que un producto software debe satisfacer
 
 ¿Cómo se expresa un requerimiento?
-* La definicion de un requerimiento puede variar de una declaración abstracta de un servicio o de una restricción de sistema a una especificación funcional matemática detallada.
+
+<p class="fragment">
+La definicion de un requerimiento puede variar de una declaración abstracta de un servicio o de una restricción de sistema a una especificación funcional matemática detallada.
+</p>
 
 ¿Qué Problemas hay?
+
+<p class="fragment">
 * Dificultad de comunicación entre el equipo de  desarrollo y el grupo de clientes/usuarios.
 * Cambio de los requerimientos.
 * Imposibilidad de identificar la totalidad de los requerimientos de un producto.
+</p>
 
 ---
 ### La comunicación...
@@ -243,7 +249,7 @@ Los objetivos son útiles para los desarrolladores, ya que transmiten las intenc
 
 ### Métricas para la especificación de requisitos no funcionales
 
-<!-- .slide: style="font-size: 0.70em" -->
+<!-- .slide: style="font-size: 0.60em" -->
  
 <table>
 <thead>
@@ -283,6 +289,7 @@ Los objetivos son útiles para los desarrolladores, ya que transmiten las intenc
 ---
 ### Requerimientos no funcionales
 Siempre que sea posible, los requerimientos No Funcionales se deberán escribir de manera cuantitativa empleando métricas.
+
 Para algunas metas, como la mantenibilidad, no hay métricas para usarse.
 
 ---
@@ -290,10 +297,6 @@ Para algunas metas, como la mantenibilidad, no hay métricas para usarse.
 * Restricciones en el sistema según el dominio de operación.
 * Se relacionan con el contexto específico en el que se utilizará el software. Pueden incluir leyes, reglamentos o estándares de la industria que la aplicación debe seguir.
 Ej. El software de contabilidad debe cumplir con las normas fiscales y financieras aplicables.
-
-----
-
-![Requerimientos dominio](images/unidad3/requerimientos-dominio.jpg)
 
 ---
 ### Requerimientos del dominio
@@ -309,6 +312,16 @@ Ej. El software de contabilidad debe cumplir con las normas fiscales y financier
   * A menudo, esto no es entendido por los programadores que desarrollan el sistema.
 * **Implícito** 
   * Especialistas del dominio entienden del problema tan bien, que no piensan que sea necesario expresar el requerimiento de manera explícita.
+
+---
+
+#### Entradas y Salidas para el análisis del dominio
+
+![Análisis del Dominio](images/unidad3/analisis-de-dominio.png)
+
+----
+
+![Requerimientos dominio](images/unidad3/requerimientos-dominio.jpg)
 
 ----
 
@@ -431,15 +444,15 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 <tbody>
 <tr>
 <td>Prefacio</td>
-<td>Esto debe definir el número de lectores se espera del documento y describir su historial de versiones, incluyendo una justificación para la creación de una nueva versión y un resumen de los cambios realizados en cada versión.</td>
+<td>Definir lectores del documento. Describir su historial de versiones. Resumen de los cambios realizados en cada versión.</td>
 </tr>
 <tr>
 <td>Introducción</td>
-<td>Esto debería describir la necesidad de que el sistema. Debe describir brevemente las funciones del sistema y explicar cómo va a funcionar con otros sistemas. También debe describir cómo el sistema se ajusta a los objetivos generales de la empresa o estratégicos de la organización puesta en marcha del software.</td>
+<td>Describir la necesidad del sistema. Describir brevemente las funciones del sistema y explicar cómo va a funcionar con otros sistemas. Describir cómo el sistema se ajusta a los objetivos generales de la empresa.</td>
 </tr>
 <tr>
 <td>Glosario</td>
-<td>Esto debería definir los términos técnicos utilizados en el documento. No debería hacer suposiciones acerca de la experiencia o los conocimientos del lector.</td>
+<td>Definir los términos técnicos utilizados en el documento. No debería hacer suposiciones acerca de la experiencia o los conocimientos del lector.</td>
 </tr>
 <tr>
 <td>Definición de requerimientos de usuario</td>
@@ -447,7 +460,7 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 </tr>
 <tr>
 <td>Arquitectura del sistema</td>
-<td>Este capítulo debe presentar una descripción de alto nivel de la arquitectura del sistema previsto, que muestra la distribución de funciones a través de los módulos del sistema. Los componentes arquitectónicos que se reutilizan deben destacarse.</td>
+<td>Descripción de alto nivel de la arquitectura del sistema previsto, que muestra la distribución de funciones a través de los módulos del sistema. Los componentes arquitectónicos que se reutilizan deben destacarse.</td>
 </tr>
 </tbody>
 </table>
@@ -456,6 +469,7 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 
 ### La estructura de un documento de requerimientos
 
+<!-- .slide: style="font-size: 0.60em" -->
 
 <table>
 <thead>
@@ -467,23 +481,23 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 <tbody>
 <tr>
 <td>Especificación de requerimientos del sistema</td>
-<td>Esto debería describir los requisitos funcionales y no funcionales en más detalle. Si es necesario, mayor detalle puede añadirse a los requerimientos no funcionales. Interfaces para otros sistemas pueden ser definidos.</td>
+<td>Describir los requisitos funcionales y no funcionales en más detalle. Describir interfaces para otros sistemas pueden ser definidos.</td>
 </tr>
 <tr>
 <td>Modelos del sistema</td>
-<td>Esto podría incluir modelos gráficos del sistema que muestran las relaciones entre los componentes del sistema y el sistema y su entorno. Ejemplos de posibles modelos son modelos de objetos, modelos de flujo de datos, o los modelos de datos semánticos.</td>
+<td>Incluir modelos gráficos del sistema que muestran las relaciones entre los componentes del sistema y el sistema y su entorno. Ejemplos: modelos de objetos, modelos de flujo de datos, modelos de datos semánticos.</td>
 </tr>
 <tr>
 <td>Sistema de evaluación</td>
-<td>Este debe describir los supuestos fundamentales en que se basa el sistema, y cualquier cambio previsto debido a la evolución del hardware, cambios en las necesidades de los usuarios, y así sucesivamente. Esta sección es útil para los diseñadores de sistemas, ya que puede ayudar a evitar las decisiones de diseño que limitarían los probables cambios futuros en el sistema.</td>
+<td>Describir los supuestos fundamentales en que se basa el sistema, y cualquier cambio previsto debido a la evolución del hardware y cambios en las necesidades de los usuarios. Ayudar a evitar las decisiones de diseño que limitarían los probables cambios futuros en el sistema.</td>
 </tr>
 <tr>
 <td>Apéndices</td>
-<td>Estos deben proporcionar información detallada y la información específica que se relaciona con la aplicación en desarrollo; por ejemplo, el hardware y las descripciones de bases de datos. Requerimientos de hardware definen las configuraciones de mínimos y óptimos para el sistema. Los requerimientos de base de datos definen la organización lógica de los datos utilizados por el sistema y las relaciones entre los datos.</td>
+<td>Proporcionan información detallada que se relaciona con la aplicación en desarrollo. Ejemplo: hardware, bases de datos. Requerimientos de hardware definen las configuraciones de mínimos y óptimos para el sistema. Los requerimientos de base de datos definen la organización lógica de los datos utilizados por el sistema y las relaciones entre los datos.</td>
 </tr>
 <tr>
 <td>Índice</td>
-<td>Se pueden incluir varios índice. Así como un índice alfabético normal, puede haber un índice de diagramas, un índice de funciones, y así sucesivamente.</td>
+<td>Se pueden incluir: índice alfabético normal, índice de diagramas, índice de funciones.</td>
 </tr>
 </tbody>
 </table>
@@ -502,7 +516,7 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 
 ### Especificación de requerimientos
 
-<!-- .slide: style="font-size: 0.70em" -->
+<!-- .slide: style="font-size: 0.60em" -->
 
 <table>
 <thead>
@@ -514,15 +528,15 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 <tbody>
 <tr>
 <td>Lenguaje natural</td>
-<td>Los requerimientos están escritos con oraciones numeradas en lenguaje natural. Cada oración debe expresar un requerimiento.</td>
+<td>Emplea oraciones numeradas, donde cada una expresar un requerimiento.</td>
 </tr>
 <tr>
 <td>Lenguaje natural Estructurado</td>
-<td>Los requerimientos están escritos en lenguaje natural en un formulario o plantilla estándar. Cada campo proporciona información acerca de un aspecto del requerimiento.</td>
+<td>Emplea un formulario o plantilla estándar. Cada campo proporciona información acerca de un aspecto del requerimiento.</td>
 </tr>
 <tr>
 <td>Lenguajes de descripción de Diseño</td>
-<td>Este enfoque utiliza un lenguaje como un lenguaje de programación, pero con características más abstractas para especificar los requisitos mediante la definición de un modelo operacional del sistema. Este enfoque se utiliza raramente aunque puede ser útil para las especificaciones de interfaz.</td>
+<td>Utiliza un lenguaje de programación, pero con características más abstractas para especificar los requisitos mediante la definición de un modelo operacional del sistema. Este enfoque se utiliza raramente aunque puede ser útil para las especificaciones de interfaz.</td>
 </tr>
 <tr>
 <td>Notaciones graficas</td>
@@ -530,7 +544,7 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 </tr>
 <tr>
 <td>Especificaciones matemáticas</td>
-<td>Estas anotaciones se basan en conceptos matemáticos, tales como máquinas de estados finitos o conjuntos. Aunque estas especificaciones no ambiguas pueden reducir la ambigüedad en un documento de requisitos, la mayoría de los clientes no entienden una especificación formal. Ellos no pueden controlar que representa lo que quieren y se resisten a aceptarlo como un contrato del sistema.</td>
+<td>Estas anotaciones se basan en conceptos matemáticos, tales como máquinas de estados finitos o conjuntos. Aunque estas especificaciones no ambiguas pueden reducir la ambigüedad en un documento de requisitos, la mayoría de los clientes no entienden una especificación formal.</td>
 </tr>
 </tbody>
 </table>
@@ -625,6 +639,8 @@ calculo para los diferentes escenarios.
 
 ### Especificación tabular del cálculo de la dosis de insulina
 
+<!-- .slide: style="font-size: 0.70em" -->
+
 <table>
 <thead>
 <tr>
@@ -660,14 +676,14 @@ calculo para los diferentes escenarios.
 dependiendo del dominio de la aplicación, las personas
 involucradas y la organización el desarrollo de los requisitos.
 * Sin embargo, hay una serie de actividades genéricas comunes a todos los procesos
-  * Obtención de requerimientos;
-  * El análisis de requerimientos;
-  * La validación de requerimientos ;
-  * La gestión de requerimientos.
+  1. Obtención de requerimientos;
+  2. El análisis de requerimientos;
+  3. La validación de requerimientos ;
+  4. La gestión de requerimientos.
 * En la práctica, IR es una actividad iterativa en el que se intercalan estos procesos.
 
 ---
-### Obtención y análisis de requerimientos
+### 1 y 2. Obtención de requerimientos
 * A veces se denomina obtención de requerimientos o
 descubrimiento de requerimientos.
 * Involucra al personal técnico que trabaja con los
@@ -686,7 +702,7 @@ las partes interesadas.
 ![Obtención y análisis de requerimientos](images/unidad3/adquisicion-analsis-requerimientos.png)
 
 ---
-### Problemas con el análisis de requerimientos
+### 2. Problemas con el análisis de requerimientos
 * Los interesados no saben lo que realmente quieren.
 * Las partes interesadas expresan requisitos en sus propios términos.
 * Las diferentes partes interesadas pueden tener requisitos contradictorios.
@@ -905,6 +921,12 @@ adquisición de requerimientos.
 ### Etnografía y prototipos para el análisis de los requerimientos
 ![Etnografia](images/unidad3/etnografia.png)
 
+----
+
+#### Puntos de vista para describir el modelo de requerimientos
+
+![Modelo de Requerimientos](images/unidad3/describir-requerimientos.png)
+
 ---
 ### Validación de requerimientos
 Proceso de verificar que los requerimientos
@@ -946,10 +968,10 @@ problemas en una etapa temprana.
 
 ---
 ### REQUERIMIENTOS:
-* La verificabilidad: Los requerimientos son verificables
-* Comprensibilidad: Los requerimientos fueron entendidos correctamente
-* Trazabilidad: El origen de la obligación se declaró con claridad
-* Adaptabilidad: El requerimiento puede cambiar sin un gran impacto en otros requerimientos
+* **Verificabilidad:** Los requerimientos son verificables
+* **Comprensibilidad:** Los requerimientos fueron entendidos correctamente
+* **Trazabilidad:** El origen de la obligación se declaró con claridad
+* **Adaptabilidad:** El requerimiento puede cambiar sin un gran impacto en otros requerimientos
 
 ---
 ### Gestión de requerimientos
@@ -1018,7 +1040,7 @@ hojas de cálculo y hasta sistemas de bases de datos simples
 
 ---
 ### Gestión de cambio de los requerimientos
-<!-- .slide: style="font-size: 0.60em" -->
+<!-- .slide: style="font-size: 0.70em" -->
 * Decidir si un cambio de requerimientos debe ser aceptado
   * **Análisis del problema y especificación del cambio**
     * Durante esta etapa, el problema o la propuesta de cambio se analiza para comprobar que sea válida. Este análisis 
