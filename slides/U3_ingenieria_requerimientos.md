@@ -599,7 +599,8 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 </tr>
 <tr>
 <td>Lenguajes de descripción de Diseño</td>
-<td>Utiliza un lenguaje de programación, pero con características más abstractas para especificar los requisitos mediante la definición de un modelo operacional del sistema. Este enfoque se utiliza raramente aunque puede ser útil para las especificaciones de interfaz.</td>
+<td>Utiliza un lenguaje de programación, pero con características más abstractas para especificar los requisitos mediante la definición de un modelo operacional del sistema. Este enfoque se utiliza raramente aunque puede ser útil para las especificaciones de interfaz. <br>
+Ejemplo: AADL (Architecture Analysis & Design Language), Acme, Wright, xADL. Se usa en desarrollos críticos: aviación.</td>
 </tr>
 <tr>
 <td>Notaciones graficas</td>
@@ -607,7 +608,7 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 </tr>
 <tr>
 <td>Especificaciones matemáticas</td>
-<td>Estas anotaciones se basan en conceptos matemáticos, tales como máquinas de estados finitos o conjuntos. Aunque estas especificaciones no ambiguas pueden reducir la ambigüedad en un documento de requisitos, la mayoría de los clientes no entienden una especificación formal.</td>
+<td>Estas anotaciones se basan en conceptos matemáticos, tales como máquinas de estados finitos o conjuntos. Pese a que reducen la ambigüedad, muchos clientes no la aceptan por no entenderla.</td>
 </tr>
 </tbody>
 </table>
