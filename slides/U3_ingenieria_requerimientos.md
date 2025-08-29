@@ -495,7 +495,7 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 
 ### La estructura de un documento de requerimientos
 
-<!-- .slide: style="font-size: 0.60em" -->
+<!-- .slide: style="font-size: 0.58em" -->
 
 <table>
 <thead>
@@ -519,7 +519,7 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 </tr>
 <tr>
 <td>Definición de requerimientos de usuario</td>
-<td>Se describe los servicios proporcionados por el usuario. Los requisitos del sistema no funcionales también deben ser descritos en esta sección. Esta descripción puede usar el lenguaje natural, diagramas u otras anotaciones que sean comprensibles para los clientes. Las normas de productos y de procesos que deben seguirse deben especificarse.</td>
+<td>Se describe los servicios proporcionados por el usuario. Los requisitos <strong>no funcionales</strong> también deben ser incluidos. Esta descripción puede usar el lenguaje natural, diagramas u otras anotaciones que sean comprensibles para los clientes. Las normas de productos y de procesos que deben seguirse deben especificarse.</td>
 </tr>
 <tr>
 <td>Arquitectura del sistema</td>
@@ -532,7 +532,7 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 
 ### La estructura de un documento de requerimientos
 
-<!-- .slide: style="font-size: 0.50em" -->
+<!-- .slide: style="font-size: 0.58em" -->
 
 <table>
 <thead>
@@ -889,7 +889,7 @@ Es un "pasar en limpio" el análisis realizado previamente aplicando técnicas y
 La validación es la etapa final de la IR. Su objetivo es que los analistas
 se aseguren que los requerimientos especificados son los que realmente quiere el cliente, que estén **completos** y sean **consistentes**.
 
-Además de cumplir con todas las características quee distinguen un buen requerimiento, la revisión ayuda a asegurarse que no se haya
+Además de cumplir con todas las características que distinguen un buen requerimiento, la revisión ayuda a asegurarse que no se haya
 omitido ningún requerimiento.
 
 ----
@@ -1208,7 +1208,7 @@ tiene que ser cambiado.
 
 ---
 ### Planificación de la gestión de requerimientos
-<!-- .slide: style="font-size: 0.70em" -->
+<!-- .slide: style="font-size: 0.75em" -->
 * Establece el nivel de detalle de la gestión de requerimientos que se requiere.
 * Decisiones de gestión requerimientos:
   * **La identificación de requerimientos:** Cada requerimiento debe ser
