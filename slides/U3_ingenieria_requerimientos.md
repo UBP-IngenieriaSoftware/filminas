@@ -1002,19 +1002,52 @@ correctamente.
 
 ---
 
-### Técnicas para recabar requerimientos
+### Técnicas para elicitar
 - Entrevistas
+- Encuestas o Cuestionarios
+- Mesas de Trabajo
 - Escenarios
 - Casos de Uso
 - Estudios Etnográficos
+- Observación
+- Análisis de Documentación
+- Prototipos
+
+<!--https://repository.icesi.edu.co/server/api/core/bitstreams/5f9b8cec-d4e0-7785-e053-2cc003c84dc5/content-->
+<!--https://repository.unad.edu.co/reproductor-ova/10596_35614/tcnicas_para_elicitar.html-->
+<!--https://suriweb.com.ar/wp/wp-content/uploads/2019/03/Dise%C3%B1o-de-un-Documento-para-la-Elicitaci%C3%B3n-y-Especificaci%C3%B3n-de-Requerimientos.pdf-->
 
 ---
+
 ### Entrevistas
 * Las entrevistas formales o informales con las partes interesadas son
 parte de la mayoría de los procesos de la IR.
 * Tipos de entrevistas
   * Entrevistas cerradas a base de lista de preguntas predeterminada
   * Entrevistas abiertas donde varios temas se exploran con las  partes interesadas.
+
+----
+
+### Preguntas Abiertas
+<!-- .slide: style="font-size: 0.85em" -->
+Explorar en profundidad, obtener detalles, descubrir perspectivas no anticipadas y fomentar una descripción amplia del proceso o necesidad. 
+
+- ¿Cómo describiría el flujo de trabajo actual para la gestión de pedidos?
+- ¿Cuáles son los principales desafíos que enfrenta su equipo al procesar solicitudes?
+- ¿Qué aspecto de la herramienta actual le genera más frustración o qué esperaría mejorar? 
+- ¿Podría describir un escenario en el que el sistema actual no cumplió sus expectativas? 
+- ¿Cómo se imagina el proceso ideal para gestionar este requerimiento?
+
+----
+
+### Preguntas Cerradas
+
+Confirmar información, verificar detalles, obtener respuestas concisas y facilitar un análisis cuantitativo. 
+<!-- .slide: style="font-size: 0.85em" -->
+- ¿El proceso de pedidos implica la revisión manual de cada artículo? (Sí/No) 
+- ¿La herramienta actual genera informes automáticos para los gastos? (Sí/No) 
+- ¿Cuál es la principal categoría de error que detecta en el sistema actual? (Opción múltiple: Inexactitud de datos, Fallos de conexión, Otros) 
+- Por favor, califique en una escala del 1 al 5, donde 1 es 'Muy insatisfecho' y 5 es 'Muy satisfecho', su experiencia con el informe de rendimiento actual.
 
 ----
 
@@ -1039,6 +1072,11 @@ podrían interactuar con el sistema.
   * Algunos dominios del conocimiento pueden ser tan familiares
 que la gente encuentra difícil dar detalles o piensan que no es
 necesario hacerlo.
+
+----
+
+### Ejercicio: Entrevista
+Piense al menos 3 preguntas cerradas y 3 preguntas abiertas sobre los requerimientos del sistema.
 
 ---
 ### Escenarios
@@ -1100,6 +1138,11 @@ en la base de datos de historia clínica. Se agrega un registro en el
 registro del sistema que muestra el inicio y fin de la sesión y la
 enfermera involucrada.
 
+----
+
+### Ejercicio: Escenario
+Piensa en 3 escenarios de uso, cada uno desde el punto de vista de un usuario/rol diferente para el sistema.
+
 ---
 ### Casos de uso
 * Casos de uso son una técnica basado de escenario en UML que
@@ -1122,6 +1165,12 @@ de eventos en el sistema.
 
 ### Casos de uso para MHC-PMS
 ![Diagrama de casos de uso](images/unidad3/diagrama-casos-de-uso.png)
+
+----
+
+### Ejercicio: Casos de uso
+
+Elabore el diagrama de casos de uso del sistema.
 
 ---
 ### Etnografía
@@ -1151,6 +1200,14 @@ adquisición de requerimientos.
 
 ### Etnografía y prototipos para el análisis de los requerimientos
 ![Etnografia](images/unidad3/etnografia.png)
+
+----
+
+### Ejercicio: Etnografía
+
+- ¿Cómo aplicaría la etnografía en el proyecto?
+- ¿Qué personas observaría?
+- ¿En qué procesos se enfocaría?
 
 ---
 

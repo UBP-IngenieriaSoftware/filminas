@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## UML: Casos de Uso
+##### Ingeniería de Software
+# UML: Casos de Uso
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
