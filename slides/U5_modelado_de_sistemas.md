@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## Modelado de Sistemas
+#### Ingeniería de Software
+# Modelado de Sistemas
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -199,7 +199,7 @@ tiene que ser completa.
 * Como una descripción detallada del sistema en ese caso debe ser correcta y completa.
 
 ---
-### Los modelos de contexto
+### Modelos de contexto
 * Se utilizan modelos de contexto para ilustrar el contexto operativo de un sistema, muestran lo que se
 encuentra fuera de los límites del sistema.
 * Las cuestiones organizacionales pueden influir en la decisión sobre dónde situar los límites del sistema.
@@ -243,7 +243,15 @@ adecuada para ofrecer el rendimiento y la fiabilidad del sistema necesario.
 
 ---
 ### Modelado de casos de uso
-* Los casos de uso se desarrollaron originalmente para apoyar la obtención de requisitos y están incorporados en el UML.
+* Los casos de uso se desarrollaron originalmente para apoyar la obtención de **requisitos** y están incorporados en el UML.
+* Especifica un comportamiento deseado del sistema.
+* Representa los requisitos funcionales del sistema.
+Un caso de uso especifica un conjunto de secuencias de acciones, incluyendo variantes, que el sistema puede ejecutar y que produce un resultado observable de valor para un particular actor.
+
+----
+
+### Modelado de casos de uso
+
 * Cada caso de uso representa una tarea discreta que implica la interacción externa con un sistema.
 * Los actores de un caso de uso pueden ser personas u otros sistemas.
 * Representación esquemática para proporcionar una visión general de los casos de uso.
@@ -261,7 +269,7 @@ Un caso de uso en el MHC-PMS:
 ![Casos de uso Médico Recepcionista](images/unidad5/ejemplo_caso_de_uso.jpg)
 
 ---
-### Los diagramas de secuencia
+### Diagramas de secuencia
 <!-- .slide: style="font-size: 0.90em" -->
 * Los diagramas de secuencia son parte de UML y se utilizan para modelar las interacciones entre los actores y
 los objetos dentro de un sistema.
@@ -281,13 +289,13 @@ trazada verticalmente a partir de estos.
 ![Diagrama de secuencia: Transferencia de datos](images/unidad5/diagrama_secuencia_transferencia_datos.jpg)
 
 ---
-### Los modelos estructurales
+### Modelos estructurales
 * Los modelos estructurales muestran la organización de un sistema en función de los componentes que conforman
 este sistema y sus relaciones.
 * Los modelos estructurales son modelos estáticos, que muestran la estructura del sistema.
 
 ---
-### Los diagramas de clases
+### Diagramas de clases
 * Los diagramas de clases se utilizan en el desarrollo de un modelo de sistema orientado a objetos para mostrar las
 clases de un sistema y las asociaciones entre estas clases.
 * Una clase de objeto es una definición general de un tipo de objeto del sistema.
@@ -529,10 +537,24 @@ específicas de plataformas de ejecución.
 
 ----
 
+### MDA: Model-Driven Architecture
+
+* MDE tiene sus orígenes en MDA. 
+* MDA se enfoca en las etapas de diseño e implementación del desarrollo de software
+* MDE se interesa por todos los aspectos del proceso de ingeniería de software
+
+----
+
 ### Ingeniería dirigida por modelos
+El método de MDA recomienda la producción de tres tipos de modelo de sistema 
+abstracto:
 - **Modelo Independiente de Computación (CIM):** Modela las importantes abstracciones de dominio usadas en el sistema.
 - **Modelo Independiente de Plataforma (PIM):** Modela la operación del sistema sin referencia a su implementación.
 - **Modelos específicos de plataforma (PSM)**
+
+----
+
+![Proceso MDA](images/unidad5/proceso_mda.png)
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
