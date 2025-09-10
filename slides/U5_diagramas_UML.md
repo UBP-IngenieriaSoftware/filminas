@@ -233,18 +233,47 @@ Esta descripción sirve de guía para el desarrollo:
 
 ----
 
-| RNF-01 | Entorno de Explotación                                                                                                                        |
-|--------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Versión | Versión 1.0                                                                                                                                   |
-|Autores| Juan Perez                                                                                                                                    |
-|Objetivos asociados | OBJ-05: Funcionamiento óptimo por usuario estándar                                                                                            |
-| Requisitos asociados|                                                                                                                                               |
-|Descripción| El sistema deberá funcionar sin ningún tipo de limitación en equipos con: Pention IV a 2,4 GHz, con 1GB de RAm y al menos 6 GB de disco duro. |
-|Importancia| Vital                                                                                                                                         |
-|Urgencia| Inmediata                                                                                                                                     |
-|Estabilidad| Alta                                                                                                                                          |
-|Comentario| Ninguno                                                                                                                                       |
-
+<table border="1" cellpadding="6" cellspacing="0">
+  <caption>RNF-01 – Entorno de Explotación</caption>
+  <tbody>
+    <tr>
+      <th scope="row">Versión</th>
+      <td>Versión 1.0</td>
+    </tr>
+    <tr>
+      <th scope="row">Autores</th>
+      <td>Juan Perez</td>
+    </tr>
+    <tr>
+      <th scope="row">Objetivos asociados</th>
+      <td>OBJ-05: Funcionamiento óptimo por usuario estándar</td>
+    </tr>
+    <tr>
+      <th scope="row">Requisitos asociados</th>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Descripción</th>
+      <td>El sistema deberá funcionar sin ningún tipo de limitación en equipos con: Pention IV a 2,4 GHz, con 1GB de RAm y al menos 6 GB de disco duro.</td>
+    </tr>
+    <tr>
+      <th scope="row">Importancia</th>
+      <td>Vital</td>
+    </tr>
+    <tr>
+      <th scope="row">Urgencia</th>
+      <td>Inmediata</td>
+    </tr>
+    <tr>
+      <th scope="row">Estabilidad</th>
+      <td>Alta</td>
+    </tr>
+    <tr>
+      <th scope="row">Comentario</th>
+      <td>Ninguno</td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 ### Diseño de una aplicación que gestione los tramites a realizar en una clínica veterinaria

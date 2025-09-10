@@ -62,7 +62,8 @@ div.grid2 div:hover{
 }
 </style>
 
-# Ing. de Software - Ejercicios
+#### Ing. de Software
+# Ejercicios
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
