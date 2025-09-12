@@ -56,6 +56,14 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 
 ---
+
+## Libro:
+![Book](images/book.png)
+“Ingeniería del Software: Un enfoque práctico 7ma ed.” de Roger Pressman
+Apéndice 1: Introducción a UML
+
+---
+
 ### Modelado de Sistemas
 
 <!--https://diagramasuml.com/-->
@@ -67,6 +75,7 @@ Una **abstracción es una simplificación**, que incluye sólo aquellos detalles
 El modelado permite abordar la complejidad de los sistemas.
 
 ---
+
 ### El modelado de sistemas
 * El modelado de sistemas es el proceso de elaboración de modelos abstractos de un sistema, con cada modelo que presenta 
 una vista o perspectiva diferente de ese sistema.
@@ -154,6 +163,7 @@ parámetros y su tipo de retorno es nulo.
 * Siglas de "Unified Modeling Language".
 * Lenguaje de modelado estándar para modelado orientado a objetos.
 * Tiene numerosos tipos de diagramas, pero en la gran mayoría de sistemas se usan solo 5.
+* UML puede usarse para visualizar, especificar, construir y documentar los artefactos de un sistema de software
 
 ![Logo UML](images/unidad5/logo-UML.png)
 
@@ -179,6 +189,43 @@ pueden ser representados por ningún diagrama.
 ---
 
 ![Clasificación de los diagramas UML](images/unidad5/clasificacion-diagramas.png)
+
+---
+
+### Diagramas UML
+<!--http://www.softwero.com/2017/08/los-13-diagramas-uml-y-sus-componentes-1.html-->
+
+<div class="grid-container2">
+<div class="grid-item">
+
+### Diagramas de Estructura 
+
+1.Diagrama de clases
+2.Diagrama de Objetos
+3.Diagrama de Componentes
+4.Diagrama de Estructura Compuesta
+
+5.Diagrama de Despliegue
+
+6.Diagrama de Paquetes
+
+</div>
+<div class="grid-item">
+
+### Diaramas de Comportamiento
+
+7.Diagrama de Actividad
+8.Diagrama de Casos de Uso
+9.Diagrama de Máquinas de Estado
+
+10.Diagrama de Secuencia
+
+11.Diagrama de Comunicaciones
+
+12.Diagrama de Tiempo
+
+13.Diagrama de Descripción de Interacción
+</div></div>
 
 ----
 
@@ -246,6 +293,7 @@ adecuada para ofrecer el rendimiento y la fiabilidad del sistema necesario.
 * Los casos de uso se desarrollaron originalmente para apoyar la obtención de **requisitos** y están incorporados en el UML.
 * Especifica un comportamiento deseado del sistema.
 * Representa los requisitos funcionales del sistema.
+* Describe qué hace el sistema, no cómo lo hace.
 Un caso de uso especifica un conjunto de secuencias de acciones, incluyendo variantes, que el sistema puede ejecutar y que produce un resultado observable de valor para un particular actor.
 
 ----
@@ -363,9 +411,9 @@ clases de nivel inferior son más especificas y pueden añadir atributos y opera
 * Muestran lo que ocurre cuando un sistema responde a un estímulo de su entorno.
 * Los estímulos pueden ser de dos tipos: **Datos** o **Eventos**
 
-----
+---
 
-### El modelado impulsado por datos
+### Modelado impulsado por datos
 * Muchos sistemas empresariales son sistemas de procesamiento de datos. Son controlados por la entrada de
 datos al sistema, con relativamente poco procesamiento de eventos externos.
 * Estos modelos muestran la secuencia de las acciones involucradas en el procesamiento de datos de entrada y la
@@ -379,13 +427,13 @@ procesamiento de extremo a extremo en un sistema.
 
 ![Modelo de actividad de Bomba de insulina](images/unidad5/modelo_actividad_bomba_insulina.jpg)
 
----- 
+----
 
-### El procesamiento de pedidos
+#### Procesamiento de pedidos
 
 ![Procesamiento de pedidos](images/unidad5/procesamiento_de_pedidos.jpg)
 
----- 
+----
 
 ### Modelado impulsado por eventos
 

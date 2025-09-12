@@ -17,15 +17,37 @@ Un caso de uso describe la manera en la que un usuario interactúa con el sistem
 los pasos requeridos para lograr una meta específica.
 
 ---
+
+Los diagramas de **casos de uso** y los **requerimientos funcionales** están estrechamente relacionados, ya que los primeros representan gráficamente los segundos. 
+- Un diagrama de casos de uso modela las funcionalidades que un sistema debe realizar
+- Un requerimiento funcional es una descripción de lo que el sistema "hará". 
+- Los casos de uso proporcionan una visión de alto nivel del sistema desde el punto de vista del usuario, ayudando a identificar, clarificar y comunicar los requisitos funcionales a todas las partes interesadas. 
+
+---
 ![Diagrama de Caso de Uso](images/unidad4/casoUsoMusica.jpg)
+
+---
+
+### Es un diagrama de comportamiento
+* Se utiliza para representar los actores externos que interactúan con el sistema de información.
+* Muestra de manera visual las distintas funciones que puede realizar un usuario (más bien un tipo de usuario) de un Sistema de Información.
+
+---
+
+### Finalidad
+* Representar los requisitos funcionales.
+* Representar los actores que se comunican con el sistema.
+* Representar las relaciones entre requisitos funcionales y actores.
+* Guiar el desarrollo del sistema.
+* Comunicarse de forma precisa entre cliente y desarrollador.
 
 ---
 ### Diagramas de Caso de Uso
 El diagrama se compone:
-* **Actores**: Persona que interactúa con el sistema (puede tener diversos roles).
-* **Casos de Uso**: Ovalos, acciones que se pueden realizar.
+* **Actores**: Es algo o alquien externo que interactúa de forma directa con el sistema (puede tener diversos roles).
+* **Casos de Uso**: Es una secuencia de acciones que hace el sistema y que producen un resultado que puede percibir un usuario. Se dibuja como **ovalos**.
 * **Limites**: Rectángulo que engloba a los casos de uso.
-* Relaciones entre casos de uso
+* **Relaciones:** Conectan los casos de uso con los actores o los casos de uso entre sí.
 
 ---
 ### CU: Límites
