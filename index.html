@@ -1,174 +1,230 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-    <meta charset="utf-8">
-
-    <title> Ingeniería de Software </title>
-    <meta name="author" content="Agus Edme Aliciardi">
+    <title>Ingeniería de Software</title>
+    <meta name="author" content="Agus Edme Aliciardi" />
     <link rel="icon" type="image/x-icon" href="images/ingenieria-soft.png" />
-</head>
-<style>
+  </head>
+  <style>
     body {
-        background: #fdf6e3;
-        font-family: "Source Sans Pro", Helvetica, sans-serif;
-        font-size: 28px;
-        font-weight: normal;
-        color: #000000;
-        margin: 20px;
-        margin-left: 10%;
-        margin-right: 10%;
+      background: #fdf6e3;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+      font-size: 28px;
+      font-weight: normal;
+      color: #000000;
+      margin: 20px;
+      margin-left: 10%;
+      margin-right: 10%;
     }
-    
+
     h2 {
-        margin: 0 0 20px 0;
-        color: #000000;
-        font-family: "Source Sans Pro", Helvetica, sans-serif;
-        font-weight: 600;
-        line-height: 1.2;
-        letter-spacing: normal;
-        text-transform: uppercase;
-        text-shadow: none;
-        word-wrap: break-word;
-        font-size: 1.6em;
+      margin: 0 0 20px 0;
+      color: #000000;
+      font-family: "Source Sans Pro", Helvetica, sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-transform: uppercase;
+      text-shadow: none;
+      word-wrap: break-word;
+      font-size: 1.6em;
     }
-    
+
     a {
-        color: #42affa;
-        text-decoration: none;
-        -webkit-transition: color 0.15s ease;
-        -moz-transition: color 0.15s ease;
-        transition: color 0.15s ease;
+      color: #42affa;
+      text-decoration: none;
+      -webkit-transition: color 0.15s ease;
+      -moz-transition: color 0.15s ease;
+      transition: color 0.15s ease;
     }
-    
+
     a.practico {
-        color: rgb(233, 180, 110)
+      color: rgb(233, 180, 110);
     }
-    
+
     a:hover {
-        color: #8dcffc;
-        text-shadow: none;
-        border: none;
+      color: #8dcffc;
+      text-shadow: none;
+      border: none;
     }
-    
+
     .grid-container {
-        display: grid;
-        grid-template-columns: 320px auto;
-        padding: 10px;
+      display: grid;
+      grid-template-columns: 320px auto;
+      padding: 10px;
     }
-    
+
     .grid-item {
-        background-color: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(0, 0, 0, 0.8);
-        font-size: 30px;
-        padding: 10px;
-        vertical-align: middle;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      font-size: 30px;
+      padding: 10px;
+      vertical-align: middle;
     }
-</style>
+  </style>
 
-<body>
-
+  <body>
     <h2>Ingeniería de Software</h2>
-    <br>
+    <br />
     <div class="grid-container">
-        <div class="grid-item">
-            <img src="images/indice/GTP.png" />
-        </div>
-        <div class="grid-item">
-            <a href="U0_presentacion.html">Presentación de la Materia</a>
-            <br>
-            <a class="practico" href="https://docs.google.com/document/d/1tw3C3NUQmgLER0_AM1FHea-W1cuzL91_Uj-tTFsmzZo">Guía de Trabajos Prácticos</a>
-            <br>
-            <a class="practico" href="https://docs.google.com/document/d/1Upj_LSpD5FNrVRrqhWJWEk1sEQSBSpz-">Programa de la materia</a>
-            <br>
-            <!--a class="practico" href="https://docs.google.com/document/d/1BngUHbRgBMRypEF25YjCHDVdmRNA6rkKh1Ssvd6H9zg/edit?usp=sharing">Proyecto de Clases 2023</a-->
-            <!--br-->
-            <!--a class="practico" href="https://docs.google.com/document/d/1GQ9svBD_dkKzp4pJSBaBIeDCv_CNUwXDTvjMmZrfs8c/edit?usp=sharing">Proyecto de Clases 2024</a-->
-            <!--br-->
-            <a class="practico" href="https://docs.google.com/document/d/1ty-b6mDWfHA5dL6EfMfOyMre_wsE08fnzO6b38GaQGY/edit?tab=t.0">Proyecto de Clases 2025 (Cátedra Prof. Aliciardi)</a>
-        </div>
-        <div class="grid-item">
-            <img src="images/indice/u1_icono.png" />
-        </div>
-        <div class="grid-item">
-            Módulo I: Introducción a la Ingeniería de Software
-            <br>
-            <a href="U1_Introduccion.html"> Introducción </a>
-            <br>
-            <a href="U2_procesos_software.html"> Procesos de Software </a>
-            <br>
-            <a href="U4_1_desarrollo_agil.html"> Desarrollo Ágil de Software</a> 
-            <br>
-            <a class="practico" href="U4P_scrum_jira.html"> Scrum: Práctico </a>
-            <br>
-            <a class="practico" href="U2_herramientas-case.html">Herramientas CASE</a>
-        </div>
-        <div class="grid-item">
-            <img src="images/indice/u2_icono.png" />
-        </div>
-        <div class="grid-item">
-            Módulo II: Requisitos de Software<br>
-            <a href="U3_ingenieria_requerimientos.html"> Ingenieria de Requerimientos </a> <br>
-            <a class="practico" href="https://docs.google.com/document/d/1cqnZBf7Ww1iHRZYET7N0AuNu4fMzeW1ODw9u4C16Y2o/edit?usp=sharing">Template de Especificación de Requerimientos de Software</a>
-            <br>
-            <a class="practico" href="https://drive.google.com/file/d/1FX-0iba7LHtG0e_mgqDu4sR04xHtjsIg/view?usp=sharing">Ejemplo de Especificación de Requerimientos de Software</a>
-            <br>
-            <a class="practico" href="U3P_requerimientos_de_software.html"> Documento de Requerimientos (explicación) </a> <br>
-        </div>
-        <div class="grid-item">
-            <img src="images/indice/u3_icono.png" />
-        </div>
-        <div class="grid-item">
-            Módulo III: Análisis y Diseño de Software<br>
-            <a href="U5_modelado_de_sistemas.html">Modelado de Sistemas</a> <br>
-            <a href="U5_diagramas_UML.html">Diagramas UML</a> <br>
-            <a class="practico" href="U5P_1_UML_Introduccion.html"> Modelado UML - Introducción </a> <br>
-            <a class="practico" href="U5P_2_UML_casos_de_uso.html"> Diagrama de Casos de Uso </a> <br>
-            <a class="practico" href="U5P_3_UML_diagrama_clase.html"> Diagrama de Clases </a> <br>
-            <a class="practico" href="U5P_4_UML_diagramas_secuencia.html"> Diagrama de Secuencia </a> <br>
-        </div>
-        <div class="grid-item">
-            <img src="images/indice/u4_icono.png" />
-        </div>
-        <div class="grid-item">
-            Módulo IV: Gestión de Proyectos de Software<br>
-            <a href="U4_2_usabilidad.html"> Usabilidad</a> <br>
-            <a href="U4_3_reglas_de_oro.html"> Usabilidad: 8 Reglas de Oro de Shneiderman & 10 Principios Heurísticos de Nielsen</a> <br>
-            <a class="practico" href="U4P_prototipado.html"> Diseño y Prototipado </a> <br>
-            <a href="U6_disenio_arquitectonico.html">Diseño Arquitectónico</a> <br>
-            <a href="U7_disenio_implementacion.html">Diseño e Implementación</a> <br>
-            <a href="U7_1_principios_de_diseno.html">Principios de Diseño</a> <br>
-            <a href="U7_2_clean_code.html">Código Límpio</a> <br>
-        </div>
-        <div class="grid-item">
-            <img src="images/indice/u5_icono.png" />
-        </div>
-        <div class="grid-item">
-            Módulo V: Aseguramiento de Calidad y Gestión de Configuración<br>
-            <a href="U8_pruebas_de_software.html">Pruebas de Software</a>
-            <br>
-            <a class="practico" href="https://docs.google.com/document/d/1s06ajEqb3EdFs7rPFdjBb8pl1FOplD9QHJ3ZURH8FFs/edit">Plantilla de Casos de Pruebas</a>
-            <br>
-            <a class="practico" href="U8P_plantilla_caso_de_prueba.html">Casos de Prueba</a>
-            <br>
-            <a class="practico" href="U8P2_automatizacion_casos_prueba.html">Automatización de Casos de Pruebas</a>
-            <br>
-            <a class="practico" href="U8P3_gherkin.html">BDD: Desarrollo Dirigido por Comportamiento</a>
-            <br>
-            <a href="U9_evolucion_mantenimiento_software.html">Evolución y Mantenimiento del Software</a> <br>
-            <br>
-            <a href="U10_gestion_de_proyectos.html">Gestión de Proyectos</a> <br>
-            <a href="U11_calidad_del_software.html">Calidad del Software</a> <br>
-            <a class="practico" href="U12_resumen.html">Resumen del proceso de desarrollo</a>
-        </div>
-        <div class="grid-item">
-            <img src="images/indice/ejercicios.png" />
-        </div>
-        <div class="grid-item">
-            <a href="Ejercicios.html">Ejercicios</a> <br>
-        </div>
+      <div class="grid-item">
+        <img src="images/indice/GTP.png" />
+      </div>
+      <div class="grid-item">
+        <a href="U0_presentacion.html">Presentación de la Materia</a>
+        <br />
+        <a
+          class="practico"
+          href="https://docs.google.com/document/d/1tw3C3NUQmgLER0_AM1FHea-W1cuzL91_Uj-tTFsmzZo"
+          >Guía de Trabajos Prácticos</a
+        >
+        <br />
+        <a
+          class="practico"
+          href="https://docs.google.com/document/d/1Upj_LSpD5FNrVRrqhWJWEk1sEQSBSpz-"
+          >Programa de la materia</a
+        >
+        <br />
+        <!--a class="practico" href="https://docs.google.com/document/d/1BngUHbRgBMRypEF25YjCHDVdmRNA6rkKh1Ssvd6H9zg/edit?usp=sharing">Proyecto de Clases 2023</a-->
+        <!--br-->
+        <!--a class="practico" href="https://docs.google.com/document/d/1GQ9svBD_dkKzp4pJSBaBIeDCv_CNUwXDTvjMmZrfs8c/edit?usp=sharing">Proyecto de Clases 2024</a-->
+        <!--br-->
+        <a
+          class="practico"
+          href="https://docs.google.com/document/d/1ty-b6mDWfHA5dL6EfMfOyMre_wsE08fnzO6b38GaQGY/edit?tab=t.0"
+          >Proyecto de Clases 2025 (Cátedra Prof. Aliciardi)</a
+        >
+      </div>
+      <div class="grid-item">
+        <img src="images/indice/u1_icono.png" />
+      </div>
+      <div class="grid-item">
+        Módulo I: Introducción a la Ingeniería de Software
+        <br />
+        <a href="U1_Introduccion.html"> Introducción </a>
+        <br />
+        <a href="U2_procesos_software.html"> Procesos de Software </a>
+        <br />
+        <a href="U4_1_desarrollo_agil.html"> Desarrollo Ágil de Software</a>
+        <br />
+        <a class="practico" href="U4P_scrum_jira.html"> Scrum: Práctico </a>
+        <br />
+        <a class="practico" href="U2_herramientas-case.html"
+          >Herramientas CASE</a
+        >
+      </div>
+      <div class="grid-item">
+        <img src="images/indice/u2_icono.png" />
+      </div>
+      <div class="grid-item">
+        Módulo II: Requisitos de Software<br />
+        <a href="U3_ingenieria_requerimientos.html">
+          Ingenieria de Requerimientos
+        </a>
+        <br />
+        <a
+          class="practico"
+          href="https://docs.google.com/document/d/1cqnZBf7Ww1iHRZYET7N0AuNu4fMzeW1ODw9u4C16Y2o/edit?usp=sharing"
+          >Template de Especificación de Requerimientos de Software</a
+        >
+        <br />
+        <a
+          class="practico"
+          href="https://drive.google.com/file/d/1FX-0iba7LHtG0e_mgqDu4sR04xHtjsIg/view?usp=sharing"
+          >Ejemplo de Especificación de Requerimientos de Software</a
+        >
+        <br />
+        <a class="practico" href="U3P_requerimientos_de_software.html">
+          Documento de Requerimientos (explicación)
+        </a>
+        <br />
+      </div>
+      <div class="grid-item">
+        <img src="images/indice/u3_icono.png" />
+      </div>
+      <div class="grid-item">
+        Módulo III: Análisis y Diseño de Software<br />
+        <a href="U5_modelado_de_sistemas.html">Modelado de Sistemas</a> <br />
+        <a href="U5_diagramas_UML.html">Diagramas UML</a> <br />
+        <a class="practico" href="U5P_2_UML_casos_de_uso.html">
+          Diagrama de Casos de Uso
+        </a>
+        <br />
+        <a class="practico" href="U5P_3_UML_diagrama_clase.html">
+          Diagrama de Clases
+        </a>
+        <br />
+        <a class="practico" href="U5P_4_UML_diagramas_secuencia.html">
+          Diagrama de Secuencia
+        </a>
+        <br />
+      </div>
+      <div class="grid-item">
+        <img src="images/indice/u4_icono.png" />
+      </div>
+      <div class="grid-item">
+        Módulo IV: Gestión de Proyectos de Software<br />
+        <a href="U4_2_usabilidad.html"> Usabilidad</a> <br />
+        <a href="U4_3_reglas_de_oro.html">
+          Usabilidad: 8 Reglas de Oro de Shneiderman & 10 Principios Heurísticos
+          de Nielsen</a
+        >
+        <br />
+        <a class="practico" href="U4P_prototipado.html">
+          Diseño y Prototipado
+        </a>
+        <br />
+        <a href="U6_disenio_arquitectonico.html">Diseño Arquitectónico</a>
+        <br />
+        <a href="U7_disenio_implementacion.html">Diseño e Implementación</a>
+        <br />
+        <a href="U7_1_principios_de_diseno.html">Principios de Diseño</a> <br />
+        <a href="U7_2_clean_code.html">Código Límpio</a> <br />
+      </div>
+      <div class="grid-item">
+        <img src="images/indice/u5_icono.png" />
+      </div>
+      <div class="grid-item">
+        Módulo V: Aseguramiento de Calidad y Gestión de Configuración<br />
+        <a href="U8_pruebas_de_software.html">Pruebas de Software</a>
+        <br />
+        <a
+          class="practico"
+          href="https://docs.google.com/document/d/1s06ajEqb3EdFs7rPFdjBb8pl1FOplD9QHJ3ZURH8FFs/edit"
+          >Plantilla de Casos de Pruebas</a
+        >
+        <br />
+        <a class="practico" href="U8P_plantilla_caso_de_prueba.html"
+          >Casos de Prueba</a
+        >
+        <br />
+        <a class="practico" href="U8P2_automatizacion_casos_prueba.html"
+          >Automatización de Casos de Pruebas</a
+        >
+        <br />
+        <a class="practico" href="U8P3_gherkin.html"
+          >BDD: Desarrollo Dirigido por Comportamiento</a
+        >
+        <br />
+        <a href="U9_evolucion_mantenimiento_software.html"
+          >Evolución y Mantenimiento del Software</a
+        >
+        <br />
+        <br />
+        <a href="U10_gestion_de_proyectos.html">Gestión de Proyectos</a> <br />
+        <a href="U11_calidad_del_software.html">Calidad del Software</a> <br />
+        <a class="practico" href="U12_resumen.html"
+          >Resumen del proceso de desarrollo</a
+        >
+      </div>
+      <div class="grid-item">
+        <img src="images/indice/ejercicios.png" />
+      </div>
+      <div class="grid-item">
+        <a href="Ejercicios.html">Ejercicios</a> <br />
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>
