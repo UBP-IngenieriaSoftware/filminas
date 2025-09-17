@@ -24,6 +24,7 @@ Los diagramas de **casos de uso** y los **requerimientos funcionales** están es
 - Los casos de uso proporcionan una visión de alto nivel del sistema desde el punto de vista del usuario, ayudando a identificar, clarificar y comunicar los requisitos funcionales a todas las partes interesadas. 
 
 ---
+
 ![Diagrama de Caso de Uso](images/unidad4/casoUsoMusica.jpg)
 
 ---

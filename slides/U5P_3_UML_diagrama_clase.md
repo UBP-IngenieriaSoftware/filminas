@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## UML: Diagrama de Clases
+#### Ingeniería de Software
+# UML: Diagrama de Clases
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -28,7 +28,7 @@ con el fin de llegar a una mayor comprensión de los mismos.
   * Realizaciones de casos de Uso: Muestran cómo las instancias de análisis pueden interactuar para realizar el comportamiento del sistema.
 
 ---
-* Solo deben crearse clases relacionadas al dominio y no al diseño de la solución (ejemplo: “Clase de Comunicaciones”)
+* Solo deben crearse clases relacionadas al dominio y no al diseño de la solución (ejemplo: “Clase de Comunicaciones, ControladorBD, ServicioHTTP”)
 * Decisiones de implementación es parte del “Diseño e Implementación”.
 
 ---
@@ -111,7 +111,7 @@ con el fin de llegar a una mayor comprensión de los mismos.
   * Fase 2: Analizar información
 
 ---
-### Estereotipos RUP
+### Estereotipos RUP - Rational Unified Process
 * Se consideran tres tipos de clases
 * Es empleada como complemento de las otras
 * Existen tres estereotipos definidos por RUP
