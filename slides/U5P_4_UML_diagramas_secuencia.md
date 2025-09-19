@@ -160,7 +160,7 @@ Filtros y afirmaciones:
 
 ----
 
-El siguiente diagrama muestra un fragmento loop:
+3. **Loop** incluye una serie de mensajes que están repetidos.
 
 ![Loop](images/unidad5/loop.GIF)
 
@@ -183,33 +183,57 @@ Cuando un alumno quiere matricularse pueden darse estos casos:
 
 ----
 
+<!-- .slide: style="font-size: 0.55em" -->
+6. **Weak**, _seq_ incluye un número de secuencias para las cuales todos los mensajes se deben procesar en un segmento anterior, antes de que el siguiente segmento pueda comenzar, pero que no impone ningún secuenciado en los mensajes que no comparten una línea de vida.
+
 ![sec](images/unidad5/sec.png)
 
 ----
+
+<!-- .slide: style="font-size: 0.55em" -->
+7. **Strict**, _strict_ incluye una serie de mensajes que se deben procesar en el orden proporcionado.
 
 ![strict](images/unidad5/strict.png)
 
 ----
 
+<!-- .slide: style="font-size: 0.55em" -->
+5. **Parallel**, _par_ modela procesos concurrentes.
+
 ![par](images/unidad5/par.png)
 
 ----
+
+<!-- .slide: style="font-size: 0.55em" -->
+8. **Critical** incluye una sección crítica.
 
 ![critical](images/unidad5/critical.png)
 
 ----
 
+<!-- .slide: style="font-size: 0.55em" -->
+10. **Ignore** declara un mensaje o mensajes que no son de ningún interés si este aparece en el contexto actual.
+
 ![ignore](images/unidad5/ignore.png)
 
 ----
+
+<!-- .slide: style="font-size: 0.55em" -->
+11. **Consider** es el opuesto del fragmento Ignore: cualquier mensaje que no se incluya en el fragmento Consider se debería ignorar.
 
 ![consider](images/unidad5/consider.png)
 
 ----
 
+<!-- .slide: style="font-size: 0.55em" -->
+12. **Assertion**, _assert_ designa que cualquier secuencia que no se muestra como un operando de la aserción es inválida.
+
 ![assert](images/unidad5/assert.png)
 
 ----
+
+<!-- .slide: style="font-size: 0.55em" -->
+9. **Negative**, _neg_ incluye una serie de mensajes inválidos.
 
 ![neg](images/unidad5/neg.png)
 

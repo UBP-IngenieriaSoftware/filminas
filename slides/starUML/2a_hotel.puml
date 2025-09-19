@@ -1,4 +1,5 @@
 @startuml
+autonumber
 title Cancelación de reserva (Cliente o Administrativo) - Hotel
 
 actor "Cliente" as CLI

@@ -1,4 +1,5 @@
 @startuml
+autonumber
 title Cancelar reserva (Cliente)
 
 actor Cliente as C

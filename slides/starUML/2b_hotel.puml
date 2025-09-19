@@ -3,7 +3,7 @@ autonumber
 title Facturar estadía (Recepcionista) - Hotel
 
 actor "Recepcionista" as R
-boundary "UI Backoffice" as UI
+boundary "Interfaz" as UI
 control "Sistema Hotelero" as S
 database "RepoReservas/Folios" as RR
 database "RepoClientes" as RC
