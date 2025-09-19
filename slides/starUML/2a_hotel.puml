@@ -1,0 +1,84 @@
+@startuml
+title Cancelación de reserva (Cliente o Administrativo) - Hotel
+
+actor "Cliente" as CLI
+actor "Administrativo de Reservas" as ADM
+boundary "UI Web" as UIW
+boundary "UI Backoffice" as UIB
+control "Sistema de Reservas" as S
+database "RepoReservas" as RR
+database "RepoClientes" as RC
+control "ServicioTarifas" as ST
+control "ServicioPagos" as SP
+control "ServicioNotificaciones" as SN
+
+' Inicio alternativo según quién cancela
+alt Cancelación iniciada por Cliente
+  CLI -> UIW: Solicitar cancelación(reservaId)
+  UIW -> S: cancelarReserva(reservaId, solicitante=cliente, clienteId)
+else Cancelación iniciada por Administrativo
+  ADM -> UIB: Solicitar cancelación(reservaId)
+  UIB -> S: cancelarReserva(reservaId, solicitante=admin)
+end
+
+' Recuperar reserva y validar estado
+S -> RR: obtenerReserva(reservaId)
+RR --> S: reserva | null
+
+alt Reserva no existe o ya cancelada/consumida
+  S --> UIW: Error "Reserva no válida"
+  S --> UIB: Error "Reserva no válida"
+else Reserva válida
+  ' Validar pertenencia solo si cancela el cliente
+  S -> RC: obtenerCliente(clienteId)
+  RC --> S: cliente (si aplica)
+
+  alt solicitante=cliente y reserva.clienteId != cliente.id
+    S --> UIW: Error "No autorizado"
+  else Autorizado (cliente válido) o solicitante=admin
+    ' Calcular ventana de penalización
+    S -> S: horasAntes = diff(reserva.fechaCheckIn, now)
+
+    alt horasAntes >= 24
+      ' Sin penalización
+      S -> RR: cancelar(reservaId, motivo="cancelación solicitante", penalizacion=0)
+      RR --> S: ok
+
+      ' Notificar
+      S -> SN: notificar(reserva, "Cancelación confirmada sin cargo")
+      SN --> S: ok
+
+      S --> UIW: "Cancelación exitosa (sin penalización)"
+      S --> UIB: "Cancelación exitosa (sin penalización)"
+    else horasAntes < 24
+      ' Con penalización = 50% de 1 noche del tipo de habitación reservado
+      S -> ST: calcularTarifaNoche(reserva.tipoHabitacion, reserva.fechaCheckIn)
+      ST --> S: tarifaNoche
+
+      S -> SP: cargarPenalizacion(reserva.metodoPago, monto=0.5*tarifaNoche,\nreferencia=reservaId)
+      alt Cargo aprobado
+        SP --> S: aprobado
+        S -> RR: cancelar(reservaId, motivo="cancelación tardía", penalizacion=0.5*tarifaNoche)
+        RR --> S: ok
+
+        S -> SN: notificar(reserva, "Cancelación con penalización",\n detalle=monto)
+        SN --> S: ok
+
+        S --> UIW: "Cancelación exitosa (con penalización)"
+        S --> UIB: "Cancelación exitosa (con penalización)"
+      else Cargo rechazado
+        SP --> S: rechazado
+        ' Política: permitir la cancelación e informar deuda pendiente
+        S -> RR: cancelar(reservaId, motivo="cancelación tardía",\n penalizacionPendiente=0.5*tarifaNoche, estadoCobro="pendiente")
+        RR --> S: ok
+
+        S -> SN: notificar(reserva, "Cancelación con penalización pendiente de cobro")
+        SN --> S: ok
+
+        S --> UIW: "Cancelación registrada; penalización pendiente de cobro"
+        S --> UIB: "Cancelación registrada; penalización pendiente de cobro"
+      end
+    end
+  end
+end
+@enduml

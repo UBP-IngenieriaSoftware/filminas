@@ -1,0 +1,52 @@
+@startuml
+title Generar reporte de reservas (Recepcionista)
+
+actor Recepcionista as R
+boundary "UI/Front" as UI
+control "Sistema de Reservas" as S
+control "ServicioHorario" as SH
+database "RepoReservas" as RR
+database "RepoMesas" as RM
+database "RepoClientes" as RC
+control "ServicioReportes" as SRpt
+
+' Precondición informativa (no-show/penalizaciones gestionadas por job aparte)
+note over S
+  Precondición: ya se ejecutaron procesos automáticos:
+  - No-show: a los 30' del inicio del turno, cancelación y penalización 1 semana.
+  - Por eso, las reservas consultadas ya reflejan esas bajas.
+end note
+
+R -> UI: Click "Generar reporte"\n(fecha, turno: almuerzo/cena)
+UI -> S: generarReporte(fecha, turno)
+
+S -> SH: getHoraCorte(turno)
+SH --> S: horaCorte
+
+alt Aún no pasó la hora de corte
+  S --> UI: Error: "El turno no está cerrado (hora de corte: {horaCorte})"
+  UI --> R: Mostrar mensaje
+else Ya pasó la hora de corte
+  S -> RR: obtenerReservasConfirmadas(fecha, turno)
+  RR --> S: [reservas]
+
+  S -> RM: obtenerMesas()
+  RM --> S: [mesas]
+
+  S -> RC: obtenerClientes(idsClientesDeReservas)
+  RC --> S: [clientes]
+
+  note over S
+    Une reservas + clientes + mesas
+    - Mesas asignadas: reservas confirmadas
+    - Mesas disponibles: mesas - mesasAsignadas
+  end note
+
+  S -> SRpt: generar(fecha, turno, mesasAsignadas, mesasDisponibles)
+  SRpt --> S: reporte (PDF/CSV)
+
+  S --> UI: reporte
+  UI --> R: Descargar/Visualizar reporte
+end
+
+@enduml

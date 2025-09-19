@@ -1,0 +1,62 @@
+@startuml
+title Cancelar reserva (Cliente)
+
+actor Cliente as C
+boundary "UI Web" as UI
+control "Sistema de Reservas" as S
+control "ServicioHorario" as SH
+database "RepoReservas" as RR
+database "RepoClientes" as RC
+database "RepoMesas" as RM
+control "ServicioNotificaciones" as SN
+
+note over S
+  Reglas:
+  - Cancelación válida hasta 11:30 (almuerzo) / 19:30 (cena).
+  - Penalización (1 semana) solo por no-show (flujo aparte).
+  - Tener penalización impide crear reservas, no cancelar.
+end note
+
+C -> UI: Click "Cancelar reserva"\n(reservaId)
+UI -> S: cancelarReserva(reservaId, clienteId)
+
+S -> RR: obtenerReserva(reservaId)
+RR --> S: reserva | null
+
+alt Reserva no existe o no pertenece al cliente
+  S --> UI: Error: "Reserva no encontrada"
+  UI --> C: Mostrar mensaje
+else Reserva encontrada y pertenece al cliente
+  S -> SH: getHoraCorte(reserva.turno)
+  SH --> S: horaCorte
+
+  alt Aún no pasó la hora de corte
+    ' Cancelación permitida
+    S -> RR: cancelar(reservaId, motivo="cancelación cliente")
+    RR --> S: ok
+
+    ' Liberar mesa
+    S -> RM: liberarMesa(reserva.mesaId, reserva.fecha, reserva.turno)
+    RM --> S: ok
+
+    ' (Opcional) actualizar estado del cliente si tuviera flags temporales
+    S -> RC: obtenerCliente(clienteId)
+    RC --> S: cliente
+    note over S
+      No se aplica penalización por cancelar a tiempo.
+    end note
+
+    ' Notificar confirmación
+    S -> SN: enviarEmail/SMS(cliente.contacto,\n"Cancelación confirmada", datosReserva)
+    SN --> S: ok
+
+    S --> UI: Cancelación exitosa
+    UI --> C: Mostrar confirmación
+  else Ya pasó la hora de corte
+    ' Cancelación no permitida por el cliente
+    S --> UI: Error: "No se puede cancelar.\nCorte: {horaCorte}"
+    UI --> C: Mostrar mensaje y sugerir contacto con restaurante
+  end
+end
+
+@enduml

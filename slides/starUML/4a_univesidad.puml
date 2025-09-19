@@ -1,0 +1,102 @@
+@startuml
+title Otorgar beca a estudiante - Universidad
+autonumber
+
+actor "Estudiante" as EST
+actor "Admin. Becas" as ADM
+boundary "Portal Estudiante" as UIE
+boundary "Backoffice Becas" as UIB
+control "Sistema Académico" as SA
+database "RepoPersonas/Estudiantes" as RPE
+database "RepoMatriculas" as RMAT
+database "RepoBecas" as RBEC
+control "ServicioNotificaciones" as SNOT
+control "Scheduler" as SCH
+
+' Inicio alternativo
+alt Solicitud iniciada por Estudiante
+  EST -> UIE: Solicitar beca (dni)
+  activate UIE
+  UIE -> SA: otorgarBeca(dni, origen="estudiante")
+  activate SA
+else Alta iniciada por Administración
+  ADM -> UIB: Otorgar beca (dni, monto)
+  activate UIB
+  UIB -> SA: otorgarBeca(dni, monto, origen="admin")
+  activate SA
+end
+
+' 1) Verificar persona y condición de estudiante
+SA -> RPE: obtenerPersonaYEstudiante(dni)
+activate RPE
+RPE --> SA: persona | estudiante | null
+deactivate RPE
+
+alt No existe persona o no es estudiante
+  SA --> UIE: Rechazo: "Debe darse de alta como estudiante"
+  SA --> UIB: Rechazo: "No es estudiante activo"
+  deactivate SA
+  deactivate UIE
+  deactivate UIB
+else Es estudiante
+  ' 2) Verificar matrícula activa en curso vigente
+  SA -> RMAT: tieneMatriculaVigente(estudiante.id, cursoActual)
+  activate RMAT
+  RMAT --> SA: boolean (matriculado)
+  deactivate RMAT
+
+  alt No está matriculado
+    SA --> UIE: Rechazo: "No posee matrícula vigente"
+    SA --> UIB: Rechazo: "No posee matrícula vigente"
+    deactivate SA
+    deactivate UIE
+    deactivate UIB
+  else Matriculado
+    ' 3) Determinar monto/código de beca
+    alt origen="estudiante" (requiere evaluación)
+      SA -> SA: evaluarCriterios(estudiante, cursoActual)
+      alt No cumple criterios
+        SA --> UIE: Rechazo: "No cumple criterios de beca"
+        deactivate SA
+        deactivate UIE
+        deactivate UIB
+      else Cumple criterios
+        SA -> RBEC: crearBeca(estudiante.id, cursoActual,\n generarCodigo(), montoCalculado,\n fechaInicio=now, fechaFin=finCurso)
+        activate RBEC
+        RBEC --> SA: beca(codigo, monto, fechaFin)
+        deactivate RBEC
+      end
+    else origen="admin" (monto provisto)
+      SA -> RBEC: crearBeca(estudiante.id, cursoActual,\n generarCodigo(), monto,\n fechaInicio=now, fechaFin=finCurso)
+      activate RBEC
+      RBEC --> SA: beca(codigo, monto, fechaFin)
+      deactivate RBEC
+    end
+
+    ' 4) Notificar resultado
+    SA -> SNOT: notificar(estudiante.contacto,\n "Beca otorgada", codigo, monto, fechaFin)
+    activate SNOT
+    SNOT --> SA: ok
+    deactivate SNOT
+
+    SA --> UIE: Éxito: Beca {codigo} registrada
+    SA --> UIB: Éxito: Beca {codigo} registrada
+    deactivate SA
+    deactivate UIE
+    deactivate UIB
+
+    ' 5) Fin automático de la beca al finalizar el curso
+    SCH -> SA: (al fin de curso) finalizarBeca(codigo)
+    activate SA
+    SA -> RBEC: cerrarBeca(codigo, estado="finalizada", fechaFinReal=now)
+    activate RBEC
+    RBEC --> SA: ok
+    deactivate RBEC
+    SA -> SNOT: notificar(estudiante.contacto,\n "Beca finalizada al cierre del curso", codigo)
+    activate SNOT
+    SNOT --> SA: ok
+    deactivate SNOT
+    deactivate SA
+  end
+end
+@enduml

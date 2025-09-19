@@ -1,0 +1,91 @@
+@startuml
+title Modificar datos de una propiedad - Inmobiliaria
+autonumber
+
+actor "Vendedor" as V
+boundary "UI Inmobiliaria" as UI
+control "Sistema Inmobiliario" as S
+control "ServicioAuth" as AUTH
+database "RepoPropiedades" as RProp
+control "ServicioMedios" as SMedia
+database "RepoAuditoria" as RAud
+
+' 1) Inicio: vendedor abre la propiedad y envía cambios
+V -> UI: Editar propiedad (propiedadId)\n+ payload cambios + fotos (opc.)
+activate UI
+UI -> S: actualizarPropiedad(vendedorId, propiedadId,\n cambios, fotos[], versionCliente)
+activate S
+
+' 2) Autenticación y permisos
+S -> AUTH: verificarPermisos(vendedorId, accion="editar_propiedad")
+activate AUTH
+AUTH --> S: permitido(bool)
+deactivate AUTH
+
+alt Permiso denegado
+  S --> UI: Error: "No tiene permisos para editar"
+  deactivate S
+  UI --> V: Mostrar error
+  deactivate UI
+else Permiso OK
+  ' 3) Obtener propiedad y verificar existencia
+  S -> RProp: obtenerPorId(propiedadId)
+  activate RProp
+  RProp --> S: propiedad | null
+  deactivate RProp
+
+  alt Propiedad no existe
+    S --> UI: Error: "Propiedad no encontrada"
+    deactivate S
+    UI --> V: Mostrar error
+    deactivate UI
+  else Propiedad encontrada
+    ' 4) Control de concurrencia (optimistic locking)
+    S -> S: comparar(versionCliente, propiedad.versionServidor)
+    alt Versión desactualizada (conflicto)
+      S --> UI: Error: "Conflicto de edición. Recargá la propiedad"
+      deactivate S
+      UI --> V: Sugerir recargar/merge
+      deactivate UI
+    else Versión OK
+      ' 5) Validaciones de negocio (ej.: metros, habitaciones, operación)
+      S -> S: validar(cambios) ' reglas: metros >= construidos, números ≥ 0, etc.
+
+      alt Validación falla
+        S --> UI: Errores de validación (detalle campo -> mensaje)
+        deactivate S
+        UI --> V: Mostrar errores
+        deactivate UI
+      else Validación OK
+        ' 6) Actualizar datos estructurados
+        S -> RProp: actualizar(propiedadId, cambios,\n nuevaVersion=versionServidor+1)
+        activate RProp
+        RProp --> S: ok (versionActualizada)
+        deactivate RProp
+
+        ' 7) Manejo de medios (opcional)
+        alt Hay fotos a subir o eliminar
+          S -> SMedia: procesarMedios(propiedadId,\n subir=fotos.nuevas[], eliminar=fotos.aEliminar[])
+          activate SMedia
+          SMedia --> S: ok (urlsActualizadas)
+          deactivate SMedia
+        else Sin cambios de medios
+          S -> S: continuar
+        end
+
+        ' 8) Auditoría de cambios
+        S -> RAud: registrar(propiedadId, vendedorId,\n diff=cambios, timestamp=now)
+        activate RAud
+        RAud --> S: ok
+        deactivate RAud
+
+        ' 9) Respuesta a la UI
+        S --> UI: Actualización exitosa\n(version=versionActualizada)
+        deactivate S
+        UI --> V: Mostrar confirmación
+        deactivate UI
+      end
+    end
+  end
+end
+@enduml

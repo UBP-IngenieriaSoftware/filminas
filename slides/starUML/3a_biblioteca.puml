@@ -1,0 +1,80 @@
+@startuml
+title Extender fecha de préstamo (Empleado) - Biblioteca
+autonumber
+
+actor "Empleado" as E
+boundary "UI Mostrador" as UI
+control "Sistema Biblioteca" as S
+database "RepoPréstamos" as RPRE
+database "RepoCatálogo" as RCAT
+database "RepoReservas" as RRES
+control "ServicioPolíticas" as SPOL
+control "ServicioNotificaciones" as SNOT
+
+E -> UI: Solicitar extensión (scan préstamoId / ejemplarId)
+activate UI
+UI -> S: extenderPrestamo(ejemplarId, socioId)
+activate S
+
+' 1) Validaciones básicas
+S -> RPRE: obtenerPrestamoActivo(ejemplarId, socioId)
+activate RPRE
+RPRE --> S: préstamo | null
+deactivate RPRE
+
+alt Préstamo inexistente o no activo
+  S --> UI: Error: "No hay préstamo activo para este ejemplar/socio"
+  deactivate S
+  UI --> E: Mostrar error
+  deactivate UI
+else Préstamo válido
+  ' 2) Verificar que sea libro (no revista) y presencia física
+  S -> RCAT: obtenerEjemplar(ejemplarId)
+  activate RCAT
+  RCAT --> S: ejemplar(tituloId, tipo=Libro/Revista)
+  deactivate RCAT
+
+  alt ejemplar.tipo != "Libro"
+    S --> UI: Error: "Solo se extienden préstamos de LIBROS"
+    deactivate S
+    UI --> E: Mostrar error
+    deactivate UI
+  else Es libro
+    ' 3) Verificar reservas sobre el título
+    S -> RRES: hayReservasPendientes(tituloId)
+    activate RRES
+    RRES --> S: boolean (tieneReservas)
+    deactivate RRES
+
+    alt Existe al menos una reserva
+      S --> UI: Rechazado: "No se puede extender: hay reservas pendientes"
+      deactivate S
+      UI --> E: Informar al socio
+      deactivate UI
+    else Sin reservas
+      ' 4) Calcular nueva fecha según política (3 días o 3 semanas)
+      S -> SPOL: calcularNuevaFecha(préstamo.fechaActualVenc,\n ejemplar.tipoPrestamo=3d/3sem)
+      activate SPOL
+      SPOL --> S: nuevaFechaVenc
+      deactivate SPOL
+
+      ' 5) Persistir la extensión
+      S -> RPRE: extender(préstamo.id, nuevaFechaVenc)
+      activate RPRE
+      RPRE --> S: ok
+      deactivate RPRE
+
+      ' 6) Confirmar y notificar
+      S --> UI: Extensión registrada (nuevaFechaVenc)
+      UI --> E: Mostrar comprobante\n(nueva fecha de entrega)
+      activate SNOT
+      S -> SNOT: notificarSocio(socioId,\n "Extensión de préstamo confirmada", nuevaFechaVenc)
+      SNOT --> S: ok
+      deactivate SNOT
+
+      deactivate S
+      deactivate UI
+    end
+  end
+end
+@enduml

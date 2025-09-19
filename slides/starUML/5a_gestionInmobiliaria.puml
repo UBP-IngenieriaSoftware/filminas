@@ -1,0 +1,96 @@
+@startuml
+title Generar contrato (Alquiler o Venta) - Inmobiliaria
+autonumber
+
+actor "Vendedor" as V
+boundary "UI Inmobiliaria" as UI
+control "Sistema Inmobiliario" as S
+database "RepoClientes" as RCli
+database "RepoPropiedades" as RProp
+control "ServicioPlantillas" as SPT
+control "ServicioContratos (DocBuilder)" as SCON
+database "RepoOperaciones" as ROp
+control "ServicioEmail" as SEM
+control "ServicioFirmaDigital" as SFirm
+
+' 1) Inicio
+V -> UI: Generar contrato (clienteId, propiedadId,\n operacion=Alquiler/Venta, términos preliminares)
+activate UI
+UI -> S: generarContrato(clienteId, propiedadId, operacion, terminos)
+activate S
+
+' 2) Validaciones básicas
+S -> RCli: obtenerCliente(clienteId)
+activate RCli
+RCli --> S: cliente | null
+deactivate RCli
+
+S -> RProp: obtenerPropiedad(propiedadId)
+activate RProp
+RProp --> S: propiedad | null
+deactivate RProp
+
+alt Cliente/Propiedad inexistente
+  S --> UI: Error: "Cliente o propiedad no encontrada"
+  deactivate S
+  UI --> V: Mostrar error
+  deactivate UI
+else Datos cargados
+  ' 3) Verificar disponibilidad y compatibilidad de operación
+  S -> RProp: validarDisponibilidad(propiedadId, operacion)
+  activate RProp
+  RProp --> S: disponible(bool), restriccion?
+  deactivate RProp
+
+  alt No disponible o operación no permitida
+    S --> UI: Error: "Propiedad no disponible para {operacion}"
+    deactivate S
+    UI --> V: Mostrar error
+    deactivate UI
+  else OK
+    ' 4) Determinar condiciones económicas y cláusulas
+    S -> S: calcularCondiciones(propiedad, operacion, terminos)
+    S -> SPT: seleccionarPlantilla(operacion)  ' Alquiler o Venta
+    activate SPT
+    SPT --> S: plantillaContrato
+    deactivate SPT
+
+    ' 5) Generar documento a partir de plantilla + datos
+    S -> SCON: componerDocumento(plantillaContrato,\n cliente, propiedad, condiciones)
+    activate SCON
+    SCON --> S: contratoPDF, metadata
+    deactivate SCON
+
+    ' 6) Registrar operación/contrato
+    S -> ROp: guardarContrato(clienteId, propiedadId,\n operacion, condiciones, contratoPDF)
+    activate ROp
+    ROp --> S: contratoId
+    deactivate ROp
+
+    ' 7) Entrega: descarga y envío por correo
+    S --> UI: Contrato listo (contratoId, enlace/archivo)
+    UI --> V: Descargar / Visualizar
+
+    S -> SEM: enviarEmail(cliente.email,\n asunto="Propuesta de contrato {operacion}", adjunto=contratoPDF)
+    activate SEM
+    SEM --> S: ok
+    deactivate SEM
+
+    ' 8) (Opcional) Iniciar firma digital
+    alt Requiere firma digital
+      S -> SFirm: crearSobreFirma(contratoPDF,\n firmantes=[cliente.email, vendedor.email])
+      activate SFirm
+      SFirm --> S: trackingUrl, estadoInicial
+      deactivate SFirm
+      S --> UI: Seguimiento de firma (trackingUrl)
+      UI --> V: Ver estado de firma
+    else Sin firma digital
+      S --> UI: Proceso finalizado
+      UI --> V: Confirmación
+    end
+
+    deactivate S
+    deactivate UI
+  end
+end
+@enduml

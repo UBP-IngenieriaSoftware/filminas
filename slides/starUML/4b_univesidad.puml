@@ -1,0 +1,62 @@
+@startuml
+title Generar listado de estudiantes por asignatura
+autonumber
+
+actor "Secretaria" as SEC
+boundary "UI Secretaría" as UI
+control "Sistema Académico" as SA
+database "RepoAsignaturas" as RASIG
+database "RepoMatriculas" as RMAT
+database "RepoEstudiantes" as REST
+control "ServicioReportes" as SREP
+
+' 1) Solicitud
+SEC -> UI: Seleccionar asignatura (código/nombre)
+activate UI
+UI -> SA: generarListadoEstudiantes(asignaturaId)
+activate SA
+
+' 2) Verificar asignatura
+SA -> RASIG: obtenerAsignatura(asignaturaId)
+activate RASIG
+RASIG --> SA: asignatura | null
+deactivate RASIG
+
+alt Asignatura no existe
+  SA --> UI: Error: "Asignatura no encontrada"
+  deactivate SA
+  UI --> SEC: Mostrar error
+  deactivate UI
+else Asignatura válida
+  ' 3) Recuperar matrículas activas
+  SA -> RMAT: obtenerMatriculas(asignaturaId)
+  activate RMAT
+  RMAT --> SA: listaMatriculas
+  deactivate RMAT
+
+  alt No hay estudiantes matriculados
+    SA --> UI: Mensaje: "No existen estudiantes matriculados"
+    deactivate SA
+    UI --> SEC: Mostrar mensaje
+    deactivate UI
+  else Hay matrículas
+    ' 4) Obtener datos de estudiantes
+    SA -> REST: obtenerEstudiantes(listaMatriculas.estudianteIds)
+    activate REST
+    REST --> SA: listaEstudiantes
+    deactivate REST
+
+    ' 5) Generar reporte
+    SA -> SREP: generar(asignatura, listaEstudiantes,\n formato="PDF/Excel")
+    activate SREP
+    SREP --> SA: reporte(url/archivo)
+    deactivate SREP
+
+    ' 6) Entregar resultado
+    SA --> UI: Reporte generado
+    UI --> SEC: Descargar/Visualizar listado
+    deactivate SA
+    deactivate UI
+  end
+end
+@enduml

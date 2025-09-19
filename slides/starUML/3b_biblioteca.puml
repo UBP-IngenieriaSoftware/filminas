@@ -1,0 +1,92 @@
+@startuml
+title Devolver libro (Bibliotecario o Socio) - Biblioteca
+autonumber
+
+actor "Socio" as SOC
+actor "Bibliotecario" as BIB
+boundary "UI Socio" as UISC
+boundary "UI Mostrador" as UIBO
+control "Sistema Biblioteca" as S
+database "RepoPréstamos" as RPRE
+database "RepoCatálogo" as RCAT
+database "RepoReservas" as RRES
+control "ServicioNotificaciones" as SNOT
+
+' Inicio alternativo según quién devuelve
+alt Devolución iniciada por Socio
+  SOC -> UISC: Registrar devolución (scan ejemplarId)
+  activate UISC
+  UISC -> S: devolver(ejemplarId, canal="socio")
+  activate S
+else Devolución iniciada por Bibliotecario
+  BIB -> UIBO: Registrar devolución (scan ejemplarId)
+  activate UIBO
+  UIBO -> S: devolver(ejemplarId, canal="mostrador")
+  activate S
+end
+
+' 1) Verificar préstamo activo del ejemplar
+S -> RPRE: obtenerPrestamoActivoPorEjemplar(ejemplarId)
+activate RPRE
+RPRE --> S: prestamo | null
+deactivate RPRE
+
+alt No existe préstamo activo
+  S --> UISC: Error: "No hay préstamo activo para este ejemplar"
+  S --> UIBO: Error: "No hay préstamo activo para este ejemplar"
+  deactivate S
+  UISC --> SOC: Mostrar error
+  deactivate UISC
+  UIBO --> BIB: Mostrar error
+  deactivate UIBO
+else Préstamo encontrado
+  ' (Opcional) Validación de tipo de material si se desea reportar anomalías
+  S -> RCAT: obtenerEjemplar(ejemplarId)
+  activate RCAT
+  RCAT --> S: ejemplar(tituloId, tipo=Libro/Revista)
+  deactivate RCAT
+
+  ' 2) Cerrar préstamo (registrar fecha/hora de devolución)
+  S -> RPRE: cerrarPrestamo(prestamo.id, fechaDevolucion=now)
+  activate RPRE
+  RPRE --> S: ok
+  deactivate RPRE
+
+  ' 3) Consultar reservas pendientes para el título
+  S -> RRES: obtenerSiguienteReserva(tituloId)
+  activate RRES
+  RRES --> S: reservaSiguiente | null
+  deactivate RRES
+
+  alt Hay reserva en espera
+    ' Apartar ejemplar y notificar al próximo en cola
+    S -> RPRE: marcarEjemplarEstado(ejemplarId, estado="apartado para reserva")
+    activate RPRE
+    RPRE --> S: ok
+    deactivate RPRE
+
+    S -> SNOT: notificar(reservaSiguiente.socioId,\n"Libro disponible por reserva", ejemplarId)
+    activate SNOT
+    SNOT --> S: ok
+    deactivate SNOT
+
+    S --> UISC: Devolución registrada; ejemplar apartado para reserva
+    S --> UIBO: Devolución registrada; ejemplar apartado para reserva
+  else No hay reservas
+    ' Dejar disponible para estantería
+    S -> RPRE: marcarEjemplarEstado(ejemplarId, estado="disponible")
+    activate RPRE
+    RPRE --> S: ok
+    deactivate RPRE
+
+    S --> UISC: Devolución registrada; ejemplar disponible
+    S --> UIBO: Devolución registrada; ejemplar disponible
+  end
+
+  deactivate S
+  UISC --> SOC: Mostrar confirmación
+  deactivate UISC
+  UIBO --> BIB: Mostrar confirmación
+  deactivate UIBO
+end
+@enduml

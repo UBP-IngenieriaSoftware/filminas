@@ -61,7 +61,7 @@ con el fin de llegar a una mayor comprensión de los mismos.
 * Nombre
 * Atributos
 * Operaciones
-* Visibilidad (Generalmente no se muestra)
+* Visibilidad (público, privado, protegido)
 * Estereotipos (Ayudan a complementar el lenguaje)
 * Valores etiquetados
 
@@ -72,7 +72,7 @@ con el fin de llegar a una mayor comprensión de los mismos.
 * Se mapea con el dominio del problema
 * Tiene un conjunto de responsabilidades (Contrato u obligación de una clase con sus “Clientes”) bien definidas
 * Alta cohesión
-* Bajo acoplamiento
+* Bajo acoplamiento (clases dependen lo menos posible entre sí.)
 
 ---
 ### Reglas generales

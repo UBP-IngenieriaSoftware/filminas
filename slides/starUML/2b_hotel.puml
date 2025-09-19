@@ -1,0 +1,84 @@
+@startuml
+autonumber
+title Facturar estadía (Recepcionista) - Hotel
+
+actor "Recepcionista" as R
+boundary "UI Backoffice" as UI
+control "Sistema Hotelero" as S
+database "RepoReservas/Folios" as RR
+database "RepoClientes" as RC
+control "ServicioTarifas" as ST
+database "RepoConsumos/Extras" as RX
+control "ServicioImpuestos" as SI
+control "ServicioPagos" as SP
+control "ServicioFacturación (e-Invoice)" as SF
+control "ServicioNotificaciones" as SN
+
+' 1) Iniciar facturación
+R -> UI: Abrir "Facturar estadía"\n(reservaId/folioId)
+UI -> S: facturarEstadia(folioId)
+
+' 2) Cargar folio y validar estado
+S -> RR: obtenerFolioYReserva(folioId)
+RR --> S: folio, reserva, estadoCheckIn/CheckOut
+
+alt Folio inexistente o ya facturado
+  S --> UI: Error "Folio no válido o ya facturado"
+else Folio válido
+  alt Aún no se registró Check-out
+    S --> UI: Advertencia "Debe completar Check-out\n(minibar, llaves, late check-out, etc.)"
+  else Check-out registrado
+    ' 3) Recolectar datos para cálculo
+    S -> RC: obtenerCliente(reserva.clienteId)
+    RC --> S: cliente
+
+    S -> ST: obtenerTarifas(reserva.tipoHabitacion, reserva.fechaEntrada, reserva.fechaSalida, tarifa/plan)
+    ST --> S: itemsNoches  ' (precio por noche, descuentos, etc.)
+
+    S -> RX: obtenerConsumos(folioId)  ' minibar, spa, room service, etc.
+    RX --> S: itemsExtras
+
+    S -> SI: calcularImpuestos(itemsNoches + itemsExtras, domicilio/condiciónIVA)
+    SI --> S: itemsImpuestos
+
+    S -> S: total = sumar(itemsNoches, itemsExtras, itemsImpuestos)
+
+    ' 4) Vista previa para confirmación
+    S --> UI: mostrarResumen(itemsNoches, itemsExtras, itemsImpuestos, total)
+
+    R -> UI: Confirmar "Emitir factura y cobrar"
+    UI -> S: confirmarFacturacion(folioId, metodoPago, opcionSplit?)
+
+    ' 5) Cobro
+    S -> SP: cobrar(metodoPago, total, referencia=folioId)
+    alt Cobro aprobado
+      SP --> S: aprobado(txId)
+
+      ' 6) Emitir factura fiscal
+      S -> SF: emitirFactura(cliente, detalle=itemsNoches+itemsExtras+itemsImpuestos,\n total, medioPago=txId, nroReserva=reserva.id)
+      alt Factura emitida OK
+        SF --> S: factura(numero, pdfUrl)
+
+        ' 7) Persistir y cerrar
+        S -> RR: cerrarFolio(folioId, estado="facturado", factura=numero, pago=txId)
+        RR --> S: ok
+
+        ' 8) Entrega de comprobante
+        S -> SN: enviarFactura(cliente.contacto, numero, pdfUrl)
+        SN --> S: ok
+
+        S --> UI: Éxito: factura {numero} emitida y folio cerrado
+      else Error emisión fiscal
+        SF --> S: errorFiscal
+        ' Política: revertir o dejar pago aplicado con folio abierto según norma
+        S -> SP: revertirPago(txId)
+        SP --> S: revertido
+        S --> UI: Error: no se pudo emitir factura.\nPago revertido. Intente nuevamente o contacte administración.
+      end
+    else Cobro rechazado
+      SP --> S: rechazado(motivo)
+      S --> UI: Pago rechazado: {motivo}\nPermitir reintentar con otro medio/split.
+    end
+  end
+end
+@enduml
