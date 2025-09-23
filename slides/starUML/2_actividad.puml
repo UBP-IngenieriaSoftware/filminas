@@ -1,0 +1,105 @@
+@startuml
+title Sistema de reservas de hotel - Flujo integral
+
+skinparam shadowing false
+skinparam dpi 150
+skinparam Partition {
+  BorderColor #404040
+  FontColor #202020
+}
+skinparam activity {
+  BackgroundColor #FFFFFF
+  ArrowColor #333333
+  DiamondBackgroundColor #F5F5F5
+  BorderColor #888888
+}
+skinparam note {
+  BackgroundColor #FFFFEE
+  BorderColor #CCCC88
+}
+
+legend right
+  Reglas:
+  - Reserva por: Administrativo o Cliente Online
+  - Si no es cliente: dar de alta antes de reservar
+  - Cancelación en cualquier momento:
+    * Si < 24h respecto a la llegada: cargo 50% de una noche
+  - Check-in: verificación y registro
+  - Check-out: facturación de la estadía
+endlegend
+
+start
+
+partition "Origen de la solicitud" #E3F2FD/##42A5F5 {
+  :El usuario elige canal:\n(Administrativo de Reservas / Web);
+}
+
+partition "Administrativo de Reservas / Front Web" #E8F5E9/##66BB6A {
+  :Capturar datos:\nNombre/ID, fechas (entrada/salida),\nTipo de habitación, ocupantes, etc.;
+  :Enviar solicitud al Motor de Reservas;
+}
+
+partition "Motor de Reservas" #F3E5F5/##AB47BC {
+  :Buscar cliente por ID/Documento;
+  if ("¿Persona es cliente existente?") then (Sí)
+    :Continuar;
+  else (No)
+    partition "Administrativo / Web" #E8F5E9/##66BB6A {
+      :Dar de alta cliente:\nDatos personales y contacto;
+    }
+    :Persistir nuevo cliente;
+  endif
+
+  :Verificar disponibilidad de habitación\n(según tipo y fechas);
+  if ("¿Hay disponibilidad?") then (Sí)
+    :Crear reserva (estado=Confirmada);\nAsignar habitación provisional/definitiva;
+    :Enviar confirmación (email/impresión);
+  else (No)
+    :Ofrecer alternativas (otro tipo/fechas);\n(o rechazar);
+  endif
+}
+
+' ----------------- Rama de cancelación (puede ocurrir en cualquier momento) -----------------
+partition "Cliente / Administrativo" #FFF3E0/##FB8C00 {
+  :Solicitud de anulación de reserva;
+}
+
+partition "Motor de Reservas" #F3E5F5/##AB47BC {
+  if ("¿Reserva dentro de ventana penalizable?\n(ahora > fechaEntrada - 24h)") then (Sí, <24h)
+    :Calcular cargo = 50% * (tarifa noche);
+    :Registrar cargo en cuenta del cliente;
+    :Notificar penalización;
+  else (No, ≥24h)
+    :Anulación sin cargo;
+  endif
+  :Cancelar reserva;\nLiberar habitación;
+  :Enviar confirmación de cancelación;
+}
+
+' ----------------- Llegada y check-in -----------------
+partition "Recepcionista" #ECEFF1/##78909C {
+  :Cliente llega al hotel (check-in);
+  :Consultar reserva y ficha del cliente;
+}
+
+partition "Motor de Reservas" #F3E5F5/##AB47BC {
+  if ("¿Reserva y datos válidos?") then (Sí)
+    :Registrar check-in;\nAsignar habitación definitiva;\nEntregar llaves/medios de acceso;
+  else (No)
+    :Resolver incidencia\n(recapturar datos / nueva reserva / rechazo);
+  endif
+}
+
+' ----------------- Salida y facturación -----------------
+partition "Recepcionista" #ECEFF1/##78909C {
+  :Check-out del cliente;
+}
+
+partition "Motor de Reservas / Facturación" #F3E5F5/##AB47BC {
+  :Calcular cargos:\nnoches efectivas, consumos, impuestos,\ndescuentos y penalizaciones (si hubiera);
+  :Emitir factura y registrar pago;
+  :Cerrar estadía (checkout completado);
+}
+
+stop
+@enduml

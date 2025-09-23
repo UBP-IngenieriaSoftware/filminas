@@ -1,0 +1,107 @@
+@startuml
+title Reserva online y gestión operativa diaria
+
+skinparam shadowing false
+skinparam activity {
+  BackgroundColor #FFFFFF
+  ArrowColor #333333
+  DiamondBackgroundColor #F5F5F5
+  BorderColor #888888
+}
+skinparam note {
+  BackgroundColor #FFFFEE
+  BorderColor #CCCC88
+}
+
+legend right
+  Ventanas de corte:
+  - Almuerzo: hasta 11:30
+  - Cena:     hasta 19:30
+
+  No-show:
+  - Tolerancia: 30 minutos
+  - Penalización: 7 días (reservas online)
+endlegend
+
+start
+
+partition "Cliente" {
+  :Elegir acción (Crear / Cancelar);
+}
+
+partition "Front Web" {
+  :Capturar fecha, turno (Almuerzo/Cena),\nubicación y tamaño de mesa;
+  :Enviar solicitud al Motor de Reservas;
+}
+
+partition "Motor de Reservas" {
+  :Validar registro y sanción vigente;
+  if ("¿Cliente registrado y apto?\n[sanción vigente = NO]") then (Sí)
+  else (No)
+    :Rechazar operación (no apto);
+    stop
+  endif
+
+  if ("¿Acción = Crear?") then (Sí)
+    if ("¿Dentro de ventana de reserva?\nAlmuerzo ≤ 11:30 | Cena ≤ 19:30") then (Sí)
+      :Verificar disponibilidad de mesa;
+      if ("¿Hay mesa solicitada?") then (Sí)
+        :Crear reserva (estado=Confirmada);
+        :Enviar confirmación al cliente;
+      else (No)
+        :Proponer alternativas\n(o rechazar si no hay);
+      endif
+    else (No)
+      :Rechazar creación (fuera de ventana);
+    endif
+  else (No: Cancelar)
+    if ("¿Dentro de ventana de cancelación?\nAlmuerzo ≤ 11:30 | Cena ≤ 19:30") then (Sí)
+      :Cancelar reserva (por cliente);
+      :Liberar mesa;
+      :Enviar confirmación de cancelación;
+    else (No)
+      :Rechazar cancelación (fuera de ventana);
+    endif
+  endif
+}
+
+' ------ Cierre al horario de corte y reporte ------
+partition "Scheduler" {
+  :Evento de tiempo 11:30 (Almuerzo);
+  :Evento de tiempo 19:30 (Cena);
+}
+
+partition "Recepcionista" {
+  :Generar reporte al corte;
+  note right
+    Reporte incluye:
+    - Mesas asignadas con cliente
+    - Mesas disponibles para asignación
+  end note
+}
+
+' ------ Llegada de turno y tolerancia de 30' ------
+partition "Recepcionista" {
+  :Inicio de turno (almuerzo/cena);\nRegistrar llegadas (check-in);
+}
+
+partition "Motor de Reservas" {
+  if ("¿Check-in registrado?") then (Sí)
+    :Marcar mesa como Ocupada;
+  else (No)
+    partition "Scheduler" {
+      :Iniciar temporizador de 30 minutos\npor reserva sin check-in;
+    }
+    if ("¿Cliente llega dentro de 30'?") then (Sí)
+      :Marcar mesa como Ocupada;
+    else (No)
+      :Cancelar reserva (no-show);
+      :Liberar mesa;
+      :Aplicar penalización 7 días\n(suspensión de reservas online);
+    endif
+  endif
+}
+
+stop
+
+@enduml
