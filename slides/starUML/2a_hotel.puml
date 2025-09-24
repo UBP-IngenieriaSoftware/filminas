@@ -1,11 +1,9 @@
 @startuml
 autonumber
-title Cancelación de reserva (Cliente o Administrativo) - Hotel
+title Cancelación de reserva (Cliente) - Hotel
 
 actor "Cliente" as CLI
-actor "Administrativo de Reservas" as ADM
 boundary "UI Web" as UIW
-boundary "UI Backoffice" as UIB
 control "Sistema de Reservas" as S
 database "RepoReservas" as RR
 database "RepoClientes" as RC
@@ -13,14 +11,9 @@ control "ServicioTarifas" as ST
 control "ServicioPagos" as SP
 control "ServicioNotificaciones" as SN
 
-' Inicio alternativo según quién cancela
-alt Cancelación iniciada por Cliente
-  CLI -> UIW: Solicitar cancelación(reservaId)
-  UIW -> S: cancelarReserva(reservaId, solicitante=cliente, clienteId)
-else Cancelación iniciada por Administrativo
-  ADM -> UIB: Solicitar cancelación(reservaId)
-  UIB -> S: cancelarReserva(reservaId, solicitante=admin)
-end
+' Inicio: cancelación iniciada por Cliente
+CLI -> UIW: Solicitar cancelación(reservaId)
+UIW -> S: cancelarReserva(reservaId, clienteId)
 
 ' Recuperar reserva y validar estado
 S -> RR: obtenerReserva(reservaId)
@@ -28,15 +21,14 @@ RR --> S: reserva | null
 
 alt Reserva no existe o ya cancelada/consumida
   S --> UIW: Error "Reserva no válida"
-  S --> UIB: Error "Reserva no válida"
 else Reserva válida
-  ' Validar pertenencia solo si cancela el cliente
+  ' Validar pertenencia del cliente
   S -> RC: obtenerCliente(clienteId)
-  RC --> S: cliente (si aplica)
+  RC --> S: cliente
 
-  alt solicitante=cliente y reserva.clienteId != cliente.id
+  alt reserva.clienteId != cliente.id
     S --> UIW: Error "No autorizado"
-  else Autorizado (cliente válido) o solicitante=admin
+  else Autorizado
     ' Calcular ventana de penalización
     S -> S: horasAntes = diff(reserva.fechaCheckIn, now)
 
@@ -50,7 +42,6 @@ else Reserva válida
       SN --> S: ok
 
       S --> UIW: "Cancelación exitosa (sin penalización)"
-      S --> UIB: "Cancelación exitosa (sin penalización)"
     else horasAntes < 24
       ' Con penalización = 50% de 1 noche del tipo de habitación reservado
       S -> ST: calcularTarifaNoche(reserva.tipoHabitacion, reserva.fechaCheckIn)
@@ -66,7 +57,6 @@ else Reserva válida
         SN --> S: ok
 
         S --> UIW: "Cancelación exitosa (con penalización)"
-        S --> UIB: "Cancelación exitosa (con penalización)"
       else Cargo rechazado
         SP --> S: rechazado
         ' Política: permitir la cancelación e informar deuda pendiente
@@ -77,7 +67,6 @@ else Reserva válida
         SN --> S: ok
 
         S --> UIW: "Cancelación registrada; penalización pendiente de cobro"
-        S --> UIB: "Cancelación registrada; penalización pendiente de cobro"
       end
     end
   end
