@@ -1,0 +1,185 @@
+'Consulta de catálogo, préstamo (con reglas para libros/revistas, límites y plazos), 
+'devolución, reserva, renovación y actualización del catálogo por personal autorizado.'
+
+@startuml
+title Biblioteca - Diagrama de Actividad (Préstamos, Reservas, Renovaciones y Catálogo)
+
+skinparam activity {
+  BackgroundColor #ffffff
+  BorderColor #333333
+  ArrowColor #333333
+}
+skinparam shadowing false
+
+partition "Usuario / Socio / Trabajador" {
+  start
+  :Elegir acción;
+}
+
+partition "Sistema" {
+}
+
+partition "Usuario / Socio / Trabajador" {
+  if ("¿Consultar catálogo?") then (Sí)
+    --> "Ingresar criterios de búsqueda";
+    --> "Ver resultados (libros y revistas)";
+    note right
+      La consulta es pública: no es necesario ser socio.
+      Se buscan por distintos campos.
+    end note
+    --> "Elegir acción";
+  else (No)
+    --> "Elegir acción de préstamo/devolución/renovación/reserva/actualización";
+  endif
+}
+
+partition "Usuario / Socio / Trabajador" {
+  if ("¿Solicitar PRÉSTAMO?") then (Sí)
+    --> "Indicar material (libro/revista) y copia";
+    --> "Presentar credencial (si aplica)";
+  else (No)
+    --> "Elegir otra acción";
+  endif
+}
+
+partition "Sistema" {
+  if ("¿Material es REVISTA?") then (Sí)
+    if ("¿Usuario es trabajador de la biblioteca?") then (Sí)
+      --> "Verificar límite trabajador ≤ 12\n(libros+revistas)";
+      if ("¿Límite no excedido?") then (Sí)
+        --> "Registrar PRÉSTAMO revista\n[fecha/hora salida]";
+        --> "Entregar revista";
+      else (No)
+        --> "Rechazar préstamo por límite";
+      endif
+    else (No)
+      --> "Rechazar: solo trabajadores pueden\nllevar revistas";
+    endif
+  else (No -> Libro)
+    --> "Verificar disponibilidad de copia";
+    if ("¿Copia disponible?") then (Sí)
+      if ("¿Usuario es trabajador?") then (Sí)
+        --> "Verificar límite trabajador ≤ 12";
+        if ("¿Límite no excedido?") then (Sí)
+          --> "Determinar plazo del libro";
+          if ("¿Libro de 3 días?") then (Sí)
+            --> "Calcular fecha devolución =\n+3 días";
+          else (No)
+            --> "Calcular fecha devolución =\n+3 semanas";
+          endif
+          --> "Registrar PRÉSTAMO libro\n[fecha/hora salida, fecha devolución]";
+          --> "Entregar libro";
+        else (No)
+          --> "Rechazar préstamo por límite";
+        endif
+      else (No -> Socio)
+        --> "Verificar socio activo";
+        if ("¿Socio activo?") then (Sí)
+          --> "Verificar límite socio ≤ 6 (solo libros)";
+          if ("¿Límite no excedido?") then (Sí)
+            --> "Determinar plazo del libro";
+            if ("¿Libro de 3 días?") then (Sí)
+              --> "Calcular fecha devolución =\n+3 días";
+            else (No)
+              --> "Calcular fecha devolución =\n+3 semanas";
+            endif
+            --> "Registrar PRÉSTAMO libro\n[fecha/hora salida, fecha devolución]";
+            --> "Entregar libro";
+          else (No)
+            --> "Rechazar préstamo por límite";
+          endif
+        else (No)
+          --> "Rechazar: debe ser socio";
+        endif
+      endif
+    else (No)
+      --> "Ofrecer RESERVA del libro";
+    endif
+  endif
+}
+
+partition "Usuario / Socio / Trabajador" {
+  if ("¿Reservar libro no disponible?") then (Sí)
+    --> "Confirmar reserva";
+  else (No)
+    --> "Elegir otra acción";
+  endif
+}
+
+partition "Sistema" {
+  if ("Reserva confirmada") then (Sí)
+    --> "Registrar RESERVA\n[fecha/hora, usuario, título]";
+    --> "Notificar cuando haya copia disponible";
+  endif
+}
+
+partition "Usuario / Socio / Trabajador" {
+  if ("¿DEVOLVER material?") then (Sí)
+    --> "Entregar material en mostrador";
+  else (No)
+    --> "Elegir otra acción";
+  endif
+}
+
+partition "Sistema" {
+  if ("Material recibido") then (Sí)
+    --> "Registrar DEVOLUCIÓN\n[fecha/hora entrada]";
+    --> "Liberar/actualizar estado de la copia";
+    if ("¿Existen reservas para el título?") then (Sí)
+      --> "Notificar al PRÓXIMO en la cola de reservas";
+    endif
+  endif
+}
+
+partition "Usuario / Socio / Trabajador" {
+  if ("¿RENOVAR préstamo de LIBRO?") then (Sí)
+    --> "Presentar físicamente el libro";
+  else (No)
+    --> "Elegir otra acción";
+  endif
+}
+
+partition "Sistema" {
+  if ("¿Hay reservas activas para el título?") then (Sí)
+    --> "Rechazar renovación\n(motivo: hay reservas)";
+  else (No)
+    --> "Determinar plazo según tipo de libro";
+    if ("¿Libro de 3 días?") then (Sí)
+      --> "Nueva fecha devolución =\n+3 días desde hoy";
+    else (No)
+      --> "Nueva fecha devolución =\n+3 semanas desde hoy";
+    endif
+    --> "Registrar RENOVACIÓN\n[actualizar fecha devolución]";
+  endif
+}
+
+partition "Trabajador AUTORIZADO" {
+  if ("¿Actualizar catálogo?") then (Sí)
+    --> "Ingresar altas/bajas o cambios";
+  else (No)
+    --> "Elegir otra acción / Fin";
+  endif
+}
+
+partition "Sistema" {
+  if ("¿Trabajador con permiso de catálogo?") then (Sí)
+    --> "Aplicar cambios al catálogo";
+  else (No)
+    --> "Rechazar: permisos insuficientes";
+  endif
+}
+
+partition "Usuario / Socio / Trabajador" {
+  --> stop
+}
+
+' Notas de reglas globales
+floating note right
+- El sistema almacena fecha/hora de cada préstamo y devolución.
+- Límite socio: hasta 6 libros simultáneos (no revistas).
+- Límite trabajador: hasta 12 materiales (libros + revistas).
+- Renovación solo si no hay reservas para ese título.
+- Revistas: préstamo exclusivo para trabajadores.
+end note
+
+@enduml

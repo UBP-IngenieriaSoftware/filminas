@@ -1,0 +1,117 @@
+@startuml
+title Plataforma Educativa - Actividades de Docentes y Alumnos
+
+skinparam activity {
+  BackgroundColor #ffffff
+  BorderColor #333333
+  ArrowColor #333333
+}
+skinparam shadowing false
+
+start
+
+repeat
+:Menú principal (Docente / Alumno / Admin de Reportes);
+
+' =======================
+' DOCENTE: Gestión de Clases
+' =======================
+if (¿Docente: Crear/Editar CLASE virtual?) then (Sí)
+  :Ingresar datos de la clase:\nTítulo, descripción, curso, cronograma;
+  :Cargar materiales (docs, PPT, videos, links);
+  :Publicar/Actualizar CLASE para los alumnos;
+endif
+
+' =======================
+' DOCENTE: Tareas
+' =======================
+if (¿Docente: Asignar TAREA?) then (Sí)
+  :Definir consigna, rúbrica, fecha límite,\nmateriales de apoyo;
+  :Publicar TAREA a curso/grupo seleccionado;
+endif
+
+if (¿Docente: Corregir/Calificar TAREAS?) then (Sí)
+  :Revisar entregas recibidas;
+  while (¿Quedan entregas por calificar?) is (Sí)
+    :Abrir entrega de alumno;
+    :Anotar feedback y calificación;
+    :Publicar nota y devolver corrección;
+  endwhile (No)
+endif
+
+' =======================
+' DOCENTE: Dudas y Reportes
+' =======================
+if (¿Docente: Responder dudas?) then (Sí)
+  :Ver bandeja de preguntas de alumnos\n(por clase/tarea);
+  :Responder y cerrar hilo o reabrir si es necesario;
+endif
+
+if (¿Docente: Obtener reportes de alumnos/cursos?) then (Sí)
+  :Seleccionar curso/alumnos y rango de fechas;
+  :Generar reporte (participación, entregas,\nnotas, tiempos de conexión);
+endif
+
+' =======================
+' ALUMNO: Clases y Tareas
+' =======================
+if (¿Alumno: Tomar CLASE?) then (Sí)
+  :Seleccionar clase disponible;
+  :Acceder a materiales (docs, PPT, videos);
+  :Marcar progreso / completar actividades de la clase;
+endif
+
+if (¿Alumno: Resolver/Entregar TAREA?) then (Sí)
+  :Abrir tarea asignada;
+  :Resolver y adjuntar archivos/respuestas;
+  :Enviar entrega antes de la fecha límite;
+  :Recibir confirmación de envío;
+endif
+
+' =======================
+' ALUMNO: Dudas y Consultas Especiales
+' =======================
+if (¿Alumno: Enviar duda?) then (Sí)
+  :Redactar pregunta y seleccionar contexto\n(clase/tarea);
+  :Enviar al docente (queda en bandeja del docente);
+endif
+
+if (¿Alumno: Enviar CONSULTA ESPECIAL?) then (Sí)
+  :Completar formulario de consulta especial\n(razón, detalle, adjuntos);
+  :Enviar al docente/administración según política;
+  :Recibir acuse de recibo;
+endif
+
+' =======================
+' REPORTE DE RENDIMIENTO (Sistema/Admin)
+' =======================
+if (¿Obtener reporte de RENDIMIENTO general?) then (Sí)
+  :Elegir métricas y alcance (curso, cohorte, alumno);
+  :Compilar datos (tareas, notas, asistencia, interacción);
+  :Generar reporte de rendimiento\n(exportable/visualizable);
+endif
+
+repeat while (¿Realizar otra operación?) is (Sí)
+
+stop
+
+' =======================
+' Notas / Reglas
+' =======================
+floating note right
+- Docente:
+  * Crea/edita clases y materiales (docs, PPT, videos).
+  * Asigna tareas con consigna, rúbrica y deadline.
+  * Corrige y califica entregas con feedback.
+  * Responde dudas y obtiene reportes por curso/alumno.
+- Alumno:
+  * Toma clases y accede a materiales.
+  * Entrega tareas (archivos/respuestas) y recibe confirmación.
+  * Envía dudas y consultas especiales a docentes.
+- Sistema:
+  * Valida plazos de entrega y controla versiones.
+  * Mantiene hilos de preguntas/respuestas.
+  * Genera reportes de rendimiento (participación, notas, progreso).
+end note
+
+@enduml

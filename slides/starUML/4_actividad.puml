@@ -1,0 +1,99 @@
+'altas de personas y asignaturas, alta de estudiante, matriculación, '
+'gestión de becas (alta y finalización al cierre de curso), '
+'exámenes y registro de notas, ciclo por curso académico, '
+'baja del estudiante y listados operativos.'
+
+
+@startuml
+title Universidad - Gestión de Matrículas (Actividad)
+
+skinparam activity {
+  BackgroundColor #ffffff
+  BorderColor #333333
+  ArrowColor #333333
+}
+skinparam shadowing false
+
+start
+
+repeat
+:Menú principal: seleccionar acción;
+
+' === Altas básicas ===
+if (¿Dar de ALTA PERSONA?) then (Sí)
+  :Ingresar DNI, nombre,\ndirección, estado civil;
+  :Registrar PERSONA;
+endif
+
+if (¿Dar de ALTA ASIGNATURA?) then (Sí)
+  :Ingresar código, nombre,\nprofesor responsable, curso;
+  :Registrar ASIGNATURA;
+endif
+
+if (¿Dar de ALTA como ESTUDIANTE?) then (Sí)
+  :Seleccionar PERSONA (por DNI);
+  :Convertir PERSONA → ESTUDIANTE;
+endif
+
+' === Matrícula ===
+if (¿MATRICULAR estudiante en asignaturas?) then (Sí)
+  :Seleccionar estudiante y\nasignaturas impartidas (curso actual);
+  :Registrar MATRÍCULA\n(estudiante-asignatura-curso);
+endif
+
+' === Beca ===
+if (¿Solicitar BECA?) then (Sí)
+  if (¿Beca aprobada?) then (Sí)
+    :Asignar BECA:\n- Código becario\n- Importe\n- Vigencia = curso actual;
+  else (No)
+    :Mantener sin beca;
+  endif
+endif
+
+' === Exámenes y notas ===
+if (¿Rendir EXÁMENES del curso?) then (Sí)
+  while (¿Quedan asignaturas/convocatorias por rendir?) is (Sí)
+    :Presentarse a examen;
+    :Registrar NOTA\n(estudiante, asignatura, convocatoria, calificación);
+  endwhile (No)
+endif
+
+' === Listados ===
+if (¿Emitir LISTADOS?) then (Sí)
+  if (¿Alumnos por asignatura?) then (Sí)
+    :Generar listado:\nestudiantes matriculados\nen la asignatura (curso);
+  endif
+  if (¿Asignaturas de un alumno?) then (Sí)
+    :Generar listado:\nasignaturas matriculadas\npor el alumno (curso);
+  endif
+  if (¿Actas / notas por asignatura?) then (Sí)
+    :Generar ACTA:\ncalificaciones por asignatura\n(curso y convocatoria);
+  endif
+endif
+
+' === Cierre de curso y continuidad ===
+if (¿Cierre de CURSO ACADÉMICO?) then (Sí)
+  if (¿Estudiante con BECA vigente?) then (Sí)
+    :Finalizar condición de BECA\n(al cierre del curso);
+  endif
+  if (¿El estudiante continúa?) then (Sí)
+    :Preparar próxima matrícula\n(próximo curso);
+  else (No)
+    :Procesar BAJA definitiva\n(remover rol ESTUDIANTE;\nla PERSONA permanece);
+  endif
+endif
+
+repeat while (¿Desea realizar otra operación?) is (Sí)
+
+stop
+
+floating note right
+- Persona: dni, nombre, dirección, estado civil.
+- Estudiante deriva de Persona; puede matricularse en Asignaturas
+  (código, nombre, profesor responsable, curso).
+- Beca: asigna código e importe; caduca al cierre del curso.
+- Exámenes: registrar notas por asignatura y convocatoria.
+- Listados: alumnos por asignatura, asignaturas de un alumno, actas.
+end note
+
+@enduml
