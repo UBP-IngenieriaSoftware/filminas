@@ -306,6 +306,104 @@ Se recomienda revisar su documentación: https://plantuml.com/es/
 
 ---
 
+### Ejemplo: PlantUML
+
+```
+@startuml
+autonumber
+title Generar reporte de reservas (Recepcionista)
+
+actor Recepcionista as R
+boundary "UI/Front" as UI
+control "Sistema de Reservas" as S
+control "ServicioHorario" as SH
+database "RepoReservas" as RR
+database "RepoMesas" as RM
+database "RepoClientes" as RC
+control "ServicioReportes" as SRpt
+
+note over S
+  Precondición: ya se ejecutaron procesos automáticos:
+  - No-show: a los 30' del inicio del turno, cancelación y penalización 1 semana.
+  - Por eso, las reservas consultadas ya reflejan esas bajas.
+end note
+
+R -> UI: Click "Generar reporte"\n(fecha, turno: almuerzo/cena)
+UI -> S: generarReporte(fecha, turno)
+activate S
+
+S -> SH: getHoraCorte(turno)
+activate SH
+SH --> S: horaCorte
+deactivate SH
+
+alt Aún no pasó la hora de corte
+  S --> UI: Error: "El turno no está cerrado (hora de corte: {horaCorte})"
+  UI --> R: Mostrar mensaje
+else Ya pasó la hora de corte
+  S -> RR: obtenerReservasConfirmadas(fecha, turno)
+  activate RR
+  RR --> S: [reservas]
+  deactivate RR
+
+  S -> RM: obtenerMesas()
+  activate RM
+  RM --> S: [mesas]
+  deactivate RM
+
+  S -> RC: obtenerClientes(idsClientesDeReservas)
+  activate RC
+  RC --> S: [clientes]
+  deactivate RC
+
+  note over S
+    Une reservas + clientes + mesas
+    - Mesas asignadas: reservas confirmadas
+    - Mesas disponibles: mesas - mesasAsignadas
+  end note
+
+  S -> SRpt: generar(fecha, turno, mesasAsignadas, mesasDisponibles)
+  activate SRpt
+  SRpt --> S: reporte (PDF/CSV)
+  deactivate SRpt
+
+  S --> UI: reporte
+  UI --> R: Descargar/Visualizar reporte
+end
+
+deactivate S
+@enduml
+```
+
+---
+
+### Ejercicio
+Crea un diagrama de secuencia para que el client eo el administrativo de reservas pueda cancelar una reserva en el hotel.
+
+Emplear los siguientes objetos:
+- Cliente
+- Interfaz
+- Sistema de Reservas
+- DB Reservas
+- DB Clientes
+- ServicioTarifas
+- ServicioPagos
+- ServicioNotificaciones
+
+---
+
+Emplear los siguientes **mensajes**:
+- obtenerCliente(clienteId)
+- cancelarReserva(reservaId, clienteId)
+- Solicitar cancelación(reservaId)
+- Error "No autorizado"
+- cancelar(reservaId, motivo="cancelación tardía", penalizacion=0.5*tarifaNoche)
+- calcularTarifaNoche(reserva.tipoHabitacion, reserva.fechaCheckIn)
+- cargarPenalizacion(reserva.metodoPago, monto=0.5*tarifaNoche, nreferencia=reservaId)
+- Cancelación registrada; penalización pendiente de cobro
+
+---
+
 Puedes leer más info en:
 https://es.slideshare.net/rene5254/diagramas-de-secuencia-251060499
 
