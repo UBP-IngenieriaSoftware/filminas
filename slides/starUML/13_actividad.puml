@@ -1,0 +1,89 @@
+@startuml
+title Imprenta - Sistema de Pedidos Online (Diagrama de Actividad)
+
+skinparam activity {
+  BackgroundColor #ffffff
+  BorderColor #333333
+  ArrowColor #333333
+}
+skinparam shadowing false
+
+start
+
+' =======================
+' Autenticación del Cliente
+' =======================
+:Cliente accede a la web;
+:Ingresar credenciales (usuario/clave);
+if (¿Autenticación válida?) then (Sí)
+  :Mostrar panel del cliente;
+else (No)
+  :Rechazar acceso / permitir reintento;
+  stop
+endif
+
+repeat
+:Seleccionar acción (Cliente / Encargado);
+
+' =======================
+' Cliente: Crear Orden de Trabajo
+' =======================
+if (¿Cliente: Crear nueva ORDEN?) then (Sí)
+  :Completar datos del trabajo:\nTipo, tirada, papel, colores, archivos, fecha deseada;
+  :Subir archivos/arte final;
+  :Confirmar y ENVIAR ORDEN;
+  :Registrar ORDEN con estado = "en cola";
+  :Mostrar número de orden al cliente;
+endif
+
+' =======================
+' Encargado: Gestionar Cola de Trabajos
+' =======================
+if (¿Encargado: Revisar trabajos en cola?) then (Sí)
+  :Listar ORDENES con estado = "en cola";
+  if (¿Seleccionar orden para iniciar?) then (Sí)
+    :Cambiar estado → "en taller";
+    :Registrar timestamp de inicio;
+  endif
+endif
+
+' =======================
+' Encargado: Finalizar Trabajo
+' =======================
+if (¿Encargado: Marcar orden como terminada?) then (Sí)
+  :Abrir orden en estado "en taller";
+  :Verificar control de calidad / entrega interna;
+  :Cambiar estado → "terminado";
+  :Registrar timestamp de finalización;
+  :Enviar SMS al cliente: "Su trabajo está listo para retirar";
+endif
+
+' =======================
+' Cliente: Consultar Estado
+' =======================
+if (¿Cliente: Consultar estado de órdenes?) then (Sí)
+  :Listar órdenes del cliente con estados\n("en cola" / "en taller" / "terminado");
+endif
+
+repeat while (¿Realizar otra operación?) is (Sí)
+
+:Cliente cierra sesión / Fin de jornada;
+stop
+
+' =======================
+' Notas y Reglas
+' =======================
+floating note right
+- Cliente:
+  * Autenticación obligatoria.
+  * Carga de orden con especificaciones y archivos.
+  * Consulta de estado de sus órdenes.
+- Encargado de taller:
+  * Toma trabajos "en cola" → "en taller".
+  * Al finalizar: "terminado" y dispara SMS.
+- Sistema:
+  * Traza timestamps por cambio de estado.
+  * Notifica por SMS al pasar a "terminado".
+end note
+
+@enduml

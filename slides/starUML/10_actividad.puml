@@ -1,0 +1,126 @@
+@startuml
+title Fábrica - Planificación de Producción y Compras (Diagrama de Actividad)
+
+skinparam activity {
+  BackgroundColor #ffffff
+  BorderColor #333333
+  ArrowColor #333333
+}
+skinparam shadowing false
+
+start
+
+repeat
+:Menú principal (Producción / Ventas / Compras);
+
+' =======================
+' Datos Maestros (Gerente de Producción)
+' =======================
+if (¿Cargar/Actualizar DATOS de PRODUCCIÓN?) then (Sí)
+  :Ingresar/actualizar Estaciones de Trabajo\ny Tiempos de Ciclo (ct/ud);
+  :Ingresar/actualizar Materiales y BOM\n(Materiales requeridos por producto);
+  :Ingresar/actualizar Capacidad de Planta\n(turnos, recursos, calendarios);
+  :Guardar datos maestros;
+endif
+
+' =======================
+' Pedidos de Cliente (Gerente de Ventas)
+' =======================
+if (¿Registrar PEDIDO de cliente?) then (Sí)
+  :Ingresar cliente, producto, cantidad,\nfecha requerida (due date);
+  :Guardar pedido en el sistema;
+  :Planificación preliminar (RCCP):\nverificar capacidad y materiales a alto nivel;
+  if (¿Pedido factible en fecha?) then (Sí)
+    :Generar ORDEN(ES) DE PRODUCCIÓN planificadas\n(Fechas de inicio/fin objetivo);
+  else (No)
+    :Proponer nueva fecha/ajuste de cantidad;\nConfirmar con Ventas;
+    if (¿Aceptar propuesta?) then (Sí)
+      :Generar ORDEN(ES) DE PRODUCCIÓN reprogramadas;
+    else (No)
+      :Marcar pedido como Pendiente de revisión\n(o Rechazado);
+    endif
+  endif
+endif
+
+' =======================
+' Programación y Ejecución (Producción)
+' =======================
+if (¿Programar/Ejecutar producción?) then (Sí)
+  :Secuenciar órdenes por prioridad/fecha;\nAsignar a estaciones según capacidad;
+  while (¿Quedan operaciones por ejecutar?) is (Sí)
+    :Liberar operación a estación de trabajo;
+    :Registrar inicio de operación (timestamp);
+    :Consumir materiales requeridos (BOM);
+    :Registrar fin de operación (timestamp,\nunidades OK/scrap);
+  endwhile (No)
+  :Actualizar estado de la Orden de Producción\n(En Proceso → Completada);
+  :Actualizar cumplimiento del Pedido de Cliente;
+endif
+
+' =======================
+' MRP / Compras automáticas
+' =======================
+if (¿Correr MRP / Reposición?) then (Sí)
+  :Calcular Necesidades de Material\n(a partir de OPs y BOM);
+  :Comparar con Stock + Recepciones programadas;
+  if (¿Déficit de materiales?) then (Sí)
+    :Generar ÓRDENES DE COMPRA (OC) automáticas\n(material, cantidad, fecha requerida);
+  else (No)
+    :No se requieren compras;
+  endif
+endif
+
+' =======================
+' Validación de Compras (Gerente de Compras)
+' =======================
+if (¿Revisar/Validar Órdenes de Compra?) then (Sí)
+  :Listar OCs generadas por el sistema;
+  if (¿OC correcta?) then (Sí)
+    :Aprobar OC y Enviar a proveedor;
+    :Registrar emisión (proveedor, fecha);
+  else (No)
+    :Editar OC (cantidad/plazo/proveedor) y aprobar;
+  endif
+endif
+
+' =======================
+' Recepción de Materiales (Compras / Almacén)
+' =======================
+if (¿Registrar recepción de materiales?) then (Sí)
+  :Recepcionar OC (parcial/total);\nActualizar inventario y OC;
+  :Notificar disponibilidad a Producción;
+endif
+
+' =======================
+' Entrega / Estado de Pedidos (Ventas)
+' =======================
+if (¿Consultar estado de PEDIDOS?) then (Sí)
+  :Mostrar avance por pedido:\n% completado, fecha estimada de entrega,\nOC críticas/materiales pendientes;
+endif
+
+repeat while (¿Realizar otra operación?) is (Sí)
+
+stop
+
+' =======================
+' Notas y Reglas
+' =======================
+floating note right
+- Producción:
+  * Mantiene estaciones (tiempos de ciclo), BOM y capacidad.
+  * Programa y registra ejecución de órdenes de producción.
+- Ventas:
+  * Ingresa pedidos (producto, cantidad, due date).
+  * Consulta estado de pedidos.
+- Compras:
+  * Revisa y valida OCs generadas por MRP.
+  * Registra recepciones y actualiza stock.
+- MRP:
+  * A partir de OPs y BOM calcula necesidades y déficit.
+  * Genera OCs automáticas con fecha requerida.
+- Trazabilidad:
+  * Tiempos de inicio/fin, consumos de materiales, scrap,
+    recepciones y estados de OPs y OCs quedan registrados.
+end note
+
+@enduml

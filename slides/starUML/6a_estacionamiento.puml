@@ -1,0 +1,98 @@
+@startuml
+title Aparcamiento (capacidad 400) - Emisión de Factura por Operador
+
+skinparam sequence {
+  ArrowColor #333333
+  LifeLineBorderColor #333333
+  LifeLineBackgroundColor #F9F9F9
+  ParticipantBorderColor #333333
+  ParticipantBackgroundColor #FFFFFF
+}
+skinparam shadowing false
+
+actor Operador as OP
+participant "Portal/Backoffice" as UI
+participant "Servicio\nFacturación" as FACT
+participant "Servicio\nRegistros" as REG
+participant "Servicio\nTarifas" as TAR
+participant "Servicio\nPDF" as PDF
+participant "Servicio\nEmail" as MAIL
+database "BD Aparcamiento" as DB
+
+== Inicio ==
+OP -> UI : Iniciar sesión (credenciales)
+UI -> DB : Verificar credenciales
+DB --> UI : OK / Token sesión
+UI --> OP : Acceso concedido
+
+== Emisión de factura a petición del operador ==
+OP -> UI : Emitir factura\n(selecciona usuario y periodo)
+UI -> FACT : solicitarFactura(usuario, periodo, opciones)
+
+activate FACT
+FACT -> REG : obtenerMovimientos(usuario, periodo)
+activate REG
+REG -> DB : SELECT entradas/salidas\npor usuario en periodo
+DB --> REG : Lista de movimientos (timestamps)
+REG --> FACT : Movimientos consolidados
+deactivate REG
+
+alt Sin movimientos en el periodo
+  FACT --> UI : Error: No hay movimientos
+  UI --> OP : Informar: sin estacionamientos en el periodo
+  deactivate FACT
+else Hay movimientos
+  loop Por cada estancia (entrada→salida)
+    FACT -> TAR : calcularImporte(duración, tarifaVigente,\nreglas: fracciones, tope, etc.)
+    TAR --> FACT : Importe parcial
+  end
+  FACT -> FACT : Sumar importes, aplicar impuestos/ajustes
+  FACT -> UI : Borrador de factura\n(detalle, total, impuestos)
+  UI --> OP : Mostrar borrador y solicitar confirmación
+
+  alt Operador confirma
+    FACT -> PDF : generarPDF(datosFactura)
+    activate PDF
+    PDF --> FACT : PDF listo (URL/bytes)
+    deactivate PDF
+
+    FACT -> DB : INSERT Factura + líneas + PDFs
+    DB --> FACT : OK (idFactura)
+
+    UI -> OP : ¿Enviar por email al cliente?
+    alt Enviar por email = Sí
+      FACT -> MAIL : enviarFacturaEmail(cliente, idFactura, PDF)
+      activate MAIL
+      MAIL --> FACT : Resultado envío (OK)
+      deactivate MAIL
+      FACT --> UI : Emisión completada (idFactura, envío OK)
+      UI --> OP : Confirmación + enlace de descarga
+    else Enviar por email = No
+      FACT --> UI : Emisión completada (idFactura)
+      UI --> OP : Confirmación + descarga local
+    end
+    deactivate FACT
+  else Operador cancela
+    FACT --> UI : Operación cancelada por el operador
+    UI --> OP : Cancelación registrada
+    deactivate FACT
+  end
+end
+
+== Consideraciones (fuera de la emisión) ==
+note right of REG
+Los movimientos de ENTRADA/SALIDA
+se registran automáticamente cuando
+los usuarios validan su tarjeta en
+los lectores y la barrera se opera.
+end note
+
+note right of TAR
+La tarifa puede considerar:
+- tiempo total (entrada→salida)
+- fracciones/estadia mínima
+- tarifas nocturnas/fines de semana
+- impuestos y redondeos
+end note
+
+@enduml

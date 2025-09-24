@@ -1,0 +1,124 @@
+@startuml
+title Compañía de Seguridad - Gestión de Alarmas y Sensores (Secuencia)
+
+skinparam sequence {
+  ArrowColor #333333
+  LifeLineBorderColor #333333
+  LifeLineBackgroundColor #F9F9F9
+  ParticipantBorderColor #333333
+  ParticipantBackgroundColor #FFFFFF
+}
+skinparam shadowing false
+
+actor "Operador/Administrador" as OP
+participant "Portal/Backoffice" as UI
+participant "Servicio Configuración\n(Altas/Ediciones)" as CFG
+participant "Central de Alarma\n(Zona)" as CEN
+participant "Control de Edificio" as CTRL
+participant "Alarma Incendio" as A_FUEGO
+participant "Alarma Robo" as A_ROBO
+participant "Sensor" as SEN
+participant "Servicio Monitoreo\n(Heartbeat/Eventos)" as MON
+participant "Despachador" as DSP
+participant "Mantenimiento" as MNT
+participant "Bomberos" as FIRE
+participant "Policía" as POL
+database "BD Seguridad" as DB
+
+== Inicio de gestión ==
+OP -> UI : Iniciar sesión (credenciales)
+UI -> DB : Validar usuario/roles
+DB --> UI : OK (token)
+UI --> OP : Acceso backoffice
+
+== Altas / Ediciones (inventario lógico) ==
+OP -> UI : Alta/Edición de Zona/Edificio/Alarma/Sensor
+UI -> CFG : upsertEntidad(datos)
+activate CFG
+CFG -> DB : INSERT/UPDATE (zona, edificio, alarmas, sensores,\nrelaciones: edificio↔alarma↔sensor)
+DB --> CFG : OK
+CFG --> UI : Confirmación (ids, versión)
+deactivate CFG
+UI --> OP : Entidades creadas/actualizadas
+
+== Asignación y vinculación ==
+OP -> UI : Asignar sensores a alarma (edificio)
+UI -> CFG : vincular(sensorId, alarmaId, edificioId)
+CFG -> DB : UPDATE vínculo + estado=Activo
+DB --> CFG : OK
+CFG --> UI : OK
+UI --> OP : Vinculación confirmada
+
+== Prueba / Modo Test ==
+OP -> UI : Ejecutar prueba de sensor/alarma
+UI -> CEN : solicitarTest(edificio, alarma/sensor)
+CEN -> CTRL : activarModoPrueba()
+CTRL --> CEN : OK
+UI -> OP : Indicar al técnico activar físicamente el sensor
+SEN -> A_FUEGO : triggerTest()  ||  SEN -> A_ROBO : triggerTest()
+A_FUEGO -> CEN : evento(TEST,FUEGO,ubicación)  ||  A_ROBO -> CEN : evento(TEST,ROBO,ubicación)
+CEN -> MON : registrarEvento(TEST,...)
+MON -> DB : INSERT evento test
+DB --> MON : OK
+MON --> CEN : OK
+CEN -> CTRL : salirModoPrueba()
+CTRL --> CEN : OK
+UI --> OP : Prueba exitosa (registro guardado)
+
+== Monitoreo (Heartbeat) ==
+MON -> SEN : ping/heartbeat (periódico)
+SEN --> MON : pong (estado OK)
+
+alt Heartbeat perdido / batería baja
+  MON -> DB : INSERT alerta(mantenimiento)
+  MON -> MNT : abrirTicket(sensorId, síntoma)
+  MNT --> MON : ticketId
+  UI <-- MON : notificar alerta a backoffice
+  OP <-- UI : Mostrar alerta/ticket de mantenimiento
+else Heartbeat OK
+  MON -> DB : actualizarÚltimoHeartbeat(sensorId)
+end
+
+== Evento real (operación) ==
+SEN -> (A_FUEGO, A_ROBO) : trigger(tipo=FUEGO/ROBO)
+(A_FUEGO, A_ROBO) -> CEN : evento(ubicación, tipo, ts)
+CEN -> MON : procesarEvento(...)
+MON -> DB : INSERT evento operativo
+DB --> MON : OK
+
+alt tipo == FUEGO
+  MON -> DSP : despachar(FUEGO, ubicación, detalles)
+  DSP -> FIRE : notificarIncendio(ubicación, ts, info)
+  DSP -> POL  : notificarApoyo(ubicación, ts)
+  FIRE --> DSP : acuse/ETA (opcional)
+  POL  --> DSP : acuse/ETA (opcional)
+  DSP -> MON : estadoDespacho(actualizado)
+else tipo == ROBO
+  MON -> DSP : despachar(ROBO, ubicación, detalles)
+  DSP -> POL : notificarRobo(ubicación, ts)
+  POL --> DSP : acuse/ETA (opcional)
+  DSP -> MON : estadoDespacho(actualizado)
+end
+
+== Gestión operativa desde backoffice ==
+OP -> UI : Consultar estado alarmas/sensores
+UI -> DB : SELECT inventario + estados + últimos eventos
+DB --> UI : Datos
+UI --> OP : Dashboard (mapa/tabla con filtros)
+
+== Intervenciones de mantenimiento ==
+OP -> UI : Programar intervención / Desactivar temporalmente sensor
+UI -> CFG : cambiarEstado(sensorId, Modo=Mantenimiento)
+CFG -> DB : UPDATE estado sensor
+DB --> CFG : OK
+CFG --> UI : OK
+UI --> OP : Sensor fuera de servicio (no despachar)
+
+MNT -> UI : Cerrar ticket (reemplazo/reparación)
+UI -> CFG : activar(sensorId)
+CFG -> DB : UPDATE estado=Activo
+DB --> CFG : OK
+CFG --> UI : OK
+UI --> MNT : Confirmación cierre
+
+@enduml

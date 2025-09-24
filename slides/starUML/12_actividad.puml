@@ -1,0 +1,131 @@
+@startuml
+title Banca Web - Atención a Clientes (Diagrama de Actividad)
+
+skinparam activity {
+  BackgroundColor #ffffff
+  BorderColor #333333
+  ArrowColor #333333
+}
+skinparam shadowing false
+
+start
+
+' =======================
+' Autenticación
+' =======================
+:Ingresar a la plataforma web;
+:Introducir credenciales (usuario/clave, 2FA);
+if (¿Autenticación válida?) then (Sí)
+  :Mostrar menú principal;
+else (No)
+  :Rechazar acceso / permitir reintentos;
+  stop
+endif
+
+repeat
+:Seleccionar operación;
+
+' =======================
+' Compra de Divisas
+' =======================
+if (¿Compra de divisas?) then (Sí)
+  :Seleccionar moneda y monto;
+  :Verificar límites/regulaciones y saldo en cuenta;
+  if (¿Cumple límites y saldo suficiente?) then (Sí)
+    :Calcular tipo de cambio y total;
+    :Confirmar operación;
+    :Debitar cuenta origen / acreditar cuenta en moneda destino;
+    :Emitir comprobante;
+  else (No)
+    :Rechazar / informar motivo (límite o fondos);
+  endif
+endif
+
+' =======================
+' Pagos
+' =======================
+if (¿Realizar pago?) then (Sí)
+  :Elegir tipo de pago (servicios, tarjeta, transferencia);
+  :Ingresar datos (importe, destino, fecha, referencia);
+  :Validar fondos / límites / CBU/alias;
+  if (¿Validación OK?) then (Sí)
+    :Confirmar y ejecutar pago;
+    :Registrar operación y emitir comprobante;
+  else (No)
+    :Rechazar / informar error de validación;
+  endif
+endif
+
+' =======================
+' Solicitud de Préstamo (requiere autorización)
+' =======================
+if (¿Solicitar préstamo?) then (Sí)
+  :Elegir producto (monto, plazo, destino);
+  :Simular cuotas y TNA/TEA/CFT;
+  :Enviar solicitud;
+  :Evaluación automática preliminar (ingresos, scoring interno);
+  if (¿Pasa evaluación preliminar?) then (Sí)
+    :Enviar a GERENTE para autorización;
+    ' --- Flujo del Gerente ---
+    :Gerente consulta historial interno del cliente;
+    :Gerente consulta sistema Veraz;
+    if (¿Gerente autoriza?) then (Sí)
+      :Aprobar préstamo;
+      :Generar contrato y plan de cuotas;
+      :Acreditar fondos en cuenta del cliente;
+      :Notificar aprobación y disponibilidad;
+    else (No)
+      :Rechazar solicitud;\nNotificar razones generales;
+    endif
+  else (No)
+    :Rechazar automáticamente (política de riesgo);\nNotificar al cliente;
+  endif
+endif
+
+' =======================
+' Plazo Fijo
+' =======================
+if (¿Constituir plazo fijo?) then (Sí)
+  :Seleccionar importe y plazo;
+  :Calcular tasa/ganancia estimada;
+  :Verificar saldo disponible;
+  if (¿Saldo suficiente?) then (Sí)
+    :Confirmar constitución;
+    :Debitar cuenta / abrir PF;\nGenerar constancia;
+  else (No)
+    :Rechazar por fondos insuficientes;
+  endif
+endif
+
+' =======================
+' Consultas y Reportes
+' =======================
+if (¿Consultar cuentas/obtener reportes?) then (Sí)
+  :Elegir consulta (saldos, movimientos, tarjeta, préstamos, PF);
+  :Aplicar filtros de fecha/medio;
+  :Mostrar resultados / Exportar reporte (PDF/CSV);
+endif
+
+repeat while (¿Realizar otra operación?) is (Sí)
+
+:Salir / Cerrar sesión;
+stop
+
+' =======================
+' Notas y Reglas
+' =======================
+floating note right
+- Acceso: autenticación con 2FA.
+- Operaciones del cliente:
+  * Compra de divisas con validación de límites/regulaciones.
+  * Pagos (servicios, tarjetas, transferencias) con verificación de datos y fondos.
+  * Plazos fijos: cálculo de tasa y bloqueo de fondos.
+  * Consultas y reportes exportables (PDF/CSV).
+- Préstamos:
+  * Evaluación preliminar automática.
+  * Autorización del Gerente (historial interno + Veraz).
+  * Si se aprueba: contrato, acreditación y notificación.
+- Trazabilidad: todas las operaciones generan comprobante y quedan registradas.
+end note
+
+@enduml

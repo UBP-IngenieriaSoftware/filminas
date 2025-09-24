@@ -1,0 +1,70 @@
+@startuml
+title Sistema de Seguridad - Aviso a Bomberos y/o Policía (Secuencia)
+
+skinparam sequence {
+  ArrowColor #333333
+  LifeLineBorderColor #333333
+  LifeLineBackgroundColor #F9F9F9
+  ParticipantBorderColor #333333
+  ParticipantBackgroundColor #FFFFFF
+}
+skinparam shadowing false
+
+actor "Evento Físico" as EVT
+participant "Sensor\n(Fuego/Robo)" as SEN
+participant "Alarma\n(Edificio)" as ALR
+participant "Comunicador\nEdificio→Central" as COM
+participant "Central de Alarma\n(Zona)" as CEN
+participant "Despachador\nCompañía" as DSP
+participant "Bomberos" as FIRE
+participant "Policía" as POL
+
+== Activación de sensor ==
+EVT -> SEN : Activación (calor/humo o intrusión)
+SEN -> ALR : trigger(tipo)
+ALR -> ALR : Sonar alarma local
+
+' Enviar evento a la central de la zona
+ALR -> COM : enviarEvento(edificio, zona, tipo)
+COM -> CEN : eventoRecibido(edificio, tipo, ts)
+
+' Clasificación y despacho
+CEN -> DSP : procesarEvento(edificio, tipo, ubicación)
+
+alt Tipo = FUEGO
+  DSP -> FIRE : notificarIncendio(ubicación, ts, detalles)
+  DSP -> POL  : notificarApoyoPolicial(ubicación, ts, referencia)
+
+  par Confirmaciones (opcionales)
+    FIRE --> DSP : acuse/ETA unidades
+    POL  --> DSP : acuse/ETA patrulla
+  end
+
+  DSP -> CEN : actualizarEstado(incendio notificado)
+  CEN -> ALR : confirmarGestion()
+  note right of DSP
+    Para FUEGO:
+    - Suena alarma local
+    - Aviso a Bomberos y Policía
+    - Registro de tiempos/acuse
+  end note
+
+else Tipo = ROBO
+  DSP -> POL : notificarRobo(ubicación, ts, detalles)
+
+  POL --> DSP : acuse/ETA (opcional)
+  DSP -> CEN : actualizarEstado(robo notificado)
+  CEN -> ALR : confirmarGestion()
+  note right of DSP
+    Para ROBO:
+    - Suena alarma local
+    - Aviso solo a Policía
+  end note
+end
+
+== Auditoría ==
+CEN -> CEN : registrarEvento(edificio, tipo,\n tiempos, destinatarios, respuestas)
+CEN -> ALR : (opcional) solicitar reset/silenciamiento\nsegún protocolo
+ALR --> CEN : estadoAlarma(restablecida)
+
+@enduml

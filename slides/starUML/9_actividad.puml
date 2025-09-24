@@ -1,0 +1,106 @@
+@startuml
+title Centro de Salud - Gestión de Pacientes, Turnos e Historias (Diagrama de Actividad)
+
+skinparam activity {
+  BackgroundColor #ffffff
+  BorderColor #333333
+  ArrowColor #333333
+}
+skinparam shadowing false
+
+start
+
+repeat
+:Menú principal (Secretaría / Médico);
+
+' =======================
+' Secretaría: Pacientes
+' =======================
+if (¿Gestionar PACIENTE?) then (Sí)
+  :Ingresar/actualizar datos del paciente:\nNombre, Apellido, DNI, F.Nac., contacto, etc.;
+  :Guardar/Actualizar registro de PACIENTE;
+endif
+
+' =======================
+' Secretaría: Turnos
+' =======================
+if (¿Asignar TURNO?) then (Sí)
+  :Seleccionar paciente;
+  :Elegir médico y franja (fecha, hora);
+  :Verificar disponibilidad del turno;
+  if (¿Turno disponible?) then (Sí)
+    :Registrar TURNO (paciente, médico, fecha/hora);
+    :Notificar turno (email/SMS);
+  else (No)
+    :Informar conflicto\n(Sugerir horarios alternativos);
+  endif
+endif
+
+if (¿Cancelar TURNO?) then (Sí)
+  :Seleccionar turno del paciente;
+  :Confirmar cancelación;
+  :Anular TURNO y liberar franja;
+  :Notificar cancelación;
+endif
+
+' =======================
+' Médico: Historia clínica y Reportes
+' =======================
+if (¿Médico: Revisar HISTORIA?) then (Sí)
+  :Seleccionar paciente (por turno o búsqueda);
+  :Abrir HISTORIA CLÍNICA (solo lectura de entradas previas);
+endif
+
+if (¿Médico: Nueva ENTRADA en historia?) then (Sí)
+  :Capturar motivo, evolución, diagnóstico,\nindicaciones, Rx/estudios solicitados, etc.;
+  :Agregar NUEVA ENTRADA a la historia\n(no se modifican entradas anteriores);
+endif
+
+if (¿Médico: Generar REPORTE?) then (Sí)
+  :Elegir criterios (rango fechas, médico, diagnóstico, etc.);
+  :Generar REPORTE clínico/estadístico;
+endif
+
+' =======================
+' Exámenes solicitados por el Médico
+' =======================
+if (¿Requerir EXÁMENES?) then (Sí)
+  :Seleccionar tipos de examen:\nOrina / Sangre / Rayos X;
+  if (¿Se realizan en el mismo centro?) then (Sí)
+    :Registrar PEDIDO de examen en el sistema\n(vinculado a paciente y turno);
+    :Notificar a Laboratorio/Radiología internamente;
+  else (No)
+    :Emitir ORDEN externa para derivación;
+  endif
+endif
+
+' =======================
+' Atención según turnos del día (opcional)
+' =======================
+if (¿Iniciar Atención (médico)?) then (Sí)
+  :Tomar paciente del turno actual;
+  :Revisar historia, realizar consulta;
+  :(Opcional) Agregar nueva entrada / Solicitar exámenes;
+  :Marcar turno como atendido/ausente según corresponda;
+endif
+
+repeat while (¿Realizar otra operación?) is (Sí)
+
+stop
+
+floating note right
+- Secretaría:
+  * Gestiona datos de pacientes.
+  * Asigna y cancela turnos validando disponibilidad.
+- Médico:
+  * Revisa historia clínica.
+  * Solo agrega NUEVAS entradas (no modifica previas).
+  * Genera reportes (clínicos/estadísticos).
+  * Puede solicitar exámenes (orina, sangre, rayos X).
+- Exámenes:
+  * Si se realizan en el centro, se cargan como PEDIDO interno.
+  * Si no, se emite ORDEN externa para derivación.
+- Notificaciones (turnos/altas/cancelaciones) por email/SMS/app.
+end note
+
+@enduml

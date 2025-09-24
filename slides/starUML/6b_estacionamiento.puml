@@ -1,0 +1,65 @@
+@startuml
+title Aparcamiento - Acceso según Capacidad (Secuencia de Entrada)
+
+skinparam sequence {
+  ArrowColor #333333
+  LifeLineBorderColor #333333
+  LifeLineBackgroundColor #F9F9F9
+  ParticipantBorderColor #333333
+  ParticipantBackgroundColor #FFFFFF
+}
+skinparam shadowing false
+
+actor Usuario as U
+participant "Lector Entrada" as LEC
+participant "Control Accesos" as CTRL
+participant "Servicio Ocupación" as OCC
+participant "Semáforo Entrada" as SEM
+participant "Barrera Entrada" as BAR
+database "BD Aparcamiento" as DB
+
+== Llegada ==
+U -> LEC : Insertar tarjeta (código)
+
+LEC -> CTRL : validarTarjeta(código)
+CTRL -> DB  : SELECT usuario\npor código
+DB --> CTRL : OK / inválido
+
+alt Tarjeta inválida
+  CTRL --> LEC : acceso=DENEGADO (motivo: tarjeta)
+  LEC --> U : Mostrar mensaje: Tarjeta inválida
+  SEM <- CTRL : set(ROJO)  ' sin cambios en ocupación
+else Tarjeta válida
+  CTRL -> OCC : consultarOcupacion()
+  OCC --> CTRL : ocupacionActual, capacidadMax (p.ej. 400)
+
+  alt Hay plazas libres (ocup < capacidad)
+    CTRL -> SEM : set(VERDE)
+    CTRL -> BAR : levantar()
+    BAR --> CTRL : levantada
+
+    CTRL -> DB : INSERT entrada\n(usuario, fecha/hora)
+    CTRL -> OCC : incrementarOcupacion()
+    OCC --> CTRL : ocupacionActualizada
+
+    note right of BAR
+      Temporizador de seguridad:
+      la barrera desciende
+      automáticamente tras T segundos.
+    end note
+    CTRL -> BAR : iniciarTemporizadorCierre(T)
+    BAR --> CTRL : programado
+
+    LEC --> U : Acceso PERMITIDO
+  else Aparcamiento lleno (ocup >= capacidad)
+    CTRL -> SEM : set(ROJO)
+    CTRL --> LEC : acceso=DENEGADO (motivo: lleno)
+    LEC --> U : Acceso denegado: Aparcamiento lleno
+    CTRL -> BAR : mantenerCerrada()
+  end
+end
+
+== (Opcional) Telemetría/Log ==
+CTRL -> DB : INSERT logEvento\n(lector, resultado, ocupación, semáforo)
+
+@enduml

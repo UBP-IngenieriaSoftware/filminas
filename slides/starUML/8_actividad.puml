@@ -1,0 +1,114 @@
+@startuml
+title Club Deportivo - Reservas de Instalaciones y Artículos (Diagrama de Actividad)
+
+skinparam activity {
+  BackgroundColor #ffffff
+  BorderColor #333333
+  ArrowColor #333333
+}
+skinparam shadowing false
+
+start
+
+repeat
+:Menú principal (Operador / Socio);
+
+' =======================
+' Gestión de Socios
+' =======================
+if (¿Alta/Modificación de SOCIO?) then (Sí)
+  :Ingresar/actualizar datos:\nNombre, Dirección, Ciudad, Provincia,\nTeléfono, Cuota (estado de pago);
+  :Guardar SOCIO;
+endif
+
+' =======================
+' Gestión de Instalaciones
+' =======================
+if (¿Alta/Modificación de INSTALACIÓN?) then (Sí)
+  :Ingresar/actualizar datos:\nTipo (piscina, gimnasio, fútbol, voley,\n tenis, pádel, polideportiva, etc.)\nCapacidad, ubic., reglas/horarios;
+  :Guardar INSTALACIÓN;
+endif
+
+' =======================
+' Gestión de Artículos
+' =======================
+if (¿Alta/Modificación de ARTÍCULO?) then (Sí)
+  :Ingresar/actualizar datos:\nTipo (pelotas, redes, raquetas), stock,\nprecio de alquiler, condiciones;
+  :Guardar ARTÍCULO;
+endif
+
+' =======================
+' Crear Reserva
+' =======================
+if (¿Crear RESERVA?) then (Sí)
+  :Seleccionar SOCIO;
+  if (¿Cuota al día?) then (Sí)
+    :Elegir INSTALACIÓN y fecha;\nIndicar hora inicio y hora fin;
+    :Verificar disponibilidad de instalación\n(no solapamiento con reservas existentes);
+    if (¿Instalación disponible?) then (Sí)
+      :Opcional: Elegir ARTÍCULOS a alquilar\n(pelotas, redes, raquetas...);
+      :Verificar disponibilidad de artículos\n(chequear stock por franja horaria);
+      if (¿Artículos disponibles o no requeridos?) then (Sí)
+        :Calcular costo estimado\n(reserva + artículos, si aplica);
+        :Confirmar RESERVA;
+        :Registrar RESERVA (socio, instalación,\nfecha, hora inicio/fin, artículos asociados);
+        :Bloquear stock de artículos en franja;
+        :Enviar confirmación al socio\n(email/SMS/app);
+      else (No)
+        :Informar falta de stock de artículos;\nSugerir alternativas (otros horarios/artículos);
+      endif
+    else (No)
+      :Informar conflicto de agenda;\nSugerir horarios alternativos;
+    endif
+  else (No)
+    :Informar cuota impaga;\nOfrecer regularización antes de reservar;
+  endif
+endif
+
+' =======================
+' Consultas / Listados
+' =======================
+if (¿Consultar RESERVAS?) then (Sí)
+  :Filtrar por socio/instalación/fecha;\nMostrar agenda y detalles;
+endif
+
+' =======================
+' Modificar / Cancelar
+' =======================
+if (¿Modificar/Cancelar RESERVA?) then (Sí)
+  :Seleccionar reserva;
+  if (¿Modificar?) then (Sí)
+    :Ingresar nuevos datos (horario/artículos);\nRevalidar disponibilidad;
+    if (¿Disponible?) then (Sí)
+      :Actualizar reserva y stock asociado;
+      :Notificar cambios al socio;
+    else (No)
+      :Informar conflicto;\nMantener reserva original;
+    endif
+  else (Cancelar)
+    :Liberar instalación y stock de artículos;
+    :Registrar cancelación;\nNotificar al socio;
+  endif
+endif
+
+repeat while (¿Realizar otra operación?) is (Sí)
+
+stop
+
+' =======================
+' Notas y Reglas
+' =======================
+floating note right
+- Socio: nombre, dirección, ciudad, provincia, teléfono, cuota (estado).
+- Instalación: tipo (piscina, gimnasio, fútbol, voley, tenis, pádel, polideportiva),
+  capacidad, ubicación, horarios/reglas.
+- Artículo: tipo (pelotas, redes, raquetas), stock y precio de alquiler.
+- Reserva: socio + instalación + (fecha, hora inicio/fin).
+  Puede asociar 0..n artículos si el socio los necesita.
+- Validaciones: cuota al día, disponibilidad de instalación y artículos
+  (sin solapamiento temporal), stock por franja.
+- Ejemplo: para jugar al tenis, reservar una instalación compatible
+  (p.ej., cancha de tenis o polideportiva) y, si se requiere, raquetas.
+end note
+
+@enduml

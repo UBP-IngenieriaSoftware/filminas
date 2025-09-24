@@ -1,0 +1,65 @@
+@startuml
+title Sistema de Seguridad Urbano - Diagrama de Actividad
+
+skinparam activity {
+  BackgroundColor #ffffff
+  BorderColor #333333
+  ArrowColor #333333
+}
+skinparam shadowing false
+
+start
+
+' Bucle de monitorización continua
+repeat
+:Monitorear sensores en edificios\n(conectados a alarmas de Incendio/Robo);
+
+if (¿Se activa un sensor?) then (Sí)
+  :Identificar edificio y zona;
+  :Determinar tipo de sensor\n(Fuego o Robo);
+  :Activar alarma local correspondiente\n(en el edificio);
+
+  :Transmitir señal a la Central de alarma\nde la zona (compañía);
+
+  if (¿Sensor de FUEGO?) then (Sí)
+    :Registrar evento FUEGO (timestamp, edificio, zona);
+
+    fork
+      :Avisar BOMBEROS\n(enviar ubicación y detalles);
+    fork again
+      :Avisar POLICÍA\n(enviar ubicación y detalles);
+    end fork
+
+    :Actualizar estado de incidente\n(Incendio notificado);
+  else (No -> Sensor de ROBO)
+    :Registrar evento ROBO (timestamp, edificio, zona);
+    :Avisar POLICÍA\n(enviar ubicación y detalles);
+    :Actualizar estado de incidente\n(Robo notificado);
+  endif
+
+  :Auditar y almacenar logs\n(señal, central, respuestas, tiempos);
+
+else (No)
+  :Continuar monitoreo;
+endif
+
+repeat while (¿Seguir monitoreando?) is (Sí)
+
+stop
+
+' Notas
+floating note right
+- La ciudad se divide en zonas; cada zona tiene una Central de alarma.
+- Cada Central está conectada a múltiples edificios de su zona.
+- En cada edificio hay dos alarmas: Incendio y Robo.
+- Cada alarma tiene múltiples sensores del tipo correspondiente.
+- Al activarse un sensor de FUEGO:
+  * Suena la alarma local.
+  * La Central notifica a BOMBEROS y POLICÍA.
+- Al activarse un sensor de ROBO:
+  * Suena la alarma local.
+  * La Central notifica solo a POLICÍA.
+- Todos los eventos quedan registrados para auditoría.
+end note
+
+@enduml

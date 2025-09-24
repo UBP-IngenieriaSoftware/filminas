@@ -1,0 +1,87 @@
+@startuml
+title Inmobiliaria - Flujo de Gestión y Operaciones (Diagrama de Actividad)
+
+skinparam activity {
+  BackgroundColor #ffffff
+  BorderColor #333333
+  ArrowColor #333333
+}
+skinparam shadowing false
+
+start
+
+repeat
+:Menú principal (Vendedor):\nSeleccionar acción;
+
+' =======================
+' Gestión de Clientes
+' =======================
+if (¿Alta/Modificación de CLIENTE?) then (Sí)
+  :Ingresar/actualizar datos del cliente:\n- Identificación (DNI/CUIT)\n- Nombre y contacto (email, teléfono)\n- Dirección;
+  :Guardar CLIENTE;
+endif
+
+' =======================
+' Gestión de Propiedades
+' =======================
+if (¿Alta/Modificación de PROPIEDAD?) then (Sí)
+  :Ingresar/actualizar datos de la propiedad:\n- Operación: alquiler y/o venta\n- Dirección/ubicación\n- Metros totales y construidos\n- Ambientes/habitaciones, baños\n- Equipamiento extra (pileta, asador, etc.)\n- Precio y condiciones;
+  :Guardar PROPIEDAD en carpeta de ofertas;
+endif
+
+' =======================
+' Preferencias del Cliente
+' =======================
+if (¿Registrar/actualizar PREFERENCIAS del cliente?) then (Sí)
+  :Seleccionar cliente;
+  :Cargar preferencias de búsqueda:\n- Operación (alquiler/venta)\n- Rango de precio\n- Ubicación/zona\n- Metros, habitaciones, baños\n- Comodidades/equipamiento deseado;
+  :Guardar PREFERENCIAS;
+endif
+
+' =======================
+' Búsqueda y Reporte
+' =======================
+if (¿Generar REPORTE de coincidencias?) then (Sí)
+  :Seleccionar cliente;
+  :Obtener preferencias del cliente;
+  :Filtrar PROPIEDADES disponibles\nsegún operación, precio, ubicación,\nmetros, ambientes/baños y equipamiento;
+  if (¿Hay coincidencias?) then (Sí)
+    :Generar REPORTE (listado con detalles\ny enlaces/fichas de propiedades);
+    if (¿Enviar REPORTE por correo?) then (Sí)
+      :Enviar email al cliente con el reporte\n(adjuntos/enlaces);
+      :Registrar envío (fecha/hora, destinatario);
+    endif
+  else (No)
+    :Informar "sin coincidencias" y sugerir\najustar preferencias;
+  endif
+endif
+
+' =======================
+' Selección y Contrato
+' =======================
+if (¿Generar CONTRATO para una operación?) then (Sí)
+  :Seleccionar cliente y propiedad elegida;
+  if (¿Operación = ALQUILER?) then (Sí)
+    :Completar datos de contrato de ALQUILER:\n- Partes, domicilio, cánon, depósito,\n- Plazo, garantías, cláusulas;
+    :Generar documento de contrato (PDF/plantilla);
+  else (No)
+    :Completar datos de contrato de VENTA:\n- Partes, precio, forma de pago,\n- Seña/arras (si aplica), plazos, cláusulas;
+    :Generar documento de contrato (PDF/plantilla);
+  endif
+  :Registrar contrato asociado a cliente y propiedad;
+endif
+
+repeat while (¿Realizar otra operación?) is (Sí)
+
+stop
+
+floating note right
+- Propiedad: operación (alquiler/venta), metros totales/construidos,
+  habitaciones, baños, extras (pileta, asador, etc.), precio y condiciones.
+- Vendedor puede crear/modificar clientes y propiedades.
+- Preferencias por cliente guían el filtrado y el reporte.
+- El reporte se puede enviar por email y se registra el envío.
+- A partir del cliente + propiedad se genera contrato (alquiler o venta).
+end note
+
+@enduml

@@ -1,0 +1,90 @@
+@startuml
+title Aparcamiento Automatizado (Capacidad: 400) - Diagrama de Actividad
+
+skinparam activity {
+  BackgroundColor #ffffff
+  BorderColor #333333
+  ArrowColor #333333
+}
+skinparam shadowing false
+
+start
+
+' ===== Ciclo principal del sistema =====
+repeat
+:Eventos del sistema / menú de operaciones;
+
+' =======================
+' Llegada / Entrada
+' =======================
+if (¿Vehículo intenta ENTRAR?) then (Sí)
+  :Leer tarjeta mecánica en lector de ENTRADA;\nObtener código de usuario;
+  if (¿Tarjeta válida?) then (Sí)
+    if (¿Ocupación < 400?) then (Sí)
+      :Elevar barrera de ENTRADA;
+      :Registrar ENTRADA\n(código, fecha/hora);
+      :Incrementar OCUPACIÓN;
+      :Temporizador barrera (entrada);\nDescender barrera automáticamente;
+      if (¿Ocupación == 400?) then (Sí)
+        :Poner semáforo ENTRADA = ROJO;
+      else (No)
+        :Poner semáforo ENTRADA = VERDE;
+      endif
+    else (No)
+      :Ocupación completa (=400);\nDenegar entrada;\nMantener barrera cerrada;
+      :Poner semáforo ENTRADA = ROJO;
+    endif
+  else (No)
+    :Tarjeta inválida;\nDenegar entrada;
+  endif
+endif
+
+' =======================
+' Salida
+' =======================
+if (¿Vehículo intenta SALIR?) then (Sí)
+  :Leer tarjeta mecánica en lector de SALIDA;\nObtener código de usuario;
+  if (¿Tarjeta válida?) then (Sí)
+    :Elevar barrera de SALIDA;
+    :Registrar SALIDA\n(código, fecha/hora);
+    :Calcular tiempo de aparcamiento\n(última entrada ↔ esta salida);
+    :Decrementar OCUPACIÓN;
+    :Temporizador barrera (salida);\nDescender barrera automáticamente;
+    if (¿Ocupación < 400?) then (Sí)
+      :Poner semáforo ENTRADA = VERDE;
+    endif
+  else (No)
+    :Tarjeta inválida;\nDenegar salida;
+  endif
+endif
+
+' =======================
+' Facturación
+' =======================
+if (¿Operador solicita FACTURACIÓN?) then (Sí)
+  :Seleccionar periodo de facturación;
+  :Recopilar registros de ENTRADAS/SALIDAS\npor usuario en el periodo;
+  :Calcular importes según tiempo consumido\n(y tarifa vigente);
+  if (¿Generar facturas?) then (Sí)
+    :Emitir FACTURAS (por usuario);\nRegistrar emisión (fecha/hora);
+  endif
+endif
+
+repeat while (¿Continuar operando?) is (Sí)
+
+stop
+
+' ===== Notas y reglas =====
+floating note right
+- Capacidad máxima: 400 vehículos.
+- La ENTRADA se permite solo si Ocupación < 400.
+- Semáforo ENTRADA:
+  * VERDE cuando Ocupación < 400.
+  * ROJO cuando Ocupación = 400.
+- Entradas y salidas quedan registradas
+  para facturación por tiempo consumido.
+- Las barreras de ENTRADA/SALIDA se elevan al validar
+  tarjeta y descienden automáticamente tras un tiempo.
+end note
+
+@enduml
