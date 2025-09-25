@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## Gestión de Proyectos
+#### Ingeniería de Software
+# Gestión de Proyectos
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -72,7 +72,7 @@ requisitos específicos, contemplando limitaciones de tiempo, costos y recursos.
 ![Gestión de Proyectos](images/unidad10/gestion-de-proyectos.jpg)
 
 ---
-### GESTION DE PROYECTOS DE SOFTWARE
+### GESTIÓN DE PROYECTOS DE SOFTWARE
 * Actividades que aseguran que el software sera entregado en el tiempo justo y estara de acuerdo
 con los requerimientos del cliente.
 * Es necesario porque el desarrollo estara siempre sujeto a las limitaciones de costos y tiempos de la empresa
@@ -127,31 +127,31 @@ observar el artefacto que se construye.
 ---
 ### ACTIVIDADES DE LOS ADMINISTRADORES
 <!-- .slide: style="font-size: 0.90em" -->
-* **Planeación del proyecto:** Son responsables de la planeación, estimación y
+1. **Planeación del proyecto:** Son responsables de la planeación, estimación y
 calendarización del desarrollo del proyecto, así como de la asignación de tareas a las personas
-* **Informes:** Son responsables de informar del avance de un proyecto a los clientes y administradores de la
+2. **Informes:** Son responsables de informar del avance de un proyecto a los clientes y administradores de la
 compañía que desarrolla el software.
-* **Gestión del riesgo:** Tienen que valorar los riesgos que pueden afectar un proyecto, monitorizar dichos riesgos
+3. **Gestión del riesgo:** Tienen que valorar los riesgos que pueden afectar un proyecto, monitorizar dichos riesgos
 y emprender acciones cuando surjan problemas.
 
 ---
 ### ACTIVIDADES DE LOS ADMINISTRADORES
-* **Gestión de personal:** Son responsables de administrar el equipo de personas. Deben elegir a los integrantes y 
+4. **Gestión de personal:** Son responsables de administrar el equipo de personas. Deben elegir a los integrantes y 
 establecer formas de trabajo que conduzcan a un desempeño efectivo del equipo.
-* **Redactar propuestas:** La propuesta describe los objetivos del proyecto y cómo se realizará. Por lo general,
+5. **Redactar propuestas:** La propuesta describe los objetivos del proyecto y cómo se realizará. Por lo general,
 incluye estimaciones de costo y calendarización, además de justificar por qué
 el contrato del proyecto debería concederse a una organización o un equipo particular
 
 ---
-### GESTION DE PROYECTOS
+### GESTIÓN DE PROYECTOS
 ![Proceso de Gestión de Proyectos](images/unidad10/proceso-gestion-proyectos.jpg)
 
 ---
 ### GESTIÓN DEL RIESGO
 Un riesgo es la posibilidad de que una circustancia adversa se pueda presentar.
-* **Riesgos del proyecto:** alteran el calendario o los recursos del proyecto.
-* **Riesgos del producto:** afectan la calidad o el rendimiento del software a desarrollar.
-* **Riesgos empresariales:** afectan a la organización que desarrolla o adquiere el software.
+1. **Riesgos del proyecto:** alteran el calendario o los recursos del proyecto.
+2. **Riesgos del producto:** afectan la calidad o el rendimiento del software a desarrollar.
+3. **Riesgos empresariales:** afectan a la organización que desarrolla o adquiere el software.
 
 ---
 ### GESTIÓN DEL RIESGO
@@ -226,26 +226,26 @@ minimizar sus efectos sobre el proyecto.
 </table>
 
 ---
-### GESTION DEL RIESGO
-* **Identificación del riesgo:** identificar posibles riesgos para el proyecto, el producto y la empresa.
-* **Análisis de riesgos:** valorar la probabilidad y las consecuencias de dichos riesgos.
-* **Planeación del riesgo:** elaborar planes para enfrentar el riesgo, evitarlo o minimizar sus efectos en el proyecto.
-* **Monitorización del riesgo:** valorar regularmente el riesgo y los planes para atenuarlo.
+### GESTIÓN DEL RIESGO
+1. **Identificación del riesgo:** identificar posibles riesgos para el proyecto, el producto y la empresa.
+2. **Análisis de riesgos:** valorar la probabilidad y las consecuencias de dichos riesgos.
+3. **Planeación del riesgo:** elaborar planes para enfrentar el riesgo, evitarlo o minimizar sus efectos en el proyecto.
+4. **Monitorización del riesgo:** valorar regularmente el riesgo y los planes para atenuarlo.
 
 ---
 ### GESTION DEL RIESGO – EL PROCESO
-![Gestión del Riesgo](images/unidad10/gestion-del-riesgo.jpg)
+![Gestión del Riesgo](images/unidad10/gestion-del-riesgo.png)
 
 ---
-### IDENTIFICACION DEL RIESGO
+### IDENTIFICACIÓN DEL RIESGO
 <!-- .slide: style="font-size: 0.80em" -->
-* **Riesgos tecnológicos:** Se derivan de las tecnologías de software o hardware usadas para desarrollar el sistema.
-* **Riesgos personales:** Se asocian con las personas en el equipo de desarrollo.
-* **Riesgos organizacionales:** Se derivan del entorno organizacional donde se desarrolla el software.
-* **Riesgos de herramientas:** Resultan de las herramientas de software y otro software de soporte
+1. **Riesgos tecnológicos:** Se derivan de las tecnologías de software o hardware usadas para desarrollar el sistema.
+2. **Riesgos personales:** Se asocian con las personas en el equipo de desarrollo.
+3. **Riesgos organizacionales:** Se derivan del entorno organizacional donde se desarrolla el software.
+4. **Riesgos de herramientas:** Resultan de las herramientas de software y otro software de soporte
 que se usa para desarrollar el sistema.
-* **Riesgos de requerimientos:** Proceden de cambios a los requerimientos del cliente y del proceso de gestionarlos.
-* **Riesgos de estimación:** Surgen de las estimaciones administrativas de los recursos requeridos para construir el sistema.
+5. **Riesgos de requerimientos:** Proceden de cambios a los requerimientos del cliente y del proceso de gestionarlos.
+6. **Riesgos de estimación:** Surgen de las estimaciones administrativas de los recursos requeridos para construir el sistema.
 
 ---
 ### EJEMPLOS
@@ -270,7 +270,7 @@ que se usa para desarrollar el sistema.
 <tbody>
 <tr>
 <td style="text-align:left">Tecnología</td>
-<td style="text-align:left">La base de datos que se usa en el sistema no puede procesar tantas transacciones por segundo como se esperaba. (1) <br> Los componentes de software de reutilización contienen defectos que haen que no puedan reutilizarse como se planeó. (2)</td>
+<td style="text-align:left">La base de datos que se usa en el sistema no puede procesar tantas transacciones por segundo como se esperaba. (1) <br> Los componentes de software de reutilización contienen defectos que hacen que no puedan reutilizarse como se planeó. (2)</td>
 </tr>
 <tr>
 <td style="text-align:left">Personal</td>
@@ -296,7 +296,7 @@ que se usa para desarrollar el sistema.
 </table>
 
 ---
-### ANALISIS DEL RIESGO
+### ANÁLISIS DEL RIESGO
 Para cada riesgo identificado estimar la probabilidad de ocurrencia y gravedad en caso de ocurrir.
 * La probabilidad del riesgo puede valorarse como muy baja (< 10%), baja (del 10 al 25%), moderada
 (del 25 al 50%), alta (del 50 al 75%) o muy alta (> 75%).
@@ -391,7 +391,7 @@ grandes demoras), tolerables (demoras dentro de la contingencia permitida) o ins
 <tbody>
 <tr>
 <td style="text-align:left">Se subestima el tiempo requerido para desarrollar el software. (12)</td>
-<td style="text-align:left">Altab</td>
+<td style="text-align:left">Alta</td>
 <td style="text-align:left">Grave</td>
 </tr>
 <tr>
@@ -428,7 +428,7 @@ grandes demoras), tolerables (demoras dentro de la contingencia permitida) o ins
 </table>
 
 ---
-### PLANEACION DEL RIESGO
+### PLANEACIN DEL RIESGO
 Considerar cada riesgo y generar estrategias para gestionarlo.
 
 * **Estrategias de evitación:** reducir la probabilidad de que surja el riesgo.
@@ -436,7 +436,7 @@ Considerar cada riesgo y generar estrategias para gestionarlo.
 * **Planes de contingencia:** hacer frente y tener una estrategia para a ello.
 
 ---
-### ESTRATEGIAS PARA GESTION DEL RIESGO
+### ESTRATEGIAS PARA GESTIÓN DEL RIESGO
 <!-- .slide: style="font-size: 0.40em" -->
 <!--
 | Riesgo                                   | Estrategia                                                                                                                                                                                                                                                      |
@@ -548,9 +548,9 @@ decidir si este riesgo se vuelve más o menos probable.
 </table>
 
 ---
-### GESTION DE PERSONAL
+### GESTIÓN DE PERSONAL
 * Las personas son el principal capital de la empresa.
-* Una incorrecta gestion del personal garantiza la falla del proyecto.
+* Una incorrecta gestión del personal garantiza la falla del proyecto.
 * Se debe signar a las personas responsabilidades acordes a sus habilidades.
 
 ---
@@ -561,30 +561,30 @@ decidir si este riesgo se vuelve más o menos probable.
 * **Honestidad:** El administrador, debe ser honesto sobre lo que está bien o mal en el equipo.
 
 ---
-### MOTIVACION DEL PERSONAL
+### MOTIVACIÓN DEL PERSONAL
 * Un rol importante del administrador es motivar al personal.
 * Organizar el trabajo y el entorno laboral para alentar a las personas a trabajar mejor. 
   * Si las personas no estan motivadas, no desarrollaran su trabajo apropiadamente. 
   * Hay diferentes tipos de motivacion basada en 
-    * Necesidades basicas (comer, dormir, etc.); 
+    * Necesidades básicas (comer, dormir, etc.); 
     * Necesidades Personales (respeto)
-    * Necesidades Sociales (aceptacion por parte del grupo).
+    * Necesidades Sociales (aceptación por parte del grupo).
 
 ---
-### JERARQUIA DE NECESIADADES HUMANAS
+### JERARQUÍA DE NECESIADADES HUMANAS
 ![Jerarquía de Necesidades Humanas](images/unidad10/jerarquia-necesidades-humanas.jpg)
 
 ---
 ### SATISFACCION DE NECESIDADES
 * En desarrollo de software las necesidades fisiologicas y de seguridad estan cubiertas. 
-* Satisfaccion de necesidades sociales 
+* Satisfacción de necesidades sociales 
   * Generar facilidades de comunicacion;
   * Favorecer la comunicacion informal 
-* Satisfaccion de necesidades Estima 
+* Satisfacción de necesidades Estima 
   * Reconocimiento de logros. 
-  * Justa recompensa economica. 
-* Satisfaccion de necesidades Autorrealización 
-  * Favorecer la capacitacion.
+  * Justa recompensa económica. 
+* Satisfacción de necesidades Autorrealización 
+  * Favorecer la capacitación.
 
 ---
 ### TRABAJO EN EQUIPO
