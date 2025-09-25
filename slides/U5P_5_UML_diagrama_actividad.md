@@ -106,6 +106,16 @@ internet, mostrar vistas de cámaras
 
 ---
 
+- Las actividades representan acciones observables o relevantes en el proceso.
+- Puede incluir actividades del usuario, del sistema, de un servicio externo o de una base de datos, pero siempre pensando en “qué ocurre en el proceso”, no en el detalle técnico de mensajes.
+
+Ejemplos:
+- “Verificar disponibilidad de copia” (lo hace el sistema, no un humano).
+- “Registrar préstamo en base de datos” (acción del sistema).
+- “Presentar credencial” (acción del usuario).
+
+---
+
 ### Diagramas de canal (swimlane)
 
 Es una variación del diagrama de actividad. Permite representar el flujo de actividades descritas por el caso de uso; al mismo tiempo, indica qué **actor** (si hubiera muchos involucrados en un caso específico de uso) o clase de análisis es responsable de la acción descrita por un rectángulo de actividad. 
@@ -157,9 +167,38 @@ procedimiento. Representan la manera en la que los distintos actores invocan fun
 
 ---
 
-### Ejercicio 1: Restaurante
+### Alcance
+1) ¿un mega-diagrama o varios específicos?
 
-Modelar, mediante un diagrama de actividad con swimlanes, el flujo completo de una reserva: desde que el cliente intenta reservar/cancelar, hasta el cierre de reservas y la gestión de asistencia con tolerancia y penalización.
+- Un diagrama por caso de uso (recomendada):
+
+<small>Consultar catálogo, Préstamo, Devolución, Reserva, Renovación, Actualización de catálogo.
+Así cada uno empieza en su propio nodo inicial (●) y queda más claro y mantenible.</small>
+
+- Único diagrama orquestador: empieza en un nodo inicial con “Elegir acción”  y desde ahí llama a sub-actividades para cada caso. Es más grande pero coherente.
+
+**Regla de oro:** empieza por el flujo feliz más frecuente y luego añade variantes/excepciones.
+
+---
+
+### ¿Cuál conviene modelar primero?
+
+- Empieza por el flujo principal de mayor valor/frecuencia:
+<small>
+Préstamo de libro (socio, copia disponible, sin reservas, límite OK, 3 días/3 semanas).
+</small>
+- Luego agrega variaciones
+<small>revista (solo trabajadores), límites (6/12), no disponible → reserva, renovación (si no hay reservas), devolución y por último actualización de catálogo (solo personal autorizado).</small>
+
+---
+
+### ¿Cómo estructurarlo bien?
+
+- Mantén particiones por rol (Usuario/Socio/Trabajador vs Sistema)
+- Usa decisión/merge simétricos (cerrar con un merge antes de volver al flujo común)
+- Separa reglas de negocio del front (“Usuario” solo tenga acciones del usuario; validaciones/límites, en “Sistema”)
+- Donde haya notificaciones emplear un fork/join para modelar procesos en paralelo
+- Dejar claro pre-requisito
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
