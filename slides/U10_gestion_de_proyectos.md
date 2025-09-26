@@ -24,7 +24,49 @@ Created by <i class="fab fa-telegram"></i>
     padding: 20px;
     text-align: left !important;
 }
+
+  .alta {
+      background-color: #f8d7da; /* rojo claro */
+      color: #721c24;
+      font-weight: bold;
+  }
+  .moderada {
+      background-color: #fff3cd; /* amarillo */
+      color: #856404;
+      font-weight: bold;
+  }
+  .grave {
+      background-color: #f5c6cb; /* rojo más intenso */
+      color: #721c24;
+      font-weight: bold;
+  }
+
+  .catastrofico {
+      background-color: #f5c6cb; /* rojo más intenso */
+      color: #ff0019ff;
+      font-weight: bold;
+  }
+  .tolerable {
+      background-color: #cce5ff; /* azul claro */
+      color: #004085;
+      font-weight: bold;
+  }
+  .insignificante, .baja {
+      background-color: #d4edda; /* verde claro */
+      color: #155724;
+      font-weight: bold;
+  }
 </style>
+
+# Ingeniería de Software
+## Ian Sommerville
+
+![Bibliografia](images/unidad10/ian-sommerville.png)
+
+
+
+---
+
 ## Temario
 <div class="grid-container2">
 <div class="grid-item">
@@ -328,38 +370,38 @@ grandes demoras), tolerables (demoras dentro de la contingencia permitida) o ins
 <tbody>
 <tr>
 <td style="text-align:left">Problemas financieros de la organización fuerzan reducciones en el presupuesto del proyecto. (7)</td>
-<td style="text-align:left">Baja</td>
-<td style="text-align:left">Catastrófico</td>
+<td style="text-align:left" class="baja">Baja</td>
+<td style="text-align:left" class="catastrofico">Catastrófico</td>
 </tr>
 <tr>
 <td style="text-align:left">Es imposible reclutar personal con las habilidades requeridas. (3)</td>
-<td style="text-align:left">Alta</td>
-<td style="text-align:left">Catastrófico</td>
+<td style="text-align:left" class="alta">Alta</td>
+<td style="text-align:left" class="catastrofico">Catastrófico</td>
 </tr>
 <tr>
 <td style="text-align:left">El personal clave está enfermo e indispuesto en momentos críticos. (4)</td>
-<td style="text-align:left">Moderada</td>
-<td style="text-align:left">Grave</td>
+<td style="text-align:left" class="moderada">Moderada</td>
+<td style="text-align:left" class="grave">Grave</td>
 </tr>
 <tr>
 <td style="text-align:left">Los componentes de software de reutilización contienen defectos que hacen que no puedan reutilizarse como se planeó. (2)</td>
-<td style="text-align:left">Moderada</td>
-<td style="text-align:left">Grave</td>
+<td style="text-align:left" class="moderada">Moderada</td>
+<td style="text-align:left" class="grave">Grave</td>
 </tr>
 <tr>
 <td style="text-align:left">Se proponen cambios a los requerimientos que demandan mayor trabajo de rediseño. (10)</td>
-<td style="text-align:left">Moderada</td>
-<td style="text-align:left">Grave</td>
+<td style="text-align:left" class="moderada">Moderada</td>
+<td style="text-align:left" class="grave">Grave</td>
 </tr>
 <tr>
 <td style="text-align:left">La organización se reestructura de modo que diferentes administraciones son responsables del proyecto. (6)</td>
-<td style="text-align:left">Alta</td>
-<td style="text-align:left">Grave</td>
+<td style="text-align:left" class="alta">Alta</td>
+<td style="text-align:left" class="grave">Grave</td>
 </tr>
 <tr>
 <td style="text-align:left">La base de datos que se usa en el sistema no puede procesar tantas transacciones por segundo como se esperaba. (1)</td>
-<td style="text-align:left">Moderada</td>
-<td style="text-align:left">Grave</td>
+<td style="text-align:left" class="moderada">Moderada</td>
+<td style="text-align:left" class="grave">Grave</td>
 </tr>
 </tbody>
 </table>
@@ -380,6 +422,7 @@ grandes demoras), tolerables (demoras dentro de la contingencia permitida) o ins
 | Se subestima el tamaño del software. (14)                                                        | Alta         | Tolerable      |
 | El código elaborado por las herramientas de generación de código de software es ineficiente. (8) | Moderada     | Insignificante |
 -->
+
 <table>
 <thead>
 <tr>
@@ -390,39 +433,39 @@ grandes demoras), tolerables (demoras dentro de la contingencia permitida) o ins
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">Se subestima el tiempo requerido para desarrollar el software. (12)</td>
-<td style="text-align:left">Alta</td>
-<td style="text-align:left">Grave</td>
+<td>Se subestima el tiempo requerido para desarrollar el software. (12)</td>
+<td class="alta">Alta</td>
+<td class="grave">Grave</td>
 </tr>
 <tr>
-<td style="text-align:left">Las herramientas de software no pueden trabajar en una forma integrada. (9)</td>
-<td style="text-align:left">Alta</td>
-<td style="text-align:left">Tolerable</td>
+<td>Las herramientas de software no pueden trabajar en una forma integrada. (9)</td>
+<td class="alta">Alta</td>
+<td class="tolerable">Tolerable</td>
 </tr>
 <tr>
-<td style="text-align:left">Los clientes no entienden las repercusiones de los cambios a los requerimientos. (11)</td>
-<td style="text-align:left">Moderada</td>
-<td style="text-align:left">Tolerable</td>
+<td>Los clientes no entienden las repercusiones de los cambios a los requerimientos. (11)</td>
+<td class="moderada">Moderada</td>
+<td class="tolerable">Tolerable</td>
 </tr>
 <tr>
-<td style="text-align:left">No está disponible la capacitación requerida para el personal. (5)</td>
-<td style="text-align:left">Moderada</td>
-<td style="text-align:left">Tolerable</td>
+<td>No está disponible la capacitación requerida para el personal. (5)</td>
+<td class="moderada">Moderada</td>
+<td class="tolerable">Tolerable</td>
 </tr>
 <tr>
-<td style="text-align:left">Se subestima la tasa de reparación de defecto. (13)</td>
-<td style="text-align:left">Moderada</td>
-<td style="text-align:left">Tolerable</td>
+<td>Se subestima la tasa de reparación de defecto. (13)</td>
+<td class="moderada">Moderada</td>
+<td class="tolerable">Tolerable</td>
 </tr>
 <tr>
-<td style="text-align:left">Se subestima el tamaño del software. (14)</td>
-<td style="text-align:left">Alta</td>
-<td style="text-align:left">Tolerable</td>
+<td>Se subestima el tamaño del software. (14)</td>
+<td class="alta">Alta</td>
+<td class="tolerable">Tolerable</td>
 </tr>
 <tr>
-<td style="text-align:left">El código elaborado por las herramientas de generación de código de software es ineficiente. (8)</td>
-<td style="text-align:left">Moderada</td>
-<td style="text-align:left">Insignificante</td>
+<td>El código elaborado por las herramientas de generación de código de software es ineficiente. (8)</td>
+<td class="moderada">Moderada</td>
+<td class="insignificante">Insignificante</td>
 </tr>
 </tbody>
 </table>
@@ -551,7 +594,7 @@ decidir si este riesgo se vuelve más o menos probable.
 ### GESTIÓN DE PERSONAL
 * Las personas son el principal capital de la empresa.
 * Una incorrecta gestión del personal garantiza la falla del proyecto.
-* Se debe signar a las personas responsabilidades acordes a sus habilidades.
+* Se debe designar a las personas responsabilidades acordes a sus habilidades.
 
 ---
 ### FACTORES
@@ -572,7 +615,7 @@ decidir si este riesgo se vuelve más o menos probable.
 
 ---
 ### JERARQUÍA DE NECESIADADES HUMANAS
-![Jerarquía de Necesidades Humanas](images/unidad10/jerarquia-necesidades-humanas.jpg)
+![Jerarquía de Necesidades Humanas](images/unidad10/jerarquia-necesidades-humanas.png)
 
 ---
 ### SATISFACCION DE NECESIDADES
@@ -622,7 +665,7 @@ ingeniería de software y otras partes interesadas en el proyecto.
 ---
 ### RESPONSABILIDAD DEL ADMINISTRADOR DEL PROYECTO
 * Un administrador de proyecto debe crear un grupo que logre trabajar de manera eficiente.
-* El grupo debe estar formado por diferentes perfiles, tanto desde el punto de vista tecnico como en cuanto a la personalidad .
+* El grupo debe estar formado por diferentes perfiles, tanto desde el punto de vista técnico como en cuanto a la personalidad .
 
 ---
 ### CALENDARIZACIÓN DE PROYECTOS
@@ -635,7 +678,10 @@ Se definen:
 * Recursos necesarios para cada tarea
 
 ---
-![Proceso](images/unidad10/proceso.jpg)
+
+### Proceso de Calendarización del Proyecto
+
+![Proceso](images/unidad10/proceso.png)
 
 ---
 <!-- .slide: style="font-size: 0.60em" -->
@@ -741,7 +787,16 @@ Se definen:
 </table>
 
 ---
+
+### Gráfica de barras de actividad
+
 ![Grafico de Secuencia](images/unidad10/grafico-secuencia.jpg)
+
+---
+
+### Gráfica de asignación de personal
+
+![Grafico de asignacion de personal](images/unidad10/asignacion-de-personal.png)
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
