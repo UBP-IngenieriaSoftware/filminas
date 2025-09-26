@@ -63,8 +63,6 @@ Created by <i class="fab fa-telegram"></i>
 
 ![Bibliografia](images/unidad10/ian-sommerville.png)
 
-
-
 ---
 
 ## Temario
@@ -134,7 +132,7 @@ con los requerimientos del cliente.
 expectativas de los diferentes interesados
 
 ---
-### CÓMO SE GESTIONA?
+### ¿CÓMO SE GESTIONA?
 Siguiendo una metodología:
 * Se proporciona una guía para conocer todo el camino a recorrer antes de iniciar.
 * Se asegura la calidad del producto final
@@ -158,7 +156,7 @@ Lo importante es que las restricciones del proyecto esten en equilibrio.
 ![Restricciones](images/unidad10/restricciones.jpg)
 
 ---
-### GESTION DE PROYECTOS DE SOFTWARE
+### GESTIÓN DE PROYECTOS DE SOFTWARE
 * El producto es intangible.
   * Los administradores de proyectos de software no pueden constatar el progreso con sólo
 observar el artefacto que se construye.
@@ -170,7 +168,8 @@ observar el artefacto que se construye.
 ### ACTIVIDADES DE LOS ADMINISTRADORES
 <!-- .slide: style="font-size: 0.90em" -->
 1. **Planeación del proyecto:** Son responsables de la planeación, estimación y
-calendarización del desarrollo del proyecto, así como de la asignación de tareas a las personas
+calendarización del desarrollo del proyecto, así como de la asignación de tareas a las personas. Supervisa
+el trabajo y estandares. Monitorea el avance.
 2. **Informes:** Son responsables de informar del avance de un proyecto a los clientes y administradores de la
 compañía que desarrolla el software.
 3. **Gestión del riesgo:** Tienen que valorar los riesgos que pueden afectar un proyecto, monitorizar dichos riesgos
@@ -279,7 +278,7 @@ minimizar sus efectos sobre el proyecto.
 ![Gestión del Riesgo](images/unidad10/gestion-del-riesgo.png)
 
 ---
-### IDENTIFICACIÓN DEL RIESGO
+### 1. IDENTIFICACIÓN DEL RIESGO
 <!-- .slide: style="font-size: 0.80em" -->
 1. **Riesgos tecnológicos:** Se derivan de las tecnologías de software o hardware usadas para desarrollar el sistema.
 2. **Riesgos personales:** Se asocian con las personas en el equipo de desarrollo.
@@ -338,7 +337,7 @@ que se usa para desarrollar el sistema.
 </table>
 
 ---
-### ANÁLISIS DEL RIESGO
+### 2. ANÁLISIS DEL RIESGO
 Para cada riesgo identificado estimar la probabilidad de ocurrencia y gravedad en caso de ocurrir.
 * La probabilidad del riesgo puede valorarse como muy baja (< 10%), baja (del 10 al 25%), moderada
 (del 25 al 50%), alta (del 50 al 75%) o muy alta (> 75%).
@@ -471,7 +470,7 @@ grandes demoras), tolerables (demoras dentro de la contingencia permitida) o ins
 </table>
 
 ---
-### PLANEACIN DEL RIESGO
+### 3. PLANEACIÓN DEL RIESGO
 Considerar cada riesgo y generar estrategias para gestionarlo.
 
 * **Estrategias de evitación:** reducir la probabilidad de que surja el riesgo.
@@ -538,7 +537,7 @@ Considerar cada riesgo y generar estrategias para gestionarlo.
 
 
 ---
-### MONITOREO DEL RIESGO
+### 4. MONITOREO DEL RIESGO
 Hay que valorar regularmente cada uno de los riesgos identificados para
 decidir si este riesgo se vuelve más o menos probable.
 
@@ -591,6 +590,10 @@ decidir si este riesgo se vuelve más o menos probable.
 </table>
 
 ---
+
+### Ejercicio de Riesgo
+
+---
 ### GESTIÓN DE PERSONAL
 * Las personas son el principal capital de la empresa.
 * Una incorrecta gestión del personal garantiza la falla del proyecto.
@@ -614,22 +617,34 @@ decidir si este riesgo se vuelve más o menos probable.
     * Necesidades Sociales (aceptación por parte del grupo).
 
 ---
-### JERARQUÍA DE NECESIADADES HUMANAS
+### JERARQUÍA DE NECESIADADES HUMANAS de MASLOW
 ![Jerarquía de Necesidades Humanas](images/unidad10/jerarquia-necesidades-humanas.png)
 
 ---
-### SATISFACCION DE NECESIDADES
+### SATISFACCIÓN DE NECESIDADES
 * En desarrollo de software las necesidades fisiologicas y de seguridad estan cubiertas. 
-* Satisfacción de necesidades sociales 
+* Satisfacción de necesidades **sociales** 
   * Generar facilidades de comunicacion;
   * Favorecer la comunicacion informal 
-* Satisfacción de necesidades Estima 
+* Satisfacción de necesidades de **Estima** 
   * Reconocimiento de logros. 
   * Justa recompensa económica. 
-* Satisfacción de necesidades Autorrealización 
+* Satisfacción de necesidades **Autorrealización** 
   * Favorecer la capacitación.
 
 ---
+
+### Personalidad y motivación
+
+1. Personas **orientadas a las tareas**, que están motivadas por el reto 
+intelectual de desarrollar software.
+2. Personas **orientadas hacia sí mismas**, que están motivadas por el 
+éxito y el reconocimiento personales.
+3. Personas **orientadas a la interacción**, están motivadas por la presencia y 
+las acciones de los compañeros de trabajo.
+
+---
+
 ### TRABAJO EN EQUIPO
 * El desarrollo de software implica trabajo en equipo.
 * En un grupo cohesivo, los miembros piensan que el equipo es más importante que los individuos.
@@ -665,7 +680,55 @@ ingeniería de software y otras partes interesadas en el proyecto.
 ---
 ### RESPONSABILIDAD DEL ADMINISTRADOR DEL PROYECTO
 * Un administrador de proyecto debe crear un grupo que logre trabajar de manera eficiente.
-* El grupo debe estar formado por diferentes perfiles, tanto desde el punto de vista técnico como en cuanto a la personalidad .
+* El grupo debe estar formado por diferentes perfiles, tanto desde el punto de vista técnico como en cuanto a la personalidad.
+
+<small> (las personas motivadas por el trabajo son más fuertes técnicamente. Las personas orientadas hacia sí mismas 
+son mejores para impulsar el trabajo hacia delante para terminar la tarea. Las personas orientadas a la interacción ayudan a facilitar las comunicaciones dentro del grupo.) </small>
+
+---
+
+### Organización del Grupo
+
+Influye en las decisiones que toma dicho grupo, en como se intercambia la información y las interacciones entre el grupo de desarrollo y los participantes externos del proyecto. 
+
+Algunas preguntas organizacionales son:
+1. ¿El administrador del proyecto debe ser el líder técnico del grupo?
+2. ¿Quién se encargará de tomar las decisiones técnicas críticas, y cómo se tomarán?
+3. ¿Cómo se manejarán las interacciones con los participantes externos y los altos directivos de la compañía?
+4. ¿Cómo lograr cohesión en equipos remotos?
+5. ¿Cómo puede compartirse el conocimiento a través del grupo?
+
+---
+
+### Comunicaciones grupales
+
+El equipo debe  intercambiar información acerca de:
+- El estatus de su trabajo
+- Las decisiones de diseño 
+- Los cambios que deben implementarse
+- Problemas que pueden surgir
+
+----
+
+### Comunicaciones grupales
+
+La efectividad y la eficiencia de las comunicaciones están influidas por:
+1. **Tamaño del grupo:** Conforme el grupo crece, se hace más difícil que los miembros 
+se comuniquen de manera efectiva. Ejemplo: En un equipo de 8 personas, hay 56 vías de comunicación 
+**n*(n-1)**
+2. **Estructura del grupo:** Grupos "informales" se comunican más que "grupos de estructura jerárquica" 
+(comunicación de arriba hacia abajo).
+
+----
+
+### Comunicaciones grupales
+
+3. **Composición del grupo:** Personas con los mismos tipos de personalidad a veces se 
+inhiben.
+4. **Ambiente laboral:** El espacio y la forma de la oficina física, o las herramientas de
+comunicación pueden facilitar o inhibir las comunicaciones.
+5. **Canales de comunicación:** Cara a cara, email, documentos formales, teléfono, 
+redes sociales, wikis, etc.
 
 ---
 ### CALENDARIZACIÓN DE PROYECTOS
