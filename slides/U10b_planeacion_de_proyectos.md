@@ -1,0 +1,614 @@
+---
+title: Planeación de Proyectos
+theme: solarized
+slideNumber: true
+---
+
+#### Ingeniería de Software
+# Planeación de Proyectos
+Created by <i class="fab fa-telegram"></i>
+[edme88]("https://t.me/edme88")
+
+---
+<!-- .slide: style="font-size: 0.60em" -->
+<style>
+.grid-container2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 0.8em;
+    text-align: left !important;
+}
+
+.grid-item {
+    border: 3px solid rgba(121, 177, 217, 0.8);
+    padding: 20px;
+    text-align: left !important;
+}
+</style>
+
+# Ingeniería de Software
+## Ian Sommerville
+
+![Bibliografia](images/unidad10/ian-sommerville-23.png)
+
+---
+
+## Temario
+<div class="grid-container2">
+<div class="grid-item">
+
+### Planeación de Proyectos
+
+- Tareas del administrador de proyectos
+- Etapas de Planeación
+- Parámetros para el cálculo del costo
+
+
+</div>
+<div class="grid-item">
+
+</div>
+</div>
+
+---
+
+### Tareas del administrador de proyectos
+- Dividir el trabajo en partes
+- Asignar tareas a los miembros del equipo
+- Anticipar los problemas que pudieran surgir 
+- Preparar posibles soluciones a inconvenientes
+- Fijación de Precio
+
+---
+
+### Planeación: Etapas
+<!-- .slide: style="font-size: 0.90em" -->
+La planeación se presenta durante tres momentos en un ciclo de vida del proyecto:
+1. En la etapa de **propuestas**, cuando se presenta una licitación para obtener un 
+contrato. Ayuda a decidir si cuenta con los recursos para completar el trabajo y a calcular el precio.
+2. Durante la fase de **inicio**, para determinar quién trabajará en el proyecto, 
+cómo se dividirá en incrementos, cómo se asignarán los recursos. Afinar estimaciones iniciales.
+3. A lo **largo del proyecto**, cuando el plan se modifica si surgen desviaciones durante el monitoreo del avance del trabajo.
+
+---
+
+### Etapa 1 – Especulación
+- Descripción a alto nivel del proyecto
+- Revisión del plan si se obtiene el contrato
+- Cálculo preliminar del precio según esfuerzo estimado
+- Considerar factores externos que influyen en la fijación de precios
+
+---
+
+### Parámetros para el cálculo del costo
+
+- **Esfuerzo**: meses/hombre + contingencia
+- **Infraestructura**: hardware, software y mantenimiento
+- **Operativos**: viajes y capacitación
+
+---
+
+### Una vez asignado el contrato...
+- Refinar el plan recabando más requerimientos y refinándolos.
+- Asignar recursos o decidir contratación de nuevo personal.
+- Definir mecanimos de monitoreo del proyecto (avances y costos)
+- Se re-analizan el calendario, estimación de costos y riesgos.
+
+---
+
+### Fijación de precio: Realidad
+En la práctica influyen:  
+
+- Consideraciones **organizacionales**
+- Factores **económicos y políticos**
+- Estrategia **empresarial**
+- Riesgos y tipo de **contrato firmado**
+
+---
+
+<!-- .slide: style="font-size: 0.85em" -->
+- **Oportunidad de mercado:** Cotizar bajo para ganar un cliente o adquirir experiencia en nuevos productos.  
+- **Incertidumbre en la estimación:** Incrementar el precio para cubrir contingencias derivadas de falta de conocimiento o experiencia.  
+- **Términos contractuales:** Si el cliente conserva la propiedad del código y puede reutilizarlo, la ganancia a largo plazo será menor.  
+- **Volatilidad de requerimientos:** Reducir el precio inicial para obtener el contrato, compensando luego con cargos por cambios de alcance.  
+- **Salud financiera:** Ajustar precios para obtener liquidez, incluso con márgenes bajos o nulos.  
+
+---
+
+### De la propuesta al acuerdo
+Un costo de proyecto se negocia a partir de un borrador de propuesta.  
+
+Luego cliente y proveedor acuerdan la **especificación detallada** antes de la ejecución.
+
+---
+
+### Desarrollo dirigido por un plan
+Incluye una planificación detallada con:  
+1. **Introducción:** Objetivos y restricciones del proyecto.  
+2. **Organización:** Estructura del equipo, roles y responsabilidades.  
+3. **Análisis de riesgos:** Riesgos potenciales, probabilidad y estrategias de mitigación.  
+4. **Recursos tecnológicos:** Hardware y software requeridos. 
+
+----
+
+### Desarrollo dirigido por un plan
+
+5. **División del trabajo:** Listado de actividades con sus plazos y entregas asociadas.
+6. **Calendario del proyecto:** Indica las dependencias entre las actividades, el tiempo 
+estimado requerido para alcanzar cada plazo y la asignación de personal.
+7. **Mecanismos de monitorización y reporte:** Lista los informes que deben producirse, cuándo tienen que elaborarse y los mecanismos de monitorización que se usarán.
+
+----
+
+### Complementos del plan
+<!-- .slide: style="font-size: 0.95em" -->
+8. **Plan de calidad:** Describe los procedimientos de calidad y estándares que se usarán.
+9. **Plan de validación:**  Describe el enfoque, los recursos y el calendario utilizados para la 
+validación del sistema.
+10. **Configuración del plan de gestión:** Describe la configuración de los procedimientos y las estructuras para la gestión.
+11. **Plan de mantenimiento:** Predice los requerimientos, los costos y el esfuerzo de mantenimiento.
+12. **Plan de desarrollo de personal:** Describe cómo se desarrollarán las habilidades y la experiencia de los miembros del equipo de proyecto.
+
+---
+
+### Revisión y ajustes del plan
+Los cambios son inevitables: deben revisarse regularmente ante variaciones en requerimientos, calendario o riesgos.  
+
+Factores a considerar: **fecha de entrega, personal disponible, presupuesto y herramientas**.  
+
+---
+
+### Hitos y Entregables
+
+- **Hitos:** Puntos en el calendario contra los que puede valorar el avance.
+- **Entregables:** Productos de trabajo que se proporcionan al cliente.
+
+---
+
+### Realismo en la planificación
+Se debe ser realista a la hora de preparar un plan. Por eso, las suposiciones deben ser **prudentes y conservadoras**.
+
+Tiene que incluir suficiente **contingencia** para evitar renegociaciones frecuentes.
+
+---
+
+### Mitigación de problemas graves
+
+- Tomar acciones de **mitigación de riesgos**.  
+- Renegociar calendario y realizar **revisión técnica formal** para validar alineación con los objetivos del cliente.  
+- Decidir si se debe **continuar o cancelar** el proyecto. 
+
+---
+### CALENDARIZACIÓN DE PROYECTOS
+Proceso de definir cómo se organizará el trabajo:  
+- Identificación de tareas.  
+- Orden y secuencia de ejecución.  
+- Duración estimada de cada tarea.  
+- Recursos necesarios para su realización. 
+
+---
+
+### Proceso de Calendarización del Proyecto
+
+![Proceso](images/unidad10/proceso.png)
+
+---
+
+### Reutilización de estimaciones
+- Si el proyecto es similar a uno anterior, pueden **reutilizarse estimaciones previas**.  
+- Si cambian los **métodos de diseño o lenguajes de implementación**, las estimaciones anteriores pueden no ser aplicables.  
+
+---
+
+### Regla empírica para estimar
+1. **Estimar en condiciones ideales** (asumiendo que nada saldrá mal).  
+2. **Ampliar la estimación** para cubrir problemas anticipados.  
+3. Añadir un **factor de contingencia** (30% a 50%) para imprevistos no anticipados. 
+
+---
+
+### Representación del calendario
+1. **Gráficos de Gantt:** Gráficas de barras basadas en el calendario, las cuales señalan al responsable de cada actividad, el tiempo transcurrido previsto y la fecha en que se programó el inicio y el fin de la actividad. 
+2. **Redes de actividad**, son diagramas de red que muestran las dependencias entre las 
+diferentes actividades que constituyen un proyecto.
+
+---
+
+### Elementos de cada actividad
+Cada actividad debe incluir:  
+1. **Duración** en días o meses calendario.  
+2. **Esfuerzo** requerido en días-hombre.  
+3. **Plazo límite** para su finalización.  
+4. **Resultado esperado** al completarla.  
+
+---
+
+### Definición de hitos
+- Los **hitos** marcan puntos clave en el calendario.  
+- Cada hito debe documentarse con un **reporte breve** que resuma el avance y el trabajo realizado.  
+
+---
+<!-- .slide: style="font-size: 0.60em" -->
+<!--
+| Tarea | Esfuerzo (días-hombre) | Duración (días) | Dependencias  |
+|:------|:-----------------------|:----------------|:--------------|
+| T1    | 15                     | 10              |               |
+| T2    | 8                      | 15              |               |
+| T3    | 20                     | 15              | T1 (M1)       | 
+| T4    | 5                      | 10              |               | 
+| T5    | 5                      | 10              | T2, T4 (M3)   | 
+| T6    | 10                     | 5               | T1, T2 (M4)   | 
+| T7    | 25                     | 20              | T1 (M1)       | 
+| T8    | 75                     | 25              | T4 (M2)       | 
+| T9    | 10                     | 15              | T3, T6 (M5)   | 
+| T10   | 20                     | 15              | T7, T8 (M6)   | 
+| T11   | 10                     | 10              | T9 (M7)       | 
+| T12   | 20                     | 10              | T10, T11 (M8) | 
+-->
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Tarea</th>
+<th style="text-align:left">Esfuerzo (días-hombre)</th>
+<th style="text-align:left">Duración (días)</th>
+<th style="text-align:left">Dependencias</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">T1</td>
+<td style="text-align:left">15</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">T2</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">15</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">T3</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">15</td>
+<td style="text-align:left">T1 (M1)</td>
+</tr>
+<tr>
+<td style="text-align:left">T4</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">T5</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">T2, T4 (M3)</td>
+</tr>
+<tr>
+<td style="text-align:left">T6</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">5</td>
+<td style="text-align:left">T1, T2 (M4)</td>
+</tr>
+<tr>
+<td style="text-align:left">T7</td>
+<td style="text-align:left">25</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">T1 (M1)</td>
+</tr>
+<tr>
+<td style="text-align:left">T8</td>
+<td style="text-align:left">75</td>
+<td style="text-align:left">25</td>
+<td style="text-align:left">T4 (M2)</td>
+</tr>
+<tr>
+<td style="text-align:left">T9</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">15</td>
+<td style="text-align:left">T3, T6 (M5)</td>
+</tr>
+<tr>
+<td style="text-align:left">T10</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">15</td>
+<td style="text-align:left">T7, T8 (M6)</td>
+</tr>
+<tr>
+<td style="text-align:left">T11</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">T9 (M7)</td>
+</tr>
+<tr>
+<td style="text-align:left">T12</td>
+<td style="text-align:left">20</td>
+<td style="text-align:left">10</td>
+<td style="text-align:left">T10, T11 (M8)</td>
+</tr>
+</tbody>
+</table>
+
+<small>Donde **M** son los **Hitos** o **Milestone**</small>
+
+---
+
+### Interpretación esfuerzo vs. duración
+- Si el **esfuerzo < duración** → el personal no trabaja tiempo completo en la tarea.  
+- Si el **esfuerzo > duración** → varios miembros del equipo trabajan en paralelo en la tarea.  
+
+---
+
+### Gráfica de barras de actividad
+
+![Grafico de Secuencia](images/unidad10/grafico-secuencia.jpg)
+
+---
+
+### Tareas independientes
+- Las tareas **independientes** pueden realizarse en paralelo.  
+
+---
+
+### Gráfica de asignación de personal
+
+![Grafico de asignacion de personal](images/unidad10/asignacion-de-personal.png)
+
+---
+
+### Reglas de asignación de personal
+- Una persona puede trabajar en **más de una tarea** al mismo tiempo.  
+- Puede haber períodos sin asignación (vacaciones, otro proyecto, capacitación, etc.).  
+- Las **asignaciones parciales** se indican con una línea diagonal sobre la barra.  
+
+---
+
+### Planeación ágil
+El desarrollo de software sigue un enfoque **iterativo**:  
+- El sistema se construye en **incrementos** que se entregan al cliente.  
+- Cada incremento se define según el **progreso** y las **prioridades del cliente**.
+
+---
+
+###  Planeación ágil
+1. Planeación de la entrega (release), que prevé con muchos meses de antelación y 
+decide sobre las características que deben incluirse en una entrega de un sistema.
+2. Planeación de la iteración, tiene un panorama a corto plazo y se enfoca en 
+la planeación del siguiente incremento de un sistema. En general representa de 2 a 4 semanas de trabajo.
+
+---
+
+### Planeación en XP
+
+![Planeación en XP](images/unidad10/planeacion-xp.png)
+
+----
+
+### Planeación en XP
+1. **Identificar** un conjunto de **historias** que comprendan toda la funcionalidad que se incluirá en el sistema final.
+2. Para poder **estimar**, el equipo lee y discute las historias y las clasifica de acuerdo con la cantidad de tiempo que consideran que se tardará en implementarla. Se asigna puntos de esfuerzo hipotéticos.
+3. Seleccionar y afinar las historias que reflejarán las características a aplicar en una **entrega** de un sistema y el orden en el que deben implementar. El cliente participa de este proceso.
+
+----
+
+### Planeación en XP
+4. Se eligen las historias a implementar en dicha **iteración**; el número de historias depende del tiempo del sprint y la velocidad del equipo. Se suman los puntos de las historias terminadas
+y se calcula nuevamente la velocidad.
+5. Planeación más detallada en donde las historias se dividen en **tareas**.
+
+---
+
+### Ajustes en mitad de la iteración
+- A la mitad del sprint (iteración) se revisa el alcance. Si no se completaron la mitad de 
+puntos de esfuerzo, se consulta al cliente y se quitan algunas historias de la iteración.
+- Se reduce el alcance en lugar de mover el calendario.
+
+---
+
+### Beneficios del enfoque de planeación ágil
+1. Todo el equipo conoce las tareas a completar en una iteración.
+2. Los desarrolladores eligen las tareas a implementar, por lo que tienen 
+un sentido de propiedad y esi motiva más a completar la tarea.
+
+---
+
+### Métodos de estimación de costo de software
+Se pueden agrupar en tres grandes enfoques:
+1. Basado en la experiencia
+2. Algorítmicos o Paramétricos
+3. Híbridos o modernos
+
+---
+
+### 1. Basados en la experiencia
+
+Se apoyan en el conocimiento de expertos o en datos históricos de proyectos similares:
+- **Juicio de expertos:** el costo se estima con base en la experiencia de ingenieros, gerentes o especialistas.
+- **Analogía:** se comparan proyectos anteriores con características semejantes y se ajusta la estimación.
+- **Delphi:** varios expertos dan estimaciones de manera independiente y luego se consolidan en un consenso.
+
+---
+
+### 2. Métodos algorítmicos o paramétricos
+<!-- .slide: style="font-size: 0.95em" -->
+Usan fórmulas matemáticas y modelos estadísticos a partir de métricas:
+- **Modelos de puntos de función:** Miden la funcionalidad entregada al usuario y la convierten en esfuerzo/costo.
+- **COCOMO (Constructive Cost Model)** Utiliza el tamaño del software (en KLOC o puntos de función) y factores de ajuste para calcular esfuerzo, tiempo y costo.
+- **Modelos de regresión:** se crean a partir de bases de datos de proyectos pasados, ajustando fórmulas para predecir costos.
+
+---
+
+### 3. Métodos híbridos o modernos
+
+Combinan experiencia, métricas y modelos, o incorporan nuevas técnicas:
+- **Estimación ágil:** Planning Poker, Wideband Delphi. Usada en entornos ágiles, basada en consenso rápido del equipo.
+- **Modelos de simulación:** aplican técnicas como Monte Carlo para calcular rangos de costo.
+- **Machine Learning:** entrenar modelos predictivos con grandes volúmenes de datos históricos de proyectos.
+
+---
+
+### Errores en las estimaciones
+<!-- .slide: style="font-size: 0.50em" -->
+- Una estimación inicial de **x meses de esfuerzo** puede variar entre **0.25x y 4x** en la realidad.  
+- La precisión mejora a medida que avanza el proyecto.
+
+![Errores de estimaciones](images/unidad10/incertidumbre-estimacion.png)
+
+---
+
+### Modelado algorítmico de costos
+Usa fórmulas matemáticas para predecir costos según:  
+- **Tamaño del proyecto**  
+- **Tipo de software**  
+- **Factores del equipo, proceso y producto**  
+
+Se pueden calibrar los modelos con proyectos ya completados para mejorar la precisión.  
+
+----
+
+### Modelado algorítmico de costos
+
+![Formula-estimacion](images/unidad10/modelado-algoritmico.png)
+
+- **A:** factor constante (depende de prácticas de la organización y tipo de software).  
+- **Tamaño:** líneas de código o puntos de función.  
+- **B:** exponente entre 1 y 1.5 (según complejidad).  
+- **M:** multiplicador de atributos (procesos, confiabilidad, experiencia del equipo, etc.).  
+
+---
+
+### Limitaciones del modelo algorítmico
+- Difícil estimar el **tamaño** en etapas tempranas.  
+- Factores de **B** y **M** son subjetivos (dependen de experiencia).  
+- Necesita **calibración** con datos históricos para ser útil.  
+
+---
+
+### Modelo COCOMO II
+**COCOMO (Constructive Cost Model)** evoluciona de los primeros modelos de estimación de costos.  
+Incluye 4 submodelos:  
+1. **Composición de aplicación**  
+2. **Diseño temprano**  
+3. **Reutilización**  
+4. **Posarquitectónico**  
+
+---
+
+![Cocomo](images/unidad10/cocomo.png) 
+
+---
+
+### 1. Modelo de composición de aplicación
+Modela el esfuerzo en proyectos con **componentes reutilizados**, código generado o programación de bases de datos.  
+
+- Tamaño medido en **puntos de aplicación**.  
+- Esfuerzo = **Tamaño / Productividad**.  
+- Se pondera: nº de pantallas, informes, módulos y líneas de código. 
+
+----
+
+### 1. Modelo de composición de aplicación
+Enfocado en **prototipos y proyectos con reutilización**.  
+- La **productividad** depende de la experiencia, habilidades y herramientas.  
+
+![Productividad](images/unidad10/productividad.png)
+
+----
+
+### Fórmula de estimación en composición
+![Estimación de Esfuerzo](images/unidad10/estimacion-esfuerzo.png)
+
+- **PM:** esfuerzo en meses-hombre.  
+- **NAP:** número de puntos de aplicación.  
+- **%Reutilización:** proporción de código reutilizado.  
+- **PROD:** productividad del equipo.  
+
+---
+
+### 2. Modelo de diseño temprano
+Simplifica la fórmula general:  
+
+**Esfuerzo = A × Tamaño^B × M**  
+
+- Tamaño expresado en **puntos de función**, convertidos a **KSLOC** (miles de líneas de código).  
+- Factores: entradas/salidas externas, interacciones, interfaces y tablas.  
+
+----
+
+### Parámetros del diseño temprano
+<!-- .slide: style="font-size: 0.70em" -->
+![Fórmula](images/unidad10/diseno-temprano.png)
+
+- **A = 2.94**  
+- **B = 1.1 a 1.24**, según innovación, riesgos, cohesión y madurez.  
+- **M:** multiplicador basado en 7 atributos:  
+  - PERS (habilidad personal)  
+  - RCPX (fiabilidad y complejidad)  
+  - RUSE (reutilización)  
+  - PDIF (dificultad de plataforma)  
+  - PREX (experiencia personal)  
+  - FCIL (facilidades de soporte)  
+  - SCED (ajuste de calendario)  
+
+---
+
+###  3. Modelo de reutilización
+Calcula esfuerzo al integrar **código existente o generado automáticamente**.  
+
+Tipos:  
+- **Caja negra:** código reutilizado sin cambios (esfuerzo 0).  
+- **Caja blanca:** requiere adaptación e integración.  
+
+----
+
+### Fórmula de reutilización
+![Reutilización](images/unidad10/reutilizacion.png)
+
+- **ASLOC:** líneas de código reutilizado.  
+- **AT:** % de código generado automáticamente.  
+- **ATPROD:** productividad al integrarlo. 
+
+----
+
+### Conversión a ESLOC
+**ESLOC = ASLOC × AAM**  
+
+- **ESLOC:** líneas equivalentes de nuevo código.  
+- **AAM:** multiplicador de ajuste de adaptación.  
+Incluye:  
+- **AAF:** costo de cambios.  
+- **SU:** costo de comprensión (50 = complejo, 10 = simple).  
+- **Decisión de reutilizar:** 0 a 8.  
+
+---
+
+### 4. Modelo posarquitectónico
+Se aplica cuando ya existe un diseño arquitectónico inicial.  
+
+- Permite estimaciones más precisas del **tamaño**.  
+- Incluye multiplicadores adicionales sobre **personas, producto y proyecto**.  
+
+----
+
+### Factores posarquitectónicos
+1. **Precedencia:** experiencia previa en proyectos similares.  
+2. **Flexibilidad de desarrollo:** libertad para definir procesos. 
+3. **Resolución de riesgos:** nivel de análisis de riesgos realizado.  
+4. **Cohesión de equipo:** calidad de la comunicación y trabajo conjunto.  
+5. **Madurez del proceso:** nivel CMM de la organización.  
+
+---
+
+### Ejemplo de COCOMO
+¿Qué ocurre al variar los controladores de costo?  
+- Valores **altos** → esfuerzo estimado puede triplicarse.  
+- Valores **bajos** → esfuerzo se reduce a 1/3 del original.  
+
+---
+
+![Estimacion COCOMO](images/unidad10/estimacion-cocomo.png)
+
+---
+## ¿Dudas, Preguntas, Comentarios?
+![DUDAS](images/pregunta.gif)
