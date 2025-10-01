@@ -42,10 +42,19 @@ Created by <i class="fab fa-telegram"></i>
 - Tareas del administrador de proyectos
 - Etapas de Planeación
 - Parámetros para el cálculo del costo
+- Fijación de Precio
+- Revisión y Ajusted del Plan
+- Hitos y Entregables
 
 
 </div>
 <div class="grid-item">
+
+- Calendarización
+- Reutilización de Estimaciones
+- Métodos de Estimación
+- Errores de estimación
+- Modelo COCOMO II
 
 </div>
 </div>
