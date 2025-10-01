@@ -596,7 +596,11 @@ Se aplica cuando ya existe un diseño arquitectónico inicial.
 2. **Flexibilidad de desarrollo:** libertad para definir procesos. 
 3. **Resolución de riesgos:** nivel de análisis de riesgos realizado.  
 4. **Cohesión de equipo:** calidad de la comunicación y trabajo conjunto.  
-5. **Madurez del proceso:** nivel CMM de la organización.  
+5. **Madurez del proceso:** nivel CMM (Modelo de Madurez de Capacidades) de la organización.  
+
+---
+
+![Estimacion COCOMO](images/unidad10/estimacion-cocomo.png)
 
 ---
 
@@ -607,7 +611,15 @@ Se aplica cuando ya existe un diseño arquitectónico inicial.
 
 ---
 
-![Estimacion COCOMO](images/unidad10/estimacion-cocomo.png)
+### COCOMO II: lo bueno y lo limitado
+- Ventajas:
+  - Ofrece un marco formal y probado.
+  - Permite distintos niveles de detalle (temprano, posarquitectónico, reutilización).
+  - Es útil en organizaciones con historial de proyectos y datos calibrados.
+- Limitaciones:
+  - Depende de medir bien el tamaño (KLOC o puntos de función).
+  - Los parámetros (B, M, AAM, etc.) son subjetivos y difíciles de estimar temprano.
+  - No siempre refleja entornos ágiles o de alta incertidumbre.
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
