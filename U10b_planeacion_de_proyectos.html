@@ -537,13 +537,197 @@ Incluye 4 submodelos:
 ---
 
 ### 1. Modelo de composición de aplicación
+
+- Permite estimar el costo y el esfuerzo en la etapa 1 del  Modelo COCOMO II 
+- El tamaño se estima mediante Puntos de Objeto
+- Los **Puntos de Objeto** definen pantallas, informes y módulos de tercera generación (3GL)
+
+----
+
+### 1. Modelo de composición de aplicación
+
+Para estimar el esfuerzo para desarrollar un proyecto se siguen los siguientes pasos:
+1. Acceso a recuentos de objetos
+2. Clasifique los niveles de complejidad de cada objeto
+3. Asignar pesos de complejidad a cada objeto
+4. Determinar los puntos del objeto
+5. Calcular nuevos puntos de objeto (NOP)
+6. Calcular la tasa de productividad (PROD)
+7. Calcular el esfuerzo estimado
+
+----
+
+### 1. Modelo de composición de aplicación
+#### 1. Acceso a recuentos de objetos
+
+Calcule el número de pantallas, informes y componentes 3GL que conformarán esta aplicación.
+
+----
+
+### 1. Modelo de composición de aplicación
+#### 2. Clasifique los niveles de complejidad de cada objeto
+
+Se clasifica cada instancia de objeto en niveles de complejidad simple, media y difícil.
+
+![Calculo de Pantallas](images/unidad10/calculo-pantallas.jpg)
+
+----
+
+### 1. Modelo de composición de aplicación
+#### 2. Clasifique los niveles de complejidad de cada objeto
+
+![Calculo de Reportes](images/unidad10/calculo-reportes.jpg)
+
+----
+
+### 1. Modelo de composición de aplicación
+#### 3. Asignar pesos de complejidad a cada objeto
+
+Los pesos se utilizan para tres tipos de objetos: pantallas, informes y componentes 3GL.
+
+![Calculo de Complejidad](images/unidad10/calculo-complejidad.jpg)
+
+----
+
+### 1. Modelo de composición de aplicación
+#### 4. Determinar los puntos del objeto
+
+Sumar todas las instancias de objetos ponderados para obtener un número; esto se conoce como recuento de puntos de objeto.
+
+**Punto de objeto = Sigma (número de instancias de objeto) * (peso de complejidad de cada instancia de objeto)**
+
+----
+
+### 1. Modelo de composición de aplicación
+#### 5. Calcular nuevos puntos de objeto (NOP)
+Estimar el porcentaje de reutilización que se debe lograr en un proyecto.
+
+**NOP = [(puntos de objeto) * (100 - % reutilización)] / 100**
+
+Los NOP son los puntos de objeto que se deben desarrollar y se diferencian del recuento de puntos de objeto porque puede haber reutilización de alguna instancia de objeto en el proyecto.
+
+----
+
+### 1. Modelo de composición de aplicación
+#### 6. Calcular la tasa de productividad (PROD)
+<!-- .slide: style="font-size: 0.90em" -->
+La tasa de productividad se calcula a partir de la información sobre la experiencia y la capacidad del desarrollador.
+
+![Porcentaje de Productividad](images/unidad10/Productivity-Rate.webp)
+
+----
+
+### 1. Modelo de composición de aplicación
+#### 7. Calcule el esfuerzo estimado
+El esfuerzo para desarrollar un proyecto se puede calcular como:
+
+```
+Esfuerzo = NOP / PROD
+```
+
+El esfuerzo se mide en personas-mes.
+
+----
+
+### EJEMPLO
+
+Considere un proyecto de aplicación de base de datos con
+1. La aplicación tiene 4 pantallas con 4 vistas cada una y 7 tablas de datos para 3 servidores y 4 clientes.
+2. La aplicación puede generar 2 informes de 6 secciones cada uno a partir de 7 tablas de datos para 2 servidores y 3 clientes.
+3. 10% de reutilización de puntos de objeto.
+4. La experiencia y capacidad del desarrollador en entornos similares es baja.
+
+----
+
+#### Paso 1: 
+
+Número de pantallas = 4
+
+Número de registros = 2
+
+----
+
+#### Paso 2: Para las pantallas,
+Número de vistas = 4
+
+Número de tablas de datos = 7
+
+Número de servidores = 3
+
+Número de clientes = 4
+
+De la tabla obtenermos que el **nivel de complejidad** para cada pantalla es **medio**.
+
+----
+
+#### Paso 2: Para informes
+
+Número de secciones = 6
+
+Número de tablas de datos = 7
+
+Número de servidores = 2
+
+Número de clientes = 3
+
+De la tabla obtenermos que el **nivel de complejidad** para cada informo es **difícil**.
+
+----
+
+#### Paso 3: Peso de Complejidad
+
+De la tabla de peso de complejidad obtenemos:
+
+Peso de complejidad para cada pantalla = 2
+
+Peso de complejidad para cada informe = 8
+
+----
+
+#### Paso 4: Puntos Objeto
+
+Recuento de puntos del objeto = sigma (número de instancias del objeto) * (su peso de complejidad)
+
+Puntos Objeto = 4 * 2 + 2 * 8 = 24
+
+----
+
+#### Paso 5: % de reutilización 
+
+El porcentaje de reutilización de puntos de objeto = 10% (dado)
+
+**NOP = [puntos de objeto * (100 - %reutilización)] / 100**
+
+NOP = [24 * (100 -10)]/100 = 21,6
+
+
+----
+
+#### Paso 6:
+
+La experiencia y capacidad del desarrollador son **bajas**.
+Utilizando la tabla de tasa de productividad:
+
+Tasa de productividad (PROD) del proyecto dado = 7
+
+
+----
+
+#### Paso 7:
+
+**Esfuerzo = NOP / PROD**
+
+Esfuerzo = 21,6/7
+
+Esfuerzo = 3.086 personas-mes
+
+<!--
+### 1. Modelo de composición de aplicación
 Modela el esfuerzo en proyectos con **componentes reutilizados**, código generado o programación de bases de datos.  
 
 - Tamaño medido en **puntos de aplicación**.  
 - Esfuerzo = **Tamaño / Productividad**.  
 - Se pondera: nº de pantallas, informes, módulos y líneas de código. 
-
-----
 
 ### 1. Modelo de composición de aplicación
 Enfocado en **prototipos y proyectos con reutilización**.  
@@ -551,7 +735,6 @@ Enfocado en **prototipos y proyectos con reutilización**.
 
 ![Productividad](images/unidad10/productividad.png)
 
-----
 
 ### Fórmula de estimación en composición
 ![Estimación de Esfuerzo](images/unidad10/estimacion-esfuerzo.png)
@@ -560,6 +743,7 @@ Enfocado en **prototipos y proyectos con reutilización**.
 - **NAP:** número de puntos de aplicación.  
 - **%Reutilización:** proporción de código reutilizado.  
 - **PROD:** productividad del equipo.  
+-->
 
 ---
 
@@ -577,7 +761,7 @@ Simplifica la fórmula general:
 <!-- .slide: style="font-size: 0.70em" -->
 ![Fórmula](images/unidad10/diseno-temprano.png)
 
-- **A = 2.94**  
+- **A = 2.94** (propuesto por Boehm)
 - **B = 1.1 a 1.24**, según innovación, riesgos, cohesión y madurez.  
 - **M:** multiplicador basado en 7 atributos:  
   - PERS (habilidad personal)  
@@ -587,6 +771,120 @@ Simplifica la fórmula general:
   - PREX (experiencia personal)  
   - FCIL (facilidades de soporte)  
   - SCED (ajuste de calendario)  
+
+----
+
+Los valores de **M** se pueden tomar de la siguiente tabla:
+
+<table>
+  <thead>
+    <tr>
+      <th>Factor</th>
+      <th>Muy Bajo</th>
+      <th>Bajo</th>
+      <th>Nominal</th>
+      <th>Alto</th>
+      <th>Muy Alto</th>
+      <th>Extra Alto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>PERS (Habilidad personal)</th>
+      <td>1.62</td>
+      <td>1.26</td>
+      <td>1.00</td>
+      <td>0.83</td>
+      <td>0.63</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <th>RCPX (Fiabilidad y complejidad)</th>
+      <td>0.49</td>
+      <td>0.60</td>
+      <td>1.00</td>
+      <td>1.33</td>
+      <td>1.91</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <th>RUSE (Reutilización requerida)</th>
+      <td>–</td>
+      <td>–</td>
+      <td>1.00</td>
+      <td>1.07</td>
+      <td>1.15</td>
+      <td>1.24</td>
+    </tr>
+    <tr>
+      <th>PDIF (Dificultad de la plataforma)</th>
+      <td>–</td>
+      <td>–</td>
+      <td>1.00</td>
+      <td>1.29</td>
+      <td>1.81</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <th>PREX (Experiencia personal)</th>
+      <td>1.59</td>
+      <td>1.33</td>
+      <td>1.00</td>
+      <td>0.87</td>
+      <td>0.71</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <th>FCIL (Facilidades de soporte)</th>
+      <td>1.43</td>
+      <td>1.14</td>
+      <td>1.00</td>
+      <td>0.87</td>
+      <td>0.73</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <th>SCED (Compresión del calendario)</th>
+      <td>1.43 (75%)</td>
+      <td>1.14 (85%)</td>
+      <td>1.00 (100%)</td>
+      <td>1.00 (130%)</td>
+      <td>–</td>
+      <td>–</td>
+    </tr>
+  </tbody>
+</table>
+
+----
+
+### Ejercicio:
+
+Supongamos:
+<!-- .slide: style="font-size: 0.80em" -->
+- Tamaño = 100 Puntos de Aplicación (AP).
+- Exponente B = 1.12 (un caso intermedio, ni muy riesgoso ni muy maduro).
+- Atributos: 
+  - PERS: Alto
+  - RCPX: Nominal
+  - RUSE: Alta
+  - PDIF: Nominal
+  - PREX: Baja
+  - FCIL: Alta
+  - SCED: Nominal
+- ¿Cuánto demoraría un equipo de 10 dev o 25 devs?
+
+----
+
+#### Paso 1: Calcular M
+𝑀 = 0.83 × 1.00 × 1.07 × 1.00 × 1.33 × 0.87 × 1.00 = **1.03**
+  
+#### Paso 2: Calcular esfuerzo (PM)
+PM = 2.94 × (100) 1.12 × 1.03 = **526 meses-persona**
+
+#### Paso 3: Equipos
+526/10 = 52.6 meses ≈ **4.4 años**
+
+526/25 = 21 meses ≈ **1.7 años**
 
 ---
 
@@ -600,6 +898,14 @@ Tipos:
 ----
 
 ### Fórmula de reutilización
+
+<!-- .slide: style="font-size: 0.90em" -->
+**ASLOC** son las siglas de "Adapted Source Lines of Code".
+
+Representa el número de líneas de código existentes que se van a adaptar/reutilizar en el nuevo proyecto.
+
+No todo ese código cuenta como “nuevo”, porque adaptarlo no cuesta lo mismo que desarrollarlo desde cero.
+
 ![Reutilización](images/unidad10/reutilizacion.png)
 
 - **ASLOC:** líneas de código reutilizado.  
@@ -609,14 +915,63 @@ Tipos:
 ----
 
 ### Conversión a ESLOC
+**ESLOC** son las siglas de "Equivalent Source Lines of Code".
+
+Es una medida ajustada que convierte el esfuerzo de reutilización/adaptación en un equivalente a "líneas nuevas".
+
 **ESLOC = ASLOC × AAM**  
 
 - **ESLOC:** líneas equivalentes de nuevo código.  
 - **AAM:** multiplicador de ajuste de adaptación.  
-Incluye:  
-- **AAF:** costo de cambios.  
-- **SU:** costo de comprensión (50 = complejo, 10 = simple).  
-- **Decisión de reutilizar:** 0 a 8.  
+
+----
+
+#### AAM: Adaptation Adjustment Multiplier
+
+![AAM](images/unidad10/AAM.png)
+
+- **AAF:** Factor de Ajuste de Adaptación, que representa el costo de hacer un cambio.  
+- **SU:** Penalización por Comprensión del Software. Refleja cuánto cuesta entender el software antes de adaptarlo. 10 (muy simple) a 50 (muy complejo).
+- **UNFM:** Evaluación y Asimilación. Representa el esfuerzo para evaluar, seleccionar e integrar software reutilizado. Rango: 0 a 8.
+
+----
+
+### AAF: Factor de Ajuste de Adaptación
+
+Se calcula como:
+**AAF = 0.4 × DM + 0.3 × CM + 0.3 × IM**
+
+- **DM** = % de diseño modificado.
+- **CM** = % de código modificado.
+- **IM** = % de integración modificada.
+
+----
+
+### Ejercicio:
+
+Supongamos:
+- ASLOC = 8,000
+- DM = 25%, CM = 10%, IM = 20%
+- SU = 30 (dificultad media para entender el software)
+- UNFM = 4 (esfuerzo intermedio de evaluación)
+
+----
+
+#### 1. Calcular AAF:
+
+AAF = (0.4 × 25) + (0.3 × 10) + (0.3 × 20)
+
+#### 2. Calcular AAM:
+
+AAM = (19/100) ​+ (30/100) ​+ (4/100)​
+
+AAM = 0.19 + 0.30 + 0.04 = 0.53
+
+#### 3. Calcular ESLOC:
+
+ESLOC = 8,000 × 0.53 = 4,240
+
+Reutilizar 8,000 líneas de código en esas condiciones equivale a 4,240 líneas nuevas en esfuerzo de desarrollo.
 
 ---
 
@@ -628,12 +983,66 @@ Se aplica cuando ya existe un diseño arquitectónico inicial.
 
 ----
 
+### Fórmula posaquitectonica
+
+![Postarquitetconica](images/unidad10/posarquitectonico.png)
+
+- A = 2.94 (constante calibrada).
+- Tamaño = LOC, Puntos de Función o ESLOC (si hay reutilización).
+- B = Exponente que refleja la escala
+- EMi = Multiplicadores de esfuerzo (17 en total en este modelo).
+
+----
+
 ### Factores posarquitectónicos
 1. **Precedencia:** experiencia previa en proyectos similares.  
 2. **Flexibilidad de desarrollo:** libertad para definir procesos. 
 3. **Resolución de riesgos:** nivel de análisis de riesgos realizado.  
 4. **Cohesión de equipo:** calidad de la comunicación y trabajo conjunto.  
 5. **Madurez del proceso:** nivel CMM (Modelo de Madurez de Capacidades) de la organización.  
+
+----
+
+### Multiplicadores de Esfuerzo
+- Producto
+- Plataforma
+- Personal
+
+----
+
+### Multiplicadores de Esfuerzo: Producto
+<!-- .slide: style="font-size: 0.90em" -->
+1. **RELY:** Reliability / Fiabilidad requerida. Qué tan crítico es que el software funcione sin fallas.
+2. **DATA:** Database Size / Tamaño de base de datos. Relación entre la base de datos y el código fuente.
+3. **CPLX:** Complexity / Complejidad del producto. Número de operaciones, interfaces, algoritmos, interacción con usuarios, etc
+4. **RUSE:** Required Reusability / Reutilización requerida. Nivel de calidad y documentación exigida para que el software pueda ser reutilizado en otros proyectos
+5. **DOCU:** Documentation. Cantidad y calidad de documentación requerida (manuales, guías, especificaciones).
+
+----
+
+### Multiplicadores de Esfuerzo: Plataforma
+6. **TIME:** Execution Time Constraint / Restricciones de tiempo de ejecución. Qué porcentaje del tiempo de CPU puede usar la aplicación.
+7. **STOR:** Main Storage Constraint / Restricciones de memoria. Aplicaciones que deben correr con muy poca RAM son más difíciles de desarrollar.
+8. **PVOL:** Platform Volatility / Volatilidad de la plataforma. Qué tan seguido cambia el hardware, el SO o el middleware en el que corre el sistema.
+
+
+----
+
+### Multiplicadores de Esfuerzo: Personal
+<!-- .slide: style="font-size: 0.80em" -->
+9. **ACAP:** Analyst Capability. Habilidad de analistas en requerimientos y diseño.
+10. **PCAP:** Programmer Capability. Habilidad técnica del equipo de codificación.
+11. **PCON:** Personnel Continuity. Mide la rotación del equipo (turnover). Mucha rotación = más esfuerzo.
+12. **APEX:** Applications Experience. Familiaridad del equipo con el dominio específico del sistema (ej. banca, salud, telecom).
+13. **PLEX:** Platform Experience. Experiencia en el hardware/SO/middleware donde se implementará el sistema.
+14. **LTEX:** Language and Tool Experience. Qué tanto conoce el equipo los lenguajes de programación, librerías y herramientas de desarrollo que usará.
+
+----
+
+### Multiplicadores de Esfuerzo: Proyecto
+15. **TOOL:** Use of Software Tools. Nivel de soporte de CASE, entornos integrados, repositorios de versiones, herramientas de prueba, etc.
+16. **SITE:** Multisite Development. Equipos distribuidos en varios husos horarios → más esfuerzo.
+17. **SCED:** Schedule Compression. Ajuste del calendario respecto al nominal (ej. terminar en 75% del tiempo normal implica más esfuerzo).
 
 ---
 
