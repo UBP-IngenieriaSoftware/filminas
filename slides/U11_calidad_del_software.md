@@ -332,7 +332,7 @@ El modelo de calidad del producto definido por la ISO/IEC 25010 se encuentra com
 
 ---
 ### ESTÁNDARES DE PRODUCTOS Y PROCESOS
-<!-- .slide: style="font-size: 0.60em" -->
+<!-- .slide: style="font-size: 0.80em" -->
 <!--
 | Estándares de producto                    | Estándares de proceso                             |
 |:------------------------------------------|:--------------------------------------------------|
@@ -384,7 +384,8 @@ El modelo de calidad del producto definido por la ISO/IEC 25010 se encuentra com
 * Involucra actividades burocráticas
 * No soportado por herramientas de software por lo que se requieren actividades manuales para mantener los estándares
 
----
+----
+
 ### PROBLEMAS CON ESTÁNDARES
 * Involucrar a los desarrolladores. Los Ingenieros deberán entender la racionalidad bajo un estándar.
 * Revisión de estándares y su uso regularmente. Los estándares pueden rápidamente estar desactualizados lo cual reduce su credibilidad entre sus usuarios
@@ -393,6 +394,25 @@ El modelo de calidad del producto definido por la ISO/IEC 25010 se encuentra com
 ---
 ### PROBLEMAS CON ESTÁNDARES
 **Excesivo trabajo manual es el más significante reclamo en contra de los estándares**
+
+---
+
+### Estándares Hoy
+
+Muchos aspectos de los estándares están automatizados o integrados en herramientas de desarrollo.
+Eso redujo la burocracia, ya que se vigilan o aplican automáticamente.
+
+----
+
+### Estándares Hoy
+<!-- .slide: style="font-size: 0.80em" -->
+Algunos ejemplos concretos:
+- **Estándares de codificación y estilo:**	ESLint, Prettier, SonarLint, Pylint, Checkstyle
+- **Control de calidad estática:** SonarQube, Code Climate, Codacy
+- **Gestión de pruebas y trazabilidad:** Xray, Zephyr, TestRail, GitHub Actions con reportes de test
+- **Integración continua y revisión:** Jenkins, GitHub Actions, GitLab CI/CD
+- **Seguridad y cumplimiento:** Snyk, OWASP Dependency-Check, GitHub Dependabot
+- **Mantenibilidad y métricas:** SonarQube, CodeScene, K6, Lighthouse
 
 ---
 ### ISO 9000 - ISO 9001
@@ -548,7 +568,8 @@ aprobado el progreso de la siguiente etapa del desarrollo
 </table>
 
 
----
+----
+
 ### INSPECCIONES DEL PROGRAMA
 <!-- .slide: style="font-size: 0.50em" -->
 <!--
@@ -635,7 +656,7 @@ aprobado el progreso de la siguiente etapa del desarrollo
 
 ---
 ### MÉTRICAS DE CONTROL Y PREDICCIÓN
-![Métricas de Control y Predicción](images/unidad11/metricas-control-prediccion.jpg)
+![Métricas de Control y Predicción](images/unidad11/metricas-control-prediccion.png)
 
 ---
 ### SUPOSICIÓN DE MÉTRICAS
@@ -646,7 +667,7 @@ aprobado el progreso de la siguiente etapa del desarrollo
 
 ---
 ### ATRIBUTOS INTERNOS Y EXTERNOS
-![Atributos Internos y Externos](images/unidad11/atributos-internos-externos.jpg)
+![Atributos Internos y Externos](images/unidad11/atributos-internos-externos.png)
 
 ---
 ### MÉTRICAS ESTÁTICAS DE PRODUCTOS DE SOFTWARE
@@ -737,7 +758,7 @@ información útil además de la proporcionada por otras métricas.
 
 ---
 ### PROCESO DE MEDICIÓN DEL PRODUCTO
-![Medición del Producto](images/unidad11/medicion-del-producto.jpg)
+![Medición del Producto](images/unidad11/medicion-del-producto.png)
 
 ---
 ### MANTENIBILIDAD DEL DISEÑO
