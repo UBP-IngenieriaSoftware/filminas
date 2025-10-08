@@ -1061,6 +1061,13 @@ El calendario final depende de la cantidad de personas asignadas y de la product
   - Los parámetros (B, M, AAM, etc.) son subjetivos y difíciles de estimar temprano.
   - No siempre refleja entornos ágiles o de alta incertidumbre.
 
+----
+
+### ¿COCOMO 2 se sigue usando?
+- Algunos contratos lo requieren como método oficial de estimación (ej. proyectos de la NASA).
+- En un marco académico, para entender estimación paramétrica y cómo distintos factores influyen en costo.
+- En empresas grandes con proyectos críticos, como parte de un paquete de estimación híbrido, junto con métricas ágiles, velocity, function points, etc.
+
 ---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
