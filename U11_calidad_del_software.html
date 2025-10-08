@@ -77,6 +77,13 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 
 ---
+
+#### Ingeniería de Software
+#### Ian Sommerville
+
+![Bibliografia](images/unidad11/somerville.png)
+
+---
 ### CALIDAD
 * **Asegurar la calidad:** definición de procesos y estándares que deben conducir
 a la obtención de productos de alta calidad
@@ -91,7 +98,7 @@ permitan asegurar que estos se cumplan.
 * Debe llevar a desarrollar una cultura de calidad en donde la calidad es responsabilidad de todos
 
 ---
-### QUE ES CALIDAD?
+### ¿QUÉ ES CALIDAD?
 **Calidad significa que un producto debe cumplir con sus especificaciones.**
 
 Para sistemas de software
@@ -117,6 +124,20 @@ software
 ### ACTIVIDADES DE MANEJO DE CALIDAD
 El manejo de calidad debe ser separado del manejo del proyecto
 para asegurar independencia
+
+---
+
+### Plan de Calidad
+<!-- .slide: style="font-size: 0.80em" -->
+Un plan de calidad (Humphrey) suele incluir:
+1. **Introducción del producto:** Descripción del producto, su mercado y expectativas de calidad. 
+2. **Planes del Producto:** Indican las fechas de entrega críticas y las responsabilidades para el producto, planes para distribución y servicio al producto.
+3. **Descripciones de procesos:** Describen los procesos y estándares de desarrollo y 
+servicio que deben usarse para diseño y gestión del producto.
+4. **Metas de calidad:** Identificación y justificación de los atributos esenciales de calidad del 
+producto.
+5. **Riesgos y gestión del riesgo:** Los riesgos pueden afectar la calidad del 
+producto y las acciones a tomar para enfrentar dichos riesgos
 
 ---
 ### ATRIBUTOS DE LA CALIDAD DEL SOFTWARE
@@ -167,6 +188,130 @@ para asegurar independencia
 </tbody>
 </table>
 
+----
+
+### ATRIBUTOS DE LA CALIDAD DEL SOFTWARE
+
+1. **Protección:** Capacidad del sistema para evitar accesos no autorizados o acciones maliciosas. Incluye control de acceso, manejo de roles, autenticación y autorización.
+
+2. **Seguridad:** Abarca confidencialidad, integridad y disponibilidad de la información.
+
+3. **Robustez:** Capacidad del software de mantenerse operativo ante fallas o entradas inválidas.
+
+----
+
+### ATRIBUTOS DE LA CALIDAD DEL SOFTWARE
+
+4. **Comprensibilidad:** Qué tan fácil es entender el código o la lógica del sistema.
+
+5. **Complejidad:** Grado de dificultad en la estructura o lógica del software. Cuanto mayor la complejidad, más difícil de mantener.
+
+6. **Modularidad:** Grado en que el sistema está dividido en módulos independientes y cohesivos.
+
+7. **Comprobabilidad:** Facilidad con la que se puede verificar y probar el sistema para confirmar que cumple requisitos.
+
+----
+
+### ATRIBUTOS DE LA CALIDAD DEL SOFTWARE
+
+8. **Eficiencia:** Uso óptimo de recursos (CPU, memoria, red, tiempo de respuesta).
+
+9. **Fiabilidad:** Capacidad del software para funcionar correctamente durante un tiempo determinado sin fallar.
+
+10. **Flexibilidad:** Facilidad con la que el software puede adaptarse a nuevos requerimientos sin grandes cambios estructurales.
+
+----
+
+### ATRIBUTOS DE LA CALIDAD DEL SOFTWARE
+
+11. **Portabilidad:** Capacidad del sistema para ejecutarse en diferentes entornos o plataformas.
+
+12. **Adaptabilidad:** Facilidad de ajustar el software a distintos contextos o necesidades.
+
+13. **Reusabilidad:** Grado en que los componentes pueden ser reutilizados en otros proyectos o módulos.
+
+----
+
+### ATRIBUTOS DE LA CALIDAD DEL SOFTWARE
+
+14. **Usabilidad:** Facilidad con la que el usuario puede utilizar el sistema de forma efectiva, eficiente y satisfactoria.
+
+15. **Facilidad de uso:** Relacionado con la usabilidad, pero enfocado en el tiempo y esfuerzo necesarios para aprender.
+
+---
+
+### Ejercicio: Atributos de Calidad
+<!-- .slide: style="font-size: 0.80em" -->
+Para cada uno de los siguientes ejemplos determine el atributo de calidad principal:
+
+<p class="fragment">3. Robustez</p>
+- Una API que responde con un error controlado (HTTP 400) en lugar de colapsar ante un input inesperado.
+
+<p class="fragment">9. Fiabilidad</p>
+- Un sistema de monitoreo que no pierde datos durante una semana de ejecución continua.
+
+<p class="fragment">2. Seguridad</p>
+- Cifrar contraseñas y asegurar conexiones con HTTPS.
+
+----
+
+### Ejercicio: Atributos de Calidad
+<!-- .slide: style="font-size: 0.80em" -->
+<p class="fragment">14. Usabilidad</p>
+- Una interfaz clara con botones y mensajes comprensibles.
+
+<p class="fragment">10. Flexibilidad</p>
+- Agregar nuevos métodos de pago sin reescribir toda la lógica de facturación.
+
+<p class="fragment">12. Adaptabilidad</p>
+- Cambiar el idioma o la moneda sin reescribir el código fuente.
+
+----
+
+### Ejercicio: Atributos de Calidad
+<!-- .slide: style="font-size: 0.80em" -->
+<p class="fragment">13. Reusabilidad</p>
+- Una librería de autenticación usada en varios microservicios.
+
+<p class="fragment">5. Complejidad</p>
+- Una función con 200 líneas y múltiples condicionales tiene alta complejidad ciclomática.
+
+<p class="fragment">1. Protección</p>
+- Un sistema que solo permite que los administradores borren datos críticos.
+
+----
+
+### Ejercicio: Atributos de Calidad
+<!-- .slide: style="font-size: 0.80em" -->
+<p class="fragment">4. Comprensibilidad</p>
+- Un código bien comentado, con nombres descriptivos y arquitectura clara.
+<p class="fragment">11. Portabilidad</p>
+- Una aplicación que corre tanto en Linux como en Windows sin modificaciones.
+<p class="fragment">8. Eficiencia</p>
+- Una consulta SQL optimizada que evita cargar toda la tabla en memoria.
+
+----
+
+### Ejercicio: Atributos de Calidad
+<!-- .slide: style="font-size: 0.80em" -->
+<p class="fragment">7. Comprobabilidad</p>
+- Tener tests automatizados, logs y trazas claras que faciliten la validación de comportamientos.
+
+<p class="fragment">15. Facilidad de Uso</p>
+- Una app intuitiva que un usuario nuevo puede dominar sin leer un manual.
+
+<p class="fragment">6. Modularidad</p>
+- Un backend dividido en servicios (auth, usuarios, pagos) que pueden desarrollarse y probarse por separado.
+
+---
+
+### [ISO 25010](https://iso25000.com/index.php/normas-iso-25000/iso-25010)
+<!-- .slide: style="font-size: 0.80em" -->
+La calidad del producto software se puede interpretar como el grado en que dicho producto satisface los requisitos de sus usuarios aportando de esta manera un valor.
+
+El modelo de calidad del producto definido por la ISO/IEC 25010 se encuentra compuesto por las nueve características de calidad:
+
+![Iso 25010](images/unidad11/iso25010.png)
 
 ---
 ### CALIDAD BASADA EN PROCESOS
@@ -186,7 +331,7 @@ para asegurar independencia
 
 ---
 ### CALIDAD BASADA EN PROCESOS
-![Calidad Basada en Procesos](images/unidad11/calidad-procesos.jpg)
+![Calidad Basada en Procesos](images/unidad11/proceso-de-calidad.png)
 
 ---
 ### ESTÁNDARES DE SOFTWARE
@@ -263,7 +408,7 @@ para asegurar independencia
 
 ---
 ### PROBLEMAS CON ESTÁNDARES
-**Excesivo trabajo manual es el mas significante reclamo en contra de los estándares**
+**Excesivo trabajo manual es el más significante reclamo en contra de los estándares**
 
 ---
 ### ISO 9000 - ISO 9001
@@ -280,11 +425,11 @@ para asegurar independencia
 
 ---
 ### ISO 9001
-![ISO 9001](images/unidad11/iso9001.jpg)
+![ISO 9001](images/unidad11/iso9001.png)
 
 ---
 ### ISO 9001 Y MANEJO DE CALIDAD
-![Manejo de Calidad](images/unidad11/manejo-de-calidad.jpg)
+![Manejo de Calidad](images/unidad11/manejo-de-calidad.png)
 
 ---
 ### REVISIÓN
@@ -492,6 +637,11 @@ aprobado el progreso de la siguiente etapa del desarrollo
 </tbody>
 </table>
 
+---
+
+### Proceso de Revisión de Software
+
+![Proceso de Revisión de Software](images/unidad11/proceso-de-revision.png)
 
 ---
 ### MÉTRICAS DE LA CALIDAD DEL PRODUCTO
@@ -540,18 +690,18 @@ la longitud del código es una de las métricas más fiables para predecir la pr
 
 ### MÉTRICAS ESTÁTICAS DE PRODUCTOS DE SOFTWARE
 * **Complejidad Ciclomática:** Ésta es una medida de la complejidad del control de un programa. Tal complejidad del 
-control puede relacionarse con la comprensibilidad del programa. En el capitulo 8 se estudia la complejidad ciclomática.
+control puede relacionarse con la comprensibilidad del programa.
 * **Longitud de identificadores:** Ésta es una medida de la longitud promedio de los identificadores (nombres para 
-variables, clases, métodos, etcétera) en un programa. Cuanto más largos sean los identificadores, es más probable que 
+variables, clases, métodos, etc) en un programa. Cuanto más largos sean los identificadores, es más probable que 
 sean significativos y, por ende, más comprensible será el programa.
 
 ----
 
 ### MÉTRICAS ESTÁTICAS DE PRODUCTOS DE SOFTWARE
 * **Profundidad de anidado condicional:** Ésta es una medida de la profundidad de anidado de los enunciados if en un 
-programa. Los enunciados if profundamente anidados son dificiles de entender y proclives potencialmente a errores.
+programa. Los enunciados if profundamente anidados son difíciles de entender y proclives potencialmente a errores.
 * **Índice Fog:** Ésta es una medida de la longitud promedio de las palabras y oraciones en los documentos. Cuanto más 
-alto sea el valor del indice Fog de un documento, más difícil será entender el documento.
+alto sea el valor del índice Fog de un documento, más difícil será entender el documento.
 
 ---
 ### MÉTRICAS ORIENTADAS a OBJETOS
@@ -559,7 +709,7 @@ alto sea el valor del indice Fog de un documento, más difícil será entender e
 * Profundidad de árbol de herencia
 * Número de hijos
 * Acoplamiento entre clases de objetos
-* Repsuesta por clase
+* Respuesta por clase
 * Falta de cohesión en métodos
 
 ----
@@ -584,16 +734,16 @@ objetos en las hojas del árbol.
 jerarquia de clase, mientras que DIT mide su profundidad. Un valor alto de NOC puede indicar mayor reutilización. Podria 
 significar que debe realizarse más esfuerzo para validar las clases base, debido al número de subclases que dependen 
 de ellas.
-* **Acoplamiento entre clases de objetos:** Las dases están acopladas cuando los métodos en una dase usan los métodos o 
-variables de instancia definidos en una dase diferente. CBO es una medida de cuánto acoplamiento existe. Un valor alto 
+* **Acoplamiento entre clases de objetos:** Las clases están acopladas cuando los métodos en una clase usan los métodos o 
+variables de instancia definidos en una clase diferente. CBO es una medida de cuánto acoplamiento existe. Un valor alto 
 para CBO significa que las clases son estrechamente dependientes y, por lo tanto, es más probable que el hecho de cambiar 
-una dase afecte a otras clases en el programa.
+una clase afecte a otras clases en el programa.
 
 ----
 
 ### MÉTRICAS ORIENTADAS a OBJETOS
 <!-- .slide: style="font-size: 0.75em" -->
-* **Repsuesta por clase:** RFC es una medida del número de métodos que potencialmente podrían ejecutarse en respuesta a 
+* **Respuesta por clase:** RFC es una medida del número de métodos que potencialmente podrían ejecutarse en respuesta a 
 un mensaje recibido por un objeto de dicha clase. Nuevamente, RFC se relaciona con la complejidad. Cuanto más alto sea 
 el valor para RFC, más compleja será una case y, por ende, es más probable que incluya errores.
 * **Falta de cohesión en métodos:** LCOM se calcula al considerar pares de métodos en una clase. LCOM es la diferencia 
@@ -660,13 +810,13 @@ Grafo numerando nodos y aristas. **M=8-7+2**
 ### MÉTRICAS DE CALIDAD DE LA DOCUMENTACIÓN
 * La legibilidad es importante en la documentación
 * El índice “Gunnings Fog” es una medida de la legibilidad
-  * Basada en la longitud de las frases y el numero de sílabas en una palabra
+  * Basada en la longitud de las frases y el número de sílabas en una palabra
   * Esto puede causar malas interpretaciones cuando se aplica a la documentación técnica.
 
 ---
 ### MADURES DE LAS MÉTRICAS
 * Las métricas todavía tienen un valor limitado y no ampliamente aceptado.
-* Las relaciones entre que lo que se puede medir y lo que se quiere conocer no esta bien comprendido aun.
+* Las relaciones entre que lo que se puede medir y lo que se quiere conocer no esta bien comprendido aún.
 * Hace falta poner de acuerdo a las organizaciones sobre las métricas necesarias en el proceso de software.
 
 ---
