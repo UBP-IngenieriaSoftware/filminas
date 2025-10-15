@@ -111,7 +111,8 @@ Las **pruebas** se consideran parte de un proceso más amplio de verificación y
 * **Validación:** ¿construimos el producto correcto?
   * El software debe hacer lo que el usuario realmente necesita.
 
----
+----
+
 ### V & V
 Objetivo final: establecer confianza de que el sistema de software es “adecuado”.
 
@@ -138,7 +139,7 @@ Implica inspecciones y revisiones (realizadas SIN ejecución), análisis y compr
 ----
 
 ### Inspecciones y Pruebas
-![Inspecciones y Pruebas](images/unidad8/inspecciones-y-pruebas.jpg)
+![Inspecciones y Pruebas](images/unidad8/inspecciones-y-pruebas.png)
 
 ----
 
@@ -159,7 +160,8 @@ rendimiento, usabilidad, etc.
 configuración, datos de prueba, etc.)
 * Han demostrado ser una técnica efectiva para descubrir errores de programa.
 
----
+----
+
 ### Ventajas de las inspecciones
 <!-- .slide: style="font-size: 0.90em" -->
 * Durante las pruebas, los errores pueden enmascarar (ocultar) otros errores. La inspección es un proceso
@@ -208,7 +210,7 @@ puesto en operación.
 
 ---
 ### Modelo del proceso de prueba de software
-![Modelo de Proceso de Prueba](images/unidad8/modelo-proceso-de-prueba.jpg)
+![Modelo de Proceso de Prueba](images/unidad8/modelo-proceso-de-prueba.png)
 
 ----
 
@@ -245,9 +247,9 @@ Todas son **pruebas de defecto**, cuya meta es descubrir bugs en el software.
 ### Distribución típica
 | Nivel | Propósito | Ejemplo | Volumen esperado |
 |-------|------------|----------|------------------|
-| 🧩 **Unitarias** | Validar funciones o métodos | JUnit, Jest | 🔼 Alta |
-| 🔗 **Integración / Componentes** | Validar interacción entre módulos | Postman, Playwright API | ⬆ Media |
-| 💻 **UI / End-to-End** | Validar comportamiento completo del sistema | Selenium, Cypress | ⬇ Baja |
+| **Unitarias** | Validar funciones o métodos | JUnit, Jest | Alta |
+| **Integración / Componentes** | Validar interacción entre módulos | Postman, Playwright API | Media |
+| **UI / End-to-End** | Validar comportamiento completo del sistema | Selenium, Cypress | Baja |
 
 ---
 ### 1. Pruebas de unidad
@@ -343,7 +345,7 @@ como JUnit, Jest o React Testing Library) para escribir y ejecutar las pruebas d
 
 ---
 
-### Comparativa
+### Caja Negra vs Caja Blanca
 | Criterio | Caja Negra | Caja Blanca |
 |-----------|-------------|--------------|
 | Enfoque | Funcional (externo) | Estructural (interno) |
@@ -361,6 +363,19 @@ como JUnit, Jest o React Testing Library) para escribir y ejecutar las pruebas d
 * Permite diseñar pruebas más **efectivas y realistas**.
 
 ---
+
+### Ejercicio: ¿Qué técnica usarías?
+
+1. Revisar un PR en Git con reglas de estilo 
+<p class="fragment">Estático: Revisión Técnica</p>
+2. Diseñar pruebas a partir de requerimientos sin ver código  
+<p class="fragment">Dinámica: Caja Negra</p>
+3. Medir que una API responde < 300ms al 95%
+ <p class="fragment">Dinámica: No Funcional</p>
+4. Explorar una app nueva sin casos predefinidos
+ <p class="fragment">Experiencia: Exploratoria</p>
+
+---
 ### Estrategias de prueba
 * **Prueba de partición**, donde se identifica grupos de entradas que tienen características comunes
   y deben ser procesadas de la misma manera.
@@ -375,16 +390,96 @@ como JUnit, Jest o React Testing Library) para escribir y ejecutar las pruebas d
   programa se comporta de una manera equivalente para cada miembro de la clase.
 * Los casos de prueba deben ser elegidos en cada partición.
 
----
+----
+
 ### Partición de equivalencia
-![Partición de equivalencia](images/unidad8/particion-equivalencia.jpg)
+![Partición de equivalencia](images/unidad8/particion-equivalencia.png)
 
----
+----
+
 ### Particiones de equivalencia
-![Partición de Equivalencia](images/unidad8/particion-de-equivalencia.jpg)
+![Partición de Equivalencia](images/unidad8/particion-de-equivalencia.png)
 
 ---
-### Lineamientos para las pruebas (Ejemplo secuencias)
+
+### Ejercicio: Partición + Límite
+<!-- .slide: style="font-size: 0.90em" -->
+¿Cuántos casos y qué casos se deberían plantear para testear esta función? Complete la tabla inferior:
+- Función calcularPrecio(total, esVip, cupon)
+- total ∈ [0, 10.000];
+- si esVip = true → 10% desc.;
+- cupon opcional: "PROMO10" desc. 10%, no acumulable con VIP;
+- si total < 100 no aplica ningún descuento;
+- resultado mínimo = 0.
+
+| Caso | total | esVip | cupon    | Esperado | Partición / Límite |
+|------|-------|-------|----------|----------|--------------------|
+| 1    |       |       |          |          |                    
+
+<!--
+| #  | total  | esVip | cupon     | Esperado | Justificación                                    |
+| -- | ------ | ----- | --------- | -------- | ------------------------------------------------ |
+| 1  | 50     | false | ""        | 50       | total < 100 → sin descuento                      |
+| 2  | 100    | false | ""        | 100      | justo en el límite → sin descuento (pero válido) |
+| 3  | 200    | true  | ""        | 180      | aplica 10% por VIP                               |
+| 4  | 200    | false | "PROMO10" | 180      | aplica 10% por cupón                             |
+| 5  | 200    | true  | "PROMO10" | 180      | no acumulable → solo uno aplica                  |
+| 6  | -10    | false | ""        | error    | valor fuera de rango                             |
+| 7  | 10.001 | false | ""        | error    | valor fuera de rango                             |
+| 8  | 99     | true  | ""        | 99       | borde inferior sin descuento                     |
+| 9  | 100    | true  | ""        | 90       | borde superior con descuento                     |
+| 10 | 200    | "no"  | ""        | error    | tipo inválido                                    |
+-->
+
+---
+
+### Tabla de Decisión
+La prueba de tabla de decisión es un método de prueba de caja negra que representa diferentes combinaciones de entradas y sus correspondientes resultados en un formato tabular estructurado. Consta de tres elementos principales:
+1. **Condiciones:** Las variables de entrada que impactan el comportamiento del sistema.
+2. **Acciones:** Los resultados o respuestas del sistema basados ​​en combinaciones de condiciones.
+3. **Reglas:** Combinaciones específicas de condiciones y sus acciones correspondientes.
+
+----
+
+### Tabla de Decisión
+
+![Tabla de Decisión](images/unidad8/tabla-decision.png)
+
+----
+
+### Tabla de Decisión
+Condiones:
+1. Puntuación crediticia (alta, media, baja)
+2. Ingresos (altos, bajos)
+
+Comportamiento:
+1. El préstamo se pruede aprobar o rechazar
+2. La tasa de interés puede ser baja, media o no aplicar (si no hay prestamo)
+
+----
+
+### Tabla de Decisión
+![Ejemplo de Tabla de Decisión](images/unidad8/tabla-decision-ejemplo.png)
+
+---
+
+### Ejercicio: Tabla de Decisión
+Para una tienda en línea que ofrece descuentos según la membresía y el monto total de compra:
+Condiciones:
+- ¿El cliente es miembro?
+- ¿La compra total es superior a $100?
+
+Acciones:
+- 10% de descuento
+- 5% de descuento
+- Sin descuento
+
+<!--
+[!Tabla de Decision Ejercicio](images/unidad8/tabla-decision-ejemplo2.png)
+-->
+
+---
+### Pautas para diseñar casos de prueba basados en secuencias
 * Secuencias que tienen un solo valor.
 * Usar secuencias de diferentes tamaños en diferentes pruebas. 
 * Acceder al primero, al del medio y al último elementos de la secuencia. 
@@ -478,10 +573,6 @@ uso que obliga a que estas interacciones ocurran.
 interacciones que se están probando.
 
 ---
-### Recolección de datos
-![Recolección de Datos](images/unidad8/recoleccion-de-datos.jpg)
-
----
 ### Políticas de prueba
 Las pruebas exhaustivas del sistema son imposibles. Se establece una política de pruebas
 para definir la cobertura.
@@ -515,7 +606,7 @@ dirigido por plan
 
 ---
 ### Desarrollo basado en pruebas
-![Desarrollo basado en pruebas](images/unidad8/desarrollo-basado-en-pruebas.jpg)
+![Desarrollo basado en pruebas](images/unidad8/desarrollo-basado-en-pruebas.png)
 
 ---
 ### Pasos en el proceso de TDD
@@ -632,7 +723,8 @@ Uno de los pacientes a quienes visita es Jim, quien es tratado con medicamentos
 antidepresivos. Jim siente que el medicamento le ayuda, pero considera que el
 efecto colateral es que se mantiene despierto durante la noche.
 
----
+----
+
 ### Prueba de escenario MHC-PMS
 <!-- .slide: style="font-size: 0.80em" -->
 Kate observa el registro de Jim y se le pide la palabra clave para descifrar el
@@ -647,7 +739,8 @@ registros de los pacientes visitados a la base de datos. El sistema genera para
 Kate una lista de aquellos pacientes con quienes debe comunicarse, para
 obtener información de seguimiento y concertar citas en la clínica.
 
----
+----
+
 ### Pruebas para el escenario
 * Autenticación al ingresar al sistema. 
 * Descarga y carga registros de paciente específicos desde una laptop. 
@@ -675,7 +768,8 @@ o los clientes proporcionan información y asesoramiento sobre las pruebas del s
 * La prueba de usuario es esencial, incluso cuando el sistema completo y pruebas de
 liberación se han llevado a cabo.
 
----
+----
+
 ### Pruebas de usuario
 El entorno de trabajo del usuario tiene un efecto importante en la fiabilidad,
 rendimiento, facilidad de uso y robustez de un sistema.
@@ -701,9 +795,10 @@ en el entorno del cliente.
 
 ---
 ### Etapas en el proceso de las pruebas de aceptación
-![Etapas en el proceso de aceptación de pruebas](images/unidad8/aceptacion-de-pruebas.jpg)
+![Etapas en el proceso de aceptación de pruebas](images/unidad8/aceptacion-de-pruebas.png)
 
----
+----
+
 ### Los métodos ágiles y pruebas de aceptación
 * En los métodos ágiles, el usuario/cliente es parte del equipo de desarrollo y es responsable de la toma de
 decisiones sobre la aceptabilidad del sistema.
