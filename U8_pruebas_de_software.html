@@ -72,6 +72,13 @@ Created by <i class="fab fa-telegram"></i>
 </div>
 
 ---
+### ¿Por qué probar software?
+* El 80% del costo del ciclo de vida del software puede provenir de defectos no detectados tempranamente.  
+* Un bug crítico puede costar millones o incluso poner en riesgo vidas humanas.  
+* Las pruebas no son solo “buscar errores”, sino **aumentar la confianza** en el sistema.  
+* Las pruebas efectivas son parte de la **ingeniería de calidad**, no solo una tarea final.
+
+---
 ### Pruebas de Software
 * La prueba intenta demostrar que un programa hace lo que se debe hacer y descubre los defectos del
 programa antes de su puesta en uso.
@@ -113,7 +120,7 @@ utiliza normalmente el sistema.
 ![Modelo de entrada-salida](images/unidad8/modelo-entrada-salida.jpg)
 
 ---
-### Verificacion vs validacion
+### Verificación vs validación
 Las **pruebas** se consideran parte de un proceso más amplio de verificación y validación.
 * **Verificación:** ¿construimos bien el producto?
   * El software cumple con los requerimientos funcionales y no funcionales establecidos
@@ -191,6 +198,19 @@ consistente y libre de errores.
 ### Las inpescciones NO sustituyen las pruebas de software. Son diferentes los errores a nivel dinámico que estático.
 
 ---
+
+### Técnicas de Prueba
+Las pruebas pueden clasificarse según **cómo se evalúa el software**:
+
+1. **Técnicas estáticas:** sin ejecutar el código.  
+2. **Técnicas dinámicas:** con ejecución del sistema.  
+3. **Técnicas basadas en la experiencia:** apoyadas en conocimiento o intuición del tester.
+
+---
+
+![Técnicas de Prueba](images/unidad8/tecnicas-pruebas.png)
+
+---
 ### Casos de Pruebas
 Son especificaciones de las entradas a las pruebas y la salida esperada del sistema (los resultado de la prueba), 
 además de información sobre lo que se pone a prueba.
@@ -208,7 +228,7 @@ puesto en operación.
 
 ----
 
-El proceso de prueba requiere una combinación de pruebas manuales y autoamtizadas.
+El proceso de prueba requiere una combinación de pruebas manuales y automatizadas.
 
 ---
 ### Pruebas de desarrollo
@@ -224,6 +244,28 @@ sistema se pone a prueba en su conjunto. Deben centrarse en las interacciones de
 Todas son **pruebas de defecto**, cuya meta es descubrir bugs en el software.
 
 ---
+### Pirámide de Testing
+![Pirámide de Testing](images/unidad8/piramide-testing.jpg)
+
+---
+
+### Pirámide de Testing
+<!-- .slide: style="font-size: 0.85em" -->
+* Representa la **proporción ideal** de pruebas en los diferentes niveles.  
+* Propone **muchas pruebas unitarias**, algunas pruebas de integración y pocas pruebas E2E.  
+* Las pruebas de menor nivel son **más rápidas, baratas y fáciles de automatizar**.  
+* Las pruebas de interfaz o sistema son **más lentas y frágiles**, pero necesarias para validar el flujo completo.  
+
+---
+
+### Distribución típica
+| Nivel | Propósito | Ejemplo | Volumen esperado |
+|-------|------------|----------|------------------|
+| 🧩 **Unitarias** | Validar funciones o métodos | JUnit, Jest | 🔼 Alta |
+| 🔗 **Integración / Componentes** | Validar interacción entre módulos | Postman, Playwright API | ⬆ Media |
+| 💻 **UI / End-to-End** | Validar comportamiento completo del sistema | Selenium, Cypress | ⬇ Baja |
+
+---
 ### 1. Pruebas de unidad
 * Proceso de probar métodos o clases de objetos individualmente de forma aislada.
 * Las unidades pueden ser:
@@ -232,6 +274,16 @@ Todas son **pruebas de defecto**, cuya meta es descubrir bugs en el software.
   * Componentes compuestos con interfaces definidas usados para acceder a su funcionalidad.
 
 ---
+
+### Métricas de calidad de prueba
+* **Cobertura de código:** porcentaje de líneas, ramas o funciones ejecutadas.  
+* **Tasa de defectos:** defectos encontrados / líneas de código.  
+* **MTTF (Mean Time To Failure):** tiempo promedio hasta que ocurre un fallo.  
+* **Tasa de éxito de ejecución de pruebas.**  
+* **Defect leakage:** porcentaje de errores no detectados en pruebas previas.
+
+---
+
 ### Pruebas clases
 Cobertura de la prueba completa de una clase implica:
 * Probar todas las operaciones asociadas con un objeto.
@@ -240,23 +292,7 @@ Cobertura de la prueba completa de una clase implica:
 * La herencia hace más difícil la prueba.
 
 ---
-### Estación meteorológica
-![Estacion Metereologica](images/unidad8/claseEstacionMetereologica.jpg)
 
-----
-
-### Prueba de la estacion meteorologica
-<!-- .slide: style="font-size: 0.90em" -->
-Necesidad de definir los casos de prueba de todos los métodos.
-
-* Utilizar un diagrama de estados, identificar las transiciones de estado y las secuencias de
-eventos para causar las diferentes transiciones:
-* Por ejemplo:
-  * Shutdown → Running → Shutdown
-  * Configuring → Running → Testing → Transmitting → Running
-  * Running → Collecting → Running → Summarizing → Transmitting → Running
-
----
 ### Pruebas automatizadas
 * Siempre que sea posible, las pruebas de unidad debe ser automatizadas de forma que se ejecuten y
 comprueben las pruebas sin necesidad de intervención manual.
@@ -265,7 +301,17 @@ como JUnit, Jest o React Testing Library) para escribir y ejecutar las pruebas d
 * Marcos de pruebas unitarias permiten clases de prueba genéricos que se extienden a crear casos de prueba específicos.
 
 ---
-### Partes del conunto automatizado de pruebas
+
+### Herramientas populares de prueba
+* **Unitarias:** JUnit, PyTest, Jest, NUnit.  
+* **De integración y API:** Postman, RestAssured, Playwright API testing.  
+* **UI/End-to-End:** Selenium, Playwright, Cypress.  
+* **Performance:** JMeter, K6, Gatling.  
+* **Cobertura y calidad:** SonarQube, Codecov.  
+* **CI/CD:** GitHub Actions, Jenkins, GitLab CI.
+
+---
+### Partes del conjunto automatizado de pruebas
 1. **Configuración**, donde se inicializa el sistema con el caso de prueba, es decir, entradas y salidas esperadas.
 2. **Llamada**, cuando se llama al objeto o método para probar.
 3. **Declaración**, donde se compara el resultado de la llamada con el resultado esperado. Si es verdadera, la
@@ -283,6 +329,54 @@ como JUnit, Jest o React Testing Library) para escribir y ejecutar las pruebas d
   * Se debe utilizar entradas anormales para comprobar que el componente no falle.
 
 ---
+
+### Pruebas de Caja Negra
+<!-- .slide: style="font-size: 0.85em" -->
+* También llamadas **pruebas funcionales**.  
+* Evalúan el sistema **desde el punto de vista del usuario** sin conocer la estructura interna del código.  
+* Se basan en los **requerimientos y especificaciones funcionales**.  
+* Buscan responder: *“¿Hace el sistema lo que debería hacer?”*
+* Técnicas comunes:
+  * Partición de equivalencia  
+  * Análisis de valores límite  
+  * Tablas de decisión  
+  * Casos de uso y escenarios
+
+---
+
+### Pruebas de Caja Blanca
+<!-- .slide: style="font-size: 0.85em" -->
+* También llamadas **pruebas estructurales**.  
+* El objetivo es validar la **lógica interna y los caminos del código**.  
+* Requieren conocimiento del código fuente.  
+* Buscan responder:  
+  > “¿Está correctamente construido el sistema?”
+* Tipos de cobertura:
+  * Cobertura de sentencias  
+  * Cobertura de decisiones o ramas  
+  * Cobertura de condiciones  
+  * Cobertura de caminos lógicos
+
+---
+
+### Comparativa
+| Criterio | Caja Negra | Caja Blanca |
+|-----------|-------------|--------------|
+| Enfoque | Funcional (externo) | Estructural (interno) |
+| Conocimiento del código | No requerido | Requerido |
+| Base del diseño de prueba | Requerimientos | Código fuente |
+| Objetivo | Validar comportamiento | Verificar implementación |
+| Técnicas comunes | Partición de equivalencia, escenarios | Cobertura de código, caminos |
+| Automatización típica | UI, API, E2E | Unitarias |
+
+---
+
+### Enfoque combinado (Caja Gris)
+* Mezcla ambos enfoques: conocimiento parcial de la estructura interna.  
+* Útil en pruebas de integración o de API, donde se conoce la arquitectura pero no toda la lógica interna.  
+* Permite diseñar pruebas más **efectivas y realistas**.
+
+---
 ### Estrategias de prueba
 * **Prueba de partición**, donde se identifica grupos de entradas que tienen características comunes
   y deben ser procesadas de la misma manera.
@@ -298,7 +392,7 @@ como JUnit, Jest o React Testing Library) para escribir y ejecutar las pruebas d
 * Los casos de prueba deben ser elegidos en cada partición.
 
 ---
-### Particion de equivalencia
+### Partición de equivalencia
 ![Partición de equivalencia](images/unidad8/particion-equivalencia.jpg)
 
 ---
@@ -383,6 +477,14 @@ transfieren los datos correctos en el momento adecuado a través de sus interfac
 * En general las realiza un equipo de pruebas independiente sin participación de diseñadores y programadores.
 
 ---
+
+### Clasificación de pruebas (otras dimensiones)
+* **Según el objetivo:** funcionales, no funcionales.  
+* **Según el conocimiento interno:** caja negra, caja blanca, caja gris.  
+* **Según el entorno:** manuales, automatizadas, híbridas.  
+* **Según el tipo de dato:** pruebas positivas, negativas, límite.
+
+---
 ### Pruebas de casos de uso
 * Los casos de uso desarrollados para identificar las interacciones del sistema se pueden utilizar
 como base para las pruebas del sistema.
@@ -406,6 +508,14 @@ En general se debe probar:
 * Todas las funciones del sistema que se acceden a través de menús.
 * Las combinaciones de funciones a las que se accede a través del mismo menú.
 * Todas las funciones para las cuales haya entrada del usuario.
+
+---
+
+### Pruebas basadas en riesgo
+* No todo puede probarse. Se priorizan las áreas con mayor **impacto o probabilidad de fallo.**  
+* Riesgo = Probabilidad × Impacto  
+* Ejemplo: un módulo de pagos tiene prioridad sobre uno de reportes.  
+* Ayuda a optimizar esfuerzo y cobertura.
 
 ---
 ### TDD: Desarrollo Dirigido por pruebas
@@ -446,6 +556,21 @@ problema. El código recién escrito tiene que ser revisado y modificado.
 que describe lo que el código debería estar haciendo.
 
 ---
+
+### La Pirámide y el Desarrollo Moderno
+* En **TDD**, la base de la pirámide (unitarias) crece naturalmente.  
+* En **CI/CD**, se ejecutan pruebas automáticas de todos los niveles en pipelines.  
+* En equipos ágiles, se busca mantener la pirámide equilibrada — evitando el “cono de helado” (demasiadas pruebas UI lentas).
+
+---
+
+### Estrategias modernas de prueba
+* **BDD (Behavior Driven Development):** usa un lenguaje natural (Given-When-Then).  
+* **ATDD (Acceptance Test Driven Development):** involucra directamente al cliente.  
+* **Shift-left testing:** probar lo antes posible en el ciclo.  
+* **Continuous Testing:** ejecutar pruebas automáticamente en cada commit o build.
+
+---
 ### Pruebas de regresión
 * Las pruebas de regresión prueban el sistema para comprobar que los cambios no han "roto" el código
 de trabajo con anterioridad.
@@ -464,7 +589,7 @@ fiabilidad, y que no falla durante su uso normal.
 especificación del sistema.
 
 ---
-### Pruebas de version y pruebas de sistema
+### Pruebas de versión y pruebas de sistema
 Diferencias importantes:
 * Un equipo separado que no haya estado involucrado en el desarrollo del sistema, debe ser
 responsable de las pruebas de versión.
@@ -602,6 +727,15 @@ decisiones sobre la aceptabilidad del sistema.
 automáticamente cuando se realizan cambios.
 * El principal problema radica en si el usuario incorporado es "típico" y puede representar los
 intereses de todos los actores del sistema.
+
+---
+
+### QA en entornos ágiles y DevOps
+* Las pruebas se integran en el ciclo continuo de desarrollo.  
+* El QA participa desde la planificación de historias de usuario.  
+* Se automatizan pruebas unitarias, de integración y regresión en pipelines.  
+* Se usan entornos de prueba efímeros y datos simulados.  
+* Cultura de “calidad compartida”: todos los roles son responsables de la calidad.
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
