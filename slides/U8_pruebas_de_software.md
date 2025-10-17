@@ -577,18 +577,19 @@ interacciones que se están probando.
 Las pruebas exhaustivas del sistema son imposibles. Se establece una política de pruebas
 para definir la cobertura.
 
----
+----
+
 ### Políticas de prueba
 En general se debe probar:
 * Todas las funciones del sistema que se acceden a través de menús.
 * Las combinaciones de funciones a las que se accede a través del mismo menú.
 * Todas las funciones para las cuales haya entrada del usuario.
 
----
+----
 
 ### Pruebas basadas en riesgo
 * No todo puede probarse. Se priorizan las áreas con mayor **impacto o probabilidad de fallo.**  
-* Riesgo = Probabilidad × Impacto  
+* **Riesgo = Probabilidad × Impacto**  
 * Ejemplo: un módulo de pagos tiene prioridad sobre uno de reportes.  
 * Ayuda a optimizar esfuerzo y cobertura.
 
@@ -604,11 +605,13 @@ incremento hasta que el código pasa su prueba.
 * TDD es usado en XP. Sin embargo, también se puede utilizar en los procesos de desarrollo
 dirigido por plan
 
----
+----
+
 ### Desarrollo basado en pruebas
 ![Desarrollo basado en pruebas](images/unidad8/desarrollo-basado-en-pruebas.png)
 
----
+----
+
 ### Pasos en el proceso de TDD
 <!-- .slide: style="font-size: 0.90em" -->
 1. Identificar el incremento de la funcionalidad que se requiere. (pequeño y aplicable en unas pocas líneas de código.)
@@ -618,7 +621,8 @@ implementado la funcionalidad de modo que la nueva prueba fallará.
 4. Implementar la funcionalidad y vuelver a ejecutar la prueba.
 5. Una vez que todas las pruebas se ejecutan correctamente, se pasa a la aplicación de la siguiente funcionalidad.
 
----
+----
+
 ### Beneficios de TDD
 <!-- .slide: style="font-size: 0.90em" -->
 * **Cobertura de código:** Cada segmento de código que se escribe tiene por
@@ -644,6 +648,16 @@ que describe lo que el código debería estar haciendo.
 * **ATDD (Acceptance Test Driven Development):** involucra directamente al cliente.  
 * **Shift-left testing:** probar lo antes posible en el ciclo.  
 * **Continuous Testing:** ejecutar pruebas automáticamente en cada commit o build.
+
+---
+
+### Otras categorías de pruebas
+- Pruebas de Regresión
+- Pruebas de Versión
+- Pruebas basadas en requerimientos
+- Pruebas de escenario
+- Pruebas de Rendimiento
+- Pruebas de Usuario
 
 ---
 ### Pruebas de regresión
@@ -775,7 +789,8 @@ El entorno de trabajo del usuario tiene un efecto importante en la fiabilidad,
 rendimiento, facilidad de uso y robustez de un sistema.
 No puede ser replicado en un entorno de prueba.
 
----
+----
+
 ### Tipos de prueba de usuario
 1. **Pruebas Alfa:** Los usuarios del software trabajan con el equipo de desarrollo para poner a prueba el
 software en el sitio del desarrollador.
@@ -815,6 +830,12 @@ intereses de todos los actores del sistema.
 * Se automatizan pruebas unitarias, de integración y regresión en pipelines.  
 * Se usan entornos de prueba efímeros y datos simulados.  
 * Cultura de “calidad compartida”: todos los roles son responsables de la calidad.
+
+---
+
+### Ejercicio
+1. Integrar **Zephyr**, **Qmetry** ó **Xray** dentro del entorno de Jira.
+2. Crear Test cases o casos de pruebas para las historias definidas en el proyecto
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
