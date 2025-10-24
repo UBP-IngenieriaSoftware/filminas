@@ -197,6 +197,23 @@ mismo
 
 **Para que el diseño de un producto sea exitoso se deben tener en cuenta los tres niveles de usuarios**
 
+----
+
+## IDENTIFICACIÓN DE LOS USUARIOS: Ejemplo
+<!-- .slide: style="font-size: 0.60em" -->
+- **Usuarios primarios**
+  - **Pacientes:** son quienes usan directamente el sistema para agendar, modificar o cancelar sus citas médicas.
+  - **Médicos:** usan el sistema para revisar su agenda y ver a sus pacientes.
+
+- **Usuarios secundarios**
+  - **Recepcionistas:** usan el sistema de manera ocasional para ayudar a los pacientes a programar citas o para actualizar información.
+  - **Personal de soporte técnico:** accede al sistema para resolver problemas.
+
+- **Usuarios terciarios**
+  - **Gerentes del hospital:** no usan el sistema directamente, pero se benefician de los reportes y estadísticas que genera.
+  - **Compañías de seguros:** pueden verse afectadas por cómo se gestionan las citas o los datos de pacientes.
+  - **Familiares de pacientes:** aunque no usan el sistema, se ven impactados por la calidad del servicio que ofrece.
+
 ---
 ### PROTOTIPADO
 <!-- .slide: style="font-size: 0.90em" -->
@@ -345,6 +362,7 @@ Es un cuestionario estandarizado que permite evaluar la percepción de la usabil
 ----
 
 ### SUS: Preguntas
+<!-- .slide: style="font-size: 0.70em" -->
 Las respuestas se califican del 1 al 5:
 1. Creo que me gustaría utilizar este (sistema/función/producto) con frecuencia.
 2. Encontré el (sistema/función/producto) innecesariamente complejo.

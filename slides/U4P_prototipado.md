@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## Prototipado
+#### Ingeniería de Software
+# Prototipado
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -74,6 +74,7 @@ Debe tener en cuenta:
 * ¿Qué campos hay para ingresar datos?
 * Sistemas similares ¿Qué opciones ofrecen?
 * ¿Qué acciones le permiten al usuario realizar?
+* ¿Las pantallas varían según el rol o tipo de usuario?
 * Mensajes de Error
  
 ---

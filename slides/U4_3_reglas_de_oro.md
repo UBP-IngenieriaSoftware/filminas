@@ -71,8 +71,12 @@ Created by <i class="fab fa-telegram"></i>
 
 ---
 ### 1. Consistencia
-Es importante el uso de iconos, colores, botones, etc. que sean familiares aprovechando el conocimiento previo que tiene 
-el usuario. Los usuarios se usa algo nuevo. Esto ayuda a que los usuarios puedan realizar lo que desean más rápidamente.
+Es importante mantener la consistencia en el diseño mediante el uso de iconos, colores, botones, tipografías 
+y estructuras que sean familiares para el usuario, aprovechando su conocimiento previo.
+
+Eso le permite a los usuarios predecir el comportamiento de la interfaz y realizar sus tareas con mayor facilidad y rapidez.
+
+La consistencia favorece el aprendizaje, la eficiencia y la satisfacción del usuario.
 
 ---
 ### 2. Permitir que lo usuarios frecuentes usen atajos
