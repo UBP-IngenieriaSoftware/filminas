@@ -35,6 +35,10 @@ Created by <i class="fab fa-telegram"></i>
 <div class="grid-container2">
 <div class="grid-item">
 
+### Gestión de la configuración
+  - Introducción
+  - Ventajas
+
 </div>
 <div class="grid-item">
 
@@ -60,6 +64,8 @@ Podemos definir **SCM – Software Configuration Management** como el conjunto d
 ---
 
 ### Componentes de la gestión de configuración
+
+<!-- .slide: style="font-size: 0.80em" -->
 
 <table>
 <thead>
@@ -130,6 +136,8 @@ Podemos definir **SCM – Software Configuration Management** como el conjunto d
 ---
 
 ### Control de versiones
+<!-- .slide: style="font-size: 0.80em" -->
+
 Es el proceso de registrar y gestionar los cambios en los archivos de un proyecto, permitiendo mantener un historial y volver a estados previos.
 
 Tipos de sistemas de control de versiones:
@@ -188,6 +196,7 @@ git push origin main
 ---
 
 ### Estrategias de branching y releases
+<!-- .slide: style="font-size: 0.80em" -->
 
 <table>
 <thead>
@@ -218,11 +227,12 @@ git push origin main
 
 ---
 
-### Herramientas y buenas prácticas
+### Herramientas
 
-- Herramientas: Git, GitHub, GitLab, Bitbucket, Azure DevOps.
+Git, GitHub, GitLab, Bitbucket, Azure DevOps.
 
-Buenas prácticas:
+---
+### Buenas prácticas de Versionado
 - Commits pequeños, descriptivos y frecuentes.
 - Usar mensajes significativos: `Ejemplo: fix: corrige validación de contraseña o feat: agrega autenticación JWT.` (emplear [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/))
 - Revisiones de código mediante pull requests.
