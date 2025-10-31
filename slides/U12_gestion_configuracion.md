@@ -136,7 +136,7 @@ que se realizan sobre los artefactos del software.
 ---
 
 ### Actividades de Gestión de Configuración
-<!-- .slide: style="font-size: 0.70em" -->
+<!-- .slide: style="font-size: 0.60em" -->
 
 <table>
     <thead>
@@ -173,7 +173,7 @@ que se realizan sobre los artefactos del software.
     </tbody>
 </table>
 
----
+----
 
 ### Actividades de Gestión de Configuración
 <!-- .slide: style="font-size: 0.70em" -->
