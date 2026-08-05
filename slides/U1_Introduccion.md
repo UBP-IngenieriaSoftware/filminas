@@ -396,14 +396,6 @@ En el desarrollo de software intervienen distintas disciplinas que, aunque todas
 
 - La mayor parte de los costos corresponde a los costos de corregir el software después de que ha entrado en uso.
 
-----
-
-### Ejercicio
-
-<img src="images/question.png" style="float: left">
-
-Piensen en ejemplos tanto positivos como negativos del impacto del software en la socidad.
-
 ---
 
 ### Diversidad en la ingeniería de software
@@ -426,14 +418,14 @@ No puede decirse que un método sea mejor que otro. La elección del método de 
 
 ### Tipos de aplicaciones
 
-- Aplicaciones autónomas
-- Aplicaciones basadas en transacciones interactivas
-- Sistemas embebidos o de control
-- Sistemas de procesamiento por lotes
-- Sistemas de entretenimiento
-- Sistemas para el modelado y simulación
-- Sistemas de adquisición de datos
-- Sistemas de sistemas
+1. Aplicaciones autónomas
+2. Aplicaciones basadas en transacciones interactivas
+3. Sistemas embebidos o de control
+4. Sistemas de procesamiento por lotes
+5. Sistemas de entretenimiento
+6. Sistemas para el modelado y simulación
+7. Sistemas de adquisición de datos
+8. Sistemas de sistemas
 
 ----
 
@@ -441,15 +433,15 @@ No puede decirse que un método sea mejor que otro. La elección del método de 
 
 <!-- .slide: style="font-size: 0.80em" -->
 
-- **Aplicaciones autónomas** <br>
+- **1. Aplicaciones autónomas** <br>
   Estos son los sistemas de aplicación que se ejecutan en un equipo local, como un PC. Incluyen toda la funcionalidad
   necesaria y no es necesario estar conectado a una red.
 
-- **Aplicaciones basadas en transacciones interactivas** <br>
+- **2. Aplicaciones basadas en transacciones interactivas** <br>
   Las aplicaciones que se ejecutan en un equipo remoto y se puede acceder por los usuarios desde sus propios ordenadores
   o terminales. Esto incluye aplicaciones web.
 
-- **Sistemas embebidos o de control** <br>
+- **3. Sistemas embebidos o de control** <br>
   Se trata de sistemas de software que controlan y gestionan dispositivos de hardware. Su número es superior a cualquier
   otro tipo de sistema.
 
@@ -459,32 +451,32 @@ No puede decirse que un método sea mejor que otro. La elección del método de 
 
 <!-- .slide: style="font-size: 0.80em" -->
 
-- **Sistemas de procesamiento por lotes** <br>
+- **4. Sistemas de procesamiento por lotes** <br>
   Estos son que están diseñados para procesar los datos en grandes lotes. Procesan un gran número de entradas individuales
   para crear salidas correspondientes.
 
-- **Sistemas de entretenimiento** <br>
+- **5. Sistemas de entretenimiento** <br>
   Se trata de sistemas que son principalmente para su uso personal y que están destinados a entretener al usuario.
 
-- **Sistemas para el modelado y simulación** <br>
+- **6. Sistemas para el modelado y simulación** <br>
   Se trata de sistemas cuyo objetivo es modelar procesos físicos donde distintas entidades interactúan entre si.
 
 ----
 
 ### Tipos de aplicaciones
 
-- **Sistemas de adquisición de datos**
+- **7. Sistemas de adquisición de datos**
   Se trata de sistemas que recopilan datos de su entorno utilizando un conjunto de sensores y envían estos datos a otros
   sistemas para el procesamiento.
 
-- **Sistemas de sistemas**
+- **8. Sistemas de sistemas**
   Estos son sistemas que están compuestos de un número de otros sistemas de software.
 
 ----
 
 ### Ejercicio
 
-Nombre ejemplos específicos de cada uno de los tipos de aplicaciones:
+Clasifique los siguientes Softwares según tipos de aplicaciones:
   - Aplicaciones autónomas
   - Aplicaciones basadas en transacciones interactivas
   - Sistemas embebidos o de control
