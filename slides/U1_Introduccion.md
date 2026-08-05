@@ -31,19 +31,6 @@ Created by <i class="fab fa-telegram"></i>
 
 ## Temario
 
-<div class="grid-item">
-
-### Ingeniería de Software
-
-- Definición
-- ¿Por qué es importante?
-- Errores de Software
-- Costos del software
-- Productos de software
-- Especificaciones del producto
-- Preguntas sobre la ingeniería de Software
-</div>
-
 <div class="grid-container2">
 <div class="grid-item">
     
