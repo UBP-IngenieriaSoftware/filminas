@@ -44,6 +44,34 @@ Created by <i class="fab fa-telegram"></i>
 - Preguntas sobre la ingeniería de Software
 </div>
 
+<div class="grid-container2">
+<div class="grid-item">
+    
+### Ingeniería de Software
+
+- Software
+- Ingeniería de Software
+  - Capas
+- Importancia
+- Errores de Software
+- Costos
+- Productos Genéricos
+- Productos personalizados
+</div>
+<div class="grid-item">
+
+
+- Disciplinas
+- Tipos de aplicaciones
+- Actividades
+- Atributos Esenciales
+- Afecta desarrollo
+- Web
+- Diseño: Arquitectura
+- Atributos de calidad
+</div>
+</div>
+
 ---
 
 # ¿Qué es la ingeniería de Software?
