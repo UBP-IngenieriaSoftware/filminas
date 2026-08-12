@@ -412,7 +412,7 @@ Enfoque donde cada etapa o ciclo se repite para refinar y mejorar un producto o 
 
 ## Desarrollo Incremental y Entrega incremental NO son lo mismo
 
----
+----
 
 ### Entrega incremental
 
@@ -434,13 +434,13 @@ Ejemplo:
 
 Cada entrega es usable por el usuario final.
 
----
+----
 
 ### Entrega Incremental
 
 ![Entrega Incremental](images/unidad2/entrega-incremental.jpg)
 
----
+----
 
 ### Desarrollo incremental
 
@@ -462,7 +462,7 @@ Ejemplo:
 
 Aquí quizás recién se entrega al usuario al final, cuando todo está integrado.
 
----
+----
 
 <table border="1" cellpadding="8" cellspacing="0">
   <thead>
@@ -496,7 +496,7 @@ Aquí quizás recién se entrega al usuario al final, cuando todo está integrad
   </tbody>
 </table>
 
----
+----
 
 ### Ventajas entrega incremental
 
@@ -505,7 +505,7 @@ Aquí quizás recién se entrega al usuario al final, cuando todo está integrad
 - Menor riesgo de fracaso del proyecto en general.
 - Los servicios de mayor prioridad se entregan antes y tienden a recibir la mayor cantidad de pruebas.
 
----
+----
 
 ### Problemas de entrega incremental
 
@@ -531,7 +531,7 @@ Cada ciclo en espiral se divide en 4 sectores:
 3. Desarrollo y validación
 4. Planeación
 
----
+----
 
 ### Desarrollo en Espiral
 
@@ -539,7 +539,7 @@ Cada ciclo en espiral se divide en 4 sectores:
 
 El proceso de desarrollo se organiza en ciclos o bucles que repiten las fases de planificación, diseño, desarrollo, prueba y evaluación.
 
-Se enfoca en la identificación y gestión de riesgos en cada ciclo, permitiendo tomar decisiones informadas y mitigar los riesgos potenciales.
+Se enfoca en la identificación y gestión de **riesgos**  en cada ciclo, permitiendo tomar decisiones informadas y mitigar los riesgos potenciales.
 
 Permite adaptarse a cambios y modificaciones durante el desarrollo del proyecto.
 
@@ -599,7 +599,7 @@ Iteración 2: Agregar función de marcar ítems → Riesgo: pérdida de datos �
 
 Procesos de software reales son _secuencias_ intercalados de actividades técnicas, de colaboración y de gestión con el objetivo general de la **especificación, diseño, implementación y prueba** de un sistema de software.
 
----
+----
 
 ### Actividades de proceso
 
@@ -610,7 +610,7 @@ Las cuatro actividades básicas del proceso son:
 3. Validación
 4. Evolución
 
-Estas activudades están organizadas de manera diferente según el proceso de desarrollo.
+Estas actividades están organizadas de manera diferente según el proceso de desarrollo.
 En el modelo de **cascada**, se organizan en **secuencia**, mientras que en el **desarrollo incremental** son **intercalados**.
 
 ---
@@ -632,7 +632,7 @@ Ingeniería de Requisitos o Requerimientos:
 - Validación de Requerimientos <br>
   Comprobación de la validez de los requisitos
 
----
+----
 
 ### El proceso de ingeniería de requerimientos
 
@@ -652,13 +652,13 @@ Ingeniería de Requisitos o Requerimientos:
 
 - Las actividades de diseño e implementación están estrechamente relacionados y pueden ser intercaladas.
 
----
+----
 
 ### Modelo general del proceso de diseño
 
 ![Diseño de Software](images/unidad2/disenio-software.jpg)
 
----
+----
 
 ### Actividades de Diseño
 
@@ -681,13 +681,13 @@ Las pruebas del sistema implica ejecutar el sistema con casos de prueba que se d
 
 La prueba es la actividad de V & V más utilizada.
 
----
+----
 
 ### Etapas de la prueba
 
 ![Etapas de la prueba](images/unidad2/etapas-de-pruebas.jpg)
 
----
+----
 
 ### Etapas de prueba
 
@@ -703,7 +703,7 @@ La prueba es la actividad de V & V más utilizada.
 - **Las pruebas de aceptación** <br>
   Las pruebas realizadas por el cliente para verificar que el sistema cumple con sus necesidades.
 
----
+----
 
 ### Fases de prueba en un proceso de software
 
@@ -718,13 +718,17 @@ La prueba es la actividad de V & V más utilizada.
 - Si bien se habla de desarrollo y evolución (mantenimiento) como etapas diferentes, la diferencia es cada vez más
   irrelevante, cada vez son menos los sistemas completamente nuevos.
 
----
+----
 
 ### Evolución del Sistema
 
 ![Evolución del Sistema](images/unidad2/evolucion-de-software.jpg)
 
 ---
+### 💡 Ejercicio: Actividades del Proceso
+Identifica a cuál de las 4 actividades corresponde cada una de las siguientes tareas.
+
+----
 
 ### 💡 Ejercicio: Actividades del Proceso
 
@@ -829,7 +833,7 @@ Los prototipos deben desecharse ya que no son una buena base para un sistema de 
 
 ### Actividades a realizar en grupo
 
-En grupos de máximo 3 personas deberán investigar UNA de las siguientes metodologías, generar una presentación BREVE y mostrarla al curso (fecha 22/08)
+En grupos de máximo 3 personas deberán investigar UNA de las siguientes metodologías, generar una presentación BREVE y mostrarla al curso (fecha 19/08)
 
 <!-- .slide: style="font-size: 0.75em" -->
 
@@ -867,7 +871,7 @@ La presentación debe incluir:
 - Quién lo desarrolló y porqué
 - Ventajas y Desventajas de Aplicarlo
 - Ejemplo de aplicación real o caso hipotético breve.
-- Máximo 10min por grupo!!!
+- Máximo 15min por grupo!!!
 
 ---
 
