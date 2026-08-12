@@ -728,6 +728,8 @@ La prueba es la actividad de V & V más utilizada.
 ### 💡 Ejercicio: Actividades del Proceso
 Identifica a cuál de las 4 actividades corresponde cada una de las siguientes tareas.
 
+[Mentimeter](https://www.mentimeter.com/app/presentation/al82jh3nth9put7142eqwd7era11sm42/edit?question=czfxubbfahtx)
+
 ----
 
 ### 💡 Ejercicio: Actividades del Proceso
@@ -834,6 +836,8 @@ Los prototipos deben desecharse ya que no son una buena base para un sistema de 
 ### Actividades a realizar en grupo
 
 En grupos de máximo 3 personas deberán investigar UNA de las siguientes metodologías, generar una presentación BREVE y mostrarla al curso (fecha 19/08)
+
+La metodología será elegida por sorteo [SpinWheel](https://spinthewheel.io/es)
 
 <!-- .slide: style="font-size: 0.75em" -->
 
