@@ -4,8 +4,8 @@ theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## Desarrollo Ágil de Software
+#### Ingeniería de Software
+# Desarrollo Ágil de Software
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
@@ -114,6 +114,7 @@ excesiva
 ---
 
 ### Principios de los métodos ágiles
+<!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Principio | Descripción                                                                                                                                                                                     |
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -255,8 +256,7 @@ desarrollar con un equipo pequeño que pueda comunicarse de manera informal. Est
 
 ---
 
-### Programación extrema
-Tal vez el más conocido y más utilizado método ágil.
+## Programación extrema
 
 Extreme Programming (XP) :
 * Las nuevas versiones se pueden construir varias veces al día
@@ -264,6 +264,18 @@ Extreme Programming (XP) :
 * Todas las pruebas se deben ejecutar para cada iteracion y la integracion sólo se acepta si las pruebas resultan satisfactorias.
 
 ---
+
+### XP: Origen
+- Fue desarrollado por **Kent Beck** (1 de los autores del manifiesto ágil), cuando fue contratado para **Chrysler**
+- Todas las prácticas de esta metodología fueron popularizados en 1999 en el libro "Extreme Programming Explained: Embrace Change"
+- Se centra en **valores** y **principios**
+
+---
+
+### Valores en XP
+- Los **valores** proporcionan un propósito a los equipos y actúa como un ideal a seguir. 
+
+----
 
 ### Valores en XP
 
@@ -289,7 +301,8 @@ Las historias del usuario o casos de uso son la base para las pruebas de aceptac
 ----
 
 ### Valores en XP
-- **Valentía o disciplina:** Diseñar para hoy. Reconocer que los requerimientos futuros tal vez cambien mucho.
+- **Valentía o disciplina:** Diseñar para hoy. Reconocer que los requerimientos futuros tal vez cambien mucho. 
+**Tomar una acción eficaz frente al miedo**.
 - **Respeto:** Entre los miembros del equipo, con el software y con el proceso XP.
 
 ---
@@ -314,6 +327,7 @@ CRC = Clase - Responsabilidad - Colaboraciones
 ---
 
 ### Prácticas de Extreme programming
+<!-- .slide: style="font-size: 0.60em" -->
 
 <table>
 <thead>
@@ -382,6 +396,21 @@ CRC = Clase - Responsabilidad - Colaboraciones
 </tbody>
 </table>
 
+---
+
+### XP
+- Se busca crear una versión inicial lo suficientemente buena, pero no perfecta, para ir refinándola y mejorándola con el tiempo.
+- La **diversidad** de perspectivas, actitudes, habilidades ayuda a la mejora.
+- Ayuda a la **reflexión del trabajo** realizado, en busca de mejoras.
+
+----
+
+### XP: Roles
+Si bien no hay roles rigidos, se recomienda tener una visión de roles:
+- **Cliente:** Prioriza, crea pruebas de aceptacion.
+- **Programadores:** Completan las tares e historias, escriben pruebas automatizadas.
+- **Coach:** Alguien con experiencia en XP.
+- **Rastreador:** Seguimiento de métricas de progreso, habla con el equipo para identificar obstáculos y encontrar soluciones.
 
 ---
 ### Escenarios de los requerimientos
@@ -451,6 +480,17 @@ tiempo y esfuerzo anticipando los cambios ya que esto reduce costos más tarde.
 * La sustitución de líneas de código con llamadas a métodos que se han incluido en una biblioteca de programas.
 
 ---
+
+### Las pruebas en XP
+Se emplea **TDD**, Test Driven Development
+1. Se escribe una prueba que falla
+2. Se escribe el código que pase esas pruebas
+3. Si es necesario, se refasctoriza el código para hacerlo más fácil de entender
+
+Aplicar **TDD** ofrece seguridad a la hora de implementar cambios.
+
+----
+
 ### Las pruebas en XP
 <!-- .slide: style="font-size: 0.90em" -->
 * Las Pruebas son fundamentales para XP. El software se comprueba después de que cada cambio.
@@ -460,7 +500,8 @@ tiempo y esfuerzo anticipando los cambios ya que esto reduce costos más tarde.
   * Participación de los usuarios en el desarrollo de la prueba y validación.
   * Juego de pruebas automatizadas que se utilizan para ejecutar todas las pruebas de componentes cada vez que una nueva versión está construida.
 
----
+----
+
 ### Desarrollo de las pruebas primero
 <!-- .slide: style="font-size: 0.90em" -->
 * Escribir pruebas antes del código aclara los requisitos para ser implementados.
@@ -594,8 +635,8 @@ funcionalidades que se desarrollará durante el sprint.
 
 ### El Ciclo de Sprint
 * Una vez que éstos están de acuerdo, el equipo se organizan para desarrollar el software. Durante esta etapa,
-el equipo está aislado del cliente y la organización, con toda comunicaciones canalizadas a través del denominado
-'Scrum Master‘.
+el equipo está aislado del cliente y la organización, y la comunicación es canalizada a través del
+** Scrum Master**.
 * El papel del Scrum Master es proteger el equipo de desarrollo de las distracciones externas.
 * Al final del sprint, el trabajo realizado es revisado y se presenta a las partes interesadas. El siguiente ciclo de
 sprint comienza entonces
@@ -603,7 +644,7 @@ sprint comienza entonces
 ---
 ### Trabajo en equipo en Scrum
 <!-- .slide: style="font-size: 0.90em" -->
-* El 'Scrum Master' es un facilitador que organiza reuniones diarias, rastrea la lista de trabajos por hacer,
+* El **Scrum Master** es un facilitador que organiza reuniones diarias, rastrea la lista de trabajos por hacer,
 registra las decisiones, mide el progreso y se comunica con los clientes y la gestión fuera del equipo.
 * Todo el equipo asiste a las reuniones diarias cortas donde todos los miembros del equipo comparten
 información, describen su progreso desde la última reunión, los problemas que han surgido y que se ha
