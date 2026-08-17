@@ -96,17 +96,6 @@ documentar el sistema de aplicación.
 * En un proceso de ingeniería basado en modelos, es posible generar una implementación completa o parcial del sistema 
 desde el modelo del sistema.
 
----
-
-### Perspectivas del sistema
-* Una **perspectiva externa**, donde se modela el contexto o el entorno del sistema.
-* Una **perspectiva de interacción**, donde se modelan las interacciones entre un sistema y su entorno, o entre los 
-componentes de un sistema.
-* Una **perspectiva estructural**, donde se modela la organización de un sistema o de la estructura de los datos que son 
-procesados por el sistema.
-* Una **perspectiva conductual**, en la que se modela el comportamiento dinámico del sistema y la forma en que responde 
-a los eventos.
-
 ----
 
 ### Ejemplo:
@@ -160,81 +149,6 @@ parámetros y su tipo de retorno es nulo.
 * No es ambigua ni confusa (una vez conocemos la semántica de cada elemento de modelado)
 * Es fácil y rápida de interpretar
 * Es fácil de procesar por herramientas
-
----
-### UML
-* Siglas de "Unified Modeling Language".
-* Lenguaje de modelado estándar para modelado orientado a objetos.
-* Tiene numerosos tipos de diagramas, pero en la gran mayoría de sistemas se usan solo 5.
-* UML puede usarse para visualizar, especificar, construir y documentar los artefactos de un sistema de software
-
-![Logo UML](images/unidad5/logo-UML.png)
-
-----
-
-### ¿Por qué UML?
-* Es **sencillo**
-* Es capaz de modelar todo tipo de sistemas.
-* Es un lenguaje universal
-* Es fácilmente extensible.
-* Es visual y, por lo tanto, intuitivo.
-* Es independiente del desarrollo, del lenguaje y de la plataforma.
-* Bien ejecutado aporta un conjunto considerable de buenas prácticas.
-
-----
-
-### Consideraciones sobre UML
-Los diagramas UML NO son completos. Utilizando los distintos diagramas no podemos estar seguros de comprender con 
-totalidad el sistema que va a desarrollarse. Los diagramas, para facilitar la comprensión pueden (y suelen) omitir 
-información, pueden tener partes que se entienden de distintas maneras o, incluso, pueden tener conceptos que no 
-pueden ser representados por ningún diagrama.
-
----
-
-![Clasificación de los diagramas UML](images/unidad5/clasificacion-diagramas.png)
-
----
-
-### Diagramas UML
-<!--http://www.softwero.com/2017/08/los-13-diagramas-uml-y-sus-componentes-1.html-->
-
-<div class="grid-container2">
-<div class="grid-item">
-
-### Diagramas de Estructura 
-
-1. Diagrama de clases
-2. Diagrama de Objetos
-3. Diagrama de Componentes
-4. Diagrama de Estructura Compuesta
-5. Diagrama de Despliegue
-6. Diagrama de Paquetes
-
-</div>
-<div class="grid-item">
-
-### Diaramas de Comportamiento
-
-7. Diagrama de Actividad
-8. Diagrama de Casos de Uso
-9. Diagrama de Máquinas de Estado
-10. Diagrama de Secuencia
-11. Diagrama de Comunicaciones
-12. Diagrama de Tiempo
-13. Diagrama de Descripción de Interacción
-
-</div></div>
-
-----
-
-### Tipos de diagramas UML
-
-<!-- .slide: style="font-size: 0.90em" -->
-* **Diagramas de actividades:** Muestran las actividades involucradas en un proceso o en el procesamiento de datos.
-* **Diagramas de casos de uso:** Muestran las interacciones entre un sistema y su entorno.
-* **Diagramas de secuencia:** Muestran las interacciones entre los actores y el sistema y entre los componentes del sistema.
-* **Diagramas de clases:** Muestran las clases de objetos en el sistema y las asociaciones entre estas clases.
-* **Diagramas de estado:** Muestran cómo el sistema reacciona a los acontecimientos internos y externos.
 
 ---
 ### El uso de modelos gráficos

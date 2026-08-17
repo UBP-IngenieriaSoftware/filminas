@@ -1,5 +1,5 @@
 ---
-title: Diseño e Implementación
+title: Clean Code
 theme: solarized
 slideNumber: true
 ---

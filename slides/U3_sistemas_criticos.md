@@ -1,5 +1,5 @@
 ---
-title: Ingenieria de Sistemas
+title: Sistemas Críticos
 theme: solarized
 slideNumber: true
 ---

@@ -1,5 +1,5 @@
 ---
-title: Diseño e Implementación
+title: Principios de Diseño
 theme: solarized
 slideNumber: true
 ---

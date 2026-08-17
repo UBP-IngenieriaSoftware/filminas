@@ -1,5 +1,5 @@
 ---
-title: Calidad del Software
+title: Introducción al Peritaje
 theme: solarized
 slideNumber: true
 ---

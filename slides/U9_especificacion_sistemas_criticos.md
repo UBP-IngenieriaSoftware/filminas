@@ -1,5 +1,5 @@
 ---
-title: Modelado de Sistemas
+title: Especificación de Sitemas Críticos
 theme: solarized
 slideNumber: true
 ---
