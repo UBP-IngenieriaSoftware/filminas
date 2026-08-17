@@ -5,6 +5,9 @@ slideNumber: true
 ---
 
 #### Ingeniería de Software
+
+### Unidad IV
+
 # Desarrollo Ágil de Software
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
@@ -575,7 +578,8 @@ puede no proporcionar una cobertura completa.
 * Las mediciones muestran que la productividad de desarrollo con la programación par es similar a la de dos
 personas trabajando en paralelo
 
----
+----
+
 ### Programación en pares
 <!-- .slide: style="font-size: 0.80em" -->
 * En la programación en pares, los programadores se sientan juntos en la misma estación de trabajo para desarrollar el
@@ -622,67 +626,228 @@ fortalezas particulares de los métodos ágiles.
 
 ---
 ### Scrum
+Esta metodología se lleva adelante en “Sprints”. Al final de cada sprint, el equipo debe entregar una versión mejorada 
+del proyecto para que sea analizada por todos los interesados; luego de eso, los evaluadores dan una devolución, lo 
+que da inicio al proceso de mejora.
+
+---
+### Scrum
+![Scrum](images/unidad4/scrum.webp)
+
+---
+### Scrum: Roles
+
 <!-- .slide: style="font-size: 0.90em" -->
-El enfoque de Scrum es un método ágil, su atención se centra en la gestión del desarrollo iterativo
 
-Hay tres fases en Scrum.
-1. La **fase inicial**, el anteproyecto, donde se establecen los objetivos generales del proyecto y 
-se diseña la arquitectura de software.
-2. Esto es seguido por una serie de **ciclos**, donde cada ciclo desarrolla un incremento del sistema.
-3. La **fase de cierre** del proyecto concluye el proyecto, completa documentación requerida, tales como marcos de ayuda del
-sistema y manuales de usuario y evalúa las lecciones aprendidas del proyecto.
+Los equipos de Scrum son auto-organizados y multifuncionales. Es decir, cada uno es responsable de unas tareas 
+determinadas y de terminarlas en los tiempos acordados. Esto garantiza la entrega de valor del equipo completo, 
+sin necesidad de ayuda o la supervisión minuciosa de otros miembros de la organización.
 
----
-### El Ciclo de Sprint
-* Los Sprints son de longitud fija, normalmente 2-4 semanas. Ellos corresponden al desarrollo de una versión del sistema en XP.
-* El punto de partida para la planificación es la la lista de tareas a realizar en el proyecto.
-* La fase de selección involucra a todo el equipo del proyecto, que trabajan con el cliente para seleccionar las
-funcionalidades que se desarrollará durante el sprint.
+Al ser equipos multifuncionales, requiere de múltiples roles:
+* Scrum Master
+* Product Owner
+* Equipo de Desarrollo (Dev. Front, Dev. Backend, QA)
+* Diseñador UX
 
 ----
 
-### El Ciclo de Sprint
-* Una vez que éstos están de acuerdo, el equipo se organizan para desarrollar el software. Durante esta etapa,
-el equipo está aislado del cliente y la organización, y la comunicación es canalizada a través del
-**Scrum Master**.
-* El papel del Scrum Master es proteger el equipo de desarrollo de las distracciones externas.
-* Al final del sprint, el trabajo realizado es revisado y se presenta a las partes interesadas. El siguiente ciclo de
-sprint comienza entonces
+### Rol: Product Owner
+Es el responsable de maximizar el valor del trabajo, que viene de la mano de una buena gestión del Product Backlog.
+
+El Product Owner es el único perfil que habla constantemente con el cliente, lo que le obliga a tener muchos 
+conocimientos sobre el negocio.
+
+----
+
+### Rol: Scrum Master
+Es el responsable de que las técnicas Scrum sean comprendidas y aplicadas en la organización. Es el manager de Scrum, 
+un líder que se encarga de eliminar impedimentos o inconvenientes que tenga el equipo dentro de un sprint, aplicando 
+las mejores técnicas para fortalecer el equipo.
+
+Dentro de la organización, el Scrum Master tiene la labor de ayudar en la adopción del framework en todos los equipos.
+
+----
+
+### Rol: Equipo de desarrollo
+Son los encargados de realizar las tareas priorizadas por el Product Owner. Es un equipo multifuncional y 
+auto-organizado. Son los únicos que estiman las tareas del product backlog, sin dejarse influenciar por nadie.
+
+Los equipos de desarrollo no tienen sub-equipos o especialistas. La finalidad de esto es transmitir la 
+responsabilidad compartida si no se llegan a realizar todas las tareas de un sprint.
+
+----
+
+### Rol: UX
+Son los encargados de realizar el diseño de la aplicación. Suelen conocer en profundidad el negocio, para poder realizar el diseño acorde a las necesidades del cliente.
+
+Emplean herramientas como:
+* Figma
+* Adoba XD
 
 ---
-### Trabajo en equipo en Scrum
+### Scrum: Artefactos
+* Product Backlog
+* Sprint Backlog
+* Incremento
+
+---
+### Product Backlog
+
 <!-- .slide: style="font-size: 0.90em" -->
-* El **Scrum Master** es un facilitador que organiza reuniones diarias, rastrea la lista de trabajos por hacer,
-registra las decisiones, mide el progreso y se comunica con los clientes y la gestión fuera del equipo.
-* Todo el equipo asiste a las reuniones diarias cortas donde todos los miembros del equipo comparten
-información, describen su progreso desde la última reunión, los problemas que han surgido y que se ha
-previsto para el día siguiente.
 
-**Esto significa que todos en el equipo saben lo que está pasando y, si surgen problemas, puede volver a planear el
-trabajo a corto plazo para hacer frente a ellos.**
+Listado de tareas que engloba todo un proyecto. Cualquier cosa que debamos hacer debe estar en el Product Backlog y 
+con un tiempo estimado por el equipo de desarrollo.
 
-----
+La responsabilidad de ordenar este Backlog es del Product Owner, que se encuentra en constante comunicación con el 
+cliente para asegurarse de que las prioridades están bien establecidas.
 
-![Reuniones cortas](images/unidad4/reuniones-cortas.png)
-
----
-### Beneficios de Scrum
-* El producto se divide en un conjunto de fragmentos manejables y comprensibles.
-* Requisitos inestables son mas manejables.
-* Todo el equipo tiene visibilidad de todo y por lo tanto se mejora la comunicación del equipo.
-* Los clientes ven la entrega a tiempo y se obtiene retroalimentación sobre cómo funciona el producto.
-* Se genera confianza entre los clientes y los desarrolladores . Se crea una cultura positiva en la que
-todos esperan que el proyecto tenga éxito.
-
----
-### El Proceso Scrum
-![Scrum](images/unidad4/03-scrum.png)
+Las tareas que están más arriba deben de ser las de mayor prioridad. El equipo de desarrollo elige tareas del 
+Product Backlog en el Sprint Planning para generar tanto el Sprint Backlog como el Sprint Goal.
 
 ----
 
-### Flujo Scrum
+### Sprint Backlog
+Es el grupo de tareas del Product Backlog que el equipo de desarrollo elige en el Sprint Planning junto con el plan 
+para poder desarrollarlas. Debe ser conocido por todo el equipo, para asegurarse de que el foco debe estar en este grupo de tareas.
 
-![Scrum](images/unidad4/proceso-scrum.png)
+El Sprint Planning no cambia durante el sprint, solo se permite cambiar el plan para poder desarrollarlas.
+
+----
+
+### Incremento
+El Product Increment es el resultado de sumar todos los elementos del Product Backlog completados durante el sprint 
+actual, añadiendo también el valor de todos los sprints anteriores.
+
+La suma de los incrementos se presenta en cada Sprint Review, y se pueden crear varios incrementos de Scrum dentro de un mismo sprint.
+
+---
+### Scrum: Ceremonias
+
+<!-- .slide: style="font-size: 0.90em" -->
+
+Todas las **ceremonias** o **eventos** están enmarcadas o contenidas en un sprint.
+
+Un sprint es un período de tiempo en el cuál se va a realizar la entrega de software. Habitualmente suele ser de 2 semanas.
+
+Las ceremonias más habituales son:
+* Sprint Planning
+* Daily Meeting
+* Sprint Review o Demo
+* Retrospectiva
+* Refinamiento o Grooming
+
+----
+
+### Ceremonias: Sprint Planning
+En esta reunión todo el equipo Scrum define qué tareas se van a abordar y cuál será el objetivo del sprint.
+
+El equipo se hace las siguientes preguntas:
+¿Qué se va a hacer en el sprint? En base a ello, se eligen tareas del Product Backlog.
+¿Cómo lo vamos a hacer? El equipo de desarrollo define las tareas necesarias para completar cada ítem elegido del Product Backlog.
+La definición de qué se va a hacer implica que el equipo tenga un objetivo y se encuentre comprometido con la entrega de 
+valor que se hará al cliente al final del sprint. A esto se le llama Sprint Goal.
+
+----
+
+### Ceremonias: Daily Meeting
+
+<!-- .slide: style="font-size: 0.90em" -->
+
+Es una reunión diaria dentro del sprint que tiene como máximo 15 minutos de duración. En ella deben participar el equipo 
+de desarrollo y el Scrum Master. El Product Owner no tiene la necesidad de estar presente.
+
+En esta reunión diaria el equipo de desarrollo hace las siguientes 3 preguntas:
+¿Qué hice ayer?
+¿Qué voy a hacer hoy?
+¿Tengo algún impedimento que necesito que me solucionen?
+
+Una Daily Scrum es el lugar más oportuno para poder inspeccionar el trabajo y poder adaptarse en caso de que haya cambio 
+de tareas dentro de un sprint.
+
+----
+
+### Ceremonias: Sprint Review o Demo
+La review del valor que vamos a entregar al cliente se hace en esta reunión, al final de cada sprint. Suele asistir el 
+cliente para ver los avances del proyecto.
+
+En esta reunión el Product Owner presenta lo desarrollado al cliente y el equipo de desarrollo muestra su funcionamiento. 
+El cliente valida los cambios realizados y además brinda feedback sobre nuevas tareas que el Product Owner tendrá que 
+agregar al Product Backlog.
+
+----
+
+### Ceremonias: Sprint Retrospective
+Es la reunión del equipo en la que se hace una evaluación de cómo se ha implementado el último sprint.
+
+Es una gran oportunidad para el equipo Scrum de inspeccionarse a sí mismo, proponiendo mejoras para el siguiente sprint. 
+El resultado es una lista de mejoras que debe aplicar el siguiente día, ya que al finalizar la retrospectiva, 
+inmediatamente comienza un nuevo sprint, que incluye los mismos eventos mencionados anteriormente.
+
+----
+
+### Ceremonias: Refinamiento o Grooming
+Es el tiempo de revisión que se dedica dentro de los equipos durante los sprints para refinar los requerimientos.
+
+Las tareas de usuario se revisan con un par de sprints de ventaja para que cuando llegue el equipo ya esté todo listo 
+para el desarrollo de la tarea.
+
+---
+### Estimación
+
+Se suele emplear la sucesión de Fibonacci: 1,2,3,5,8 y 13. Son "unidades relativas" y no representan una cantidad de horas o días específicos.
+
+A veces para estimar, se emplean otras técnicas de comparación:
+- Bucket System
+- Tallas de camiseta
+- Affinity Estimating
+
+----
+
+![Tecnicas Estimación](images/unidad4/tecnicas-estimacion.png)
+
+----
+
+### Bucket System
+Es una técnica de estimación en la que las tareas se clasifican en «cubos». Cada uno de ellos representa un diferente nivel de esfuerzo o de complejidad.
+
+![Bucket System](images/unidad4/Bucket-System.png)
+
+----
+
+### Tallas de camiseta
+Esta técnica clasifica las tareas en categorías de tamaño relativo. Para ello recurre a tamaños que se asemejan a las tallas de las camisetas: XS, S, M, L, XL.
+
+----
+
+![Tallas de camiseta](images/unidad4/Tallas-de-camiseta.png)
+
+----
+
+### Affinity Estimating
+Esta técnica consiste en estimar un gran número de tareas agrupándolas según su tamaño relativo, comparando unas con otras.
+
+----
+
+![Affinity Estimating](images/unidad4/Affinity-Estimating.png)
+
+---
+### Ejercicio: Ceremonia Daily
+Hagamos de cuenta que pasó un día, y debemos notificar en una “Daily” lo que pasó el día anterior:
+
+Alguien tomará el papel de “Scrum Master”, y cada persona del equipo debe informar en la reunión sobre:
+* ¿En que trabajaste ayer?
+* ¿En qué trabajaras hoy?
+* ¿Tienes algún problema con tu tarea?
+
+(Puedes usar en lugar de tarea actividades de la universidad o de una materia en particular)
+
+---
+### Ejercicio: Ceremonia Retro
+Hagamos de cuenta que pasaron las 2 semanas (el sprint), y se debe evaluar el resultado del sprint:
+
+Alguien tomará el papel de “Scrum Master”, y cada persona del equipo debe participar de la ceremonia empleando:
+
+[Tablero de Retro](https://easyretro.io/publicboard/AV72d2p7dEg4eQJ5h3WIKMj9ILm1/08ef8213-7d3a-442d-9479-2ed5b37e8847)
 
 ---
 ### Escala métodos ágiles

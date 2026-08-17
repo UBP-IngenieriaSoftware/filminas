@@ -5,6 +5,9 @@ slideNumber: true
 ---
 
 #### Ingeniería de Software
+
+### Unidad IV
+
 # Herramientas CASE
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
@@ -67,7 +70,7 @@ Muchas de estas herramientas pueden combinarse en un marco llamado ambiente de d
 ---
 
 ### Herramientas CASE: OBJETIVOS
-<!-- .slide: style="font-size: 0.90em" -->
+<!-- .slide: style="font-size: 0.70em" -->
 1. Mejorar la productividad del software
 2. Aumentar la calidad del software.
 3. Reducir el tiempo y costo de desarrollo y mantenimiento de los sistemas informáticos.
@@ -100,7 +103,8 @@ Muchas de estas herramientas pueden combinarse en un marco llamado ambiente de d
 ---
 
 ### Características que debe Soportar
-- Soporte gráfico para varias técnicas (DFD, E/R, STD, modelos OO, etc.)
+- Soporte gráfico para varias técnicas (**DFD** Diagrama de Flujos de Datos, **E/R** Entidad Relación, 
+**STD** Diagrama de Transición de Estados, modelos OO, etc.)
 - Control de errores “Consistencia”: Unicidad identificadores, reglas metodología, etc.
 - Validación entre diferentes modelos:
   - En una fase (Por ejemplo: entre DFD y E/R)
@@ -122,7 +126,7 @@ Muchas de estas herramientas pueden combinarse en un marco llamado ambiente de d
 ---
 
 ### VENTAJAS
-
+<!-- .slide: style="font-size: 0.80em" -->
 Estas herramientas pueden proveer muchos beneficios en todas las etapas del proceso de desarrollo de software, algunas de ellas son:
 Mejora en la productividad
 - Mejora en la eficacia
@@ -169,8 +173,7 @@ Existen muchas formas de clasificarlas teniendo en cuenta los siguientes paráme
 ### Clasificación por Ciclo de Vida
 - **Herramientas Upper CASE:** Se enfocan en las etapas iniciales del ciclo de vida, como el análisis y diseño. 
 - **Herramientas Lower CASE:** Se utilizan en las etapas de implementación y pruebas. 
-- **Herramientas Integrated CASE:** Abarcan todo el ciclo de vida y ofrecen funcionalidades integradas. 
-- **Herramientas I-CASE:** Son herramientas integradas que abarcan tanto las etapas frontales como las dorsales del desarrollo. 
+- **Herramientas Integrated CASE:** Abarcan todo el ciclo de vida y ofrecen funcionalidades integradas.  
 
 ----
 
@@ -180,7 +183,7 @@ Existen muchas formas de clasificarlas teniendo en cuenta los siguientes paráme
 
 ### Clasificación FUNCIONAL
 <!-- .slide: style="font-size: 0.90em" -->
-Según su **FUNCIÓN** se pueden clasificar en:
+Según su **FUNCIÓN** se pueden clasificar en herramientas de:
 1. H de planificación de sistemas de gestión
 2. H de análisis y diseño
 3. H de programación
@@ -303,6 +306,7 @@ Aunque frecuentemente se asocia a los sistemas Case con la mejora de la producti
 
 ---
 
+<!-- .slide: style="font-size: 0.80em" -->
 ### Clasificación Según su Integración:
 - **Toolkits** (Juego de herramientas). Conjunto de herramientas software que automatizan alguna fase del ciclo de vida (análisis, diseño, gestión, ...). Comparten la BD de soporte y la interfaz de usuario. Integración baja.
 - **Workbenchs** (Banco de trabajo). Conjunto de herramientas software que automatizan el ciclo de  vida en más de una fase, típicamente en  análisis + diseño + implementación (incluyendo documentación asociada). Asisten en todo el proceso y proporcionan un producto documentado y operativo. Además de compartir la BD de soporte y la interfaz de usuario, están basadas en una misma metodología. Integración media.
@@ -319,7 +323,6 @@ Aunque frecuentemente se asocia a los sistemas Case con la mejora de la producti
 <!--https://quinterod.wordpress.com/wp-content/uploads/2015/09/herramientas-case.pdf-->
 <!--https://repositorio.utn.edu.ec/bitstream/123456789/1087/2/04%20ISC%20001-TESIS.pdf-->
 <!--https://marcochicaiza72.blogspot.com/p/herramientas-case.html-->
-
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
