@@ -21,56 +21,112 @@ Franameri2016@gmail.com
 ---
 ## UNIDADES
 
-**Módulo 1:** Introducción a la Ingeniería de Software
+**Módulo 1:** INGENIERÍA DE SOFTWARE
 
-**Módulo 2:** Requisitos de Software
+**Módulo 2:** REQUERIMIENTOS
 
-**Módulo 3:** Análisis y Diseño de Software
+**Módulo 3:** MODELADO Y ESPECIFICACIÓN
 
-**Módulo 4:** Gestión de Proyectos de Software
+**Módulo 4:** DISEÑO Y CONSTRUCCIÓN Y PRUEBA
 
-**Módulo 5:** Aseguramiento de Calidad y Gestión de Configuración
+**Módulo 5:** CALIDAD, AUDITORIA Y PERITAJE
 
-----
+---
 
-### Resumen de Contenidos
+<!-- .slide: style="font-size: 0.78em" -->
+### Módulo 1: INGENIERÍA DE SOFTWARE
 
-**Módulo 1: Introducción a la Ingeniería de Software**
-- Conceptos fundamentales de la ingeniería de software. 
-- Modelos de Ciclo de Vida del Software: Enfoques tradicionales y ágiles.
+**Unidad I: INTRODUCCIÓN**
 
-----
+Introducción a la Ingeniería de Software. Preguntas frecuentes: ¿Qué es software?, ¿Que es la Ingeniería del software?, ¿Cuál es la diferencia entre Ingeniería de Software y Ciencias de la Computación o Ingeniería de Sistemas?, ¿Cuales son los atributos de un buen software?.
 
-### Resumen de Contenidos
+**Unidad II: INGENIERÍA DE SISTEMAS**
 
-**Módulo 2: Requisitos de Software**
-- Tipos de requisitos. 
-- Técnicas de elicitación y documentación. 
-- Introducción al análisis de necesidades del cliente.
+Ingeniería de Sistemas, Arquitectura de sistemas, Definición de Requerimientos del Sistema, Diseño de Sistemas, Modelado de Sistemas.
 
-----
+**Unidad III: SISTEMAS CRÍTICOS**
 
-### Resumen de Contenidos
-
-**Módulo 3: Análisis y Diseño de Software**
-- Modelado con UML: Diagramas de clases, secuencia y actividades. 
-- Herramientas y técnicas para estructurar y organizar soluciones de software.
+Confiabilidad de un Sistema, Disponibilidad y fiabilidad de un Sistema, Seguridad, Protección.
 
 ----
 
-### Resumen de Contenidos
+<!-- .slide: style="font-size: 0.78em" -->
+### Módulo 1: INGENIERÍA DE SOFTWARE
 
-**Módulo 4: Gestión de Proyectos de Software**
-- Planificación, estimación y control de proyectos. 
-- Introducción al aseguramiento de calidad del software.
+**Unidad IV: PROCESOS DE SOFTWARE**
+
+Modelos de proceso de software: Modelo en cascada, Modelo Evolutivo, Modelo basado en Componentes. Iteración de procesos: Entrega incremental, Desarrollo en Espiral. Actividades del Proceso: Especificación del proceso, Diseño e implementación del software, Validación del software, evolución del software. Herramientas Case.
+
+**Unidad V: ADMINISTRACIÓN DE PROYECTOS DE SOFTWARE**
+
+Principios de la Administración de proyectos de software, Modelos de Estimación de tiempo y recursos, Planeamiento y seguimiento de proyecto. Herramientas para proyecto, Cocomo II, Gant. Software de aplicación USC-Cocomo II model, Planner.
+
+---
+
+### Módulo 2: REQUERIMIENTOS
+
+**Unidad VI: REQUERIMIENTOS DEL SOFTWARE**
+
+Requerimientos funcionales, no funcionales y de dominio. Requerimientos de Usuario. Requerimientos de Sistema. Especificaciones de la Interfaz.
+
+**Unidad VII: PROCESOS DE LA INGENIERÍA DE REQUERIMIENTOS**
+
+Estudios de Viabilidad. Adquisición y análisis de requerimientos. Validación de requerimientos. Gestión de requerimientos.
+
+
+---
+
+### Módulo 3: MODELADO Y ESPECIFICACIÓN
+
+**Unidad VIII: MODELOS DEL SISTEMA SOFTWARE**
+
+Modelo de Contexto. Modelo de Comportamiento. Modelo de datos. Modelo de Objetos. Métodos Estructurados.
+
+**Unidad IX: ESPECIFICACIÓN DE SISTEMAS CRÍTICOS**
+
+Especificación dirigida por riesgos. Especificación de la seguridad. Especificación de la protección. Especificación de la fiabilidad.
+
+---
+
+### Módulo 4: DISEÑO Y CONSTRUCCIÓN Y PRUEBA
+
+**Unidad X: DISEÑO ARQUITECTÓNICO DEL SOFTWARE**
+
+Decisiones del diseño arquitectónico. Organización del sistema. Estilos de descomposición modular. Estilos de control. Arquitecturas de referencia.
+
+**Unidad XI: DISEÑO ORIENTADO A OBJETOS**
+
+Objetos y clases. Proceso de diseño orientado a objetos. Evolución del diseño. UML. Vistas multidimensionales del sistema.
 
 ----
 
-### Resumen de Contenidos
+### Módulo 4: DISEÑO Y CONSTRUCCIÓN Y PRUEBA
 
-**Módulo 5: Aseguramiento de Calidad y Gestión de Configuración**
-- Pruebas y validación del software. 
-- Gestión de la configuración y control de versiones.
+**Unidad XII: DISEÑO DE INTERFACES DE USUARIO**
+
+Asuntos de diseño. El proceso de diseño de la interfaz de usuario. Análisis del usuario. Prototipado de la interfaz de usuario. Evaluación de la Interfaz.
+
+**Unidad XIII: PRUEBAS DEL SOFTWARE**
+
+Pruebas del Software
+
+
+---
+
+<!-- .slide: style="font-size: 0.78em" -->
+### Módulo 5:  CALIDAD, AUDITORIA Y PERITAJE
+
+**Unidad XIV: INTRODUCCIÓN A LA CALIDAD**
+
+Conceptos de calidad. Normas IEEE, ISO y CMMI. Los niveles y Áreas de proceso clave de CMMI.
+
+**Unidad XV: INTRODUCCIÓN A LA AUDITORÍA**
+
+Conceptos de la Auditoría. Funciones del control interno y auditoría informática. Metodología de control interno, seguridad y auditoría informática. Principales áreas de la auditoría informática. Seguridad Física y Seguridad Lógica.
+
+**Unidad XVI: INTRODUCCIÓN AL PERITAJE**
+Conceptos del Peritaje. Pericia y Peritos. Clases de Peritos. Metodología. Quién puede ser Perito. Fuentes de Información. Fuentes de Información. Pasos a seguir. Métodos y Técnicas utilizadas en peritaje informático.
+
 
 ---
 ## Libros:

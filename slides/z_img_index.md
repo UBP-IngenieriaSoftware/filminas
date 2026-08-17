@@ -1,15 +1,9 @@
 ---
-title: Presentación de la materia
+title: Imagenes
 theme: solarized
 slideNumber: true
 ---
 
-# Ingeniería de Software
-## Imagenes Index
-Created by <i class="fab fa-telegram"></i>
-[edme88]("https://t.me/edme88")
-
----
 ![GTP](images/indice/GTP.png)
 
 ---
