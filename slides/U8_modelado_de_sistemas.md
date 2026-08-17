@@ -5,6 +5,9 @@ slideNumber: true
 ---
 
 #### Ingeniería de Software
+
+### Unidad VIII
+
 # Modelado de Sistemas
 Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
@@ -200,31 +203,26 @@ pueden ser representados por ningún diagrama.
 
 ### Diagramas de Estructura 
 
-1.Diagrama de clases
-2.Diagrama de Objetos
-3.Diagrama de Componentes
-4.Diagrama de Estructura Compuesta
-
-5.Diagrama de Despliegue
-
-6.Diagrama de Paquetes
+1. Diagrama de clases
+2. Diagrama de Objetos
+3. Diagrama de Componentes
+4. Diagrama de Estructura Compuesta
+5. Diagrama de Despliegue
+6. Diagrama de Paquetes
 
 </div>
 <div class="grid-item">
 
 ### Diaramas de Comportamiento
 
-7.Diagrama de Actividad
-8.Diagrama de Casos de Uso
-9.Diagrama de Máquinas de Estado
+7. Diagrama de Actividad
+8. Diagrama de Casos de Uso
+9. Diagrama de Máquinas de Estado
+10. Diagrama de Secuencia
+11. Diagrama de Comunicaciones
+12. Diagrama de Tiempo
+13. Diagrama de Descripción de Interacción
 
-10.Diagrama de Secuencia
-
-11.Diagrama de Comunicaciones
-
-12.Diagrama de Tiempo
-
-13.Diagrama de Descripción de Interacción
 </div></div>
 
 ----
