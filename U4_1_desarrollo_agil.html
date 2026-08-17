@@ -286,6 +286,12 @@ Extreme Programming (XP) :
 - Todas las prácticas de esta metodología fueron popularizados en 1999 en el libro "Extreme Programming Explained: Embrace Change"
 - Se centra en **valores** y **principios**
 
+----
+
+![Kent Beck](images/unidad2/kent-becl.jpg)
+
+Para la época, 90s, las ideas de Kent Beck fueron disruptivas en cuanto a metodología de trabajo.
+
 ---
 
 ### Valores en XP
@@ -489,7 +495,8 @@ tiempo y esfuerzo anticipando los cambios ya que esto reduce costos más tarde.
 * Los cambios son más fáciles de hacer ya que el código está bien estructurado y claro.
 * Sin embargo, algunos cambios requieren reconstrucción de la arquitectura y esto es mucho más caro
 
----
+----
+
 ### Ejemplos de Refactorizacion
 * Re-organización de una jerarquía de clases para eliminar código duplicado.
 * Ordenar y cambiar el nombre de los atributos y métodos para facilitar su comprensión.
@@ -501,7 +508,7 @@ tiempo y esfuerzo anticipando los cambios ya que esto reduce costos más tarde.
 Se emplea **TDD**, Test Driven Development
 1. Se escribe una prueba que falla
 2. Se escribe el código que pase esas pruebas
-3. Si es necesario, se refasctoriza el código para hacerlo más fácil de entender
+3. Si es necesario, se refactoriza el código para hacerlo más fácil de entender
 
 Aplicar **TDD** ofrece seguridad a la hora de implementar cambios.
 
@@ -521,7 +528,8 @@ Aplicar **TDD** ofrece seguridad a la hora de implementar cambios.
 ### Desarrollo de las pruebas primero
 <!-- .slide: style="font-size: 0.90em" -->
 * Escribir pruebas antes del código aclara los requisitos para ser implementados.
-* Las pruebas se escriben como programas en lugar de datos de manera que se pueden ejecutar de forma automática. La prueba incluye una comprobación de que se ha ejecutado correctamente.
+* Las pruebas se escriben como programas que se pueden ejecutar de forma automática. 
+Las mismas comprueban que la funcionalidad implementada ess correctamente.
   * Por lo general, se usan frameworks de pruebas como Junit o Jest.
 * Todas las pruebas anteriores y las nuevas se ejecutan automáticamente cuando se añade una nueva funcionalidad, comprobando así que la nueva funcionalidad no ha introducido errores.
 
@@ -652,7 +660,7 @@ funcionalidades que se desarrollará durante el sprint.
 ### El Ciclo de Sprint
 * Una vez que éstos están de acuerdo, el equipo se organizan para desarrollar el software. Durante esta etapa,
 el equipo está aislado del cliente y la organización, y la comunicación es canalizada a través del
-** Scrum Master**.
+**Scrum Master**.
 * El papel del Scrum Master es proteger el equipo de desarrollo de las distracciones externas.
 * Al final del sprint, el trabajo realizado es revisado y se presenta a las partes interesadas. El siguiente ciclo de
 sprint comienza entonces
@@ -745,7 +753,8 @@ progresos.
 * La integración continua, donde se revisa cada vez cualquier desarrollador realiza un cambio es
 prácticamente imposible.
 
----
+----
+
 ### La ampliación a grandes empresas
 <!-- .slide: style="font-size: 0.80em" -->
 * Los administradores de proyectos que no cuentan con experiencia en métodos ágiles pueden ser reacios a aceptar el 
@@ -757,6 +766,111 @@ habilidad. Sin embargo, dentro de las grandes organizaciones, lo mas probable es
 una amplia gama de habilidades y capacidades.
 * Existe resistencia cultural a los métodos ágiles, especialmente en aquellas organizaciones que tienen una larga 
 historia de uso de los procesos de ingeniería de sistemas convencionales.
+
+---
+
+### Scrum se enfoca principalmente en la gestión del desarrollo, mientras que XP se enfoca mucho más en las prácticas técnicas de construcción del software.
+
+----
+
+<table>
+    <thead>
+        <tr>
+            <th>Aspecto</th>
+            <th>Scrum</th>
+            <th>XP (Extreme Programming)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Enfoque principal</td>
+            <td>Gestión del proyecto y del trabajo</td>
+            <td>Desarrollo y calidad técnica del software</td>
+        </tr>
+        <tr>
+            <td>Iteraciones</td>
+            <td>Sprints, normalmente de 1 a 4 semanas</td>
+            <td>Iteraciones cortas, generalmente de 1 a 2 semanas</td>
+        </tr>
+        <tr>
+            <td>Planificación</td>
+            <td>Sprint Planning</td>
+            <td>Planificación basada en historias y prioridades</td>
+        </tr>
+        <tr>
+            <td>Roles</td>
+            <td>Product Owner, Scrum Master y Developers</td>
+            <td>No define roles tan estrictamente</td>
+        </tr>
+        <tr>
+            <td>Cliente</td>
+            <td>El Product Owner representa al cliente</td>
+            <td>El cliente participa activamente con el equipo</td>
+        </tr>
+        <tr>
+            <td>Requisitos</td>
+            <td>Product Backlog</td>
+            <td>Historias de usuario</td>
+        </tr>
+        <tr>
+            <td>Entregas</td>
+            <td>Incremento potencialmente entregable al final de cada Sprint</td>
+            <td>Entregas frecuentes y pequeñas</td>
+        </tr>
+        <tr>
+            <td>Programación</td>
+            <td>No establece cómo programar</td>
+            <td>Define prácticas concretas de programación</td>
+        </tr>
+        <tr>
+            <td>Pruebas</td>
+            <td>No prescribe técnicas específicas</td>
+            <td>Pruebas automatizadas y TDD</td>
+        </tr>
+
+----
+
+        <table>
+    <thead>
+        <tr>
+            <th>Aspecto</th>
+            <th>Scrum</th>
+            <th>XP (Extreme Programming)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Programación en parejas</td>
+            <td>No la exige</td>
+            <td>Práctica característica de XP</td>
+        </tr>
+        <tr>
+            <td>Integración continua</td>
+            <td>No es una regla de Scrum</td>
+            <td>Práctica fundamental de XP</td>
+        </tr>
+        <tr>
+            <td>Refactorización</td>
+            <td>No la prescribe</td>
+            <td>Práctica fundamental de XP</td>
+        </tr>
+        <tr>
+            <td>Diseño simple</td>
+            <td>No lo especifica</td>
+            <td>Es una práctica de XP</td>
+        </tr>
+        <tr>
+            <td>Feedback del cliente</td>
+            <td>Principalmente durante la Sprint Review</td>
+            <td>Muy frecuente y directo</td>
+        </tr>
+        <tr>
+            <td>Cambios de requisitos</td>
+            <td>Se incorporan al Product Backlog y se priorizan</td>
+            <td>Se espera que los requisitos cambien frecuentemente</td>
+        </tr>
+    </tbody>
+</table>
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
