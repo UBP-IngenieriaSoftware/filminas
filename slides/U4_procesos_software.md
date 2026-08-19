@@ -17,12 +17,6 @@ Created by <i class="fab fa-telegram"></i>
 
 <!-- .slide: style="font-size: 0.60em" -->
 <style>
-.grid-item {
-    border: 3px solid rgba(121, 177, 217, 0.8);
-    padding: 20px;
-    text-align: left !important;
-}
-
 .exercise-slide {
   border: 2px dashed #b58900;
   border-radius: 12px;
@@ -31,8 +25,6 @@ Created by <i class="fab fa-telegram"></i>
 </style>
 
 ## Temario
-
-<div class="grid-item">
 
 ### Procesos de Software
 
@@ -46,7 +38,6 @@ Created by <i class="fab fa-telegram"></i>
 - Componentes de Software
 - Actividades de Proceso
 - Especificaciones de Software
-</div>
 
 ---
 
