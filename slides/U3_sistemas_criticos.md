@@ -28,6 +28,94 @@ Created by <i class="fab fa-telegram"></i>
 
 ---
 
+## Actividad
+<!-- .slide: style="font-size: 0.90em" -->
+
+En grupo de 3 o 4 personas se sortea ([SpinWheel](https://spinthewheel.io/es)) 1 tema:
+1. Sistema de control ferroviario.
+2. Sistema de emergencias 911.
+3. Sistema de historia clínica de un hospital.
+4. Sistema de control de una central eléctrica.
+5. Sistema bancario.
+6. Sistema de control de un ascensor.
+7. Sistema de navegación GPS de un vehículo autónomo.
+8. Sistema de control de tráfico aéreo.
+9. Sistema de gestión de semáforos.
+10. Sistema de control de un avión.
+
+----
+
+<table>
+<thead>
+<tr>
+<th>Situación</th>
+<th>¿Qué podría ocurrir?</th>
+<th>¿Qué consecuencia tendría?</th>
+<th>¿Es crítico?</th>
+<th>¿Cómo debería responder el sistema?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A Deja de funcionar 30s</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>B Información incorrecta</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>C Falla un componente</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>D Información contradictoria</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>E Acceso no autorizado</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>F Información modificada</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>G Entrada inesperada</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>H Respuesta lenta 30s</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+---
+
 ### Sistemas críticos
 Los **sistemas críticos** son sistemas cuya falla puede producir consecuencias graves para las personas, el medio ambiente, la economía, la seguridad o el funcionamiento de una organización. 
 
@@ -179,15 +267,15 @@ Por ejemplo, en un sistema de control de una aeronave no es suficiente con que e
 
 ---
 
-### Seguridad (Safety)
+### Seguridad (Security)
 
-La **seguridad** *(safety)* se refiere a la capacidad de un sistema para funcionar sin provocar daños inaceptables a las personas, al medio ambiente o a otros sistemas.
+La **seguridad** *(Security)* se refiere a la capacidad de un sistema para funcionar sin provocar daños inaceptables a las personas, al medio ambiente o a otros sistemas.
 
 En sistemas críticos, una falla no solamente puede significar que el sistema deje de funcionar. Puede provocar un accidente.
 
 ----
 
-### Seguridad
+### Seguridad (Security)
 
 Por ejemplo, consideremos un sistema de control ferroviario.
 
@@ -197,7 +285,7 @@ Pero si una falla provoca que dos trenes reciban autorización para ocupar simul
 
 ----
 
-### Seguridad (Safety)
+### Seguridad (Security)
 
 La seguridad busca:
 - Identificar posibles situaciones peligrosas.
@@ -218,13 +306,13 @@ En este caso, el sistema sacrifica disponibilidad para mantener la seguridad.
 
 ---
 
-### Protección (Security)
+### Protección (Safety)
 
-La **protección** *(security)* se refiere a la capacidad de un sistema para resistir accesos, usos, modificaciones, destrucción o divulgación no autorizados.
+La **protección** *(Safety)* se refiere a la capacidad de un sistema para resistir accesos, usos, modificaciones, destrucción o divulgación no autorizados.
 
 ----
 
-### Protección
+### Protección (Safety)
 Está relacionada con amenazas intencionales, como:
 - Ataques informáticos.
 - Accesos no autorizados.
@@ -236,7 +324,7 @@ Está relacionada con amenazas intencionales, como:
 
 ----
 
-### Protección
+### Protección (Safety)
 La protección busca preservar principalmente:
 - **Confidencialidad:** solamente las personas autorizadas pueden acceder a la información.
 - **Integridad:** la información no puede ser modificada de manera no autorizada.
