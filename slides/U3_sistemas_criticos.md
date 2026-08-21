@@ -45,6 +45,31 @@ En grupo de 3 o 4 personas se sortea ([SpinWheel](https://spinthewheel.io/es)) 1
 
 ----
 
+### qué ocurriría si el sistema...
+- A- Deja de funcionar 30s
+- B- Información incorrecta
+- C- Falla un componente
+- D- Información contradictoria
+- E- Acceso no autorizado
+- F- Información modificada
+- G- Entrada inesperada
+- H- Respuesta lenta 30s
+
+**no todos los fallos tienen las mismas consecuencias.**
+
+----
+
+### Clasificar los problemas
+
+Después de discutir los casos, clasificar cuatro categorías:
+
+- **Disponibilidad:** ¿El sistema está disponible cuando se necesita?
+- **Fiabilidad:** ¿El sistema funciona correctamente y sin fallos durante el tiempo requerido?
+- **Protección:** ¿Una falla puede provocar daños o accidentes?
+- **Seguridad:** ¿Una persona no autorizada puede comprometer el sistema o la información?
+
+----
+
 <table>
 <thead>
 <tr>
@@ -150,8 +175,8 @@ La confiabilidad es un concepto amplio que engloba diferentes propiedades, entre
 
 - **Disponibilidad:** el sistema debe estar disponible cuando se necesita.
 - **Fiabilidad:** el sistema debe funcionar correctamente durante un período determinado.
-- **Seguridad (safety):** las fallas del sistema no deben provocar consecuencias peligrosas.
-- **Protección (security):** el sistema debe evitar accesos, modificaciones o usos no autorizados.
+- **Protección (safety):** las fallas del sistema no deben provocar consecuencias peligrosas.
+- **Seguridad (security):** el sistema debe evitar accesos, modificaciones o usos no autorizados.
 
 ----
 
@@ -267,15 +292,15 @@ Por ejemplo, en un sistema de control de una aeronave no es suficiente con que e
 
 ---
 
-### Seguridad (Security)
+### Seguridad (Safety)
 
-La **seguridad** *(Security)* se refiere a la capacidad de un sistema para funcionar sin provocar daños inaceptables a las personas, al medio ambiente o a otros sistemas.
+La **seguridad** *(Safety)* se refiere a la capacidad de un sistema para funcionar sin provocar daños inaceptables a las personas, al medio ambiente o a otros sistemas.
 
 En sistemas críticos, una falla no solamente puede significar que el sistema deje de funcionar. Puede provocar un accidente.
 
 ----
 
-### Seguridad (Security)
+### Seguridad (Safety)
 
 Por ejemplo, consideremos un sistema de control ferroviario.
 
@@ -285,7 +310,7 @@ Pero si una falla provoca que dos trenes reciban autorización para ocupar simul
 
 ----
 
-### Seguridad (Security)
+### Seguridad (Safety)
 
 La seguridad busca:
 - Identificar posibles situaciones peligrosas.
@@ -306,13 +331,13 @@ En este caso, el sistema sacrifica disponibilidad para mantener la seguridad.
 
 ---
 
-### Protección (Safety)
+### Protección (Security)
 
-La **protección** *(Safety)* se refiere a la capacidad de un sistema para resistir accesos, usos, modificaciones, destrucción o divulgación no autorizados.
+La **protección** *(Security)* se refiere a la capacidad de un sistema para resistir accesos, usos, modificaciones, destrucción o divulgación no autorizados.
 
 ----
 
-### Protección (Safety)
+### Protección (Security)
 Está relacionada con amenazas intencionales, como:
 - Ataques informáticos.
 - Accesos no autorizados.
@@ -324,7 +349,7 @@ Está relacionada con amenazas intencionales, como:
 
 ----
 
-### Protección (Safety)
+### Protección (Security)
 La protección busca preservar principalmente:
 - **Confidencialidad:** solamente las personas autorizadas pueden acceder a la información.
 - **Integridad:** la información no puede ser modificada de manera no autorizada.
@@ -394,6 +419,84 @@ Consideremos un sistema de control de una central eléctrica:
 - **Confiabilidad:** el conjunto de estas propiedades permite confiar en que el sistema prestará su servicio de manera adecuada.
 
 Por lo tanto, en un sistema crítico no alcanza con que el sistema "funcione". Es necesario determinar qué ocurre cuando algo falla, cuando el sistema es atacado y cuando se producen situaciones inesperadas.
+
+---
+
+### ISO 25010
+Las Normas ISO son estándares internacionales creados por la Organización Internacional de Normalización (ISO) para asegurar la calidad, seguridad y eficiencia de productos, servicios y sistemas.
+
+La ISO/IEC 25010 es un estándar internacional que define un modelo de calidad para evaluar productos de software y sistemas. 
+
+----
+
+### ISO 25010
+Se encuentra compuesto por 9 características de calidad y a su vez cada una posee subcaracterísticas:
+1. Adecuación Funcional
+2. Eficiencia de Desempeño
+3. Compatibilidad
+4. Capacidad de Interacción
+5. Fiabilidad
+6. Seguridad
+7. Mantenibilidad
+8. Flexibilidad
+9. Protección
+
+---
+
+### ISO 25010: Fiabilidad
+<!-- .slide: style="font-size: 0.80em" -->
+Capacidad de un software o componente para desempeñar las funciones especificadas, cuando se usa bajo unas condiciones y periodo de tiempo determinados sin interrupciones o fallos.
+- **Ausencia de fallos.** Capacidad del sistema de llevar a cabo sus funciones sin fallos bajo condiciones normales de operación.
+- **Disponibilidad.** Capacidad del sistema o componente de estar operativo y accesible para su uso cuando se requiere.
+- **Tolerancia a fallos.** Capacidad del sistema o componente para operar según lo previsto en presencia de fallos hardware o software.
+- **Capacidad de recuperación.** Capacidad del producto software para recuperar los datos directamente afectados y reestablecer el estado deseado del sistema en caso de interrupción o fallo.
+
+----
+
+### Fiabilidad: Indicadores
+- Disponibilidad del sistema: 99,9 % o superior
+- MTBF (tiempo medio entre fallos): 720 horas o superior
+- Tiempo de recuperación: < 5 minutos
+- Densidad de defectos: < 0,1/KLOC (miles de líneas de código)
+
+---
+
+### ISO 25010: Seguridad
+Capacidad de protección de la información y los datos de manera que las personas u otros productos tengan el grado de acceso a los datos adecuado a sus tipos y niveles de autorización, y para defenderse de los patrones de ataque de agentes malintencionados.
+
+----
+
+### ISO 25010: Seguridad
+<!-- .slide: style="font-size: 0.80em" -->
+- **Confidencialidad.** Capacidad de asegurar que los datos sólo son accesibles a aquellos con autorización para ello.
+- **Integridad.** Capacidad de un software para garantizar que el estado de su sistema y sus datos están protegidos frente a modificaciones o eliminaciones no autorizadas, ya sea por acciones malintencionadas o por errores informáticos.
+- **No repudio.** Capacidad de demostrar las acciones o eventos que han tenido lugar, de manera que dichas acciones o eventos no puedan ser repudiados posteriormente.
+- **Responsabilidad.** Capacidad de rastrear de forma inequívoca las acciones de una entidad.
+- **Autenticidad.** Capacidad de un producto para demostrar que la identidad de un sujeto o recurso es la que se afirma.
+- **Resistencia.** Capacidad de mantener la operación de un producto bajo condiciones de ataque de un actor malicioso.
+
+----
+
+### Seguridad: Indicadores
+- Puntuación de vulnerabilidades: CVSS < 4,0
+- Cobertura de cifrado: 100 %
+- Control de acceso: basado en roles (RBAC)
+- Cumplimiento de auditoría: SOC 2 Tipo II (Service Organization Control)
+
+---
+
+### ISO 25010: Protección
+Es la capacidad del software, en condiciones definidas, de evitar un estado en el que se ponga en peligro la vida humana, la salud, la propiedad o el medio ambiente.
+
+----
+
+### ISO 25010: Protección
+<!-- .slide: style="font-size: 0.80em" -->
+- **Restricción operativa.** Capacidad de un producto para limitar su funcionamiento a unos parámetros o estados seguros cuando se enfrenta a un peligro operativo.
+- **Identificación de riesgos.** Capacidad de un producto para identificar situaciones u operaciones que pueden exponer la vida, la propiedad o el medio ambiente a un riesgo inaceptable.
+- **Protección ante fallos.** Capacidad de un producto para ponerse automáticamente en un modo de funcionamiento seguro o para volver a una condición segura en caso de fallo.
+- **Advertencia de peligro.** Capacidad de un producto para alertar de riesgos inaceptables, de modo que puedan reaccionar con tiempo suficiente para mantener la seguridad de las operaciones.
+- **Integración segura.** Capacidad de un producto para mantener la seguridad durante y después de la integración con uno o varios componentes.
 
 ---
 
