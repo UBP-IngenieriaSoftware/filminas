@@ -141,6 +141,13 @@ Después de discutir los casos, clasificar cuatro categorías:
 
 ---
 
+#### Ingeniería de Software
+##### Ian Sommerville
+
+![Bibliografia](images/unidad9-sistemas-criticos/unidad11.png)
+
+---
+
 ### Sistemas críticos
 Los **sistemas críticos** son sistemas cuya falla puede producir consecuencias graves para las personas, el medio ambiente, la economía, la seguridad o el funcionamiento de una organización. 
 
@@ -497,6 +504,46 @@ Es la capacidad del software, en condiciones definidas, de evitar un estado en e
 - **Protección ante fallos.** Capacidad de un producto para ponerse automáticamente en un modo de funcionamiento seguro o para volver a una condición segura en caso de fallo.
 - **Advertencia de peligro.** Capacidad de un producto para alertar de riesgos inaceptables, de modo que puedan reaccionar con tiempo suficiente para mantener la seguridad de las operaciones.
 - **Integración segura.** Capacidad de un producto para mantener la seguridad durante y después de la integración con uno o varios componentes.
+
+---
+
+### Actividad
+<!-- .slide: style="font-size: 0.90em" -->
+Acorde al ISO 25010 asigne una categoría y sub-categoría a cada una de estas situaciones:
+
+1. Un servidor hospitalario deja de funcionar y otro asume automáticamente sus tareas.
+2. Un usuario intenta consultar el historial clínico de un paciente que no tiene asignado y el sistema rechaza la solicitud.
+3. Un sistema industrial detecta que un sensor proporciona valores fuera del rango esperado.
+4. Después de una interrupción eléctrica, el sistema reinicia y recupera automáticamente las operaciones pendientes.
+
+----
+
+5. Un operador modifica un parámetro crítico y el sistema registra quién lo hizo, cuándo y qué modificó.
+6. Una aplicación bancaria permite consultar información financiera únicamente después de verificar la identidad del usuario.
+7. Un sistema de control detecta una condición peligrosa y detiene automáticamente la máquina.
+8. Un sistema continúa funcionando aunque uno de sus componentes internos deje de funcionar.
+9. Un usuario modifica información y posteriormente niega haber realizado la modificación. El sistema puede demostrar quién la realizó.
+
+----
+
+10. Antes de una operación, el sistema analiza las condiciones y determina si existe una situación que podría poner en peligro a una persona.
+11. Un servicio debe estar disponible 24 horas y recuperarse en menos de cinco minutos ante una interrupción.
+12. Solo determinados usuarios pueden acceder a información confidencial.
+13. Un sistema ferroviario no puede determinar correctamente la posición de un tren y bloquea nuevos movimientos hasta disponer de información válida.
+
+----
+
+14. El sistema registra todas las acciones de los operadores para determinar quién realizó cada operación.
+15. Una aplicación continúa funcionando ante una gran cantidad de solicitudes maliciosas destinadas a saturarla.
+16. El sistema detecta que una operación podría provocar un estado peligroso y limita los valores que pueden introducirse.
+17. El sistema genera una alarma cuando detecta una condición que podría representar un peligro para los operadores.
+
+----
+
+18. Se utilizan dos sensores independientes para controlar una variable crítica; si uno falla, se utiliza el otro.
+19. Un sistema deja de responder durante 30 segundos, pero pasa automáticamente a un estado seguro.
+20. Un atacante modifica deliberadamente la temperatura máxima permitida de una máquina.
+21. Un sensor deja de funcionar y el sistema continúa utilizando el último valor recibido.
 
 ---
 
