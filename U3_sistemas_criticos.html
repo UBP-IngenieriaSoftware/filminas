@@ -193,6 +193,46 @@ No se refiere solamente a que el sistema funcione correctamente. Un sistema conf
 
 ----
 
+### Confiabilidad
+<!-- .slide: style="font-size: 0.90em" -->
+La confiabilidad es tanto o más importante que la funcionalidad porque:
+- Las fallas del sistema afectan a un gran número de individuos y negocios.
+- Los usuarios rechazan a menudo los sistemas que son poco fiables, carecen de pro-
+tecciones o son inseguros. (y otros softwares de la misma empresa)
+- Los costos por las fallas del sistema suelen ser enormes
+- Los sistemas no confiables pueden causar pérdida de información. Los datos son
+más costosos que el sistema donde se procesan.
+
+----
+
+### Confiabilidad
+Al diseñar un sistema confiable se debe considerar:
+- Falla del hardware por errores de diseño, fabricación, componentes o final de su vida operativa.
+- Falla en el desarrollo de software debido a errores en su especificación, diseño o implementación.
+- Falla de operación, uso incorrecto del sistema.
+
+----
+
+### Confiabilidad
+<!-- .slide: style="font-size: 0.90em" -->
+Para desarrollar software confiable es necesario garantizar que:
+1. Se evite la entrada de errores accidentales en el sistema durante la especificación y
+el desarrollo del software.
+2. Se diseñen procesos de verificación y validación que sean efectivos en el descubrimiento de errores residuales que afecten la confiabilidad del sistema.
+3. Se desarrollen mecanismos de protección contra ataques externos que comprometan
+la disponibilidad o la seguridad del sistema.
+4. Se configuren correctamente el sistema utilizado y el software de apoyo para su
+entorno operacional.
+
+----
+
+### Confiabilidad
+Aumentar la confiabilidad de un software aumenta el costo de su desarrollo.
+
+![Costo vs Confiabilidad](images/unidad3-criticos/costo-confiabilidad.png)
+
+---
+
 ### Confiabilidad de un sistema
 La confiabilidad es un concepto amplio que engloba diferentes propiedades, entre ellas:
 
@@ -247,6 +287,11 @@ La disponibilidad está relacionada principalmente con:
 - **Tolerancia a fallos:** continuar funcionando aunque ocurra un fallo.
 - **Recuperación:** volver a funcionar rápidamente después de una falla.
 
+----
+
+La disponibilidad no sólo depende del número de caídas del sistema, sino también 
+del tiempo necesario para reparar los componentes que causaron la falla.
+
 ---
 
 ### Fiabilidad de un sistema
@@ -271,6 +316,32 @@ Ambos pueden tener una disponibilidad elevada, pero el Sistema B presenta una ma
 La fiabilidad es especialmente importante cuando una falla puede tener consecuencias graves.
 
 Por ejemplo, en un sistema de control de una aeronave no es suficiente con que el sistema pueda recuperarse rápidamente: es fundamental que funcione correctamente durante toda la operación.
+
+----
+
+### Fiabilidad
+<!-- .slide: style="font-size: 0.90em" -->
+Deben tomarse en cuenta tanto el entorno donde se usa el sistema y el propósito para el que se utiliza.
+
+Cuando se discute la fiabilidad, es útil usar terminología precisa y distinguir:
+- **Error o equivocación humano:** Introducción de fallas en el desarrollo del sistema. 
+- **Falla en el desarrollo del sistema:** Sin una verificación no se puede asegurar que el sistema no fallara.
+- **Error del sistema:** Un estado erróneo puede conducir a un comportamiento inesperado.
+- **Caída del sistema:** El sistema no entrega un servicio como espera su usuario.
+
+----
+
+![Entradas y Salidas](images/unidad3-criticos/entradas-salidas.png)
+
+----
+
+### Fiabilidad
+Enfoques complementarios para mejorar la fiabilidad:
+1. **Prevención de fallas de desarrollo:** Se usan técnicas de desarrollo que minimizan
+la posibilidad de los errores humanos, como el uso de análisis estático de código.
+2. **Detección y eliminación de fallas en el desarrollo:** El uso de técnicas de verificación y validación.
+3. **Tolerancia a fallas en el desarrollo:** Aseguran que las fallas no deriven en errores.
+Incorporación de mecanismos de autocomprobación y uso de módulos redundantes.
 
 ---
 
@@ -315,6 +386,17 @@ Por ejemplo, en un sistema de control de una aeronave no es suficiente con que e
 
 ---
 
+### Fallas
+Las fallas en el desarrollo no siempre derivan en errores del sistema, y los errores
+del sistema no necesariamente originan caídas del sistema.
+1. No todo el código en un programa se ejecuta.
+2. Los errores son transitorios.
+3. El sistema puede incluir mecanismos de detección de fallas y de protección, que
+aseguran que el comportamiento erróneo se descubra y corrija antes de que resulten
+afectados los servicios del sistema.
+
+---
+
 ### Seguridad (Safety)
 
 La **seguridad** *(Safety)* se refiere a la capacidad de un sistema para funcionar sin provocar daños inaceptables a las personas, al medio ambiente o a otros sistemas.
@@ -351,6 +433,14 @@ Un sistema de control de temperatura industrial puede tener como comportamiento 
 Si el sensor de temperatura presenta un valor imposible, el sistema detiene automáticamente el proceso.
 
 En este caso, el sistema sacrifica disponibilidad para mantener la seguridad.
+
+----
+
+### Seguridad
+Para garantizar la seguridad se debe:
+1. **Evitar el peligro** Diseñar el sistema para reducir los riesgos. 
+2. **Detectar y eliminar el peligro** antes de que ocasionen un accidente.
+3. **Limitar el daño**
 
 ---
 
@@ -442,6 +532,64 @@ Consideremos un sistema de control de una central eléctrica:
 - **Confiabilidad:** el conjunto de estas propiedades permite confiar en que el sistema prestará su servicio de manera adecuada.
 
 Por lo tanto, en un sistema crítico no alcanza con que el sistema "funcione". Es necesario determinar qué ocurre cuando algo falla, cuando el sistema es atacado y cuando se producen situaciones inesperadas.
+
+---
+
+### Fiabilidad y Seguridad
+<!-- .slide: style="font-size: 0.80em" -->
+Hay 4 razones por las que los sistemas de software que son fiables no necesariamente son seguros:
+1. Nunca se puede tener una total certeza de que un sistema de software esté libre de
+fallas en el desarrollo y sea tolerante a los mismos. 
+2. La especificación podría estar incompleta en cuanto a que no describe el comportamiento requerido 
+del sistema en algunas situaciones críticas.
+3. El mal funcionamiento del hardware origina que el sistema se comporte de forma
+impredecible, y presente al software con un entorno no anticipado.
+4. Los operadores del sistema pueden generar entradas que no son individualmente incorrectas, 
+pero que, en ciertas situaciones, conducirían a un mal funcionamiento del sistema.
+
+----
+
+### Seguridad
+Tipos de amenazas a la seguridad:
+1. Amenazas a la confidencialidad del sistema y sus datos. Pueden difundir información a individuos o programas que no están autorizados a tener acceso a dicha información.
+2. Amenazas a la integridad del sistema y sus datos, pueden dañar o
+corromper el software o sus datos.
+3. Amenazas a la disponibilidad del sistema y sus datos. Pueden
+restringir el acceso al software o sus datos a usuarios autorizados.
+
+----
+
+### Seguridad
+Controles para mejorar la seguridad del sistema:
+1. **Evitar la vulnerabilidad:** Garantizar que los ataques no tengan éxito. 
+2. **Detectar y neutralizar ataques:** Incluir funcionalidad de monitoreo de patrones de actividad inusuales para toman acciones.
+3. **Limitar la exposición y recuperación:** Estrategias de respaldo automatizadas, réplica de  información.
+
+---
+
+### Vocabulario de sistemas críticos
+<!-- .slide: style="font-size: 0.75em" -->
+- **Accidente (o contratiempo):** Evento no planeado que derivan en muerte
+o lesión de un individuo, o daño a la propiedad o al ambiente. Ej: Sobredosis de insulina.
+- **Peligro:** Condición con el potencial para causar o contribuir a un accidente.
+Ej. Riesgo de falla del sensor que mide glucosa sanguínea.
+- **Daño:** Medida de la pérdida que resulta de un contratiempo. Variar desde muerte
+hasta lesión o daño menor a la propiedad. Ej. Daño producto de una sobredosis de insulina
+- **Severidad del peligro:** Valoración del peor daño posible que resultaría de un peligro
+en particular. Puede ser catastrófico hasta menor.
+- **Probabilidad del peligro:** Puede ser probable, improbable o baja la probabilidad.
+- **Riesgo:** Medida de probabilidad de que el sistema causará un accidente. Se considera la posibilidad, severidad y verosimilitud de que el peligro conduzca a un accidente.
+
+---
+
+### Vocabulario de Seguridad
+- **Activo:** Algo de valor que debe protegerse. Sería el sistema de software en sí
+o los datos usados por el sistema.
+- **Exposición:** Posible pérdida o daño a un sistema. sus datos, o pérdida de tiempo y esfuerzo.
+- **Vulnerabilidad:** Debilidad de un sistema que puede aprovecharse para causar pérdida o daño.
+- **Ataque:** Aprovechamiento de una vulnerabilidad del sistema. 
+- **Amenaza:** Circunstancias que tienen potencial para causar pérdida o daño. 
+- **Control:** Medida de protección que reduce la vulnerabilidad de un sistema. Ej. Encriptación.
 
 ---
 
