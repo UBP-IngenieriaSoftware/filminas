@@ -567,6 +567,7 @@ en particular. Puede ser catastrófico hasta menor.
 ---
 
 ### Vocabulario de Seguridad
+<!-- .slide: style="font-size: 0.90em" -->
 - **Activo:** Algo de valor que debe protegerse. Sería el sistema de software en sí
 o los datos usados por el sistema.
 - **Exposición:** Posible pérdida o daño a un sistema. sus datos, o pérdida de tiempo y esfuerzo.

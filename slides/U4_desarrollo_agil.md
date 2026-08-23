@@ -922,6 +922,7 @@ historia de uso de los procesos de ingeniería de sistemas convencionales.
 
 ----
 
+<!-- .slide: style="font-size: 0.0em" -->
 <table>
     <thead>
         <tr>
