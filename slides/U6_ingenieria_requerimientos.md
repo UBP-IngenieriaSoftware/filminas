@@ -120,10 +120,9 @@ proporciona la información suficiente para su comprensión.
 <!-- .slide: style="font-size: 0.80em" -->
 
 5. **Factible:** Si es realizable dentro de presupuesto, del calendario y no hay otras restricciones. Si se tienen dudas, 
-hay que investigar, generar pruebas de concepto para comprender su complejidad. Si no es factible hay que revisar la visión del sistema y
-replantear el requerimiento
+hay que investigar, generar pruebas de concepto para comprender su complejidad. Si no es factible hay que revisar la visión del sistema y replantear el requerimiento.
 6. **Modificable**
-7. **Priorizado:** Categorizar nos ayuda a saber el grado de necesidad del mismo: Esencial/Critico, Deseado, Opcional.
+7. **Priorizado:** Categorizar nos ayuda a saber el grado de necesidad del mismo: Esencial/Crítico, Deseado, Opcional.
 8. **Verificable:** Debe ser comprobable. Si no lo es, ¿Cómo se sabe si se cumplió con él o no? Debe ser posible
 verificarlo ya sea por inspección, análisis de prueba o demostración. Cuando se escriba un requerimiento, se deberá de determinar
 los criterios de aceptación.
@@ -147,7 +146,7 @@ de requerimientos correspondiente. Facilita las pruebas y la validación del dis
 ### Pirámide: Necesidades
 
 Necesidades de los Stakeholders. Están orientadas a oportunidades (problemas) de Negocio las cuales deben de ser cubiertas de forma satisfactoria. 
-Algunas de estas oportunidades general requerimientos del sistema.
+Algunas de estas oportunidades generan requerimientos del sistema.
 
 ----
 
@@ -156,7 +155,7 @@ Algunas de estas oportunidades general requerimientos del sistema.
 Características o Cualidades que los Stakeholders esperan como parte del comportamiento del sistema de Software.
 
 Están relacionados con la **calidad** del sistema: Fácilmente Modificable, Seguridad, Portabilidad, Confiabilidad, Fácil de probar, Usabilidad
-(Tiempo de Capacitación, Número de Slecciones, Número de Clics), Desempeño, Eficiencia (Tiempo Transacciones por segundo, Tiempo de Respuesta,
+(Tiempo de Capacitación, Número de Selecciones, Número de Clics), Desempeño, Eficiencia (Tiempo Transacciones por segundo, Tiempo de Respuesta,
 Tiempo de Operaciones Completas), Espacio (Memoria Principal, Memoria Auxiliar, Caché), Escalabilidad.
 
 ----
@@ -291,7 +290,7 @@ El sistema deberá aplicar las disposiciones de privacidad del paciente según l
 * Requerimiento del producto
   * La interfaz del usuario para LIBSYS deberá ser implementada como HTML simple sin marcos o applets.
 * Requerimiento organizativo
-  * El proceso de desarrollo del sistema y los documentos a entregar debe ajustarse al proceso y a los productos a entregar definifos en el STAN-95
+  * El proceso de desarrollo del sistema y los documentos a entregar debe ajustarse al proceso y a los productos a entregar definidos en el STAN-95
 * Requerimiento externo
   * El sistema no deberá revelar a sus operadores alguna información personal de los clientes excepto su nombre y número de referencia.
 

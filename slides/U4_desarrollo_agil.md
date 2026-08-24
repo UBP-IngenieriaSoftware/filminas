@@ -922,7 +922,7 @@ historia de uso de los procesos de ingeniería de sistemas convencionales.
 
 ----
 
-<!-- .slide: style="font-size: 0.0em" -->
+<!-- .slide: style="font-size: 0.60em" -->
 <table>
     <thead>
         <tr>
@@ -980,7 +980,8 @@ historia de uso de los procesos de ingeniería de sistemas convencionales.
 
 ----
 
-        <table>
+<!-- .slide: style="font-size: 0.60em" -->
+<table>
     <thead>
         <tr>
             <th>Aspecto</th>
