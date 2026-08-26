@@ -29,6 +29,13 @@ Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
 ---
+
+### Ingeniería de Software
+#### Ian Sommerville
+
+![Bibliografia](images/unidad3/inge-requerimientos.png)
+
+---
 <!-- .slide: style="font-size: 0.60em" -->
 <style>
 .grid-container2 {
@@ -610,24 +617,24 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 </thead>
 <tbody>
 <tr>
-<td>Lenguaje natural</td>
+<td>1. Lenguaje natural</td>
 <td>Emplea oraciones numeradas, donde cada una expresar un requerimiento.</td>
 </tr>
 <tr>
-<td>Lenguaje natural Estructurado</td>
+<td>2. Lenguaje natural Estructurado</td>
 <td>Emplea un formulario o plantilla estándar. Cada campo proporciona información acerca de un aspecto del requerimiento.</td>
 </tr>
 <tr>
-<td>Lenguajes de descripción de Diseño</td>
+<td>3. Lenguajes de descripción de Diseño</td>
 <td>Utiliza un lenguaje de programación, pero con características más abstractas para especificar los requisitos mediante la definición de un modelo operacional del sistema. Este enfoque se utiliza raramente aunque puede ser útil para las especificaciones de interfaz. <br>
 Ejemplo: AADL (Architecture Analysis & Design Language), Acme, Wright, xADL. Se usa en desarrollos críticos: aviación.</td>
 </tr>
 <tr>
-<td>Notaciones graficas</td>
+<td>4. Notaciones graficas</td>
 <td>Modelos gráficos, complementada con anotaciones de texto, se utilizan para definir los requisitos funcionales para el sistema; UML de casos de uso y diagramas de secuencia se utilizan comúnmente.</td>
 </tr>
 <tr>
-<td>Especificaciones matemáticas</td>
+<td>5. Especificaciones matemáticas</td>
 <td>Estas anotaciones se basan en conceptos matemáticos, tales como máquinas de estados finitos o conjuntos. Pese a que reducen la ambigüedad, muchos clientes no la aceptan por no entenderla.</td>
 </tr>
 </tbody>
@@ -646,14 +653,15 @@ diseño debe describir cómo se hace esto.
 la consecuencia de un requisito reglamentario.
 
 ---
-### Especificación en lenguaje natural
+### 1. Especificación en lenguaje natural
 * Los requerimientos se escriben como sentencias en lenguaje natural complementados con diagramas y tablas.
 * Se utiliza para la escritura de los requisitos, ya que es expresiva, intuitiva y universal.
 
 **Los requisitos deben ser entendidos por los usuarios y clientes**
 
----
-### Guías para la redacción de los requerimientos
+----
+
+### LN: Guías para la redacción de los requerimientos
 
 * Generar un formato estándar y utilizarlo para todas las necesidades.
 * Utilizar el lenguaje de manera clara para distinguir entre requerimientos obligatorios y deseables.
@@ -661,8 +669,9 @@ la consecuencia de un requisito reglamentario.
 * Evitar el uso de lenguaje informático.
 * Incluir una explicación (lógica) de por qué un requisito es necesario.
 
----
-### Requerimientos de bomba de insulina
+----
+
+### LN: Requerimientos de bomba de insulina
 <!-- .slide: style="font-size: 0.80em" -->
 3.2 El sistema deberá medir el azúcar en la sangre cada 10
 minutos y administrar la insulina si es necesario. Los cambios
@@ -676,7 +685,8 @@ automática cada minuto. Una rutina de autocomprobación
 puede descubrir problemas de hardware y/o software y
 alertar al usuario sobre el hecho de la operación anormal
 
----
+----
+
 ### Problemas con el lenguaje natural
 * Falta de claridad
   * La precisión es difícil sin hacer que el documento sea difícil de leer.
@@ -705,11 +715,13 @@ escritura de requerimientos del sistema de negocios.
 * Pre y post condiciones (si son apropiadas).
 * Los efectos secundarios (si existen) de la función.
 
----
+----
+
 ### Requisito para una bomba de insulina
 ![Bomba Insulina](images/unidad3/bomba_insulina.jpg)
 
----
+----
+
 ### Especificación tabular
 * Se utiliza para complementar el lenguaje natural.
 * Es particularmente útil cuando se tiene que definir una
@@ -719,7 +731,7 @@ sus cálculos de la tasa de cambio del nivel de azúcar en la
 sangre y la especificación tabular explica cómo realizar el
 calculo para los diferentes escenarios.
 
----
+----
 
 ### Especificación tabular del cálculo de la dosis de insulina
 
@@ -751,6 +763,56 @@ calculo para los diferentes escenarios.
 </tr>
 </tbody>
 </table>
+
+---
+
+### 3. Lenguajes de descripción de diseño
+
+Aquí se utiliza un lenguaje específico para describir la estructura o comportamiento del sistema de manera más formal/abstracta.
+
+Por ejemplo, utilizando una notación tipo AADL podríamos describir componentes del sistema:
+
+```
+system LoginSystem
+    components
+        server: system LoginServer;
+        database: data UserDatabase;
+
+connections
+        server -> database;
+
+```
+
+----
+
+
+### 3. Lenguajes de descripción de diseño
+Es un lenguaje especializado, con una sintaxis y semántica definidas, para representar aspectos del sistema.
+
+Otros ejemplos:
+
+- AADL → arquitectura de sistemas.
+- Acme → descripción de arquitecturas de software.
+- Wright → especificación de comportamiento y comunicación de componentes.
+- xADL → descripción de arquitecturas.
+
+---
+
+### 4. Notaciones gráficas
+
+El mismo requisito puede representarse mediante un modelo gráfico, empleando por ejemplo UML (Unified Modeling Language)
+- Caso de uso
+- Diagrama de secuencia
+
+En este caso, el requisito se expresa mediante elementos gráficos, aunque normalmente se complementa con texto.
+
+---
+
+###  5. Especificaciones matemáticas
+
+Acá buscamos expresar el requisito mediante conceptos matemáticos o formales, reduciendo al mínimo la ambigüedad del lenguaje natural.
+
+![Ejemplo Lenguaje Matematico](images/unidad3/ejemplo-lenguaje-matematico.png)	​
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
