@@ -309,7 +309,7 @@ Posteriormente se preparan las entrevistas. Para las mismas se recomenda:
 ----
 
 ### 1.1. Obtener información del dominio del problema y el sistema actual
-<!-- .slide: style="font-size: 0.75em" -->
+<!-- .slide: style="font-size: 0.90em" -->
 Se debe conocer el contexto organizacional y operacional, la situación actual. 
 
 Si ya se conoce el dominio del problema este paso no es tan necesario.
@@ -318,32 +318,41 @@ Si NO se conoce el dominio de problema, puedes leer su página de internet, docu
 Enfrentarse a un desarrollo sin conocer las características principales ni el vocabulario propio del cliente suele provocar falta de
 entendimiento de sus necesidades y que la confianza inicial se vea afectada.
 
+----
+
+### 1.1. Obtener información del dominio del problema y el sistema actual
+
 El modelo de CMMI (Capability Maturity Model Integration) recomienda tener un repositorio de información donde se coloque toda la documentación
 que se vaya obteniendo del proyecto y que se emplee una nomenclatura que te permita revisar las versiones de los documentos
 a simple vista.
 
 ----
 
-#### 1.2. Preparar y realizar las sesiones de elicitación/negociación
-
-<!-- .slide: style="font-size: 0.75em" -->
-
+### 1.2. Preparar y realizar las sesiones de elicitación/negociación
+Antes de la reunión:
 - Confirmación de los usuarios participantes
 - Definir fechas tentativas para las reuniones de definición de requerimientos. 
 - Llevar los materiales necesarios: hojas para dibujar, marcadores, pizarra, presentaciones
 con información útil, cuestionarios, etc.
 - Preguntar al cliente si se puede grabar la sesión. 
 - Definir el objetivo de la entrevista, que información deseas obtener, personas involucradas.
+
+----
+
+### 1.2. Preparar y realizar las sesiones de elicitación/negociación
+<!-- .slide: style="font-size: 0.90em" -->
+Durante de la reunión:
 - Escuchar con atención al cliente sin interrumpir. 
 - Parafrasear o utilizar metáforas.
 - Tomar nota
 - Tratar de dar sugerencias de valor a los requerimientos del cliente. 
 - Trata de identificar los riesgos, puntos de negociación, posibles conflictos que vayan a derivar en ambigüedades en los
-requerimientos y tomar nota de todos aquellos requisitos No funcionales que te defina el cliente con sus comentarios.
+requerimientos y tomar nota de todos aquellos requisitos **No funcionales** que te defina el cliente con sus comentarios.
 
 ----
 
-#### 1.2. Preparar y realizar las sesiones de elicitación/negociación
+### 1.2. Preparar y realizar las sesiones de elicitación/negociación
+Después de la reunión:
 - Al final de la sesión realiza un resumen de los puntos vistos. 
 - Transcribe cada requerimiento, acuerdo o pendiente en la minuta mencionada. Cada pendiente debe tener un
 responsable y una fecha de entrega/solución.
@@ -352,9 +361,8 @@ responsable y una fecha de entrega/solución.
 
 ----
 
-#### 1.3. Identificar/revisar los requisitos funcionales
-Identificar los actores que interactuarán con el sistema, es decir, aquellas personas u otros sistemas que serán los
-orígenes o destinos de la información que consumirá o producirá el sistema a desarrollar y que forman su entorno.
+### 1.3. Identificar/revisar los requisitos funcionales
+Identificar los **actores** que interactuarán con el sistema, es decir, aquellas personas u otros sistemas que serán los orígenes o destinos de la información que consumirá o producirá el sistema a desarrollar y que forman su entorno.
 
 Identificar los casos de uso (requerimiento funcional) asociados a los actores para obtener un listado de requerimientos 
 que se va a desarrollar.
@@ -363,8 +371,8 @@ Re-analizar los requerimientos ambiguos para hablarlos con el cliente y llegar a
 
 ----
 
-#### 1.4. Identificar/revisar los requisitos no funcionales
-Revisar lo que definimos como un requisito no funcional y la toma de nota de lo que
+### 1.4. Identificar/revisar los requisitos no funcionales
+Revisar lo que definimos como un **requisito no funcional** y la toma de nota de lo que
 comentó el cliente referente a como quiere que funcione el sistema.
 
 Que tipo de comunicación tiene, si quiere que el sistema se desarrolle en alguna plataforma especifica, alguna restricción de
@@ -372,7 +380,7 @@ sistema operativo, de ambiente, rapidez, seguridad, usabilidad, modificaciones s
 
 ----
 
-#### 1.5. Clasificar requerimientos
+###  1.5. Clasificar requerimientos
 Una vez que los requerimientos son consistentes, se da un orden de **prioridades**, para que las necesidades de alta
 prioridad pueden ser encaradas primero, lo que permite definirlas y reexaminarlas para analizar posibles cambios de requerimientos.
 
@@ -400,7 +408,7 @@ se buscan alternativas y soluciones, y luego se van fijando reuniones con el cli
 
 ### 3. Especificación de Requerimientos
 <!-- .slide: style="font-size: 0.90em" -->
-En esta fase se documentan los requerimientos acordados con el cliente, en un nivel apropiado de detalle. 
+En esta fase se **documentan** los requerimientos acordados con el cliente, en un nivel apropiado de detalle. 
 
 Se incluye: 
 - Descripción completa de las necesidades y funcionalidades del sistema que será desarrollado
@@ -414,6 +422,186 @@ Es un "pasar en limpio" el análisis realizado previamente aplicando técnicas y
 ### 3. Especificación de Requerimientos
 
 ![Especificación de requerimientos](images/unidad3/especificacion-de-requerimientos.png)
+
+----
+
+### 3. Especificación de Requerimientos
+
+1. Elaborar **ERS**, Especificación de Requerimientos de Software. Contiene:
+- Descripción completa de las funcionalidades del sistema a desarrollar
+- Describe el alcance del sistema, comportamiento y ejecución esperada 
+- Define los requerimientos funcionales y no funcionales. 
+
+----
+
+#### ERS
+Es el resultado de las actividades de análisis y evaluación de requerimientos.
+
+Es utilizada como fuente de comunicación entre los clientes, usuarios finales,
+analistas de sistemas, equipo de pruebas, y todo aquel involucrado en la
+implementación del sistema. 
+
+Debe contar con las siguientes características: Completa, Consistente, Verificable,
+Rastreable, Precisa.
+
+----
+
+#### Matriz de Rastreabilidad
+Es una tabla que permite relacionar cada requerimiento con otros elementos del desarrollo del software, de manera que podamos seguir su recorrido desde su origen hasta su implementación y verificación.
+
+La idea central es poder responder preguntas como:
+- ¿De dónde salió este requerimiento?
+- ¿Dónde se implementó?
+- ¿Cómo verificamos que funciona?
+
+----
+
+#### Matriz de Rastreabilidad: Ejemplo
+Supongamos que estamos desarrollando un sistema para una biblioteca.
+
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requerimiento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF-01</td>
+<td>El sistema deberá permitir registrar libros.</td>
+</tr>
+<tr>
+<td>RF-02</td>
+<td>El sistema deberá permitir registrar socios.</td>
+</tr>
+<tr>
+<td>RF-03</td>
+<td>El sistema deberá permitir realizar préstamos de libros.</td>
+</tr>
+<tr>
+<td>RNF-01</td>
+<td>El sistema deberá responder cada operación en menos de 2 segundos.</td>
+</tr>
+</tbody>
+</table>
+
+----
+
+#### Matriz de Rastreabilidad: Ejemplo
+Una matriz de trazabilidad podría ser:
+
+<table>
+<thead>
+<tr>
+<th>Requerimiento</th>
+<th>Caso de uso</th>
+<th>Diseño</th>
+<th>Implementación</th>
+<th>Prueba</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF-01</td>
+<td>CU-01 Registrar libro</td>
+<td>D-01</td>
+<td><code>LibroController</code></td>
+<td>CP-01</td>
+</tr>
+<tr>
+<td>RF-02</td>
+<td>CU-02 Registrar socio</td>
+<td>D-02</td>
+<td><code>SocioController</code></td>
+<td>CP-02</td>
+</tr>
+<tr>
+<td>RF-03</td>
+<td>CU-03 Realizar préstamo</td>
+<td>D-03</td>
+<td><code>PrestamoController</code></td>
+<td>CP-03</td>
+</tr>
+<tr>
+<td>RNF-01</td>
+<td>—</td>
+<td>D-04</td>
+<td>Configuración servidor</td>
+<td>CP-04</td>
+</tr>
+</tbody>
+</table>
+
+Si no encontramos ningún requerimiento asociado, podría ser una señal de que tenemos funcionalidad innecesaria o de que falta documentar un requerimiento.
+
+----
+
+#### Matriz de Rastreabilidad: Ejemplo
+
+<table>
+<thead>
+<tr>
+<th>Req. del usuario</th>
+<th>Req. del sistema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RU-01</td>
+<td>RS-01</td>
+</tr>
+<tr>
+<td>RU-02</td>
+<td>RS-02</td>
+</tr>
+<tr>
+<td>RU-02</td>
+<td>RS-03</td>
+</tr>
+<tr>
+<td>RU-03</td>
+<td>RS-04</td>
+</tr>
+</tbody>
+</table>
+
+Esto permite ver que un requerimiento del usuario puede dar origen a varios requerimientos del sistema.
+
+----
+
+#### Matriz de Rastreabilidad: Utilidad
+<!-- .slide: style="font-size: 0.80em" -->
+1. **Trazabilidad hacia adelante**
+
+Partimos del requerimiento y seguimos hacia su implementación:
+
+**Requerimiento** → **Diseño** → **Código** → **Prueba**
+
+Sirve para comprobar que todos los requerimientos fueron implementados y probados.
+
+2. **Trazabilidad hacia atrás**
+
+Partimos de un elemento del sistema y volvemos hacia el requerimiento que lo originó:
+
+**Prueba** → **Código** → **Diseño** → **Requerimiento**
+
+Sirve, entre otras cosas, para comprobar que cada elemento desarrollado tiene una razón de existir.
+
+----
+
+#### Matriz de Rastreabilidad: Utilidad
+<!-- .slide: style="font-size: 0.90em" -->
+Una matriz de trazabilidad permite principalmente:
+
+- Verificar que todos los requerimientos están implementados.
+- Verificar que todos los requerimientos tienen pruebas.
+- Detectar requerimientos que quedaron sin implementar.
+- Detectar funcionalidades que no corresponden a ningún requerimiento.
+- Analizar el impacto de un cambio.
+- Mantener la relación entre las distintas etapas del desarrollo.
+- Facilitar las pruebas y la validación.
+- Ayudar en auditorías y sistemas donde se necesita mucha documentación.
 
 ---
 
@@ -459,7 +647,7 @@ Ejemplo de puntos a revisar en los documentos obtenidos:
 * Generación de test
   * El desarrollo de las pruebas de requerimientos para comprobar la capacidad de prueba.
 
----
+----
 
 ### 4.1.1 Criticas de los requerimientos
 * Las revisiones periódicas deben ser sostenidas mientras
@@ -551,9 +739,9 @@ correctamente.
 
 ---
 
-<!-- .slide: style="font-size: 0.60em" -->
+<!-- .slide: style="font-size: 0.50em" -->
 
-Algunas técnicas son más efectivas en algunas etapas de análisis de requerimientos que en otras:
+Algunas técnicas son más efectivas en algunas etapas de análisis de R que en otras:
 
 <table>
   <thead>
@@ -566,35 +754,46 @@ Algunas técnicas son más efectivas en algunas etapas de análisis de requerimi
     </tr>
   </thead>
   <tbody>
-    <tr><td>Entrevistas y cuestionarios</td><td>X</td><td></td><td></td><td></td></tr>
-    <tr><td>Sistemas Existentes</td><td>X</td><td>X</td><td></td><td></td></tr>
-    <tr><td>Grabaciones de Video y Audio</td><td>X</td><td>X</td><td></td><td></td></tr>
-    <tr><td>Lluvia de Ideas</td><td>X</td><td></td><td></td><td></td></tr>
-    <tr><td>Arqueología de documentos</td><td>X</td><td></td><td></td><td></td></tr>
-    <tr><td>Observación</td><td>X</td><td></td><td></td><td></td></tr>
-    <tr><td>Prototipo no funcional</td><td></td><td></td><td>X</td><td></td></tr>
-    <tr><td>Prototipo Funcional</td><td>X</td><td></td><td>X</td><td>X</td></tr>
-    <tr><td>Análisis DOFA</td><td></td><td>X</td><td></td><td></td></tr>
-    <tr><td>Cadena de Valor</td><td></td><td>X</td><td></td><td></td></tr>
-    <tr><td>Modelo Conceptual</td><td></td><td>X</td><td></td><td></td></tr>
-    <tr><td>Diagrama de Pescado</td><td></td><td>X</td><td></td><td></td></tr>
-    <tr><td>Glosario</td><td>X</td><td></td><td>X</td><td>X</td></tr>
-    <tr><td>Diagrama de actividad</td><td></td><td></td><td>X</td><td></td></tr>
-    <tr><td>Casos de Uso</td><td>X</td><td></td><td>X</td><td></td></tr>
-    <tr><td>Casa de Calidad o QFD</td><td></td><td></td><td></td><td>X</td></tr>
-    <tr><td>Lista de Verificación</td><td></td><td></td><td></td><td>X</td></tr>
+    <tr><td>1. Entrevistas y cuestionarios</td><td>X</td><td></td><td></td><td></td></tr>
+    <tr><td>2. Sistemas Existentes</td><td>X</td><td>X</td><td></td><td></td></tr>
+    <tr><td>3. Grabaciones de Video y Audio</td><td>X</td><td>X</td><td></td><td></td></tr>
+    <tr><td>4. Lluvia de Ideas</td><td>X</td><td>X</td><td></td><td></td></tr>
+    <tr><td>5. Arqueología de documentos</td><td>X</td><td>X</td><td></td><td></td></tr>
+    <tr><td>6. Observación</td><td>X</td><td></td><td></td><td></td></tr>
+    <tr><td>7. Prototipo no funcional</td><td>X</td><td>X</td><td>X</td><td></td></tr>
+    <tr><td>8. Prototipo Funcional</td><td>X</td><td></td><td>X</td><td>X</td></tr>
+    <tr><td>9. Análisis DOFA</td><td></td><td>X</td><td></td><td></td></tr>
+    <tr><td>10. Cadena de Valor</td><td></td><td>X</td><td></td><td></td></tr>
+    <tr><td>11. Modelo Conceptual</td><td></td><td>X</td><td>X</td><td></td></tr>
+    <tr><td>12. Diagrama de Pescado</td><td>X</td><td>X</td><td>X</td><td></td></tr>
+    <tr><td>13. Glosario</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+    <tr><td>14. Diagrama de actividad</td><td></td><td>X</td><td>X</td><td></td></tr>
+    <tr><td>15. Casos de Uso</td><td>X</td><td>X</td><td>X</td><td>X</td></tr>
+    <tr><td>16. Casa de Calidad o QFD</td><td></td><td></td><td></tds><td>X</td></tr>
+    <tr><td>17. Lista de Verificación</td><td>X</td><td></td><td>X</td><td></td></tr>
+    <tr><td>18. Mesa de trabajo / Workshop</td><td>X</td><td>X</td><td></td><td>X</td></tr>
   </tbody>
 </table>
 
 
 ---
 
-### Entrevistas
+### H1. Entrevistas
 * Las entrevistas formales o informales con las partes interesadas son
 parte de la mayoría de los procesos de la IR.
 * Tipos de entrevistas
-  * Entrevistas cerradas a base de lista de preguntas predeterminada
-  * Entrevistas abiertas donde varios temas se exploran con las  partes interesadas.
+  * Entrevistas **cerradas** a base de lista de preguntas predeterminada
+  * Entrevistas **abiertas** donde varios temas se exploran con las  partes interesadas.
+
+----
+
+### H1. Cuestionarios o Encuestas
+<!-- .slide: style="font-size: 0.90em" -->
+- Técnica que permite la obtener de forma eficiente los requerimientos de muchas personas al tiempo.
+- Esta técnica debe tener un propósito, y se deberá identificar claramente la audiencia, se debe definir las fechas topes para el desarrollo de la encuesta, con preguntas claras y concisas.
+- Deberán enfocarse en los objetivos de negocio que se necesitan identificar.
+- Se pueden apoyar con entrevistas de seguimiento con usuarios de forma individual.
+- Se pueden realizar tanto con preguntas cerradas como preguntas abiertas.
 
 ----
 
@@ -649,8 +848,337 @@ necesario hacerlo.
 Piense al menos 3 preguntas cerradas y 3 preguntas abiertas sobre los requerimientos del sistema.
 
 ---
+### H2. Sistemas existentes
+<!-- .slide: style="font-size: 0.95em" -->
+Consiste en analizar un sistema que ya está funcionando para descubrir requisitos del nuevo sistema o comprender cómo se realizan actualmente las actividades.
 
-### Mesas de Trabajo (Workshops)
+Se pueden estudiar:
+- Funcionalidades existentes.
+- Interfaces.
+- Datos que maneja.
+- Procesos.
+- Restricciones.
+- Problemas y limitaciones.
+
+---
+### H3. Grabaciones de video y audio
+
+Consiste en utilizar grabaciones de las actividades de los usuarios para posteriormente analizarlas y descubrir información relevante.
+
+Puede ser especialmente útil cuando:
+- El proceso es complejo.
+- Hay muchas actividades simultáneas.
+- El analista no puede recordar todos los detalles.
+- Es necesario revisar posteriormente una interacción.
+
+---
+
+### H4. Tormenta de ideas
+
+- Es una sesión de trabajo estructurada orientada para obtener la mayor cantidad de ideas posibles.
+- Se recomienda limitar el tiempo, utilizar ayudas visuales y designar un facilitador.
+- Se deben tener reglas, por ejemplo los criterios para evaluar ideas y asignarles un puntaje, no permitir las críticas a las ideas y limitar el tiempo de discusión.
+- En una primera fase, se deben identificar la mayor cantidad de ideas, para luego evaluarlas. 
+- Todas las ideas deben ser consideradas y deben limitarse que una idea se le ahogue o critique antes de tener tiempo de desarrollarla.
+
+---
+
+### H5. Análisis de documentación
+
+- Consiste en obtener la información sobre los requerimientos a partir de documentos que ya están elaborados.
+- Es útil cuando los expertos no están disponibles para ser entrevistados o ya no forman parte de la empresa.
+- Ejemplos de documentación: Planes de negocio, actas de constitución de proyecto, reglas de negocio, contratos, definiciones de alcance, correos electrónicos, documentos de entrenamiento, entre otros.
+
+---
+
+### H6. Observación
+- Permite estudiar el entorno de trabajo de los usuarios, clientes e interesados de proyecto.
+- Cuando se está documentando la situación actual de procesos de negocio, es muy útil.
+- Puede ser pasiva o activa.
+  - En **observación pasiva**, el observador no hace preguntas, solo se limita a tomar notas y no interferir en el desempeño normal de las operaciones.
+  - En **observación activa**, el observador puede conversar con el usuario.
+
+---
+### H6. Etnografía
+* La etnografía es una técnica de observación que se usa para
+entender los procesos operacionales y ayudar a derivar
+requerimientos de apoyo para dichos procesos.
+* Es necesario observar y analizar cómo las personas trabajan
+realmente.
+* Pueden ser observados los factores sociales y organizacionales de importancia.
+* Los estudios etnográficos han demostrado que el trabajo suele
+ser más rico y complejo de lo que sugieren los modelos de
+sistemas simples.
+
+----
+
+### Ámbito de aplicación de la etnografía
+* Los requerimientos que se derivan de la forma en que las
+personas trabajan realmente en vez de la forma en la cual las
+definiciones del proceso indican que debería trabajar.
+* Los requerimientos que se derivan de la cooperación y el
+conocimiento de las actividades de otras personas.
+* Los estudios etnográficos pueden revelar detalles críticos de
+procesos, que con frecuencia se pierden con otras técnicas de
+adquisición de requerimientos.
+
+----
+
+### Etnografía y prototipos para el análisis de los requerimientos
+![Etnografia](images/unidad3/etnografia.png)
+
+----
+
+### Ejercicio: Etnografía
+
+- ¿Cómo aplicaría la etnografía en el proyecto?
+- ¿Qué personas observaría?
+- ¿En qué procesos se enfocaría?
+
+---
+### H7. Prototipo no funcional
+
+Es una representación del sistema que no implementa realmente la funcionalidad, sino que permite visualizar cómo podría ser.
+
+Por ejemplo:
+- Bocetos.
+- Wireframes.
+- Mockups.
+- Pantallas navegables sin lógica real.
+
+----
+
+### H7. Prototipo no funcional
+<!-- .slide: style="font-size: 0.95em" -->
+Permite que los usuarios reaccionen ante algo concreto:
+> "Esta pantalla debería tener
+> un botón para cancelar."
+
+o:
+> "Este dato debería aparecer 
+> antes que este otro."
+
+Por eso es muy útil para descubrir y aclarar requisitos, especialmente de interfaz.
+
+---
+### H8. Prototipo funcional
+
+Es una versión parcial del sistema que implementa realmente algunas funcionalidades.
+
+Permite que los usuarios interactúen con una versión aproximada del producto y proporcionen retroalimentación.
+
+<small>
+Por ejemplo, antes de desarrollar todo un sistema de turnos se implementa únicamente:
+
+Iniciar sesión → seleccionar médico → solicitar turno.
+
+Los usuarios pueden probarlo y detectar necesidades que no habían sido identificadas inicialmente.
+</small>
+
+---
+### H9. Análisis DOFA
+
+El análisis DOFA (Debilidades, Oportunidades, Fortalezas y Amenazas) permite analizar la situación de una organización o proceso.
+
+No es una técnica de elicitación de requisitos en sentido estricto, pero puede ayudar a identificar necesidades y problemas que podrían transformarse en requisitos.
+
+----
+
+### H9. Análisis DOFA
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Positivo</th>
+<th>Negativo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Interno</strong></td>
+<td>Fortalezas</td>
+<td>Debilidades</td>
+</tr>
+<tr>
+<td><strong>Externo</strong></td>
+<td>Oportunidades</td>
+<td>Amenazas</td>
+</tr>
+</tbody>
+</table>
+
+Ejemplo:
+- Debilidad: los empleados deben cargar manualmente los datos de los clientes.
+
+Esto puede llevar a un requisito:
+- "El sistema deberá permitir importar automáticamente los datos de clientes."
+
+---
+
+### H10. Cadena de Valor
+
+Permite analizar las actividades que generan valor dentro de una organización, identificando cómo se relacionan entre sí.
+
+Sirve para comprender:
+- Qué actividades se realizan.
+- Cómo se relacionan.
+- Dónde se genera valor.
+- Dónde existen problemas o ineficiencias.
+- Qué procesos podrían mejorarse mediante software.
+
+Ejemplo:
+
+En una empresa de comercio electrónico:
+
+Compra → Preparación → Despacho → Entrega → Postventa
+
+El análisis puede revelar que existe un problema en la comunicación entre despacho y entrega, dando lugar a nuevos requisitos.
+
+---
+### H11. Modelo conceptual
+
+Representa los conceptos importantes del dominio y las relaciones entre ellos.
+
+Permite construir una visión común entre usuarios y desarrolladores sobre aquello que el sistema debe manejar.
+
+Permite descubrir y aclarar:
+- Entidades.
+- Relaciones.
+- Conceptos del negocio.
+- Reglas y restricciones.
+
+---
+### H12. Diagrama de pescado
+
+También llamado diagrama de Ishikawa o diagrama causa-efecto.
+
+Permite analizar un problema identificando sus posibles causas.
+
+Por ejemplo:
+
+Problema: Los pedidos se entregan tarde.
+
+Se investigan posibles causas:
+
+                 ┌── Falta de personal
+                 │
+                 ├── Errores de dirección
+RETRASO ─────────┼── Problemas de stock
+                 │
+                 └── Mala planificación
+
+Es útil para comprender por qué existe una necesidad antes de convertirla en requisitos.
+
+---
+### H13. Glosario
+
+Es un conjunto de términos y definiciones del dominio del problema.
+
+Es especialmente importante cuando una organización utiliza palabras que pueden tener significados específicos.
+
+Ayuda a evitar ambigüedades y a establecer un lenguaje común entre usuarios, clientes y desarrolladores.
+
+---
+### H14. Diagrama de actividad
+
+Representa cómo se desarrolla un proceso o actividad, mostrando acciones, decisiones y flujos.
+
+Puede ayudar a descubrir requisitos porque al representar un proceso aparecen:
+- Actividades que el sistema debe soportar.
+- Decisiones.
+- Excepciones.
+- Actores.
+- Reglas del negocio.
+
+---
+### H15. Casos de uso
+* Casos de uso son una técnica basado de escenario en UML que
+permiten identificar a los actores en una interacción y que describen
+la interacción misma.
+* Un conjunto de casos de uso debe describir todas las posibles
+interacciones con el sistema.
+* Modelo gráfico de alto nivel complementado con una descripción
+más detallada de cuadro.
+* Los diagramas de secuencia se pueden utilizar para agregar el
+detalle a los casos de uso, mostrando la secuencia de procesamiento
+de eventos en el sistema.
+
+----
+
+### Elementos de un diagrama de casos de uso
+![Elementos de un diagrama de casos de uso](images/unidad3/elementos-diagrama-casos-de-uso.jpg)
+
+----
+
+### Casos de uso para MHC-PMS
+![Diagrama de casos de uso](images/unidad3/diagrama-casos-de-uso.png)
+
+----
+
+### Ejercicio: Casos de uso
+
+Elabore el diagrama de casos de uso del sistema.
+
+---
+### H16. Casa de Calidad / QFD
+
+QFD (Quality Function Deployment) permite relacionar las necesidades del cliente con características o requisitos técnicos del producto.
+
+La herramienta más conocida es la Casa de la Calidad.
+
+<table>
+<thead>
+<tr>
+<th>Necesidad del cliente</th>
+<th style="text-align:right">Importancia</th>
+<th>Característica técnica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fácil de utilizar</td>
+<td style="text-align:right">Alta</td>
+<td>Interfaz simplificada</td>
+</tr>
+<tr>
+<td>Respuesta rápida</td>
+<td style="text-align:right">Alta</td>
+<td>Tiempo de respuesta &lt; 2 s</td>
+</tr>
+<tr>
+<td>Seguro</td>
+<td style="text-align:right">Alta</td>
+<td>Autenticación y autorización</td>
+</tr>
+</tbody>
+</table>
+
+Es especialmente útil para priorizar necesidades y verificar que las características del producto respondan a lo que el cliente considera importante.
+
+---
+### H17. Lista de verificación
+
+Es una lista de aspectos que deben comprobarse sistemáticamente.
+
+Puede utilizarse para evitar olvidar determinados requisitos o para comprobar características de los requisitos existentes.
+
+Por ejemplo:
+
+¿El requisito...
+- [ ] es claro?
+- [ ] es verificable?
+- [ ] es necesario?
+- [ ] no es ambiguo?
+- [ ] es consistente?
+- [ ] tiene un único significado?
+- [ ] puede ser implementado?
+
+Por tanto, es especialmente útil para revisar la calidad de los requisitos.
+
+---
+
+### H18. Mesas de Trabajo (Workshops)
 
 - Esta técnica es efectiva cuando se requiere obtener información rápidamente de varias personas al tiempo.
 - Se deben realizar con una agenda previa, identificando los participantes.
@@ -721,90 +1249,6 @@ enfermera involucrada.
 
 ### Ejercicio: Escenario
 Piensa en 3 escenarios de uso, cada uno desde el punto de vista de un usuario/rol diferente para el sistema.
-
----
-### Casos de uso
-* Casos de uso son una técnica basado de escenario en UML que
-permiten identificar a los actores en una interacción y que describen
-la interacción misma.
-* Un conjunto de casos de uso debe describir todas las posibles
-interacciones con el sistema.
-* Modelo gráfico de alto nivel complementado con una descripción
-más detallada de cuadro.
-* Los diagramas de secuencia se pueden utilizar para agregar el
-detalle a los casos de uso, mostrando la secuencia de procesamiento
-de eventos en el sistema.
-
-----
-
-### Elementos de un diagrama de casos de uso
-![Elementos de un diagrama de casos de uso](images/unidad3/elementos-diagrama-casos-de-uso.jpg)
-
-----
-
-### Casos de uso para MHC-PMS
-![Diagrama de casos de uso](images/unidad3/diagrama-casos-de-uso.png)
-
-----
-
-### Ejercicio: Casos de uso
-
-Elabore el diagrama de casos de uso del sistema.
-
----
-### Etnografía
-* La etnografía es una técnica de observación que se usa para
-entender los procesos operacionales y ayudar a derivar
-requerimientos de apoyo para dichos procesos.
-* Es necesario observar y analizar cómo las personas trabajan
-realmente.
-* Pueden ser observados los factores sociales y organizacionales de importancia.
-* Los estudios etnográficos han demostrado que el trabajo suele
-ser más rico y complejo de lo que sugieren los modelos de
-sistemas simples.
-
-----
-
-### Ámbito de aplicación de la etnografía
-* Los requerimientos que se derivan de la forma en que las
-personas trabajan realmente en vez de la forma en la cual las
-definiciones del proceso indican que debería trabajar.
-* Los requerimientos que se derivan de la cooperación y el
-conocimiento de las actividades de otras personas.
-* Los estudios etnográficos pueden revelar detalles críticos de
-procesos, que con frecuencia se pierden con otras técnicas de
-adquisición de requerimientos.
-
-----
-
-### Etnografía y prototipos para el análisis de los requerimientos
-![Etnografia](images/unidad3/etnografia.png)
-
-----
-
-### Ejercicio: Etnografía
-
-- ¿Cómo aplicaría la etnografía en el proyecto?
-- ¿Qué personas observaría?
-- ¿En qué procesos se enfocaría?
-
----
-
-### Análisis de documentación
-
-- Consiste en obtener la información sobre los requerimientos a partir de documentos que ya están elaborados.
-- Es útil cuando los expertos no están disponibles para ser entrevistados o ya no forman parte de la empresa.
-- Ejemplos de documentación: Planes de negocio, actas de constitución de proyecto, reglas de negocio, contratos, definiciones de alcance, correos electrónicos, documentos de entrenamiento, entre otros.
-
----
-
-### Tormenta de ideas
-
-- Es una sesión de trabajo estructurada orientada para obtener la mayor cantidad de ideas posibles.
-- Se recomienda limitar el tiempo, utilizar ayudas visuales y designar un facilitador.
-- Se deben tener reglas, por ejemplo los criterios para evaluar ideas y asignarles un puntaje, no permitir las críticas a las ideas y limitar el tiempo de discusión.
-- En una primera fase, se deben identificar la mayor cantidad de ideas, para luego evaluarlas. 
-- Todas las ideas deben ser consideradas y deben limitarse que una idea se le ahogue o critique antes de tener tiempo de desarrollarla.
 
 ---
 
