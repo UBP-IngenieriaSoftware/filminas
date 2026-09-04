@@ -300,7 +300,7 @@ Estos cambios realizados deben comunicarse a todas las personas que resulten afe
 
 ### Proceso de control de cambios
 
-![Proceso de Control de Cambios](images/unidad12/controldecambios.png)
+![Proceso de Control de Cambios](images/gest-config/controldecambios.png)
 
 ---
 
@@ -368,7 +368,7 @@ Además de estas 2 ramas principales se sugiere el uso de **ramas de soporte**:
 
 ----
 
-![Branching](images/unidad12/branches.png)
+![Branching](images/gest-config/branches.png)
 
 ----
 

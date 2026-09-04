@@ -101,7 +101,7 @@ utiliza normalmente el sistema.
 
 ---
 ### Modelo entrada-salida de prueba del programa
-![Modelo de entrada-salida](images/unidad8/modelo-entrada-salida.jpg)
+![Modelo de entrada-salida](images/u13-pruebas-soft/modelo-entrada-salida.jpg)
 
 ---
 ### Verificación vs validación
@@ -139,7 +139,7 @@ Implica inspecciones y revisiones (realizadas SIN ejecución), análisis y compr
 ----
 
 ### Inspecciones y Pruebas
-![Inspecciones y Pruebas](images/unidad8/inspecciones-y-pruebas.png)
+![Inspecciones y Pruebas](images/u13-pruebas-soft/inspecciones-y-pruebas.png)
 
 ----
 
@@ -194,7 +194,7 @@ Las pruebas pueden clasificarse según **cómo se evalúa el software**:
 
 ---
 
-![Técnicas de Prueba](images/unidad8/tecnicas-pruebas.png)
+![Técnicas de Prueba](images/u13-pruebas-soft/tecnicas-pruebas.png)
 
 ---
 ### Casos de Pruebas
@@ -210,7 +210,7 @@ puesto en operación.
 
 ---
 ### Modelo del proceso de prueba de software
-![Modelo de Proceso de Prueba](images/unidad8/modelo-proceso-de-prueba.png)
+![Modelo de Proceso de Prueba](images/u13-pruebas-soft/modelo-proceso-de-prueba.png)
 
 ----
 
@@ -231,7 +231,7 @@ Todas son **pruebas de defecto**, cuya meta es descubrir bugs en el software.
 
 ---
 ### Pirámide de Testing o Cohen
-![Pirámide de Testing](images/unidad8/piramide-testing.jpg)
+![Pirámide de Testing](images/u13-pruebas-soft/piramide-testing.jpg)
 
 ---
 
@@ -255,7 +255,7 @@ Todas son **pruebas de defecto**, cuya meta es descubrir bugs en el software.
 
 ### Anti Patrones de Tetsing
 
-![Anti Patrones de Testing](images/unidad8/anti-patrones-de-testing.png)
+![Anti Patrones de Testing](images/u13-pruebas-soft/anti-patrones-de-testing.png)
 
 El esquema conocido como “cono de helado” ó “cigarro”, se focalizan principalmente en las pruebas exploratorias.
 
@@ -392,7 +392,7 @@ como JUnit, Jest o React Testing Library) para escribir y ejecutar las pruebas d
 
 ---
 
-![Técnicas de Caja Negra](images/unidad8/tecnicas-caja-negra.png)
+![Técnicas de Caja Negra](images/u13-pruebas-soft/tecnicas-caja-negra.png)
 
 ---
 ### Pruebas de partición
@@ -405,12 +405,12 @@ como JUnit, Jest o React Testing Library) para escribir y ejecutar las pruebas d
 ----
 
 ### Partición de equivalencia
-![Partición de equivalencia](images/unidad8/particion-equivalencia.png)
+![Partición de equivalencia](images/u13-pruebas-soft/particion-equivalencia.png)
 
 ----
 
 ### Particiones de equivalencia
-![Partición de Equivalencia](images/unidad8/particion-de-equivalencia.png)
+![Partición de Equivalencia](images/u13-pruebas-soft/particion-de-equivalencia.png)
 
 ---
 
@@ -455,7 +455,7 @@ La prueba de tabla de decisión es un método de prueba de caja negra que repres
 
 ### Tabla de Decisión
 
-![Tabla de Decisión](images/unidad8/tabla-decision.png)
+![Tabla de Decisión](images/u13-pruebas-soft/tabla-decision.png)
 
 ----
 
@@ -471,7 +471,7 @@ Comportamiento:
 ----
 
 ### Tabla de Decisión
-![Ejemplo de Tabla de Decisión](images/unidad8/tabla-decision-ejemplo.png)
+![Ejemplo de Tabla de Decisión](images/u13-pruebas-soft/tabla-decision-ejemplo.png)
 
 ---
 
@@ -487,7 +487,7 @@ Acciones:
 - Sin descuento
 
 <!--
-[!Tabla de Decision Ejercicio](images/unidad8/tabla-decision-ejemplo2.png)
+[!Tabla de Decision Ejercicio](images/u13-pruebas-soft/tabla-decision-ejemplo2.png)
 -->
 
 ---
@@ -620,7 +620,7 @@ dirigido por plan
 ----
 
 ### Desarrollo basado en pruebas
-![Desarrollo basado en pruebas](images/unidad8/desarrollo-basado-en-pruebas.png)
+![Desarrollo basado en pruebas](images/u13-pruebas-soft/desarrollo-basado-en-pruebas.png)
 
 ----
 
@@ -822,7 +822,7 @@ en el entorno del cliente.
 
 ---
 ### Etapas en el proceso de las pruebas de aceptación
-![Etapas en el proceso de aceptación de pruebas](images/unidad8/aceptacion-de-pruebas.png)
+![Etapas en el proceso de aceptación de pruebas](images/u13-pruebas-soft/aceptacion-de-pruebas.png)
 
 ----
 

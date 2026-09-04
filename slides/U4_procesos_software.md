@@ -100,13 +100,13 @@ Created by <i class="fab fa-telegram"></i>
 
 ### Metodologías de Desarrollo de Software
 
-![Metodologías de Desarrollo de Software](images/unidad2/metodologias.png)
+![Metodologías de Desarrollo de Software](images/u4-procesos-soft/metodologias.png)
 
 ---
 
 ### Modelo de Cascada
 
-![Modelo Cascada](images/unidad2/modelo-cascada.jpg)
+![Modelo Cascada](images/u4-procesos-soft/modelo-cascada.jpg)
 
 ----
 
@@ -178,13 +178,13 @@ Se aplica este tipo de modelo cuando los requerimientos están razonablemente cl
 
 ### El desarrollo incremental
 
-![Desarrollo Incremental](images/unidad2/desarrollo-incremental.jpg)
+![Desarrollo Incremental](images/u4-procesos-soft/desarrollo-incremental.jpg)
 
 ----
 
 ### El desarrollo incremental
 
-![Desarrollo Incremental](images/unidad2/desarrollo-incremental2.png)
+![Desarrollo Incremental](images/u4-procesos-soft/desarrollo-incremental2.png)
 
 ----
 
@@ -327,7 +327,7 @@ En este modelo se distinguen las siguientes etapas:
 
 ### Ingeniería de software orientado a Reutilización
 
-![Software Orientado a Reutilización](images/unidad2/software-reutilizacion.jpg)
+![Software Orientado a Reutilización](images/u4-procesos-soft/software-reutilizacion.jpg)
 
 ---
 
@@ -382,7 +382,7 @@ Generalmente se aplica este tipo de modelo cuando los requerimientos no están b
 
 ### Modelo Evolutivo: Prototipado
 
-![Paradigma de Prototipos(Pressman)](images/unidad2/prototipado.png)
+![Paradigma de Prototipos(Pressman)](images/u4-procesos-soft/prototipado.png)
 
 ---
 
@@ -431,7 +431,7 @@ Cada entrega es usable por el usuario final.
 
 ### Entrega Incremental
 
-![Entrega Incremental](images/unidad2/entrega-incremental.jpg)
+![Entrega Incremental](images/u4-procesos-soft/entrega-incremental.jpg)
 
 ----
 
@@ -515,7 +515,7 @@ completa del sistema es parte del contrato de desarrollo del sistema.
 
 ### Desarrollo en Espiral
 
-<!-- .slide: data-background="images/unidad2/ModeloEspiral.svg" style="color: white;font-weight: bold;" -->
+<!-- .slide: data-background="images/u4-procesos-soft/ModeloEspiral.svg" style="color: white;font-weight: bold;" -->
 
 Cada ciclo en espiral se divide en 4 sectores:
 
@@ -542,7 +542,7 @@ Facilita la incorporación de nuevas funcionalidades o mejoras en cada iteració
 
 ### Desarrollo en Espiral
 
-![Modelo Espiral de Boehm](images/unidad2/modelo-espiral-boehm.png)
+![Modelo Espiral de Boehm](images/u4-procesos-soft/modelo-espiral-boehm.png)
 
 ---
 
@@ -629,7 +629,7 @@ Ingeniería de Requisitos o Requerimientos:
 
 ### El proceso de ingeniería de requerimientos
 
-![Ingenieria de Requerimientos](images/unidad2/ingenieria-requerimientos.jpg)
+![Ingenieria de Requerimientos](images/u4-procesos-soft/ingenieria-requerimientos.jpg)
 
 ---
 
@@ -649,7 +649,7 @@ Ingeniería de Requisitos o Requerimientos:
 
 ### Modelo general del proceso de diseño
 
-![Diseño de Software](images/unidad2/disenio-software.jpg)
+![Diseño de Software](images/u4-procesos-soft/disenio-software.jpg)
 
 ----
 
@@ -678,7 +678,7 @@ La prueba es la actividad de V & V más utilizada.
 
 ### Etapas de la prueba
 
-![Etapas de la prueba](images/unidad2/etapas-de-pruebas.jpg)
+![Etapas de la prueba](images/u4-procesos-soft/etapas-de-pruebas.jpg)
 
 ----
 
@@ -700,7 +700,7 @@ La prueba es la actividad de V & V más utilizada.
 
 ### Fases de prueba en un proceso de software
 
-![Fases de pruebas](images/unidad2/validacion-de-software.jpg)
+![Fases de pruebas](images/u4-procesos-soft/validacion-de-software.jpg)
 
 ---
 
@@ -715,7 +715,7 @@ La prueba es la actividad de V & V más utilizada.
 
 ### Evolución del Sistema
 
-![Evolución del Sistema](images/unidad2/evolucion-de-software.jpg)
+![Evolución del Sistema](images/u4-procesos-soft/evolucion-de-software.jpg)
 
 ---
 ### 💡 Ejercicio: Actividades del Proceso
@@ -795,7 +795,7 @@ Un prototipo se puede utilizar en:
 
 ### El proceso de desarrollo de prototipos
 
-![Proceso de prototipado](images/unidad2/desarrollo-de-prototipos.jpg)
+![Proceso de prototipado](images/u4-procesos-soft/desarrollo-de-prototipos.jpg)
 
 ---
 

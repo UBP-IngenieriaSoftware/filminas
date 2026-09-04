@@ -87,7 +87,7 @@ Para ello es necesario aplicar de manera sistemática principios, teorías, mét
 
 ### Capas de la Ingeniería de Software
 
-![Capas de la Ingeniería de Software](images/unidad1/capas-ingenieria-soft.png)
+![Capas de la Ingeniería de Software](images/u1-intro/capas-ingenieria-soft.png)
 
 ----
 
@@ -181,7 +181,7 @@ Enfocarse en la **calidad del software** permite reducir los errores y problemas
 ## Errores de Software
 En el software, los errores son llamados bugs, debido a que en 1947 Grace Hopper encontró que las fallas del Mark II, computadora electromecánica desarrollada en Harvard, se debían a una polilla, “bug”, entre los relés.
 
-![First bug](images/unidad1/first_bug.png)
+![First bug](images/u1-intro/first_bug.png)
 
 ----
 
@@ -245,7 +245,7 @@ Si bien la interfaz indicaba que todo iba bien, los pacientes estaban recibiendo
 
 #### EXCESO DE RADIACIÓN EN EL THERAC-25
 
-![Therac-25](images/unidad1/therac-25.jpg)
+![Therac-25](images/u1-intro/therac-25.jpg)
 
 ----
 
@@ -269,7 +269,7 @@ Se incumplieron los requisitos del sistema donde se especificaba que todo el sof
 
 #### MARS CLIMATE ORBITER
 
-![Mars Climate Orbiter](images/unidad1/mars_climate_orbiter.webp)
+![Mars Climate Orbiter](images/u1-intro/mars_climate_orbiter.webp)
 
 ----
 
@@ -296,7 +296,7 @@ El sistema comenzó a comprar y vender acciones sin evaluar las consecuencias.
 
 <!-- .slide: style="font-size: 0.80em" -->
 
-![Knight Capital](images/unidad1/Knight_Capital.jpg)
+![Knight Capital](images/u1-intro/Knight_Capital.jpg)
 
 ---
 
@@ -377,7 +377,7 @@ La ingeniería de software tiene que ver con el desarrollo de software rentable.
 
 ### Costos del software
 
-![Costos del Software](images/unidad1/costos-software.png)
+![Costos del Software](images/u1-intro/costos-software.png)
 
 El costo de mantenimiento suele ser del **67%** del total del ciclo de desarrollo.
 
@@ -570,7 +570,7 @@ No puede decirse que un método sea mejor que otro. La elección del método de 
 ----
 
 ### Ejercicio
-
+<!-- .slide: style="font-size: 0.80em" -->
 Clasifique los siguientes Softwares según tipos de aplicaciones:
 
 <div class="grid-container2">
@@ -611,7 +611,7 @@ Tareas que se deben llevar a cabo en el proceso de desarrollo:
 
 ----
 
-![Actividades](images/unidad1/actividades.png)
+![Actividades](images/u1-intro/actividades.png)
 
 ---
 

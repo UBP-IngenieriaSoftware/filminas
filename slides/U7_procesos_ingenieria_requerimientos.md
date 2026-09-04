@@ -256,7 +256,7 @@ involucradas, la organización y el desarrollo de los requisitos.
 
 Este proceso comprende 5 actividades:
 
-![Proceso de Requerimientos](images/unidad3/proceso-ing-req.png)
+![Proceso de Requerimientos](images/u6-requerimientos/proceso-ing-req.png)
 
 ---
 
@@ -386,7 +386,7 @@ se buscan alternativas y soluciones, y luego se van fijando reuniones con el cli
 
 ### 2. Análisis de Requerimientos
 
-![Análisis de Requerimientos](images/unidad3/analisis-requerimientos.png)
+![Análisis de Requerimientos](images/u6-requerimientos/analisis-requerimientos.png)
 
 ---
 
@@ -405,7 +405,7 @@ Es un "pasar en limpio" el análisis realizado previamente aplicando técnicas y
 
 ### 3. Especificación de Requerimientos
 
-![Especificación de requerimientos](images/unidad3/especificacion-de-requerimientos.png)
+![Especificación de requerimientos](images/u6-requerimientos/especificacion-de-requerimientos.png)
 
 ----
 
@@ -677,7 +677,7 @@ Es importante asegurarse que esto no genere retrasos en la entrega. Y llevar una
 
 ---
 
-![Analisis Requerimiento Espiral](images/unidad3/analisis-requerimientos-espiral.png)
+![Analisis Requerimiento Espiral](images/u6-requerimientos/analisis-requerimientos-espiral.png)
 
 ---
 ### Partes interesadas en el sistema para MHC-PMS
@@ -909,7 +909,7 @@ adquisición de requerimientos.
 ----
 
 ### Etnografía y prototipos para el análisis de los requerimientos
-![Etnografia](images/unidad3/etnografia.png)
+![Etnografia](images/u6-requerimientos/etnografia.png)
 
 ----
 
@@ -934,25 +934,25 @@ Por ejemplo:
 
 ### H7. Prototipo no funcional: Sketch
 
-![Sketch](images/unidad3/sketch.jpg)
+![Sketch](images/u6-requerimientos/sketch.jpg)
 
 ----
 
 ### H7. Prototipo no funcional: Wireframe
 
-![Wireframe](images/unidad3/wireframe.jpg)
+![Wireframe](images/u6-requerimientos/wireframe.jpg)
 
 ----
 
 ### H7. Prototipo no funcional: Mockup
 
-![Mockup](images/unidad3/mockup.png)
+![Mockup](images/u6-requerimientos/mockup.png)
 
 ----
 
 ### H7. Prototipo no funcional: Prototipo
 
-![Prototipo](images/unidad3/prototipo.png)
+![Prototipo](images/u6-requerimientos/prototipo.png)
 
 ----
 
@@ -994,7 +994,7 @@ No es una técnica de elicitación de requisitos en sentido estricto, pero puede
 
 ### H9. Análisis DOFA
 
-![DOFA](images/unidad3/Cuadrantes-Matriz-FODA.webp)
+![DOFA](images/u6-requerimientos/Cuadrantes-Matriz-FODA.webp)
 
 ----
 
@@ -1070,7 +1070,7 @@ Permite descubrir y aclarar:
 
 ### H11. Modelo conceptual
 
-![Modelo Conceptual](images/unidad3/Figura-1-Modelo-Conceptual.webp)
+![Modelo Conceptual](images/u6-requerimientos/Figura-1-Modelo-Conceptual.webp)
 
 ---
 ### H12. Diagrama de pescado
@@ -1100,7 +1100,7 @@ Es útil para comprender por qué existe una necesidad antes de convertirla en r
 
 ### H12. Diagrama de pescado
 
-![Diagrama de Ishikawa](images/unidad3/diagrama-ishikawa.png)
+![Diagrama de Ishikawa](images/u6-requerimientos/diagrama-ishikawa.png)
 
 ---
 ### H13. Glosario
@@ -1125,7 +1125,7 @@ Puede ayudar a descubrir requisitos porque al representar un proceso aparecen:
 
 ----
 
-![Diagrama Actividad](images/unidad3/diagrama-actividad.png)
+![Diagrama Actividad](images/u6-requerimientos/diagrama-actividad.png)
 
 ---
 ### H15. Casos de uso
@@ -1143,12 +1143,12 @@ de eventos en el sistema.
 ----
 
 ### Elementos de un diagrama de casos de uso
-![Elementos de un diagrama de casos de uso](images/unidad3/elementos-diagrama-casos-de-uso.jpg)
+![Elementos de un diagrama de casos de uso](images/u6-requerimientos/elementos-diagrama-casos-de-uso.jpg)
 
 ----
 
 ### Casos de uso para MHC-PMS
-![Diagrama de casos de uso](images/unidad3/diagrama-casos-de-uso.png)
+![Diagrama de casos de uso](images/u6-requerimientos/diagrama-casos-de-uso.png)
 
 ----
 
@@ -1196,14 +1196,14 @@ Es especialmente útil para priorizar necesidades y verificar que las caracterí
 
 ### H16. Casa de Calidad / QFD
 
-![Casa de Calidad](images/unidad3/casa-de-calidad.png)
+![Casa de Calidad](images/u6-requerimientos/casa-de-calidad.png)
 
 
 ----
 
 ### H16. Casa de Calidad / QFD
 
-![Casa de Calidad-Ejemplo](images/unidad3/casa-de-calidad-ejemplo.png)
+![Casa de Calidad-Ejemplo](images/u6-requerimientos/casa-de-calidad-ejemplo.png)
 
 ---
 ### H17. Lista de verificación
@@ -1307,7 +1307,7 @@ Piensa en 3 escenarios de uso, cada uno desde el punto de vista de un usuario/ro
 
 #### Puntos de vista para describir el modelo de requerimientos
 
-![Modelo de Requerimientos](images/unidad3/describir-requerimientos.png)
+![Modelo de Requerimientos](images/u6-requerimientos/describir-requerimientos.png)
 
 ---
 ### Gestión de requerimientos
@@ -1357,7 +1357,7 @@ tiene que ser cambiado.
 
 ---
 ### Evolución de los requerimientos
-![Evolución de requerimientos](images/unidad3/evolucion-de-requerimientos.png)
+![Evolución de requerimientos](images/u6-requerimientos/evolucion-de-requerimientos.png)
 
 ---
 ### Planificación de la gestión de requerimientos
@@ -1395,7 +1395,7 @@ que el documento debe ser organizado de tal manera que los cambios se pueden imp
 
 ### Gestión de cambio de los requerimientos
 
-![Gestión de Cambios](images/unidad3/gestion-de-cambios.png)
+![Gestión de Cambios](images/u6-requerimientos/gestion-de-cambios.png)
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?

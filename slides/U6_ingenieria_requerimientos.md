@@ -17,7 +17,7 @@ Created by <i class="fab fa-telegram"></i>
 ### Ingeniería de Software
 #### Ian Sommerville
 
-![Bibliografia](images/unidad3/inge-requerimientos.png)
+![Bibliografia](images/u6-requerimientos/inge-requerimientos.png)
 
 ---
 <!-- .slide: style="font-size: 0.60em" -->
@@ -103,7 +103,7 @@ de requerimientos para el sistema."
 
 ### Características de los Requerimientos
 
-![Característcas de los Requerimientos](images/unidad3/caracteristicas-requerimientos.png)
+![Característcas de los Requerimientos](images/u6-requerimientos/caracteristicas-requerimientos.png)
 
 <!--https://www.northware.mx/wp-content/uploads/2021/04/tecnicas-efectivas-para-la-toma-de-requerimientos.pdf-->
 
@@ -146,7 +146,7 @@ de requerimientos correspondiente. Facilita las pruebas y la validación del dis
 
 ### Pirámide de Requerimientos
 
-![Pirámide de Requerimientos](images/unidad3/piramide-de-requerimientos.png)
+![Pirámide de Requerimientos](images/u6-requerimientos/piramide-de-requerimientos.png)
 
 ----
 
@@ -176,7 +176,7 @@ Describe el ¿Qué? y no el ¿Cómo? se deben hacer esas transformaciones.
 
 ---
 ### La comunicación...
-![La comunicación](images/unidad3/analisis-columpio-en-el-arbol.jpg)
+![La comunicación](images/u6-requerimientos/analisis-columpio-en-el-arbol.jpg)
 
 ---
 ### Tipos de requerimientos (cómo formularlos)
@@ -277,7 +277,7 @@ Requisitos no funcionales pueden ser más críticos que los requerimientos funci
 
 ---
 ### Tipos de requerimientos no funcionales
-![Requerimientos no funcionales](images/unidad3/no_funcionales.png)
+![Requerimientos no funcionales](images/u6-requerimientos/no_funcionales.png)
 
 ---
 ### Ejemplo de requerimientos no funcionales de MHC-PMS
@@ -391,15 +391,15 @@ Ej. El software de contabilidad debe cumplir con las normas fiscales y financier
 
 #### Entradas y Salidas para el análisis del dominio
 
-![Análisis del Dominio](images/unidad3/analisis-de-dominio.png)
+![Análisis del Dominio](images/u6-requerimientos/analisis-de-dominio.png)
 
 ----
 
-![Requerimientos dominio](images/unidad3/requerimientos-dominio.jpg)
+![Requerimientos dominio](images/u6-requerimientos/requerimientos-dominio.jpg)
 
 ----
 
-![Requerimientos Usuario](images/unidad3/requerimientos-usuario.jpg)
+![Requerimientos Usuario](images/u6-requerimientos/requerimientos-usuario.jpg)
 
 ---
 
@@ -490,11 +490,11 @@ análisis previo a la entrega (por ejemplo, sistemas críticos) o sistemas desar
 
 ---
 ### Historia de Usuario
-![Historia de Usuario](images/unidad3/historia.png)
+![Historia de Usuario](images/u6-requerimientos/historia.png)
 
 ---
 ### Los usuarios de un documento de requerimientos
-![Documento de requerimientos](images/unidad3/roles.jpg)
+![Documento de requerimientos](images/u6-requerimientos/roles.jpg)
 
 ---
 ### [Documento de Requerimientos](https://dspmuranchi.ac.in/pdf/Blog/srs_template-ieee.pdf)
@@ -702,7 +702,7 @@ escritura de requerimientos del sistema de negocios.
 ----
 
 ### Requisito para una bomba de insulina
-![Bomba Insulina](images/unidad3/bomba_insulina.jpg)
+![Bomba Insulina](images/u6-requerimientos/bomba_insulina.jpg)
 
 ----
 
@@ -796,7 +796,7 @@ En este caso, el requisito se expresa mediante elementos gráficos, aunque norma
 
 Acá buscamos expresar el requisito mediante conceptos matemáticos o formales, reduciendo al mínimo la ambigüedad del lenguaje natural.
 
-![Ejemplo Lenguaje Matematico](images/unidad3/ejemplo-lenguaje-matematico.png)	​
+![Ejemplo Lenguaje Matematico](images/u6-requerimientos/ejemplo-lenguaje-matematico.png)	​
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?

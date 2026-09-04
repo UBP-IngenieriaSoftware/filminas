@@ -22,6 +22,6 @@ slideNumber: true
 ![Icono](images/ejercicios/clase.png)
 ![Icono](images/ejercicios/star.png)
 ![Icono](images/ejercicios/secuencia.png)
-![background](images/unidad2/ModeloEspiral.svg)
+![background](images/u4-procesos-soft/ModeloEspiral.svg)
 
 

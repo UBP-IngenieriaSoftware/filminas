@@ -97,12 +97,12 @@ excesiva
 
 #### Cambio de los costos como función del tiempo transcurrido en el desarrollo
 
-![Costo del Cambio](images/unidad4/costo-del-cambio.png)
+![Costo del Cambio](images/u8-caso-uso/costo-del-cambio.png)
 
 ---
 #### Manifiesto Ágil: Valores
 
-![Valores Agile](images/unidad4/valores-agile.png)
+![Valores Agile](images/u8-caso-uso/valores-agile.png)
 
 ---
 ### Métodos Ágiles: Ejemplos
@@ -216,7 +216,7 @@ De los siguientes sistema, piense que metodología se adapta mejor a su desarrol
 ----
 
 ### Desarrollo guiado por plan y el desarrollo ágil
-![Plan vs Agil](images/unidad4/plan-vs-agil.png)
+![Plan vs Agil](images/u8-caso-uso/plan-vs-agil.png)
 
 ---
 ### Cuestiones técnicas, humanas y organizacionales
@@ -275,7 +275,7 @@ Extreme Programming (XP) :
 
 ----
 
-![Kent Beck](images/unidad2/kent-becl.jpg)
+![Kent Beck](images/u4-procesos-soft/kent-becl.jpg)
 
 Para la época, 90s, las ideas de Kent Beck fueron disruptivas en cuanto a metodología de trabajo.
 
@@ -288,7 +288,7 @@ Para la época, 90s, las ideas de Kent Beck fueron disruptivas en cuanto a metod
 
 ### Valores en XP
 
-![Valores en XP](images/unidad4/valores-extreme-programming-1.webp)
+![Valores en XP](images/u8-caso-uso/valores-extreme-programming-1.webp)
 
 ----
 
@@ -316,12 +316,12 @@ Las historias del usuario o casos de uso son la base para las pruebas de aceptac
 
 ---
 
-![Programacion Extrema](images/unidad4/programacion-extrema.png)
+![Programacion Extrema](images/u8-caso-uso/programacion-extrema.png)
 
 ----
 
 #### Proceso de la programación extrema
-![Procesp XP](images/unidad4/proceso-xp.png)
+![Procesp XP](images/u8-caso-uso/proceso-xp.png)
 
 CRC = Clase - Responsabilidad - Colaboraciones
 
@@ -632,7 +632,7 @@ que da inicio al proceso de mejora.
 
 ---
 ### Scrum
-![Scrum](images/unidad4/scrum.webp)
+![Scrum](images/u8-caso-uso/scrum.webp)
 
 ---
 ### Scrum: Roles
@@ -803,14 +803,14 @@ A veces para estimar, se emplean otras técnicas de comparación:
 
 ----
 
-![Tecnicas Estimación](images/unidad4/tecnicas-estimacion.png)
+![Tecnicas Estimación](images/u8-caso-uso/tecnicas-estimacion.png)
 
 ----
 
 ### Bucket System
 Es una técnica de estimación en la que las tareas se clasifican en «cubos». Cada uno de ellos representa un diferente nivel de esfuerzo o de complejidad.
 
-![Bucket System](images/unidad4/Bucket-System.png)
+![Bucket System](images/u8-caso-uso/Bucket-System.png)
 
 ----
 
@@ -819,7 +819,7 @@ Esta técnica clasifica las tareas en categorías de tamaño relativo. Para ello
 
 ----
 
-![Tallas de camiseta](images/unidad4/Tallas-de-camiseta.png)
+![Tallas de camiseta](images/u8-caso-uso/Tallas-de-camiseta.png)
 
 ----
 
@@ -828,7 +828,7 @@ Esta técnica consiste en estimar un gran número de tareas agrupándolas según
 
 ----
 
-![Affinity Estimating](images/unidad4/Affinity-Estimating.png)
+![Affinity Estimating](images/u8-caso-uso/Affinity-Estimating.png)
 
 ---
 ### Ejercicio: Ceremonia Daily

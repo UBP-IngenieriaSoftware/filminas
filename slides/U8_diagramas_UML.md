@@ -83,7 +83,7 @@ un usuario.
 ----
 
 ### Elementos
-![Elementos de Casos de Uso](images/unidad5/elementos_casos_de_uso.png)
+![Elementos de Casos de Uso](images/u8-UML/elementos_casos_de_uso.png)
 
 ----
 
@@ -99,9 +99,9 @@ en otro caso de uso
 ----
 
 ### Relaciones
-![Includes](images/unidad5/ejemplo_de_include.gif)
+![Includes](images/u8-UML/ejemplo_de_include.gif)
 
-![Extend](images/unidad5/relacion_entre_casos_de_uso.webp)
+![Extend](images/u8-UML/relacion_entre_casos_de_uso.webp)
 
 ----
 
@@ -297,17 +297,17 @@ sobre el precio inicial.
 ----
 
 ### Diagrama de casos de uso del actor Auxiliar
-![Diagrama de casos de uso del actor Auxiliar](images/unidad5/DCU_auxiliar.gif)
+![Diagrama de casos de uso del actor Auxiliar](images/u8-UML/DCU_auxiliar.gif)
 
 ----
 
 ### Diagrama de casos de uso del actor Cliente
-![Diagrama de casos de uso del actor Cliente](images/unidad5/DCU_cliente.gif)
+![Diagrama de casos de uso del actor Cliente](images/u8-UML/DCU_cliente.gif)
 
 ----
 
 ### Diagrama de casos de uso del actor Veterinario
-![Diagrama de casos de uso del actor Veterinario](images/unidad5/DCU_Veterinario.gif)
+![Diagrama de casos de uso del actor Veterinario](images/u8-UML/DCU_Veterinario.gif)
 
 ---
 ### DIAGRAMA DE CLASES
@@ -337,7 +337,7 @@ clases que heredan de ella (clases derivadas)
 
 ----
 
-![Clase](images/unidad5/clase_ej.jpg) ![Clase Ejemplo](images/unidad5/clase_ejemplo.jpg)
+![Clase](images/u8-UML/clase_ej.jpg) ![Clase Ejemplo](images/u8-UML/clase_ejemplo.jpg)
 
 ----
 
@@ -354,7 +354,7 @@ entender la relación que tienen dos clases. Suelen utilizarse verbos.
 ----
 
 ### Relaciones
-![Relaciones](images/unidad5/clases_relaciones.jpg)
+![Relaciones](images/u8-UML/clases_relaciones.jpg)
 
 ---
 ### Tipos de relaciones
@@ -372,7 +372,7 @@ Se representa con una simple línea continua que une las clases que están inclu
 Ejemplo
 Una mascota pertenece a una persona
 
-![Persona-Mascota](images/unidad5/persona_mascota.jpg)
+![Persona-Mascota](images/u8-UML/persona_mascota.jpg)
 
 ---
 ### Agregación
@@ -382,7 +382,7 @@ Representa relaciones en las que un objeto es parte de otro pero tiene existenci
 Se representa con una línea que tiene un rombo en la la clase que es una agregación de la otra (en la clase que
 contiene las otras).
 
-![Agregación](images/unidad5/mesas_tablas.jpg)
+![Agregación](images/u8-UML/mesas_tablas.jpg)
 
 ---
 ### Composición
@@ -393,7 +393,7 @@ Cuando el elemento contenedor desaparece, desaparecen todos los contenidos. No t
 Contenedor y contenidos tienen los mismos tiempo de vida. 
 Se representa con una línea continua con un rombo relleno en la clase que es compuesta.
 
-![Composicion](images/unidad5/composicion.jpg)
+![Composicion](images/u8-UML/composicion.jpg)
 
 ---
 ### Herencia
@@ -403,12 +403,12 @@ otra clase (clase padre o superclase).
 Estos atributos y métodos recibidos se suman a los que la clase tiene por sí misma.
 Se utiliza en relaciones “es un”.
 
-![Herencia](images/unidad5/herencia.jpg)
+![Herencia](images/u8-UML/herencia.jpg)
 
 ---
 ### Diagrama de clases para la clínica veterinaria
 
-![Diagrama de Clases Veterinaria](images/unidad5/diagrama_clases_veterinaria.png)
+![Diagrama de Clases Veterinaria](images/u8-UML/diagrama_clases_veterinaria.png)
 
 ---
 ### DIAGRAMA DE SECUENCIA
@@ -427,7 +427,7 @@ Está construido a partir de dos dimensiones:
 * Horizontal: Representa los objetos que participan en la secuencia.
 * Vertical: Representa la línea de tiempo sobre la que los elementos actúan.
 
-![Diagrama de Secuencia: Dimensiones](images/unidad5/secuencia_dimensiones.png)
+![Diagrama de Secuencia: Dimensiones](images/u8-UML/secuencia_dimensiones.png)
 
 ----
 
@@ -440,7 +440,7 @@ Está construido a partir de dos dimensiones:
 
 ----
 
-![Diagrama de Secuencia: Objetos](images/unidad5/secuencia_objetos.jpg)
+![Diagrama de Secuencia: Objetos](images/u8-UML/secuencia_objetos.jpg)
 
 ----
 
@@ -448,11 +448,11 @@ Está construido a partir de dos dimensiones:
 * Representa el paso de un mensaje entre dos objetos o entre un objeto y sí mismo.
 * Flecha con el nombre del mensaje y los argumentos y que va desde el objeto que envía hacia el objeto que recibe.
 
-![Diagramas de Secuencia: Mensajes](images/unidad5/secuencia_mensajes.jpg)
+![Diagramas de Secuencia: Mensajes](images/u8-UML/secuencia_mensajes.jpg)
 
 ----
 
-![Diagrama de Secuencia](images/unidad5/secuencia_ejemplo.png)
+![Diagrama de Secuencia](images/u8-UML/secuencia_ejemplo.png)
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?

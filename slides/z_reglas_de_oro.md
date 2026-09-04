@@ -155,7 +155,7 @@ apropiada en un tiempo razonable.
 
 ----
 
-![Pantalla cargando Datos](images/unidad4/pantalla_carga.avif)
+![Pantalla cargando Datos](images/u8-caso-uso/pantalla_carga.avif)
 
 ---
 ### 2. Consistencia entre el sistema y el mundo real

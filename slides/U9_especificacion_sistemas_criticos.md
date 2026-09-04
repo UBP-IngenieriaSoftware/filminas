@@ -258,7 +258,7 @@ Después de un fallo, el sistema deberá recuperar el servicio en menos de 30 se
 ---
 ### Relación entre riesgos, safety, security y reliability
 
-![Sistemas Criticos](images/unidad9-sistemas-criticos/sistemas-criticos.png)
+![Sistemas Criticos](images/u9-sistemas-criticos/sistemas-criticos.png)
 
 Permiten identificar los requerimientos críticos.
 

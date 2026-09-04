@@ -101,7 +101,7 @@ sub-sistemas que componen un sistema y su comunicación
 
 ##### Modelo Abstracto de arquitectura de un SISTEMA DE CONTROL DE ROBOT DE EMBALAJE
 
-![Robot de Embalaje](images/unidad6/robot-de-embalaje.png)
+![Robot de Embalaje](images/u10-mod-arqui/robot-de-embalaje.png)
 
 ----
 
@@ -296,25 +296,25 @@ Aplicaciones web que tienen capas de presentación, lógica de negocio y acceso 
 
 ### 1. SISTEMA DE GESTIÓN
 
-![Sistema de Gestión](images/unidad6/sistema-gestion.jpg)
+![Sistema de Gestión](images/u10-mod-arqui/sistema-gestion.jpg)
 
 ----
 
 ### 1. SISTEMA DE BIBLIOTECA
 
-![Sistema de Biblioteca](images/unidad6/sistema-biblioteca.jpg)
+![Sistema de Biblioteca](images/u10-mod-arqui/sistema-biblioteca.jpg)
 
 ----
 
 ### Arquitectura de sistema de información en capas
 
-![Arquitectura de Capas](images/unidad6/capas.png)
+![Arquitectura de Capas](images/u10-mod-arqui/capas.png)
 
 ----
 
 ### Arquitectura del MHC-PMS
 
-![MHC-PMS](images/unidad6/MHC-PMS.png)
+![MHC-PMS](images/u10-mod-arqui/MHC-PMS.png)
 
 
 ---
@@ -361,7 +361,7 @@ Aplicaciones web que tienen capas de presentación, lógica de negocio y acceso 
 
 ### 2. BIBLIOTECA DE IMÁGENES Y PELÍCULAS
 
-![Biblioteca de Imgágenes y películas](images/unidad6/imagenes-peliculas.jpg)
+![Biblioteca de Imgágenes y películas](images/u10-mod-arqui/imagenes-peliculas.jpg)
 
 ----
 
@@ -408,7 +408,7 @@ de red ligeros (ej., HTTP, REST, gRPC).
 ----
 
 ### 3. Arquitectura de Microservicios
-![Arquitetcura de Microservicios](images/unidad6/microservicios.png)
+![Arquitetcura de Microservicios](images/u10-mod-arqui/microservicios.png)
 
 ----
 
@@ -468,7 +468,7 @@ Aplicaciones empresariales distribuidas que manejan un alto volumen de datos y p
 ----
 
 ### 4. Arquitectura de Capas N: Ejemplo
-![Arquitectura en Capas NodeJS](images/unidad6/capasN-nodeJS.png)
+![Arquitectura en Capas NodeJS](images/u10-mod-arqui/capasN-nodeJS.png)
 
 ---
 ### 5. Arquitectura Orientada a Servicios
@@ -495,7 +495,7 @@ Sistemas grandes como los de banca o telecomunicaciones que necesitan interopera
 ----
 
 ### 5. Arquitectura Orientada a Servicios: Esquema
-![Arquitectura Orientada a Servicios](images/unidad6/Arquitectura-Orientada-a-Servicios-SOA.png)
+![Arquitectura Orientada a Servicios](images/u10-mod-arqui/Arquitectura-Orientada-a-Servicios-SOA.png)
 
 ----
 
@@ -547,7 +547,7 @@ Sistemas de mensajería, notificaciones en tiempo real o sistemas de monitoreo.
 ----
 
 ### 6. Arquitectura Basada en Eventos: Esquema
-![Orientación a Eventos](images/unidad6/orientacion-a-eventos.webp)
+![Orientación a Eventos](images/u10-mod-arqui/orientacion-a-eventos.webp)
 
 ----
 
@@ -571,7 +571,7 @@ Se utiliza en aplicaciones de procesamiento de datos (tanto basadas en lotes com
 
 ### 7. Arquitectura de Tubería y Filtro
 
-![Modelo de Tubería y Filtro](images/unidad6/modelo_tuberia-filtro.jpg)
+![Modelo de Tubería y Filtro](images/u10-mod-arqui/modelo_tuberia-filtro.jpg)
 
 ----
 
@@ -589,7 +589,7 @@ Se utiliza en aplicaciones de procesamiento de datos (tanto basadas en lotes com
 
 ### Arquitectura de compilador de tubería y filtro
 
-![Arquitetcura de Tubería y Filtro](images/unidad6/arquitetcura-tuberia-filtro.png)
+![Arquitetcura de Tubería y Filtro](images/u10-mod-arqui/arquitetcura-tuberia-filtro.png)
 
 ----
 
@@ -648,7 +648,7 @@ El sistema se construye como una única aplicación, donde todos los componentes
 ----
 
 ### 10. Arquitectura Monolítica: Esquema
-![Arquitetcura Monolítica](images/unidad6/monolitica.png)
+![Arquitetcura Monolítica](images/u10-mod-arqui/monolitica.png)
 
 ----
 
@@ -675,7 +675,7 @@ módulos que amplíen las funcionalidades.
 ----
 
 ### 11. Arquitectura de Microkernel: Esquema
-![Arquitetcura de Microkernel](images/unidad6/microkernel.webp)
+![Arquitetcura de Microkernel](images/u10-mod-arqui/microkernel.webp)
 
 ----
 
@@ -713,7 +713,7 @@ externas mediante "puertos" (interfaces) y "adaptadores" (que conectan la lógic
 ----
 
 ### 12. Arquitectura Hexagonal: Esquema
-![Esquema Hexagonal](images/unidad6/hexagonal.png)
+![Esquema Hexagonal](images/u10-mod-arqui/hexagonal.png)
 
 ----
 
@@ -762,7 +762,7 @@ datos directamente con otros nodos.
 ----
 
 ### 14. Arquitectura de Peer-to-Peer: Esquema
-![Arquitetcura de Peer-to-Peer](images/unidad6/p2p.jpg)
+![Arquitetcura de Peer-to-Peer](images/u10-mod-arqui/p2p.jpg)
 
 ----
 
@@ -789,7 +789,7 @@ permitiendo una optimización independiente.
 ----
 
 ### 15. Arquitectura CQRS: Esquema
-![Esquema CQRS](images/unidad6/CQRS.png)
+![Esquema CQRS](images/u10-mod-arqui/CQRS.png)
 
 ----
 
@@ -842,7 +842,7 @@ Microsoft Azure.
 
 ### 16. Ejemplo de arquitectura en la nube de un sistema de gestión de documentos
 <!-- .slide: style="font-size: 0.60em" -->
-![Cloud Architecture](images/unidad6/cloud-architecture.png)
+![Cloud Architecture](images/u10-mod-arqui/cloud-architecture.png)
 <!--https://www.akamai.com/es/blog/cloud/what-is-cloud-architecture-->
 
 ---
@@ -890,13 +890,13 @@ Sistemas de bases de datos o sistemas de información compartida donde múltiple
 
 ### 17. ARQUITECTURA DE REPOSITORIO IDE
 
-![Repositorio IDE](images/unidad6/repositorio-IDE.jpg)
+![Repositorio IDE](images/u10-mod-arqui/repositorio-IDE.jpg)
 
 ---
 
 #### 17. Arquitectura de repositorio para un sistema de procesamiento de lenguaje
 
-![Arquitetcura de Repositorio para un sistema de Procesamiento de Lenguaje](images/unidad6/Arquitetcura-de-repositorio.png)
+![Arquitetcura de Repositorio para un sistema de Procesamiento de Lenguaje](images/u10-mod-arqui/Arquitetcura-de-repositorio.png)
 
 ---
 ### 18. Arquitectura Modelo-Vista-Controlador
@@ -911,13 +911,13 @@ Sistemas de bases de datos o sistemas de información compartida donde múltiple
 
 ### 18. Arquitectura Modelo-Vista-Controlador
 
-![Modelo Vista-Controlador](images/unidad6/modelo-vista-controlador.jpg)
+![Modelo Vista-Controlador](images/u10-mod-arqui/modelo-vista-controlador.jpg)
 
 ----
 
 ### 18. APLICACION WEB CON ARQUITECTURA MVC
 
-![Arquitetcura MVC](images/unidad6/arquitetura-mvc.jpg)
+![Arquitetcura MVC](images/u10-mod-arqui/arquitetura-mvc.jpg)
 
 ----
 
@@ -980,7 +980,7 @@ Es especialmente útil para sistemas donde el comportamiento varía según el es
 ----
 
 ### 19. Arquitectura de Máquina de Estados
-![Maquina de Estados](images/unidad6/maquina-estados.png)
+![Maquina de Estados](images/u10-mod-arqui/maquina-estados.png)
 
 ---
 
@@ -1042,7 +1042,7 @@ RabbitMQ, Apache Kafka o sistemas de intermediación de datos en servicios distr
 
 ### 21. Arquitectura Broker: Esquema
 
-![Broker](images/unidad6/broker.png)
+![Broker](images/u10-mod-arqui/broker.png)
 
 ---
 
@@ -1081,7 +1081,7 @@ disponibilidad, el master toma decisiones, y los slaves actúan como copias de r
 
 ### 22. Arquitectura Master-Slave: Esquema
 
-![Master-Slave](images/unidad6/master.png)
+![Master-Slave](images/u10-mod-arqui/master.png)
 
 ---
 ### 23. Arquitectura Serverless
@@ -1236,17 +1236,17 @@ Elabora una tabla comparativa de los diseños arquitectónicos comparando:
 ---
 ### Estructura de las aplicaciones de procesamiento de transacción
 
-![Estructura de las aplicaciones de procesamiento de transacción](images/unidad6/procesamiento-transaccion.png)
+![Estructura de las aplicaciones de procesamiento de transacción](images/u10-mod-arqui/procesamiento-transaccion.png)
 
 ---
 ### Arquitectura de software de un sistema ATM
 
-![ATM](images/unidad6/ATM.png)
+![ATM](images/u10-mod-arqui/ATM.png)
 
 ---
 #### Arquitectura de un sistema de procesamiento de lenguaje
 
-![Lenguaje de Procesamiento del Sistema](images/unidad6/arquitetcura-procesamiento.png)
+![Lenguaje de Procesamiento del Sistema](images/u10-mod-arqui/arquitetcura-procesamiento.png)
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?

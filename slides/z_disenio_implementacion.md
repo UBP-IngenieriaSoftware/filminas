@@ -140,12 +140,12 @@ mientras es utilizado.
 ---
 ### Contexto del sistema para la estación meteorológica
 
-![Estacion Metereológica](images/unidad7/estacion-metereologica.jpg)
+![Estacion Metereológica](images/patrones-diseno/estacion-metereologica.jpg)
 
 ---
 ### Casos de uso de la Estación meteorológica
 
-![Casos de Uso de Estación Metereológica](images/unidad7/caso-uso-estacion-metereologica.jpg)
+![Casos de Uso de Estación Metereológica](images/patrones-diseno/caso-uso-estacion-metereologica.jpg)
 
 ---
 ### Descripción de caso de uso-Informe meteorológico
@@ -204,12 +204,12 @@ mensajes sobre una infraestructura común.
 ---
 ### Arquitectura de alto nivel de la estación meteorológica
 
-![Arquitetcura de Alto Nicel](images/unidad7/arquitectura-de-alto-nivel.jpg)
+![Arquitetcura de Alto Nicel](images/patrones-diseno/arquitectura-de-alto-nivel.jpg)
 
 ---
 ### Arquitectura del sistema de recolección de datos
 
-![Arquitectura del sistema de recolección de datos](images/unidad7/sistema-recoleccion-de-datos.jpg)
+![Arquitectura del sistema de recolección de datos](images/patrones-diseno/sistema-recoleccion-de-datos.jpg)
 
 ---
 ### Identificación de las clases Objeto
@@ -251,7 +251,7 @@ identificadas en el modelo de casos de uso.
 ---
 ### Clases de objeto de la Estación meteorológica
 
-![Clase Objeto](images/unidad7/clases-objeto.png)
+![Clase Objeto](images/patrones-diseno/clases-objeto.png)
 
 ---
 ### Patrones de diseño
@@ -270,7 +270,7 @@ polimorfismo.
 ---
 ### Patrones de diseño: Desventaja
 
-![Desventaja](images/unidad7/design-patterns-everywhere.jpg)
+![Desventaja](images/patrones-diseno/design-patterns-everywhere.jpg)
 
 ----
 
@@ -324,7 +324,7 @@ mantiene la flexibilidad y eficiencia de la estructura.
 
 ----
 
-![Clasificación](images/unidad7/patrones-clasificacion.png)
+![Clasificación](images/patrones-diseno/patrones-clasificacion.png)
 
 ---
 ### Elementos del patrón
@@ -342,7 +342,7 @@ diferentes maneras.
 ### Creacional: 1. Abstract Factory
 Permite producir familias de objetos relacionados sin especificar sus clases concretas.
 
-![Abstract Factory](images/unidad7/1-abstract-factory-mini.png)
+![Abstract Factory](images/patrones-diseno/1-abstract-factory-mini.png)
 
 ----
 
@@ -350,7 +350,7 @@ Permite producir familias de objetos relacionados sin especificar sus clases con
 Permite construir objetos complejos paso a paso. Permite producir distintos tipos y representaciones de un objeto
 empleando el mismo código de construcción.
 
-![Builder](images/unidad7/2-builder-mini.png)
+![Builder](images/patrones-diseno/2-builder-mini.png)
 
 ----
 
@@ -358,14 +358,14 @@ empleando el mismo código de construcción.
 Proporciona una interfaz para crear objetos en una superclase, mientras permite a las subclases alterar el tipo de 
 objetos que se crearán.
 
-![Factory Method](images/unidad7/3-factory-method-mini.png)
+![Factory Method](images/patrones-diseno/3-factory-method-mini.png)
 
 ----
 
 ### Creacional: 4. Prototype
 Permite copiar objetos existentes sin que el códugo dependa de sus clases.
 
-![Prototype](images/unidad7/4-prototype-mini.png)
+![Prototype](images/patrones-diseno/4-prototype-mini.png)
 
 ----
 
@@ -373,21 +373,21 @@ Permite copiar objetos existentes sin que el códugo dependa de sus clases.
 Permite asegurarnos de que una clase tenga una única instancia, a la vez que proporciona un punto de acceso global a
 dicha instancia.
 
-![Singleton](images/unidad7/5-singleton-mini.png )
+![Singleton](images/patrones-diseno/5-singleton-mini.png )
 
 ---
 ### Estructural: 6. Bridge
 Permite dividir una clase grande o un grupo de clases estrechamente relacionadas, en dos jerarquías separadas (abstracción
 e implementación) que pueden desarrollarse independientemente la una de la otra.
 
-![Bridge](images/unidad7/6-bridge-mini.png)
+![Bridge](images/patrones-diseno/6-bridge-mini.png)
 
 ----
 
 ### Estructural: 7. Composite
 Permite componer objetos en estructuras de árbol y trabajar con esas estructuras como si fueran objetos individuales.
 
-![Composite](images/unidad7/7-composite-mini.png)
+![Composite](images/patrones-diseno/7-composite-mini.png)
 
 ----
 
@@ -395,14 +395,14 @@ Permite componer objetos en estructuras de árbol y trabajar con esas estructura
 Permite añadir fucnionalidades a objetos colocando estos objetos dentro de objetos encapsuladores especiales que contienen
 estas funcionalidades.
 
-![Decorator](images/unidad7/8-decorator-mini.png)
+![Decorator](images/patrones-diseno/8-decorator-mini.png)
 
 ----
 
 ### Estructural: 9. Facade
 Proporciona una interfaz simplificada a una biblioteca, un framework o cualquier otro grupo complejo de clases.
 
-![Facade](images/unidad7/9-facade-mini.png)
+![Facade](images/patrones-diseno/9-facade-mini.png)
 
 ----
 
@@ -410,7 +410,7 @@ Proporciona una interfaz simplificada a una biblioteca, un framework o cualquier
 Permite mantener más objetos dentro de la cantidad disponible de memoria RAM compartiendo las partes comunes del estado
 entre varios objetos en lugar de mantener toda la información en cada objeto.
 
-![Flyweight](images/unidad7/10-flyweight-mini.png)
+![Flyweight](images/patrones-diseno/10-flyweight-mini.png)
 
 ----
 
@@ -418,14 +418,14 @@ entre varios objetos en lugar de mantener toda la información en cada objeto.
 Permite proporcionar un sustituto o marcador de posición para otro objeto. Un proxy controla el acceso al objeto original,
 permitiéndte hacer algo antes o después de que la solicitud llegue al objeto original.
 
-![Proxy](images/unidad7/11-proxy-mini.png)
+![Proxy](images/patrones-diseno/11-proxy-mini.png)
 
 ----
 
 ### Estructural: 12. Adapter
 Permite la colaboración entre objetos con interfaces incompatibles.
 
-![Adapter](images/unidad7/12-adapter-mini.png)
+![Adapter](images/patrones-diseno/12-adapter-mini.png)
 
 ----
 
@@ -439,7 +439,7 @@ Cada elemento de la página (botón, texto, campo de formulario) se coloca en un
 Permite pasar solicitudes a lo largo de una cadena de manejadores. Al recibir una solicitud, cada manejador decide si
 la procesa o su la pasa al siguiente manejador de la cadena.
 
-![Chain of Responsability](images/unidad7/13chain-of-responsibility-mini.png)
+![Chain of Responsability](images/patrones-diseno/13chain-of-responsibility-mini.png)
 
 ----
 
@@ -448,7 +448,7 @@ Convierte una solicitud en un objeto independiente que contiene toda la informac
 transformación permite parametrizar los métodos con diferentes solicitudes, retrasar o poner en cola la ejecución de una
 solicitud y soportar operaciones que no se pueden realizar.
 
-![Command](images/unidad7/14-command-mini.png)
+![Command](images/patrones-diseno/14-command-mini.png)
 
 ----
 
@@ -463,7 +463,7 @@ ejecute el lenguaje en cuestión. Es común en motores de reglas, lenguajes de p
 ### Comportamiento: 16. Iterator
 Permite recorrer elementos de una colección sin exponer su representaciín subyacente (lista, pila, árbol, etc).
 
-![Iterator](images/unidad7/16-iterator-mini.png)
+![Iterator](images/patrones-diseno/16-iterator-mini.png)
 
 ----
 
@@ -471,14 +471,14 @@ Permite recorrer elementos de una colección sin exponer su representaciín suby
 Permite reducir las dependencias caóticas entre objetos. El patrón restringe las comunicaciones directas entre los
 objetos, forzándolos a colaborar únicamente a través de un objeto mediador.
 
-![Mediator](images/unidad7/17-mediator-mini.png)
+![Mediator](images/patrones-diseno/17-mediator-mini.png)
 
 ----
 
 ### Comportamiento: 18. Memento
 Permite guardar y restaurar el estado previo de un objeto sin revelar los detalles de su implementación.
 
-![Memento](images/unidad7/18-memento-mini.png)
+![Memento](images/patrones-diseno/18-memento-mini.png)
 
 ----
 
@@ -486,14 +486,14 @@ Permite guardar y restaurar el estado previo de un objeto sin revelar los detall
 Permite definir un mecanismo de suscripción para notificar a varios objetos sobre cualquier evento que le suceda al
 objeto que están observando.
 
-![Observer](images/unidad7/19-observer-mini.png)
+![Observer](images/patrones-diseno/19-observer-mini.png)
 
 ----
 
 ### Comportamiento: 20. State
 Permite a un objeto alterar su comportamiento cuando su estado interno cambia. Parece como su el objeto cambiara su clase.
 
-![State](images/unidad7/20-state-mini.png)
+![State](images/patrones-diseno/20-state-mini.png)
 
 ----
 
@@ -501,7 +501,7 @@ Permite a un objeto alterar su comportamiento cuando su estado interno cambia. P
 Permite definir una familia de algoritmos, colocara cada uno de ellos en una clase separada y hacer sus objetos
 intercambiables.
 
-![Strategy](images/unidad7/21-strategy-mini.png)
+![Strategy](images/patrones-diseno/21-strategy-mini.png)
 
 ----
 
@@ -509,14 +509,14 @@ intercambiables.
 Define el esqueleto de un algoritmo en la superclase pero permite que las subclases sobre-escriban pasos del algoritmo
 sin cambiar su estructura.
 
-![Template method](images/unidad7/23-template-method-mini.png)
+![Template method](images/patrones-diseno/23-template-method-mini.png)
 
 ----
 
 ### Comportamiento: 23. Visitor
 Permite separar los algoritmos de los objetos sobre los que operan.
 
-![Visitor](images/unidad7/23-visitor-mini.png)
+![Visitor](images/patrones-diseno/23-visitor-mini.png)
 
 ---
 ### El patrón observador
@@ -561,7 +561,7 @@ Permite separar los algoritmos de los objetos sobre los que operan.
 
 ### Múltiples vistas utilizando el patrón Observador
 
-![Patron Observador](images/unidad7/patron-observador.jpg)
+![Patron Observador](images/patrones-diseno/patron-observador.jpg)
 
 ---
 ### IMPLEMENTACIÓN DEL SOFTWARE

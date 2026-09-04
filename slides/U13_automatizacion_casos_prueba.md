@@ -57,11 +57,11 @@ Entre las más usadas en el mercado encontramos:
 * Selenium
 * Cypress
 
-![Tecnologias de Automatizacion](images/unidad8_automatizacion/selenium_cypress.png)
+![Tecnologias de Automatizacion](images/u13-automatizacion/selenium_cypress.png)
 
 ----
 
-![Downloads](images/unidad8_automatizacion/downloads.jpg)
+![Downloads](images/u13-automatizacion/downloads.jpg)
 
 ---
 #### [Cypress](https://docs.cypress.io/)
@@ -77,7 +77,7 @@ Además, tiene actualizaciones frecuentes, que agregan funcionalidades.
 
 #### Cypress: Ventajas
 
-![Cypress: ventajas](images/unidad8_automatizacion/ventajas-cypress.jpg)
+![Cypress: ventajas](images/u13-automatizacion/ventajas-cypress.jpg)
 
 ----
 
@@ -95,7 +95,7 @@ dependencias.
 
 #### Cypress: Cross-Browser
 
-![Cypress: Cross Browser](images/unidad8_automatizacion/cross-browser.jpg)
+![Cypress: Cross Browser](images/u13-automatizacion/cross-browser.jpg)
 
 ---
 ### Otras Herramientas
@@ -104,7 +104,7 @@ En el proceso de automatización es fundamentar contar con las siguientes herram
 * Versionado de Código
 * Integración Continua
 
-![Otras herramientas](images/unidad8_automatizacion/otras-herramientas.png)
+![Otras herramientas](images/u13-automatizacion/otras-herramientas.png)
 
 ---
 ### Herramientas para Cypress
@@ -237,7 +237,7 @@ ser de selectores, no tanto de funcionalidad, por lo que solo hay que actualizar
 
 Consiste en crear un objeto por cada conjunto de elementos significativos de la interfaz con la que interactuamos.
 
-![Page Object Model](images/unidad8_automatizacion/POM.png)
+![Page Object Model](images/u13-automatizacion/POM.png)
 
 ----
 
@@ -246,7 +246,7 @@ Consiste en crear un objeto por cada conjunto de elementos significativos de la 
 * Evita duplicación de código
 * Automatizaciones mantenibles y fáciles de entender
 
-![Page Object Model](images/unidad8_automatizacion/POM2.png)
+![Page Object Model](images/u13-automatizacion/POM2.png)
 
 ----
 
@@ -259,7 +259,7 @@ puede construir un page object de ese elemento para reutilizarlo.
 ### Page Object
 Ejemplo: El header se repite a través de todas las páginas de esta web, entonces, en lugar de integrar los elementos
 en el PageObject de la Home, es conveniente crear un PageObject a parte.
-![Componentes](images/unidad8_automatizacion/componentes.png)
+![Componentes](images/u13-automatizacion/componentes.png)
 
 ----
 
@@ -267,14 +267,14 @@ en el PageObject de la Home, es conveniente crear un PageObject a parte.
 
 En la parte superior se definen los locadores de los elementos, 
 en la parte inferior las funciones que devuelven esos objetos.
-![POM](images/unidad8_automatizacion/pom_modelo1.jpg)
+![POM](images/u13-automatizacion/pom_modelo1.jpg)
 
 ----
 
 ### Page Object: Modelo 1
 
 Para emplearlo en los tests, primero se importa, y luego se instancia el pageObject.
-![POM](images/unidad8_automatizacion/pom_modelo1_uso.jpg)
+![POM](images/u13-automatizacion/pom_modelo1_uso.jpg)
 
 ----
 
@@ -292,7 +292,7 @@ Requiere crear una instancia del pageObject antes de utilizar los métodos.
 
 Los locadores van dentro de los métodos.
 
-![POM](images/unidad8_automatizacion/pom_modelo2.jpg)
+![POM](images/u13-automatizacion/pom_modelo2.jpg)
 
 ----
 
@@ -300,7 +300,7 @@ Los locadores van dentro de los métodos.
 
 Para emplearlo en los tests, solo se debe importar.
 
-![POM](images/unidad8_automatizacion/pom_modelo2_uso.jpg)
+![POM](images/u13-automatizacion/pom_modelo2_uso.jpg)
 
 ----
 
@@ -329,31 +329,31 @@ Orden de preferencia:
 
 ### Locadores: Data-test
 
-![Locadores: Data-test](images/unidad8_automatizacion/locator-datatest.jpg)
+![Locadores: Data-test](images/u13-automatizacion/locator-datatest.jpg)
 
 ----
 
 ### Locadores: ID
 
-![Locadores: ID](images/unidad8_automatizacion/locator-id.jpg)
+![Locadores: ID](images/u13-automatizacion/locator-id.jpg)
 
 ----
 
 ### Locadores: Name
 
-![Locadores: Name](images/unidad8_automatizacion/locator-name.jpg)
+![Locadores: Name](images/u13-automatizacion/locator-name.jpg)
 
 ----
 
 ### Locadores: Class
 
-![Locadores: Class](images/unidad8_automatizacion/locator-class.jpg)
+![Locadores: Class](images/u13-automatizacion/locator-class.jpg)
 
 ----
 
 ### Locadores: Xpath
 
-![Locadores: xpath](images/unidad8_automatizacion/locator-xpath.jpg)
+![Locadores: xpath](images/u13-automatizacion/locator-xpath.jpg)
 
 ----
 

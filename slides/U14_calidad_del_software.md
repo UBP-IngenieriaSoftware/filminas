@@ -68,7 +68,7 @@ Created by <i class="fab fa-telegram"></i>
 #### Ingeniería de Software
 #### Ian Sommerville
 
-![Bibliografia](images/unidad11/somerville.png)
+![Bibliografia](images/u14-calidad-soft/somerville.png)
 
 ---
 ### CALIDAD
@@ -298,7 +298,7 @@ La calidad del producto software se puede interpretar como el grado en que dicho
 
 El modelo de calidad del producto definido por la ISO/IEC 25010 se encuentra compuesto por las nueve características de calidad:
 
-![Iso 25010](images/unidad11/iso25010.png)
+![Iso 25010](images/u14-calidad-soft/iso25010.png)
 
 ---
 ### CALIDAD BASADA EN PROCESOS
@@ -318,7 +318,7 @@ El modelo de calidad del producto definido por la ISO/IEC 25010 se encuentra com
 
 ---
 ### CALIDAD BASADA EN PROCESOS
-![Calidad Basada en Procesos](images/unidad11/proceso-de-calidad.png)
+![Calidad Basada en Procesos](images/u14-calidad-soft/proceso-de-calidad.png)
 
 ---
 ### ESTÁNDARES DE SOFTWARE
@@ -432,11 +432,11 @@ Algunos ejemplos concretos:
 
 ---
 ### ISO 9001
-![ISO 9001](images/unidad11/iso9001.png)
+![ISO 9001](images/u14-calidad-soft/iso9001.png)
 
 ---
 ### ISO 9001 Y MANEJO DE CALIDAD
-![Manejo de Calidad](images/unidad11/manejo-de-calidad.png)
+![Manejo de Calidad](images/u14-calidad-soft/manejo-de-calidad.png)
 
 ---
 ### REVISIÓN
@@ -649,7 +649,7 @@ aprobado el progreso de la siguiente etapa del desarrollo
 
 ### Proceso de Revisión de Software
 
-![Proceso de Revisión de Software](images/unidad11/proceso-de-revision.png)
+![Proceso de Revisión de Software](images/u14-calidad-soft/proceso-de-revision.png)
 
 ---
 ### MÉTRICAS DE LA CALIDAD DEL PRODUCTO
@@ -659,7 +659,7 @@ aprobado el progreso de la siguiente etapa del desarrollo
 
 ---
 ### MÉTRICAS DE CONTROL Y PREDICCIÓN
-![Métricas de Control y Predicción](images/unidad11/metricas-control-prediccion.png)
+![Métricas de Control y Predicción](images/u14-calidad-soft/metricas-control-prediccion.png)
 
 ---
 ### SUPOSICIÓN DE MÉTRICAS
@@ -670,7 +670,7 @@ aprobado el progreso de la siguiente etapa del desarrollo
 
 ---
 ### ATRIBUTOS INTERNOS Y EXTERNOS
-![Atributos Internos y Externos](images/unidad11/atributos-internos-externos.png)
+![Atributos Internos y Externos](images/u14-calidad-soft/atributos-internos-externos.png)
 
 ---
 ### MÉTRICAS ESTÁTICAS DE PRODUCTOS DE SOFTWARE
@@ -761,7 +761,7 @@ información útil además de la proporcionada por otras métricas.
 
 ---
 ### PROCESO DE MEDICIÓN DEL PRODUCTO
-![Medición del Producto](images/unidad11/medicion-del-producto.png)
+![Medición del Producto](images/u14-calidad-soft/medicion-del-producto.png)
 
 ---
 ### MANTENIBILIDAD DEL DISEÑO
@@ -808,7 +808,7 @@ N = Número de nodos del grafo
 M = A − N + 2
 
 ---
-![Grafos](images/unidad11/grafo.jpg)
+![Grafos](images/u14-calidad-soft/grafo.jpg)
 
 ---
 

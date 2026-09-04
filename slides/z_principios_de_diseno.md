@@ -91,7 +91,7 @@ comprensibles, flexibles y fáciles de mantener.
 El principio de responsabilidad única establece que un módulo de software debe tener una y solo una razón para cambiar. Esta
 razón para cambiar es lo que se entiende por responsabilidad.
 
-![Single Responsability](images/unidad7/single-responsability.png)
+![Single Responsability](images/patrones-diseno/single-responsability.png)
 
 ----
 
@@ -136,7 +136,7 @@ Ocultamos los detalles de implementación, ganando flexibilidad.
 
 ### Dependency Inversion
 
-![Dependency Inversion](images/unidad7/dependency-inversion.png)
+![Dependency Inversion](images/patrones-diseno/dependency-inversion.png)
 
 ---
 ### YAGNI
@@ -233,7 +233,7 @@ Evitar (que posee acoplamiento):
 
 ### Law of Demeter (LoD)
 
-![Acoplamiento](images/unidad7/acoplamiento.png)
+![Acoplamiento](images/patrones-diseno/acoplamiento.png)
 
 ----
 

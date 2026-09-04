@@ -52,11 +52,11 @@ Las pruebas verifican que el comportamiento del código es correcto desde el pun
 
 ----
 
-![BDD](images/unidad8_automatizacion/bdd.jpg)
+![BDD](images/u13-automatizacion/bdd.jpg)
 
 ----
 
-![BDD](images/unidad8_automatizacion/bdd2.jpg)
+![BDD](images/u13-automatizacion/bdd2.jpg)
 
 ----
 
@@ -88,7 +88,7 @@ para poner al sistema en el estado que se desea probar.
 
 ### Gherkin
 
-![Gherkin](images/unidad8_automatizacion/gherkin.jpg)
+![Gherkin](images/u13-automatizacion/gherkin.jpg)
 
 ---
 ### Cucumber

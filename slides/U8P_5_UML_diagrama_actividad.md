@@ -32,17 +32,17 @@ Ayuda a visualizar un determinado caso de uso a un nivel más detallado. Ilustra
 </thead>
 <tbody>
     <tr>
-        <td><img src="images/unidad5/actividad/Start.png"></td>
+        <td><img src="images/u8-UML/actividad/Start.png"></td>
         <td>Nodo de inicio</td>
         <td>Representa el punto de partida o el estado inicial de una actividad.</td>
     </tr>
     <tr>
-        <td><img src="images/unidad5/actividad/Activity.png"></td>
+        <td><img src="images/u8-UML/actividad/Activity.png"></td>
         <td>Actividad</td>
         <td>Se utiliza para representar las actividades del proceso</td>
     </tr>
     <tr>
-        <td><img src="images/unidad5/actividad/Control-flow.png"></td>
+        <td><img src="images/u8-UML/actividad/Control-flow.png"></td>
         <td>Control de flujo</td>
         <td>Representa el flujo de control de una acción a otra</td>
     </tr>
@@ -65,22 +65,22 @@ Ayuda a visualizar un determinado caso de uso a un nivel más detallado. Ilustra
 </thead>
 <tbody>
     <tr>
-        <td><img src="images/unidad5/actividad/Final-node.png"></td>
+        <td><img src="images/u8-UML/actividad/Final-node.png"></td>
         <td>Nodo Final</td>
         <td>Marca el final de todos los flujos de control</td>
     </tr>
     <tr>
-        <td><img src="images/unidad5/actividad/Decision-node-and-merge-node.png"></td>
+        <td><img src="images/u8-UML/actividad/Decision-node-and-merge-node.png"></td>
         <td>Nodo de decisión</td>
         <td>Representa un punto de ramificación condicional con una entrada y múltiples salidas.</td>
     </tr>
     <tr>
-        <td><img src="images/unidad5/actividad/Fork.png"></td>
+        <td><img src="images/u8-UML/actividad/Fork.png"></td>
         <td>tenedor</td>
         <td>Representa un flujo que puede ramificarse en dos o más flujos paralelos</td>
     </tr>
     <tr>
-        <td><img src="images/unidad5/actividad/Note-or-comment.png"></td>
+        <td><img src="images/u8-UML/actividad/Note-or-comment.png"></td>
         <td>Nota / Comentario </td>
         <td>Permite añadir comentarios pertinentes a los elementos</td>
     </tr>
@@ -92,17 +92,17 @@ Ayuda a visualizar un determinado caso de uso a un nivel más detallado. Ilustra
 Diagrama de actividades para la función Acceder a la vigilancia con cámaras por 
 internet, mostrar vistas de cámaras
 
-![Diagrama de Actividad](images/unidad5/diagrama-actividad2.png)
+![Diagrama de Actividad](images/u8-UML/diagrama-actividad2.png)
 
 ---
 
-![Diagrama de Actividad](images/unidad5/planeacion-proyecto.png)
+![Diagrama de Actividad](images/u8-UML/planeacion-proyecto.png)
 
 ---
 
 ### Diagrama de actividad para el acceso
 
-![Login](images/unidad5/actividad/New-Activity-Diagram-for-Login.png)
+![Login](images/u8-UML/actividad/New-Activity-Diagram-for-Login.png)
 
 ---
 
@@ -125,7 +125,7 @@ forma vertical como los canales.
 
 ---
 
-![Diagrama de Canal](images/unidad5/diagrama-canal.png)
+![Diagrama de Canal](images/u8-UML/diagrama-canal.png)
 
 ---
 
@@ -145,25 +145,25 @@ procedimiento. Representan la manera en la que los distintos actores invocan fun
 
 ### Diagrama de actividades del sistema de gestión de documentos
 
-![Diagrama de Actividad para gestión de documentos](images/unidad5/actividad/Activity-Diagram-for-Document-Management-System.png)
+![Diagrama de Actividad para gestión de documentos](images/u8-UML/actividad/Activity-Diagram-for-Document-Management-System.png)
 
 ---
 
 ### Diagrama de actividad para el sistema de compras en línea
 
-![Diagrama de actividad para el sistema de compras en línea](images/unidad5/actividad/New-Online-Shopping-System.png)
+![Diagrama de actividad para el sistema de compras en línea](images/u8-UML/actividad/New-Online-Shopping-System.png)
 
 ---
 
 ### Diagrama de actividad para ATM
 
-![Diagrama de actividad para ATM](images/unidad5/actividad/New-ATM-Activity-Diagram-e1660549830558.png)
+![Diagrama de actividad para ATM](images/u8-UML/actividad/New-ATM-Activity-Diagram-e1660549830558.png)
 
 ---
 
 ### Diagrama de actividades del sistema de gestión de la universidad
 
-![Diagrama de actividades del sistema de gestión de la universidad](images/unidad5/actividad/New-College-Management.png)
+![Diagrama de actividades del sistema de gestión de la universidad](images/u8-UML/actividad/New-College-Management.png)
 
 ---
 

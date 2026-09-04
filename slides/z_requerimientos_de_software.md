@@ -339,7 +339,7 @@ describir en forma correcta estas acciones, estas comienzan con: “El sistema d
 requerido)
 
 ---
-![Tabla efectos](images/unidad3/tabla_efecto.jpg)
+![Tabla efectos](images/u6-requerimientos/tabla_efecto.jpg)
 
 ---
 ### Requerimientos No Funcionales

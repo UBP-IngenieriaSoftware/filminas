@@ -30,7 +30,7 @@ Está construido a partir de dos dimensiones:
 * Horizontal: Representa los objetos que participan en la secuencia.
 * Vertical: Representa la línea de tiempo sobre la que los elementos actúan. Va de arriba hacia abajo.
 
-![Diagrama de Secuencia: Dimensiones](images/unidad5/secuencia_dimensiones.png)
+![Diagrama de Secuencia: Dimensiones](images/u8-UML/secuencia_dimensiones.png)
 
 ---
 ### Elementos
@@ -49,14 +49,14 @@ funcionalidad específica
 
 ----
 
-![Diagrama de Secuencia: Objetos](images/unidad5/secuencia_objetos.jpg)
+![Diagrama de Secuencia: Objetos](images/u8-UML/secuencia_objetos.jpg)
 
 ---
 Algunas veces un diagrama de secuencia tendrá una línea de vida con un símbolo del elemento actor en la parte superior.
 Este usualmente sería el caso si un diagrama de secuencia es contenido por un caso de uso. Los elementos entidad,
 control y límite de los diagramas de robustez también pueden contener líneas de vida.
 
-![Elementos Secuencia](images/unidad5/elementos_secuencia.GIF)
+![Elementos Secuencia](images/u8-UML/elementos_secuencia.GIF)
 
 ---
 ## Mensaje:
@@ -64,7 +64,7 @@ control y límite de los diagramas de robustez también pueden contener líneas 
 * Representa el paso de un mensaje entre dos objetos o entre un objeto y sí mismo.
 * Flecha con el nombre del mensaje y los argumentos y que va desde el objeto que envía hacia el objeto que recibe.
 
-![Diagramas de Secuencia: Mensajes](images/unidad5/secuencia_mensajes.jpg)
+![Diagramas de Secuencia: Mensajes](images/u8-UML/secuencia_mensajes.jpg)
 
 ----
 
@@ -79,7 +79,7 @@ dentro de un programa, así como otros tipos de mensaje que se comportan de la m
 * Un **mensaje de retorno** asíncrono es denotado por una línea punteada. 
 
 ---
-![Diagrama de Secuencia](images/unidad5/secuencia_ejemplo.png)
+![Diagrama de Secuencia](images/u8-UML/secuencia_ejemplo.png)
 
 ---
 ### Mensaje Self
@@ -87,7 +87,7 @@ Un mensaje self puede representar una llamada recursiva de una operación, o un 
 perteneciente al mismo objeto. Este se muestra como cuando crea un foco de control anidado en la ocurrencia de 
 ejecución de la línea de vida.
 
-![Mensaje Self](images/unidad5/mensaje_self.GIF)
+![Mensaje Self](images/u8-UML/mensaje_self.GIF)
 
 ---
 ### Mensajes perdidos y encontrados
@@ -97,7 +97,7 @@ a un destino que no se muestra en el diagrama actual. Los mensajes encontrados s
 no conocido, o de un remitente no conocido en el diagrama actual. Ellos se denotan yendo o llegando desde un elemento 
 de punto final.
 
-![Mensaje lost](images/unidad5/menje_lost.GIF)
+![Mensaje lost](images/u8-UML/menje_lost.GIF)
 
 ---
 ### Inicio y final de línea de vida
@@ -107,7 +107,7 @@ En el último caso, la línea de vida se termina por un símbolo de detención, 
 caso, el símbolo al inicio de la línea de vida se muestra en un nivel más bajo de la página que el símbolo del objeto 
 que causó la creación. El siguiente diagrama muestra un objeto que fue creado y destruido.
 
-![Delete Element](images/unidad5/delete_element.GIF)
+![Delete Element](images/u8-UML/delete_element.GIF)
 
 ---
 ### Restricciones de tiempo y duración
@@ -117,7 +117,7 @@ de tiempo hacia abajo, cuando se modela un sistema en tiempo real, o incluso un 
 puede ser importante considerar el tiempo que toma realizar las acciones. Al configurar una restricción de duración para 
 un mensaje, el mensaje se mostrará como una línea inclinada.
 
-![Rectriccion de tiempo](images/unidad5/restriccion_tiempo.GIF)
+![Rectriccion de tiempo](images/u8-UML/restriccion_tiempo.GIF)
 
 ---
 ### Fragmentos combinados
@@ -125,7 +125,7 @@ un mensaje, el mensaje se mostrará como una línea inclinada.
 * Permiten describir una seri de ritas de ejecución posibles de forma compacta y precisa.
 * Se representa mediante un rectángulo, con el tipo de operador específico por la palabra clave respectiva.
 
-![Operador y operandos](images/unidad5/operador-operandos.png)
+![Operador y operandos](images/u8-UML/operador-operandos.png)
 
 ---
 ### Fragmentos combinados
@@ -162,7 +162,7 @@ Filtros y afirmaciones:
 
 3. **Loop** incluye una serie de mensajes que están repetidos.
 
-![Loop](images/unidad5/loop.GIF)
+![Loop](images/u8-UML/loop.GIF)
 
 ----
 
@@ -175,67 +175,67 @@ Cuando un alumno quiere matricularse pueden darse estos casos:
 
 ----
 
-![Alt & Opt](images/unidad5/alt-opt.png)
+![Alt & Opt](images/u8-UML/alt-opt.png)
 
 ----
 
-![Loop & Break](images/unidad5/loop-break.png)
+![Loop & Break](images/u8-UML/loop-break.png)
 
 ----
 
 <!-- .slide: style="font-size: 0.55em" -->
 6. **Weak**, _seq_ incluye un número de secuencias para las cuales todos los mensajes se deben procesar en un segmento anterior, antes de que el siguiente segmento pueda comenzar, pero que no impone ningún secuenciado en los mensajes que no comparten una línea de vida.
 
-![sec](images/unidad5/sec.png)
+![sec](images/u8-UML/sec.png)
 
 ----
 
 <!-- .slide: style="font-size: 0.55em" -->
 7. **Strict**, _strict_ incluye una serie de mensajes que se deben procesar en el orden proporcionado.
 
-![strict](images/unidad5/strict.png)
+![strict](images/u8-UML/strict.png)
 
 ----
 
 <!-- .slide: style="font-size: 0.55em" -->
 5. **Parallel**, _par_ modela procesos concurrentes.
 
-![par](images/unidad5/par.png)
+![par](images/u8-UML/par.png)
 
 ----
 
 <!-- .slide: style="font-size: 0.55em" -->
 8. **Critical** incluye una sección crítica.
 
-![critical](images/unidad5/critical.png)
+![critical](images/u8-UML/critical.png)
 
 ----
 
 <!-- .slide: style="font-size: 0.55em" -->
 10. **Ignore** declara un mensaje o mensajes que no son de ningún interés si este aparece en el contexto actual.
 
-![ignore](images/unidad5/ignore.png)
+![ignore](images/u8-UML/ignore.png)
 
 ----
 
 <!-- .slide: style="font-size: 0.55em" -->
 11. **Consider** es el opuesto del fragmento Ignore: cualquier mensaje que no se incluya en el fragmento Consider se debería ignorar.
 
-![consider](images/unidad5/consider.png)
+![consider](images/u8-UML/consider.png)
 
 ----
 
 <!-- .slide: style="font-size: 0.55em" -->
 12. **Assertion**, _assert_ designa que cualquier secuencia que no se muestra como un operando de la aserción es inválida.
 
-![assert](images/unidad5/assert.png)
+![assert](images/u8-UML/assert.png)
 
 ----
 
 <!-- .slide: style="font-size: 0.55em" -->
 9. **Negative**, _neg_ incluye una serie de mensajes inválidos.
 
-![neg](images/unidad5/neg.png)
+![neg](images/u8-UML/neg.png)
 
 ---
 ### Puerta
@@ -243,7 +243,7 @@ Una "puerta" se refiere a un elemento que se utiliza para mostrar bifurcaciones 
 interacciones entre objetos. Estas puertas se utilizan para representar condiciones lógicas o ramificaciones en el 
 flujo de ejecución de un sistema o función.
 
-![Puerta](images/unidad5/puerta.GIF)
+![Puerta](images/u8-UML/puerta.GIF)
 
 ----
 
@@ -261,7 +261,7 @@ después de que se haya completado una serie de actividades en paralelo, y los f
 ### Descomposición en parte
 Un objeto puede tener más de una línea de vida que viene de ésta. Esto permite mensajes de entre e intra objetos para que se muestren en el mismo diagrama.
 
-![Descomposicion en Partes](images/unidad5/descomposicion_en_partes.GIF)
+![Descomposicion en Partes](images/u8-UML/descomposicion_en_partes.GIF)
 
 ---
 ### Continuaciones / Invariantes de Estado
@@ -269,14 +269,14 @@ Un objeto puede tener más de una línea de vida que viene de ésta. Esto permit
 Una invariante de estado es una restricción ubicada en una línea de vida que debe ser verdadera en el tiempo de 
 ejecución. Esta se muestra como un rectángulo con los extremos en semi-circulos.
 
-![Continuaciones](images/unidad5/continuaciones.GIF)
+![Continuaciones](images/u8-UML/continuaciones.GIF)
 
 Una continuación tiene la misma notación que una invariante de estado pero se usa en fragmentos combinados y puede 
 extenderse a través de más de una línea de vida.
 
 ---
 
-![Diagrama de Secuencia](images/unidad5/ejemploSecuencia.png)
+![Diagrama de Secuencia](images/u8-UML/ejemploSecuencia.png)
 
 ---
 
@@ -361,7 +361,7 @@ deactivate S
 
 ---
 
-![Ejemplo de PlantUML](images/unidad5/example-plantUML.png)
+![Ejemplo de PlantUML](images/u8-UML/example-plantUML.png)
 
 ---
 
@@ -370,7 +370,7 @@ Crea un diagrama de secuencia para que el client eo el administrativo de reserva
 
 Emplear los siguientes objetos:
 
-![Ejemplo Ejercicios](images/unidad5/ejemplo-ejercicio.png)
+![Ejemplo Ejercicios](images/u8-UML/ejemplo-ejercicio.png)
 
 ---
 

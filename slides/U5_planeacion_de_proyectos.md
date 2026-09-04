@@ -32,7 +32,7 @@ Created by <i class="fab fa-telegram"></i>
 # Ingeniería de Software
 ## Ian Sommerville
 
-![Bibliografia](images/unidad10/ian-sommerville-23.png)
+![Bibliografia](images/u5-gest-proy/ian-sommerville-23.png)
 
 ---
 
@@ -202,7 +202,7 @@ Proceso de definir cómo se organizará el trabajo:
 
 ### Proceso de Calendarización del Proyecto
 
-![Proceso](images/unidad10/proceso.png)
+![Proceso](images/u5-gest-proy/proceso.png)
 
 ---
 
@@ -354,7 +354,7 @@ Cada actividad debe incluir:
 
 ### Gráfica de barras de actividad
 
-![Grafico de Secuencia](images/unidad10/grafico-secuencia.jpg)
+![Grafico de Secuencia](images/u5-gest-proy/grafico-secuencia.jpg)
 
 ---
 
@@ -365,7 +365,7 @@ Cada actividad debe incluir:
 
 ### Gráfica de asignación de personal
 
-![Grafico de asignacion de personal](images/unidad10/asignacion-de-personal.png)
+![Grafico de asignacion de personal](images/u5-gest-proy/asignacion-de-personal.png)
 
 ---
 
@@ -378,13 +378,13 @@ Cada actividad debe incluir:
 
 ### Diagrama de Gantt: Ejemplo
 
-![Diagrama de Gantt](images/unidad10/gantt.png)
+![Diagrama de Gantt](images/u5-gest-proy/gantt.png)
 
 ---
 
 ### Diagrama de Actividad (PERT)
 
-![Pert](images/unidad10/diagrama-actividad.jpg)
+![Pert](images/u5-gest-proy/diagrama-actividad.jpg)
 
 ---
 
@@ -405,7 +405,7 @@ la planeación del siguiente incremento de un sistema. En general representa de 
 
 ### Planeación en XP
 
-![Planeación en XP](images/unidad10/planeacion-xp.png)
+![Planeación en XP](images/u5-gest-proy/planeacion-xp.png)
 
 ----
 
@@ -477,7 +477,7 @@ Combinan experiencia, métricas y modelos, o incorporan nuevas técnicas:
 - Una estimación inicial de **x meses de esfuerzo** puede variar entre **0.25x y 4x** en la realidad.  
 - La precisión mejora a medida que avanza el proyecto.
 
-![Errores de estimaciones](images/unidad10/incertidumbre-estimacion.png)
+![Errores de estimaciones](images/u5-gest-proy/incertidumbre-estimacion.png)
 
 ---
 
@@ -493,7 +493,7 @@ Se pueden calibrar los modelos con proyectos ya completados para mejorar la prec
 
 ### Modelado algorítmico de costos
 
-![Formula-estimacion](images/unidad10/modelado-algoritmico.png)
+![Formula-estimacion](images/u5-gest-proy/modelado-algoritmico.png)
 
 - **A:** factor constante (depende de prácticas de la organización y tipo de software).  
 - **Tamaño:** líneas de código o puntos de función.  
@@ -519,7 +519,7 @@ Incluye 4 submodelos:
 
 ---
 
-![Cocomo](images/unidad10/cocomo.png) 
+![Cocomo](images/u5-gest-proy/cocomo.png) 
 
 ---
 
@@ -556,14 +556,14 @@ Calcule el número de pantallas, informes y componentes 3GL que conformarán est
 
 Se clasifica cada instancia de objeto en niveles de complejidad simple, media y difícil.
 
-![Calculo de Pantallas](images/unidad10/calculo-pantallas.jpg)
+![Calculo de Pantallas](images/u5-gest-proy/calculo-pantallas.jpg)
 
 ----
 
 ### 1. Modelo de composición de aplicación
 #### 2. Clasifique los niveles de complejidad de cada objeto
 
-![Calculo de Reportes](images/unidad10/calculo-reportes.jpg)
+![Calculo de Reportes](images/u5-gest-proy/calculo-reportes.jpg)
 
 ----
 
@@ -572,7 +572,7 @@ Se clasifica cada instancia de objeto en niveles de complejidad simple, media y 
 
 Los pesos se utilizan para tres tipos de objetos: pantallas, informes y componentes 3GL.
 
-![Calculo de Complejidad](images/unidad10/calculo-complejidad.jpg)
+![Calculo de Complejidad](images/u5-gest-proy/calculo-complejidad.jpg)
 
 ----
 
@@ -600,7 +600,7 @@ Los NOP son los puntos de objeto que se deben desarrollar y se diferencian del r
 <!-- .slide: style="font-size: 0.90em" -->
 La tasa de productividad se calcula a partir de la información sobre la experiencia y la capacidad del desarrollador.
 
-![Porcentaje de Productividad](images/unidad10/Productivity-Rate.webp)
+![Porcentaje de Productividad](images/u5-gest-proy/Productivity-Rate.webp)
 
 ----
 
@@ -720,11 +720,11 @@ Modela el esfuerzo en proyectos con **componentes reutilizados**, código genera
 Enfocado en **prototipos y proyectos con reutilización**.  
 - La **productividad** depende de la experiencia, habilidades y herramientas.  
 
-![Productividad](images/unidad10/productividad.png)
+![Productividad](images/u5-gest-proy/productividad.png)
 
 
 ### Fórmula de estimación en composición
-![Estimación de Esfuerzo](images/unidad10/estimacion-esfuerzo.png)
+![Estimación de Esfuerzo](images/u5-gest-proy/estimacion-esfuerzo.png)
 
 - **PM:** esfuerzo en meses-hombre.  
 - **NAP:** número de puntos de aplicación.  
@@ -746,7 +746,7 @@ Simplifica la fórmula general:
 
 ### Parámetros del diseño temprano
 <!-- .slide: style="font-size: 0.70em" -->
-![Fórmula](images/unidad10/diseno-temprano.png)
+![Fórmula](images/u5-gest-proy/diseno-temprano.png)
 
 - **A = 2.94** (propuesto por Boehm)
 - **B = 1.1 a 1.24**, según innovación, riesgos, cohesión y madurez.  
@@ -893,7 +893,7 @@ Representa el número de líneas de código existentes que se van a adaptar/reut
 
 No todo ese código cuenta como “nuevo”, porque adaptarlo no cuesta lo mismo que desarrollarlo desde cero.
 
-![Reutilización](images/unidad10/reutilizacion.png)
+![Reutilización](images/u5-gest-proy/reutilizacion.png)
 
 - **ASLOC:** líneas de código reutilizado.  
 - **AT:** % de código generado automáticamente.  
@@ -915,7 +915,7 @@ Es una medida ajustada que convierte el esfuerzo de reutilización/adaptación e
 
 #### AAM: Adaptation Adjustment Multiplier
 
-![AAM](images/unidad10/AAM.png)
+![AAM](images/u5-gest-proy/AAM.png)
 
 - **AAF:** Factor de Ajuste de Adaptación, que representa el costo de hacer un cambio.  
 - **SU:** Penalización por Comprensión del Software. Refleja cuánto cuesta entender el software antes de adaptarlo. 10 (muy simple) a 50 (muy complejo).
@@ -972,7 +972,7 @@ Se aplica cuando ya existe un diseño arquitectónico inicial.
 
 ### Fórmula posaquitectonica
 
-![Postarquitetconica](images/unidad10/posarquitectonico.png)
+![Postarquitetconica](images/u5-gest-proy/posarquitectonico.png)
 
 - A = 2.94 (constante calibrada).
 - Tamaño = LOC, Puntos de Función o ESLOC (si hay reutilización).
@@ -1033,7 +1033,7 @@ Se aplica cuando ya existe un diseño arquitectónico inicial.
 
 ---
 
-![Estimacion COCOMO](images/unidad10/estimacion-cocomo.png)
+![Estimacion COCOMO](images/u5-gest-proy/estimacion-cocomo.png)
 
 ---
 
