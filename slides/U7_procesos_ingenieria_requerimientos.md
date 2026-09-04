@@ -1000,28 +1000,6 @@ No es una técnica de elicitación de requisitos en sentido estricto, pero puede
 
 ### H9. Análisis DOFA
 
-<table>
-<thead>
-<tr>
-<th></th>
-<th>Positivo</th>
-<th>Negativo</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Interno</strong></td>
-<td>Fortalezas</td>
-<td>Debilidades</td>
-</tr>
-<tr>
-<td><strong>Externo</strong></td>
-<td>Oportunidades</td>
-<td>Amenazas</td>
-</tr>
-</tbody>
-</table>
-
 Ejemplo:
 - Debilidad: los empleados deben cargar manualmente los datos de los clientes.
 
@@ -1045,6 +1023,12 @@ Sirve para comprender:
 
 ### H10. Cadena de Valor
 
+![Cadena de Valor](images/u7-ing-req/cadena-de-valor.png)
+
+----
+
+### H10. Cadena de Valor
+
 Ejemplo:
 
 En una empresa de comercio electrónico:
@@ -1052,12 +1036,6 @@ En una empresa de comercio electrónico:
 Compra → Preparación → Despacho → Entrega → Postventa
 
 El análisis puede revelar que existe un problema en la comunicación entre despacho y entrega, dando lugar a nuevos requisitos.
-
-----
-
-### H10. Cadena de Valor
-
-![Cadena de Valor](images/u7-ing-req/cadena-de-valor.png)
 
 ---
 ### H11. Modelo conceptual
@@ -1173,25 +1151,18 @@ Es especialmente útil para priorizar necesidades y verificar que las caracterí
 
 ### H16. Casa de Calidad / QFD
 <!-- .slide: style="font-size: 0.90em" -->
-1. **Identificar las necesidades del cliente (Los "Qué")**
-Coloca a la izquierda de la matriz las exigencias, deseos y expectativas que los consumidores buscan en el producto mediante encuestas o estudios de mercado.
-2. **Valorar la importancia para el cliente**
-Asigna una puntuación numérica (por ejemplo, del 1 al 5) a cada necesidad según cuán importante sea para el comprador.
-3. **Definir los requerimientos técnicos (Los "Cómo")**
-Escribe en la parte superior los parámetros de diseño o características medibles con los que la empresa responderá a esas demandas.
+1.  **Requerimientos del cliente ¿Qué?** El qué quiere obtener la empresa con sus productos. Todos los requerimientos del consumidor que son críticos porque determinan la base para el diseño del producto, además identifican la necesidad del cliente a partir de sus requerimientos.
+2. **Prioridades. Importancia para el cliente.** Calificación subjetiva de la importancia que tiene cada uno de los requerimientos definidos anteriormente. Para ello se establece una escala, por ejemplo del 1 al 5.
+3. **Requerimientos técnicos ¿Cómo?** se listan todos aquellos requisitos que deben cumplir nuestros procesos de producción para poder alcanzar los requerimientos listados de los clientes.
 
 ----
 
 ### H16. Casa de Calidad / QFD
-<!-- .slide: style="font-size: 0.85em" -->
-4. **Construir la matriz de relaciones**
-Rellena el centro de la casa relacionando cada "Qué" con cada "Cómo". Usa símbolos o números para indicar si la relación es fuerte, moderada o débil.
-5. **Evaluar la matriz de correlación (El techo)**
-En la parte superior triangular ("techo"), analiza cómo interactúan los requerimientos técnicos entre sí: si se apoyan o si entran en conflicto.
-6. **Añadir la evaluación competitiva**
-Compara en los laterales cómo califican los clientes a la competencia frente a tu producto en relación con esas necesidades.
-7. **Determinar prioridades y metas técnicas**
-Calcula los valores de prioridad para los "Cómo" multiplicando la importancia del cliente por el peso de la relación y define los objetivos técnicos a alcanzar.
+<!-- .slide: style="font-size: 0.80em" -->
+ 4. **Matriz de relación entre los requisitos del cliente y los atributos del producto.** En esta matriz se evalúa que impacto tienen los diferentes requerimientos técnicos respecto a los requerimientos de los clientes.
+5. **Evaluación del mercado y de la percepción del cliente.** Los clientes nos van a evaluar cómo nos encontramos nosotros respecto a las demás empresas del mercado que nos son competencia directa, respecto a los requerimientos del cliente.
+6. **Evaluación técnica.** Nos indica cómo nos encontramos nosotros en el mercado respecto a los requerimientos técnicos.
+7. **Evaluación de las relaciones entre los requisitos técnicos.** Nos indica si entre los diferentes requisitos técnicos hay relaciones. Se debe evaluar que tan fuerte son esas relaciones y si son positivas o negativas.
 
 ----
 
@@ -1204,7 +1175,7 @@ Calcula los valores de prioridad para los "Cómo" multiplicando la importancia d
 
 ### H16. Casa de Calidad / QFD
 
-![Casa de Calidad-Ejemplo](images/u7-ing-req/casa-de-calidad-ejemplo.png)
+![Casa de Calidad-Ejemplo](images/u7-ing-req/casa-de-la-calidad-ejemplo.jpg)
 
 ---
 ### H17. Lista de verificación
