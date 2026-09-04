@@ -256,7 +256,7 @@ involucradas, la organización y el desarrollo de los requisitos.
 
 Este proceso comprende 5 actividades:
 
-![Proceso de Requerimientos](images/u6-requerimientos/proceso-ing-req.png)
+![Proceso de Requerimientos](images/u7-ing-req/proceso-ing-req.png)
 
 ---
 
@@ -386,7 +386,7 @@ se buscan alternativas y soluciones, y luego se van fijando reuniones con el cli
 
 ### 2. Análisis de Requerimientos
 
-![Análisis de Requerimientos](images/u6-requerimientos/analisis-requerimientos.png)
+![Análisis de Requerimientos](images/u7-ing-req/analisis-requerimientos.png)
 
 ---
 
@@ -405,7 +405,7 @@ Es un "pasar en limpio" el análisis realizado previamente aplicando técnicas y
 
 ### 3. Especificación de Requerimientos
 
-![Especificación de requerimientos](images/u6-requerimientos/especificacion-de-requerimientos.png)
+![Especificación de requerimientos](images/u7-ing-req/especificacion-de-requerimientos.png)
 
 ----
 
@@ -677,7 +677,7 @@ Es importante asegurarse que esto no genere retrasos en la entrega. Y llevar una
 
 ---
 
-![Analisis Requerimiento Espiral](images/u6-requerimientos/analisis-requerimientos-espiral.png)
+![Analisis Requerimiento Espiral](images/u7-ing-req/analisis-requerimientos-espiral.png)
 
 ---
 ### Partes interesadas en el sistema para MHC-PMS
@@ -909,7 +909,7 @@ adquisición de requerimientos.
 ----
 
 ### Etnografía y prototipos para el análisis de los requerimientos
-![Etnografia](images/u6-requerimientos/etnografia.png)
+![Etnografia](images/u7-ing-req/etnografia.png)
 
 ----
 
@@ -934,25 +934,25 @@ Por ejemplo:
 
 ### H7. Prototipo no funcional: Sketch
 
-![Sketch](images/u6-requerimientos/sketch.jpg)
+![Sketch](images/u7-ing-req/sketch.jpg)
 
 ----
 
 ### H7. Prototipo no funcional: Wireframe
 
-![Wireframe](images/u6-requerimientos/wireframe.jpg)
+![Wireframe](images/u7-ing-req/wireframe.jpg)
 
 ----
 
 ### H7. Prototipo no funcional: Mockup
 
-![Mockup](images/u6-requerimientos/mockup.png)
+![Mockup](images/u7-ing-req/mockup.png)
 
 ----
 
 ### H7. Prototipo no funcional: Prototipo
 
-![Prototipo](images/u6-requerimientos/prototipo.png)
+![Prototipo](images/u7-ing-req/prototipo.png)
 
 ----
 
@@ -994,7 +994,7 @@ No es una técnica de elicitación de requisitos en sentido estricto, pero puede
 
 ### H9. Análisis DOFA
 
-![DOFA](images/u6-requerimientos/Cuadrantes-Matriz-FODA.webp)
+![DOFA](images/u7-ing-req/Cuadrantes-Matriz-FODA.png)
 
 ----
 
@@ -1053,6 +1053,12 @@ Compra → Preparación → Despacho → Entrega → Postventa
 
 El análisis puede revelar que existe un problema en la comunicación entre despacho y entrega, dando lugar a nuevos requisitos.
 
+----
+
+### H10. Cadena de Valor
+
+![Cadena de Valor](images/u7-ing-req/cadena-de-valor.png)
+
 ---
 ### H11. Modelo conceptual
 
@@ -1070,7 +1076,7 @@ Permite descubrir y aclarar:
 
 ### H11. Modelo conceptual
 
-![Modelo Conceptual](images/u6-requerimientos/Figura-1-Modelo-Conceptual.webp)
+![Modelo Conceptual](images/u7-ing-req/modelo-Conceptual.webp)
 
 ---
 ### H12. Diagrama de pescado
@@ -1100,7 +1106,7 @@ Es útil para comprender por qué existe una necesidad antes de convertirla en r
 
 ### H12. Diagrama de pescado
 
-![Diagrama de Ishikawa](images/u6-requerimientos/diagrama-ishikawa.png)
+![Diagrama de Ishikawa](images/u7-ing-req/diagrama-ishikawa.png)
 
 ---
 ### H13. Glosario
@@ -1125,7 +1131,7 @@ Puede ayudar a descubrir requisitos porque al representar un proceso aparecen:
 
 ----
 
-![Diagrama Actividad](images/u6-requerimientos/diagrama-actividad.png)
+![Diagrama Actividad](images/u7-ing-req/diagrama-actividad.png)
 
 ---
 ### H15. Casos de uso
@@ -1143,12 +1149,12 @@ de eventos en el sistema.
 ----
 
 ### Elementos de un diagrama de casos de uso
-![Elementos de un diagrama de casos de uso](images/u6-requerimientos/elementos-diagrama-casos-de-uso.jpg)
+![Elementos de un diagrama de casos de uso](images/u7-ing-req/elementos-diagrama-casos-de-uso.jpg)
 
 ----
 
 ### Casos de uso para MHC-PMS
-![Diagrama de casos de uso](images/u6-requerimientos/diagrama-casos-de-uso.png)
+![Diagrama de casos de uso](images/u7-ing-req/diagrama-casos-de-uso.png)
 
 ----
 
@@ -1161,49 +1167,44 @@ Elabore el diagrama de casos de uso del sistema.
 
 QFD (Quality Function Deployment) permite relacionar las necesidades del cliente con características o requisitos técnicos del producto.
 
-La herramienta más conocida es la Casa de la Calidad.
-
-<table>
-<thead>
-<tr>
-<th>Necesidad del cliente</th>
-<th style="text-align:right">Importancia</th>
-<th>Característica técnica</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Fácil de utilizar</td>
-<td style="text-align:right">Alta</td>
-<td>Interfaz simplificada</td>
-</tr>
-<tr>
-<td>Respuesta rápida</td>
-<td style="text-align:right">Alta</td>
-<td>Tiempo de respuesta &lt; 2 s</td>
-</tr>
-<tr>
-<td>Seguro</td>
-<td style="text-align:right">Alta</td>
-<td>Autenticación y autorización</td>
-</tr>
-</tbody>
-</table>
-
 Es especialmente útil para priorizar necesidades y verificar que las características del producto respondan a lo que el cliente considera importante.
 
 ----
 
 ### H16. Casa de Calidad / QFD
+<!-- .slide: style="font-size: 0.90em" -->
+1. **Identificar las necesidades del cliente (Los "Qué")**
+Coloca a la izquierda de la matriz las exigencias, deseos y expectativas que los consumidores buscan en el producto mediante encuestas o estudios de mercado.
+2. **Valorar la importancia para el cliente**
+Asigna una puntuación numérica (por ejemplo, del 1 al 5) a cada necesidad según cuán importante sea para el comprador.
+3. **Definir los requerimientos técnicos (Los "Cómo")**
+Escribe en la parte superior los parámetros de diseño o características medibles con los que la empresa responderá a esas demandas.
 
-![Casa de Calidad](images/u6-requerimientos/casa-de-calidad.png)
+----
+
+### H16. Casa de Calidad / QFD
+<!-- .slide: style="font-size: 0.85em" -->
+4. **Construir la matriz de relaciones**
+Rellena el centro de la casa relacionando cada "Qué" con cada "Cómo". Usa símbolos o números para indicar si la relación es fuerte, moderada o débil.
+5. **Evaluar la matriz de correlación (El techo)**
+En la parte superior triangular ("techo"), analiza cómo interactúan los requerimientos técnicos entre sí: si se apoyan o si entran en conflicto.
+6. **Añadir la evaluación competitiva**
+Compara en los laterales cómo califican los clientes a la competencia frente a tu producto en relación con esas necesidades.
+7. **Determinar prioridades y metas técnicas**
+Calcula los valores de prioridad para los "Cómo" multiplicando la importancia del cliente por el peso de la relación y define los objetivos técnicos a alcanzar.
+
+----
+
+### H16. Casa de Calidad / QFD
+
+![Casa de Calidad](images/u7-ing-req/casa-de-calidad.png)
 
 
 ----
 
 ### H16. Casa de Calidad / QFD
 
-![Casa de Calidad-Ejemplo](images/u6-requerimientos/casa-de-calidad-ejemplo.png)
+![Casa de Calidad-Ejemplo](images/u7-ing-req/casa-de-calidad-ejemplo.png)
 
 ---
 ### H17. Lista de verificación
@@ -1307,7 +1308,7 @@ Piensa en 3 escenarios de uso, cada uno desde el punto de vista de un usuario/ro
 
 #### Puntos de vista para describir el modelo de requerimientos
 
-![Modelo de Requerimientos](images/u6-requerimientos/describir-requerimientos.png)
+![Modelo de Requerimientos](images/u7-ing-req/describir-requerimientos.png)
 
 ---
 ### Gestión de requerimientos
@@ -1357,7 +1358,7 @@ tiene que ser cambiado.
 
 ---
 ### Evolución de los requerimientos
-![Evolución de requerimientos](images/u6-requerimientos/evolucion-de-requerimientos.png)
+![Evolución de requerimientos](images/u7-ing-req/evolucion-de-requerimientos.png)
 
 ---
 ### Planificación de la gestión de requerimientos
@@ -1395,7 +1396,7 @@ que el documento debe ser organizado de tal manera que los cambios se pueden imp
 
 ### Gestión de cambio de los requerimientos
 
-![Gestión de Cambios](images/u6-requerimientos/gestion-de-cambios.png)
+![Gestión de Cambios](images/u7-ing-req/gestion-de-cambios.png)
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
