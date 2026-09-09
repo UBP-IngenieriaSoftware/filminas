@@ -237,9 +237,13 @@ Cada actividad debe incluir:
 
 ### Definición de hitos
 - Los **hitos** marcan puntos clave en el calendario.  
-- Cada hito debe documentarse con un **reporte breve** que resuma el avance y el trabajo realizado.  
+- Cada hito debe documentarse con un **reporte breve** que resuma el avance y el trabajo realizado.
+- Los **hitos** pueden asociarse con una sola tarea o con grupos de actividades relacionadas.
 
----
+----
+
+Ejemplo: **M1** se asocia con la tarea **T1**, mientras que el hito
+**M3** se asocia con un par de tareas, **T2** y **T4**
 <!-- .slide: style="font-size: 0.60em" -->
 <!--
 | Tarea | Esfuerzo (días-hombre) | Duración (días) | Dependencias  |
@@ -385,6 +389,19 @@ Cada actividad debe incluir:
 ### Diagrama de Actividad (PERT)
 
 ![Pert](images/u5-gest-proy/diagrama-actividad.jpg)
+
+----
+
+#### Pert
+<!-- .slide: style="font-size: 0.95em" -->
+Son las siglas de **Program Evaluation and Review Techique** que significa Técnica de Revisión y Evaluación de Programas.
+
+Es útil para evaluar la ruta crítica.
+
+En esta técnica se agregan 3 valores de tiempo a cada actividad:
+- Tiempo necesario para la actividad **sin contratiempos**.
+- Tiempo necesario para la actividad en **condiciones normales**.
+- Tiempo necesario para la actividad con **contratiempos**.
 
 ---
 
