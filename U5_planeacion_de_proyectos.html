@@ -86,6 +86,7 @@ Created by <i class="fab fa-telegram"></i>
 - Anticipar los problemas que pudieran surgir 
 - Preparar posibles soluciones a inconvenientes
 - Fijación de Precio
+- Valorar el avance
 
 ---
 
@@ -124,6 +125,12 @@ cómo se dividirá en incrementos, cómo se asignarán los recursos. Afinar esti
 
 ---
 
+### Fijación de precio: Expectativa
+
+**costo del desarrollo + ganancias para el diseñador**
+
+----
+
 ### Fijación de precio: Realidad
 En la práctica influyen:  
 
@@ -135,6 +142,7 @@ En la práctica influyen:
 ---
 
 <!-- .slide: style="font-size: 0.85em" -->
+### Factores que influyen en el proyecto
 - **Oportunidad de mercado:** Cotizar bajo para ganar un cliente o adquirir experiencia en nuevos productos.  
 - **Incertidumbre en la estimación:** Incrementar el precio para cubrir contingencias derivadas de falta de conocimiento o experiencia.  
 - **Términos contractuales:** Si el cliente conserva la propiedad del código y puede reutilizarlo, la ganancia a largo plazo será menor.  
@@ -152,7 +160,7 @@ Luego cliente y proveedor acuerdan la **especificación detallada** antes de la 
 
 ### Desarrollo dirigido por un plan
 Incluye una planificación detallada con:  
-1. **Introducción:** Objetivos y restricciones del proyecto.  
+1. **Introducción:** Objetivos y restricciones (presupuesto, tiempo, personal, etc) del proyecto.  
 2. **Organización:** Estructura del equipo, roles y responsabilidades.  
 3. **Análisis de riesgos:** Riesgos potenciales, probabilidad y estrategias de mitigación.  
 4. **Recursos tecnológicos:** Hardware y software requeridos. 
@@ -178,6 +186,10 @@ validación del sistema.
 12. **Plan de desarrollo de personal:** Describe cómo se desarrollarán las habilidades y la experiencia de los miembros del equipo de proyecto.
 
 ---
+### (Nuevamente)..GESTIÓN DE PROYECTOS
+![Proceso de Gestión de Proyectos](images/u5-gest-proy/proceso-gestion-proyectos.jpg)
+
+---
 
 ### Revisión y ajustes del plan
 Los cambios son inevitables: deben revisarse regularmente ante variaciones en requerimientos, calendario o riesgos.  
@@ -188,8 +200,12 @@ Factores a considerar: **fecha de entrega, personal disponible, presupuesto y he
 
 ### Hitos y Entregables
 
-- **Hitos:** Puntos en el calendario contra los que puede valorar el avance.
+- **Hitos:** Puntos en el calendario contra los que puede valorar el avance. 
+
+Ejemplo: La transferencia del sistema para pruebas
 - **Entregables:** Productos de trabajo que se proporcionan al cliente.
+
+Ejemplo, documento de requerimientos para el sistema
 
 ---
 
@@ -219,6 +235,15 @@ Proceso de definir cómo se organizará el trabajo:
 ### Proceso de Calendarización del Proyecto
 
 ![Proceso](images/u5-gest-proy/proceso.png)
+
+----
+
+### calendarización en proyectos dirigidos por plan
+1. Dividir el trabajo en tareas separadas y estimar el tiempo para
+completar cada tarea. (Deben durar más de una semana y menos de dos meses. Sino, refinal nuevamente) 
+2. Se debe coordinar para ejecutar las tareas en paralelo y reducir interferencias.
+3. Evitar demoras en tareas críticas.
+4. Actualizar cronograma acorde al avance.
 
 ---
 
@@ -402,6 +427,20 @@ Ejemplo: **M1** se asocia con la tarea **T1**, mientras que el hito
 
 ---
 
+### Diagrama de Gantt: Ejercicio
+<!-- .slide: style="font-size: 0.85em" -->
+Empleando el siguiente [Template](https://docs.google.com/spreadsheets/d/1Tnu5UtZQhVM_uzzPELXKLBhKlQyWKTmh78RaH5e1dkI/edit?gid=920878631#gid=920878631) completar y responder:
+1. ¿Cuántas semanas son necesarias para completar el proyecto?
+2. ¿Qué actividades pueden realizarse simultáneamente?
+3. ¿Qué actividad o actividades tienen que esperar a que finalicen las dos actividades anteriores?
+4. Si la actividad D — Diseño de la base de datos se retrasa 2 días, ¿se modifica necesariamente la fecha de finalización del proyecto? Justificar.
+5. Si la actividad F — Implementación del backend se retrasa 3 días, ¿qué actividades se ven afectadas?
+6. ¿Qué actividades deberían ser especialmente controladas por el director del proyecto?
+
+
+
+---
+
 ### Diagrama de Actividad (PERT)
 
 ![Pert](images/u5-gest-proy/diagrama-actividad.jpg)
@@ -409,15 +448,68 @@ Ejemplo: **M1** se asocia con la tarea **T1**, mientras que el hito
 ----
 
 #### Pert
-<!-- .slide: style="font-size: 0.95em" -->
-Son las siglas de **Program Evaluation and Review Techique** que significa Técnica de Revisión y Evaluación de Programas.
 
-Es útil para evaluar la ruta crítica.
+![Tabla de Pert](images/u5-gest-proy/ejemplo-pert.jpg)
+
+----
+
+#### Pert
+<!-- .slide: style="font-size: 0.95em" -->
+Son las siglas de **Program Evaluation and Review Techique**, Técnica de Revisión y Evaluación de Programas.
+
+Un proyecto está compuesto por actividades que deben realizarse en determinado orden. PERT permite representar esas actividades y calcular la duración esperada del proyecto, identificando además las actividades críticas.
+
+----
+
+#### Pert
 
 En esta técnica se agregan 3 valores de tiempo a cada actividad:
 - Tiempo necesario para la actividad **sin contratiempos**.
 - Tiempo necesario para la actividad en **condiciones normales**.
 - Tiempo necesario para la actividad con **contratiempos**.
+
+----
+
+### Pert
+El nodo se compone de:
+- Numero de nodo
+- ES: Comienzo Temprano
+- TF: Terminacion Tardia
+
+----
+
+#### [Pert](https://www.ingenieriaonline.com/diagrama-de-pert/)
+
+EF = ES + T
+
+EF = Terminación temprana (Early Final).
+ES= Comienzo temprano (Early Start).
+T= Tiempo.
+
+ES, que es igual al número o resultado mayor de la terminación temprana de las actividades precedentes.
+
+ES = Max (EF)
+
+----
+
+#### Pert
+
+LS = LF – T
+
+LS = Comienzo tardío (Last Start).
+LF = Terminación tardía (Last Final).
+T = Tiempo.
+
+Esta fórmula se utiliza cuando vamos a calcular los tiempos de manera regresiva realizando un recorrido haca atrás en el diagrama de red. Entonces el comienzo tardío es el tiempo en el que una actividad puede comenzar sin retrasar el proyecto.
+
+----
+
+#### Pert
+Holgura (H)
+
+H = LS – ES
+
+H = LF – EF
 
 ---
 
@@ -466,7 +558,7 @@ puntos de esfuerzo, se consulta al cliente y se quitan algunas historias de la i
 ### Beneficios del enfoque de planeación ágil
 1. Todo el equipo conoce las tareas a completar en una iteración.
 2. Los desarrolladores eligen las tareas a implementar, por lo que tienen 
-un sentido de propiedad y esi motiva más a completar la tarea.
+un sentido de propiedad y eso motiva más a completar la tarea.
 
 ---
 
@@ -676,7 +768,7 @@ Número de servidores = 3
 
 Número de clientes = 4
 
-De la tabla obtenermos que el **nivel de complejidad** para cada pantalla es **medio**.
+De la tabla obtendrrmos que el **nivel de complejidad** para cada pantalla es **medio**.
 
 ----
 
@@ -690,7 +782,7 @@ Número de servidores = 2
 
 Número de clientes = 3
 
-De la tabla obtenermos que el **nivel de complejidad** para cada informo es **difícil**.
+De la tabla obtendremos que el **nivel de complejidad** para cada informe es **difícil**.
 
 ----
 
