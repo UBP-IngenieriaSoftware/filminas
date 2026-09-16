@@ -467,7 +467,6 @@ El nodo se compone de:
 - TF: Terminacion Tardia
 
 <!--
-----
 
 #### [Pert](https://www.ingenieriaonline.com/diagrama-de-pert/)
 
@@ -481,7 +480,6 @@ ES, que es igual al número o resultado mayor de la terminación temprana de las
 
 ES = Max (EF)
 
-----
 
 #### Pert
 
@@ -493,14 +491,13 @@ T = Tiempo.
 
 Esta fórmula se utiliza cuando vamos a calcular los tiempos de manera regresiva realizando un recorrido haca atrás en el diagrama de red. Entonces el comienzo tardío es el tiempo en el que una actividad puede comenzar sin retrasar el proyecto.
 
-----
-
 #### Pert
 Holgura (H)
 
 H = LS – ES
 
 H = LF – EF
+
 -->
 
 ---
@@ -562,7 +559,41 @@ un sentido de propiedad y eso motiva más a completar la tarea.
 En las features emplear el modelo:
 ```"Como [rol], quiero [funcionalidad] para [beneficio]"```
 Cada **feature** representa un **requerimiento funcional** previamente relevado.
+
 4. Asignar las tareas a cada persona del equipo acorde al rol seleccionado (frontend dev, backend dev, QA)
+
+----
+
+### Historia de Usuario
+![Historia de Usuario](images/u6-requerimientos/historia.png)
+
+----
+
+### Ejercicio: Planning Poker
+1. El docente creará una sesión en [Planning Poker](https://planningpokeronline.com)
+2. Compartirá el link a los estudiantes -> [Link](Aqui)
+3. Los estudiantes se unirán a la sesión de planning
+4. Se puntuaran las tareas del Sprint 1
+
+---
+
+### Estimación de Proyectos de Software
+
+La estimación de costo y esfuerzo del software es complejo porque existen demasiadas
+variables (humanas, técnicas, ambientales, políticas) e incertidumbre que pueden afectar el costo final del software
+y el esfuerzo aplicado para su desarrollo.
+
+Existe tanta incertidumbre que es imposible estimar con precisión los
+costos de desarrollo del sistema durante las primeras etapas de un proyecto.
+
+----
+
+### Estimación de Proyectos de Software
+Con frecuencia, las estimaciones del proyecto se autosatisfacen. La estimación se utiliza para definir el presupuesto del
+proyecto, y el producto se ajusta para que se cumpla la cifra del presupuesto. 
+
+Un proyecto que está dentro de presupuesto puede lograr esto a expensas de las características en el
+software a desarrollar.
 
 ---
 
@@ -629,28 +660,52 @@ Se pueden calibrar los modelos con proyectos ya completados para mejorar la prec
 - **B:** exponente entre 1 y 1.5 (según complejidad).  
 - **M:** multiplicador de atributos (procesos, confiabilidad, experiencia del equipo, etc.).  
 
----
+----
 
 ### Limitaciones del modelo algorítmico
 - Difícil estimar el **tamaño** en etapas tempranas.  
 - Factores de **B** y **M** son subjetivos (dependen de experiencia).  
 - Necesita **calibración** con datos históricos para ser útil.  
 
+----
+
+### Limitaciones del modelo algorítmico
+Los modelos algorítmicos de costo son una forma sistemática de estimar el esfuerzo
+requerido para desarrollar un sistema, aunque dichos modelos son complejos y difíciles
+de usar. Existen muchos atributos y un margen considerable para la incertidumbre al
+estimar sus valores.
+
 ---
 
 ### Modelo COCOMO II
-**COCOMO (Constructive Cost Model)** evoluciona de los primeros modelos de estimación de costos.  
+**COCOMO (Constructive Cost Model)** evoluciona de los primeros modelos de estimación de costos.
+
+Éste es un modelo empírico que se derivó al recopilar datos de
+un gran número de proyectos de software.
+
 Incluye 4 submodelos:  
 1. **Composición de aplicación**  
 2. **Diseño temprano**  
 3. **Reutilización**  
 4. **Posarquitectónico**  
 
----
+----
 
 ![Cocomo](images/u5-gest-proy/cocomo.png) 
 
 ---
+
+### 1. Modelo de composición de aplicación
+Éste modela el esfuerzo requerido para
+desarrollar sistemas que se crean a partir de **componentes de reutilización** 
+o programación de base de datos. 
+
+Las estimaciones del tamaño de software se basan en **puntos de aplicación**,
+es una estimación ponderada del número de pantallas, número de informes que se producen, 
+el número de módulos en lenguajes de programación imperativa (como Java) y 
+el número de líneas de scripting o código de programación de base de datos.
+
+----
 
 ### 1. Modelo de composición de aplicación
 
@@ -676,7 +731,7 @@ Para estimar el esfuerzo para desarrollar un proyecto se siguen los siguientes p
 ### 1. Modelo de composición de aplicación
 #### 1. Acceso a recuentos de objetos
 
-Calcule el número de pantallas, informes y componentes 3GL que conformarán esta aplicación.
+Calcule el número de pantallas, informes y componentes 3GL (componentes que deben programarse mediante un lenguaje de tercera generación) que conformarán esta aplicación.
 
 ----
 
@@ -745,7 +800,7 @@ El esfuerzo se mide en personas-mes.
 
 ----
 
-### EJEMPLO
+### Composición de Aplicación: Ejemplo
 
 Considere un proyecto de aplicación de base de datos con
 1. La aplicación tiene 4 pantallas con 4 vistas cada una y 7 tablas de datos para 3 servidores y 4 clientes.
@@ -772,7 +827,7 @@ Número de servidores = 3
 
 Número de clientes = 4
 
-De la tabla obtendrrmos que el **nivel de complejidad** para cada pantalla es **medio**.
+De la tabla obtendremos que el **nivel de complejidad** para cada pantalla es **medio**.
 
 ----
 
@@ -973,7 +1028,7 @@ Los valores de **M** se pueden tomar de la siguiente tabla:
 
 ----
 
-### Ejercicio:
+### Modelo de diseño temprano: Ejercicio
 
 Supongamos:
 <!-- .slide: style="font-size: 0.80em" -->
@@ -1173,6 +1228,10 @@ Se aplica cuando ya existe un diseño arquitectónico inicial.
 
 El calendario final depende de la cantidad de personas asignadas y de la productividad (no es siempre lineal, porque más gente también trae coordinación extra).
 
+----
+
+https://softwarecost.org/tools/COCOMO/
+
 ---
 
 ### Ejemplo de COCOMO
@@ -1199,6 +1258,71 @@ El calendario final depende de la cantidad de personas asignadas y de la product
 - Algunos contratos lo requieren como método oficial de estimación (ej. proyectos de la NASA).
 - En un marco académico, para entender estimación paramétrica y cómo distintos factores influyen en costo.
 - En empresas grandes con proyectos críticos, como parte de un paquete de estimación híbrido, junto con métricas ágiles, velocity, function points, etc.
+
+---
+
+### Herramientas para la gestión de proyectos
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Características principales</th>
+<th>Enfoque</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Jira</strong></td>
+<td>Historias de usuario, backlog, sprints, Scrum/Kanban, reportes</td>
+<td>Ágil / Scrum</td>
+</tr>
+<tr>
+<td><strong>Trello</strong></td>
+<td>Tableros, listas y tarjetas para visualizar tareas</td>
+<td>Kanban</td>
+</tr>
+<tr>
+<td><strong>Azure DevOps</strong></td>
+<td>Backlogs, historias, tareas, sprints, repositorios, CI/CD</td>
+<td>Ágil + DevOps</td>
+</tr>
+<tr>
+<td><strong>GitHub Projects</strong></td>
+<td>Tableros, issues, milestones y seguimiento junto al repositorio</td>
+<td>Ágil / desarrollo</td>
+</tr>
+<tr>
+<td><strong>GitLab</strong></td>
+<td>Issues, boards, milestones, planificación y repositorios</td>
+<td>Ágil + DevOps</td>
+</tr>
+<tr>
+<td><strong>YouTrack</strong></td>
+<td>Gestión de proyectos, backlog, Scrum/Kanban, seguimiento de incidencias</td>
+<td>Ágil</td>
+</tr>
+<tr>
+<td><strong>ClickUp</strong></td>
+<td>Tareas, dependencias, documentos, tableros, Gantt y seguimiento</td>
+<td>General / Ágil</td>
+</tr>
+<tr>
+<td><strong>Asana</strong></td>
+<td>Tareas, responsables, fechas, dependencias, proyectos y cronogramas</td>
+<td>Gestión general</td>
+</tr>
+<tr>
+<td><strong>Microsoft Planner</strong></td>
+<td>Tareas, responsables, fechas y tableros integrados con Microsoft 365</td>
+<td>General / Kanban</td>
+</tr>
+<tr>
+<td><strong>Microsoft Project</strong></td>
+<td>Gantt, dependencias, recursos, costos y planificación detallada</td>
+<td>Tradicional / híbrido</td>
+</tr>
+</tbody>
+</table>
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
