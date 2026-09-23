@@ -217,9 +217,75 @@ una planilla como la siguiente:
 ![Planilla CU](images/u8-caso-uso/planillaCU.jpg)
 
 ---
-### Ejercicios:
-Empleando la tabla de la diapositiva anterior como template, refina los **Casos de Uso** de los ejercicios de la guía de 
-trabajos prácticos previamente diseñados.
+
+### [PlantUML](https://plantuml.com/es/sequence-diagram)
+
+Es una herramienta que permite crear diferentes tipos de diagramas empleando un lenguaje sencillo e intuitivo.
+
+En programas como VSC se puede instalar el plugin PlantUML para poder visualizarlo.
+
+Se recomienda revisar su documentación: https://plantuml.com/es/
+
+----
+
+### Plant UML
+- Es una extension que nos permite crear los diagramas a partir de código, lo que lo hace mucho más sencillo de versionar o de ser entendido por otros sistemas.
+- Los gráficos pueden ser generados sin necesidad de contar con conexión a internet (teniendo correctamente instalado y configurado Java)
+- Los gráficos pueden ser generados por el servidor de UML
+
+----
+
+### Plant UML - Confuguración
+1. Abrir **Visual Studio Code**
+2. Ir a la sección de **Extensiones** o Pluggins
+3. Instalar **PlantUML**
+4. Ingresar a **File** > **Preferences** > **Settings**
+5. Arriba a la derecha presionar **Open Settings (JSON)
+6. Agregar 2 configuraciones
+```json
+"plantuml.render": "PlantUMLServer",
+"plantuml.server": "http://www.plantuml.com/plantuml"
+```
+
+----
+
+### Plant UML - Uso
+1. Crear un nuevo archivo y colocar la extensión **puml**
+2. En el archivo, escribir:
+```json
+@startuml ejemplo-diagrama
+@enduml
+```
+3. Hacer click botón derecho, y seleccionar **Preview Current Diagram**
+
+Otra opción es emplear el [servidor online](https://www.plantuml.com/plantuml)
+
+----
+
+### Plant UML - Casos de Uso
+Se recomienda revisar la siguiente documentación:
+- https://plantuml.com/es/use-case-diagram
+
+----
+
+### Plant UML - Casos de Uso
+```json
+@startuml ejemplo-diagrama
+left to right direction
+actor :Usuario deslogueado: as UD
+rectangle "APP Avistaje de Fauna" {
+  usecase "Crecar cuenta" as UC1
+  usecase "Visualizar fotos" as UC2
+}
+UD --> UC1
+UD --> UC2
+@endumls
+```
+
+----
+
+### Plant UML - Casos de Uso
+![Casos de Uso](images/u8-UML/plant-UML.png)
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?

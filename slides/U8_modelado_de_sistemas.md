@@ -98,7 +98,7 @@ desde el modelo del sistema.
 
 ----
 
-### Ejemplo:
+### Ejemplo: Código Java
 ````java
 package codemodel;
 public class Guitarist extends Person implements MusicPlayer {
@@ -119,7 +119,8 @@ public class Guitarist extends Person implements MusicPlayer {
 * El ser humano lo interpreta muy lentamente
 * No facilita la reutilización ni la comunicación
 
----
+----
+
 ````cookie
 Guitarist es una clase que contiene seis miembros: 1 estático y 5
 no estáticos. Guitarist usa, y por lo tanto necesita, una instancia 
@@ -142,7 +143,8 @@ parámetros y su tipo de retorno es nulo.
 * Es lenta de interpretar
 * Difícil de procesar
 
----
+----
+
 ![UML: Guitarrista](images/u8-UML/ejemplo_guitarrista.jpg)
 
 <!-- .slide: style="font-size: 0.60em" -->
@@ -158,11 +160,18 @@ tiene que ser completa.
 * Como una descripción detallada del sistema en ese caso debe ser correcta y completa.
 
 ---
-### Modelos de contexto
-* Se utilizan modelos de contexto para ilustrar el contexto operativo de un sistema, muestran lo que se
-encuentra fuera de los límites del sistema.
+
+### Tipos de modelos
+1. Modelo de Contexto
+2. Modelo de Comportamiento
+3. Modelo de datos
+4. Modelo de Objetos
+
+---
+### 1. Modelos de contexto
+* Muestran el sistema y su relación con otros sistemas.
+* Se utiliza para representar los límites del sistema,para distinguir cuales funcionalidades están o no incluidas en el mismo.
 * Las cuestiones organizacionales pueden influir en la decisión sobre dónde situar los límites del sistema.
-* Los modelos de contexto muestran el sistema y su relación con otros sistemas.
 
 ----
 
@@ -178,13 +187,20 @@ carga de trabajo de las diferentes partes de una organización.
 #### El contexto del MHC-PMS
 ![Ejemplo de Diagrama de Contexto](images/u8-UML/diagrama_contexto_mhc-pms.jpg)
 
+----
+
+### 1. Modelos de contexto: Limitaciones
+Los diagrama de contexto **no muestran de manera amplia las relaciones** entre el sistema que se está desarrollando y el entorno. 
+
+Por eso debe complementarse con otros diagramas como el de procesos y el de actividades.
+
 ---
 
 ### Perspectiva del proceso
 * Los modelos de contexto, simplemente muestran los otros sistemas en ambiente, no cómo se utiliza el sistema
 que está siendo desarrollado en ese entorno.
-* Los modelos de proceso revelan cómo se utiliza el sistema en desarrollo en los procesos de negocio
-* Diagramas de actividades de UML se pueden utilizar para definir los modelos de procesos de negocio.
+* Los **modelos de proceso** revelan cómo se utiliza el sistema en desarrollo en los procesos de negocio
+* Los **diagramas de actividades** de UML se pueden utilizar para definir los modelos de procesos de negocio.
 
 ----
 
@@ -192,19 +208,29 @@ que está siendo desarrollado en ese entorno.
 ![Modelo de proceso de la detención involuntaria](images/u8-UML/modelo_proceso_detencion.jpg)
 
 ---
+
+### 2. Modelos de Comportamiento
+- Modelos del comportamiento dinámico de un sistema, cuando se está ejecutando.
+- Muestran lo que ocurre cuando un sistema responde a un estímulo de su entorno.
+- Los estímulos pueden ser de dos tipos: Datos o Eventos
+- Los modelos de interacción son un tipo de modelo de comportamiento.
+
+----
+
 ### Modelos de interacción
 <!-- .slide: style="font-size: 0.90em" -->
-* El modelado de la interacción de usuario es importante ya que ayuda a identificar las necesidades de los usuarios.
-* El modelado de interaccion de sistema a sistema resalta los problemas de comunicación que puedan surgir.
-* El modelo de interacción de componentes ayuda a comprender si la estructura del sistema propuesto es
+* El modelado de la interacción de **usuario** es importante ya que ayuda a identificar las **necesidades** de los usuarios.
+* El modelado de interaccion de **sistema a sistema** resalta los problemas de **comunicación** que puedan surgir.
+* El modelo de interacción de **componentes** ayuda a comprender si la **estructura** del sistema propuesto es
 adecuada para ofrecer el rendimiento y la fiabilidad del sistema necesario.
 * Los **diagramas de casos** y **diagramas de secuencia** se pueden utilizar para el modelado de la interacción.
 
----
+----
+
 ### Modelado de casos de uso
 * Los casos de uso se desarrollaron originalmente para apoyar la obtención de **requisitos** y están incorporados en el UML.
 * Especifica un comportamiento deseado del sistema.
-* Representa los requisitos funcionales del sistema.
+* Representa los **requisitos funcionales** del sistema.
 * Describe qué hace el sistema, no cómo lo hace.
 Un caso de uso especifica un conjunto de secuencias de acciones, incluyendo variantes, que el sistema puede ejecutar y que produce un resultado observable de valor para un particular actor.
 
@@ -228,7 +254,8 @@ Un caso de uso en el MHC-PMS:
 ### Los casos de uso en el MHC-PMS que implica el papel 'Médico Recepcionista'
 ![Casos de uso Médico Recepcionista](images/u8-UML/ejemplo_caso_de_uso.jpg)
 
----
+----
+
 ### Diagramas de secuencia
 <!-- .slide: style="font-size: 0.90em" -->
 * Los diagramas de secuencia son parte de UML y se utilizan para modelar las interacciones entre los actores y
@@ -253,8 +280,27 @@ trazada verticalmente a partir de estos.
 * Los modelos estructurales muestran la organización de un sistema en función de los componentes que conforman
 este sistema y sus relaciones.
 * Los modelos estructurales son modelos estáticos, que muestran la estructura del sistema.
+* Abarca los **Modelos de datos** y los **Modelos de Objetos**
 
 ---
+### 3. Modelos de Datos
+- Representan cómo se organizan, estructuran y relacionan los datos en un sistema, sin considerar comportamientos o responsabilidades.
+- Tienen como finalidad modelar la estructura estática de la información para garantizar consistencia, integridad y eficiencia del almacenamiento de datos.
+- Generalmente este tipo de diagramas se componen de: Entidades, Atributos, Relaciones, Cardinalidades, Reglas de integridad.
+
+----
+
+### 3. Modelos de Datos
+
+Algunos ejemplos de estos tipos de diagramas son:
+- Modelo entidad-relación (ER)
+- Diagramas relacionales (tablas y claves en bases de datos)
+- UML: diagrama de clases simplificado (sólo atributos y asociaciones)
+
+Se usa para diseño de bases de datos, modelado de almacenamiento y normalización.
+
+----
+
 ### Diagramas de clases
 * Los diagramas de clases se utilizan en el desarrollo de un modelo de sistema orientado a objetos para mostrar las
 clases de un sistema y las asociaciones entre estas clases.
@@ -277,7 +323,8 @@ clases de un sistema y las asociaciones entre estas clases.
 ### La clase de consulta
 ![La clase de consulta](images/u8-UML/clase_de_consulta.jpg)
 
----
+----
+
 ### Generalización
 * La generalización es una técnica que utilizamos para gestionar la complejidad.
 * En lugar de definir las características detalladas de cada entidad, ponemos estas características en las clases
@@ -306,7 +353,8 @@ clases de nivel inferior son más especificas y pueden añadir atributos y opera
 ### Una jerarquía de generalización con caracteristicas agregadas
 ![Generalización con caracteristicas agregadas](images/u8-UML/jeneralizacion_caracteristicas_agregadas.jpg)
 
----
+----
+
 ### Agregación
 * Un modelo de agregación muestra cómo las clases se componen de otras clases.
 * Los modelos de agregación son similares a la parte de la relación en los modelos de datos semánticos.
@@ -483,6 +531,39 @@ nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 
 ### El funcionamiento del horno de microondas
 ![Funcionamiento Microondas](images/u8-UML/funcionamiento_microondas.jpg)
+
+---
+
+### 4. Modelo de Objetos
+- Representa las clases, objetos y sus interacciones, incluyendo atributos, comportamientos (métodos) y relaciones.
+- Tiene como objetivo capturar tanto la estructura como el comportamiento del sistema desde la perspectiva de la programación orientada a objetos.
+- Los elementos típicos que componen estos diagramas son: Clases y Objetos, Métodos (comportamiento), Herencia, Composición, Asociaciones.
+
+----
+
+### 4. Modelo de Objetos
+Algunos ejemplos de diagramas que se corresponden con el modelo de objeto son: 
+- Diagrama de clase
+- Diagrama de objetos 
+- Modelado en el análisis y diseño orientado a objetos (OOAD)
+
+---
+
+### Métodos Estructurados
+- Son metodologías que guían la creación de software mediante modelos jerárquicos, lógicos y lineales, orientados a entender qué hace el sistema y cómo lo hace, sin considerar objetos o clases.
+- Estos métodos se originaron antes del auge de la orientación a objetos y ponía énfasis en la descomposición funcional, el flujo de datos y el control secuencial del sistema.
+
+----
+
+### Métodos Estructurados: Características
+- Basados en funciones: el sistema se descompone en procesos o funciones (no en objetos).
+- Separación clara entre análisis y diseño.
+
+Uso de herramientas como:
+- Diagramas de flujo de datos (DFD).
+- Diccionarios de datos.
+- Especificaciones estructuradas (pseudocódigo, tablas de decisión, árboles de decisión).
+- Diagramas de estructura (representan jerarquía funcional del sistema).
 
 ---
 ### Ingeniería dirigida por modelos

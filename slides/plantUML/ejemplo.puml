@@ -1,0 +1,10 @@
+@startuml ejemplo-diagrama
+left to right direction
+actor :Usuario deslogueado: as UD
+rectangle "APP Avistaje de Fauna" {
+  usecase "Crecar cuenta" as UC1
+  usecase "Visualizar fotos" as UC2
+}
+UD --> UC1
+UD --> UC2
+@endumls

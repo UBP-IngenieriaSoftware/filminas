@@ -280,16 +280,6 @@ extenderse a través de más de una línea de vida.
 
 ---
 
-### [PlantUML](https://plantuml.com/es/sequence-diagram)
-
-Es una herramienta que permite crear diferentes tipos de diagramas empleando un lenguaje sencillo e intuitivo.
-
-En programas como VSC se puede instalar el plugin PlantUML para poder visualizarlo.
-
-Se recomienda revisar su documentación: https://plantuml.com/es/
-
----
-
 ### Ejemplo: PlantUML
 
 ```
