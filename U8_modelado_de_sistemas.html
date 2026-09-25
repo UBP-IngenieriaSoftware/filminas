@@ -64,8 +64,6 @@ Created by <i class="fab fa-telegram"></i>
 * Diagramas de Secuencia
 * Modelos Estructurales
 * Diagramas de Clases
-* Generalización
-* Agregación
 * Modelos de Comportamiento
 * Modelado Impulsado por Datos
 * Modelado Impulsado por Eventos
@@ -83,34 +81,54 @@ Apéndice 1: Introducción a UML
 
 ---
 
-### Modelado de Sistemas
+### ¿Qué es un modelo?
 
 <!--https://diagramasuml.com/-->
 
 Un **modelo es una abstracción** de un sistema o entidad del mundo real. 
 
-Una **abstracción es una simplificación**, que incluye sólo aquellos detalles relevantes para algún determinado propósito.
+Una **abstracción es una simplificación**, que incluye solamente aquellos detalles que resulten relevantes para un determinado propósito.
 
-El modelado permite abordar la complejidad de los sistemas.
+----
+
+### Modelado de Sistemas
+Los sistemas software pueden ser **complejos** y contener una gran cantidad de información. 
+
+El **modelado** permite abordar esa complejidad mediante representaciones simplificadas que facilitan su comprensión, análisis, comunicación y documentación.
+
+----
+
+### Modelado de Sistemas
+Por ejemplo, una aplicación puede describirse desde diferentes perspectivas:
+- qué elementos existen en el sistema
+- con quién se relaciona
+- qué información maneja
+- qué hace cuando recibe determinados estímulos
+- cómo se organizan sus componentes
+
+Cada una de estas perspectivas puede representarse mediante un modelo diferente.
 
 ---
 
 ### El modelado de sistemas
-* El modelado de sistemas es el proceso de elaboración de modelos abstractos de un sistema, con cada modelo que presenta 
-una vista o perspectiva diferente de ese sistema.
-* El modelado de sistemas se representa mediante algún tipo de notación gráfica, casi siempre basada en anotaciones en 
-el Lenguaje Unificado de Modelado (UML).
-* El modelado de sistemas ayuda al analista a entender la funcionalidad del sistema y se pueden utilizar modelos para 
-comunicarse con los clientes.
+El **modelado de sistemas** es el proceso de elaborar modelos abstractos de un sistema.
+
+Cada modelo presenta una **vista o perspectiva** diferente del sistema y permite concentrarse en determinados aspectos sin tener que considerar toda su complejidad al mismo tiempo.
+
+El modelado de sistemas suele utilizar **notaciones gráficas**, entre ellas las definidas por el **Lenguaje Unificado de Modelado (UML)**.
 
 ----
 
-### Modelos de sistemas
-* Los modelos del sistema se utilizan durante la ingeniería de requisitos para ayudar a explicar los requisitos 
-propuestos a otros actores del sistema. Los ingenieros utilizan estos modelos para discutir las propuestas de diseño y 
-documentar el sistema de aplicación.
-* En un proceso de ingeniería basado en modelos, es posible generar una implementación completa o parcial del sistema 
-desde el modelo del sistema.
+### El modelado de sistemas
+Los modelos pueden utilizarse durante distintas actividades de la ingeniería de software:
+- comprender el sistema
+- analizar los requisitos
+- comunicar ideas con clientes y usuarios
+- discutir alternativas de diseño
+- documentar el sistema
+- facilitar el desarrollo y mantenimiento del software
+
+Un mismo sistema puede representarse mediante distintos modelos porque cada modelo responde preguntas diferentes.
 
 ----
 
@@ -169,34 +187,107 @@ parámetros y su tipo de retorno es nulo.
 * Es fácil de procesar por herramientas
 
 ---
-### El uso de modelos gráficos
-* Como una forma de facilitar el debate sobre un sistema
-* Como una manera de documentar un modelo de sistema debe ser una representación exacta del sistema, pero no
-tiene que ser completa.
-* Como una descripción detallada del sistema en ese caso debe ser correcta y completa.
 
----
+### Diferentes perspectivas de un mismo sistema
 
-### Tipos de modelos
-1. Modelo de Contexto
-2. Modelo de Comportamiento
-3. Modelo de datos
-4. Modelo de Objetos
+Una forma de organizar el modelado es preguntarnos qué queremos conocer acerca del sistema.
 
----
-### 1. Modelos de contexto
-* Muestran el sistema y su relación con otros sistemas.
-* Se utiliza para representar los límites del sistema,para distinguir cuales funcionalidades están o no incluidas en el mismo.
-* Las cuestiones organizacionales pueden influir en la decisión sobre dónde situar los límites del sistema.
+| Perspectiva |	Pregunta principal |
+|-------------|--------------------|
+| Contexto	  | ¿Dónde está el sistema y con quién se relaciona? |
+| Comportamiento |	¿Qué hace el sistema y cómo responde? |
+| Datos |	¿Qué información maneja? |
+| Objetos	| ¿Qué elementos componen el sistema y cómo se relacionan? |
+
+Estas perspectivas no son independientes. Se complementan para construir una comprensión más completa del sistema.
 
 ----
 
-### Límites del sistema
-* Los límites del sistema se establecen para definir lo que está dentro y lo que está fuera del sistema, muestran otros
-sistemas que se utilizan o dependen del sistema que está siendo desarrollado.
-* La posición de los límites del sistema tiene un efecto profundo en los requisitos del sistema.
-* La definición del límite del sistema es fundamental Si los límites del sistema aumentan y/o disminuyen cambia la
-carga de trabajo de las diferentes partes de una organización.
+### Diferentes perspectivas de un mismo sistema
+<!-- .slide: style="font-size: 0.85em" -->
+Por ejemplo, para analizar una aplicación de avistaje de fauna podríamos preguntarnos:
+- **Contexto:** ¿con qué usuarios, organizaciones o sistemas externos interactúa?
+- **Comportamiento:** ¿qué sucede cuando un usuario registra un avistaje?
+- **Datos:** ¿qué información se almacena sobre una especie, un sitio o una observación?
+- **Objetos:** ¿qué clases representan esos conceptos y cómo se relacionan?
+
+De esta manera, los modelos no deben entenderse como diagramas aislados, sino como diferentes vistas de un mismo sistema.
+
+---
+
+### El uso de modelos gráficos
+
+Los modelos gráficos pueden utilizarse con diferentes propósitos.
+- Como herramienta de comunicación
+- Como documentación
+- Como descripción detallada
+
+----
+
+### Modelos gráficos como comunicación
+
+Un modelo puede facilitar la discusión sobre el sistema entre desarrolladores, clientes, usuarios y otros interesados.
+
+Una representación gráfica puede permitir que distintas personas compartan una misma visión sobre el sistema.
+
+----
+
+### Modelos gráficos como documentación
+
+Un modelo puede utilizarse para documentar determinados aspectos del sistema.
+
+En este caso, el modelo debe representar correctamente aquello que pretende describir, aunque no necesariamente tiene que representar todos los detalles del sistema.
+
+----
+
+### Modelos gráficos como descripción detallada
+
+Cuando el objetivo es utilizar el modelo como una especificación detallada, se requiere un mayor nivel de precisión y completitud.
+
+Por lo tanto, un modelo no necesariamente tiene que contener toda la información del sistema. Su nivel de detalle depende del propósito para el cual se construye.
+
+---
+
+### Modelo de contexto
+Los **modelos de contexto** muestran el sistema y su relación con otros sistemas que forman parte de su entorno.
+
+Su principal **objetivo** es ayudar a establecer los **límites del sistema**, es decir, determinar qué elementos y funcionalidades forman parte del sistema que se está desarrollando y cuáles quedan fuera de él.
+
+El contexto permite observar el sistema desde una **perspectiva externa**, sin entrar todavía en el detalle de su funcionamiento interno.
+
+----
+
+### Modelo de contexto: Límites
+
+Los límites del sistema establecen qué está dentro y qué está fuera del sistema.
+
+En un modelo de contexto pueden representarse:
+- el sistema que se está desarrollando
+- otros sistemas relacionados
+- elementos externos que interactúan con el sistema
+
+La decisión sobre dónde situar los límites del sistema es importante porque tiene consecuencias sobre los **requisitos** y sobre la distribución del trabajo.
+
+----
+
+### Modelo de contexto: Límites
+La posición de los límites puede estar influenciada no solamente por cuestiones técnicas, sino también por cuestiones organizacionales.
+
+Por ejemplo, una determinada funcionalidad podría considerarse parte del sistema en una organización y responsabilidad de otro sistema o área en otra organización.
+
+Por este motivo, definir los límites del sistema es una decisión relevante durante la ingeniería de requisitos.
+
+---
+
+### Diagrama de contexto
+
+El diagrama de contexto proporciona una visión general del sistema y de los elementos externos con los que se relaciona.
+
+En esta etapa interesa principalmente responder:
+
+**¿Qué está dentro del sistema y qué está fuera?**
+
+No se pretende describir en detalle cómo se realizan las operaciones internas.
 
 ----
 
@@ -205,18 +296,106 @@ carga de trabajo de las diferentes partes de una organización.
 
 ----
 
-### 1. Modelos de contexto: Limitaciones
-Los diagrama de contexto **no muestran de manera amplia las relaciones** entre el sistema que se está desarrollando y el entorno. 
+### Limitaciones del modelo de contexto
+<!-- .slide: style="font-size: 0.90em" -->
+Un modelo de contexto permite identificar los elementos del entorno que se relacionan con el sistema, pero no muestra ampliamente cómo se producen esas relaciones ni cómo se utiliza el sistema dentro de los procesos del entorno.
 
-Por eso debe complementarse con otros diagramas como el de procesos y el de actividades.
+Por esta razón, el modelo de contexto debe complementarse con otros modelos.
+
+Por ejemplo, los **modelos de procesos** permiten representar cómo se utiliza el sistema dentro de procesos de negocio.
+
+Los **diagramas de actividad** de UML pueden utilizarse para representar este tipo de procesos.
 
 ---
 
-### Perspectiva del proceso
-* Los modelos de contexto, simplemente muestran los otros sistemas en ambiente, no cómo se utiliza el sistema
-que está siendo desarrollado en ese entorno.
-* Los **modelos de proceso** revelan cómo se utiliza el sistema en desarrollo en los procesos de negocio
-* Los **diagramas de actividades** de UML se pueden utilizar para definir los modelos de procesos de negocio.
+### Modelo de comportamiento
+
+Los **modelos de comportamiento** representan el comportamiento dinámico de un sistema durante su ejecución.
+
+Mientras que un modelo estructural permite observar cómo está organizado el sistema, un modelo de comportamiento permite analizar:
+
+**¿Qué sucede cuando el sistema recibe un estímulo?**
+
+----
+
+### Modelo de comportamiento: Estimulos
+Los estímulos pueden estar relacionados con:
+- datos que ingresan al sistema
+- eventos externos
+- eventos internos
+- acciones realizadas por usuarios
+- interacciones con otros sistemas
+
+Los modelos de comportamiento permiten estudiar cómo responde el sistema ante estos estímulos.
+
+---
+
+### Diferentes formas de modelar el comportamiento
+El comportamiento de un sistema puede analizarse desde distintas perspectivas.
+
+- **Interacción**, que se concentra en el intercambio de mensajes o acciones entre los participantes.
+- **Procesamiento**, que se concentra en la secuencia de actividades que se realizan para transformar entradas en resultados.
+- **Respuesta a eventos y cambios de estado**, especialmente importante en sistemas cuyo comportamiento depende de eventos externos o internos.
+
+Dentro del modelado de comportamiento encontramos diferentes tipos de modelos.
+
+---
+
+### Modelos de interacción
+<!-- .slide: style="font-size: 0.85em" -->
+Los **modelos de interacción** representan las interacciones que se producen entre los participantes de un sistema.
+
+Puede analizar diferentes situaciones:
+- **Interacción usuario-sistema:** Permite comprender cómo los usuarios utilizan el sistema y ayuda a identificar sus necesidades.
+- **Interacción sistema-sistema:** Permite analizar la comunicación entre sistemas y detectar posibles problemas relacionados con el intercambio de información.
+- **Interacción entre componentes:** Permite estudiar cómo se comunican los diferentes componentes de un sistema y analizar si la estructura propuesta puede satisfacer los requisitos de rendimiento y fiabilidad.
+
+----
+
+### Modelos de interacción
+Entre los diagramas UML utilizados para representar interacciones se encuentran:
+- diagramas de casos de uso
+- diagramas de secuencia
+
+---
+
+### Modelado de procesos
+<!-- .slide: style="font-size: 0.90em" -->
+Los **diagramas de actividad** de UML pueden utilizarse para representar procesos y flujos de actividades.
+
+En este tipo de modelo interesa responder preguntas como:
+- ¿Qué actividades se realizan?
+- ¿En qué orden?
+- ¿Qué decisiones existen?
+- ¿Qué actividades pueden ejecutarse en paralelo?
+- ¿Cómo termina el proceso?
+
+Los diagramas de actividad también pueden utilizarse para representar el procesamiento de datos dentro de un sistema.
+
+----
+
+### Modelo de actividad de la operación de la bomba de insulina
+
+![Modelo de actividad de Bomba de insulina](images/u8-UML/modelo_actividad_bomba_insulina.jpg)
+
+---
+
+### Modelado impulsado por datos
+
+En estos modelos  el comportamiento está determinado principalmente por los datos que ingresan al sistema y por las transformaciones que se realizan sobre ellos.
+
+Los modelos impulsados por datos muestran
+- las entradas al sistema
+- las acciones realizadas sobre esas entradas
+- la secuencia del procesamiento
+- las salidas producidas
+
+----
+
+### Modelado impulsado por datos
+Estos modelos son particularmente útiles durante el análisis de requisitos porque permiten representar el procesamiento de extremo a extremo.
+
+Los diagramas de actividad pueden utilizarse para representar este tipo de procesamiento.
 
 ----
 
@@ -225,205 +404,44 @@ que está siendo desarrollado en ese entorno.
 
 ---
 
-### 2. Modelos de Comportamiento
-- Modelos del comportamiento dinámico de un sistema, cuando se está ejecutando.
-- Muestran lo que ocurre cuando un sistema responde a un estímulo de su entorno.
-- Los estímulos pueden ser de dos tipos: Datos o Eventos
-- Los modelos de interacción son un tipo de modelo de comportamiento.
+### Modelado impulsado por eventos
 
-----
+Los sistemas de tiempo real pueden estar determinados principalmente por eventos.
 
-### Modelos de interacción
-<!-- .slide: style="font-size: 0.90em" -->
-* El modelado de la interacción de **usuario** es importante ya que ayuda a identificar las **necesidades** de los usuarios.
-* El modelado de interaccion de **sistema a sistema** resalta los problemas de **comunicación** que puedan surgir.
-* El modelo de interacción de **componentes** ayuda a comprender si la **estructura** del sistema propuesto es
-adecuada para ofrecer el rendimiento y la fiabilidad del sistema necesario.
-* Los **diagramas de casos** y **diagramas de secuencia** se pueden utilizar para el modelado de la interacción.
-
-----
-
-### Modelado de casos de uso
-* Los casos de uso se desarrollaron originalmente para apoyar la obtención de **requisitos** y están incorporados en el UML.
-* Especifica un comportamiento deseado del sistema.
-* Representa los **requisitos funcionales** del sistema.
-* Describe qué hace el sistema, no cómo lo hace.
-Un caso de uso especifica un conjunto de secuencias de acciones, incluyendo variantes, que el sistema puede ejecutar y que produce un resultado observable de valor para un particular actor.
-
-----
-
-### Modelado de casos de uso
-
-* Cada caso de uso representa una tarea discreta que implica la interacción externa con un sistema.
-* Los actores de un caso de uso pueden ser personas u otros sistemas.
-* Representación esquemática para proporcionar una visión general de los casos de uso.
-* Representación textual para proporcionar una visión detallada.
-
-----
-
-### Uso de datos de transferencia de caso
-Un caso de uso en el MHC-PMS:
-![Un caso de uso en el MHC-PMS](images/u8-UML/ejemplo_1_caso_de_uso.jpg)
-
-----
-
-### Los casos de uso en el MHC-PMS que implica el papel 'Médico Recepcionista'
-![Casos de uso Médico Recepcionista](images/u8-UML/ejemplo_caso_de_uso.jpg)
-
-----
-
-### Diagramas de secuencia
-<!-- .slide: style="font-size: 0.90em" -->
-* Los diagramas de secuencia son parte de UML y se utilizan para modelar las interacciones entre los actores y
-los objetos dentro de un sistema.
-* Un diagrama de secuencia muestra la secuencia de interacciones que tienen lugar durante un caso de uso en particular.
-* Los objetos y los actores involucrados están listados en la parte superior del diagrama, con una línea de puntos
-trazada verticalmente a partir de estos.
-* Las interacciones entre los objetos se indican mediante flechas anotadas.
-
-----
-
-### Diagrama de secuencia para Ver la información del paciente
-![Diagrama de secuencia: Ver información del paciente](images/u8-UML/diagrama_secuencia.jpg)
-
-----
-
-#### Diagrama de secuencia para la transferencia de datos
-![Diagrama de secuencia: Transferencia de datos](images/u8-UML/diagrama_secuencia_transferencia_datos.jpg)
-
----
-### Modelos estructurales
-* Los modelos estructurales muestran la organización de un sistema en función de los componentes que conforman
-este sistema y sus relaciones.
-* Los modelos estructurales son modelos estáticos, que muestran la estructura del sistema.
-* Abarca los **Modelos de datos** y los **Modelos de Objetos**
-
----
-### 3. Modelos de Datos
-- Representan cómo se organizan, estructuran y relacionan los datos en un sistema, sin considerar comportamientos o responsabilidades.
-- Tienen como finalidad modelar la estructura estática de la información para garantizar consistencia, integridad y eficiencia del almacenamiento de datos.
-- Generalmente este tipo de diagramas se componen de: Entidades, Atributos, Relaciones, Cardinalidades, Reglas de integridad.
-
-----
-
-### 3. Modelos de Datos
-
-Algunos ejemplos de estos tipos de diagramas son:
-- Modelo entidad-relación (ER)
-- Diagramas relacionales (tablas y claves en bases de datos)
-- UML: diagrama de clases simplificado (sólo atributos y asociaciones)
-
-Se usa para diseño de bases de datos, modelado de almacenamiento y normalización.
-
-----
-
-### Diagramas de clases
-* Los diagramas de clases se utilizan en el desarrollo de un modelo de sistema orientado a objetos para mostrar las
-clases de un sistema y las asociaciones entre estas clases.
-* Una clase de objeto es una definición general de un tipo de objeto del sistema.
-* Una asociación es una relación entre clases.
-* Los objetos representan algo en el mundo real, tal como un paciente, una prescripción, médico, etc.
-
-----
-
-### Clases UML y asociación
-![Clases UML y asociación](images/u8-UML/UML_y_asociacion.jpg)
-
-----
-
-### Las clases y asociaciones en el MHC-PMS
-![Clases y asociaciones en el MHC-PMS](images/u8-UML/clases_asociaciones_MHC-PMS.jpg)
-
-----
-
-### La clase de consulta
-![La clase de consulta](images/u8-UML/clase_de_consulta.jpg)
-
-----
-
-### Generalización
-* La generalización es una técnica que utilizamos para gestionar la complejidad.
-* En lugar de definir las características detalladas de cada entidad, ponemos estas características en las clases
-más generales (animales, coches, casas, etc).
-* Esto nos permite inferir que los diferentes miembros de estas clases tienen algunas características comunes. 
-
-----
-
-### Generalización
-<!-- .slide: style="font-size: 0.90em" -->
-* En los sistemas de modelado, a menudo es útil examinar las clases de un sistema para ver si hay posibilidades de
-generalización.
-* En lenguajes orientados a objetos, la generalización se realiza utilizando los mecanismos de herencia.
-* En una generalización, los atributos y las operaciones asociadas a las clases de nivel superior también están
-asociadas a las clases de menor nivel.
-* Las clases de nivel inferior son subclases que heredan los atributos y operaciones de sus superclases. Estas
-clases de nivel inferior son más especificas y pueden añadir atributos y operaciones.
-
-----
-
-### Una jerarquía de generalización
-![Una jerarquía de generalización](images/u8-UML/jerarquia_de_generalizacion.jpg)
-
-----
-
-### Una jerarquía de generalización con caracteristicas agregadas
-![Generalización con caracteristicas agregadas](images/u8-UML/jeneralizacion_caracteristicas_agregadas.jpg)
-
-----
-
-### Agregación
-* Un modelo de agregación muestra cómo las clases se componen de otras clases.
-* Los modelos de agregación son similares a la parte de la relación en los modelos de datos semánticos.
-
-----
-
-### Agregación
-![Agregacion](images/u8-UML/agregacion.jpg)
-
----
-
-### Modelos de comportamiento
-* Modelos de comportamiento son los modelos del comportamiento dinámico de un sistema, cuando se está ejecutando.
-* Muestran lo que ocurre cuando un sistema responde a un estímulo de su entorno.
-* Los estímulos pueden ser de dos tipos: **Datos** o **Eventos**
-
----
-
-### Modelado impulsado por datos
-* Muchos sistemas empresariales son sistemas de procesamiento de datos. Son controlados por la entrada de
-datos al sistema, con relativamente poco procesamiento de eventos externos.
-* Estos modelos muestran la secuencia de las acciones involucradas en el procesamiento de datos de entrada y la
-salida asociada.
-* Son particularmente útiles durante el análisis de los requisitos, ya que pueden ser utilizados para mostrar el
-procesamiento de extremo a extremo en un sistema.
-
-----
-
-### Un modelo de actividad de la operación de la bomba de insulina
-
-![Modelo de actividad de Bomba de insulina](images/u8-UML/modelo_actividad_bomba_insulina.jpg)
-
-----
-
-#### Procesamiento de pedidos
-
-![Procesamiento de pedidos](images/u8-UML/procesamiento_de_pedidos.jpg)
+En estos casos, el sistema responde a acontecimientos externos o internos.
 
 ----
 
 ### Modelado impulsado por eventos
+El modelado impulsado por eventos parte de la idea de que un sistema puede encontrarse en diferentes estados y que determinados eventos provocan transiciones entre esos estados.
 
-* Sistemas de tiempo real son a menudo gestionados por eventos, con un procesamiento de datos mínimo.
-* Modelado por eventos muestra cómo un sistema responde a acontecimientos externos e internos.
-* Se basa en la suposición de que un sistema tiene un número finito de estados y que los acontecimientos
-(estímulos) puede causar una transición de un estado a otro.
+Por ejemplo, un sistema puede pasar de un estado "Esperando" a un estado "En funcionamiento" cuando ocurre un evento determinado.
+
+Esto conduce al concepto de máquina de estados.
 
 ---
-### Modelos de máquina de Estado
-* Estos modelan el comportamiento del sistema en respuesta a eventos externos e internos.
-* Muestran las respuestas del sistema a los estímulos tan a menudo se utilizan para el modelado de sistemas de tiempo real.
-* Modelos de máquinas de estado muestran los estados del sistema como nodos y eventos como arcos entre estos
-nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
+
+### Modelos de máquina de estados
+
+Los modelos de **máquina de estados** representan el comportamiento de un sistema en respuesta a eventos externos o internos.
+
+Resultan especialmente útiles cuando:
+- el comportamiento depende del estado actual
+- determinados eventos producen cambios de estado
+- el sistema debe responder de manera diferente dependiendo de su estado
+
+----
+
+### Modelos de máquina de estados
+En una máquina de estados:
+- los estados representan situaciones en las que puede encontrarse el sistema;
+- los eventos o estímulos provocan cambios;
+- las transiciones representan el paso de un estado a otro.
+
+Por lo tanto:
+**Evento → transición → nuevo estado**
+
+Estos modelos son especialmente relevantes para sistemas cuyo comportamiento está determinado por eventos, como muchos sistemas de tiempo real.
 
 ----
 
@@ -434,17 +452,6 @@ nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 
 ### Los Estados y los estímulos para el horno de microondas
 <!-- .slide: style="font-size: 0.50em" -->
-<!--
-| Estado            | Descripción                                                                                                                                                                                                                                                                    |
-|:------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Esperando         | El horno está a la espera para la entrada. La pantalla muestra la hora actual.                                                                                                                                                                                                 |
-| Potencia Media    | La potencia del horno es de 300 vatios. La pantalla muestra 'Potencia Media'.                                                                                                                                                                                                  |
-| Potencia Completa | La fuente de horno se establece en 600 vatios. La pantalla muestra 'Potencia Máxima'.                                                                                                                                                                                          |
-| Establecer tiempo | El tiempo de cocción se ajusta al valor de entrada del usuario. La pantalla muestra el tiempo de cocción seleccionado y se actualiza a medida que el tiempo se ajusta.                                                                                                         |
-| Deshabilitar      | El funcionamiento del horno está deshabilitado por seguridad. Luz interior del horno está encendido. La pantalla muestra "No está listo'.                                                                                                                                      |              
-| Habilitado        | Se habilita el funcionamiento del horno. Luz interior del horno está apagado. La pantalla muestra "Listo para cocinar'.                                                                                                                                                        |   
-| Operacion         | Horno en funcionamiento. Luz interior del horno está encendido. La pantalla muestra la cuenta atrás del temporizador. Al término de la cocción, el zumbador suena durante cinco segundos. La luz del horno está encendido. La pantalla muestra 'Cocinando completa ", mientras |                                                                                                                                                                                                                                                       
--->
 <table>
 <thead>
 <tr>
@@ -488,18 +495,6 @@ nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 
 ### Los Estados y los estímulos para el horno de microondas
 <!-- .slide: style="font-size: 0.60em" -->
-<!--
-| Estimulo | Descripción                                                   |
-|:---------|:--------------------------------------------------------------|
-| Potencia Media | El usuario ha pulsado el botón de media potencia.       |
-| Potencia Máxima | El usuario ha pulsado el botón de alta potencia.       |
-| Temporizador | El usuario ha pulsado el botón del temporizador.          |
-| Nú mero | El usuario ha pulsado una tecla numérica.                     |
-| Puerta Abierta | El interruptor de la puerta del horno no está cerrada.  |
-| Puerta Cerrada | El interruptor de la puerta del horno está cerrada.     |
-| Iniciar | El usuario ha pulsado el botón de Inicio.                     |
-| Cancelar | El usuario oprime el botón Cancelar                           |
--->
 <table>
 <thead>
 <tr>
@@ -543,6 +538,8 @@ nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 </tbody>
 </table>
 
+El modelo permite observar cómo los eventos producen transiciones entre los diferentes estados del sistema.
+
 ----
 
 ### El funcionamiento del horno de microondas
@@ -550,68 +547,249 @@ nodos. Cuando ocurre un evento, el sistema pasa de un estado a otro.
 
 ---
 
-### 4. Modelo de Objetos
-- Representa las clases, objetos y sus interacciones, incluyendo atributos, comportamientos (métodos) y relaciones.
-- Tiene como objetivo capturar tanto la estructura como el comportamiento del sistema desde la perspectiva de la programación orientada a objetos.
-- Los elementos típicos que componen estos diagramas son: Clases y Objetos, Métodos (comportamiento), Herencia, Composición, Asociaciones.
+### Modelos estructurales
 
-----
+Muestran la **organización** de un sistema en función de los **componentes** que lo conforman y de las **relaciones** entre ellos.
 
-### 4. Modelo de Objetos
-Algunos ejemplos de diagramas que se corresponden con el modelo de objeto son: 
-- Diagrama de clase
-- Diagrama de objetos 
-- Modelado en el análisis y diseño orientado a objetos (OOAD)
+Proporcionan una visión principalmente estática del sistema.
+
+Dentro de esta perspectiva pueden distinguirse:
+- **modelos de datos** → estructura de la información
+- **modelos de objetos** → estructura de los elementos del sistema desde una perspectiva orientada a objetos.
 
 ---
 
-### Métodos Estructurados
-- Son metodologías que guían la creación de software mediante modelos jerárquicos, lógicos y lineales, orientados a entender qué hace el sistema y cómo lo hace, sin considerar objetos o clases.
-- Estos métodos se originaron antes del auge de la orientación a objetos y ponía énfasis en la descomposición funcional, el flujo de datos y el control secuencial del sistema.
+### Modelo de datos
+<!-- .slide: style="font-size: 0.85em" -->
+Representan cómo se organizan, estructuran y relacionan los datos de un sistema.
+
+Su objetivo es describir la estructura estática de la información.
+
+Un modelo de datos puede representar:
+- entidades
+- atributos
+- relaciones
+- cardinalidades
+- reglas de integridad
+
+Estos modelos son utilizados, para el diseño de bases de datos y para representar cómo se organiza la información que debe almacenar el sistema.
 
 ----
 
-### Métodos Estructurados: Características
-- Basados en funciones: el sistema se descompone en procesos o funciones (no en objetos).
-- Separación clara entre análisis y diseño.
+### Modelo de datos: Ejemplos
+Entre las técnicas utilizadas para representar datos se encuentran:
+- modelo entidad-relación (ER)
+- modelos relacionales, basados en tablas y claves
+- otras representaciones destinadas a describir la estructura de almacenamiento de información
 
-Uso de herramientas como:
-- Diagramas de flujo de datos (DFD).
-- Diccionarios de datos.
-- Especificaciones estructuradas (pseudocódigo, tablas de decisión, árboles de decisión).
-- Diagramas de estructura (representan jerarquía funcional del sistema).
+Los modelos de datos permiten analizar cómo se relaciona la información y constituyen una base para actividades como el diseño y la normalización de bases de datos.
 
 ---
+### Modelo de objetos
+<!-- .slide: style="font-size: 0.82em" -->
+Rrepresenta los elementos de un sistema desde la perspectiva de la programación orientada a objetos.
+
+Permite representar:
+- clases
+- objetos
+- atributos
+- operaciones o métodos
+- asociaciones
+- herencia
+- composición y otras relaciones
+
+Un modelo de objetos busca representar los elementos que forman parte del sistema y las relaciones y responsabilidades asociadas a ellos.
+
+----
+
+### Clases y objetos
+<!-- .slide: style="font-size: 0.82em" -->
+Una **clase** es una definición general de un tipo de objeto del sistema.
+
+Un **objeto** es una instancia concreta de una clase.
+
+Por ejemplo, en un sistema de gestión médica podrían existir clases como:
+- Paciente
+- Médico
+- Consulta
+- Prescripción
+
+Una clase puede definir atributos y operaciones que caracterizan a sus objetos.
+
+Las clases también pueden relacionarse mediante asociaciones.
+
+----
+
+### Diagramas de clases
+<!-- .slide: style="font-size: 0.82em" -->
+Se utilizan en el desarrollo de modelos de sistemas orientados a objetos para representar:
+- las clases del sistema
+- sus atributos
+- sus operaciones
+- las asociaciones entre clases
+- otras relaciones entre ellas
+
+Permite observar la estructura del sistema desde una perspectiva orientada a objetos.
+
+El estudio detallado de clases, atributos, métodos, asociaciones, multiplicidades, herencia y demás elementos de notación se desarrolla en las diapositivas específicas de diagramas de clases.
+
+---
+
+### Relación entre los diferentes modelos
+
+Los distintos modelos no representan sistemas independientes.
+
+Todos pueden utilizarse para estudiar diferentes aspectos de un mismo sistema.
+
+----
+
+### Relación entre los diferentes modelos
+Por ejemplo, consideremos un sistema de avistaje de fauna:
+
+<table>
+  <thead>
+    <tr>
+      <th>Modelo</th>
+      <th>Propósito / Qué permite</th>
+      <th>Ejemplos / Elementos</th>
+      <th>Pregunta Clave</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Modelo de contexto</strong></td>
+      <td>Permite identificar el sistema y sus relaciones.</td>
+      <td>Usuarios, organismos, servicios externos, otros sistemas.</td>
+      <td>¿Con quién se relaciona el sistema?</td>
+    </tr>
+    <tr>
+      <td><strong>Modelo de comportamiento</strong></td>
+      <td>Permite analizar qué sucede ante eventos o interacciones.</td>
+      <td>Acciones del sistema (ej. cuando un usuario registra un avistaje).</td>
+      <td>¿Qué hace el sistema cuando ocurre una determinada interacción o evento?</td>
+    </tr>
+    <tr>
+      <td><strong>Modelo de datos</strong></td>
+      <td>Permite representar la información que maneja el sistema.</td>
+      <td>Especie, observación, ubicación, fecha, cantidad de individuos.</td>
+      <td>¿Qué información necesita manejar el sistema?</td>
+    </tr>
+    <tr>
+      <td><strong>Modelo de objetos</strong></td>
+      <td>Permite identificar los componentes y sus relaciones.</td>
+      <td>Clases: Usuario, Especie, Avistaje, Sitio, Observación.</td>
+      <td>¿Qué elementos componen el sistema y cómo se relacionan?</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+### Métodos estructurados
+Son enfoques de desarrollo que organizan el análisis y el diseño alrededor de determinadas técnicas de modelado.
+
+Estos métodos se desarrollaron antes del predominio de la orientación a objetos y ponen énfasis en:
+- la descomposición funcional
+- el flujo de datos
+- el control del procesamiento
+- la organización jerárquica de las funciones
+
+----
+
+#### Procesamiento de pedidos
+
+![Procesamiento de pedidos](images/u8-UML/procesamiento_de_pedidos.jpg)
+
+----
+
+### Métodos estructurados: Características
+Los métodos estructurados se caracterizan por:
+- **Orientación a funciones:** El sistema se descompone en procesos o funciones, en lugar de organizarse principalmente alrededor de objetos y clases.
+- **Descomposición jerárquica:** El sistema puede dividirse progresivamente en partes más pequeñas hasta alcanzar un nivel de detalle adecuado.
+- **Separación entre análisis y diseño:** Se distingue entre el estudio de lo que el sistema debe hacer y la definición de cómo se organizará su solución.
+
+----
+
+### Métodos estructurados: técnicas de modelado
+
+Entre las herramientas asociadas a estos métodos se encuentran:
+- Diagramas de flujo de datos (DFD)
+- diccionarios de datos
+- pseudocódigo
+- tablas de decisión
+- árboles de decisión
+- diagramas de estructura
+
+---
+
+### Diferencia entre métodos estructurados y orientación a objetos
+<!-- .slide: style="font-size: 0.82em" -->
+Los **métodos estructurados** y el enfoque orientado a objetos representan diferentes formas de organizar el análisis y diseño.
+
+En un enfoque estructurado, el sistema se analiza mediante:
+
+**procesos + funciones + flujo de datos**
+
+En un enfoque **orientado a objetos**, el análisis se organiza:
+
+**objetos + clases + responsabilidades + relaciones**
+
+Cada enfoque utiliza un conjunto de modelos y técnicas que responden a una determinada forma de comprender y descomponer el sistema.
+
+---
+
 ### Ingeniería dirigida por modelos
 <!-- .slide: style="font-size: 0.90em" -->
-* Ingeniería dirigida por modelos (MDE) es un enfoque para el desarrollo de software donde los modelos en lugar
-de los programas son los principales resultados del proceso de desarrollo.
-* Los programas que se ejecutan en una plataforma de hardware / software se generan automáticamente a partir
-de los modelos.
-* Los defensores de la MDE sostienen que esto eleva el nivel de abstracción en la ingeniería de software para que
-los ingenieros ya no tienen que preocuparse por los detalles del lenguaje de programación o las características
-específicas de plataformas de ejecución.
+La Ingeniería Dirigida por Modelos **(MDE, Model-Driven Engineering)** constituye un enfoque en el que los modelos tienen un papel central durante el desarrollo del software.
+
+En este enfoque, los modelos no son únicamente documentación del sistema, sino que pueden constituir artefactos principales del proceso de desarrollo.
+
+----
+
+### Ingeniería dirigida por modelos
+Una de las ideas asociadas a MDE es que pueden generarse programas para determinadas plataformas a partir de modelos.
+
+Esto permite trabajar a un nivel de abstracción superior al código de programación y reducir la dependencia directa de determinados lenguajes o plataformas durante algunas etapas del desarrollo.
 
 ----
 
 ### MDA: Model-Driven Architecture
 
-* MDE tiene sus orígenes en MDA. 
-* MDA se enfoca en las etapas de diseño e implementación del desarrollo de software
-* MDE se interesa por todos los aspectos del proceso de ingeniería de software
+**MDA (Model-Driven Architecture)** es una propuesta relacionada con el desarrollo dirigido por modelos.
+
+Mientras que **MDA** se concentra especialmente en las etapas de diseño e implementación, **MDE** tiene un alcance más amplio sobre el proceso de ingeniería de software.
+
+**MDA** propone trabajar con diferentes niveles de abstracción.
 
 ----
 
-### Ingeniería dirigida por modelos
-El método de MDA recomienda la producción de tres tipos de modelo de sistema 
-abstracto:
-- **Modelo Independiente de Computación (CIM):** Modela las importantes abstracciones de dominio usadas en el sistema.
-- **Modelo Independiente de Plataforma (PIM):** Modela la operación del sistema sin referencia a su implementación.
-- **Modelos específicos de plataforma (PSM)**
+### MDA: CIM, PIM y PSM
+<!-- .slide: style="font-size: 0.87em" -->
+**MDA** propone tres tipos principales de modelos:
+- **CIM — Computationally Independent Model o Modelo Independiente de Computación:** Representa las abstracciones importantes del dominio y permite describir el sistema sin centrarse en los detalles de su implementación computacional.
+- **PIM — Platform Independent Model o Modelo Independiente de Plataforma:** Representa la operación del sistema sin hacer referencia a una plataforma concreta de implementación.
+- **PSM — Platform Specific Model o Modelo Específico de Plataforma:** Representa el sistema considerando las características de una plataforma concreta.
+
+----
+
+### MDA: CIM, PIM y PSM
+La idea general puede representarse como una progresión:
+
+Dominio → modelo independiente de plataforma → modelo específico de plataforma → implementación
+
+De esta manera, los modelos permiten trabajar progresivamente desde niveles más abstractos hacia niveles más próximos a la implementación.
 
 ----
 
 ![Proceso MDA](images/u8-UML/proceso_mda.png)
+
+---
+
+**No existe un único modelo capaz de explicar completamente un sistema complejo.**
+
+Modelar consiste en seleccionar una perspectiva, abstraer los detalles que no son relevantes para ese propósito y representar aquellos aspectos que necesitamos comprender, comunicar o documentar.
+
+Los diferentes modelos se complementan y permiten construir progresivamente una comprensión más completa del sistema software.
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
