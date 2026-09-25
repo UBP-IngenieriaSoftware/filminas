@@ -10,98 +10,504 @@ Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
 ---
-### DIAGRAMA DE CLASES
-Es un diagrama de estructura
-* Se utiliza para representar los elementos que componen un sistema de información desde un punto de vista estático.
-* No incluye la forma en la que se comportan los distintos elementos a lo largo de la ejecución
+
+### Diagrama de clases
+El diagrama de clases es un diagrama de **estructura** de UML.
+
+Permite representar la estructura estática de un sistema, mostrando:
+- las clases que forman parte del sistema
+- sus atributos
+- sus operaciones
+- las relaciones entre las clases
+
+Se centra en qué elementos componen el sistema y cómo se relacionan, no en la secuencia temporal de las acciones.
+
+---
+
+### ¿Qué representa una clase?
+<!-- .slide: style="font-size: 0.90em" -->
+Una **clase** es una abstracción que define las características y comportamientos que comparten un conjunto de objetos.
+
+Por ejemplo, en un sistema de una clínica veterinaria podríamos tener:
+- Persona
+- Mascota
+- Veterinario
+- Consulta
+- Receta
+
+Una clase describe qué información tienen sus objetos y qué operaciones pueden realizar.
 
 ----
 
-Es un diagrama puramente orientado al modelo de programación orientado a objetos
-* Define las clases que se utilizarán en la fase de construcción y la manera en que se relacionan las mismas.
- Muestra:
-* La representación de datos y su interacción.
-* El modelo lógico de los datos de un sistema.
+### Ejemplo: clase de consulta
+![La clase de consulta](images/u8-UML/clase_de_consulta.jpg)
 
 ---
-### Elementos
-<!-- .slide: style="font-size: 0.80em" -->
-* **Clases:** elemento principal del diagrama y representa una clase dentro del paradigma de la orientación a
-objetos. Define un grupo de objetos que comparten características, condiciones y significado.
 
-Una clase está compuesta por tres elementos: nombre de la clase, atributos, funciones.
-* (+) Pública. Representa que se puede acceder al atributo o función desde cualquier lugar de la aplicación.
-* (-) Privada. Representa que se puede acceder al atributo o función únicamente desde la misma clase.
-* (#) Protegida. Representa que el atributo o función puede ser accedida únicamente desde la misma clase o desde las 
-clases que heredan de ella (clases derivadas)
+### Clase y objeto
+- **Clase:** Es la definición o plantilla de un tipo de objeto.
+- **Objeto:** Es una instancia concreta de una clase.
+
+Por ejemplo:
+- Clase: Mascota
+- Objetos: "Luna", "Toby", "Milo"
+
+Los tres objetos pertenecen a la clase Mascota, pero representan entidades concretas diferentes.
+
+---
+
+### ¿Qué información contiene una clase?
+
+Una clase UML puede representarse mediante un rectángulo dividido en compartimentos.
+
+Una representación habitual contiene:
+1. Nombre de la clase
+2. Atributos
+3. Operaciones
 
 ----
 
 ![Clase](images/u8-UML/clase_ej.jpg) ![Clase Ejemplo](images/u8-UML/clase_ejemplo.jpg)
 
-----
+---
+### 1. Nombre de la clase
+<!-- .slide: style="font-size: 0.95em" -->
+El primer compartimento contiene el nombre de la clase.
 
-### Relaciones
-<!-- .slide: style="font-size: 0.90em" -->
-* Una relación identifica una dependencia.
-* Las relaciones se representan con una línea que une las clases
-* Propiedades:
-  * Multiplicidad. Es decir, el número de elementos de una clase que participan en una relación. Se puede
-indicar un número, un rango y se utiliza n o * para identificar un número cualquiera.
-  * Nombre de la asociación. En ocasiones se escribe una indicación de la asociación que ayuda a
-entender la relación que tienen dos clases. Suelen utilizarse verbos.
+Por convención, los nombres de las clases suelen expresarse mediante sustantivos y comenzar con mayúscula:
+- Persona
+- Mascota
+- Consulta
+- Producto
+- Cuenta
 
-----
-
-### Relaciones
-![Relaciones](images/u8-UML/clases_relaciones.jpg)
+El nombre debería representar claramente el concepto que se está modelando.
 
 ---
-### Tipos de relaciones
-* Asociación.
-* Agregación.
-* Composición.
-* Herencia.
+### 2. Atributos
+<!-- .slide: style="font-size: 0.90em" --> 
+Los atributos representan información o características que poseen los objetos de una clase.
+
+Por ejemplo, en la clase *Mascota** tenemos los atributos:
+- nombre
+- fechaNacimiento
+- especie
+- raza
+
+En UML también podemos indicar el tipo:
+- nombre: String
+- fechaNacimiento: Date
+
+Los atributos permiten describir el estado de los objetos.
+
+---
+### 3. Operaciones
+
+Las operaciones representan comportamientos o servicios que una clase puede proporcionar.
+
+Por ejemplo, en la clase *Mascota** tenemos los atributos:
+- nombre: String
+- especie: String
+
+Y tenemos las operaciones:
+- calcularEdad(): int
+- actualizarDatos(): void
 
 ----
 
-### Asociación
-Este tipo de relación es el más común y se utiliza para representar dependencia semántica.
+### 3. Operaciones
+Una operación puede incluir:
+- nombre
+- parámetros
+- tipo de retorno
+
+Por ejemplo:
+
+**registrarConsulta(fecha: Date): void**
+
+---
+
+### Visibilidad
+
+UML permite indicar la visibilidad de atributos y operaciones.
+
+Los símbolos más utilizados son:
+
+<table>
+  <thead>
+    <tr>
+      <th>Símbolo</th>
+      <th>Visibilidad</th>
+      <th>Significado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>+</code></td>
+      <td>Pública</td>
+      <td>Accesible desde fuera de la clase</td>
+    </tr>
+    <tr>
+      <td><code>-</code></td>
+      <td>Privada</td>
+      <td>Accesible únicamente desde la propia clase</td>
+    </tr>
+    <tr>
+      <td><code>#</code></td>
+      <td>Protegida</td>
+      <td>Accesible desde la clase y sus subclases</td>
+    </tr>
+    <tr>
+      <td><code>~</code></td>
+      <td>Paquete</td>
+      <td>Accesible dentro del mismo paquete</td>
+    </tr>
+  </tbody>
+</table>
+
+----
+
+### Visibilidad
+
+- Nombre: **Persona**
+
+**Atributos**
+- dni: String
+- nombre: String
+
+**Operaciones**
++ obtenerNombre(): String
++ cambiarNombre(nombre: String): void
+
+La visibilidad está relacionada con el principio de encapsulamiento de la programación orientada a objetos.
+
+---
+
+### De los requisitos a las clases
+
+El diagrama de clases no debería construirse simplemente inventando clases.
+
+Las clases deben surgir del **análisis del problema** y de los **requisitos**.
+
+Podemos preguntarnos:
+- ¿Qué conceptos importantes del dominio aparecen en los requisitos?
+
+----
+
+### De los requisitos a las clases: Ejemplo
+En un sistema de avistaje de fauna podrían aparecer conceptos como:
+- Observación
+- Especie
+- Animal
+- Lugar
+- Usuario
+- Fotografía
+
+Estos conceptos pueden constituir candidatos a clases.
+
+---
+
+### Clases de análisis
+
+Durante el análisis se busca identificar las principales abstracciones del dominio del problema.
+
+Una clase de análisis:
+- representa un concepto relevante del dominio
+- se relaciona con conceptos del mundo real
+- ayuda a comprender y estructurar el problema
+- evita introducir prematuramente decisiones de implementación
+
+---
+
+### Clases de análisis: ejemplo
+<!-- .slide: style="font-size: 0.75em" --> 
+- Usuario
+- Observación
+- Especie
+- Lugar
+- Fotografía
+
+son conceptos del dominio.
+
+En cambio, clases como:
+- ServicioHTTP
+- ControladorBD
+- GestorDeConexiones
+
+corresponden normalmente a decisiones del dominio de la solución y no deberían aparecer en un modelo conceptual inicial del problema.
+
+**Dominio del problema ≠ dominio de la solución**
+
+---
+
+### ¿Cómo encontrar clases?
+
+No existe un algoritmo único que permita encontrar automáticamente las clases correctas.
+
+Sin embargo, existen técnicas que ayudan a identificarlas.
+
+Una de ellas es el **análisis nombre/verbo**.
+
+---
+
+### Análisis nombre/verbo
+
+Se analiza el texto de los requisitos buscando:
+
+1. **Sustantivos o frases nominales:** Pueden surgir clases y atributos
+2. **Verbos o frases verbales:** Pueden surgit operaciones, responsabilidades y relaciones
+
+----
+
+### Análisis nombre/verbo
+Por ejemplo: "El usuario registra una observación de una especie en un lugar."
+
+Podríamos identificar inicialmente:
+- **Posibles clases:** Usuario, Observación, Especie, Lugar
+- **Posibles responsabilidades o acciones:** registrar 
+
+Pero esto es solamente un punto de partida.
+
+No todo sustantivo debe convertirse automáticamente en una clase.
+
+---
+
+### Responsabilidades de una clase
+
+Una clase no debería existir solamente para almacenar datos.
+
+También debe tener responsabilidades coherentes con el concepto que representa.
+
+Una buena clase:
+- tiene una finalidad clara
+- representa un concepto concreto del dominio
+- tiene responsabilidades relacionadas entre sí
+- evita asumir responsabilidades que corresponden a otras clases
+
+----
+
+### Responsabilidades de una clase
+- **Alta cohesión:** Las responsabilidades de una clase están fuertemente relacionadas entre sí.
+- **Bajo acoplamiento:** Las clases dependen lo menos posible unas de otras.
+
+Como regla general, buscamos alta cohesión y bajo acoplamiento.
+
+---
+
+### CRC: Clase, Responsabilidades y Colaboradores
+
+La técnica permite analizar:
+- qué **clase** estamos considerando
+- qué **responsabilidades** tiene
+- con qué otras clases necesita **colaborar**
+
+Puede realizarse mediante tarjetas o notas y utilizarse como complemento del análisis nombre/verbo.
+
+El proceso puede comenzar con una tormenta de ideas y continuar con una revisión de las clases y sus responsabilidades.
+
+---
+
+### Relaciones entre clases
+
+Una vez identificadas las clases, debemos analizar cómo se relacionan.
+
+Una **relación** representa una conexión significativa entre elementos del modelo.
+
+----
+
+### Relaciones entre clases
+En un diagrama de clases podemos encontrar diferentes tipos de relaciones.
+
+Las más importantes para este nivel son:
+1. Asociación
+2. Agregación
+3. Composición
+4. Generalización / herencia
+5. Dependencia
+
+No todas tienen la misma importancia ni deben utilizarse siempre.
+
+---
+
+### Relación: 1. Asociación
+
+La **asociación** representa una relación estructural entre clases.
+
 Se representa con una simple línea continua que une las clases que están incluidas en la asociación.
 
-Ejemplo
-Una mascota pertenece a una persona
+Ejemplo: Una mascota pertenece a una persona
 
 ![Persona-Mascota](images/u8-UML/persona_mascota.jpg)
 
+La asociación permite expresar que existen objetos de una clase relacionados con objetos de otra clase.
+
+----
+
+### Nombre de una asociación
+
+Una **asociación** puede tener un **nombre** que ayude a comprender su significado.
+
+Generalmente se utiliza una expresión verbal.
+
+Por ejemplo:
+
+Persona ─── posee ─── Mascota
+
+Empresa ─── emplea ─── Persona
+
+El nombre debería aportar información útil.
+
+Si la relación resulta evidente y el nombre no agrega claridad, puede omitirse.
+
+----
+
+### Asociación: Roles
+
+Una **asociación** también puede indicar los **roles** que desempeñan las clases participantes.
+
+Por ejemplo:
+
+Empresa ───────── Persona
+
+ empleador          empleado
+
+Los roles ayudan a interpretar qué representa cada extremo de la relación.
+
+----
+
+### Asociación: Multiplicidad
+
+La **multiplicidad** indica cuántas instancias de una clase pueden participar en una asociación.
+
+Algunos valores frecuentes son:
+
+<table>
+  <thead>
+    <tr>
+      <th>Multiplicidad</th>
+      <th>Significado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>1</code></td>
+      <td>Exactamente uno</td>
+    </tr>
+    <tr>
+      <td><code>0..1</code></td>
+      <td>Cero o uno</td>
+    </tr>
+    <tr>
+      <td><code>*</code></td>
+      <td>Cero o muchos</td>
+    </tr>
+    <tr>
+      <td><code>1..*</code></td>
+      <td>Uno o muchos</td>
+    </tr>
+    <tr>
+      <td><code>0..5</code></td>
+      <td>Entre cero y cinco</td>
+    </tr>
+  </tbody>
+</table>
+
+La multiplicidad debe analizarse en ambos extremos de la relación.
+
+----
+
+### Asociación: Multiplicidad
+
+![Relaciones](images/u8-UML/clases_relaciones.jpg)
+
+![Clases UML y asociación](images/u8-UML/UML_y_asociacion.jpg)
+
+----
+
+### Clases y asociaciones en el MHC-PMS
+![Clases y asociaciones en el MHC-PMS](images/u8-UML/clases_asociaciones_MHC-PMS.jpg)
+
+----
+
+### Navegabilidad
+
+La **navegabilidad** indica que, desde una instancia de una clase, es posible acceder a instancias de otra clase.
+
+Puede representarse mediante una flecha.
+
+Por ejemplo:
+
+Pedido ───────→ Cliente
+
+puede expresar que un objeto Pedido mantiene una referencia hacia un Cliente.
+
+----
+
+### Navegabilidad
+
+La navegabilidad puede ser útil para representar cómo se estructura el acceso entre objetos.
+
+Sin embargo, en modelos de análisis conviene no agregar flechas simplemente por costumbre.
+
+Si un detalle no ayuda a comprender el modelo, puede omitirse.
+
 ---
-### Agregación
-<!-- .slide: style="font-size: 0.90em" -->
-Es una representación jerárquica que indica a un objeto y las partes que componen ese objeto.
-Representa relaciones en las que un objeto es parte de otro pero tiene existencia en sí mismo.
-Se representa con una línea que tiene un rombo en la la clase que es una agregación de la otra (en la clase que
-contiene las otras).
+
+### Relación: 2. Agregación
+La **agregación** representa una relación de tipo **todo-parte** en la que las partes pueden existir independientemente del todo.
+
+Se representa mediante un **rombo blanco** en el extremo correspondiente al todo.
 
 ![Agregación](images/u8-UML/mesas_tablas.jpg)
 
+----
+
+### Relación: 2. Agregación
+![Agregacion](images/u8-UML/agregacion.jpg)
+
 ---
-### Composición
-<!-- .slide: style="font-size: 0.80em" -->
-Representa una relación jerárquica entre un objeto y las partes que lo componen de una forma más fuerte que en la
-agregación.
-Cuando el elemento contenedor desaparece, desaparecen todos los contenidos. No tienen sentido por si mismos.
-Contenedor y contenidos tienen los mismos tiempo de vida. 
-Se representa con una línea continua con un rombo relleno en la clase que es compuesta.
+
+### Relación: 3. Composición
+<!-- .slide: style="font-size: 0.90em" --> 
+La **composición** es una relación **todo-parte** más fuerte.
+
+Se representa mediante un **rombo relleno**.
+
+En una composición existe una dependencia fuerte entre el ciclo de vida del todo y sus partes.
 
 ![Composicion](images/u8-UML/composicion.jpg)
 
 ---
-### Herencia
-<!-- .slide: style="font-size: 0.90em" -->
-Este tipo de relaciones permiten que una clase (clase hija o subclase) reciba los atributos y métodos de
-otra clase (clase padre o superclase).
-Estos atributos y métodos recibidos se suman a los que la clase tiene por sí misma.
-Se utiliza en relaciones “es un”.
+
+### Relación: 4. Generalización
+
+La generalización representa una relación entre un elemento más general y otro más específico.
+
+Es la relación que habitualmente asociamos con: **es un**
+
+----
+
+### Relación: 4. Herencia
+
+En programación orientada a objetos, una jerarquía de generalización se implementa habitualmente mediante herencia.
+
+Una subclase hereda características de su superclase y puede:
+- utilizar los atributos y operaciones heredados
+- agregar nuevas características
+- redefinir determinadas operaciones
+
+----
+
+### Relación: 4. Generalización/Herencia - Ejemplo
+![Generalización con caracteristicas agregadas](images/u8-UML/jeneralizacion_caracteristicas_agregadas.jpg)
+
+---
+
+### Generalización como herramienta de abstracción
+
+La generalización permite colocar características comunes en una clase más general.
+
+Esto reduce la duplicación y permite construir una jerarquía de conceptos.
 
 ![Herencia](images/u8-UML/herencia.jpg)
 
@@ -110,181 +516,158 @@ Se utiliza en relaciones “es un”.
 
 ![Diagrama de Clases Veterinaria](images/u8-UML/diagrama_clases_veterinaria.png)
 
----
-### Generalización
-* La generalización es una técnica que utilizamos para gestionar la complejidad.
-* En lugar de definir las características detalladas de cada entidad, ponemos estas características en las clases
-más generales (animales, coches, casas, etc).
-* Esto nos permite inferir que los diferentes miembros de estas clases tienen algunas características comunes. 
+----
+
+### Agregar características a las subclases
+
+Las subclases pueden incorporar características específicas.
+
+La jerarquía debe representar una especialización real.
+
+Una pregunta útil es: **¿Un objeto de la subclase realmente puede considerarse un objeto de la superclase?**
+
+Si la respuesta es no, probablemente la herencia no sea apropiada.
 
 ----
 
-### Generalización
+### Generalización y principio de sustitución
+
+La relación de generalización implica que una instancia de una clase especializada puede utilizarse allí donde se espera una instancia de la clase general, respetando el comportamiento esperado.
+
+Se relaciona con el principio de sustitución de Liskov.
+
+"La herencia debe representar una verdadera relación de especialización, no simplemente reutilización de código."
+
+---
+
+### Clases abstractas
+
+Una **clase abstracta** representa una abstracción que no se instancia directamente.
+
+Puede utilizarse cuando queremos definir características comunes para varias subclases.
+
+Una operación también puede declararse abstracta cuando su implementación se deja para las subclases.
+
+---
+
+### Polimorfismo
+
+El polimorfismo permite que una misma operación pueda tener comportamientos diferentes según el objeto que la implemente.
+
+La operación dibujar() representa la misma responsabilidad conceptual, pero puede comportarse de manera diferente en cada subclase.
+
+Polimorfismo = una misma interfaz conceptual, diferentes comportamientos.
+
+---
+
+### Clases y asociaciones: ejemplo completo
+<!-- .slide: style="font-size: 0.80em" -->
+Los diagramas de clases permiten combinar todos estos elementos.
+
+En un diagrama completo podemos encontrar:
+- clases
+- atributos
+- operaciones
+- asociaciones
+- multiplicidades
+- roles
+- generalizaciones
+- agregaciones
+- composiciones
+
+No es necesario utilizar todos estos elementos en todos los diagramas.
+
+---
+
+### Diagrama de clases y análisis
 <!-- .slide: style="font-size: 0.90em" -->
-* En los sistemas de modelado, a menudo es útil examinar las clases de un sistema para ver si hay posibilidades de
-generalización.
-* En lenguajes orientados a objetos, la generalización se realiza utilizando los mecanismos de herencia.
-* En una generalización, los atributos y las operaciones asociadas a las clases de nivel superior también están
-asociadas a las clases de menor nivel.
-* Las clases de nivel inferior son subclases que heredan los atributos y operaciones de sus superclases. Estas
-clases de nivel inferior son más especificas y pueden añadir atributos y operaciones.
+El diagrama de clases puede utilizarse durante el análisis para comprender y estructurar el dominio del problema.
+
+Durante esta etapa:
+- se analizan y refinan los requisitos
+- se identifican conceptos relevantes
+- se construyen modelos del sistema
+- se dejan muchas decisiones de implementación para etapas posteriores
+
+El límite entre análisis y diseño no siempre es completamente rígido.
 
 ----
 
-### Una jerarquía de generalización
-![Una jerarquía de generalización](images/u8-UML/jerarquia_de_generalizacion.jpg)
+### Diagrama de clases y análisis
+- **Modelo del dominio / análisis** -> ¿Qué conceptos existen en el problema?
+- **Diseño** -> ¿Cómo vamos a construir la solución?
+
+---
+
+### Clases de análisis
+
+Las clases de análisis representan abstracciones del dominio del problema.
+
+Deberían:
+- mapearse con conceptos del negocio
+- ayudar a clarificar el dominio
+- evitar detalles innecesarios de implementación
+- tener responsabilidades claramente definidas
+
+Una clase de análisis puede posteriormente dar lugar a una o más clases de diseño.
 
 ----
 
-### Una jerarquía de generalización con caracteristicas agregadas
-![Generalización con caracteristicas agregadas](images/u8-UML/jeneralizacion_caracteristicas_agregadas.jpg)
+### Anatomía de una clase de análisis
+
+Una clase de análisis debería contener solamente el nivel de detalle necesario para comprender el dominio.
+
+Puede incluir:
+- nombre
+- atributos relevantes
+- operaciones principales
+- relaciones con otras clases
 
 ----
 
-### Agregación
-* Un modelo de agregación muestra cómo las clases se componen de otras clases.
-* Los modelos de agregación son similares a la parte de la relación en los modelos de datos semánticos.
+### Anatomía de una clase de análisis
+Se evitan detalles como:
+- estructuras internas
+- mecanismos específicos de persistencia
+- bibliotecas
+- protocolos
+- tecnologías concretas
+
+En análisis interesa la intención de la clase; en diseño se incorporan progresivamente decisiones sobre su implementación.
+
+---
+
+### ¿Qué hace una buena clase?
+
+- tiene un nombre claro
+- representa un concepto específico
+- pertenece al dominio del problema
+- tiene responsabilidades bien definidas
+- mantiene alta cohesión
+- evita depender innecesariamente de otras clases
 
 ----
 
-### Agregación
-![Agregacion](images/u8-UML/agregacion.jpg)
+### Clase de análisis: Conviene evitar
+
+- Clases omnipotentes: Una única clase que concentra prácticamente toda la lógica del sistema.
+- Clases excesivamente pequeñas: Muchas clases con responsabilidades insignificantes pueden hacer que el modelo sea innecesariamente complejo.
+- Jerarquías demasiado profundas: Una cadena extensa de herencia puede dificultar la comprensión y mantenimiento del sistema.
 
 ---
-### Diagramas de clases
-* Los diagramas de clases se utilizan en el desarrollo de un modelo de sistema orientado a objetos para mostrar las
-clases de un sistema y las asociaciones entre estas clases.
-* Una clase de objeto es una definición general de un tipo de objeto del sistema.
-* Una asociación es una relación entre clases.
-* Los objetos representan algo en el mundo real, tal como un paciente, una prescripción, médico, etc.
+
+### Estereotipos de análisis
+
+En algunos enfoques de análisis, especialmente asociados a RUP (Rational Unified Process), se utilizan tres estereotipos:
+
+- `<<boundary>>`: Clase mediadora entre el sistema y su entorno
+- `<<control>>`: Una clase que encapsula comportamiento especifico de caso de uso
+- `<<entity>>`: Una clase que se utiliza para modelar información persistente sobre algo
+
+Estos estereotipos ayudan a clasificar las responsabilidades de las clases.
 
 ----
 
-### Clases UML y asociación
-![Clases UML y asociación](images/u8-UML/UML_y_asociacion.jpg)
-
-----
-
-### Las clases y asociaciones en el MHC-PMS
-![Clases y asociaciones en el MHC-PMS](images/u8-UML/clases_asociaciones_MHC-PMS.jpg)
-
-----
-
-### La clase de consulta
-![La clase de consulta](images/u8-UML/clase_de_consulta.jpg)
-
----
-
-### Workflow de Análisis
-Ayuda a definir y especificar el sistema a ser construido. En esta fase se analizan, refinan y estructuran los requisitos 
-con el fin de llegar a una mayor comprensión de los mismos.
-
----
-### Workflow de Análisis
-* Crean modelos que capturan el comportamiento deseado del sistema (Se solapa con los requerimientos)
-* Van de la mano con los requerimientos, los clarifica y los completa.
-* Se dejan los detalles para el diseño.
-
----
-### Worflow de Análisis: Características
-* El limite entre el análisis y diseño es difuso
-* Generan dos artefactos claves:
-  * Clases de análisis: Modelan conceptos claves del dominio
-  * Realizaciones de casos de Uso: Muestran cómo las instancias de análisis pueden interactuar para realizar el comportamiento del sistema.
-
----
-* Solo deben crearse clases relacionadas al dominio y no al diseño de la solución (ejemplo: “Clase de Comunicaciones, ControladorBD, ServicioHTTP”)
-* Decisiones de implementación es parte del “Diseño e Implementación”.
-
----
-### Reglas para el análisis
-<!-- .slide: style="font-size: 0.90em" -->
-* Siempre se habla en términos del negocio.
-* Los modelos deben “contar una historia” (Si el diagrama no aclara comportamiento no sirve)
-* Concentrarse en la idea general (No en detalles de implementación)
-* Distinguir el “Dominio del Problema” del “Dominio de la Solución”
-* Siempre minimizar el acoplamiento
-* Explorar la herencias si parece haber una jerarquía natural de abstracciones
-* Siempre pregúntense si el modelo es de utilidad para otros (Costo vs. Beneficio)
-
----
-## CLASES DE ANÁLISIS
-* Representan una abstracción en el dominio del problema
-* Deberían mapearse con conceptos de negocio del mundo real (Cliente, producto, cuenta).
-* Se intentan clarificar los conceptos, se aclara el dominio
-* Las clases de análisis pueden resultar en 1 o más clases de diseño
-
----
-### Anatomía de una Clase de Análisis
-* Presentan atributos de muy “alto nivel”
-* Las operaciones de la clase de análisis especifican en, en “alto nivel”, los servicios claves que debe ofrecer.
-* Se evitan detalles de implementación
-* Se capturan ideas principales, de “alto nivel”.
-
----
-### Datos mínimos de una clase de análisis
-* Nombre
-* Atributos
-* Operaciones
-* Visibilidad (público, privado, protegido)
-* Estereotipos (Ayudan a complementar el lenguaje)
-* Valores etiquetados
-
----
-### ¿Qué hace una buena clase de Análisis?
-* Su nombre refleja su intención
-* Modela un elemento específico del dominio del problema
-* Se mapea con el dominio del problema
-* Tiene un conjunto de responsabilidades (Contrato u obligación de una clase con sus “Clientes”) bien definidas
-* Alta cohesión
-* Bajo acoplamiento (clases dependen lo menos posible entre sí.)
-
----
-### Reglas generales
-* De 3 a 5 responsabilidades por clase
-* Ninguna clase permanece sola (deben trabajar en conjunto con otras).
-* Tenga cuidado con muchas clases pequeñas y muy grandes, es difícil encontrar el equilibrio.
-* Cuidado con clases omnipotentes
-* Evite arboles de herencia muy profundos.
-
----
-### Encontrar Clases
-* No existe un algoritmo sencillo para encontrar clases de análisis correctas.
-* Existen técnicas probadas y testeadas que llevan hacia “una buena respuesta”.
-  * Encontrar clases al utilizar análisis nombre/verbo
-  * Encontrar clases al utilizar análisis CRC
-  * Encontrar clases al utilizar los estereotipos RUP
-
----
-### Nombre/Verbo
-* Técnica que permite inferir clases de análisis
-* Se basa en el análisis de textos
-* Análisis directo del lenguaje dominio del problema
-* Peligroso si el dominio está mal definido
-* Mapea:
-  * Nombres y frases nominales -> Clases y Atributos
-  * Verbos o frases verbales -> Responsabilidades
-
----
-### Análisis CRC
-* CRC= Clase, Responsabilidad, Colaboradores
-* Emplea el como herramienta los “post-it”
-* Se divide en tres compartimentos
-* Se puede emplear como un complemento del análisis nombre/verbo.
-* Se divide en dos fases
-  * Fase 1: Tormenta de ideas: Recopilar información
-  * Fase 2: Analizar información
-
----
-### Estereotipos RUP - Rational Unified Process
-* Se consideran tres tipos de clases
-* Es empleada como complemento de las otras
-* Existen tres estereotipos definidos por RUP
-  * **boundary**: Clase mediadora entre el sistema y su entorno
-  * **control**: Una clase que encapsula comportamiento especifico de caso de uso
-  * **entity**: Una clase que se utiliza para modelar información persistente sobre algo
-
----
 ### Clases Boundary
 * Estas clases existen en el límite del sistema
 * Se comunican con los actores externos
@@ -293,13 +676,15 @@ con el fin de llegar a una mayor comprensión de los mismos.
   * Clases de interfaz de sistema (Actor sistema)
   * Clases de interfaz de dispositivo (Actor dispositivo)
 
----
+----
+
 ### Clases Control
 * Son clases controladoras
 * Se encargan de la coordinación del comportamiento del sistema
 * Útil cuando el comportamiento no se puede repartir simplemente entre los otros estereotipos.
 
----
+----
+
 ### Clases entidad
 * Modelan información sobre algo
 * Tienen comportamiento sencillo y acotado
@@ -309,177 +694,336 @@ con el fin de llegar a una mayor comprensión de los mismos.
 * A menudo son persistentes, íntimamente relacionadas con el modelo de datos.
 
 ---
-### Otras técnicas
-Fuentes potenciales de clases de análisis:
-* Objetos físicos ejemplo: Avión, gente, y hoteles, etc
-* El papeleo. Recibos, facturas, etc.
-* Las interfaces conocidas con el mundo exterior. pantallas, teclados, etc
-* Entidades conceptuales que justifiquen a nivel de
-abstracción cohesiva su creación “CuentaBancaria”, “ProgramaFidelidad”
 
----
-### Relaciones
-* Conexiones significativas entre elementos de modelado
-* Es la forma en que UML conecta elementos
-  * Casos de Uso y Actores
-  * Entre Casos de Uso
-  * Entre Actores
-
----
-### Vínculos
-* En un programa OO, tenemos Objetos que colaboran para dar una cierta funcionalidad.
-* Las relaciones entre objetos se conocen como “vínculos”, estos son dinámicos.
-* Es posible verlos en los “Diagramas de Objetos”
-* Muestra objetos y sus relaciones (vínculos) en un punto en el tiempo.
-
----
-### Asociaciones
-* Son relaciones entre clases
-* Análogo a los vínculos (conectan clases)
-* A nivel de análisis, las asociaciones son “básicas”.
-* Las asociaciones “avanzadas” se ven en durante el diseño.
-
----
-### Atributos de las relaciones
-* Las relaciones pueden tener asociadas:
-  * Nombre
-  * Roles
-  * Multiplicidad
-  * Navegabilidad
-* Sirven como complementos, y deben aclarar el diagrama.
-* Si no suma al entendimiento, no se debería agregar.
-
----
-### Nombres
-* Frases verbales, indican acción del objeto fuente sobre el objeto destino.
-* Ejemplo: Empresa ”emplea” Persona
-* Roles que los objetos instancias desempeñan cuando los objetos se vinculan.
-* Ejemplo: “empleador”- “empleado”
-
----
-### Multiplicidad
-* Restricción que sirve para especificar cuantos objetos pueden participar en una relación determinada.
-* Se especifica cómo una lista de intervalos por coma:
-  * mínimo… máximo - Deben ser enteros, o expresiones equivalentes
-
----
-### Navegabilidad
-* Nos muestra que es posible pasar desde un objeto de la clase fuente a uno o más objetos de la clase destino.
-* Permite minimizar el acoplamiento entre clases
-* Se indica con la punta de flecha en la asociación
-* A nivel de lenguaje, el objeto fuente, tiene una “referencia” al objeto destino. Comúnmente se traducen a atributos
-
----
-### Casos especiales
-Clases de asociación:
-* Sirven para acomodar atributos de las relaciones  entre relaciones “muchos a muchos”.
-* Ejemplo: Empresa-Persona (Sueldo)
-
-Asociaciones cualificadas:
-* Reduce una asociación “n a muchos” a una “n- a 1”
-* Ilustra como navegar hasta objetos específicos
-* Se agrega un “calificador”
-
----
 ### Dependencias
-* Indica una relación entre dos o más elementos
-* Un cambio en un elemento (proveedor) puede afectar a otro elemento (cliente)
-* “El cliente depende del proveedor”
-* Ejemplo: Puede pasar un objeto de una clase como un parámetro a una operación de otra clase.
+<!-- .slide: style="font-size: 0.80em" -->
+Una **dependencia** representa una relación en la que un elemento utiliza o depende de otro.
+
+Una modificación en el elemento proveedor puede afectar al elemento cliente.
+
+Por ejemplo, una clase puede depender de otra si utiliza una instancia de ella como parámetro de una operación.
+
+Las dependencias son diferentes de las asociaciones.
+- **Asociación:** Representa una relación estructural relativamente estable entre clases.
+- **Dependencia:** Representa una relación de utilización en la que un elemento necesita a otro para realizar determinada tarea.
 
 ---
-### Tipos de dependencias
-Existen tres tipos básicos de dependencias:
-* Uso
-* Abstracción
-* Permiso
+
+### Paquetes
+
+Un paquete es un elemento de agrupación de UML.
+
+Permite organizar elementos del modelo en grupos relacionados.
+
+Por ejemplo:
+```
+Modelo
+├── Usuarios
+├── Observaciones
+├── Especies
+└── Lugares
+```
+
+----
+
+### Paquetes
+Los paquetes ayudan a:
+- organizar modelos grandes
+- separar conceptos relacionados
+- controlar la complejidad
+- establecer dependencias entre grupos de elementos
+
+En modelos pequeños probablemente no sean necesarios. Su utilidad aumenta a medida que crece la complejidad del sistema.
 
 ---
-### De Uso
-El cliente utiliza alguno de los servicios del proveedor para implementar su propio comportamiento.
 
-Tipos:
-* **use**: El cliente hace uso del proveedor
-* **call**: La operación cliente invoca la del proveedor
-* **parameter**: El proveedor es un paraemtro de la operación cliente
-* **send**: El cliente es una operación que envía el proveedor
+### Pasos para construir un diagrama de clases
+<!-- .slide: style="font-size: 0.90em" -->
+1. Leer los requisitos: Identificar los conceptos y reglas importantes del dominio.
+2. Identificar clases candidatas: Buscar sustantivos y conceptos relevantes.
+3. Identificar atributos: ¿Qué información necesitamos conocer sobre cada concepto?
+4. Identificar responsabilidades: ¿Qué debe hacer esta clase?
+5. Identificar asociaciones: ¿Qué clases necesitan estar relacionadas?
+6. Determinar multiplicidades: ¿Cuántas instancias pueden participar en cada relación?
 
----
-### De abstracción
-Modelan dependencias entre elementos con diferentes niveles de abstracción:
+----
 
----
-### De abstracción: Tipos
-* **trace**: Sirven para indicar que el proveedor y el cliente son conceptualmente lo mismo, pero están en diferentes modelos.
-* **substitute**: El cliente se puede sustituir por el proveedor en tiempo de ejecución. Se deben ajustar contratos e interfaces.
-* **refine**: Permite especificar dependencias dentro del mismo modelo.
-* **derive**: Permite mostrar que un elemento se puede derivar de otro.
-
----
-### De permiso
-Dan la posibilidad que un elemento acceda a otro.
-
-Tipos:
-* **access**: Permite que un paquete acceda a los contenidos públicos de otro
-* **import**: Fusiona el espacio de nombres del proveedor, con el del cliente
-* **permit**: “Violación de la encapsulación en forma controlada”. Se acceden a todo el elemento proveedor sin tener en cuenta la visibilidad.
+### Pasos para construir un diagrama de clases
+<!-- .slide: style="font-size: 0.90em" -->
+7. Analizar generalizaciones: ¿Existe una verdadera relación "es un"?
+8. Evaluar agregación/composición: ¿Existe realmente una relación todo-parte?
+9. Revisar el modelo: 
+- ¿Las clases representan conceptos del dominio?
+- ¿Las responsabilidades están bien distribuidas?
+- ¿Hay clases innecesarias?
+- ¿Hay una clase que concentra demasiado?
+- ¿Las relaciones tienen sentido?
+- ¿Las multiplicidades representan las reglas del negocio?
 
 ---
-# Herencia y Polimorfismo
+
+### Errores frecuentes
+1. Convertir cada sustantivo en una clase: No todo sustantivo representa necesariamente un concepto que deba convertirse en clase.
+2. Confundir atributo con clase: La decisión depende del dominio y de las responsabilidades.
+3. Confundir "tiene" con composición: No toda relación de pertenencia implica composición.
+4. Utilizar herencia solamente para reutilizar código: La herencia debería representar una verdadera relación de especialización.
+
+----
+
+### Errores frecuentes
+5. Introducir detalles de implementación demasiado pronto: El modelo de análisis no debería llenarse de controladores, servicios, tablas o tecnologías si todavía estamos intentando comprender el dominio.
+6. Colocar todo en una única clase: Esto genera clases con demasiadas responsabilidades y alto acoplamiento.
 
 ---
-### Generalización
-* Es la relación entre un elemento mas general y uno más específico
-* Obedecen el principio de sustitución
-  * “Se puede emplear el elemento más específico en cualquier lugar que se espere el elemento más general sin romper el sistema”
-* Debemos tener en cuenta los “niveles de abstracción” (Jaguar-Camión)
+
+### PlantUML
+
+Una clase se puede definir utilizando:
+```
+@startuml
+
+class Persona
+
+@enduml
+```
+
+PlantUML generará una representación gráfica de la clase
+
+----
+
+### Clase con atributos y operaciones
+
+Podemos agregar atributos y operaciones:
+```
+@startuml
+
+class Persona {
+    - dni: String
+    - nombre: String
+
+    + obtenerNombre(): String
+    + cambiarNombre(nombre: String): void
+}
+
+@enduml
+```
+
+----
+
+### Varias clases
+
+Podemos declarar varias clases:
+```
+@startuml
+
+class Persona {
+    - dni: String
+    - nombre: String
+}
+
+class Mascota {
+    - nombre: String
+    - especie: String
+}
+
+@enduml
+```
+
+Hasta este punto las clases existen en el modelo, pero todavía no están relacionadas.
+
+----
+
+### Asociación en PlantUML
+
+```
+@startuml
+
+class Persona {
+    - dni: String
+    - nombre: String
+}
+
+class Mascota {
+    - nombre: String
+    - especie: String
+}
+
+Persona "1" -- "0..*" Mascota : posee
+
+@enduml
+```
+
+----
+
+### Herencia en PlantUML
+
+La generalización puede representarse mediante:
+```
+@startuml
+
+class Animal {
+    - nombre: String
+    - edad: int
+
+    + comer(): void
+}
+
+class Perro {
+    - raza: String
+
+    + ladrar(): void
+}
+
+class Gato {
+    + maullar(): void
+}
+
+Animal <|-- Perro
+Animal <|-- Gato
+
+@enduml
+```
+PlantUML genera automáticamente la flecha de generalización correspondiente.
+
+----
+
+### Agregación en PlantUML
+
+```
+@startuml
+
+class Mesa
+class Tabla
+
+Mesa o-- Tabla
+
+@enduml
+```
+El símbolo o-- representa la relación de agregación.
+
+----
+
+### Composición en PlantUML
+```
+@startuml
+
+class Pedido
+class LineaPedido
+
+Pedido *-- LineaPedido
+
+@enduml
+```
+El símbolo *-- representa la composición.
+
+----
+
+### Dependencias en PlantUML
+```
+@startuml
+
+class Controlador
+class Servicio
+
+Controlador ..> Servicio
+
+@enduml
+```
+La línea discontinua permite distinguir la dependencia de una asociación estructural.
+
+----
+
+### Clases abstractas en PlantUML
+```
+@startuml
+
+abstract class Figura {
+    + dibujar(): void
+}
+
+class Circulo
+class Rectangulo
+
+Figura <|-- Circulo
+Figura <|-- Rectangulo
+
+@enduml
+```
+También podemos utilizar operaciones abstractas cuando corresponda.
+
+----
+
+### Estereotipos en PlantUML
+```
+@startuml
+
+class Pantalla <<boundary>>
+class RegistrarObservacion <<control>>
+class Observacion <<entity>>
+
+@enduml
+```
+Esto permite mostrar los estereotipos utilizados durante el análisis.
 
 ---
-### Herencia
-* En una jerarquía de generalización, implícitamente se indica que las subclases “heredan” todas las características de sus
-súper clases.
-* Estas también pueden añadir nuevas características y anular operaciones
 
----
-### Operaciones y clases abstractas
-* Son clases que no podemos “instanciar”
-* Operaciones que no podemos “invocar”
-* Existen cuando preferiríamos diferir la implementación de una operacion a una subclase
-  * Ejemplo: Operación dibujarFigura() de la clase “Figura”
+### Ejemplo completo: sistema de avistaje de fauna
 
----
-### Polimorfismo
-* Polimorfismo significa “muchas formas”
-* Son operaciones que tienen varias implementaciones posibles
-* Una operación puede tener “muchas formas”, por lo que se considera una operación polimórfica
+Podemos aplicar lo aprendido a nuestro sistema.
 
----
-# PAQUETES DE ANALISIS
+Supongamos inicialmente estas clases:
 
----
-### ¿Qué es un paquete?
-* Un paquete es un elemento de agrupación de UML
-* Es un contenedor para elementos de modelo
-* Todo paquete tiene su espacio de nombres
-* Permite organizar elementos de modelo y diagramas en grupos.
-* Mecanismo lógico de agrupación
+Usuario
+Observacion
+Especie
+Lugar
+Fotografia
 
----
-* Sintaxis sencilla
-* Los paquetes de análisis deben contener:
-  * UC
-  * Clases de análisis
-  * Realizaciones de Casos de Uso
-* Todo elemento tiene una visibilidad
-  * (+): Pública
-  * (-): Privada
+----
 
----
-* Definen un espacio de nombres
-* Es posible anidar paquetes (se puede dibujar de dos maneras)
-* Se pueden definir dependencias entre paquetes (similar a las dependencias entre clases)
-* Se pueden generalizar
-* Se deben evitar dependencias cíclicas (dos alternativas, fusionar o dividir)
+### Ejemplo completo: sistema de avistaje de fauna
+<!-- .slide: style="font-size: 0.90em" -->
+Una primera versión de PlantUML podría ser:
+```
+@startuml
+
+class Usuario {
+    - nombre: String
+    - email: String
+}
+
+class Observacion {
+    - fecha: Date
+    - cantidadIndividuos: int
+}
+
+class Especie {
+    - nombreComun: String
+    - nombreCientifico: String
+}
+
+class Lugar {
+    - nombre: String
+    - latitud: double
+    - longitud: double
+}
+
+class Fotografia {
+    - archivo: String
+}
+
+Usuario "1" -- "0..*" Observacion : registra
+Observacion "*" -- "1" Especie : corresponde a
+Observacion "*" -- "1" Lugar : ocurre en
+Observacion "1" -- "0..*" Fotografia : contiene
+
+@enduml
+```
+Este ejemplo permite observar cómo el modelo conceptual se transforma en una representación textual.
+
+----
+
+![Ejemplo Avistaje](images/u8-UML/ejemplo-avistaje.png)
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?

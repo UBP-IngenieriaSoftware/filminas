@@ -1,0 +1,23 @@
+@startuml
+
+class Animal {
+    - nombre: String
+    - edad: int
+
+    + comer(): void
+}
+
+class Perro {
+    - raza: String
+
+    + ladrar(): void
+}
+
+class Gato {
+    + maullar(): void
+}
+
+Animal <|-- Perro
+Animal <|-- Gato
+
+@enduml
