@@ -33,28 +33,21 @@ Created by <i class="fab fa-telegram"></i>
 <div class="grid-item">
 
 ### Modelado de Sistemas
-* Modelos de Sistemas
-* Perspectivas del Sistema
-* Tipos de Diagramas UML
-* Uso de modelos gráficos
-* Modelos de Contexto
-* Límites del sistema
-* Perspectiva del proceso
-* Modelos de Interacción
-* Modelado de Casos de Uso
+* Especificación de sistemas críticos
+* Especificación dirigida por riesgos
+* Riesgo
+* Proceso de Especificación
+* Especificación de la seguridad
+* Especificación de la proteccion
+* Especificación de la fiabilidad
+
 </div>
 <div class="grid-item">
 
-* Diagramas de Secuencia
-* Modelos Estructurales
-* Diagramas de Clases
-* Generalización
-* Agregación
-* Modelos de Comportamiento
-* Modelado Impulsado por Datos
-* Modelado Impulsado por Eventos
-* Modelos de Máquina de Estado
-* Ingeniería Dirigida por Modelos
+* ¿Cómo se puede especificar la fiabilidad?
+* Relación entre riesgos, safety, security y reliability
+* Requisitos verificables
+
 </div>
 </div>
 

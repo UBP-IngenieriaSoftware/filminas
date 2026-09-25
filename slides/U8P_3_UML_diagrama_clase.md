@@ -10,6 +10,171 @@ Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
 ---
+### DIAGRAMA DE CLASES
+Es un diagrama de estructura
+* Se utiliza para representar los elementos que componen un sistema de información desde un punto de vista estático.
+* No incluye la forma en la que se comportan los distintos elementos a lo largo de la ejecución
+
+----
+
+Es un diagrama puramente orientado al modelo de programación orientado a objetos
+* Define las clases que se utilizarán en la fase de construcción y la manera en que se relacionan las mismas.
+ Muestra:
+* La representación de datos y su interacción.
+* El modelo lógico de los datos de un sistema.
+
+---
+### Elementos
+<!-- .slide: style="font-size: 0.80em" -->
+* **Clases:** elemento principal del diagrama y representa una clase dentro del paradigma de la orientación a
+objetos. Define un grupo de objetos que comparten características, condiciones y significado.
+
+Una clase está compuesta por tres elementos: nombre de la clase, atributos, funciones.
+* (+) Pública. Representa que se puede acceder al atributo o función desde cualquier lugar de la aplicación.
+* (-) Privada. Representa que se puede acceder al atributo o función únicamente desde la misma clase.
+* (#) Protegida. Representa que el atributo o función puede ser accedida únicamente desde la misma clase o desde las 
+clases que heredan de ella (clases derivadas)
+
+----
+
+![Clase](images/u8-UML/clase_ej.jpg) ![Clase Ejemplo](images/u8-UML/clase_ejemplo.jpg)
+
+----
+
+### Relaciones
+<!-- .slide: style="font-size: 0.90em" -->
+* Una relación identifica una dependencia.
+* Las relaciones se representan con una línea que une las clases
+* Propiedades:
+  * Multiplicidad. Es decir, el número de elementos de una clase que participan en una relación. Se puede
+indicar un número, un rango y se utiliza n o * para identificar un número cualquiera.
+  * Nombre de la asociación. En ocasiones se escribe una indicación de la asociación que ayuda a
+entender la relación que tienen dos clases. Suelen utilizarse verbos.
+
+----
+
+### Relaciones
+![Relaciones](images/u8-UML/clases_relaciones.jpg)
+
+---
+### Tipos de relaciones
+* Asociación.
+* Agregación.
+* Composición.
+* Herencia.
+
+----
+
+### Asociación
+Este tipo de relación es el más común y se utiliza para representar dependencia semántica.
+Se representa con una simple línea continua que une las clases que están incluidas en la asociación.
+
+Ejemplo
+Una mascota pertenece a una persona
+
+![Persona-Mascota](images/u8-UML/persona_mascota.jpg)
+
+---
+### Agregación
+<!-- .slide: style="font-size: 0.90em" -->
+Es una representación jerárquica que indica a un objeto y las partes que componen ese objeto.
+Representa relaciones en las que un objeto es parte de otro pero tiene existencia en sí mismo.
+Se representa con una línea que tiene un rombo en la la clase que es una agregación de la otra (en la clase que
+contiene las otras).
+
+![Agregación](images/u8-UML/mesas_tablas.jpg)
+
+---
+### Composición
+<!-- .slide: style="font-size: 0.80em" -->
+Representa una relación jerárquica entre un objeto y las partes que lo componen de una forma más fuerte que en la
+agregación.
+Cuando el elemento contenedor desaparece, desaparecen todos los contenidos. No tienen sentido por si mismos.
+Contenedor y contenidos tienen los mismos tiempo de vida. 
+Se representa con una línea continua con un rombo relleno en la clase que es compuesta.
+
+![Composicion](images/u8-UML/composicion.jpg)
+
+---
+### Herencia
+<!-- .slide: style="font-size: 0.90em" -->
+Este tipo de relaciones permiten que una clase (clase hija o subclase) reciba los atributos y métodos de
+otra clase (clase padre o superclase).
+Estos atributos y métodos recibidos se suman a los que la clase tiene por sí misma.
+Se utiliza en relaciones “es un”.
+
+![Herencia](images/u8-UML/herencia.jpg)
+
+---
+### Diagrama de clases para la clínica veterinaria
+
+![Diagrama de Clases Veterinaria](images/u8-UML/diagrama_clases_veterinaria.png)
+
+---
+### Generalización
+* La generalización es una técnica que utilizamos para gestionar la complejidad.
+* En lugar de definir las características detalladas de cada entidad, ponemos estas características en las clases
+más generales (animales, coches, casas, etc).
+* Esto nos permite inferir que los diferentes miembros de estas clases tienen algunas características comunes. 
+
+----
+
+### Generalización
+<!-- .slide: style="font-size: 0.90em" -->
+* En los sistemas de modelado, a menudo es útil examinar las clases de un sistema para ver si hay posibilidades de
+generalización.
+* En lenguajes orientados a objetos, la generalización se realiza utilizando los mecanismos de herencia.
+* En una generalización, los atributos y las operaciones asociadas a las clases de nivel superior también están
+asociadas a las clases de menor nivel.
+* Las clases de nivel inferior son subclases que heredan los atributos y operaciones de sus superclases. Estas
+clases de nivel inferior son más especificas y pueden añadir atributos y operaciones.
+
+----
+
+### Una jerarquía de generalización
+![Una jerarquía de generalización](images/u8-UML/jerarquia_de_generalizacion.jpg)
+
+----
+
+### Una jerarquía de generalización con caracteristicas agregadas
+![Generalización con caracteristicas agregadas](images/u8-UML/jeneralizacion_caracteristicas_agregadas.jpg)
+
+----
+
+### Agregación
+* Un modelo de agregación muestra cómo las clases se componen de otras clases.
+* Los modelos de agregación son similares a la parte de la relación en los modelos de datos semánticos.
+
+----
+
+### Agregación
+![Agregacion](images/u8-UML/agregacion.jpg)
+
+---
+### Diagramas de clases
+* Los diagramas de clases se utilizan en el desarrollo de un modelo de sistema orientado a objetos para mostrar las
+clases de un sistema y las asociaciones entre estas clases.
+* Una clase de objeto es una definición general de un tipo de objeto del sistema.
+* Una asociación es una relación entre clases.
+* Los objetos representan algo en el mundo real, tal como un paciente, una prescripción, médico, etc.
+
+----
+
+### Clases UML y asociación
+![Clases UML y asociación](images/u8-UML/UML_y_asociacion.jpg)
+
+----
+
+### Las clases y asociaciones en el MHC-PMS
+![Clases y asociaciones en el MHC-PMS](images/u8-UML/clases_asociaciones_MHC-PMS.jpg)
+
+----
+
+### La clase de consulta
+![La clase de consulta](images/u8-UML/clase_de_consulta.jpg)
+
+---
+
 ### Workflow de Análisis
 Ayuda a definir y especificar el sistema a ser construido. En esta fase se analizan, refinan y estructuran los requisitos 
 con el fin de llegar a una mayor comprensión de los mismos.

@@ -2,9 +2,11 @@
 left to right direction
 actor :Usuario deslogueado: as UD
 rectangle "APP Avistaje de Fauna" {
-  usecase "Crecar cuenta" as UC1
+  usecase "Crear cuenta" as UC1
   usecase "Visualizar fotos" as UC2
+  usecase "Anotarse en actividad de Turismo" as UC3
 }
 UD --> UC1
 UD --> UC2
+UD --> UC3
 @endumls
