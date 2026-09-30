@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Proyecto General</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/solarized.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+
+    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown data-separator="^---" data-separator-vertical="^\r?\n----\r?\n$">
+          <textarea data-template>
+            
+
+# Ingeniería de Software
+## Proyecto General
+Created by <i class="fab fa-telegram"></i>
+[edme88]("https://t.me/edme88")
+
+---
+## CONSIGNAS DEL PROYECTO INTEGRADOR
+En grupos de 4 o 5 personas elaborar el siguiente trabajo integrador (se llevará adelante durante toda la cursada de la materia).
+El trabajo tendrá que emplear de template el documento de [Especificación de Requerimientos de Software](https://docs.google.com/document/d/1cqnZBf7Ww1iHRZYET7N0AuNu4fMzeW1ODw9u4C16Y2o/edit?usp=sharing).
+
+A tener en cuenta: NO DEBEN ESCRIBIR CÓDIGO! SOLO SE SOLICITAN LOS DOCUMENTOS DE ANÁLISIS DEL SOFTWARE.
+
+---
+
+### Entregables (1)
+### Primer entregable
+1. Metodología de trabajo
+2. Requerimientos
+3. Riesgo
+4. Planeación
+
+----
+
+### Entregables (2)
+### Segundo entregable
+5. Diagramas
+6. Diseño Arquitectónico
+7. Diseño Orientado a Objetos
+8. Diseño y Prototipado
+9. Pruebas de Software
+
+---
+### PARTE 1: Metodología de trabajo
+<!-- .slide: style="font-size: 0.90em" -->
+1. Luego de haber tenido la primera conversación con el cliente, determinar que **metodología** de trabajo adoptarán, sí **dirigida por plan** o **ágil** y justifiquen su respuesta. (Dentro del documento de requerimientos agregar una sección de **metodología**)
+
+2. Cada integrante del grupo deberá tomar un rol en base a la metodología seleccionada. Por ejemplo, si eligen ágil: quién será Desarrollador (pueden incluso definir si su especialidad es Front, Back o Base de Datos), Tester, Scrum Master o facilitador de la metodología. (Dentro del documento de requerimientos, la sección de **Personal Involucrado**)
+
+---
+
+### PARTE 2: Requerimientos (1)
+<!-- .slide: style="font-size: 0.80em" -->
+1. Tener la primera entrevista con el cliente. Allí se debe descubrir:
+- Actores
+- Funcionalidades
+- Reglas de negocio
+
+----
+
+### PARTE 2: Requerimientos (2)
+<!-- .slide: style="font-size: 0.70em" -->
+Tienen que hacer preguntas del estilo:
+- ¿Quién utilizará el sistema?
+- ¿Qué información necesita consultar?
+- ¿Qué operaciones realiza actualmente?
+- ¿Qué ocurre cuando...?
+- ¿Qué pasa si...?
+- ¿Quién puede realizar esa operación?
+- ¿Qué restricciones existen?
+- ¿Qué información debe almacenarse?
+- ¿Qué sucede cuando una operación falla?
+- ¿Qué nivel de seguridad necesitan?
+- ¿Cuántos usuarios esperan?
+- ¿Qué ocurre si dos usuarios intentan realizar la misma operación?
+- ¿Qué información necesitan los administradores?
+- ¿Qué informes necesitan?
+- ¿Qué dispositivos utilizarán?
+- ¿El sistema debe integrarse con otros sistemas?
+
+----
+
+### PARTE 2: Requerimientos (3)
+Luego, transcribir esa “toma de notas” a un documento formal. Detallar las funcionalidades como requerimientos:
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Actor</th>
+      <th>Requerimiento</th>
+      <th>Tipo</th>
+      <th>Prioridad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RF-01</td>
+      <td></td>
+      <td></td>
+      <td>Funcional</td>
+      <td>
+        Muy Baja<br>
+        Baja<br>
+        Media<br>
+        Alta<br>
+        Crítica
+      </td>
+    </tr>
+    <tr>
+      <td>RNF-01</td>
+      <td></td>
+      <td></td>
+      <td>
+        No Funcional - Producto<br>
+        No Funcional - Organizacional<br>
+        No Funcional - Externa
+      </td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+----
+
+### PARTE 2: Requerimientos (4)
+2. Proceso de elicitación:
+  - Identifique todos los **stakeholders** y/ o **actores** involucrados en el uso del sistema.
+  - Identifique las funcionalidades principales que debe realizar cada **actor**.
+  - Clasifique los requerimientos por **funcionales** o **no funcionales**.
+
+----
+
+### PARTE 2: Requerimientos (5)
+<!-- .slide: style="font-size: 0.80em" -->
+3. Teniendo en cuenta los métodos de [elicitación](https://ubp-ingenieriasoftware.github.io/filminas/U7_procesos_ingenieria_requerimientos.html#/16) vistos en clase, se va a trabajar sobre los siguientes:
+  - Emplee una [Lista de Verificación](https://ubp-ingenieriasoftware.github.io/filminas/U7_procesos_ingenieria_requerimientos.html#/34) para revisar la calidad de cada requisito obtenido
+  - Elabore un [Diagrama de Ishikawa](https://ubp-ingenieriasoftware.github.io/filminas/U7_procesos_ingenieria_requerimientos.html#/29) para identificar problemas que podrían aparecer al utilizar el sistema.
+  - Emplee [Cadena de Valor](https://ubp-ingenieriasoftware.github.io/filminas/U7_procesos_ingenieria_requerimientos.html#/27) para analizar qué valor aporta el sistema a cada uno de los interesados y qué requerimientos son esenciales para generar ese valor.
+  - Si tuviese que emplear [Análisis de Documentación](https://ubp-ingenieriasoftware.github.io/filminas/U7_procesos_ingenieria_requerimientos.html#/21), ¿Qué documentos debería leer? Elabore una lista y coloque en la sección de referencias de documento de requerimientos.
+  - Al menos 3 [escenarios](https://ubp-ingenieriasoftware.github.io/filminas/U7_procesos_ingenieria_requerimientos.html#/36) de uso, uno por cada rol (de diferentes requerimientos)
+
+---
+
+### PARTE 3: Riesgo (1)
+Agregar una nueva sección en el documento de requerimientos relacionada con **riesgos**
+1. Elaborar una matriz de análisis de riesgos del proyecto (puedes tomar de ejemplo el [ejercicio de clase](https://docs.google.com/spreadsheets/d/1-Nlu84CVFm2XJ2WK3sqCNiwntB-BbRE8sJ7sl2-pUyY/edit?gid=0#gid=0)). Identifique al menos 10 riesgos (recuerda colorear cada severidad, probabilidad y nivel de riesgo de manera coherente):
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Riesgo</th>
+      <th>Severidad</th>
+      <th>Probabilidad</th>
+      <th>Nivel de Riesgo</th>
+      <th>Medida de Control</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>(Título del Riesgo)</td>
+      <td>Leve / Moderado / Grave / Inaceptable</td>
+      <td>Improbable / Poco Probable / Probable / Muy Probable</td>
+      <td>(Calculado en base a la siguiente tabla)</td>
+      <td>(Al menos 1 por cada riesgo)</td>
+    </tr>
+  </tbody>
+</table>
+
+----
+
+### PARTE 3: Riesgo (2)
+<!-- .slide: style="font-size: 0.90em" -->
+Para el cálculo de riesgo, tomar la siguiente tabla:
+
+![Tabla de Riesgo](images/proyecto/calculo-riesgo.png)
+
+2. Realiza un análisis del personal del equipo: ¿Qué **orientación** tiene cada persona, (1) hacia las tareas, (2) hacia sí mismas, (3) hacia la interacción? ¿Qué las motiva? (puedes revisar el [material teórico visto en clases](https://ubp-ingenieriasoftware.github.io/filminas/U5_gestion_de_proyectos.html#/32))
+
+---
+
+### PARTE 4: Planeación (1)
+<!-- .slide: style="font-size: 0.90em" -->
+1. Por equipo, crear una cuenta en Jira. Invitar al proyecto a todos los integrantes y al docente.
+2. En el Backlog, crear las Historias de Usuario que permitan el desarrollo de los [requerimientos funcionales](https://ubp-ingenieriasoftware.github.io/filminas/U5_planeacion_de_proyectos.html#/37) recabados en las reuniones con el cliente.
+  - Las **Historias de Usuario** deben ser estructuradas de la manera: 
+  `Como [rol], quiero [funcionalidad], para [beneficio]`
+  - Las **Historias de Usuario** deben tener definidos los **criterios de aceptación** de la forma: Dado | Cuando | Entonces
+
+----
+
+### PARTE 4: Planeación (2)
+<!-- .slide: style="font-size: 0.90em" -->
+3. En cada **Historia de Usuario** crear las **subtareas** correspondientes para su desarrollo (habitualmente: front, servicios, base de datos y testing). Asignar cada subtarea al rol que corresponda (desarrollador frontend, backend, BD, tester).
+4. Mediante estrategia de **Poker Planning** asignar [puntos de historia](https://ubp-ingenieriasoftware.github.io/filminas/U5_planeacion_de_proyectos.html#/38/2) a cada tarea. (user sucesión de Fibonacci)
+5. Suponiendo que el equipo tiene una **velocity** de 25 puntos por sprint, llevar cada una de las tareas creadas en el backlog a los Sprints. Tener en cuenta que la **PRIORIDAD** del desarrollo es indicada por el cliente, según cuales funcionalidades considera más importantes.
+
+----
+
+### PARTE 4: Planeación (3)
+6. Una vez que se hayan creado todas las Historias de Usuario y que hayan sido asignadas a los sprints respectivos, calcular la cantidad de tiempo de desarrollo que implicara el software.
+7. El informe de requerimientos debe incluir una matriz de trazabilidad para indicar que requerimientos funcionales incluyen que Historias de usuario.
+
+![Matriz de Trazabilidad](images/proyecto/matriz-de-trazabilidad.png)
+
+----
+
+### PARTE 4: Planeación (4)
+8. Una vez creadas todas las tareas, las mismas deben ser incluidas en el informe. Se recomienda emplear la herramienta de **exportar** incluida en **Jira** (sólo se requiere nombre de la tarea, prioridad, sprint, puntaje, responsable)
+
+9. Crea un dashboard en Jira con gráficos que reflejen:
+ - Tareas clasificadas por Responsable
+ - Tareas clasificadas por Etiquetas (front, back, BD, documentación)
+
+---
+
+### PARTE 5: Diagramas (1)
+1. Elabore un [diagrama de contexto](https://ubp-ingenieriasoftware.github.io/filminas/U8_modelado_de_sistemas.html#/7) para comprender qué otros sistemas forman parte del entorno y cuáles son sus límites.
+2. Elabore un [diagrama de casos de uso](https://ubp-ingenieriasoftware.github.io/filminas/U8P_2_UML_casos_de_uso.html#/1) 
+3. Elabore una [Plantilla de documentación](https://ubp-ingenieriasoftware.github.io/filminas/U8P_2_UML_casos_de_uso.html#/18/1) de casos de uso (de al menos 5 casos de uso)
+4. Elabore un [diagramas de Secuencia](https://ubp-ingenieriasoftware.github.io/filminas/U8P_4_UML_diagramas_secuencia.html#/1/5) (de al menos 3 casos de uso)
+5. Elabore [Diagramas de Actividad](https://ubp-ingenieriasoftware.github.io/filminas/U8P_5_UML_diagrama_actividad.html#/4) (de al menos 3 requerimientos)
+
+---
+
+### PARTE 6: Diseño Arquitectónico
+1. Seleccione un modelo arquitectónico para hacer el desarrollo. Justifique su respuesta.
+
+---
+
+### PARTE 7: Diseño Orientado a Objetos
+1. Elabore un [diagrama de clases](https://ubp-ingenieriasoftware.github.io/filminas/U8P_3_UML_diagrama_clase.html#/)
+
+---
+
+### PARTE 8: Diseño y Prototipado
+1. Diseño las pantallas de la aplicación empleando Figma (asistiendose de IA para agilizar su desarrollo. En la elaboración de los prompts de IA emplee el listado de requerimientos funcionales elaborado anteriormente.
+
+---
+
+### PARTE 9: Pruebas
+1. Elabore [Plantilla de casos de pruebas](https://docs.google.com/document/d/1s06ajEqb3EdFs7rPFdjBb8pl1FOplD9QHJ3ZURH8FFs/edit?tab=t.0#heading=h.gjdgxs) (de al menos 5 casos de uso) 
+
+---
+## ¿Dudas, Preguntas, Comentarios?
+![DUDAS](images/pregunta.gif)
+
+          </textarea>
+        </section>
+      </div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./mermaid/dist/mermaid.min.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        highlight: {
+          highlightOnLoad: false
+        },
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true,"_":["slides"],"static":"public"}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+      Reveal.addEventListener('ready', function (event) {
+        const blocks = Reveal.getRevealElement().querySelectorAll('pre code:not(.mermaid)');
+        const hlp = Reveal.getPlugin('highlight');
+        blocks.forEach(hlp.highlightBlock);
+      });
+    </script>
+
+    <script>
+      const mermaidOptions = extend({ startOnLoad: false }, {});
+      mermaid.startOnLoad = false;
+      mermaid.initialize(mermaidOptions);
+      const cb = function (event) {
+        mermaid.init(mermaidOptions, '.stack.present > .present pre code.mermaid');
+        mermaid.init(mermaidOptions, '.slides > .present:not(.stack) pre code.mermaid');
+      }
+      Reveal.addEventListener('ready', cb);
+      Reveal.addEventListener('slidetransitionend', cb);
+    </script>
+  </body>
+</html>
