@@ -273,6 +273,9 @@ Cuando un alumno quiere matricularse pueden darse estos casos:
 
 <!-- .slide: style="font-size: 0.55em" -->
 5. **Parallel**, _par_ modela procesos concurrentes.
+- El orden de los operandos es irrelevante.
+- El operador par tiene al menos 2 operandos.
+- No induce a un verdadero paralelismo.
 
 ![par](images/u8-UML/par.png)
 
