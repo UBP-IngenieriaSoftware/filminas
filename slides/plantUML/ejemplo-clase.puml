@@ -1,23 +1,33 @@
 @startuml
 
-class Animal {
+class Usuario {
     - nombre: String
-    - edad: int
-
-    + comer(): void
+    - email: String
 }
 
-class Perro {
-    - raza: String
-
-    + ladrar(): void
+class Observacion {
+    - fecha: Date
+    - cantidadIndividuos: int
 }
 
-class Gato {
-    + maullar(): void
+class Especie {
+    - nombreComun: String
+    - nombreCientifico: String
 }
 
-Animal <|-- Perro
-Animal <|-- Gato
+class Lugar {
+    - nombre: String
+    - latitud: double
+    - longitud: double
+}
+
+class Fotografia {
+    - archivo: String
+}
+
+Usuario "1" -- "0..*" Observacion : registra
+Observacion "*" -- "1" Especie : corresponde a
+Observacion "*" -- "1" Lugar : ocurre en
+Observacion "1" -- "0..*" Fotografia : contiene
 
 @enduml
