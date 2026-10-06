@@ -97,7 +97,11 @@ En un sistema crítico debemos agregar otra pregunta:
 ---
 
 ### Especificación dirigida por riesgos
-La especificación dirigida por riesgos (risk-driven specification) consiste en identificar los posibles riesgos, evaluar sus consecuencias y utilizar ese análisis para definir los requerimientos del sistema.
+Un enfoque dirigido por riesgos para la especificación de requerimientos toma en cuenta:
+- Los eventos peligrosos que pudieran ocurrir
+- La probabilidad de que realmente sucedan
+- La posibilidad de que el daño derivará de tal evento
+- El grado del daño causado.
 
 ---
 ### Riesgo
@@ -113,16 +117,6 @@ Las consecuencias podrían ser extremadamente graves.
 Por lo tanto, se puede establecer un requerimiento como:
 > El sistema no deberá permitir que dos trenes reciban 
 > simultáneamente autorización para ocupar un mismo tramo de vía.
-
----
-### Proceso de especificación dirigida por riesgos
-
-1. Identificar riesgos
-2. Analizar riesgos
-3. Evaluar consecuencias
-4. Determinar medidas de reducción del riesgo
-5. Definir requerimientos
-6. Verificar que los requerimientos reduzcan los riesgos
 
 ---
 ### Riesgo: Ejemplo
@@ -164,11 +158,90 @@ Supongamos un sistema que controla una máquina industrial.
 ## Los riesgos ayudan a determinar qué requerimientos críticos debe tener el sistema.
 
 ---
-### Especificación de la seguridad (Safety)
 
-La **especificación de la seguridad** define los requerimientos destinados a evitar que el sistema provoque daños, accidentes o situaciones peligrosas.
+### Especificación dirigida por riesgos
+Este enfoque se emplea en sistemas de protección y en sistemas críticos de seguridad.
 
-Aquí **safety** no significa proteger el sistema contra hackers. Se refiere principalmente a la seguridad frente a accidentes y fallos.
+Las etapas del proceso de especificación dirigida por riesgos son:
+1. Identificación del riesgo
+2. Análisis y clasificación del riesgo
+3. Descomposición del riesgo
+4. Descomposición del riesgo
+
+----
+
+### Especificación dirigida por riesgos
+1. **Identificación del riesgo:** Se identifican los riesgos potenciales al sistema. Éstos dependen del entorno en que se usa el sistema. Pueden surgir riesgos de interacciones entre el sistema y las condiciones extrañas de su entorno operacional.
+2. **Análisis y clasificación del riesgo:** Cada riesgo se considera por separado. Aquéllos potencialmente serios y no improbables se seleccionan para un mayor análisis. En esta etapa, los riesgos pueden eliminarse si son muy improbables o porque no se pueden detectar con el software.
+
+----
+
+### Especificación dirigida por riesgos
+3. **Descomposición del riesgo:** Cada riesgo se analiza para descubrir las causas raíz potenciales de dicho riesgo. Dichas causas son las razones por las que es posible que falle un sistema. Pueden ser errores de software, hardware o vulnerabilidades inherentes que son consecuencia de decisiones de diseño del sistema. 
+4. **Reducción del riesgo:** Se hacen proposiciones de formas para reducir o eliminar los riesgos identificados. Ello contribuye con los requerimientos de confiabilidad del sistema que definen las defensas contra el riesgo y cómo se manejará éste.
+
+----
+
+### Especificación dirigida por riesgos
+
+![Especificación dirigida por riesgos](images/u9-sistemas-criticos/especificacion-dirigida-riesgos.png)
+
+---
+### Especificación de la protección
+<!-- .slide: style="font-size: 0.70em" -->
+En los sistemas críticos de protección, las fallas llegan a afectar el entorno del sistema y a causar lesiones o muerte a los individuos en este ambiente. 
+
+La preocupación principal de la **especificación de protección** es identificar los requerimientos que reducirán la probabilidad de que ocurran tales fallas de sistema. 
+
+Los requerimientos de protección son requerimientos de **seguridad** y no se interesan por la operación normal del sistema. Podrían especificar que el sistema debe desactivarse de modo que se conserve la protección. Por lo tanto, al derivar requerimientos de protección, se necesita encontrar un equilibrio aceptable entre seguridad y funcionalidad para evitar la sobreprotección. 
+
+No hay razón para construir un sistema altamente seguro si no resulta efectivo en cuanto a costo. 
+
+----
+
+### Especificación de la protección
+<!-- .slide: style="font-size: 0.80em" -->
+En este contexto, un **riesgo** es la probabilidad de que el sistema entre en un estado peligroso, y los eventos que conducen a dichos peligros. 
+
+Las actividades en el proceso son:
+1. Identificación del riesgo: Se deben considerar todos los tipos de riesgos: físicos, eléctricos, biológicos, de radiación, de falla de servicio, etc, y sus combinaciones.
+2. Análisis de riesgo: Los riesgos deben priorizarse y valorarse acorde al nivel de peligro y la probabilidad de ocurrencia. 
+
+Existen 3 categorías de valoración: riesgos intolerables, riesgos tan bajos como sea razonablemente práctico (ALARP), es decir, tienen consecuencias serias pero son muy improbables y riesgos aceptables. La división de cada sección no es técnica, sino que depende de factores sociales y políticos.
+
+----
+
+### El triángulo del riesgo
+
+![El triángulo del riesgo](images/u9-sistemas-criticos/triangulo-riesgo.png)
+
+----
+
+### Especificación de la protección
+<!-- .slide: style="font-size: 0.80em" -->
+3. **Descomposición del riesgo:** Para hacer un análisis de **árbol de fallas**, se comienza con los peligros identificados. 
+
+Para cada peligro se puede trabajar en retroceso para descubrir las posibles causas de dicho peligro. 
+
+Se coloca el peligro en la raíz del árbol y se identifican los estados del sistema que podrían conducir a tal peligro. 
+
+Para cada uno de dichos estados, es posible identificar entonces más estados de sistema que conduzcan hacia ellos. De esta manera se va descendiendo hasta que se llega a las causas raíz del riesgo. 
+
+Los peligros que sólo pueden surgir a partir de una combinación de causas raíz son, por lo general, menos probables de conducir a un accidente, que aquellos peligros con una sola causa raíz.
+
+----
+
+### Representación Gráfica del Árbol de Fallos
+
+![Árbol de Fallos](images/u9-sistemas-criticos/Analisis-de-arbol-de-fallas-FTA.webp)
+
+----
+
+### Especificación de la protección
+4. **Reducción del riesgo:** Las estrategias a utilizar son:
+- Evitar el peligro
+- Detectar y eliminar el peligro
+- Limitar el daño
 
 ----
 
