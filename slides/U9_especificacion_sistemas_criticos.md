@@ -103,7 +103,10 @@ Por lo tanto, se puede establecer un requerimiento como:
 > simultáneamente autorización para ocupar un mismo tramo de vía.
 
 ---
+
 ### Riesgo: Ejemplo
+
+<!-- .slide: style="font-size: 0.60em" -->
 
 Supongamos un sistema que controla una máquina industrial.
 <table>
@@ -150,7 +153,7 @@ Las etapas del proceso de especificación dirigida por riesgos son:
 1. Identificación del riesgo
 2. Análisis y clasificación del riesgo
 3. Descomposición del riesgo
-4. Descomposición del riesgo
+4. Reducción del riesgo
 
 ----
 
@@ -161,6 +164,7 @@ Las etapas del proceso de especificación dirigida por riesgos son:
 ----
 
 ### Especificación dirigida por riesgos
+<!-- .slide: style="font-size: 0.90em" -->
 3. **Descomposición del riesgo:** Cada riesgo se analiza para descubrir las causas raíz potenciales de dicho riesgo. Dichas causas son las razones por las que es posible que falle un sistema. Pueden ser errores de software, hardware o vulnerabilidades inherentes que son consecuencia de decisiones de diseño del sistema. 
 4. **Reducción del riesgo:** Se hacen proposiciones de formas para reducir o eliminar los riesgos identificados. Ello contribuye con los requerimientos de confiabilidad del sistema que definen las defensas contra el riesgo y cómo se manejará éste.
 
@@ -177,7 +181,7 @@ En los sistemas críticos de protección, las fallas llegan a afectar el entorno
 
 La preocupación principal de la **especificación de protección** es identificar los requerimientos que reducirán la probabilidad de que ocurran tales fallas de sistema. 
 
-Los requerimientos de protección son requerimientos de **seguridad** y no se interesan por la operación normal del sistema. Podrían especificar que el sistema debe desactivarse de modo que se conserve la protección. Por lo tanto, al derivar requerimientos de protección, se necesita encontrar un equilibrio aceptable entre seguridad y funcionalidad para evitar la sobreprotección. 
+Los requerimientos de protección son requerimientos de **seguridad** y no se interesan por la operación normal del sistema. Podrían especificar que el sistema debe desactivarse de modo que se conserve la protección. Por lo tanto, al derivar requerimientos de protección, se necesita **encontrar un equilibrio aceptable entre seguridad y funcionalidad para evitar la sobreprotección**. 
 
 No hay razón para construir un sistema altamente seguro si no resulta efectivo en cuanto a costo. 
 
@@ -188,8 +192,8 @@ No hay razón para construir un sistema altamente seguro si no resulta efectivo 
 En este contexto, un **riesgo** es la probabilidad de que el sistema entre en un estado peligroso, y los eventos que conducen a dichos peligros. 
 
 Las actividades en el proceso son:
-1. Identificación del riesgo: Se deben considerar todos los tipos de riesgos: físicos, eléctricos, biológicos, de radiación, de falla de servicio, etc, y sus combinaciones.
-2. Análisis de riesgo: Los riesgos deben priorizarse y valorarse acorde al nivel de peligro y la probabilidad de ocurrencia. 
+1. **Identificación del riesgo:** Se deben considerar todos los tipos de riesgos: físicos, eléctricos, biológicos, de radiación, de falla de servicio, etc, y sus combinaciones.
+2. **Análisis de riesgo:** Los riesgos deben priorizarse y valorarse acorde al nivel de peligro y la probabilidad de ocurrencia. 
 
 Existen 3 categorías de valoración: riesgos intolerables, riesgos tan bajos como sea razonablemente práctico (ALARP), es decir, tienen consecuencias serias pero son muy improbables y riesgos aceptables. La división de cada sección no es técnica, sino que depende de factores sociales y políticos.
 
@@ -265,6 +269,14 @@ En estos casos, se está definiendo qué comportamiento debe tener el sistema pa
 
 ---
 
+### Especificación de la fiabilidad (Reliability)
+
+La **especificación de la fiabilidad** define los requerimientos relacionados con la capacidad del sistema para funcionar correctamente y sin fallos durante un período determinado y bajo condiciones específicas.
+
+En un sistema crítico es necesario establecer qué nivel de fiabilidad se espera.
+
+----
+
 ### Especificación de la fiabilidad
 La fiabilidad global de un sistema depende de:
 - La fiabilidad del hardware
@@ -283,6 +295,7 @@ Los requerimientos de fiabilidad son de dos tipos:
 ----
 
 ### Fiabilidad: Requerimientos no funcionales
+<!-- .slide: style="font-size: 0.88 em" -->
 Para evitar la sobreespecificación de la fiabilidad del sistema:
 1. Especifique los requerimientos de disponibilidad y fiabilidad para diferentes tipos
 de fallas. Debe haber una probabilidad de ocurrencia más baja para fallas graves que
@@ -294,6 +307,7 @@ confiabilidad globales del sistema se logran en otras formas.
 ----
 
 ### Fiabilidad: Requerimientos funcionales
+<!-- .slide: style="font-size: 0.88em" -->
 Existen tres tipos de requerimientos de fiabilidad funcional para un sistema:
 1. **Requerimientos de comprobación** Identifican las comprobaciones de las entradas al sistema, para garantizar que las entradas incorrectas o fuera
 de rango se detecten antes de que las procese el sistema.
@@ -317,6 +331,19 @@ El proceso de especificación de fiabilidad puede basarse en el proceso general 
 
 ----
 
+### ¿Cómo se puede especificar la fiabilidad?
+<!-- .slide: style="font-size: 0.80em" -->
+La fiabilidad puede expresarse mediante diferentes tipos de requisitos:
+
+- **Frecuencia máxima de fallos:** El sistema no deberá presentar más de X fallos durante un determinado período.
+- **Tiempo medio entre fallos:** MTBF — Mean Time Between Failures. Representa el tiempo promedio entre fallos.
+Ejemplo: MTBF ≥ 10.000 horas.
+Esto significa que se espera un promedio de al menos 10.000 horas entre fallos, bajo las condiciones especificadas.
+- **Tiempo de recuperación:** Aunque está más directamente relacionado con la disponibilidad, también puede formar parte de los requisitos de recuperación:
+Después de un fallo, el sistema deberá recuperar el servicio en menos de 30 segundos.
+
+----
+
 ### Métricas de fiabilidad
 <!-- .slide: style="font-size: 0.80em" -->
 1. **Probabilidad de falla a pedido** (POFOD, Probability Of Failure
@@ -325,8 +352,7 @@ servicio de un sistema derive en una falla del sistema. Ejemplo, POFOD = 0.001, 
 2. **Tasa de ocurrencia de fallas** (ROCOF, Rate Of Occurrence Of Failures) Esta métrica establece el número probable de fallas de sistema que se observan
 en relación con cierto tiempo (por ejemplo, una hora), o el número de ejecuciones del
 sistema. En el ejemplo anterior, la ROCOF es 1/1,000. El recíproco de la ROCOF es
-el tiempo medio para la falla (MTTF, por las siglas de Main Time To Failure), que a
-veces se usa como una métrica de fiabilidad. El MTTF es el promedio de unidades de
+el tiempo medio para la falla (MTTF, Main Time To Failure), es el promedio de unidades de
 tiempo entre las fallas observadas de sistema. Por lo tanto, una ROCOF de dos fallas
 por hora significa que el tiempo medio de la falla es de 30 minutos.
 
@@ -339,6 +365,15 @@ entregar servicios cuando se le solicitan. AVAIL es la probabilidad de que un si
 el 99.99% del tiempo de operación.
 
 ![Disopnibilidad](images/u9-sistemas-criticos/disponibilidad.png)
+
+---
+### Reliability: Ejemplos
+
+El sistema deberá funcionar continuamente durante una operación de 12 horas sin producir fallos que interrumpan el servicio.
+
+O:
+
+La probabilidad de fallo durante una determinada operación no deberá superar el límite establecido.
 
 ---
 
@@ -377,34 +412,82 @@ Mientras que **safety** se preocupa principalmente por:
 
 ---
 
-### Especificación de la fiabilidad (Reliability)
-
-La **especificación de la fiabilidad** define los requerimientos relacionados con la capacidad del sistema para funcionar correctamente y sin fallos durante un período determinado y bajo condiciones específicas.
-
-En un sistema crítico es necesario establecer qué nivel de fiabilidad se espera.
-
----
-### Reliability: Ejemplo:
-
-El sistema deberá funcionar continuamente durante una operación de 12 horas sin producir fallos que interrumpan el servicio.
-
-O:
-
-La probabilidad de fallo durante una determinada operación no deberá superar el límite establecido.
-
----
-### ¿Cómo se puede especificar la fiabilidad?
+###  Requerimientos de seguridad
 <!-- .slide: style="font-size: 0.80em" -->
-La fiabilidad puede expresarse mediante diferentes tipos de requisitos:
+Firesmith identificó 10 tipos de requerimientos de seguridad que pueden incluirse en una especificación de sistema:
+1. Los requerimientos de identificación **especifican** si un sistema debe o no debe identificar a sus usuarios antes de interactuar con ellos.
+2. Los requerimientos de **autenticación** explican cómo se identifica a los usuarios.
+3. Los requerimientos de **autorización** detallan los privilegios y permisos de acceso de los usuarios identificados.
+4. Los requerimientos de **inmunidad** definen cómo un sistema debe protegerse a sí mismo contra virus, gusanos y amenazas similares.
+5. Los requerimientos de integridad describen cómo puede evitarse la corrupción de datos.
 
-- **Frecuencia máxima de fallos:** El sistema no deberá presentar más de X fallos durante un determinado período.
-- **Tiempo medio entre fallos:** MTBF — Mean Time Between Failures. Representa el tiempo promedio entre fallos.
-Ejemplo: MTBF ≥ 10.000 horas.
-Esto significa que se espera un promedio de al menos 10.000 horas entre fallos, bajo las condiciones especificadas.
-- **Tiempo de recuperación:** Aunque está más directamente relacionado con la disponibilidad, también puede formar parte de los requisitos de recuperación:
-Después de un fallo, el sistema deberá recuperar el servicio en menos de 30 segundos.
+----
+
+###  Requerimientos de seguridad
+<!-- .slide: style="font-size: 0.80em" -->
+6. Los requerimientos de **detección de intrusiones** puntualizan qué mecanismos deben
+usarse para detectar ataques al sistema.
+7. Los requerimientos de **no repudio** especifican que una parte en una transacción no
+puede negar su involucramiento en dicha transacción.
+8. Los requerimientos de **privacidad** se refieren a cómo se mantiene la privacidad de
+los datos.
+9. Los requerimientos de **auditoría** de seguridad plantean cómo puede auditarse y verificarse el uso del sistema.
+10. Los requerimientos de seguridad de **mantenimiento** del sistema especifican cómo
+una aplicación puede evitar cambios autorizados a partir de la inhabilitación accidental de sus mecanismos de seguridad.
 
 ---
+
+#### Identificación de  requerimientos de seguridad del sistema
+Existen tres etapas:
+1. **Análisis preliminar del riesgo** En esta etapa todavía no se toman decisiones sobre
+los requerimientos detallados del sistema, el diseño del sistema o la tecnología
+de implementación. La meta de este proceso de valoración es derivar requerimientos de seguridad para el sistema en su conjunto.
+
+----
+
+#### Identificación de  requerimientos de seguridad del sistema
+2. **Análisis del riesgo del ciclo de vida** Esta valoración de riesgo tiene lugar durante
+el ciclo de vida de desarrollo del sistema, después de tomarse elecciones de diseño.
+Los requerimientos adicionales de seguridad toman en cuenta las tecnologías usadas
+en la construcción del sistema, así como las decisiones de diseño e implementación
+del sistema.
+3. **Análisis del riesgo operativo** Esta valoración de riesgo considera los riesgos al
+sistema operativo impuestos por ataques maliciosos de los usuarios, con o sin conocimiento interno del sistema.
+
+----
+
+#### Identificación de  requerimientos de seguridad del sistema
+
+![valoración preliminar del riesgo para requerimientos de seguridad](images/u9-sistemas-criticos/valoracion-riesgo-seguridad.png)
+
+---
+
+### proceso de especificación de Seguridad
+1. **Identificación del activo**, identifican los elementos/datos del sistema que podrían
+requerir protección. 
+2. **Estimación del valor del activo**, donde se realiza el análisis de riesgos.
+3. **Valoración de la exposición**, valorar las pérdidas potenciales asociadas con cada activo: pérdidas directas (robo de
+información), costos de recuperación y la posible pérdida de reputación (análisis
+de riesgos).
+4. **Identificación de amenazas**, que afectan a los activos del sistema (análisis de riesgos).
+
+----
+
+### proceso de especificación de Seguridad
+<!-- .slide: style="font-size: 0.78em" -->
+5. **Valoración del ataque**, en la que cada amenaza se descompone en ataques que pueden hacerse al sistema y las posibles formas en que dichos ataques podrían ocurrir.
+Es posible usar árboles de ataque.
+6. **Identificación del control**, y donde pueden instalarse
+para proteger un activo. Los controles son mecanismos técnicos, como la encriptación, que sirven para proteger los activos (reducción del riesgo).
+7. **Valoración de factibilidad** técnica y los costos
+de los controles. No vale la pena tener controles muy caros para proteger
+los activos que no tienen gran valor (reducción del riesgo).
+8. **Definición de requerimientos de seguridad**, en la que se usa el conocimiento de las
+valoraciones de exposición, amenazas y control, para derivar requerimientos de seguridad del sistema. Éstos pueden ser requerimientos para la infraestructura del
+sistema o el sistema de aplicación.
+
+---
+
 ### Relación entre riesgos, safety, security y reliability
 
 ![Sistemas Criticos](images/u9-sistemas-criticos/sistemas-criticos.png)
@@ -482,6 +565,125 @@ Esto permite posteriormente verificar mediante pruebas o análisis si el requisi
 </tr>
 </tbody>
 </table>
+
+---
+
+### Ejercicio: Analisis de Sistema Critico
+Cada grupo reciba un sistema crítico diferente:
+
+1. 🚦 Control de semáforos.
+2. ✈️ Sistema de control de tráfico aéreo.
+3. 🏥 Sistema de administración de dosis de medicamentos.
+4. 🚆 Sistema de señalización ferroviaria.
+5. ⚡ Sistema de control de una red eléctrica.
+6. 🚗 Sistema de conducción asistida.
+
+----
+
+### 1. Identificar qué hace crítico al sistema
+
+Primero deberían responder:
+- ¿Por qué este sistema puede considerarse un sistema crítico?
+- ¿Qué consecuencias tendría una falla?
+- ¿Qué propiedades deberían ser especialmente importantes?
+
+----
+
+### 2. Identificar riesgos
+
+Distinguir diferentes escenarios de comportamiento. Para cada uno relevar: Riesgo, Causa, Consecuencia, Probabilidad, Impacto
+
+Ejemplo:
+
+<table>
+<thead>
+<tr>
+<th>Riesgo</th>
+<th>Causa</th>
+<th>Consecuencia</th>
+<th>Probabilidad</th>
+<th>Impacto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sensor defectuoso</td>
+<td>Falla del sensor</td>
+<td>Tiempos incorrectos</td>
+<td>Media</td>
+<td>Alto</td>
+</tr>
+<tr>
+<td>Acceso no autorizado</td>
+<td>Credenciales comprometidas</td>
+<td>Manipulación</td>
+<td>Baja</td>
+<td>Crítico</td>
+</tr>
+</tbody>
+</table>
+
+----
+
+### 3. Especificación dirigida por riesgos
+
+Cada riesgo prioritario tienen que transformar el problema en requisitos verificables.
+
+Por ejemplo:
+- Riesgo: pérdida de comunicación con un semáforo.
+
+Requisito:
+- Ante la pérdida de comunicación con un semáforo, el sistema deberá detectarla en un máximo de 2 segundos y activar el modo seguro correspondiente.
+
+Indicar cómo se podría verificar ese requisito.
+
+----
+
+### 4. Clasificar los requisitos
+
+- Seguridad (safety): Busca evitar que el sistema provoque daños.
+- Protección (security): Busca proteger el sistema frente a accesos o acciones no autorizadas.
+- Fiabilidad (reliability): Busca que el sistema mantenga su funcionamiento correctamente durante el tiempo esperado.
+
+----
+
+### 5. Proceso de especificación
+
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requisito</th>
+<th>Riesgo</th>
+<th>Tipo</th>
+<th>Prioridad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF-01</td>
+<td>Detectar pérdida de comunicación en ≤ 2 s</td>
+<td>R-03</td>
+<td>Fiabilidad</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>RS-02</td>
+<td>Impedir señales incompatibles</td>
+<td>R-01</td>
+<td>Seguridad</td>
+<td>Crítica</td>
+</tr>
+<tr>
+<td>RP-03</td>
+<td>Autenticar operadores</td>
+<td>R-05</td>
+<td>Protección</td>
+<td>Alta</td>
+</tr>
+</tbody>
+</table>
+
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?

@@ -1,106 +1,100 @@
 @startuml
-title Reserva online y gestión operativa diaria
+title Sistema de Reservas - Diagrama de Actividad
 
-skinparam shadowing false
-skinparam activity {
-  BackgroundColor #FFFFFF
-  ArrowColor #333333
-  DiamondBackgroundColor #F5F5F5
-  BorderColor #888888
-}
-skinparam note {
-  BackgroundColor #FFFFEE
-  BorderColor #CCCC88
-}
-
-legend right
-  Ventanas de corte:
-  - Almuerzo: hasta 11:30
-  - Cena:     hasta 19:30
-
-  No-show:
-  - Tolerancia: 30 minutos
-  - Penalización: 7 días (reservas online)
-endlegend
+|Cliente|
 
 start
 
-partition "Cliente" {
-  :Elegir acción (Crear / Cancelar);
-}
+:Solicitar reserva;
+:Ingresar datos de reserva;
+note right
+  Fecha
+  Tipo: almuerzo/cena
+  Ubicación
+  Tamaño de mesa
+end note
 
-partition "Front Web" {
-  :Capturar fecha, turno (Almuerzo/Cena),\nubicación y tamaño de mesa;
-  :Enviar solicitud al Motor de Reservas;
-}
+|Sistema|
 
-partition "Motor de Reservas" {
-  :Validar registro y sanción vigente;
-  if ("¿Cliente registrado y apto?\n[sanción vigente = NO]") then (Sí)
-  else (No)
-    :Rechazar operación (no apto);
+:Verificar cliente registrado;
+
+if (¿Cliente registrado?) then (No)
+    :Rechazar reserva;
     stop
-  endif
+else (Sí)
+endif
 
-  if ("¿Acción = Crear?") then (Sí)
-    if ("¿Dentro de ventana de reserva?\nAlmuerzo ≤ 11:30 | Cena ≤ 19:30") then (Sí)
-      :Verificar disponibilidad de mesa;
-      if ("¿Hay mesa solicitada?") then (Sí)
-        :Crear reserva (estado=Confirmada);
-        :Enviar confirmación al cliente;
-      else (No)
-        :Proponer alternativas\n(o rechazar si no hay);
-      endif
-    else (No)
-      :Rechazar creación (fuera de ventana);
-    endif
-  else (No: Cancelar)
-    if ("¿Dentro de ventana de cancelación?\nAlmuerzo ≤ 11:30 | Cena ≤ 19:30") then (Sí)
-      :Cancelar reserva (por cliente);
-      :Liberar mesa;
-      :Enviar confirmación de cancelación;
-    else (No)
-      :Rechazar cancelación (fuera de ventana);
-    endif
-  endif
-}
+:Verificar si el cliente está apto para reservar;
 
-' ------ Cierre al horario de corte y reporte ------
-partition "Scheduler" {
-  :Evento de tiempo 11:30 (Almuerzo);
-  :Evento de tiempo 19:30 (Cena);
-}
+if (¿Tiene sanciones?) then (Sí)
+    :Rechazar reserva;
+    stop
+else (No)
+endif
 
-partition "Recepcionista" {
-  :Generar reporte al corte;
-  note right
-    Reporte incluye:
-    - Mesas asignadas con cliente
-    - Mesas disponibles para asignación
-  end note
-}
+:Verificar horario límite;
 
-' ------ Llegada de turno y tolerancia de 30' ------
-partition "Recepcionista" {
-  :Inicio de turno (almuerzo/cena);\nRegistrar llegadas (check-in);
-}
+if (¿Está dentro del horario permitido?) then (No)
+    :Rechazar reserva;
+    stop
+else (Sí)
+endif
 
-partition "Motor de Reservas" {
-  if ("¿Check-in registrado?") then (Sí)
-    :Marcar mesa como Ocupada;
-  else (No)
-    partition "Scheduler" {
-      :Iniciar temporizador de 30 minutos\npor reserva sin check-in;
-    }
-    if ("¿Cliente llega dentro de 30'?") then (Sí)
-      :Marcar mesa como Ocupada;
-    else (No)
-      :Cancelar reserva (no-show);
-      :Liberar mesa;
-      :Aplicar penalización 7 días\n(suspensión de reservas online);
-    endif
-  endif
-}
+:Verificar disponibilidad de mesa;
+
+if (¿Hay mesa disponible?) then (No)
+    :Informar que no hay disponibilidad;
+    stop
+else (Sí)
+endif
+
+:Registrar reserva;
+:Asignar mesa;
+:Informar reserva confirmada;
+
+|Cliente|
+
+:Recibir confirmación;
+
+|Sistema|
+
+:Esperar fecha y hora de la reserva;
+
+if (¿Cliente se presenta dentro de 30 minutos?) then (Sí)
+    :Mantener reserva;
+    :Marcar mesa como ocupada;
+else (No)
+    :Cancelar reserva;
+    :Liberar mesa;
+    :Registrar penalización;
+    :Bloquear reservas online durante 1 semana;
+endif
+
+stop
+
+
+|Recepcionista|
+
+start
+
+:Esperar hora de cierre de reservas;
+
+if (¿Es almuerzo?) then (Sí)
+    :Esperar hasta las 11:30 hs;
+else (No)
+    :Esperar hasta las 19:30 hs;
+endif
+
+:Generar reporte;
+
+fork
+    :Listar mesas asignadas;
+    :Indicar cliente asignado a cada mesa;
+fork again
+    :Listar mesas disponibles;
+end fork
+
+:Entregar/consultar reporte;
 
 stop
 
