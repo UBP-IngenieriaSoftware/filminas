@@ -221,11 +221,17 @@ Los peligros que sólo pueden surgir a partir de una combinación de causas raí
 
 ----
 
+![Árbol de Fallos](images/u9-sistemas-criticos/arbol-de-fallos.png)
+
+----
+
 ### Especificación de la protección
 4. **Reducción del riesgo:** Las estrategias a utilizar son:
 - Evitar el peligro
 - Detectar y eliminar el peligro
 - Limitar el daño
+
+<!-- CONTINUAR DESDE https://docs.google.com/document/d/1ApAfE0J5OFQHl53xwKUlJI6RAhv1y1tNMV_iakp9UrQ/edit?tab=t.0 -->
 
 ----
 
@@ -259,7 +265,84 @@ En estos casos, se está definiendo qué comportamiento debe tener el sistema pa
 
 ---
 
-### Especificación de la protección (Security)
+### Especificación de la fiabilidad
+La fiabilidad global de un sistema depende de:
+- La fiabilidad del hardware
+- La fiabilidad del software
+- La fiabilidad de los operadores del sistema
+
+La fiabilidad es un atributo **mensurable**. Por ejemplo, un requerimiento de fiabilidad sería que las fallas de sistema que requiera un reinicio (reboot) no deben ocurrir más de una vez por semana.
+
+----
+
+### Requerimientos de fiabilidad
+Los requerimientos de fiabilidad son de dos tipos: 
+- **Requerimientos no funcionales**, que definen el número de fallas aceptables durante el uso normal del sistema, o el tiempo en que el sistema no está disponible para su uso. Se trata de requerimientos de fiabilidad cuantitativos. 
+- **Requerimientos funcionales**, que definen las funciones del sistema y el software que evitan, detectan o toleran fallas del software y, de ese modo, aseguran que esto no conduzca a fallas de sistema.
+
+----
+
+### Fiabilidad: Requerimientos no funcionales
+Para evitar la sobreespecificación de la fiabilidad del sistema:
+1. Especifique los requerimientos de disponibilidad y fiabilidad para diferentes tipos
+de fallas. Debe haber una probabilidad de ocurrencia más baja para fallas graves que
+para fallas menores.
+2. Especifique por separado los requerimientos de disponibilidad y fiabilidad para diferentes servicios. Las fallas que afectan los servicios más críticos tienen que especificarse como menos probables que aquellas sólo con efectos locales. 
+3. Decida si realmente necesita fiabilidad en un sistema de software o si las metas de
+confiabilidad globales del sistema se logran en otras formas.
+
+----
+
+### Fiabilidad: Requerimientos funcionales
+Existen tres tipos de requerimientos de fiabilidad funcional para un sistema:
+1. **Requerimientos de comprobación** Identifican las comprobaciones de las entradas al sistema, para garantizar que las entradas incorrectas o fuera
+de rango se detecten antes de que las procese el sistema.
+2. **Requerimientos de recuperación** para ayudar al sistema a recuperarse luego de que ocurre una falla. Se conservan copias del sistema y sus
+datos, y se especifica la forma en que se restauran.
+3. **Requerimientos de redundancia**, aseguran que la falla en un solo componente no conduzca a una pérdida completa del servicio.
+
+----
+
+### Especificación de fiabilidad
+El proceso de especificación de fiabilidad puede basarse en el proceso general de especificación dirigido por riesgo: 
+1. **Identificación del riesgo:** Se examinan los tipos de fallas de sistema que originarían pérdidas económicas de cierto tipo. Los posibles tipos de fallas se agrupan en: Pérdida de servicio, Entrega incorrecta de servicio y Corrupción de Sistema y de datos.
+
+----
+
+### Especificación de fiabilidad
+<!-- .slide: style="font-size: 0.90em" -->
+2. **Análisis del riesgo:** Implica la estimación de los costos y las consecuencias de diferentes tipos de fallas de software y selecciona para un análisis ulterior las fallas de graves consecuencias.
+3. **Descomposición de riesgo:** Se realiza un análisis de la causa raíz de las probables fallas de sistema, que suelen depender de decisiones de diseño del mismo. 
+4. **Reducción del riesgo:** Deben generarse especificaciones cuantitativas de fiabilidad que establezcan las probabilidades aceptables de los diferentes tipos de fallas. Hay que tomar en cuenta los costos de las fallas y la probabilidad de que ocurra. 
+
+----
+
+### Métricas de fiabilidad
+<!-- .slide: style="font-size: 0.80em" -->
+1. **Probabilidad de falla a pedido** (POFOD, Probability Of Failure
+On Demand). Define la probabilidad de que la demanda por un
+servicio de un sistema derive en una falla del sistema. Ejemplo, POFOD = 0.001, es decir, puede fallar una de cada 1,000 transacciones
+2. **Tasa de ocurrencia de fallas** (ROCOF, Rate Of Occurrence Of Failures) Esta métrica establece el número probable de fallas de sistema que se observan
+en relación con cierto tiempo (por ejemplo, una hora), o el número de ejecuciones del
+sistema. En el ejemplo anterior, la ROCOF es 1/1,000. El recíproco de la ROCOF es
+el tiempo medio para la falla (MTTF, por las siglas de Main Time To Failure), que a
+veces se usa como una métrica de fiabilidad. El MTTF es el promedio de unidades de
+tiempo entre las fallas observadas de sistema. Por lo tanto, una ROCOF de dos fallas
+por hora significa que el tiempo medio de la falla es de 30 minutos.
+
+----
+
+### Métricas de fiabilidad
+<!-- .slide: style="font-size: 0.80em" -->
+3. **Disponibilidad (AVAIL)** Refleja la capacidad de
+entregar servicios cuando se le solicitan. AVAIL es la probabilidad de que un sistema esté en operación cuando se haga una demanda por servicio. Una disponibilidad de 0.9999 significa que, en promedio, el sistema estará disponible
+el 99.99% del tiempo de operación.
+
+![Disopnibilidad](images/u9-sistemas-criticos/disponibilidad.png)
+
+---
+
+### Especificación de la seguridad  
 <!-- .slide: style="font-size: 0.90em" -->
 La **especificación de la protección** define los requerimientos destinados a proteger el sistema y su información frente a accesos, modificaciones o acciones no autorizadas.
 
