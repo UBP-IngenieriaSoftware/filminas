@@ -311,7 +311,7 @@ Los requerimientos de fiabilidad son de dos tipos:
 ----
 
 ### Fiabilidad: Requerimientos no funcionales
-<!-- .slide: style="font-size: 0.88 em" -->
+<!-- .slide: style="font-size: 0.88em" -->
 Para evitar la sobreespecificación de la fiabilidad del sistema:
 1. Especifique los requerimientos de disponibilidad y fiabilidad para diferentes tipos
 de fallas. Debe haber una probabilidad de ocurrencia más baja para fallas graves que
@@ -469,6 +469,21 @@ en la construcción del sistema, así como las decisiones de diseño e implement
 del sistema.
 3. **Análisis del riesgo operativo** Esta valoración de riesgo considera los riesgos al
 sistema operativo impuestos por ataques maliciosos de los usuarios, con o sin conocimiento interno del sistema.
+
+
+---
+
+### Activos
+
+Un activo es cualquier **elemento** del sistema que tiene **valor** para la organización y que, por lo tanto, merece ser protegido frente a amenazas.
+
+Puede ser:
+- **Datos:** información de clientes, contraseñas, historias clínicas, datos bancarios.
+- **Funcionalidades:** una función de pago, el mecanismo de autenticación, el sistema de reservas.
+- **El propio sistema:** por ejemplo, un sistema bancario completo puede considerarse un activo.
+- **Recursos tecnológicos:** servidores, bases de datos, dispositivos, infraestructura de red.
+- **Información asociada:** configuraciones, claves criptográficas, logs, documentación.
+- Incluso la **disponibilidad de un servicio** puede considerarse un activo si su interrupción genera pérdidas.
 
 ----
 
