@@ -54,9 +54,13 @@ Created by <i class="fab fa-telegram"></i>
 ---
 
 ### Diseño Arquitectónico
-Se refiere a la estructura y organización a gran escala de un sistema de software. Es la planificación de los componentes 
-principales de un sistema y la forma en que interactúan entre ellos. El diseño arquitectónico se enfoca en la visión 
-global del sistema, definiendo módulos, componentes, subsistemas, bases de datos, servidores y cómo todo se conecta y comunica.
+La arquitectura de software de un sistema describe sus componentes principales, sus relaciones y cómo interactúan entre sí.
+
+Fundamentalmente, sirve como modelo. Proporciona una abstracción para gestionar la complejidad del sistema; establece comunicación y coordinación entre componentes.
+
+----
+
+![Modelos Arquitectonicos](images/u10-mod-arqui/modelos-arquitectonicos.webp)
 
 ----
 
@@ -107,7 +111,7 @@ sub-sistemas que componen un sistema y su comunicación
 
 Las arquitetcuras de sistemas se moden con frecuenca usando diagramas de bloques simples:
 - **Recuadros:** Componentes o sub-componentes
-- **Flechas:** Datos o sañales de control.
+- **Flechas:** Datos o señales de control.
 
 ----
 
@@ -135,6 +139,7 @@ hacer frente a sus requerimientos no funcionales, como rendimiento, fiabilidad y
 ----
 
 ### DECISIONES DE DISEÑO ARQUITECTÓNICO
+<!-- .slide: style="font-size: 0.88em" -->
 1. ¿Existe una arquitectura de aplicaciones genéricas que se pueden utilizar?
 2. ¿Cómo se distribuirá el sistema a través de núcleos y procesadores?
 3. ¿Qué estilos arquitectónicos son apropiados?
@@ -168,7 +173,8 @@ ya que cada uno presenta una perspectiva del sistema.
 
 ---
 ### Vistas Arquitectónicas
-1. **Vista Lógica:** Abstracciones como objectos o clases de objectos.
+<!-- .slide: style="font-size: 0.90em" -->
+1. **Vista Lógica:** Abstracciones como objetos o clases de objetos.
 2. **Vista de Proceso:** Muestra como en tiempo de operación los componentes interactuan. (rendimiento y disponibilidad)
 3. **Vista de Desarrollo:** Muestra como el software está descompuesto
 4. **Vista Física:** Expone el hardware del sistema y como los componentes de software se distribuyen en los procesadores.
@@ -196,7 +202,7 @@ particular, con variantes que satisfagan las necesidades del cliente.
 
 ----
 
-### ESTILOS ARQUITECTÓNICOS
+### Elementos en una Arquitectura
 - Un conjunto de componentes. 
 - Un conjunto de conectores entre componentes (comunicación, coordinación, cooperación, etc.). 
 - Restricciones que definen cómo se integran los componentes para formar el sistema. 
@@ -213,15 +219,16 @@ particular, con variantes que satisfagan las necesidades del cliente.
 ### MODELOS ARQUITECTÓNICOS
 <!-- .slide: style="font-size: 0.90em" -->
 * Utilizarse para documentar un diseño arquitectónico.
-* Modelo estructural estático, que muestra los principales componentes del sistema.
-* Modelo de proceso dinámico que muestra el modelo de proceso de la estructura del sistema.
-* Modelo de interfaz que define las interfaces de sub-sistemas.
-* Modelo de relaciones, como un modelo de flujo de datos que muestra las relaciones de sub-sistemas.
-* Modelo de distribución que muestra cómo los sub-sistemas se distribuyen a través de computadoras.
+* **Modelo estructural** estático, que muestra los principales componentes del sistema.
+* **Modelo de proceso dinámico** que muestra el modelo de proceso de la estructura del sistema.
+* **Modelo de interfaz** que define las interfaces de sub-sistemas.
+* **Modelo de relaciones**, como un modelo de flujo de datos que muestra las relaciones de sub-sistemas.
+* **Modelo de distribución** que muestra cómo los sub-sistemas se distribuyen a través de computadoras.
 
 ---
 
 ### MODELOS Arquitectónicos
+<!-- .slide: style="font-size: 0.90em" -->
 1. Arquitectura en Capas
 2. Arquitectura Cliente-Servidor
 3. Arquitectura de Microservicios
@@ -253,7 +260,7 @@ particular, con variantes que satisfagan las necesidades del cliente.
 
 ----
 
-Al leer sobre cada Arquitetcura plantea si es Jerarquico o No Jerarquico
+Al leer sobre cada Arquitetcura plantea si es **Jerarquico** o **No Jerarquico**
 
 ----
 
@@ -421,18 +428,16 @@ Plataformas como Netflix o Amazon utilizan microservicios para manejar diferente
 
 - [Cómo funciona Netflix - el complejo proceso en términos sencillos](https://sysarmy.com/blog/posts/como-funciona-netflix/)
 - [Cómo funciona Netflix cuando le das al play](https://luiscualquiera.medium.com/c%C3%B3mo-funciona-netflix-cuando-le-das-al-play-7b1249bf53c2)
-- [Diferencias entre una arquitectura monolítica y de microservicios](https://calimaco.com/2024/03/05/arquitectura-microservicios-vs-monolitica/)
 
 ----
 
 ### 3. Amazon emplea Microservicios
-<!-- .slide: style="font-size: 0.70em" -->
-- De qué partían: En sus inicios, Amazon tenía una arquitectura monolítica, pero a medida que la compañía crecía, la \
+<!-- .slide: style="font-size: 0.78em" -->
+- De qué partían: En sus inicios, **Amazon** tenía una **arquitectura monolítica**, pero a medida que la compañía crecía, la \
 complejidad y el tamaño del código aumentaron exponencialmente. Esto hacía difícil mantener y escalar la plataforma.
-- Cambio: Amazon migró su arquitectura a microservicios. Cada equipo era responsable de un "servicio" independiente y 
-utilizaba APIs para la comunicación entre los servicios. Esto permitió un desarrollo más rápido y la habilidad de 
-- escalar partes específicas de la plataforma de manera independiente.
-- Impacto: La migración a microservicios facilitó la creación de Amazon Web Services (AWS), que es uno de los servicios 
+- Cambio: Amazon migró su arquitectura a **microservicios**. Cada equipo era responsable de un "servicio" independiente y 
+utilizaba APIs para la comunicación entre los servicios. Esto permitió un desarrollo más rápido y la habilidad de escalar partes específicas de la plataforma de manera independiente.
+- Impacto: La migración a microservicios facilitó la creación de **Amazon Web Services (AWS)**, que es uno de los servicios 
 de infraestructura en la nube más grandes del mundo. AWS proporciona a otros desarrolladores la capacidad de utilizar 
 microservicios y escalabilidad de la misma manera que Amazon lo hacía internamente.
 
@@ -500,11 +505,11 @@ Sistemas grandes como los de banca o telecomunicaciones que necesitan interopera
 ----
 
 ### 5. Arquitectura Orientada a Servicios: Airbnb
-<!-- .slide: style="font-size: 0.70em" -->
-- De qué partían: Airbnb utilizaba una arquitectura monolítica basada en Rails, lo que le sirvió en las primeras etapas 
+<!-- .slide: style="font-size: 0.85em" -->
+- De qué partían: Airbnb utilizaba una arquitectura **monolítica** basada en Rails, lo que le sirvió en las primeras etapas 
 de crecimiento. Sin embargo, a medida que la empresa escaló globalmente, el código monolítico se volvió más difícil de gestionar.
-- Cambio: Airbnb migró a microservicios y, en algunos casos, también utilizó un enfoque "SOA" (Arquitectura Orientada 
-a Servicios), lo que les permitió descomponer funcionalidades específicas, como la gestión de reservas, mensajes y 
+- Cambio: Airbnb migró a **microservicios** y, en algunos casos, también utilizó un enfoque "SOA" (**Arquitectura Orientada 
+a Servicios**), lo que les permitió descomponer funcionalidades específicas, como la gestión de reservas, mensajes y 
 pagos en servicios separados.
 - Impacto: La migración a microservicios permitió a Airbnb mejorar la velocidad de desarrollo, escalar más eficientemente 
 y manejar con mayor estabilidad la alta demanda en sus servicios.
@@ -512,12 +517,12 @@ y manejar con mayor estabilidad la alta demanda en sus servicios.
 ----
 
 ### 5. Arquitectura Orientada a Servicios: eBay
-<!-- .slide: style="font-size: 0.70em" -->
-- De qué partían: eBay comenzó como un sitio monolítico, y con el crecimiento del comercio electrónico, la plataforma 
+<!-- .slide: style="font-size: 0.90em" -->
+- De qué partían: eBay comenzó como un sitio **monolítico**, y con el crecimiento del comercio electrónico, la plataforma 
 se volvió cada vez más difícil de mantener. Las actualizaciones y cambios impactaban todo el sistema, y el tiempo de 
 inactividad era frecuente durante los despliegues.
-- Cambio: En los años 2000, eBay migró a una arquitectura orientada a servicios (SOA), descomponiendo el monolito en 
-servicios más pequeños y luego avanzando hacia microservicios.
+- Cambio: En los años 2000, eBay migró a una **arquitectura orientada a servicios** (SOA), descomponiendo el monolito en 
+servicios más pequeños y luego avanzando hacia **microservicios**.
 - Impacto: El cambio permitió a eBay escalar globalmente, mejorar la disponibilidad de su plataforma y reducir los 
 tiempos de inactividad durante los despliegues.
 
@@ -525,6 +530,7 @@ tiempos de inactividad durante los despliegues.
 ### 6. Arquitectura Basada en Eventos
 El sistema reacciona a eventos generados por diferentes componentes. Cada evento desencadena una o más acciones en otros 
 componentes.
+
 Se utiliza para sistemas distribuidos, asíncronos y que deben responder rápidamente a los cambios.
 
 ----
@@ -623,6 +629,17 @@ financieros o redes sociales.
 ### 9. Arquitectura de Sistema Distribuido
 En esta arquitectura, los componentes del sistema se ejecutan en múltiples máquinas distribuidas y se comunican entre sí 
 a través de una red.
+
+----
+
+### Arquitectura de Sistema Distribuido
+Generalmente cada nodo puede tener una arquitectura diferente:
+- Arquitectura cliente-servidor
+- Arquitectura punto a punto (P2P)
+- Arquitectura de múltiples niveles (Capas-N)
+- Arquitectura de microservicios
+- Arquitectura orientada a servicios (SOA)
+- Arquitectura basada en eventos (EDA)
 
 ----
 
