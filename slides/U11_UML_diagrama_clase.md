@@ -12,6 +12,7 @@ Created by <i class="fab fa-telegram"></i>
 ---
 
 ### Diagrama de clases
+<!-- .slide: style="font-size: 0.95em" -->
 El diagrama de clases es un diagrama de **estructura** de UML.
 
 Permite representar la estructura estática de un sistema, mostrando:
@@ -88,7 +89,7 @@ El nombre debería representar claramente el concepto que se está modelando.
 <!-- .slide: style="font-size: 0.90em" --> 
 Los atributos representan información o características que poseen los objetos de una clase.
 
-Por ejemplo, en la clase *Mascota** tenemos los atributos:
+Por ejemplo, en la clase *Mascota* tenemos los atributos:
 - nombre
 - fechaNacimiento
 - especie
@@ -104,10 +105,6 @@ Los atributos permiten describir el estado de los objetos.
 ### 3. Operaciones
 
 Las operaciones representan comportamientos o servicios que una clase puede proporcionar.
-
-Por ejemplo, en la clase *Mascota** tenemos los atributos:
-- nombre: String
-- especie: String
 
 Y tenemos las operaciones:
 - calcularEdad(): int
@@ -168,16 +165,21 @@ Los símbolos más utilizados son:
 ----
 
 ### Visibilidad
+<!-- .slide: style="font-size: 0.95em" --> 
 
-- Nombre: **Persona**
+\- Nombre: **Persona**
 
 **Atributos**
-- dni: String
-- nombre: String
+
+\- dni: String
+
+\- nombre: String
 
 **Operaciones**
-+ obtenerNombre(): String
-+ cambiarNombre(nombre: String): void
+
+\+ obtenerNombre(): String
+
+\+ cambiarNombre(nombre: String): void
 
 La visibilidad está relacionada con el principio de encapsulamiento de la programación orientada a objetos.
 
@@ -255,7 +257,7 @@ Una de ellas es el **análisis nombre/verbo**.
 Se analiza el texto de los requisitos buscando:
 
 1. **Sustantivos o frases nominales:** Pueden surgir clases y atributos
-2. **Verbos o frases verbales:** Pueden surgit operaciones, responsabilidades y relaciones
+2. **Verbos o frases verbales:** Pueden surgir operaciones, responsabilidades y relaciones
 
 ----
 
@@ -489,7 +491,7 @@ Es la relación que habitualmente asociamos con: **es un**
 
 ### Relación: 4. Herencia
 
-En programación orientada a objetos, una jerarquía de generalización se implementa habitualmente mediante herencia.
+En programación orientada a objetos, una **jerarquía de generalización** se implementa habitualmente mediante herencia.
 
 Una subclase hereda características de su superclase y puede:
 - utilizar los atributos y operaciones heredados
@@ -856,7 +858,7 @@ Persona "1" -- "0..*" Mascota : posee
 ----
 
 ### Herencia en PlantUML
-
+<!-- .slide: style="font-size: 0.90em" -->
 La generalización puede representarse mediante:
 ```
 @startuml

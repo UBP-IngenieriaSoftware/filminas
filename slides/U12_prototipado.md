@@ -231,5 +231,9 @@ Emplee algún programa para confeccionar Wireframes ó y generar un wireflow par
 “Es mejor diseñar la experiencia del usuario que rectificarla.”</h3>
 
 ---
+
+![Prototipado](images/u12-prototipado/prototipado.png)
+
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)

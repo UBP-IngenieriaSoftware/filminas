@@ -1,0 +1,70 @@
+@startuml
+
+class Persona {
+    - dni: String
+    - nombre: String
+
+    + obtenerNombre(): String
+    + cambiarNombre(nombre: String): void
+}
+
+class Mascota {
+    - nombre: String
+    - especia: String
+}
+
+Persona "1" -- "0..*" Mascota : Posee
+
+
+class Animal {
+    - nombre: String
+    - edad: int
+
+    + comer(): void
+}
+
+class Perro {
+    - raza: String
+
+    + ladrar(): void
+}
+
+class Gato {
+    + maullar(): void
+}
+
+Animal <|-- Perro
+Animal <|-- Gato
+
+class Mesa
+class Tabla
+
+Mesa o-- Tabla
+
+
+class Pedido
+class LineaPedido
+
+Pedido *-- LineaPedido
+
+class Controlador
+class Servicio
+
+Controlador ..> Servicio
+
+
+abstract class Figura {
+    + dibujar(): void
+}
+
+class Circulo
+class Rectangulo
+
+Figura <|-- Circulo
+Figura <|-- Rectangulo
+
+
+class Pantalla <<boundary>>
+class RegistrarObservacion <<control>>
+class Observacion <<entity>>
+@enduml
