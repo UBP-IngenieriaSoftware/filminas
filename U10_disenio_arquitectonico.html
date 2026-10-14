@@ -620,6 +620,9 @@ Compiladores o sistemas de procesamiento de datos donde los datos pasan por vari
 
 ---
 ### 8. Arquitectura de Espacio de Nombres
+
+https://medium.com/@mohamedsallam953/fundamentals-of-software-architecture-chapter-15-space-based-architecture-a67a8d4fd856
+
 Diseñada para sistemas altamente escalables y distribuidos, elimina la necesidad de una base de datos central y se basa 
 en "espacios" de datos que son replicados o fragmentados.
 
@@ -898,8 +901,7 @@ Cuando grandes cantidades de datos sean compartidos, el modelo de repositorio co
 - Centralización: Todos los módulos acceden a un repositorio común. 
 - Los datos centralizados permiten una integración sencilla entre componentes.
 - Manera eficaz de compartir grandes cantidades de datos
-- Sub-sistemas no tienen por qué preocuparse de cómo los datos se producen, ejemplo, la gestión centralizada,  
-  copia de seguridad, seguridad, etc
+- Sub-sistemas no tienen por qué preocuparse de cómo los datos se producen, ejemplo, la gestión centralizada, copia de seguridad, seguridad, etc
 - Un modelo a compartir se publica como el esquema del repositorio.
 
 ----
@@ -997,6 +999,7 @@ Es especialmente útil para sistemas donde el comportamiento varía según el es
 ----
 
 ### 19. Arquitectura de Máquina de Estados: Desventajas
+<!-- .slide: style="font-size: 0.80em" -->
 - **Complejidad:** Si hay demasiados estados o transiciones, el sistema puede volverse difícil de gestionar y escalar.
 - **Dificultad en cambios dinámicos:** Cambiar o agregar nuevos estados y transiciones puede ser complicado sin romper la lógica existente.
 - **Rígido:** No es ideal para sistemas donde el comportamiento no se puede describir fácilmente en términos de estados discretos.
@@ -1052,7 +1055,7 @@ El broker recibe solicitudes de los clientes y las envía al servidor adecuado p
 
 ### 21. Arquitectura Broker: Ventajas
 - **Escalabilidad:** Al ser todas las tareas ejecutadas independientes las unas de las otras es posible escalar 
-facilmente el sistema y sólo es necesario disponer de nuevos servidores que puedan procesar las peticiones del broker.
+fácilmente el sistema y sólo es necesario disponer de nuevos servidores que puedan procesar las peticiones del broker.
 - **Rendimiento:** Al ser un gran número de nodos conectados a lo que simplemente actúa como un puente con el cliente 
 el rendimiento puede mantenerse siempre en altas escalas ya que es posible redistribuir si es necesario y procesar 
 grandes cargas de peticiones en momentos de saturación.
@@ -1099,7 +1102,7 @@ fácilmente el sistema de forma que añadir nuevos nodos esclavos se termine tra
 ----
 
 ### 22. Arquitectura Master-Slave: Desventajas
-- **Implementación:** NDebe de existir la posibilidad de dividir el proyecto en módulos que puedan actuar aislados de 
+- **Implementación:** Debe de existir la posibilidad de dividir el proyecto en módulos que puedan actuar aislados de 
 la ejecución principal del programa.
 - **Dependencia:** Fuerte dependencia con el sistema en el que se haya implementado que en muchas ocasiones hace difícil 
 portarlo a otras máquinas distintas.
@@ -1142,7 +1145,7 @@ en términos de energía.
 ----
 
 ### 23. Arquitectura Serverless: Desventajas
-- **Latencia de Arranque en Frío:** cuando no han sido invocadas recientemente hay na latencia inicial, ya que el entorno 
+- **Latencia de Arranque en Frío:** cuando no han sido invocadas recientemente hay una latencia inicial, ya que el entorno 
 de ejecución debe iniciarse desde cero.
 - **Dependencia del Proveedor:** Como AWS, Azure o Google Cloud, dificultando la migración a otro proveedor en el futuro 
 debido a las características específicas y servicios propios de cada plataforma.
@@ -1154,7 +1157,7 @@ debido a las características específicas y servicios propios de cada plataform
 <!-- .slide: style="font-size: 0.90em" -->
 - **Menor Control sobre la Infraestructura:** Se pierde control sobre configuraciones personalizadas, optimizaciones 
 específicas del servidor o la ubicación geográfica precisa de los datos.
-- **Costos Inesperados con Alta Demanda:** Si el uso crece inesperada mente, los costos pueden escalar rápidamente, ya 
+- **Costos Inesperados con Alta Demanda:** Si el uso crece inesperadamente, los costos pueden escalar rápidamente, ya 
 que el modelo serverless cobra por cada invocación o uso de recursos.
 - **Complejidad en la Depuración y Monitoreo:** Puede dificultar el monitoreo y la depuración de problemas, 
 especialmente en sistemas complejos que dependen de múltiples funciones y servicios.
@@ -1203,12 +1206,16 @@ dominio de aplicación. Se desea reusar lo componentes en sistemas similares.
 
 ---
 ### Jerarquía
-Los estilos arquitectónicos pueden clasificarse en jerárquicos y no jerárquicos, según la forma en que organizan y 
-estructuran los componentes dentro del sistema.
+Los estilos arquitectónicos pueden clasificarse en jerárquicos y no jerárquicos, según la forma en que organizan y estructuran los componentes dentro del sistema.
+
+Hay jerarquía cuando encontramos:
+- Varias capas
+- Módulos
+- Dependencias
 
 ----
 
-### Ejercicio
+### Ejercicios
 Clasifica todos los diseños arquitectónicos vistos en clase en Jerarquicos o No Jerarquicos según corresponda.
 
 ----
