@@ -128,8 +128,6 @@ Por ejemplo:
 
 UML permite indicar la visibilidad de atributos y operaciones.
 
-Los símbolos más utilizados son:
-
 <table>
   <thead>
     <tr>

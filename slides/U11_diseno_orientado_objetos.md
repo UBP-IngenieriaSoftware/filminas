@@ -169,6 +169,21 @@ pueden ser representados por ningún diagrama.
 
 ---
 
+### Modelo de Vistas 4+1 
+<!-- .slide: style="font-size: 0.75em" -->
+Fue desarrollado por **Philippe Kruchten**. Según este modelo, en UML se organiza los diagramas:
+1. **Vista Lógica (o Estructural):** Qué compone al sistema a nivel conceptual y de código (aquí entran los diagramas de clases, objetos y paquetes).
+2. **Vista de Procesos:** Cómo fluye el comportamiento dinámico, la concurrencia y la sincronización (diagramas de secuencia, actividades, estados).
+3. **Vista de Desarrollo (o Implementación):** Cómo se organiza el software en módulos, librerías y componentes (diagramas de componentes).
+4. **Vista Física (o de Despliegue):** Dónde se ejecuta el software, mapeando los componentes de software en el hardware o infraestructura (diagramas de despliegue).
+5. **Vista de Casos de Uso (Escenarios):** El hilo conductor que unifica todas las demás vistas a partir de los requisitos funcionales del usuario (diagramas de casos de uso).
+
+----
+
+![Modelo 4-1](images/u11-objetos/Kruchten.png)
+
+---
+
 ### Perspectivas del sistema
 * Una **perspectiva externa**, donde se modela el contexto o el entorno del sistema.
 * Una **perspectiva de interacción**, donde se modelan las interacciones entre un sistema y su entorno, o entre los 
