@@ -17,6 +17,27 @@ los puntos de contacto entre el usuario y el equipo.
 Incluyen elementos como menús, ventanas, contenido gráfico, cursor, etc.
 
 ---
+## Principios de Diseño de Diseño
+Lincamientos esenciales para garantizar que la interfaz sea fácil de aprender y usar:
+
+1. **Familiaridad del Usuario:** Utilizar conceptos, términos y metáforas que el usuario ya conoce.
+2. **Consistencia:** Mantener formatos, colores, tipografías y comportamientos uniformes en todo el sistema.
+3. **Mínima Sorpresa:** El comportamiento del sistema no debe sorprender ni confundir al usuario.
+
+----
+
+## Principios de Diseño de Diseño
+4. **Recuperabilidad:** Permitir que el usuario corrija o deshaga errores fácilmente (*Deshacer/Undo*).
+5. **Asistencia al Usuario:** Proporcionar retroalimentación clara, mensajes descriptivos y ayuda contextual.
+6.  **Diversidad de Usuarios:** Diseñar contemplando diferentes niveles de experiencia (principiantes vs. expertos) y capacidades (accesibilidad).
+
+---
+## Principios Clave de Usabilidad
+- **Visibilidad del estado del sistema:** Mantener siempre informado al usuario sobre lo que está pasando (ej. cargando, guardado).
+- **Prevención de errores:** Diseñar para evitar que el usuario cometa un error antes de que suceda (ej. deshabilitar botones inválidos).
+- **Carga cognitiva mínima:** No sobrecargar la memoria del usuario; favorecer el *reconocer* sobre el *recordar*.
+
+---
 ## Proceso de Diseño de Interfaz de Usuario
 Proceso iterativo donde los usuarios interactúan con los diseñadores y prototipados de la interfaz para decidir las 
 características, organización, apariencia y funcionamiento de la interfaz de usurio del sistema.
@@ -29,12 +50,12 @@ características, organización, apariencia y funcionamiento de la interfaz de u
 ---
 ## Tipos de Prototipo
 <!-- .slide: style="font-size: 0.85em" -->
-* Baja Fidelidad: Conjunto de dibujos que representan cómo estarán organizados los elementos en las páginas en aspectos 
+* **Baja Fidelidad:** Conjunto de dibujos que representan cómo estarán organizados los elementos en las páginas en aspectos 
 generales, sin entrar en detalle.
   * Sketch
   * Wireframe
   * StoryBoard
-* Alta Fidelidad: Se representan aspectos más precisos. Sirven para detallar el proceso interactivo de una o varias tareas.
+* **Alta Fidelidad:** Se representan aspectos más precisos. Sirven para detallar el proceso interactivo de una o varias tareas.
   * Mockup
   * Prototipo
 
@@ -59,7 +80,8 @@ generales, sin entrar en detalle.
 * Guía general que reproduce un concepto o idea de un proyecto de una manera sencilla
 * Se realiza a mano con lápiz y borrador
 
----
+----
+
 ## Thumbnail Sketches
 Secuencia de Sketchs que muestran cómo se realiza una tarea.
 
@@ -82,7 +104,8 @@ Debe tener en cuenta:
 
 ![Wireframe](images/u12-prototipado/wireframe.jpg)
 
----
+----
+
 ## Wireframe
 * Es una representación estática en baja calidad de un diseño
 * Esta representación muestra:
@@ -105,12 +128,14 @@ Secuencia de wireframes que muestran cómo se realiza una tarea.
 
 ![Mockup](images/u12-prototipado/mockup2.png)
 
----
+----
+
 ## Mockup
 
 ![Mockup](images/u12-prototipado/mockup.png)
 
----
+----
+
 ## Mockup  
 * Representación estática de un diseño en calidad media o alta
 * Representa la estructura de la información
@@ -123,7 +148,8 @@ Secuencia de wireframes que muestran cómo se realiza una tarea.
 
 ![Prototipo](images/u12-prototipado/prototipo.png)
 
----
+----
+
 ## Prototipo
 * La calidad pueda variar entre media y alta
 * Representación navegable del producto final
@@ -144,15 +170,17 @@ Secuencia de wireframes que muestran cómo se realiza una tarea.
 * Método intuitivo para identificar características y requerimientos
 * Mejoran la calidad y la completitud de las especificaciones funcionales del sistema. 
 
----
+----
+
 ## Ventajas del Pre-Diseño
-* El equipo y el cliente se centran en el diseño de contenidos e interacción y no en el diseño visual.
+* El equipo y el cliente se centran en el diseño de contenidos e interacción y no en el diseño visual. (Wireframe)
 * El cliente ve y comprende cómo será la aplicación, mucho mejor que si se ofrece descrita en un documento.
 * Evita malentendidos entre el equipo de desarrollo y el cliente.
 * Ayuda a especificar los requerimientos y a detectar inconsistencias o falta de funcionalidad.
 * Complemento para el análisis.
 
----
+----
+
 ## Ventajas del Pre-Diseño
 * Se puede modificar el diseño con facilidad y rapidez.
 * Se evitan modificaciones posteriores mucho más costosas cuando la aplicación ya está implementada.
@@ -175,6 +203,33 @@ Secuencia de wireframes que muestran cómo se realiza una tarea.
 ![Comparacion: Prototipo vs Mockup](images/u12-prototipado/comparacion.png)
 
 ---
+## Análisis del Usuario
+<!-- .slide: style="font-size: 0.85em" -->
+Proceso de comprender las características, necesidades, conocimientos y contextos en los que los usuarios interactuarán con la interfaz.
+
+#### ¿Qué debemos analizar?
+- **¿Quiénes son los usuarios?** (Edad, rol, experiencia previa con tecnología).
+- **¿Cuáles son sus objetivos?** (Qué tareas principales necesitan resolver).
+- **¿En qué contexto usarán la aplicación?** (Entorno de trabajo, dispositivo, tiempo disponible).
+- **¿Cuáles son sus limitaciones y frustraciones actuales?**
+
+---
+## Herramientas para el Análisis del Usuario
+<!-- .slide: style="font-size: 0.90em" -->
+- **User Personas (Arquetipos de Usuario):**
+  Representaciones ficticias del usuario ideal basándose en datos reales (rol, metas, frustraciones).
+  
+- **Escenarios de Uso:**
+  Historias breves que describen cómo una *Persona* realiza una tarea específica para lograr un objetivo.
+
+- **Mapas de Empatía:**
+  Herramienta para entender lo que el usuario *dice, piensa, hace y siente* durante su interacción con el sistema.
+
+----
+
+![Mapa de Empatia](images/u12-prototipado/mapa-de-empatia.png)
+
+---
 ## Antes de dibujar...
 * Realizar entrevistas con el cliente y el equipo de desarrollo para definir los requisitos, los objetivos y el público objetivo.    
 * Analizar la web actual (si existe): problemas de usabilidad y accesibilidad, estadísticas de acceso, test con usuarios y encuestas.
@@ -186,8 +241,9 @@ Secuencia de wireframes que muestran cómo se realiza una tarea.
 Proceso de evaluar la forma en que se utiliza una interfaz y verificar que cumple los requerimientos del usuario.
 
 Es parte del proceso de verificación y validación de los sistemas software.
-    
----
+
+----
+
 ## Evaluación de la Interfaz
 
 ![Evaluacion Interfaz](images/u12-prototipado/evaluacion.png)
@@ -201,15 +257,16 @@ Es parte del proceso de verificación y validación de los sistemas software.
 * **Layout:** Ubicación, colocación y agrupación de los elementos de la página cabeceras, pies, navegación, áreas de contenido, titulares, etc.)
 * **Comportamiento:** Notas asociadas a los elementos para indicar cómo se deben mostrar o el comportamiento funcional cuando se activa.
 
----
+----
+
 ## Ejemplo de  wireframe
 
 ![Ejemplo Wireframe](images/u12-prototipado/ejemploWireframe.png)
 
 ---
-## Ejercicio: Wireframe
+## Herramientas de diseño
 <!-- .slide: style="font-size: 0.80em" -->
-Emplee algún programa para confeccionar Wireframes ó y generar un wireflow para los sistemas de la GTP.
+Existe una gran variedad de herramientas que podemos emplear para la etapa de diseño:
 
 [![Figma](images/u12-prototipado/figma.png)](https://www.figma.com/)
 [![AdobeXD](images/u12-prototipado/adobeXD.png)](https://www.adobe.com/la/products/xd/pricing/individual.html)
@@ -219,11 +276,20 @@ Emplee algún programa para confeccionar Wireframes ó y generar un wireflow par
 ![Draw.io](images/u12-prototipado/drive_drawio.png) 
 
 ---
-#### Errores comunes al crear un Wireframe para nuestro proyecto web
-* No indicar campos obligatorios
-* No describir el flow normal (que botón o link me lleva a donde)
-* Texto que indique cuál es la finalidad de la página
-* No especificar mensajes de error
+
+### Errores comunes al crear un Diseño
+<!-- .slide: style="font-size: 0.90em" -->
+- **Falta de retroalimentación (Feedback):** El sistema realiza una acción (como guardar, cargar o procesar un pago) y la interfaz no indica nada. El usuario presiona el botón múltiples veces pensando que no funcionó.
+- **Mensajes de error crípticos o inútiles:** Mostrar códigos de error numéricos o frases genéricas como "Error 500" o "Entrada inválida" en lugar de explicar qué salió mal y cómo solucionarlo (ej. "La contraseña debe tener al menos 8 caracteres").
+- **Violación de la consistencia:** Cambiar el estilo, color o ubicación de botones clave entre distintas pantallas (por ejemplo, poner el botón "Aceptar" a la derecha en una vista y a la izquierda en otra).
+
+----
+
+### Errores comunes al crear un Diseño
+<!-- .slide: style="font-size: 0.90em" -->
+- **Ocultar elementos esenciales de navegación:** Usar menús excesivamente complejos o esconder acciones frecuentes dentro de submenús difíciles de encontrar.
+- **Formularios largos y tediosos:** Pedir más información de la estrictamente necesaria o no indicar con claridad cuáles campos son obligatorios y cuáles opcionales.
+- **No prever estados vacíos (Empty States):** Diseñar pantallas suponiendo que siempre habrá datos. Cuando un usuario nuevo entra y no tiene registros (ej. un carrito vacío, sin notificaciones), la pantalla queda totalmente en blanco sin instrucciones de qué hacer.
 
 ---
 <!-- .slide: data-background="images/u12-prototipado/prototipado-de-paginas-web.jpg" -->
@@ -233,6 +299,46 @@ Emplee algún programa para confeccionar Wireframes ó y generar un wireflow par
 ---
 
 ![Prototipado](images/u12-prototipado/prototipado.png)
+
+----
+
+![Prototipado](images/u12-prototipado/biologo.png)
+
+----
+
+![Prototipado](images/u12-prototipado/secretaria-turismo.png)
+
+---
+
+### Ejercicio: Prototipado por IA
+1. Emplear [Figma](https://www.figma.com/) para realizar el diseño.
+2. En el prompt se recomienda enviar el listado de **requerimientos funcionales** trabajados en clase. Es importante que estos requerimientos contemplen: 
+   - Rol o público que usará la  pantalla
+   - Elementos clave o funcionalidad principal
+   - Formato (web o móvil)
+   - Estilo (wireframe de baja fidelidad, prototio funcional).
+
+----
+
+### Recomendaciones
+- Un Prompt por Pantalla / Flujo
+- Filtrar por Rol + Plataforma + Historias específicas.
+
+----
+
+### Ejemplo 1: Vista para Turistas (Mobile App)
+
+Prompt para Figma AI:
+```bash
+Diseña la pantalla principal (Home/Dashboard) para una app móvil 
+iOS/Android orientada a turistas (FaunaGo). 
+Formato prototipo detallado. 
+Debe incluir: encabezado con perfil del turista y buscador de especies, 
+una sección destacada para 'Avistamiento rápido de fauna' 
+(botón grande para foto/ubicación), un mapa interactivo con avistamientos 
+recientes cercanos y una lista de 'Especies comunes en la zona'. 
+Barra de navegación inferior con: Inicio, Mapa, Mis Avistamientos y Perfil.
+```
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
