@@ -32,93 +32,332 @@ Created by <i class="fab fa-telegram"></i>
 <div class="grid-container2">
 <div class="grid-item">
 
-### Calidad del Software
-* Definición
-* Manejo de la calidad
-* Qué es calidad?
-* Compromiso de Calidad
-* Actividades de manejo de calidad
-* Atributos de la calidad del software
-* Calidad basada en procesos
-* Estándares de Software
-* Importancia de los estándares
-* Problemas con estándares
+### Auditoría
+* Auditoría informática
+* Propósito
+* Tipos de auditoría
+* Control interno y auditoría informática
+* Funciones del control interno
+* Funciones de la auditoría informática
+* Metodología
+  - Control interno
+  - Seguridad
+  - Auditoría informática
 
 </div>
 <div class="grid-item">
 
-* ISO 9000-9001
-* Certificación ISO
-* Revisión
-* Procedimientos de Revisión
-* Revisiones de Calidad
-* Tipos de Revisiones
-* Inspecciones del programa
-* Métricas de calidad del producto
-* Suposición de métricas
-* Métricas estáticas de productos de software
-* Métricas Orientadas a Objetos
-* Métricas de acoplamiento
-* Madures de las métricas
+* Pruebas en las auditorías
+* Principales áreas de auditoría
+* Seguridad física
+* Seguridad lógica
 </div>
 </div>
 
 ---
-### Auditoría Informática
-La **auditoría informática** es un proceso sistemático de evaluación y análisis de los sistemas de información y tecnologías utilizadas por una organización, con el fin de determinar si estos cumplen con los principios de eficacia, eficiencia, seguridad y confiabilidad. 
-
-No se trata solo de buscar errores, sino de verificar que los controles tecnológicos, operativos y de gestión estén funcionando adecuadamente.
-
----
-### Tipos de Auditoría
-La auditoría puede ser **interna** o **externa**, y su objetivo principal es evaluar los sistemas informáticos, las políticas de seguridad y el cumplimiento normativo (por ejemplo, leyes de protección de datos o normas ISO/IEC).
+### Auditoría informática
+La auditoría informática es un proceso sistemático, independiente y documentado de evaluación de los sistemas de información, los recursos tecnológicos y los procesos relacionados, con el fin de obtener evidencias y determinar si cumplen con los criterios establecidos.
 
 ----
 
-### Auditoría Interna
-El control interno se refiere al conjunto de políticas, procedimientos y mecanismos implementados por una organización para garantizar la integridad de sus operaciones, prevenir fraudes y asegurar el cumplimiento de objetivos. En el contexto informático, se enfoca en proteger los activos digitales y garantizar la confidencialidad, integridad y disponibilidad de la información.
+### Auditoría informática: Propósito
+<!-- .slide: style="font-size: 0.90em" -->
+Su propósito es evaluar aspectos como:
+- **Eficacia:** si los sistemas permiten alcanzar los objetivos previstos.
+- **Eficiencia:** si los recursos tecnológicos se utilizan adecuadamente.
+- **Seguridad:** si los activos y la información están protegidos frente a amenazas.
+- **Confiabilidad:** si los sistemas y la información producen resultados consistentes y correctos.
+- **Cumplimiento:** si se respetan las políticas, los procedimientos, los contratos y las normativas aplicables.
+
+----
+
+### Auditoría informática: Propósito
+La auditoría no consiste únicamente en buscar errores o vulnerabilidades. 
+
+También permite verificar que los controles funcionen adecuadamente, detectar riesgos y proponer mejoras.
 
 ---
 
-### Funciones de la auditoría
-Las funciones de la auditoría informática, en ese marco, incluyen:
-- Verificar la adecuación de los controles internos sobre sistemas de información.
-- Evaluar la eficiencia y efectividad de los procesos automatizados.
-- Comprobar el cumplimiento de normativas internas y externas.
-- Identificar vulnerabilidades y riesgos tecnológicos.
-- Proponer mejoras en los procedimientos y controles.
+### Tipos de auditoría
+<!-- .slide: style="font-size: 0.90em" -->
+Según quién la realiza, se distinguen dos tipos principales:
+- **Auditoría interna:** es realizada por personal de la organización o por profesionales que trabajan para ella. Busca evaluar los controles, identificar riesgos y contribuir a mejorar los procesos. Para ser efectiva, debe contar con suficiente objetividad e independencia respecto de las actividades auditadas.
+- **Auditoría externa:** es realizada por profesionales u organizaciones ajenos a la entidad auditada. Puede aportar una evaluación independiente y verificar el cumplimiento de criterios específicos.
 
----
-### Etapas de auditoría
-1. **Planificación:** definición de objetivos, alcance, recursos y riesgos.
-2. **Recolección de información:** entrevistas, observaciones, revisión documental, análisis de sistemas.
-3. **Evaluación de controles:** análisis de los controles existentes (preventivos, detectivos y correctivos).
-4. **Pruebas de cumplimiento y sustantivas:** verificación práctica del funcionamiento de los controles.
-5. **Informe de auditoría:** documentación de hallazgos, riesgos y recomendaciones.
+----
 
----
+### Tipos de auditoría
+También se pueden clasificar según su objetivo, por ejemplo, en auditorías de seguridad, de sistemas, de cumplimiento normativo o de gestión tecnológica.
 
-El control interno y la seguridad informática deben considerarse en conjunto, ya que la seguridad es uno de los pilares del control interno en sistemas tecnológicos.
+----
 
----
-### áreas auditadas
-Entre las áreas más relevantes que se auditan en un entorno informático se encuentran:
-- Gestión de accesos y autenticación.
-- Procesos de respaldo y recuperación ante desastres.
-- Control de cambios en software y sistemas.
-- Políticas de seguridad y cumplimiento normativo.
-- Infraestructura de red y comunicaciones.
-- Gestión de incidentes y respuesta a amenazas.
-- Protección de bases de datos y almacenamiento de información sensible.
-
----
-### Seguridad Física y Lógica
-- **Seguridad física:** Se refiere a la protección del hardware, instalaciones y recursos físicos de la organización. Incluye el control de acceso a salas de servidores, uso de cámaras, cerraduras, alarmas, energía eléctrica redundante, entre otros.
-- **Seguridad lógica:** Abarca mecanismos digitales para proteger los activos informáticos, como: Contraseñas y autenticación multifactor, Firewalls y antivirus, Cifrado de datos, Políticas de acceso y roles, Sistemas de detección de intrusos.
+![Tipos auditoria](images/u15-auditoria/tipos-auditoria.png)
 
 ---
 
-Ambas dimensiones son complementarias: la seguridad lógica no tiene valor si no se asegura físicamente el entorno, y viceversa.
+### Control interno y auditoría informática
+- **Control interno:** es el conjunto de políticas, procedimientos, responsabilidades y mecanismos que una organización establece para gestionar los riesgos, proteger sus activos, mejorar sus operaciones y favorecer el cumplimiento de sus objetivos.
+- **Auditoría informática:** es la evaluación sistemática de los sistemas y procesos tecnológicos para determinar si los controles son adecuados, están correctamente implementados y funcionan como se espera.
+
+----
+
+### Control interno y auditoría informática
+El control interno forma parte de la gestión cotidiana de la organización, la auditoría evalúa su diseño y funcionamiento. 
+
+La auditoría puede identificar deficiencias y recomendar mejoras, pero no reemplaza la responsabilidad de la organización de implementar y mantener los controles.
+
+---
+### Funciones del control interno
+El **control interno** busca prevenir o reducir errores, fraudes y otros eventos que puedan afectar los objetivos de la organización.
+
+---
+
+### Funciones del control interno
+<!-- .slide: style="font-size: 0.80em" -->
+Sus principales funciones son:
+- **Proteger los activos:** resguardar los equipos, programas, datos y demás recursos de la organización.
+- **Garantizar la integridad de la información:** reducir el riesgo de modificaciones, pérdidas o accesos no autorizados.
+- **Favorecer la disponibilidad:** procurar que los sistemas y datos estén accesibles cuando se necesiten.
+- **Prevenir y detectar errores o fraudes:** establecer mecanismos de autorización, registro, supervisión y revisión.
+- **Promover la eficiencia operativa:** asegurar que los procedimientos se realicen de manera adecuada y consistente.
+- **Facilitar el cumplimiento:** contribuir a que se respeten las políticas internas y las obligaciones legales y contractuales.
+
+---
+### Funciones del control interno
+Los controles pueden clasificarse según su propósito:
+
+<table>
+<tr>
+<th>Tipo de control</th><th>Función</th><th>Ejemplo</th><th>
+</tr>
+<tr>
+<td>
+Preventivo</td><td>Evitar que ocurra un incidente.</td><td>Validación de permisos antes de acceder a un sistema.</td><td>
+</tr>
+<tr>
+<td>Detectivo</td><td>Identificar incidentes o irregularidades.</td><td>Revisión de registros de acceso.</td><td>
+</tr>
+<tr>
+<td>Correctivo</td><td>Corregir problemas y reducir sus consecuencias.</td><td>Restauración de datos desde una copia de seguridad.</td><td>
+</tr>
+</table>
+
+Un mismo mecanismo puede cumplir más de una función, dependiendo de cómo se implemente.
+
+---
+
+### Funciones de la auditoría informática
+<!-- .slide: style="font-size: 0.80em" -->
+Las principales funciones de la auditoría informática son:
+- Verificar la adecuación y eficacia de los controles internos sobre los sistemas de información.
+- Evaluar la eficacia y eficiencia de los procesos automatizados.
+- Comprobar el cumplimiento de normativas, políticas y procedimientos.
+- Identificar vulnerabilidades, deficiencias de control y riesgos tecnológicos.
+- Examinar la integridad, confidencialidad y disponibilidad de la información.
+- Obtener y documentar evidencias que respalden los hallazgos.
+- Elaborar informes con observaciones, conclusiones y recomendaciones.
+- Realizar el seguimiento de las acciones correctivas acordadas.
+
+----
+
+### Funciones de la auditoría informática
+**Ejemplo:** una auditoría puede detectar que varios empleados tienen permisos de administrador sin necesitarlos. El informe recomienda revisar los roles y limitar los privilegios. La organización es responsable de implementar la mejora y la auditoría puede verificar posteriormente si se corrigió la deficiencia.
+
+---
+
+### Metodología de control interno, seguridad y auditoría informática
+Aunque están relacionadas, la metodología de control interno, la gestión de la seguridad y la auditoría informática tienen objetivos diferentes. Las tres se apoyan en la identificación de riesgos, la definición de controles y la evaluación de resultados.
+
+---
+
+### Metodología de control interno
+Consiste en establecer y mantener mecanismos para que las operaciones se desarrollen de manera controlada.
+
+1. **Definición de objetivos:** Establecer qué procesos, recursos y resultados deben controlarse.
+2. **Identificación de riesgos:** Reconocer los eventos que podrían afectar los objetivos o comprometer los activos.
+
+----
+
+### Metodología de control interno
+3. **Diseño e implementación de controles:** Definir autorizaciones, restricciones de acceso, validaciones, respaldos y procedimientos de supervisión.
+4. **Supervisión y evaluación:** Comprobar que los controles se apliquen y funcionen correctamente.
+5. **Corrección y mejora continua:** Corregir deficiencias, adaptar los controles a los cambios y reevaluar los riesgos.
+
+---
+
+### Metodología de seguridad informática
+La seguridad informática comprende las medidas organizativas y técnicas destinadas a proteger los sistemas y la información.
+
+Su gestión puede organizarse en las siguientes actividades:
+1. **Identificación de activos:** reconocer los datos, equipos, aplicaciones, redes y servicios que deben protegerse.
+2. **Análisis y evaluación de riesgos:** identificar amenazas y vulnerabilidades, y estimar la probabilidad y las consecuencias de los incidentes.
+
+----
+
+### Metodología de seguridad informática
+3. **Selección de medidas de seguridad:** definir controles proporcionales a los riesgos identificados.
+4. **Implementación:** aplicar las medidas técnicas, físicas y organizativas.
+5. **Monitoreo y respuesta:** detectar incidentes, analizarlos y ejecutar los procedimientos de respuesta y recuperación.
+6. **Revisión y mejora:** evaluar la eficacia de las medidas y actualizarlas ante nuevos riesgos.
+
+----
+
+### Metodología de seguridad informática
+La seguridad no se limita a instalar herramientas tecnológicas. También requiere políticas, capacitación, asignación de responsabilidades y procedimientos de actuación.
+
+---
+### Metodología de auditoría informática
+La metodología de auditoría permite evaluar de manera ordenada los sistemas, los controles y los riesgos tecnológicos.
+
+1. **Planificación:** Definir objetivos, alcance, criterios de evaluación, recursos, responsables y riesgos prioritarios.
+2. **Recolección de información:** Obtener evidencias mediante entrevistas, observaciones, revisión documental y análisis de registros y configuraciones.
+
+----
+
+### Metodología de auditoría informática
+3. **Evaluación y pruebas:** Examinar los controles y realizar pruebas para comprobar su diseño, implementación y funcionamiento.
+4. **Elaboración del informe:** Documentar los hallazgos, las evidencias, los riesgos asociados y las recomendaciones.
+5. **Seguimiento:** Verificar si se implementaron las acciones correctivas y si las deficiencias fueron resueltas.
+
+---
+
+### Pruebas en las auditorías
+<!-- .slide: style="font-size: 0.90em" -->
+Durante la auditoría pueden utilizarse dos clases de pruebas:
+- **Pruebas de controles o de cumplimiento:** permiten comprobar si los controles establecidos existen y funcionan. Por ejemplo, verificar que los accesos privilegiados requieran autorización.
+- **Pruebas sustantivas:** buscan comprobar directamente la exactitud, integridad o validez de la información y las operaciones. Por ejemplo, contrastar los registros de una base de datos con los documentos que los respaldan.
+
+Estas pruebas son complementarias y su aplicación depende de los objetivos y del alcance de la auditoría.
+
+---
+### Principales áreas de la auditoría informática
+La auditoría informática puede abarcar toda la infraestructura tecnológica o concentrarse en áreas específicas según los riesgos y los objetivos definidos.
+
+---
+### Principales áreas de la auditoría informática
+<table>
+<tr>
+<th>Área auditada</th><th>Aspectos que se evalúan</th>
+</tr>
+<tr>
+<td>Gestión de accesos e identidades</td><td>Autenticación, permisos, roles, privilegios y bajas de usuarios.</td>
+</tr>
+<tr>
+<td>Desarrollo y mantenimiento de software</td><td>Calidad de los cambios, pruebas, autorizaciones, versiones y separación de ambientes.</td>
+</tr>
+<tr>
+<td>Bases de datos e información</td><td>Integridad, permisos, confidencialidad, trazabilidad y protección de datos.</td>
+</tr>
+<tr>
+<td>Infraestructura, redes y comunicaciones</td><td>Configuración de equipos, segmentación de redes, firewalls y monitoreo.</td>
+</tr>
+<tr>
+<td>Copias de seguridad y recuperación</td><td>Frecuencia de respaldos, protección de las copias y pruebas de restauración.</td>
+</tr>
+<tr>
+<td>Continuidad del negocio</td><td>Capacidad de mantener o recuperar servicios ante interrupciones o desastres.</td>
+</tr>
+<tr>
+<td>Operaciones y servicios informáticos</td><td>Procesamiento, disponibilidad, rendimiento y cumplimiento de procedimientos.</td>
+</tr>
+<tr>
+<td>Seguridad física</td><td>Protección de instalaciones, servidores, equipos y soportes.</td>
+</tr>
+<tr>
+<td>Gestión de incidentes</td><td>Detección, registro, análisis, respuesta y recuperación ante incidentes.</td>
+</tr>
+<tr>
+<td>Cumplimiento normativo</td><td>Cumplimiento de requisitos legales, contractuales, políticas y estándares aplicables.</td>
+</tr>
+</table>
+
+----
+
+### Principales áreas de la auditoría informática
+Estas áreas no son necesariamente independientes. Por ejemplo, una auditoría de bases de datos también puede examinar la gestión de accesos, los respaldos, los registros de actividad y las medidas de seguridad física del centro de datos.
+
+---
+
+### Seguridad física y seguridad lógica
+<!--https://es.slideshare.net/slideshow/seguridad-fsica-y-lgica/32907781#3-->
+La seguridad informática requiere proteger tanto los recursos físicos como los sistemas y la información. Ambas dimensiones son complementarias.
+
+---
+
+### Seguridad física
+La seguridad física comprende las medidas destinadas a proteger las instalaciones, los equipos, los soportes de almacenamiento y las personas frente a accesos no autorizados, daños, robos, accidentes o desastres ambientales.
+
+----
+
+![Seguridad física](images/u15-auditoria/seguridad-fisica.png)
+
+----
+
+### Seguridad física
+<!-- .slide: style="font-size: 0.90em" -->
+Entre sus principales medidas se encuentran:
+- Control de acceso a edificios y salas de servidores.
+- Cerraduras, tarjetas de identificación, cámaras y alarmas.
+- Protección contra incendios, inundaciones, temperaturas extremas y humedad.
+- Sistemas de alimentación eléctrica ininterrumpida (UPS) y fuentes redundantes cuando corresponda.
+- Protección y custodia de equipos y soportes de almacenamiento.
+- Procedimientos para el ingreso de visitantes y personal técnico.
+- Medidas de contingencia y recuperación ante daños físicos.
+
+----
+
+### Seguridad física: Ejemplo
+**Ejemplo:** una organización restringe el ingreso a su sala de servidores mediante tarjetas de identificación y registra los accesos para detectar entradas no autorizadas.
+
+---
+
+### Seguridad lógica
+La seguridad lógica comprende los mecanismos tecnológicos y las políticas que protegen los sistemas, las aplicaciones, las redes y los datos frente a accesos, modificaciones o usos no autorizados.
+
+----
+
+### Seguridad lógica
+<!-- .slide: style="font-size: 0.87em" -->
+Entre sus principales medidas se encuentran:
+- Autenticación mediante contraseñas seguras y autenticación multifactor.
+- Autorización basada en roles y principio de mínimo privilegio.
+- Firewalls, sistemas de detección y prevención de intrusiones y herramientas antimalware.
+- Cifrado de información en tránsito y en almacenamiento.
+- Gestión de actualizaciones y corrección de vulnerabilidades.
+- Registro y monitoreo de actividades.
+- Copias de seguridad protegidas y controles de restauración.
+- Protección de aplicaciones y bases de datos.
+
+----
+
+### Seguridad lógica
+**Ejemplo:** un sistema permite que cada empleado acceda únicamente a las funciones necesarias para su puesto y registra las operaciones sensibles para facilitar su revisión.
+
+---
+
+### Comparación: Seguridad física & lógica
+<table>
+<tr>
+<th>Aspecto</th><th>Seguridad física</th><th>Seguridad lógica</th>
+</tr>
+<tr>
+<td>Protege principalmente</td><td>Instalaciones, equipos y soportes.</td><td>Sistemas, aplicaciones, redes y datos.</td><td>
+</tr>
+<tr>
+<td>Amenazas típicas</td><td>Robo, incendio, inundación o ingreso no autorizado.</td><td>Acceso indebido, malware, robo de credenciales o modificación de datos.</td><td>
+</tr>
+<tr>
+<td>Controles habituales</td><td>Cerraduras, cámaras, alarmas y protección ambiental.</td><td>Autenticación, permisos, cifrado y monitoreo.</td>
+</tr>
+<tr>
+<td>Objetivo</td><td>Evitar daños físicos y accesos físicos indebidos.</td><td>Evitar accesos y operaciones digitales no autorizados.</td>
+</tr>
+</table>
+
+----
+
+### Comparación: Seguridad física & lógica
+Ambas dimensiones deben diseñarse en conjunto. Por ejemplo, el cifrado de una base de datos no impide que se robe físicamente un servidor; a su vez, una sala de servidores protegida no evita que una cuenta comprometida permita extraer información.
 
 ---
 ## ¿Dudas, Preguntas, Comentarios?
