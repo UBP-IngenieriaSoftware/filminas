@@ -121,6 +121,14 @@ Depende de:
 - **Expectativas del usuario:** Conforme el software se completa, se espera sea más confiable.
 - **Entorno de mercado:** Considerar los productos competitivos, el precio, la calidad, etc.
 
+----
+
+![Verificacion y Validacion](images/u13-pruebas-soft/verificacion-validacion.png)
+
+----
+
+![Verificacion y Validacion](images/u13-pruebas-soft/verificacion-validacion-venn.png)
+
 ---
 ### Inspecciones y pruebas
 * Inspecciones de software:
@@ -219,7 +227,7 @@ El proceso de prueba requiere una combinación de pruebas manuales y automatizad
 ---
 ### Pruebas de desarrollo
 <!-- .slide: style="font-size: 0.80em" -->
-Actividades de pruebas del equipo de desarrollo. Niveles de granulación:
+Actividades de pruebas del equipo de desarrollo.
 1. **Prueba de la unidad**, donde se ponen a prueba las funciones o clases de objetos. Debe centrarse en
 probar la funcionalidad de los objetos o métodos.
 2. **Pruebas de componentes**, donde se integran varias unidades individuales para crear
@@ -253,11 +261,13 @@ Todas son **pruebas de defecto**, cuya meta es descubrir bugs en el software.
 
 ---
 
-### Anti Patrones de Tetsing
+#### Anti Patrones de Tetsing
 
 ![Anti Patrones de Testing](images/u13-pruebas-soft/anti-patrones-de-testing.png)
 
+<small>
 El esquema conocido como “cono de helado” ó “cigarro”, se focalizan principalmente en las pruebas exploratorias.
+</small>
 
 ---
 ### 1. Pruebas de unidad
