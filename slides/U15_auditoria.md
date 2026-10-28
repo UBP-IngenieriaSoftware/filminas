@@ -360,5 +360,47 @@ Entre sus principales medidas se encuentran:
 Ambas dimensiones deben diseñarse en conjunto. Por ejemplo, el cifrado de una base de datos no impide que se robe físicamente un servidor; a su vez, una sala de servidores protegida no evita que una cuenta comprometida permita extraer información.
 
 ---
+
+### Ejercicio: ¿Cómo protegerías el centro de datos?
+Una empresa tiene un centro de datos donde almacena información de clientes, facturación y operaciones comerciales. Durante una revisión interna se detectan las siguientes situaciones:
+1. La sala de servidores permanece abierta durante el horario laboral y cualquier empleado puede ingresar.
+2. Los usuarios pueden acceder a información de otros departamentos sin autorización.
+3. No existen cámaras ni registros de ingreso a la sala de servidores.
+4. Los administradores utilizan la misma cuenta para gestionar todos los servidores.
+5. Los equipos no cuentan con protección suficiente frente a cortes de energía.
+6. Las comunicaciones entre la aplicación y la base de datos transmiten información sin cifrar.
+7. Los equipos de almacenamiento están ubicados en una zona expuesta a filtraciones de agua.
+8. No se utiliza autenticación multifactor para las cuentas con privilegios elevados
+
+----
+
+### Actividades
+1. **Clasificación.** Para cada situación, indicá si corresponde a seguridad física, seguridad lógica o ambas.
+2. **Propuesta de solución.** Proponé una medida concreta para corregir cada situación.
+3. **Análisis.** Elegí dos situaciones y explicá qué consecuencias podrían producirse si no se corrigen.
+4. **Reflexión.** ¿Por qué no sería suficiente implementar únicamente medidas de seguridad física o únicamente medidas de seguridad lógica?
+
+<!--
+1. Sala de servidores abierta: Física
+2. Acceso no autorizado a información: Lógica
+3. Ausencia de cámaras y registros de ingreso: Física
+4. Cuenta compartida entre administradores: Lógica
+5. Falta de protección ante cortes eléctricos: Física
+6. Comunicaciones sin cifrar: Lógica
+7. Equipos expuestos a filtraciones de agua: Física
+8. Ausencia de autenticación multifactor: Lógica
+-->
+
+<!--N.º	Medida recomendada
+1	Instalar cerraduras o controles de acceso con tarjetas y restringir el ingreso al personal autorizado.
+2	Implementar roles y permisos según las responsabilidades de cada usuario, aplicando el principio de mínimo privilegio.
+3	Instalar cámaras y establecer un registro de entradas y salidas.
+4	Asignar cuentas individuales a los administradores y registrar sus operaciones.
+5	Instalar sistemas UPS y evaluar fuentes de energía redundantes.
+6	Cifrar las comunicaciones mediante protocolos seguros, como TLS.
+7	Corregir las filtraciones, implementar detección de agua y proteger adecuadamente los equipos.
+8	Habilitar autenticación multifactor para las cuentas privilegiadas.-->
+
+---
 ## ¿Dudas, Preguntas, Comentarios?
 ![DUDAS](images/pregunta.gif)
