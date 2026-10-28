@@ -87,18 +87,14 @@ Created by <i class="fab fa-telegram"></i>
 ![Bibliografia](images/u14-calidad-soft/somerville.png)
 
 ---
-### CALIDAD
-* **Asegurar la calidad:** definición de procesos y estándares que deben conducir
-a la obtención de productos de alta calidad
-* **Control de calidad:** aplicación de procesos para eliminar productos que no
-cuentan con el nivel de calidad requerido
 
----
-### MANEJO DE LA CALIDAD DEL SOFTWARE
-* Se refiere a lograr un nivel de calidad requerido en el producto de software
-* Involucra a la definición de estándares de calidad apropiados y procedimientos que
-permitan asegurar que estos se cumplan.
-* Debe llevar a desarrollar una cultura de calidad en donde la calidad es responsabilidad de todos
+### BLOQUE 1: Fundamentos de calidad del software
+
+Introducción conceptual
+- Concepto de calidad y cumplimiento de requisitos.
+- Calidad del producto y calidad del proceso.
+- Aseguramiento, control y gestión de la calidad.
+- Importancia de la calidad durante el ciclo de vida.
 
 ---
 ### ¿QUÉ ES CALIDAD?
@@ -108,6 +104,22 @@ Para sistemas de software
 * Algunos requerimientos de calidad son difíciles de especificar (eficiencia, mantenibilidad,
 reusabilidad, etc.)
 * Las especificaciones del Software son usualmente incompletos y a menudo inconsistentes
+
+---
+
+### MANEJO DE LA CALIDAD DEL SOFTWARE
+* Se refiere a lograr un nivel de calidad requerido en el producto de software
+* Involucra a la definición de estándares de calidad apropiados y procedimientos que
+permitan asegurar que estos se cumplan.
+* Debe llevar a desarrollar una cultura de calidad en donde la calidad es responsabilidad de todos
+
+---
+
+### CALIDAD
+* **Asegurar la calidad:** definición de procesos y estándares que deben conducir
+a la obtención de productos de alta calidad
+* **Control de calidad:** aplicación de procesos para eliminar productos que no
+cuentan con el nivel de calidad requerido
 
 ---
 ### EL COMPROMISO DE CALIDAD
@@ -130,17 +142,109 @@ para asegurar independencia
 
 ---
 
-### Plan de Calidad
-<!-- .slide: style="font-size: 0.80em" -->
-Un plan de calidad (Humphrey) suele incluir:
-1. **Introducción del producto:** Descripción del producto, su mercado y expectativas de calidad. 
-2. **Planes del Producto:** Indican las fechas de entrega críticas y las responsabilidades para el producto, planes para distribución y servicio al producto.
-3. **Descripciones de procesos:** Describen los procesos y estándares de desarrollo y 
-servicio que deben usarse para diseño y gestión del producto.
-4. **Metas de calidad:** Identificación y justificación de los atributos esenciales de calidad del 
-producto.
-5. **Riesgos y gestión del riesgo:** Los riesgos pueden afectar la calidad del 
-producto y las acciones a tomar para enfrentar dichos riesgos
+### Calidad durante el ciclo de vida del software
+La calidad del software no debe evaluarse únicamente cuando el producto está terminado. 
+
+Debe considerarse durante todo el ciclo de vida, desde la identificación de las necesidades hasta la operación, el mantenimiento y el retiro del sistema.
+
+Incorporar la calidad desde las primeras etapas permite prevenir defectos, reducir costos de corrección y aumentar la probabilidad de que el producto satisfaga las necesidades de sus usuarios.
+
+---
+
+### calidad en el ciclo de vida
+1. Requisitos
+2. Diseño y arquitectura
+3. Implementación
+4. Verificación y validación
+5. Despliegue y operación
+6. Mantenimiento y evolución
+
+---
+### 1. Requisitos
+
+Se identifican y documentan las necesidades de los usuarios y las restricciones del sistema.
+- Los requisitos deben ser claros, completos, consistentes y verificables.
+- Se identifican requisitos de calidad como seguridad, rendimiento, disponibilidad y usabilidad.
+
+Riesgo si se descuida: desarrollar correctamente un producto que no resuelve el problema esperado.
+
+----
+
+### 2. Diseño y arquitectura
+
+Se toman decisiones que condicionan la calidad del producto y su evolución futura.
+- Se evalúan alternativas arquitectónicas.
+- Se consideran seguridad, escalabilidad, mantenibilidad y tolerancia a fallos.
+- Se revisan los diseños antes de implementarlos.
+
+Riesgo si se descuida: decisiones arquitectónicas difíciles y costosas de corregir más adelante.
+
+----
+
+### 3. Implementación
+
+La calidad se construye mediante prácticas de desarrollo consistentes.
+- Se aplican convenciones de codificación.
+- Se realizan revisiones de código y análisis estático.
+- Se desarrollan pruebas unitarias y se gestionan las versiones.
+
+Riesgo si se descuida: defectos, código difícil de mantener y problemas de seguridad.
+
+----
+
+### 4. Verificación y validación
+
+Se comprueba tanto la conformidad con las especificaciones como la satisfacción de las necesidades del usuario.
+- Verificación: ¿el producto se construyó correctamente según las especificaciones?
+- Validación: ¿se construyó el producto adecuado para las necesidades del usuario?
+- Se realizan pruebas de integración, sistema, aceptación y otros tipos pertinentes.
+
+Riesgo si se descuida: entregar un sistema con defectos o que no cumple su propósito.
+
+----
+
+### 5. Despliegue y operación
+
+Se verifica que el sistema funcione correctamente en su entorno real.
+- Se monitorean errores, rendimiento y disponibilidad.
+- Se registran incidentes y comentarios de los usuarios.
+- Se comprueba que la configuración y la infraestructura sean adecuadas.
+
+Riesgo si se descuida: un producto que funciona en pruebas, pero falla en producción.
+
+----
+
+### 6. Mantenimiento y evolución
+
+La calidad debe conservarse a medida que el software cambia.
+- Se corrigen defectos y vulnerabilidades.
+- Se evalúa el impacto de las modificaciones.
+- Se ejecutan pruebas de regresión.
+- Se controla la degradación de la estructura interna del código.
+
+Riesgo si se descuida: cada cambio introduce nuevos errores o aumenta la dificultad de evolución.
+
+---
+
+#### Beneficios fr gestionar la calidad durante todo el ciclo
+<!-- .slide: style="font-size: 0.90em" -->
+- **Menos defectos:** se detectan problemas antes de que se propaguen.
+- **Menores costos de retrabajo:** se evitan correcciones extensas en etapas tardías.
+- **Mayor satisfacción del usuario:** el producto responde mejor a sus necesidades.
+- **Mayor seguridad y fiabilidad:** se identifican riesgos y se establecen controles desde el inicio.
+- **Mejor mantenibilidad:** se facilita comprender, probar y modificar el sistema.
+- **Mayor previsibilidad:** las revisiones, métricas y criterios de aceptación ayudan a controlar el avance y los resultados.
+- **Mejora continua:** los incidentes y las mediciones permiten ajustar los procesos de desarrollo.
+
+---
+
+### Bloque 2: Modelos y atributos de calidad
+
+Qué significa que un software sea de calidad
+- Atributos de calidad del software.
+- Calidad del producto y del proceso.
+- Modelo ISO/IEC 25010.
+- Relación entre requisitos no funcionales y atributos de calidad.
 
 ---
 ### ATRIBUTOS DE LA CALIDAD DEL SOFTWARE
@@ -247,63 +351,63 @@ producto y las acciones a tomar para enfrentar dichos riesgos
 <!-- .slide: style="font-size: 0.80em" -->
 Para cada uno de los siguientes ejemplos determine el atributo de calidad principal:
 
-<p class="fragment">3. Robustez</p>
+<p class="fragment"> <strong>3. Robustez</strong> </p>
 - Una API que responde con un error controlado (HTTP 400) en lugar de colapsar ante un input inesperado.
 
-<p class="fragment">9. Fiabilidad</p>
+<p class="fragment"> <strong>9. Fiabilidad</strong> </p>
 - Un sistema de monitoreo que no pierde datos durante una semana de ejecución continua.
 
-<p class="fragment">2. Seguridad</p>
+<p class="fragment"> <strong>2. Seguridad</strong> </p>
 - Cifrar contraseñas y asegurar conexiones con HTTPS.
 
 ----
 
 ### Ejercicio: Atributos de Calidad
 <!-- .slide: style="font-size: 0.80em" -->
-<p class="fragment">14. Usabilidad</p>
+<p class="fragment"> <strong>14. Usabilidad</strong> </p>
 - Una interfaz clara con botones y mensajes comprensibles.
 
-<p class="fragment">10. Flexibilidad</p>
+<p class="fragment"> <strong>10. Flexibilidad</strong> </p>
 - Agregar nuevos métodos de pago sin reescribir toda la lógica de facturación.
 
-<p class="fragment">12. Adaptabilidad</p>
+<p class="fragment"> <strong>12. Adaptabilidad</strong> </p>
 - Cambiar el idioma o la moneda sin reescribir el código fuente.
 
 ----
 
 ### Ejercicio: Atributos de Calidad
 <!-- .slide: style="font-size: 0.80em" -->
-<p class="fragment">13. Reusabilidad</p>
+<p class="fragment"> <strong>13. Reusabilidad</strong> </p>
 - Una librería de autenticación usada en varios microservicios.
 
-<p class="fragment">5. Complejidad</p>
+<p class="fragment"> <strong>5. Complejidad</strong> </p>
 - Una función con 200 líneas y múltiples condicionales tiene alta complejidad ciclomática.
 
-<p class="fragment">1. Protección</p>
+<p class="fragment"> <strong>1. Protección</strong> </p>
 - Un sistema que solo permite que los administradores borren datos críticos.
 
 ----
 
 ### Ejercicio: Atributos de Calidad
 <!-- .slide: style="font-size: 0.80em" -->
-<p class="fragment">4. Comprensibilidad</p>
+<p class="fragment"> <strong>4. Comprensibilidad</strong> </p>
 - Un código bien comentado, con nombres descriptivos y arquitectura clara.
-<p class="fragment">11. Portabilidad</p>
+<p class="fragment"> <strong>11. Portabilidad</strong> </p>
 - Una aplicación que corre tanto en Linux como en Windows sin modificaciones.
-<p class="fragment">8. Eficiencia</p>
+<p class="fragment"> <strong>8. Eficiencia</strong> </p>
 - Una consulta SQL optimizada que evita cargar toda la tabla en memoria.
 
 ----
 
 ### Ejercicio: Atributos de Calidad
 <!-- .slide: style="font-size: 0.80em" -->
-<p class="fragment">7. Comprobabilidad</p>
+<p class="fragment"> <strong>7. Comprobabilidad</strong> </p>
 - Tener tests automatizados, logs y trazas claras que faciliten la validación de comportamientos.
 
-<p class="fragment">15. Facilidad de Uso</p>
+<p class="fragment"> <strong>15. Facilidad de Uso</strong> </p>
 - Una app intuitiva que un usuario nuevo puede dominar sin leer un manual.
 
-<p class="fragment">6. Modularidad</p>
+<p class="fragment"> <strong>6. Modularidad</strong> </p>
 - Un backend dividido en servicios (auth, usuarios, pagos) que pueden desarrollarse y probarse por separado.
 
 ---
@@ -335,6 +439,17 @@ El modelo de calidad del producto definido por la ISO/IEC 25010 se encuentra com
 ---
 ### CALIDAD BASADA EN PROCESOS
 ![Calidad Basada en Procesos](images/u14-calidad-soft/proceso-de-calidad.png)
+
+---
+
+### BLOQUE 3: Estándares y normas de calidad
+
+Cómo se establecen criterios comunes
+- Qué es un estándar y para qué sirve.
+- Estándares de producto y de proceso.
+- IEEE: estándares relacionados con la ingeniería de software.
+- ISO: familias de normas y gestión de calidad.
+- Diferencias entre ISO 9001 e ISO/IEC 25010.
 
 ---
 ### ESTÁNDARES DE SOFTWARE
@@ -434,6 +549,15 @@ Algunos ejemplos concretos:
 - **Mantenibilidad y métricas:** [SonarQube](https://www.sonarsource.com/es/products/sonarqube/), CodeScene, K6, Lighthouse
 
 ---
+
+La calidad no se aborda mediante una única norma:
+- **IEEE** ofrece estándares para actividades específicas de ingeniería de software.
+- **ISO** publica normas y modelos para gestionar la calidad, evaluar productos y organizar procesos.
+- **ISO 9001** se ocupa del sistema de gestión de la calidad de la organización.
+- **ISO/IEC 25010** proporciona modelos para describir la calidad del producto y la calidad en uso.
+- **ISO/IEC/IEEE 12207** aborda los procesos del ciclo de vida del software.
+
+---
 ### ISO 9000 - ISO 9001
 * Conjunto de estándares internacionales para el manejo de calidad
 * Aplicable a un rango de organizaciones desde industrias de servicio a industrias de manufactura
@@ -453,6 +577,92 @@ Algunos ejemplos concretos:
 ---
 ### ISO 9001 Y MANEJO DE CALIDAD
 ![Manejo de Calidad](images/u14-calidad-soft/manejo-de-calidad.png)
+
+---
+
+<table>
+<tr>
+<th>
+Referencia</th><th>	Enfoque principal</th><th>	Ejemplo de uso</th>
+</tr>
+<tr>
+<td><strong>IEEE</strong></td><td>Estándares y prácticas de ingeniería de software</td><td>	Definir actividades de aseguramiento de la calidad</td>
+</tr>
+<tr>
+<td><strong>ISO 9001</strong></td><td>	Sistema de gestión de la calidad de una organización</td><td>Establecer procesos organizacionales para gestionar y mejorar la calidad</td>
+</tr>
+<tr>
+<td><strong>ISO/IEC 25010</strong></td><td>Modelo de calidad del producto</td><td>Especificar y evaluar características de calidad del software</td>
+</tr>
+<tr>
+<td><strong>CMMI</strong></td><td>Modelo de capacidades y madurez de procesos</td><td>Orientar la evaluación y mejora de los procesos organizacionales</td>
+</tr>
+</table>
+
+---
+### Bloque 4: CMMI y madurez de los procesos
+
+Cómo evaluar y mejorar la capacidad organizacional
+- Objetivo y fundamentos de CMMI.
+- Niveles de madurez.
+- Áreas de proceso y objetivos asociados.
+- Diferencia entre madurez organizacional y calidad de un producto.
+
+---
+
+### ¿Qué es CMMI?
+
+Son las siglas de **Capability Maturity Model Integration**, es un conjunto de buenas prácticas que permite evaluar capacidades organizacionales y orientar la mejora de los procesos. 
+
+No es una norma ISO ni una metodología de desarrollo.
+
+---
+
+### Niveles de Madurez
+- **Nivel 0 – Incompleto:** Los procesos son ad hoc y desconocidos; el trabajo puede o no completarse y no hay objetivos definidos.
+- **Nivel 1 – Inicial:** Los procesos son impredecibles y reactivos. El trabajo se completa, pero suele retrasarse y superar el presupuesto.
+- **Nivel 2 – Gestionado:** Los proyectos están planificados, ejecutados, medidos y controlados a nivel de proyecto individual.
+
+----
+
+### Niveles de Madurez
+- **Nivel 3 – Definido:** El enfoque es proactivo y estandarizado. Existen estándares para toda la organización que orientan a todos los proyectos y carteras.
+- **Nivel 4 – Gestionado Cuantitativamente:** La organización está basada en datos y utiliza objetivos cuantitativos y estadísticos para medir y controlar el rendimiento.
+- **Nivel 5 – Optimizado:** Los procesos son estables, flexibles y se enfocan en la mejora continua para adaptarse a los cambios y evitar el declive.
+
+----
+
+![CMMI](images/u14-calidad-soft/cmmi.jpg)
+
+---
+
+### CMMI actual y terminología
+
+El CMMI actual también utiliza el concepto de **áreas de práctica** y distingue entre niveles de capacidad de un área y niveles de madurez organizacional.
+
+---
+
+### Bloque 5
+
+Actividades prácticas de gestión de calidad
+
+Aplicación a proyectos de software
+- Plan de calidad.
+- Revisiones e inspecciones.
+- Métricas de calidad.
+- Herramientas de apoyo.
+- Ejercicio integrador de selección de estándares y mejora de procesos.
+
+---
+
+### Plan de Calidad
+<!-- .slide: style="font-size: 0.80em" -->
+Un plan de calidad (Humphrey) suele incluir:
+1. **Introducción del producto:** Descripción del producto, su mercado y expectativas de calidad. 
+2. **Planes del Producto:** Indican las fechas de entrega críticas y las responsabilidades para el producto, planes para distribución y servicio al producto.
+3. **Descripciones de procesos:** Describen los procesos y estándares de desarrollo y servicio que deben usarse para diseño y gestión del producto.
+4. **Metas de calidad:** Identificación y justificación de los atributos esenciales de calidad del producto.
+5. **Riesgos y gestión del riesgo:** Los riesgos pueden afectar la calidad del producto y las acciones a tomar para enfrentar dichos riesgos
 
 ---
 ### REVISIÓN
@@ -477,7 +687,8 @@ Algunos ejemplos concretos:
 * Documentos o Software puede ser “firmados” en cada revisión lo cual significa que la administración ha
 aprobado el progreso de la siguiente etapa del desarrollo
 
----
+----
+
 ### REVISIONES DE CALIDAD
 * El objetivo es descubrir defectos en el sistema e inconsistencias
 * Cualquier documento producido en el proceso puede ser revisado
