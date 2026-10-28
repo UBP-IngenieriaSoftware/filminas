@@ -1017,6 +1017,24 @@ representa un buen predictor de problemas
 * Condicionales profundamente anidadas son difíciles de entender.
 
 ---
+### MÉTRICAS DE CALIDAD DE LA DOCUMENTACIÓN
+* La legibilidad es importante en la documentación
+* El índice “Gunnings Fog” es una medida de la legibilidad
+  * Basada en la longitud de las frases y el número de sílabas en una palabra
+  * Esto puede causar malas interpretaciones cuando se aplica a la documentación técnica.
+
+---
+### MADURES DE LAS MÉTRICAS
+* Las métricas todavía tienen un valor limitado y no ampliamente aceptado.
+* Las relaciones entre que lo que se puede medir y lo que se quiere conocer no esta bien comprendido aún.
+* Hace falta poner de acuerdo a las organizaciones sobre las métricas necesarias en el proceso de software.
+
+---
+## ¿Dudas, Preguntas, Comentarios?
+![DUDAS](images/pregunta.gif)
+
+---
+
 ### MÉTRICAS DE COMPLEJIDAD
 La complejidad ciclomatica es una medida de cuanto una estructura es compleja:
 
@@ -1034,20 +1052,3 @@ M = A − N + 2
 ---
 
 Grafo numerando nodos y aristas. **M=8-7+2**
-
----
-### MÉTRICAS DE CALIDAD DE LA DOCUMENTACIÓN
-* La legibilidad es importante en la documentación
-* El índice “Gunnings Fog” es una medida de la legibilidad
-  * Basada en la longitud de las frases y el número de sílabas en una palabra
-  * Esto puede causar malas interpretaciones cuando se aplica a la documentación técnica.
-
----
-### MADURES DE LAS MÉTRICAS
-* Las métricas todavía tienen un valor limitado y no ampliamente aceptado.
-* Las relaciones entre que lo que se puede medir y lo que se quiere conocer no esta bien comprendido aún.
-* Hace falta poner de acuerdo a las organizaciones sobre las métricas necesarias en el proceso de software.
-
----
-## ¿Dudas, Preguntas, Comentarios?
-![DUDAS](images/pregunta.gif)
