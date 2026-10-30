@@ -13,7 +13,7 @@ Created by <i class="fab fa-telegram"></i>
 [edme88]("https://t.me/edme88")
 
 ---
-<!-- .slide: style="font-size: 0.60em" -->
+
 <style>
 .grid-container2 {
     display: grid;
@@ -27,7 +27,16 @@ Created by <i class="fab fa-telegram"></i>
     padding: 20px;
     text-align: left !important;
 }
+
+table{
+    font-size: 0.7em;
+}
+
+.areas{
+    font-size: 0.75em;
+}
 </style>
+
 ## Temario
 <div class="grid-container2">
 <div class="grid-item">
@@ -37,16 +46,17 @@ Created by <i class="fab fa-telegram"></i>
 * Propósito
 * Tipos de auditoría
 * Control interno y auditoría informática
-* Funciones del control interno
-* Funciones de la auditoría informática
-* Metodología
-  - Control interno
-  - Seguridad
-  - Auditoría informática
+* Funciones 
+  - del control interno
+  - de la auditoría informática
 
 </div>
 <div class="grid-item">
 
+* Metodología
+  - Control interno
+  - Seguridad
+  - Auditoría informática
 * Pruebas en las auditorías
 * Principales áreas de auditoría
 * Seguridad física
@@ -83,6 +93,33 @@ También permite verificar que los controles funcionen adecuadamente, detectar r
 Según quién la realiza, se distinguen dos tipos principales:
 - **Auditoría interna:** es realizada por personal de la organización o por profesionales que trabajan para ella. Busca evaluar los controles, identificar riesgos y contribuir a mejorar los procesos. Para ser efectiva, debe contar con suficiente objetividad e independencia respecto de las actividades auditadas.
 - **Auditoría externa:** es realizada por profesionales u organizaciones ajenos a la entidad auditada. Puede aportar una evaluación independiente y verificar el cumplimiento de criterios específicos.
+
+----
+
+### Auditoría Externa
+Se busca acreditar:
+- **ISO 27001**
+- **SOC 2 tipo 2**
+- **PCI DSS**
+- **NIST**
+- **ISO 31000**
+- **ISO 42001**
+
+----
+
+### Normas
+<!-- .slide: style="font-size: 0.85em" -->
+1. **ISO 27001:** Es una norma internacional para implementar un **Sistema de Gestión de Seguridad de la Información** (SGSI). Ayuda a proteger la confidencialidad, integridad y disponibilidad de la información, mediante la identificación y tratamiento de riesgos. Permite obtener una certificación.
+2. **SOC 2 Tipo 2:**	Es un informe de auditoría que evalúa los **controles de seguridad** y otros aspectos de una organización que presta servicios tecnológicos. El Tipo 2 verifica que esos controles hayan funcionado eficazmente durante un período de tiempo, no solamente en una fecha puntual.
+3. **PCI DSS:**	Es un **estándar de seguridad** para organizaciones que almacenan, procesan o transmiten datos de **tarjetas** de pago. Establece requisitos para proteger esa información y reducir el riesgo de fraude y filtraciones.
+
+----
+
+### Normas
+<!-- .slide: style="font-size: 0.85em" -->
+4. **NIST**	Es un organismo estadounidense que desarrolla estándares y marcos de referencia. Su marco de ciberseguridad (NIST CSF) ayuda a las organizaciones a identificar, proteger, detectar, responder y recuperarse de incidentes de seguridad.
+5. **ISO 31000**	Es una norma internacional que proporciona directrices para la **gestión de riesgos**. Ayuda a identificar, analizar, evaluar y tratar riesgos que podrían afectar los objetivos de una organización.
+6. **ISO 42001**	Es una norma internacional para implementar un **Sistema de Gestión de Inteligencia Artificial** (SGIA). Ayuda a las organizaciones a gestionar los riesgos asociados al uso y desarrollo de IA, promoviendo un uso responsable, transparente y controlado.
 
 ----
 
@@ -123,6 +160,7 @@ Sus principales funciones son:
 - **Facilitar el cumplimiento:** contribuir a que se respeten las políticas internas y las obligaciones legales y contractuales.
 
 ---
+
 ### Funciones del control interno
 Los controles pueden clasificarse según su propósito:
 
@@ -234,40 +272,49 @@ Estas pruebas son complementarias y su aplicación depende de los objetivos y de
 La auditoría informática puede abarcar toda la infraestructura tecnológica o concentrarse en áreas específicas según los riesgos y los objetivos definidos.
 
 ---
+
 ### Principales áreas de la auditoría informática
 <table>
 <tr>
 <th>Área auditada</th><th>Aspectos que se evalúan</th>
 </tr>
 <tr>
-<td>Gestión de accesos e identidades</td><td>Autenticación, permisos, roles, privilegios y bajas de usuarios.</td>
+<td>1. Gestión de accesos e identidades</td><td>Autenticación, permisos, roles, privilegios y bajas de usuarios.</td>
 </tr>
 <tr>
-<td>Desarrollo y mantenimiento de software</td><td>Calidad de los cambios, pruebas, autorizaciones, versiones y separación de ambientes.</td>
+<td>2. Desarrollo y mantenimiento de software</td><td>Calidad de los cambios, pruebas, autorizaciones, versiones y separación de ambientes.</td>
 </tr>
 <tr>
-<td>Bases de datos e información</td><td>Integridad, permisos, confidencialidad, trazabilidad y protección de datos.</td>
+<td>3. Bases de datos e información</td><td>Integridad, permisos, confidencialidad, trazabilidad y protección de datos.</td>
 </tr>
 <tr>
-<td>Infraestructura, redes y comunicaciones</td><td>Configuración de equipos, segmentación de redes, firewalls y monitoreo.</td>
+<td>4. Infraestructura, redes y comunicaciones</td><td>Configuración de equipos, segmentación de redes, firewalls y monitoreo.</td>
 </tr>
 <tr>
-<td>Copias de seguridad y recuperación</td><td>Frecuencia de respaldos, protección de las copias y pruebas de restauración.</td>
+<td>5. Copias de seguridad y recuperación</td><td>Frecuencia de respaldos, protección de las copias y pruebas de restauración.</td>
+</tr>
+
+----
+
+### Principales áreas de la auditoría informática
+<table>
+<tr>
+<th>Área auditada</th><th>Aspectos que se evalúan</th>
 </tr>
 <tr>
-<td>Continuidad del negocio</td><td>Capacidad de mantener o recuperar servicios ante interrupciones o desastres.</td>
+<td>6. Continuidad del negocio</td><td>Capacidad de mantener o recuperar servicios ante interrupciones o desastres.</td>
 </tr>
 <tr>
-<td>Operaciones y servicios informáticos</td><td>Procesamiento, disponibilidad, rendimiento y cumplimiento de procedimientos.</td>
+<td>7. Operaciones y servicios informáticos</td><td>Procesamiento, disponibilidad, rendimiento y cumplimiento de procedimientos.</td>
 </tr>
 <tr>
-<td>Seguridad física</td><td>Protección de instalaciones, servidores, equipos y soportes.</td>
+<td>8. Seguridad física</td><td>Protección de instalaciones, servidores, equipos y soportes.</td>
 </tr>
 <tr>
-<td>Gestión de incidentes</td><td>Detección, registro, análisis, respuesta y recuperación ante incidentes.</td>
+<td>9. Gestión de incidentes</td><td>Detección, registro, análisis, respuesta y recuperación ante incidentes.</td>
 </tr>
 <tr>
-<td>Cumplimiento normativo</td><td>Cumplimiento de requisitos legales, contractuales, políticas y estándares aplicables.</td>
+<td>10. Cumplimiento normativo</td><td>Cumplimiento de requisitos legales, contractuales, políticas y estándares aplicables.</td>
 </tr>
 </table>
 
@@ -336,7 +383,7 @@ Entre sus principales medidas se encuentran:
 ---
 
 ### Comparación: Seguridad física & lógica
-<table>
+<table class="areas">
 <tr>
 <th>Aspecto</th><th>Seguridad física</th><th>Seguridad lógica</th>
 </tr>
@@ -366,6 +413,10 @@ Una empresa tiene un centro de datos donde almacena información de clientes, fa
 1. La sala de servidores permanece abierta durante el horario laboral y cualquier empleado puede ingresar.
 2. Los usuarios pueden acceder a información de otros departamentos sin autorización.
 3. No existen cámaras ni registros de ingreso a la sala de servidores.
+
+----
+
+### Ejercicio: ¿Cómo protegerías el centro de datos?
 4. Los administradores utilizan la misma cuenta para gestionar todos los servidores.
 5. Los equipos no cuentan con protección suficiente frente a cortes de energía.
 6. Las comunicaciones entre la aplicación y la base de datos transmiten información sin cifrar.
