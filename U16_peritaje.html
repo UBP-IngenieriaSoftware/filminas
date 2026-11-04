@@ -44,23 +44,29 @@ Created by <i class="fab fa-telegram"></i>
     text-align: left !important;
 }
 </style>
-## Temario
+## Peritaje: Temario
 <div class="grid-container2">
 <div class="grid-item">
 
-### Calidad del Software
 * Peritaje Informático
 * Pericia y Perito
 * Peritos
-* Proceso pericial
-* Quien puede ser perito?
+* Clases de Peritos
+* Funciones principales del perito
+* ¿En qué casos actua el perito?
 
 </div>
 <div class="grid-item">
 
+* ¿Quién puede ser perito?
 * Peritos en Argentina
+* Principios
+* Métodos, técnicas y herramientas
+* Metodología
+* Métodos y Técnicas
 * Fuentes
-* Herramientas y técnicas
+* Fuentes: Clasificación
+* Proceso pericial
 
 </div>
 </div>
@@ -129,11 +135,64 @@ En Argentina es necesario estar inscripto oficialmente para actuar como perito j
 
 ---
 
-### Principios
-Un aspecto fundamental es la cadena de custodia, que consiste en documentar quién tuvo contacto con la evidencia, cuándo, dónde y qué procedimientos se realizaron sobre ella.
+### Evidencia digital
+La evidencia digital es toda información almacenada, transmitida o generada mediante dispositivos y sistemas electrónicos que puede resultar relevante para demostrar o esclarecer un hecho.
 
-Esto permite demostrar que la evidencia conservó su integridad desde su obtención hasta su presentación.
+Puede utilizarse en investigaciones judiciales, administrativas o internas de una organización.
 
+----
+
+### Evidencia digital: Ejemplos
+- Correos electrónicos y mensajes.
+- Archivos y documentos digitales.
+- Registros de acceso a sistemas (logs).
+- Historiales de navegación.
+- Fotografías y videos.
+- Registros de conexiones de red.
+- Bases de datos y sus registros de modificaciones.
+- Información almacenada en dispositivos móviles.
+
+----
+
+### Evidencia digital: Características
+<!-- .slide: style="font-size: 0.85em" -->
+La evidencia digital presenta características particulares que requieren cuidados especiales:
+- **Volatilidad:** cierta información puede desaparecer al apagar un dispositivo o finalizar un proceso.
+- **Facilidad de modificación:** los datos pueden modificarse sin que los cambios sean evidentes a simple vista.
+- **Duplicabilidad:** puede copiarse sin pérdida de calidad, aunque debe verificarse que la copia sea íntegra.
+- **Eliminación:** los archivos pueden borrarse, aunque en determinadas circunstancias sea posible recuperar información.
+- **Trazabilidad:** es necesario documentar su origen y todas las operaciones realizadas sobre ella.
+
+---
+
+### Cadena de custodia
+La cadena de custodia es el procedimiento documentado que permite registrar y controlar la identificación, recolección, traslado, almacenamiento y análisis de una evidencia desde su obtención hasta su presentación.
+
+Su objetivo es garantizar que la evidencia mantenga su integridad y que pueda conocerse quién tuvo contacto con ella y qué procedimientos se realizaron.
+
+---
+
+### Cadena de custodia: Etapas
+<!-- .slide: style="font-size: 0.85em" -->
+1. **Identificación:** reconocer y describir la evidencia que puede resultar relevante.
+2. **Recolección:** obtener la evidencia mediante procedimientos adecuados y autorizados.
+3. **Registro:** documentar fecha, hora, lugar, responsable y características de la evidencia.
+4. **Traslado:** registrar cada transferencia y mantener condiciones apropiadas de protección.
+5. **Almacenamiento:** conservar la evidencia en un lugar seguro y con acceso controlado.
+6. **Análisis:** documentar las operaciones realizadas y las personas que intervinieron.
+7. **Presentación:** entregar la evidencia y su documentación cuando sea requerida.
+
+---
+
+### Información que debe registrarse
+- Identificación única de la evidencia.
+- Descripción del dispositivo o archivo.
+- Fecha, hora y lugar de recolección.
+- Persona responsable de la obtención.
+- Personas que tuvieron acceso.
+- Transferencias y cambios de custodia.
+- Procedimientos realizados.
+- Valores hash, cuando corresponda.
 
 ---
 
@@ -216,6 +275,28 @@ El proceso pericial suele seguir una secuencia ordenada para garantizar la valid
 10. **Ratificación y aclaraciones:** explica o fundamenta el informe ante el tribunal cuando sea requerido.
 
 ---
+
+### Adquisición de evidencia
+La adquisición de evidencia digital es el proceso mediante el cual se obtiene una copia de la información contenida en un dispositivo o sistema para realizar posteriormente su análisis.
+
+Su objetivo es preservar la información original y permitir que el perito trabaje sobre una copia, reduciendo el riesgo de alterar los datos que constituyen la evidencia.
+
+---
+
+### Tipos de adquisición
+- **Adquisición física:** obtiene una imagen del contenido del medio de almacenamiento, incluyendo sectores que no contienen archivos activos.
+- **Adquisición lógica:** obtiene archivos, carpetas y datos accesibles mediante el sistema de archivos o mecanismos de acceso disponibles.
+- **Adquisición en vivo (Live Forensics):** se realiza mientras el dispositivo o sistema está funcionando, especialmente cuando se necesita preservar información volátil.
+
+---
+
+### Herramientas
+- **Bloqueadores de escritura:** dispositivos o mecanismos que impiden realizar modificaciones sobre el medio original durante la adquisición.
+- **Software de adquisición forense:** permite generar imágenes de discos y registrar información del proceso.
+- **Funciones hash:** permiten verificar la integridad de las copias obtenidas.
+- **Medios de almacenamiento seguros:** permiten conservar las copias y controlar su acceso.
+
+---
 ### Herramientas
 Algunas herramientas empleadas por peritos son:
 - **Autopsy y FTK:** análisis forense de dispositivos y archivos.
@@ -244,6 +325,52 @@ Es el documento técnico mediante el cual el perito presenta los resultados de s
 
 ### Informe pericial informático: Contenido
 El informe debe ser objetivo, comprensible, verificable y estar respaldado por evidencia.
+
+---
+
+### Limitaciones de un peritaje informático
+Aunque el análisis forense permite obtener información valiosa, existen situaciones que pueden dificultar o impedir llegar a conclusiones definitivas.
+
+El perito debe reconocer estas limitaciones y explicarlas en su informe.
+
+----
+
+### Principales limitaciones
+<!-- .slide: style="font-size: 0.90em" -->
+1. **Evidencia incompleta o eliminada**
+- Algunos registros pueden haber sido borrados o sobrescritos.
+- Los sistemas pueden no haber conservado información suficiente.
+- No siempre es posible recuperar archivos eliminados.
+
+2. **Cifrado de información**
+- Los datos pueden encontrarse protegidos mediante mecanismos de cifrado.
+- Sin las claves correspondientes, puede resultar imposible acceder a su contenido.
+
+----
+
+### Principales limitaciones
+<!-- .slide: style="font-size: 0.90em" -->
+3. **Registros insuficientes**
+- Algunos sistemas no registran todas las actividades.
+- Los logs pueden tener períodos de conservación limitados.
+- Puede resultar difícil reconstruir una secuencia completa de acontecimientos.
+4. **Diferencias horarias**
+- Los servidores y dispositivos pueden utilizar diferentes zonas horarias.
+- Los relojes pueden estar desincronizados.
+- Esto puede dificultar la reconstrucción cronológica de los acontecimientos.
+
+----
+
+### Principales limitaciones
+<!-- .slide: style="font-size: 0.85em" -->
+5. **Limitaciones de las herramientas**
+- Ninguna herramienta detecta o recupera toda la información posible.
+- Los resultados pueden depender de las versiones y configuraciones utilizadas.
+- Algunas herramientas pueden producir falsos positivos o interpretaciones incorrectas.
+6. **Dificultad para identificar al responsable**
+- Una dirección IP no identifica necesariamente a una persona.
+- Varias personas pueden utilizar una misma cuenta o dispositivo.
+- Una cuenta puede haber sido utilizada sin autorización por terceros.
 
 ---
 
